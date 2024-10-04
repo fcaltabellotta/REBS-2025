@@ -1,0 +1,40 @@
+# Removal Data
+
+
+## Commercial Landings & Discards
+
+Black rockfish are not considered a major commercial species in Washington, but historical reconstructions have shown prominent trawl and notable jig catches in the past that have subsequently waned over the last 40 years. Historical catch reconstructions were done for the 2015 assessment (see that assessment for the details), and are heavily based on fish ticket reporting and applying highly variable catch compositions to years that do not have measured compositions, but rather just report total or "unknown" rockfish catches, though there was some direct reporting of a black rockfish category that was a mix of other rockfishes. In addition, there is a major interaction in the estimates of trawl-caught black rockfish between Oregon and Washington in reporting area 3A due to the fact that fishers from Astoria fished off Washington and landed those fish in Oregon. This has resulted in some of the largest black rockfish catches ever seen. We are re-evaluating these assumptions along with the Oregon catch reconstruction.
+
+
+```{r, results = 'asis'}
+add_figure(
+  filein = file.path(dir, "plots", "WA_comm_catch_1940_2015.png"), 
+  caption = "Total removals (landings plus dead discards) for commercial-caught black rockfish used in the 2015 assessment.",
+  label = 'Comm_removals_fig')
+
+``` 
+
+
+### Additional Items for Discussion
+
+* See the discussion on allocating 3A trawl 
+* Bottom trawl catch history and the translation of state area codes to PacFIN Catch Area Code 3A (45 46' N. lat TO 47 20' N. lat.; Cape Falcon to Cape Elizabeth) and how catch should be divided between the two assessment areas.
+* PacFIN species composition of Washington landings, 1981-1999, for trawl and non-trawl (primarily jig) gears.
+* Evaluation of historical species composition data (i.e. pre-1981).
+
+## Recreational Landings & Discards
+
+The sport caught (recreational) fishery landings underwent a major reconstruction in the 2015 assessment. This reconstruction is largely maintained in the new assessment. The only update is that the predictive dead discard to landings ratio was updated by including the years 2015-2022 to the already used 2002-2014 values. The addition of 8 years to the 13 years did not perceptibly change the relationship (i.e., was consistent with the previous relationship) used to estimate discards back in time. The full time series of recreational removals therefore is very similar to what was used before, with the addition of new removal estimates in the years since the last assessment.
+
+
+```{r, results = 'asis'}
+add_figure(
+  filein = file.path(dir, "plots", "Rec_comps_fig.png"), 
+  caption = "Total removals (landings plus dead discards) for sport-caught black rockfish used in the 2015 assessment versus those proposed in the 2023 assessment.",
+  label = 'Rec_removals_fig')
+
+``` 
+
+### Additional Items for Discussion
+
+*Nothing additional for the recreational fishery
