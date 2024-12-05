@@ -1,0 +1,10 @@
+## Tables 
+ 
+```{r} 
+#| label: 'indices'
+#| echo: false 
+#| warning: false 
+#| eval: false 
+#| tbl-cap: 'indices table caption here' 
+satf::table_indices(dat = output)
+``` 

@@ -1,9 +1,0 @@
-## Tables 
- 
-```{r} 
-#| label: 'indices'
-#| echo: false 
-#| warning: false 
-#| eval: true 
-satf::table_indices(dat = 'C:/Users/copej/Documents/GitHub/REBS-2025/Document/Report.sso', model = 'SS3')
-``` 
