@@ -25,7 +25,29 @@ asar::create_template(
   #param_names = c("nf","sf"),
   #param_values = c("Trawl", "Hook-and_line","At-sea Hake","Foreign catches"),
   resdir = "C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document",
-  model_results = "reye_blkspt_convert_output.csv"
+  model_results = "reye_blkspt_convert_output.csv",
+  #make_rda = TRUE, 
+  rda_dir = getwd(),
+  end_year = 2025
   #model = "SS3"
+)
+
+
+asar::create_template(
+  format = "pdf",
+  office = "NWFSC",
+  region = "U.S. West Coast",
+  species = "Rougheye and Blackspotted Rockfishes",
+  spp_latin = "Sebastes aleutianus",
+  year = 2025,
+  file_dir = "C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/",
+  author = c("Jason M. Cope", "Vladlena Gertseva", "Fabio Caltabellotta", "Claire Rosemond", "Alison D. Whitman"),
+  include_affiliation = TRUE,
+  simple_affiliation = FALSE,
+  #param_names = c("nf","sf"),
+  #param_values = c("North fleet", "South fleet"),
+  resdir = "C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document",
+  model_results = "reye_blkspt_convert_output.csv",
+  model = "SS3"
 )
 
