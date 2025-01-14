@@ -24,15 +24,13 @@ setwd(dir)
 
 <center>
 
-
-
 ```{r, results='asis'}
-#add_figure(
-#  filein = file.path(dir, "blackspotted_bottom.png"), 
-#  caption = '',
-#  width = 60,
-#  height = 60,
-#  label = 'black')
+add_figure(
+  filein = file.path(dir, "blackspotted_bottom.png"), 
+  caption = '',
+  width = 60,
+  height = 60,
+  label = 'black')
 
 ``` 
 
