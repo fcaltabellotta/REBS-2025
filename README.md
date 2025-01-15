@@ -1,2 +1,2 @@
 # REBS-2025
-Repo for the 2025 Rougheye/Blackspotted Rockfishes stock assessment
+[Main Google Drive](https://drive.google.com/drive/folders/1yrGtWnXGZx_1Y6NieojEAdyAjdp7MTz6)
