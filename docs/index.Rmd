@@ -27,12 +27,37 @@ setwd(dir)
 
 
 ```{r, results='asis'}
-#add_figure(
-#  filein = file.path(dir, "blackspotted_bottom.png"), 
-#  caption = '',
-#  width = 60,
-#  height = 60,
-#  label = 'black')
+
+add_figure<-function (filein, caption = "Add figure caption", alt_caption = "", 
+  label, width = 100, height = 100) 
+{
+  caption <- add_fullstop(caption)
+  alt_caption <- add_fullstop(alt_caption)
+  if (grepl(",", alt_caption)) {
+    stop(cli::format_error(c("\n", x = "{.var alt_caption} cannot contain ','.", 
+      i = "Please remove the comma from the following text:", 
+      "{alt_caption}")))
+  }
+  if (is.null(alt_caption)) {
+    alt_caption <- ""
+  }
+  if (knitr::is_html_output()) {
+    cat(sep = "", "<figure><img src=\"", filein, "\" alt=\"", 
+      alt_caption, "\"", sprintf(" style=\"width: %f%%\"", 
+        width), "/><figcaption>", caption, "</figcaption></figure>")
+  }
+  else {
+    cat(glue::glue("\n        \n\n        \\begin{{figure}}\n        {{\\centering\n        \\includegraphics[alt={alt_caption},width={width/100}\\textwidth,height={height/100}\\textheight]{{{filein}}}\n        }}\n        \\caption{{{caption}\\label{{fig:{label}}}}}\n        \\end{{figure}}\n\n        "))
+  }
+  return(invisible(paste("fig", label, sep = ":")))
+}
+
+add_figure(
+  filein = file.path(dir, "blackspotted_bottom_crop.png"), 
+  caption = '',
+  width = 60,
+  height = 60,
+  label = 'black')
 
 ``` 
 
@@ -43,7 +68,7 @@ setwd(dir)
 
 This year's data workshop will be held virtually. A joint workshop focusing on Sablefish and Rougheye/Blackspotted rockfishes is scheduled for Tuesday 18 March from 9 a.m. to 4 p.m.. The Rougheye/Blackspotted portion is scheduled 1-4 p.m.. Information to connect to the meeting can be found [online](https://www.pcouncil.org/events/pre-assessment-workshop-for-copper-canary-and-black-rockfish-january-31-amp-february-1-2023/).
 
-[Materials for the pre-assessment data workshop - January 31 - February 1, 2023](Pre_assessment)
+[Materials for the pre-assessment data workshop - 18 March, 2025](Pre_assessment)
 
 [2013 assessment of Rougheye and Blackspotted rockfishes](https://www.pcouncil.org/documents/2014/01/the-status-of-rougheye-rockfish-sebastes-aleutianus-and-blackspotted-rockfish-s-melanostictus-as-a-complex-along-the-u-s-west-coast-in-2013-published-january-6-2014.pdf/)
 
