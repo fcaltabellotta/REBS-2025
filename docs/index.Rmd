@@ -23,7 +23,7 @@ setwd(dir)
 
 <center>
 
-![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/blackspotted_bottom_crop.png) 
+![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/blackspotted_bottom_crop.png){width="50%"} 
 
 
 </center>
