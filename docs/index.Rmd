@@ -52,12 +52,12 @@ setwd(dir)
  # return(invisible(paste("fig", label, sep = ":")))
 #}
 
-add_figure(
-  filein = file.path(dir, "blackspotted_bottom_crop.png"), 
-  caption = '',
-  width = 60,
-  height = 60,
-  label = 'black')
+#add_figure(
+#  filein = file.path(dir, "blackspotted_bottom_crop.png"), 
+#  caption = '',
+#  width = 60,
+#  height = 60,
+#  label = 'black')
 
 ``` 
 
