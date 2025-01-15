@@ -53,7 +53,7 @@ add_figure<-function (filein, caption = "Add figure caption", alt_caption = "",
 }
 
 add_figure(
-  filein = file.path(dir, "blackspotted_bottom_crop.png"), 
+  filein = file.path(dir, "blackspotted_bottom.png"), 
   caption = '',
   width = 60,
   height = 60,
