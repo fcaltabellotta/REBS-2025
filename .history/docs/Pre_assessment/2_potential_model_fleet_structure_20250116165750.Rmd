@@ -1,0 +1,15 @@
+# Stock Structure
+There are at least two questions to consider when considering stock structure for Rougheye and Blackspotted rockfishes. 
+
+1. **Rougheye and Blackspotted rockfishes are two different species-- can we separate them as two stocks and do separate assessments?** These two species remain difficult to differentiate visually in the catch, thus remain reported as a complex. Frey et al. (*in prep.*) provided insight into the ability of the Northwest Fisheries Science Center groundfish trawl samplers to identify the two species, with 90% of genetically identified Rougheye rockfish being correctly identified in the field. When mis-identifications happened, it was usually a Blackspotted rockfish being mis-identified as a Rougheye. There were few mis-identifications when a fish was identified as a Blackspotted rockfish. While this is promising for potential future species-specific data coming from the survey, it does not alleviate the historical problem of separating out fishery data into the two species. Frey et al. (*in prep.*) therefore also considered whether ecological factors like depth or latitude could help separate out samples into species. The found that both species are found within the range of this assessments considered areas (California to Washington), and heavily spatially overlap. Interestingly, there seem to be relative hot spots for these species were one species is more common than others, and in general, Rougheye rockfish seems to be more common than Blackspotted rockfish (who seem to be more common relative to Rougheye rockfish in parts of Alaska). Overall, there seems to be no current way to separate current or historical fishery data reliably to separate these two species into two stocks, so we will maintain a complex approach, though absolute presence off the US west coast, this may be considered more of a Rougheye than Blackspotted stock assessment.
+2. **Both species range into Canada and Alaska-- are they one stock?** While genetics studies have focused mostly on identifying the species, little is known about the population structure of either of these species. What can be said is that this assessment represents the most southerly range of these species. 
+
+# Fleet Structure
+
+Currently, the following fleet structure is being considered for modeling commercial and recreational fisheries in both area models:
+ 
+1. Commercial trawl (mostly a historical fishery)
+2. Commercial hook and line (mostly a jig fishery in the 1980s)
+3. Recreational (sport) fishery 
+
+Defining fleets is largely based on whether a fishing approach differs in the selectivity (i.e., the capture of fish by length and/or age). Selectivity translates into how the removals are taken via length and/or age out of the population. The above three fishery types are distinguished by different fishing activities that result in different selectivities. The fleets are the same as those defined in the 2015 assessment.

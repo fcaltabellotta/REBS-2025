@@ -1,0 +1,14 @@
+# Stock Structure
+There are at least two questions to consider when considering stock structure for Rougheye and Blackspotted rockfishes. 
+
+1. **Rougheye and Blackspotted rockfishes are two different species-- can we separate them as two stocks?** These two species remain difficult to differentiate visually in the catch, thus remain reported as a complex. Frey et al. (*in prep.*) provided insight into the ability of the Northwest Fisheries Science Center groundfish trawl samplers to identify the two species, with 90% of genetically identified Rougheye rockfish being correctly identified in the field. When mis-identifications happened, it was usually a Blackspotted rockfish being mis-identified as a Rougheye. There were few mis-identifications when a fish was identified as a Blackspotted rockfish. While this is promising for potential future species-specific data coming from the survey, it does not alleviate the historical problem of separating out fishery data into the two species. Frey et al. (*in prep.*) 
+
+# Fleet Structure
+
+Currently, the following fleet structure is being considered for modeling commercial and recreational fisheries in both area models:
+ 
+1. Commercial trawl (mostly a historical fishery)
+2. Commercial hook and line (mostly a jig fishery in the 1980s)
+3. Recreational (sport) fishery 
+
+Defining fleets is largely based on whether a fishing approach differs in the selectivity (i.e., the capture of fish by length and/or age). Selectivity translates into how the removals are taken via length and/or age out of the population. The above three fishery types are distinguished by different fishing activities that result in different selectivities. The fleets are the same as those defined in the 2015 assessment.

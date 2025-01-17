@@ -1,0 +1,42 @@
+# Summary of the 2013 Assessment 
+
+The last assessment of the rougheyey and blackspotted rockfishes in U.S. west coast waters was conducted in 2013 and estimated stock status for the beginning of that year at 47% of the unfished stock size, and never showed a decline below the target biomass of 40% of the unfished stock size. This assessment was informed by both length and age compositions, mean weights, and several indices of abundance. Despite the number of different data types, the large amount of ageing error and mostly flat and largely uncertain indices of abundance result in wide uncertainty intervals around the derived outputs like stock size and status . The complete assessment document can be found [here](https://www.pcouncil.org/documents/2014/01/the-status-of-rougheye-rockfish-sebastes-aleutianus-and-blackspotted-rockfish-s-melanostictus-as-a-complex-along-the-u-s-west-coast-in-2013-published-january-6-2014.pdf/).
+
+!["Estimates of relative stock size (current spawning output/unfished spawning output) for rougheye/blackspotted rockfish complex in US West Coast waters the 2013 assessment, and compared to the using the same data in the newest version of SS3 (). Broken lines are 95% confidence intervals."](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare4_Bratio_uncertainty.png){width="100%"} 
+
+!["Estimates of spawning output (millions of eggs) for black rockfish in waters off of Washington from the 2015 assessment. Broken lines are 95% confidence intervals"](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare2_spawnbio_uncertainty.png.png){width="100%"} 
+
+
+# Bridging the assessment model from Stock Synthesis 3.24 to 3.30 
+
+Since several years have passed from the last assessment model, the Stock Synthesis (SS) modelling framework has undergone many changes. While the specific changes in the model can be found in the model [change log](https://github.com/nmfs-stock-synthesis/stock-synthesis/blob/v3.30.19/Change_log_for_SS_3.30.xlsx?raw=true), here we simply update the model from the older 3.24V version to the newer 3.30.20 version. The point here is to present any differences in the model outputs when using the same information. This was first done by migrating the data and parameter specifications from the former files to the newer files. This migration was assisted using the [SS-DL tool](https://github.com/shcaba/SS-DL-tool). Once the old data was transferred to the SS 3.30.20 file, two versions of the model were ran. 
+
+  1) Fixing all parameter values to the values found in the 2015 model. 
+  2) Allowing the same parameters estimation specification as in the 2015 model. 
+
+Results are similar between models when all parameters are fixed from the 2015 model in the updated SS files, although there are scale differences and small relative stock status differences when the new SS version is allowed to estimate the same parameters as estimated in the 2015 version. These model comparisons are adequate to move ahead using the newest version of SS 3.30.20 without expecting large differences in reference models being due to versions of SS. 
+
+```{r, results = 'asis'}
+add_figure(
+  filein = file.path(dir, "plots", "WA_SB_comp_plot.png"), 
+  caption = "Comparison of spawning output for black rockfish in waters off of Washington between Stock Synthesis versions 3.24 and 3.30. Uncertainty envelops are 95% confidence intervals",
+  label = 'ssb_comps')
+
+``` 
+```{r, results = 'asis'}
+add_figure(
+  filein = file.path(dir, "plots", "WA_Dep_comp_plot.png"), 
+  caption = "Comparison of spawning output for black rockfish in waters off of Washington between Stock Synthesis versions 3.24 and 3.30. Uncertainty envelops are 95% confidence intervals",
+  label = 'ssb_deps')
+
+``` 
+
+
+
+## Unresolved Questions and Issues from the 2015 Assessments
+
+  1. Investigation of the lack of older (> age 10) females in data. This affects the definition of natural mortality and selectivity values for females. 
+  2. Improved historical catch reconstructions. The trawl fishery catches in particular need attention. 
+  3. Identifying stanzas or periods of uncertainty in the historical catch series will aid in the exploration of catch uncertainty in future assessment sensitivity runs. 
+  4. Evaluate a nearshore survey or other relevant surveys.
+  5. Stock structure for black rockfish.

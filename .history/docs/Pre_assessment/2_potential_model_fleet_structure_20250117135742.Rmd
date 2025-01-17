@@ -5,21 +5,19 @@ There are at least two questions to consider when considering stock structure fo
 2. **Both species range into Canada and Alaska-- are they one stock?** While genetics studies have focused mostly on identifying the species, little is known about the population structure of either of these species. What can be said is that this assessment represents the most southerly range of these species. Comparing the absolute abundance of the 2013 assessment to the most current estimates of the Alaskan stocks, the absolute number in this southerly range is much smaller than the much larger Gulf of Alaska (GOA) area, but higher than the Bering Sea/Aleutian Island (BSAI) stock (Figure 3). The two smaller stocks have similar trend of decline and stabilization, whereas the higher biomass GOA stock looks to have not dropped at all over the time period considered. 
 
 <center>
-
 ![Figure 3. Estimates of spawning biomass (current spawning output/unfished spawning output) for the rougheye/blackspotted rockfish complex from the two most recent Alaska (Bering Sea/Aluetian Islands (BSIA) and Gulf of Alaska (GOA)) and the 2013 West Coast stock assessment.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/SB_comps.png){width="75%"} 
+<center>
 
+<center>
 ![Figure 4. Estimates of relative stock size (current spawning output/unfished spawning output) relative to 1977 (the common year in all stock assessments compared) for the rougheye/blackspotted rockfish complex from the two most recent Alaska (Bering Sea/Aluetian Islands (BSAI) and Gulf of Alaska (GOA)) and the 2013 West Coast stock assessment.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Status_comp.png){width="75%"} 
-
-</center>
-
-
+<center>
 
 # Fleet Structure
 
-Currently, the following fleet structure is being considered for modeling commercial fishery removals as there is no record of a recreational fishery for this stock complex:
+Currently, the following fleet structure is being considered for modeling commercial and recreational fisheries in both area models:
  
-1. Commercial trawl
-2. Commercial fixed gear (mainly the long-line fishery)
-3. At-sea hake fishery 
+1. Commercial trawl (mostly a historical fishery)
+2. Commercial hook and line (mostly a jig fishery in the 1980s)
+3. Recreational (sport) fishery 
 
-Defining fleets is largely based on differing fleet selectivity (i.e., how the fishery captures fish by length and/or age). In the stock assessment model, selectivity translates into how the removals are taken via length and/or age out of the population. The above three fishery types are distinguished by different fishing activities that result in different selectivities. The fleets are the same as those defined in the 2013 assessment. We plan on using a length-based selectivity curve for all fleets for the current stock assessment model (same as done in the 2013 assessment), as there is no reason to believe significant age-based selectivity is occurring.
+Defining fleets is largely based on whether a fishing approach differs in the selectivity (i.e., the capture of fish by length and/or age). Selectivity translates into how the removals are taken via length and/or age out of the population. The above three fishery types are distinguished by different fishing activities that result in different selectivities. The fleets are the same as those defined in the 2015 assessment.

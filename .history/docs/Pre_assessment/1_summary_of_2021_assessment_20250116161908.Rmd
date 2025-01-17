@@ -7,18 +7,17 @@ The last assessment of the Rougheye and Blackspotted rockfishes in U.S. west coa
 
 More than 10 years have passed from the last assessment model and the Stock Synthesis 3 (SS3) modelling framework has undergone many changes. While the specific changes in the model can be found in the model [change log](https://github.com/orgs/nmfs-ost/projects/11), here we simply update the model from the older 3.24O version to the newer 3.30.22.1 version. We want to ensure that any update to the newest SS3 model is not a cause of any changes in model outputs when we hold all data and model specifications to be exactly the same as in 2013. We therefore transfered all the older data and model specifications to the newest version of SS3 and compared the outputs. The status (Figure 1) and scale (Figure 2) of both models are exactly the same, as are the estimates of within model uncertainty. This allows us to conclude that we can move forward using the latest version of SS3 without having to worry about inheriting any model difference due solely to the choice of SS3 version.
 
-<center>
 
-![Figure 1. Estimates of relative stock size (current spawning output/unfished spawning output) for rougheye/blackspotted rockfish complex in US West Coast waters the 2013 assessment, and compared to the using the same data in the newest version of SS3 (). Broken lines are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare4_Bratio_uncertainty.png){width="75%"} 
+![Figure 1. Estimates of relative stock size (current spawning output/unfished spawning output) for rougheye/blackspotted rockfish complex in US West Coast waters the 2013 assessment, and compared to the using the same data in the newest version of SS3 (). Broken lines are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare4_Bratio_uncertainty.png){width="100%"} 
 
-![Figure 2. Estimates of spawning output (millions of eggs) for black rockfish in waters off of Washington from the 2015 assessment. Broken lines are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare2_spawnbio_uncertainty.png){width="75%"} 
+![Figure 2. Estimates of spawning output (millions of eggs) for black rockfish in waters off of Washington from the 2015 assessment. Broken lines are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare2_spawnbio_uncertainty.png){width="100%"} 
 
-</center>
+
 
 ## Unresolved Questions and Issues from the 2015 Assessments
 
-  1. Historical landings and discards. 
-  2. Natural mortality. 
-  3. Maturity and fecundity. 
-  4. Age data and error.
-  5. Understanding the stock structure and biology of rougheye and blackspotted rockfishes.
+  1. Investigation of the lack of older (> age 10) females in data. This affects the definition of natural mortality and selectivity values for females. 
+  2. Improved historical catch reconstructions. The trawl fishery catches in particular need attention. 
+  3. Identifying stanzas or periods of uncertainty in the historical catch series will aid in the exploration of catch uncertainty in future assessment sensitivity runs. 
+  4. Evaluate a nearshore survey or other relevant surveys.
+  5. Stock structure for black rockfish.

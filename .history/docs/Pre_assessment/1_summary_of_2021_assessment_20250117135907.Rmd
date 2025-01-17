@@ -13,7 +13,7 @@ More than 10 years have passed from the last assessment model and the Stock Synt
 
 ![Figure 2. Estimates of spawning output (millions of eggs) for black rockfish in waters off of Washington from the 2015 assessment. Broken lines are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare2_spawnbio_uncertainty.png){width="75%"} 
 
-</center>
+<center>
 
 ## Unresolved Questions and Issues from the 2015 Assessments
 

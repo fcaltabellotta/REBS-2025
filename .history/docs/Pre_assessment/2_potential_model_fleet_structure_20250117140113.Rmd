@@ -18,8 +18,8 @@ There are at least two questions to consider when considering stock structure fo
 
 Currently, the following fleet structure is being considered for modeling commercial fishery removals as there is no record of a recreational fishery for this stock complex:
  
-1. Commercial trawl
-2. Commercial fixed gear (mainly the long-line fishery)
-3. At-sea hake fishery 
+1. Commercial trawl (mostly a historical fishery)
+2. Commercial hook and line (mostly a jig fishery in the 1980s)
+3. Recreational (sport) fishery 
 
-Defining fleets is largely based on differing fleet selectivity (i.e., how the fishery captures fish by length and/or age). In the stock assessment model, selectivity translates into how the removals are taken via length and/or age out of the population. The above three fishery types are distinguished by different fishing activities that result in different selectivities. The fleets are the same as those defined in the 2013 assessment. We plan on using a length-based selectivity curve for all fleets for the current stock assessment model (same as done in the 2013 assessment), as there is no reason to believe significant age-based selectivity is occurring.
+Defining fleets is largely based on whether a fishing approach differs in the selectivity (i.e., the capture of fish by length and/or age). Selectivity translates into how the removals are taken via length and/or age out of the population. The above three fishery types are distinguished by different fishing activities that result in different selectivities. The fleets are the same as those defined in the 2015 assessment.
