@@ -1,0 +1,56 @@
+
+
+# Biology
+
+## Maturity and Fecundity
+
+
+
+Fecundity-at-length is based on Dick et al. (2017) and is similar to what was assumed in the last assessment.
+
+## Length-Weight
+
+The length-weight are given in the figure below. 
+Males: W = 0.0000303L^2.843
+Females: W = 0.00002881L^2.857
+
+These values are updated with additional samples, yet still similar to those used in the 2015 assessment.
+
+```{r, results = 'asis'}
+add_figure(
+  filein = file.path(dir, "plots", "BLK_WA_LW.png"), 
+  caption = "Length-weight relationship for black rockfish based on fish sampled in Washington ports.",
+  label = 'BLK_WA_LW')
+
+``` 
+\
+
+## Age and Growth
+
+Ages are expected to be completed in the next month and will be added to the previous ages in the 2015 assessment. These data will be used to estimate growth outside and inside (as conditional age at length data) the model with the hope we can use internally estimated growth estimates.
+
+The current available samples of age and lengths by sex are shown below. The female to male sex ratio after age 25 is apparent.
+
+
+```{r, results = 'asis'}
+add_figure(
+  filein = file.path(dir, "plots", "WA_FM_growth_curves.png"), 
+  caption = "Female and Male age and length data for black rockfish based on fish sampled in Washington ports.",
+  label = 'VBGF_FM')
+
+``` 
+\
+
+
+## Natural Mortality
+
+Natural mortality is a highly influential parameters in age-structured stock assessments. It defines the rate of natural death by age, and thus establishes a stable age-structure and expectation of longevity, and interacts with the growth and reproduction to determine stock productivity. It is a very difficult parameter to directly measure, thus empirical relationships based on life history parameters are often used to indirectly determine its value or build prior distributions in belief of what it is in the event we do attempt to estimate in the model (Cope and Hamel 2022; Maunder et al. 2023). If length and age data are available, it may be possible to estimate it in the model.
+
+An estimate of maximum age tends to be the most relatable life history parameter to natural mortality. Cope and Hamel (2022) provide the most up-to-date examination of the relationship between maximum age and natural mortality, with a M = 5.4/tmax
+
+Other rougheye/blackspotted
+
+Natural mortality (M) is a parameter that is often highly uncertain in fish stocks. There are few published estimates of natural mortality for rougheye rockfish. Malecha et al. (2007) used samples from Alaska to calculate estimates of M that ranged from 0.013 to 0.063 using methods developed by Alverson and Carney (1975) and Hoenig (1983). McDermott (1994) analyzed samples collected from Alaska to Oregon and used the method developed by Gunderson and Dygert (1988) that relates the gonad somatic index (GSI) to natural mortality rate. Natural mortality rates of 0.0304 and 0.039 were reported with a high amount of uncertainty. The Gulf of Alaska assessment of rougheye rockfish (Shotwell et al. 2011) used 0.03 as the mean of a prior distribution for M.
+In this assessment, natural mortality was estimated. A lognormal prior distribution based upon a maximum age of 130 years (as seen in the survey data) was developed and had a median of 0.03365 and a coefficient of variation (CV) of 0.58 (pers comm, Owen Hamel, NWFSC, NOAA). Two other prior distributions were developed. One assumed a maximum age of 205 (Munk 2001) resulting in a median of 0.02134 and a CV of 0.60. The other assumed a maximum age of 130 and an asymptotic weight-at-age of 3.92 kg, resulting in a median M of 0.0605 and a CV of 0.44. Figure 32 shows that these prior distributions are wide and not highly informative.
+
+ the [Natural Mortality Tool](https://connect.fisheries.noaa.gov/natural-mortality-tool/) to develop a prior for black rockfish. 
