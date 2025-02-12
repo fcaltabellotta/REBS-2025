@@ -12,11 +12,8 @@ Fecundity: The previous stock assessment assumed that fecundity was proportional
 
 Female and male length-weight relationships were determined using data from the PacFIN database, west coast groundfish bottom trawl survey, and ASHOP samples. Samples size by sex were: female (N=13839), males (13625), and unknown sex (53). Each of the data sources estimated very similar length-weight relationships (Figure LW1).
 
-\
-
 ![Figure LW1. Length and weight samples by sex and data source. Lines are the power function fits by data source.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/L_W_plots.png){width="75%"} 
 
-\
 
 The resultant sex-specific length-weight relationships are given in Figure LW2, with the following individual values: 
 
@@ -24,8 +21,6 @@ The resultant sex-specific length-weight relationships are given in Figure LW2, 
 * Males: W = 0.000012L^3.07
 
 These values are very similar to the previous assessment that used a combine sex value of a=0.0000096 and b=3.12000 (Figure LW2).
-
-\
 
 ![Figure LW2. Realized length and weight relationships for female and male Rougheye/Blackspotted rockfishes.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/F_M_ltwt_plot.png){width="75%"} 
 
@@ -50,8 +45,8 @@ Table AL_1. Estimated von Bertalanffy growth parameters (and standard deviations
 read.csv("C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/IGOR Fitting Growth Curves_4_table.csv")
 ```
 \
-
 ![Figure AL_2. Coefficient of variation by age and sex for all sources of Rougheye/Blackspotted rockfishes ages. Sample sizes (N) are also indicated by size of the point. The line is a smoothed loess (polynomial) line that gives a moving average of CV by age and sex.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Lt_age_CV_FM.png){width="75%"} 
+
 
 
 \
@@ -69,10 +64,6 @@ We attempt to estimate natural mortality, as was done in the previous West Coast
 
 Speaking to this issue of possible age truncation, applying a catch curve analysis (taking the log of the abundance of numbers of samples in available age classes) on the aggregated ages across all age sources by sex, the total mortality (Natural + Fishing mortality= Total mortality) is 0.046 for females and 0.035 for males, which may indicate the natural mortality could be lower than used in the 2013 assessment, but within values considered in other areas (Figure CC_M). This also indicates the possibility of estimating sex-specific natural mortality, as they may be different. The two sex model allows for this type of model specification exploration.
 
-\
-
 ![Figure M. Natural mortality curves by age in years for values of natural mortality used in varios Rougheye/Blackspotted Rockfish stock assessments. Dots indicate the range of assumed maximum ages using the equation from Hamel and Cope 2022.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/M_values.png){width="75%"} 
-
-\
 
 ![Figure CC_M. Catch curve (log abundance by age) analysis on aggregated ages over all age sources by sex (black points). The peak selected age was 21 for both sexes, so the linear model was run from age 21 until the oldest age (red points). The slope of the linear model is equal to the estimate of an aggregate total mortality (Z).](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_curve_plot_FM.png){width="75%"} 

@@ -12,11 +12,8 @@ Fecundity: The previous stock assessment assumed that fecundity was proportional
 
 Female and male length-weight relationships were determined using data from the PacFIN database, west coast groundfish bottom trawl survey, and ASHOP samples. Samples size by sex were: female (N=13839), males (13625), and unknown sex (53). Each of the data sources estimated very similar length-weight relationships (Figure LW1).
 
-\
-
 ![Figure LW1. Length and weight samples by sex and data source. Lines are the power function fits by data source.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/L_W_plots.png){width="75%"} 
 
-\
 
 The resultant sex-specific length-weight relationships are given in Figure LW2, with the following individual values: 
 
@@ -24,8 +21,6 @@ The resultant sex-specific length-weight relationships are given in Figure LW2, 
 * Males: W = 0.000012L^3.07
 
 These values are very similar to the previous assessment that used a combine sex value of a=0.0000096 and b=3.12000 (Figure LW2).
-
-\
 
 ![Figure LW2. Realized length and weight relationships for female and male Rougheye/Blackspotted rockfishes.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/F_M_ltwt_plot.png){width="75%"} 
 
@@ -50,8 +45,8 @@ Table AL_1. Estimated von Bertalanffy growth parameters (and standard deviations
 read.csv("C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/IGOR Fitting Growth Curves_4_table.csv")
 ```
 \
-
 ![Figure AL_2. Coefficient of variation by age and sex for all sources of Rougheye/Blackspotted rockfishes ages. Sample sizes (N) are also indicated by size of the point. The line is a smoothed loess (polynomial) line that gives a moving average of CV by age and sex.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Lt_age_CV_FM.png){width="75%"} 
+
 
 
 \

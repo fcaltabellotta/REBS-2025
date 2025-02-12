@@ -6,7 +6,7 @@
 Rougheye/Blackspotted Rockfish 
 
 
-Commercial landings are the main source of removals for Rougheye/Blackspotted rockfishes. They are a mainly slope species, typically found around 365m (~200 fathoms), but can also be common shallower (down to 275m). This complex is known to school, this increasing encounters when in an area and available. Trawl and non-trawl (mostly long-line) are the two major fleets they are taken in, with the at-sea-hake midwater fishery also encountering them in notable numbers over the past two decades. Landings are lower in California (Figure Ct_CA) and increase northward, with the biggest trawl catches in Oregon (Figure Ct_WA), and biggest non-trawl catches in Washington (Figure Ct_WA). There was also a notable catch of Rougheye/Blackspotted accounted for in the trawl fishery that came from the foreign fleet Pacific Ocean Perch fishery in the 1960s.
+Commercial landings are the main source of removals for Rougheye/Blackspotted rockfishes. They are a mainly slope species, typically found around 365m (~200 fathoms), but can also be common shallower (down to 275m). This complex is known to school, this increasing encounters when in an area and available. Trawl and non-trawl (mostly long-line) are the two major fleets they are taken in, with the at-sea-hake midwater fishery also encountering them. Landings are lower in California (Figure Ct_CA) and increase northward, with the biggest trawl catches in Oregon (Figure Ct_WA), and biggest non-trawl catches in Washington (Figure Ct_WA). There was also a notable catch of Rougheye/Blackspotted accounted for in the trawl fishery that came from the foreign fleet Pacific Ocean Perch fishery in the 1960s.
 
 There are some updates in landings by state and fishery, but are overall small and not expected to make a large difference in the stock assessment (Figure Ct_All). Landings over the couple of decades are generally lower than the previous two decades, though more discards are accounted for in the more recent years (Figure Ct_fleets). 
 
@@ -39,7 +39,7 @@ There are some updates in landings by state and fishery, but are overall small a
 
 ## Discards
 
-**Do we have more to say than what is above? Maybe we can show here how the choice of retention curves vs discard fleets doesn't matter?** 
+Do we have more to say than what is above?
 
 
 

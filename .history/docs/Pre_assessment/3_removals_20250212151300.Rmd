@@ -1,0 +1,28 @@
+# Removal Data
+
+
+## Commercial Landings & Discards
+
+Rougheye/Blackspotted Rockfish 
+
+
+![Figure Ct_CA. California state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/SB_comps.png){width="75%"} 
+
+
+
+### Additional Items for Discussion
+
+* See the discussion on allocating 3A trawl 
+* Bottom trawl catch history and the translation of state area codes to PacFIN Catch Area Code 3A (45 46' N. lat TO 47 20' N. lat.; Cape Falcon to Cape Elizabeth) and how catch should be divided between the two assessment areas.
+* PacFIN species composition of Washington landings, 1981-1999, for trawl and non-trawl (primarily jig) gears.
+* Evaluation of historical species composition data (i.e. pre-1981).
+
+## Discards
+
+
+
+![Figure 3. Estimates of spawning biomass (current spawning output/unfished spawning output) for the rougheye/blackspotted rockfish complex from the two most recent Alaska (Bering Sea/Aluetian Islands (BSIA) and Gulf of Alaska (GOA)) and the 2013 West Coast stock assessment.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/SB_comps.png){width="75%"} 
+
+
+### Additional Items for Discussion
+
