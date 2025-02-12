@@ -44,7 +44,7 @@ dir <- "C:/Users/Jason.Cope/Documents/Github/Sebastes_melanops_WA/docs/Pre_asses
 
 # Overview
 
-Description of data and model specification being considered for use in the 2025 Rougheye and Blockspotted rockfishes assessment. Both of these species are treated as a rockfish complex, as they are difficult to visually separate, and thus most data are only avaibale as combined rougheye/blackspotted. 
+Description of data and model specification being considered for use in the 2025 Rougheye and Blockspotted rockfishes assessment. Both of these species are treated as a rockfish complex, as they are difficult to visually separate, and thus most data are only available as combined Rougheye/Blackspotted rockfishes. 
 
 
 ```{r child = "1_summary_of_2021_assessment.Rmd"}

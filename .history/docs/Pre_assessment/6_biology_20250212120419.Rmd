@@ -42,7 +42,7 @@ The coefficient of variation (CV) of length by age and sex are shown in Figure A
 #flextable(read.csv("C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/IGOR Fitting Growth Curves_4_table.csv"))
 read.csv("C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/IGOR Fitting Growth Curves_4_table.csv")
 ```
-![Figure AL_2. Coefficient of variation by age and sex for all sources of Rougheye/Blackspotted rockfishes ages. Sample sizes (N) are also indicated by size of the point. The line is a smoothed loess (polynomial) line that gives a moving average of CV by age and sex.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Lt_age_CV_FM.png){width="75%"} 
+![Figure AL_2. Coefficient of variation by age for all sources of Rougheye/Blackspotted rockfishes ages. Sample sizes (N) are also indicated by size of the point.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Lt_age_CV_FM.png){width="75%"} 
 
 
 

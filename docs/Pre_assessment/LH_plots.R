@@ -2,11 +2,12 @@ library(ggplot2)
 library(dplyr)
 library(viridis)
 
-####################
 #Length, weight and age data
 Lt_Wt_Age<-read.csv("C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/Lt_Wt_Age.csv")
 
-#Length-weight relationship
+#############################
+#Length-weight relationship #
+#############################
 
 ggplot(Lt_Wt_Age[!is.na(Lt_Wt_Age$Sex),],aes(x=as.numeric(Length),y=as.numeric(Weight),color=Source))+
   geom_point()+
@@ -49,7 +50,43 @@ ggplot(ex_Lt_Wt_est,aes(Lt.in,Wt.in,color=Sex))+
 
 #######################
 
-#Natural mortality
+#######################
+### Age and growth ###
+#######################
+N_ages<-rowSums(table(Lt_Wt_Age[,3:4])) #sample sizes
+
+ggplot(Lt_Wt_Age[!is.na(Lt_Wt_Age$Sex),],aes(x=as.numeric(Age),y=as.numeric(Length),color=Source))+
+  geom_point()+
+  facet_wrap(vars(Sex))+
+  xlab("Age (years)")+
+  ylab("Length (cm)")+
+  stat_smooth(method = 'nls', 
+            formula = y ~ Linf*(1-exp(-k*(x-t0))), 
+            se = FALSE, 
+            method.args = list(start   = list(Linf = 55 , k = 0.1, t0=0), 
+                               control = list(minFactor = 1/ 8192, 
+                                              maxiter = 100)))+
+  geom_text(data = data.frame(Length = c(100,100,100),Weight=c(NA,NA,NA), Sex=c("F","M","U"), Age = c(80,80,80),Source=("All"),
+                              label = c(paste0("N=",N_ages[1]), paste0("N=",N_ages[2]),paste0("N=",N_ages[3]))),
+                              aes(label = label),color="black")
+  
+
+N_ages<-rowSums(table(Lt_Wt_Age[,3:4])) #sample sizes
+
+LtAge_mean<-Lt_Wt_Age[,c(1,4)] %>% group_by(Age) %>% summarize(ltvar = mean(as.numeric(Length),na.rm=TRUE))
+LtAge_sd<-Lt_Wt_Age[,c(1,4)] %>% group_by(Age) %>% summarize(ltvar = sd(as.numeric(Length),na.rm=TRUE))
+LtAge_nums<-colSums(table(Lt_Wt_Age[,c(1,4)]))
+LtAge_CV<-cbind(LtAge_mean[,1],(LtAge_sd/LtAge_mean)[,2])[-143,]
+LtAge_CV<-cbind(LtAge_CV,LtAge_nums)
+colnames(LtAge_CV)<-c("Age","CV","N")
+
+ggplot(LtAge_CV,aes(Age,CV))+
+  geom_point(aes(size=N),shape=21,color="blue",fill="white")
+
+#####################
+# Natural mortality #
+#####################
+
 M_vec<-c(0.03,0.035,0.042,0.05,0.055)
 age_vec<-0:200
 age_list<-list()
@@ -70,6 +107,19 @@ ggplot(data=age_mat,aes(Ages,Pop_prop,color=M_val))+
 
 
 age_comps_agg<-table(Lt_Wt_Age$Age)
+age_comps_agg.df<-data.frame(Ages=as.numeric(names(age_comps_agg)),Freq=as.numeric(age_comps_agg),Freq_ln=log(as.numeric(age_comps_agg)))
 age_comps_agg_peak<-age_comps_agg[21:length(age_comps_agg)]
+age_comps_agg_peak.df<-data.frame(Ages=as.numeric(names(age_comps_agg_peak)),Freq=as.numeric(age_comps_agg_peak),Freq_ln=log(as.numeric(age_comps_agg_peak)))
+cc_lm<-lm(log(age_comps_agg_peak)~as.numeric(names(log(age_comps_agg_peak))))
 
-lm(log(age_comps_agg_peak)~as.numeric(names(log(age_comps_agg_peak))))
+ggplot(age_comps_agg.df,aes(Ages,Freq_ln))+
+  geom_point()+
+  ylab("Log frequency")+
+geom_point(data=age_comps_agg_peak.df,aes(Ages,Freq_ln),color="red")+
+  geom_smooth(method = "lm",data=age_comps_agg_peak.df)+
+  annotate("text",x=100,y=5.4,label=paste0("Peak age = 21"),size=5)+
+  annotate("text",x=100,y=5,label=paste0("Z = -0.04172"),size=5)
+
+  
+#Report Z value
+cc_lm$coefficients[2]
