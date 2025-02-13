@@ -41,3 +41,12 @@ ggplot(Catch_comp_in_All,aes(Year,Landings,color=as.factor(Assessment)))+
   ylab("All Landings")+
   theme_bw()+
   theme(legend.position="bottom")
+
+#Show catches by fleet
+
+
+####################
+##Compare Indices ##
+####################
+
+

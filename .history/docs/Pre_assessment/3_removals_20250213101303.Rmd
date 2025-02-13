@@ -1,0 +1,47 @@
+# Removal Data
+
+
+## Commercial Landings & Discards
+
+Rougheye/Blackspotted Rockfish 
+
+
+Commercial landings are the main source of removals for Rougheye/Blackspotted rockfishes. They are a mainly slope species, typically found around 365m (~200 fathoms), but can also be common shallower (down to 275m). This complex is known to school, this increasing encounters when in an area and available. Trawl and non-trawl (mostly long-line) are the two major fleets they are taken in, with the at-sea-hake midwater fishery also encountering them in notable numbers over the past two decades. Landings are lower in California (Figure Ct_CA) and increase northward, with the biggest trawl catches in Oregon (Figure Ct_WA), and biggest non-trawl catches in Washington (Figure Ct_WA). There was also a notable catch of Rougheye/Blackspotted accounted for in the trawl fishery that came from the foreign fleet Pacific Ocean Perch fishery in the 1960s.
+
+There are some updates in landings by state and fishery, but are overall small and not expected to make a large difference in the stock assessment (Figure Ct_All). Landings over the couple of decades are generally lower than the previous two decades, though more discards are accounted for in the more recent years (Figure Ct_fleets). 
+
+
+![Figure Ct_CA. California state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_CA.png){width="75%"} 
+
+\
+
+![Figure Ct_OR. Oregon state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_OR.png){width="75%"} 
+
+\
+
+![Figure Ct_WA. Washington state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_WA.png){width="75%"} 
+
+
+\
+
+![Figure Ct_All. Landings across alls states for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_All.png){width="75%"} 
+
+\
+
+![Figure Ct_fleets. Landings across alls fleets used in the 2025 stock assessment.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/catch2_landings_stacked.png){width="75%"} 
+
+\
+
+### Additional Items for Discussion
+
+* Any to add? 
+* 
+
+## Discards
+
+**Do we have more to say than what is above? Maybe we can show here how the choice of retention curves vs discard fleets doesn't matter?** 
+
+
+
+### Additional Items for Discussion
+

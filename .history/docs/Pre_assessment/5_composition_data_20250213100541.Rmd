@@ -1,0 +1,72 @@
+
+
+# Composition Data
+
+Sample sizes are consistent with the history of the fisheries, with commercial catches higher pre-2000s and the sport fishery better sampled post-2000s.
+
+```{r, results = 'asis'}
+add_figure(
+  filein = file.path(dir, "plots", "samples.png"), 
+  caption = "Female and Male length composition data by year for black rockfish based on fish sampled in the Washington sport fishery.",
+  label = 'samples')
+
+``` 
+\
+
+## Commercial length compositions
+
+The commercial data is best sampled in the 1980s. This mainly historical data is likely going to be the same as was used in the 2015 assessment.
+
+
+
+![Figure Ct_All. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish in the trawl fishery.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt1mkt0_page2.png){width="75%"} 
+
+\
+
+
+![Figure Ct_All. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish in the trawl fishery for years .](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt2mkt0_page2.png){width="75%"} 
+
+\
+
+## Recreational length compositions
+The recreational fishery provides a long time series of length composition by sex. These data are useful for determining fishery selectivity, identifying possible recruitment events and indicating the overall stock status of black rockfish in Washington. Overall, females are slightly larger than males. 
+
+There is also the important issue of defining the effective sample size, which creates the relative weights among years and fleets.  
+
+```{r, results = 'asis'}
+add_figure(
+  filein = file.path(dir, "plots", "WA-compare-lengths-time-series.png"), 
+  caption = "Female and Male length composition data by year for black rockfish based on fish sampled in the Washington sport fishery.",
+  label = 'FM_lengths_yrs')
+
+``` 
+
+```{r, results = 'asis'}
+add_figure(
+  filein = file.path(dir, "plots", "WA-all-years-density-with-unknown.png"), 
+  caption = "Aggregate length composition data by sex for black rockfish based on fish sampled in the Washington sport fishery.",
+  label = 'VBGF_FM')
+
+``` 
+
+```{r, results = 'asis'}
+add_figure(
+  filein = file.path(dir, "plots", "Sexed_ratios.png"), 
+  caption = "Percentage of sexed and unsexed samples in the length composition data for black rockfish based on fish sampled in the Washington sport fishery.",
+  label = 'sexed_ratios')
+
+``` 
+\
+
+
+## Survey length compositions
+
+Three of the surveys are related to the sport fishery, but two of them (the tag and nearshore surveys) have their own lengths to use to estimate selectivity. The dockside survey is directly sampled from the sport fishery and therefore mirrors the sport fishery selectivity. The nearshore SCUBA survey will either be a recruitment survey or assume a fixed selectivity above a certain length, which is to be determined.
+
+```{r, results = 'asis'}
+add_figure(
+  filein = file.path(dir, "plots", "survey_samples.png"), 
+  caption = "Numbers of black rockfish lengths sampled for the tag and nearshore surveys.",
+  label = 'sexed_ratios')
+
+``` 

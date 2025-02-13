@@ -85,7 +85,7 @@ These values are very similar to the previous assessment that used a combine sex
 
 ## Stock-recruitment relationship
 
-The Beverton-Holt stock recruit relationship is assumed, as it was last time, to describe realtionship between spawning biomass and recruitment. The steepness parameter may be considered for estimation, but it notoriously difficult to estimate. The 2013 stock assessment used the previous rockfish steepness mean value of 0.77, but this has subsequently been updated to 0.72, thus a stock with somewhat lower recruitment compensation. Natural variation in recruitment (i.e., not deterministically taken from the stock-recruit curve) is apparent in the length and age data (see as notable length or age classes growing/ageing over time), so deviations in recruitment will be estimated.
+The Beverton-Holt stock recruit relationship is assumed, as it was last time, to describe realtionship between spawning biomass and recruitment. The steepness parameter may be considered for estimation, but it notoriously difficult to estimate. The 2013 stock assessment used the previous rockfish steepness mean value of 0.77, but this has subsequently been updated to 0.72, thus a lower productive stock. Recruitment is apparent in the length and age data, so deviations in recruitment will be estimated.
 
 \
 

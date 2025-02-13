@@ -1,0 +1,42 @@
+
+
+# Composition Data
+
+## Commercial length compositions
+
+Commercial data is is available for all fleets, which will allow for the estimation of selectivity. The 2013 assessment considered blocking of selectivity as well as dome-shaped selectivity for all fleets and surveys. Given the difficult to access and sample habitats of Rougheye and Blackspotted rockfishes with the two major gears, natural refugia (based on depth and rugged habitat preference) may explain why older, larger individuals are less accessible, thus . That said, large and old individuals are encountered in both fisheries and surveys, some there is some selection occurring for the sizes and ages.
+
+
+![Figure Lt_trawl. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the trawl fishery.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt1mkt0_page2.png){width="75%"} 
+
+\
+
+![Figure Lt_trawl_discard. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on dead discarded fish in the trawl fishery.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt8mkt0.png){width="75%"} 
+
+\
+
+![Figure Lt_nontrawl. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the non-trawl fishery.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt2mkt0_page2.png){width="75%"} 
+
+\
+
+![Figure Lt_nontrawl_discard. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on dead discarded fish in the non-trawl fishery.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt9mkt0.png){width="75%"} 
+
+\
+
+![Figure Lt_ashop. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the at-sea hake fishery.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt3mkt0.png){width="75%"} 
+
+\
+
+
+
+## Survey length compositions
+
+Three of the surveys are related to the sport fishery, but two of them (the tag and nearshore surveys) have their own lengths to use to estimate selectivity. The dockside survey is directly sampled from the sport fishery and therefore mirrors the sport fishery selectivity. The nearshore SCUBA survey will either be a recruitment survey or assume a fixed selectivity above a certain length, which is to be determined.
+
+
+## Sample sizes
+
+
+
+
+\
