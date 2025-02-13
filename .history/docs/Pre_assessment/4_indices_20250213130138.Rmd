@@ -13,7 +13,7 @@ Only the WCGBTS has new data for this assessment, but new methods (Spatial and s
 
 \
 
-![Figure Index_AFSC_slope. Comparison of index values for the Alaska Fishery Science Center Slope Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 98% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/AFSC_slope_comp.png){width="75%"} 
+![Figure Index_AFSC_slope. Comparison of index values for the Alaska Fishery Science Center Slope Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 98% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt3mkt0.png){width="75%"} 
 
 \
 

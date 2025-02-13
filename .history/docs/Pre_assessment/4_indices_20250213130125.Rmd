@@ -9,11 +9,11 @@ Given Rougheye/Blackspotted are associated with deep, structured habitats, it ca
 
 Only the WCGBTS has new data for this assessment, but new methods (Spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/)) to develop an index of abundance were applied to all surveys to update all indices. Two distributions (gamma and lognormal) were considered, as was the case in 2013 model when a non-spatial generalized linear mixed model was used to develop indices of abundance.
 
-![Figure Index_Tri. Comparison of index values for the Triennial Trawl Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 98% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Tri_comps.png){width="75%"} 
+![Figure Index_Tri. Comparison of index values for the Triennial Trawl Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 98% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt3mkt0.png){width="75%"} 
 
 \
 
-![Figure Index_AFSC_slope. Comparison of index values for the Alaska Fishery Science Center Slope Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 98% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/AFSC_slope_comp.png){width="75%"} 
+![Figure Index_AFSC_slope. Comparison of index values for the Alaska Fishery Science Center Slope Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 98% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt3mkt0.png){width="75%"} 
 
 \
 
