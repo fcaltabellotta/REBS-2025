@@ -17,20 +17,20 @@ The response variable in the model was catch (mt) with an offset of area (km2) t
 
 Spatial variation, but not spatiotemporal variation, was included in the encounter probability and the positive catch rate model. Spatial variation was approximated using 200 knots, where more knots led to non-estimable standard errors because the positive encounters are too sparse to support the dense spatiotemporal structure.
 
-![Figure Index_Tri. Comparison of index values for the Triennial Trawl Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 98% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Tri_comps.png){width="75%"} 
+![Figure Index_Tri. Comparison of index values for the Triennial Trawl Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Tri_comps.png){width="75%"} 
 
 \
 
-![Figure Index_AFSC_slope. Comparison of index values for the Alaska Fishery Science Center Slope Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 98% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/AFSC_slope_comp.png){width="75%"} 
+![Figure Index_AFSC_slope. Comparison of index values for the Alaska Fishery Science Center Slope Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/AFSC_slope_comp.png){width="75%"} 
 
 \
 
-![Figure Index_NWFSC_slope. Comparison of index values for the NWFSC Slope Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 98% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/NWFSCslope_comps.png){width="75%"} 
+![Figure Index_NWFSC_slope. Comparison of index values for the NWFSC Slope Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/NWFSCslope_comps.png){width="75%"} 
 
 \
 
 
-![Figure Index_WCGBTS. Comparison of index values for the West Coast Groundfish Bottom Trawl Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 98% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/WCGBTS_comps.png){width="75%"} 
+![Figure Index_WCGBTS. Comparison of index values for the West Coast Groundfish Bottom Trawl Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/WCGBTS_comps.png){width="75%"} 
 
 \
 
@@ -38,4 +38,7 @@ Spatial variation, but not spatiotemporal variation, was included in the encount
 
 ## Additional Items for Discussion
 
+* No other 
+* Are there any other indices we should be considering?
 
+\

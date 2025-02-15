@@ -1,0 +1,48 @@
+# Indices of Abundance
+
+Given Rougheye/Blackspotted are associated with deep, structured habitats, it can be difficult to survey them. Four general fishery-independent bottom trawl surveys were used in the 2013 assessment, and are again included in this assessment:
+
+* Triennial (every three years) survey (1980-2004)
+* Alaska Fishery Science Center Slope survey (1997-2001)
+* Northwest Fisheries Science Center Slope Center (1999-2001)
+* West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2204)
+
+Only the WCGBTS has new data for this assessment, but new methods (Spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/)) to develop an index of abundance were applied to all surveys to update all indices. Two distributions (gamma and lognormal) were considered, as was the case in 2013 model when a non-spatial generalized linear mixed model was used to develop indices of abundance.
+
+Geostatistical models of biomass density were fit to survey data using Template Model Builder (TMB) (Kristensen et al. 2016) via the R package Species Distribution Models with (sdmTMB) (Anderson et al. 2022). These models can account for latent spatial factors with a constant spatial Gaussian random field and spatiotemporal deviations to evolve as a random walk Guassian random field (Thorson et al. 2015). Delta-gamma and delta-lognormal distributions were investigated. Results are only shown for the distribution that led to the best model diagnostics, e.g., similar distributions of theoretical normal quantiles and model quantiles, high precision, lack of extreme predictions that are incompatible with the life history, and low Akaike information criterion (AIC). Estimates of biomass from this best model were predicted using a grid based on available survey locations. 
+
+WCBGTS:
+
+The data were truncated to depths less than 875 m prior to modelling given that there were zero positive encounters in depths deeper than 875 m (need to verify - RCR). The prediction grid was also truncated to only include available survey locations in depths between 55-875 m to limit extrapolating beyond the data and edge effects. 
+
+The model used a delta model with a lognormal distribution for the catch-rate component (so far, this one looks better to me - RCR). A logit-link was used for encounter probability and a log-link for positive catch rates. The response variable was catch (mt) with an offset of area (km2) to account for differences in effort. Fixed effects were estimated for each year. The following additional covariate was included: pass. 
+
+Spatial variation (but not spatiotemporal variation - need to verify - RCR) was included in the encounter probability and the positive catch rate model. Spatial variation was approximated using 200 knots, where more knots led to non-estimable standard errors because the positive encounters are too sparse to support the dense spatiotemporal structure.
+
+
+Anderson, Sean C., Eric J. Ward, and Philina A. English, and Lewis A. K. Barnett. 2022. “sdmTMB: An R Package for Fast, Flexible, and User-Friendly Generalized Linear Mixed Effects Models with Spatial and Spatiotemporal Random Fields.” bioRxiv 2022.03.24.485545. https://doi.org/10.1101/2022.03.24.485545.
+
+Kristensen, Kasper, A. Nielsen, Casper W Berg, H. J. Skaug, and B. M. Bell. 2016. “TMB: Automatic Differentiation and Laplace Approximation.” Journal of Statistical Software 70: 1–21.
+
+![Figure Index_Tri. Comparison of index values for the Triennial Trawl Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Tri_comps.png){width="75%"} 
+
+\
+
+![Figure Index_AFSC_slope. Comparison of index values for the Alaska Fishery Science Center Slope Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/AFSC_slope_comp.png){width="75%"} 
+
+\
+
+![Figure Index_NWFSC_slope. Comparison of index values for the NWFSC Slope Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/NWFSCslope_comps.png){width="75%"} 
+
+\
+
+
+![Figure Index_WCGBTS. Comparison of index values for the West Coast Groundfish Bottom Trawl Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/WCGBTS_comps.png){width="75%"} 
+
+\
+
+
+
+## Additional Items for Discussion
+
+
