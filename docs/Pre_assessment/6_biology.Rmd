@@ -53,7 +53,7 @@ read.csv("C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plo
 
 ## Maturity and Fecundity
 
-Maturity: 
+Maturity: We are currently updating the maturity analysis for the species complex with additional samples to estimate the length at which 50% of females in the population are mature (L50). Biological maturity identifies females that are physiologically capable of spawning. Functional maturity identifies females that are physiologically capable of spawning and will likely spawn in a given year. The current L50 estimate (not updated) of biological maturity is 43.84 cm and the current L50 estimate (not updated) of functional maturity is 48.44 cm.
 
 Fecundity: The previous stock assessment assumed that fecundity was proportional to weight. Dick et al. (2017) provided a study on rockfishes showing that they routinely show a non-proportional relationship of fecundity to weight, with larger individuals producing more eggs than expected only by weight. Neither Rougheye or Blackspotted have a species- of subfamily-specific estimate for this relationship, so this stock assessment uses the unobserved Genus *Sebastes* values of a = 6.538e-06 and b = 4.043 using the F=aL^b relationship.
 
