@@ -42,7 +42,33 @@ ggplot(Catch_comp_in_All,aes(Year,Landings,color=as.factor(Assessment)))+
   theme_bw()+
   theme(legend.position="bottom")
 
-#Show catches by fleet
+
+
+##############
+#### Neff ####
+##############
+Neff_in<-read.csv("C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_inputs.csv")
+Neff_in.FD<-subset(Neff_in,Type=="FD")
+Neff_in.FI<-subset(Neff_in,Type=="FI")
+
+
+ggplot(Neff_in.FD,aes(as.numeric(Year),as.numeric(Neff),color=as.factor(Sex)))+
+  geom_point()+
+  facet_wrap(vars(Fleet))+
+  ylab("Input Effective Sample Size")+
+  xlab("Year")+
+  theme_bw()+
+  theme(legend.position="bottom")+
+  labs(color="Sex")
+
+ggplot(Neff_in.FI,aes(as.numeric(Year),as.numeric(Neff),color=as.factor(Sex)))+
+  geom_point()+
+  facet_wrap(vars(Fleet))+
+  ylab("Input Effective Sample Size")+
+  xlab("Year")+
+  theme_bw()+
+  theme(legend.position="bottom")+
+  labs(color="Sex")
 
 
 ####################

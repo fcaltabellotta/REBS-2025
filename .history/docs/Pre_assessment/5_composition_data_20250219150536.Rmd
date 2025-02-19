@@ -57,17 +57,15 @@ Three of the four surveys have length composition data that allow for estimation
 
 ## Sample sizes
 
-Effective input sample sizes for lengths are an indicator of how much weight the model will put on fitting the length composition data. A higher effective sample size, the more the model will attempt to fit that data. The effective sample size is not usually the number of fish that are sampled, but a measure of independent samples. This means that the fish caught are random samples from the population. When fish are caught together, they could be of similar size or age, and therefore not necessarily a random sample of the population. Some combination of number of fish and number of independent sampling units like hauls or sets are often used. 
-
-Effective sample sizes for each fishing (**Figure Neff_FD**) and survey (**Figure Neff_FI**) fleets are given below. Higher effective sample sizes tend to be in the most recent years, and most years are below or around 100. Discard fishery samples are unsexed, while all other sources of lengths are largely sexed. 
+Effective input sample sizes for lengths are an indicator of how much weight the model will put on fitting the length composition data. A higher effective sample size, the more the model will attempt to fit that data. The effective sample size is not usually the number of fish that are sampled, but a measure of independent samples. This means that the fish caught are random samples from the population. When fish are caught together, that  
 
 \
 
-![**Figure Neff_FD. Effective sample sizes by year and fishing fleet. Shape color indicates whether samples were unsexed or sexed.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_FD.png){width="75%"} 
+![**Figure Lt_WCGBTS. Effective sample sizes by year and fishing fleet. Shape color indicates whether samples were unsexed or sexed.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_FD.png){width="50%"} 
 
 \
 
-![**Figure Neff_FI. Effective sample sizes by year and survey. All survey samples were sexed.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_FI.png){width="75%"} 
+![**Figure Lt_WCGBTS. Effective sample sizes by year and survey. All survey samples were sexed.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_FD.png){width="50%"} 
 
 \
 
