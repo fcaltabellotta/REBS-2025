@@ -30,6 +30,12 @@ Defining fleets is largely based on differing fleet selectivity (i.e., how the f
 
 ![**Figure Discard_1. Comparison of spawning output using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare1_spawnbio__discard_fleets.png){width="75%"} 
 
+</center>
+
+\
+
 ![**Figure Discard_2. Comparison of relative spawning output using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare1_spawnbio__discard_fleets.png){width="75%"} 
+
+</center>
 
 \

@@ -9,7 +9,7 @@ Given Rougheye/Blackspotted are associated with deep, structured habitats, it ca
 
 Only the WCGBTS has new data for this assessment, but new methods (Spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/)) to develop an index of abundance were applied to all surveys to update all indices. Two distributions (gamma and lognormal) were considered, as was the case in 2013 model when a non-spatial generalized linear mixed model was used to develop indices of abundance.
 
-Comparing the standardized versions (i.e., Z-scores) of the indices shows very similar trends among each model output (**Figure Z_score_Indices**), suggesting little difference in choice of model type. The variance in the indices are generally high (0.3-0.5; **Figure Sd_log_Indices**), suggesting the information content in these indices is low. This is not a surprise given the challenge of sampling these species with trawl data.
+Comparing the standardized versions (i.e., Z-scores) of the indices shows very similar trends among each model output (**Figure Z_score_Indices**), suggesting little difference in choice of model type. The variance in the indices are generally high (0.3-0.5; **Figure Sd_log_Indices**), suggesting the information content in these indices is low.
 
 \
 

@@ -9,7 +9,11 @@ Given Rougheye/Blackspotted are associated with deep, structured habitats, it ca
 
 Only the WCGBTS has new data for this assessment, but new methods (Spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/)) to develop an index of abundance were applied to all surveys to update all indices. Two distributions (gamma and lognormal) were considered, as was the case in 2013 model when a non-spatial generalized linear mixed model was used to develop indices of abundance.
 
-Comparing the standardized versions (i.e., Z-scores) of the indices shows very similar trends among each model output (**Figure Z_score_Indices**), suggesting little difference in choice of model type. The variance in the indices are generally high (0.3-0.5; **Figure Sd_log_Indices**), suggesting the information content in these indices is low. This is not a surprise given the challenge of sampling these species with trawl data.
+For the WCBGTS, the data were truncated to depths less than 875 m prior to modelling given that there were zero positive encounters in depths deeper than 875 m. The prediction grid was also truncated to only include available survey locations in depths between 55-875 m to limit extrapolating beyond the data and edge effects. 
+
+The response variable in the model was catch (mt) with an offset of area (km2) to account for differences in effort. Fixed effects were estimated for each year. The following additional covariate was included: pass. 
+
+Spatial variation, but not spatiotemporal variation, was included in the encounter probability and the positive catch rate model. Spatial variation was approximated using 200 knots, where more knots led to non-estimable standard errors because the positive encounters are too sparse to support the dense spatiotemporal structure.
 
 \
 
@@ -28,20 +32,6 @@ Comparing the standardized versions (i.e., Z-scores) of the indices shows very s
 ![**Figure Index_WCGBTS. Comparison of index values for the West Coast Groundfish Bottom Trawl Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/WCGBTS_comps.png){width="75%"} 
 
 \
-
-![**Figure Index_Zscore. Comparison of model-based index Z-score values by each survey. Z-scores standardize the scale of the index so different model outputs can be compared.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Z_score_Indices.png){width="75%"} 
-
-\
-
-![**Figure Index_sdlog. Comparison of model-based log-space standard deviation values by each survey. These measures of uncertainty are comparable across models and among surveys.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Sd_log_Indices.png){width="75%"} 
-
-\
-
-Details on the WCBGTS index: the data were truncated to depths less than 875 m prior to modelling given that there were zero positive encounters in depths deeper than 875 m. The prediction grid was also truncated to only include available survey locations in depths between 55-875 m to limit extrapolating beyond the data and edge effects. 
-
-The response variable in the model was catch (mt) with an offset of area (km2) to account for differences in effort. Fixed effects were estimated for each year. The following additional covariate was included: pass. 
-
-Spatial variation, but not spatiotemporal variation, was included in the encounter probability and the positive catch rate model. Spatial variation was approximated using 200 knots, where more knots led to non-estimable standard errors because the positive encounters are too sparse to support the dense spatiotemporal structure.
 
 
 ## Additional Items for Discussion

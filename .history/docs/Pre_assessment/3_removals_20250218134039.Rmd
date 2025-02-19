@@ -11,23 +11,23 @@ Commercial landings are the main source of removals for Rougheye/Blackspotted ro
 There are some updates in landings by state and fishery, but are overall small (**Figure Ct_All**). Landings over the couple of decades are generally lower than the previous two decades, though more discards are accounted for in the more recent years (**Figure Ct_fleets**). Updating the 2013 stock assessment with these newest catches leads to a small increase in overall spawning stock output (**FIgure Figure Ct_compsSO**), and essentially no change in the relative stock status (**FIgure Figure Ct_compsRSS**).
 
 
-![**Figure Ct_CA. California state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_CA.png){width="75%"} 
+![Figure Ct_CA. California state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_CA.png){width="75%"} 
 
 \
 
-![**Figure Ct_OR. Oregon state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_OR.png){width="75%"} 
+![Figure Ct_OR. Oregon state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_OR.png){width="75%"} 
 
 \
 
-![**Figure Ct_WA. Washington state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_WA.png){width="75%"} 
+![Figure Ct_WA. Washington state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_WA.png){width="75%"} 
 
 \
 
-![**Figure Ct_All. Landings across alls states for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_All.png){width="75%"} 
+![Figure Ct_All. Landings across alls states for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_All.png){width="75%"} 
 
 \
 
-![**Figure Ct_fleets. Landings across alls fleets used in the 2025 stock assessment.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/catch2_landings_stacked.png){width="75%"} 
+![Figure Ct_fleets. Landings across alls fleets used in the 2025 stock assessment.](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/catch2_landings_stacked.png){width="75%"} 
 
 \
 

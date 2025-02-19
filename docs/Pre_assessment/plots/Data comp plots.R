@@ -55,6 +55,7 @@ Indices_comp_in_NWFSC<-subset(Indices_comp_in,Survey=="NWFSC_slope")
 Indices_comp_in_AFSC_slope<-subset(Indices_comp_in,Survey=="AFSC_slope")
 Indices_comp_in_Tri<-subset(Indices_comp_in,Survey=="Triennial")
 
+#WCGBTS
 ggplot(Indices_comp_in_WCGBTS,aes(as.numeric(Year),as.numeric(Index),color=as.factor(Type)))+
   geom_point(position=position_dodge(width=0.5))+
   geom_errorbar(aes(ymin=exp(log(as.numeric(Index))-as.numeric(SD_log)*1.96), 
@@ -67,7 +68,7 @@ ggplot(Indices_comp_in_WCGBTS,aes(as.numeric(Year),as.numeric(Index),color=as.fa
   theme(legend.position="bottom")+
   labs(color="Survey model")
   
-
+#NWFSC slope
 ggplot(Indices_comp_in_NWFSC,aes(as.numeric(Year),as.numeric(Index),color=as.factor(Type)))+
   geom_point(position=position_dodge(width=0.5))+
   geom_errorbar(aes(ymin=exp(log(as.numeric(Index))-as.numeric(SD_log)*1.96), 
@@ -81,6 +82,7 @@ ggplot(Indices_comp_in_NWFSC,aes(as.numeric(Year),as.numeric(Index),color=as.fac
   labs(color="Survey model")+
   scale_x_discrete(breaks=c(1999:2002),labels=c("1999","2000","2001","2002"))
 
+#AFSC slope
 ggplot(Indices_comp_in_AFSC_slope,aes(as.numeric(Year),as.numeric(Index),color=as.factor(Type)))+
   geom_point(position=position_dodge(width=0.5))+
   geom_errorbar(aes(ymin=exp(log(as.numeric(Index))-as.numeric(SD_log)*1.96), 
@@ -93,6 +95,7 @@ ggplot(Indices_comp_in_AFSC_slope,aes(as.numeric(Year),as.numeric(Index),color=a
   theme(legend.position="bottom")+
   labs(color="Survey model")
 
+#Triennial
 ggplot(Indices_comp_in_Tri,aes(as.numeric(Year),as.numeric(Index),color=as.factor(Type)))+
   geom_point(position=position_dodge(width=0.5))+
   geom_errorbar(aes(ymin=exp(log(as.numeric(Index))-as.numeric(SD_log)*1.96), 
@@ -105,14 +108,23 @@ ggplot(Indices_comp_in_Tri,aes(as.numeric(Year),as.numeric(Index),color=as.facto
   theme(legend.position="bottom")+
   labs(color="Survey model")
 
+#Z-score plot
+ggplot(Indices_comp_in,aes(as.numeric(Year),as.numeric(Zscore),color=as.factor(Type)))+
+    geom_line()+
+    facet_wrap(vars(Survey))+
+    labs(color="Model",linetype="Model")+
+    ylab("Z-score index")+
+    xlab("Year")+
+    theme_bw()+
+    theme(legend.position="bottom")
 
 
-ggplot(Indices_comp_in,aes(as.numeric(Year),as.numeric(Index),color=as.factor(Type)))+
+  
+ggplot(Indices_comp_in,aes(as.numeric(Year),as.numeric(SD_log),color=as.factor(Type)))+
   geom_point(position=position_dodge(width=0.5))+
-#  scale_color_manual(values=c("#CC6666", "black"))+
-  facet_wrap(vars(Survey))
-
-    labs(color="Assessment year",linetype="Assessment year")+
-  ylab("All Landings")+
+  facet_wrap(vars(Survey))+
+  labs(color="Model")+
+  ylab("Standard deviation in log space")+
+  xlab("Year")+
   theme_bw()+
   theme(legend.position="bottom")
