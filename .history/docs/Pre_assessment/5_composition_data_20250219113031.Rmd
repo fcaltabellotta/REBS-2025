@@ -63,39 +63,16 @@ Three of the four surveys have length composition data that allow for estimation
 
 ## Age compositions
 
-Age composition data can provide very valuable insights into growth, mortality, and recruitment. Additionally, it may offer improved resolution over lengths in stock status, if the ages are randomly sampled and include the oldest individuals in the population.
-
-Age compositions are included in the stock assessment as conditioned on lengths (conditional age-at-length). This means that there is a composition of ages associated for a given length bin instead of an age composition across age bins (which is termed a marginal age composition, similar to how length compositions are normally set up across length bins). Conditioning the ages on lengths allows for the use of length and age data that come from the same individual, preserving the important assumption of independence in lengths and age samples. It also provides an explicit way to model growth.
-
-Age samples are available from four sources (3 fishery-dependent and 1 fishery-independent):
-
-1. Trawl fishery
-2. Non-trawl fishery
-3. At-sea-hake fishery
-4. WCGBTS
-
-Age compositions (x-axis) by length bins (y-axis) for each data source are shown in **Figures AgeC_trawlnon, AgeC_nontrawl, AgeC_ashop, and AgeC_wcgbts**.
+<!---BLOCK_MULTICOL_START--->
+![**Figure AgeC_trawl. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the trawl fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt1mkt0.png){width="50%"}<caption>![**Figure AgeC_nontrawl. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the non-trawl fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt2mkt0.png){width="50%"} 
+<!---BLOCK_MULTICOL_STOP{widths: [3,3], space: 0.2, sep: true}--->
 
 \
 
-![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt1mkt0.png){width="45%"}<caption>
-![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt2mkt0.png){width="45%"}<caption>
-**Figure AgeC_trawlnon. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the trawl (left panel) and non-trawl (right panel) fishery.**
-
-\
-
-![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt3mkt0_page1.png){width="45%"}<caption>![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt3mkt0_page2.png){width="45%"} <caption>
-**Figure AgeC_ashop. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the at-sea hake fishery.**
-
-\
-
-![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt7mkt0_page1.png){width="33%"}<caption>![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt7mkt0_page2.png){width="33%"}<caption>![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt7mkt0_page3.png){width="33%"} <caption>
-**Figure AgeC_wcgbts. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the WCGBTS.**
+![**Figure AgeC_ashop1. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the at-sea hake fishery for years 2008-2022.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt3mkt0_page1.png){width="75%"}<caption>![**Figure AgeC_ashop2. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the at-sea hake fishery for years 2022-2024.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt3mkt0_page2.png){width="75%"} 
 
 \
 
 ## Additional Items for Discussion
 
 * Why do we see the multi-modal distribution in the two surveys and one discard fleet, especially given it is at a similar size?
-
-\

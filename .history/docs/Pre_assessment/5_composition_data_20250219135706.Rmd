@@ -76,10 +76,8 @@ Age samples are available from four sources (3 fishery-dependent and 1 fishery-i
 
 Age compositions (x-axis) by length bins (y-axis) for each data source are shown in **Figures AgeC_trawlnon, AgeC_nontrawl, AgeC_ashop, and AgeC_wcgbts**.
 
-\
-
-![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt1mkt0.png){width="45%"}<caption>
-![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt2mkt0.png){width="45%"}<caption>
+![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt1mkt0.png){width="50%"}
+![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt2mkt0.png){width="50%"}
 **Figure AgeC_trawlnon. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the trawl (left panel) and non-trawl (right panel) fishery.**
 
 \
@@ -97,5 +95,3 @@ Age compositions (x-axis) by length bins (y-axis) for each data source are shown
 ## Additional Items for Discussion
 
 * Why do we see the multi-modal distribution in the two surveys and one discard fleet, especially given it is at a similar size?
-
-\

@@ -74,18 +74,18 @@ Age samples are available from four sources (3 fishery-dependent and 1 fishery-i
 3. At-sea-hake fishery
 4. WCGBTS
 
-Age compositions (x-axis) by length bins (y-axis) for each data source are shown in **Figures AgeC_trawlnon, AgeC_nontrawl, AgeC_ashop, and AgeC_wcgbts**.
+Age compositions (x-axis) by length bins (y-axis) are shown in **Figures AgeC_trawl, AgeC_nontrawl, AgeC_ashop, and AgeC_wcgbts**.
+
+![**Figure AgeC_trawl. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the trawl fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt1mkt0.png){width="50%"}
 
 \
 
-![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt1mkt0.png){width="45%"}<caption>
-![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt2mkt0.png){width="45%"}<caption>
-**Figure AgeC_trawlnon. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the trawl (left panel) and non-trawl (right panel) fishery.**
+![**Figure AgeC_nontrawl. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the non-trawl fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt2mkt0.png){width="50%"}
 
 \
 
 ![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt3mkt0_page1.png){width="45%"}<caption>![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt3mkt0_page2.png){width="45%"} <caption>
-**Figure AgeC_ashop. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the at-sea hake fishery.**
+**Figure AgeC_ashop. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the at-sea hake fishery for years.**
 
 \
 
@@ -97,5 +97,3 @@ Age compositions (x-axis) by length bins (y-axis) for each data source are shown
 ## Additional Items for Discussion
 
 * Why do we see the multi-modal distribution in the two surveys and one discard fleet, especially given it is at a similar size?
-
-\
