@@ -19,8 +19,13 @@ author:
     affiliations: NO AFFILIATION
   - name: 'NA'
     affiliations: NO AFFILIATION
-  - name: 'NA'
-    affiliations: NO AFFILIATION
+  - name: 'Alison D. Whitman'
+    affiliations:
+      - name: 'Oregon Department of Fish and Wildlife'
+        address: '2040 Southeast Marine Science Drive'
+        city: 'Newport'
+        state: 'OR'
+        postal-code: '97365'
 date: today
 lang: en 
 keep-tex: true 
@@ -58,7 +63,7 @@ bibliography:
 #| warning: false 
 #| eval: true 
 # load converted output from asar::convert_output() 
-output <- utils::read.csv('C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/reye_blkspt_convert_output.csv') 
+output <- utils::read.csv('C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/update//reye_blkspt_convert_output.csv') 
 # Call reference points and quantities below 
 output <- output |> 
   dplyr::mutate(estimate = as.numeric(estimate), 
@@ -70,7 +75,7 @@ end_year <- (output |>
   dplyr::mutate(year = as.numeric(year)) |> 
   dplyr::summarize(max_val = max(year)) |> 
   dplyr::pull(max_val))-10
-# subset output to remove quantities that are fplit by factor 
+# subset output to remove quantities that are split by factor 
 output2 <- output |> 
   dplyr::filter(is.na(season), 
     is.na(fleet), 
@@ -150,7 +155,7 @@ R0 <- output |>
 
 Please cite this publication as: 
 
-Cope, J.M., V. Gertseva, F. Caltabellotta, C. Rosemond, A.D. Whitman. 2025. Status of the Rougheye and Blackspotted Rockfishes stock off the U.S. West Coast in 2025. NOAA Fisheries Science Center, Seattle, WA. 
+Cope, J.M., V. Gertseva, F. Caltabellotta, C. Rosemond, A.D. Whitman. Status of the Rougheye and Blackspotted Rockfishes stock off the U.S. West Coast in 2025.2025. Prepared by [COMMITTEE]. [XX] p.
 
  {{< pagebreak >}} 
 

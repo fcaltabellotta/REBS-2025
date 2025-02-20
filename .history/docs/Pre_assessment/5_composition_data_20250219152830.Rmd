@@ -1,0 +1,117 @@
+
+
+# Composition Data
+
+## Commercial length compositions
+
+Commercial data is is available for all fleets, which will allow for the estimation of selectivity (**Figures Lt_trawl, Lt_Lt_trawl_discard, Lt_nontrawl, Lt_nontrawl_discard, and Lt_ashop**). Data go back into the 1990s for the trawl and non-trawl landed fisheries, and starts in the 2000s for the at-sea-hake fishery. Dead discard fishery data begin in the 2010s. Aggregated length compositions (**Figure Lt_agg**) offers a look at how the composition compare in sampling the population. The trawl fishery gets smaller unsexed fish relative to the non-trawl and at-sea-hake fishery. The trawl dead discards, all unsexed, also show much smaller fish. The dead discards from the non-trawl fishery look to include slightly larger fish than the landings.
+
+The 2013 assessment considered blocking of selectivity as well as dome-shaped selectivity for all fleets and surveys. Given the difficult to access and sample habitats of Rougheye and Blackspotted rockfishes with the two major gears, natural refugia (based on depth and rugged habitat preference) may explain why older, larger individuals are less accessible, thus a dome-shaped selectivity. That said, large and old individuals are encountered in both fisheries and surveys, some there is some selection occurring for the sizes and ages.
+
+
+
+![**Figure Lt_trawl. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the trawl fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt1mkt0_page2.png){width="75%"} 
+
+\
+
+![**Figure Lt_trawl_discard. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on dead discarded fish in the trawl fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt8mkt0.png){width="75%"} 
+
+\
+
+![**Figure Lt_nontrawl. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the non-trawl fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt2mkt0_page2.png){width="75%"} 
+
+\
+
+![**Figure Lt_nontrawl_discard. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on dead discarded fish in the non-trawl fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt9mkt0.png){width="75%"} 
+
+\
+
+![**Figure Lt_ashop. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the at-sea hake fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt3mkt0.png){width="75%"} 
+
+\
+
+![**Figure Lt_agg. Aggregated length composition data over all years by year, sex and fleet for the Rougheye/Blackspotted rockfish complex.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat__aggregated_across_time.png){width="75%"} 
+
+\
+
+
+## Survey length compositions
+
+Three of the four surveys have length composition data that allow for estimation of selectivity (**Figures Lt_tri, Lt_AKslope, Lt_WCGBTS**). The NWFSC slope survey shares (or mirrors) the estimated selectivity from the AFSC slope survey. Looking at the aggregate compositions (**Figure Lt_agg**), the WCGBTS clearly gets the largest range in lengths, including the smaller individuals. The Triennial and WCGBTS and the trawl discard, all show an interesting double mode, with a common valley in lengths around 35-40 cm.
+
+\
+
+![**Figure Lt_tri. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the Triennial bottom trawl survey.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt3mkt0.png){width="75%"} 
+
+\
+
+![**Figure Lt_AKslope. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the Alaska Fishery Science Center slope survey.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt3mkt0.png){width="75%"} 
+
+\
+
+![**Figure Lt_WCGBTS. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the West Coast Groundfish Bottom Trawl Survey.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt3mkt0.png){width="75%"} 
+
+\
+
+
+
+## Sample sizes
+
+Effective input sample sizes for lengths are an indicator of how much weight the model will put on fitting the length composition data. A higher effective sample size, the more the model will attempt to fit that data. The effective sample size is not usually the number of fish that are sampled, but a measure of independent samples. This means that the fish caught are random samples from the population. When fish are caught together, they could be of similar size or age, and therefore not necessarily a random sample of the population. Some combination of number of fish and number of independent sampling units like hauls or sets are often used. 
+
+Effective sample sizes for each fishing (**Figure Neff_FD**) and survey (**Figure Neff_FI**) fleets are given below. Higher effective sample sizes tend to be in the most recent years, and most years are below or around 100. Discard fishery samples are unsexed, while all other sources of lengths are largely sexed. 
+
+\
+
+![**Figure Neff_FD. Effective sample sizes by year and fishing fleet. Shape color indicates whether samples were unsexed or sexed.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_FD.png){width="75%"} 
+
+\
+
+![**Figure Neff_FI. Effective sample sizes by year and survey. All survey samples were sexed.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_FI.png){width="75%"} 
+
+\
+
+## Age compositions
+
+Age composition data can provide very valuable insights into growth, mortality, and recruitment. Additionally, it may offer improved resolution over lengths in stock status, if the ages are randomly sampled and include the oldest individuals in the population.
+
+Age compositions are included in the stock assessment as conditioned on lengths (conditional age-at-length). This means that there is a composition of ages associated for a given length bin instead of an age composition across age bins (which is termed a marginal age composition, similar to how length compositions are normally set up across length bins). Conditioning the ages on lengths allows for the use of length and age data that come from the same individual, preserving the important assumption of independence in lengths and age samples. It also provides an explicit way to model growth.
+
+Age samples are available from four sources (3 fishery-dependent and 1 fishery-independent):
+
+1. Trawl fishery
+2. Non-trawl fishery
+3. At-sea-hake fishery
+4. WCGBTS
+
+Age (x-axis) by length bins (y-axis) samples for each data source are shown in **Figures AgeC_trawlnon, AgeC_nontrawl, AgeC_ashop, and AgeC_wcgbts**.
+
+\
+
+![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt1mkt0.png){width="45%"}<caption>
+![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt2mkt0.png){width="45%"}<caption>
+**Figure AgeC_trawlnon. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the trawl (left panel) and non-trawl (right panel) fishery. Bubble size indicates composition.**
+
+\
+
+![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt3mkt0_page1.png){width="45%"}<caption>![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt3mkt0_page2.png){width="45%"} <caption>
+**Figure AgeC_ashop. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the at-sea hake fishery. Bubble size indicates composition.**
+
+\
+
+![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt7mkt0_page1.png){width="33%"}<caption>![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt7mkt0_page2.png){width="33%"}<caption>![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt7mkt0_page3.png){width="33%"} <caption>
+**Figure AgeC_wcgbts. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the WCGBTS. Bubble size indicates composition.**
+
+\
+
+## Additional Items for Discussion
+
+* Why do we see the multi-modal distribution in the two surveys and one discard fleet, especially given it is at a similar size?
+
+\
+
+## Ageing error
+
+
+
+\

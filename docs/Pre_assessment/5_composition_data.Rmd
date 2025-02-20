@@ -109,3 +109,9 @@ Age (x-axis) by length bins (y-axis) samples for each data source are shown in *
 * Why do we see the multi-modal distribution in the two surveys and one discard fleet, especially given it is at a similar size?
 
 \
+
+## Ageing error
+
+
+
+\
