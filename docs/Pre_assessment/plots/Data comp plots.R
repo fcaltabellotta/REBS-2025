@@ -1,6 +1,7 @@
 library(ggplot2)
 
 Catch_comp_in<-read.csv("C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comps.csv")
+#write.csv(Catch_comp_in,"C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comps.csv")
 Catch_comp_in_CA<-subset(Catch_comp_in,State=="CA")
 Catch_comp_in_OR<-subset(Catch_comp_in,State=="OR")
 Catch_comp_in_WA<-subset(Catch_comp_in,State=="WA")
@@ -48,6 +49,7 @@ ggplot(Catch_comp_in_All,aes(Year,Landings,color=as.factor(Assessment)))+
 #### Neff ####
 ##############
 Neff_in<-read.csv("C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_inputs.csv")
+write.csv(Neff_in,"C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_inputs.csv")
 Neff_in.FD<-subset(Neff_in,Type=="FD")
 Neff_in.FI<-subset(Neff_in,Type=="FI")
 
@@ -76,6 +78,7 @@ ggplot(Neff_in.FI,aes(as.numeric(Year),as.numeric(Neff),color=as.factor(Sex)))+
 ####################
 
 Indices_comp_in<-read.csv("C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Indices_comp.csv")
+#write.csv(Indices_comp_in,"C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Indices_comp.csv")
 Indices_comp_in_WCGBTS<-subset(Indices_comp_in,Survey=="WCGBTS")
 Indices_comp_in_NWFSC<-subset(Indices_comp_in,Survey=="NWFSC_slope")
 Indices_comp_in_AFSC_slope<-subset(Indices_comp_in,Survey=="AFSC_slope")
