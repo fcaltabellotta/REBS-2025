@@ -35,7 +35,7 @@ The 2013 assessment considered blocking of selectivity as well as dome-shaped se
 
 ## Survey length compositions
 
-Three of the four surveys have length composition data that allow for estimation of selectivity (**Figures Lt_tri, Lt_AKslope, Lt_WCGBTS**). The NWFSC slope survey shares (or mirrors) the estimated selectivity from the AFSC slope survey. Looking at the aggregate compositions (**Figure Lt_agg**), the WCGBTS clearly samples the largest range in lengths, including the smaller individuals. The Triennial and WCGBTS and the trawl discard, all show an interesting double mode, with a common valley in lengths around 35-40 cm.
+Three of the four surveys have length composition data that allow for estimation of selectivity (**Figures Lt_tri, Lt_AKslope, Lt_WCGBTS**). The NWFSC slope survey shares (or mirrors) the estimated selectivity from the AFSC slope survey. Looking at the aggregate compositions (**Figure Lt_agg**), the WCGBTS clearly samples the largest range in lengths, including the smaller individuals. The Triennial and WCGBTS and the trawl discard, all show an interesting double mode, with a common valley in lengths around 35-40 cm. Length composition in the current assessment are very similar to those used in the 2013 assessment for shared years (**Figure Lt_WCGBTS_compare**).
 
 \
 
@@ -51,6 +51,9 @@ Three of the four surveys have length composition data that allow for estimation
 
 \
 
+![**Figure Lt_WCGBTS_compare. Length composition data by year between the 2013 and 2025 assessments for the Rougheye/Blackspotted rockfish complex based on fish sampled in the West Coast Groundfish Bottom Trawl Survey.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/nwfsc_length_comp_comparisons.png){width="75%"} 
+
+\
 
 
 ## Sample sizes
@@ -82,7 +85,7 @@ Age samples are available from four sources (3 fishery-dependent and 1 fishery-i
 3. At-sea-hake fishery
 4. WCGBTS
 
-Age (x-axis) by length bins (y-axis) samples for each data source are shown in **Figures AgeC_trawlnon, AgeC_nontrawl, AgeC_ashop, and AgeC_wcgbts**.
+Age (x-axis) by length bins (y-axis) samples for each data source are shown in **Figures AgeC_trawlnon, AgeC_nontrawl, AgeC_ashop, and AgeC_wcgbts**. Comparison of age composition data between the 2013 and current stock assessment are shown in **Figure Age_WCGBTS_compare** for the WCGBTS samples.
 
 \
 
@@ -102,14 +105,21 @@ Age (x-axis) by length bins (y-axis) samples for each data source are shown in *
 
 \
 
-## Additional Items for Discussion
-
-* Why do we see the multi-modal distribution in the two surveys and one discard fleet, especially given it is at a similar size?
+![**Figure Age_WCGBTS_compare. Age composition data by year between the 2013 and 2025 assessments for the Rougheye/Blackspotted rockfish complex based on fish sampled in the West Coast Groundfish Bottom Trawl Survey.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/nwfsc_age_comp_comparisons.png){width="75%"} 
 
 \
+
+
 
 ## Ageing error
 
 
 
 \
+
+## Additional Items for Discussion
+
+* Why do we see the multi-modal distribution in the two surveys and one discard fleet, especially given it is at a similar size?
+
+\
+

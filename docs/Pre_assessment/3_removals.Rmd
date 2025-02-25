@@ -1,10 +1,4 @@
-# Removal Data
-
-
-## Commercial Landings & Discards
-
-Rougheye/Blackspotted Rockfish 
-
+# Commercial Landings & Discards
 
 Commercial landings are the main source of removals for Rougheye/Blackspotted rockfishes. They are a mainly slope species, typically found around 365 m (~200 fathoms), but can also be common shallower (down to 275 m). This complex is known to school, thus increasing encounters when in an area and available. Trawl and non-trawl (mostly long-line) are the two major fleets they are taken in, with the at-sea-hake midwater fishery also encountering them in notable numbers over the past two decades. Landings are lower in California (**Figure Ct_CA**) and increase northward, with the biggest trawl catches in Oregon (**Figure Ct_OR**), and biggest non-trawl catches in Washington state (**Figure Ct_WA**). There was also a notable catch of Rougheye/Blackspotted accounted for in the trawl fishery that came from the foreign fleet Pacific Ocean Perch fishery in the 1960s.
 
