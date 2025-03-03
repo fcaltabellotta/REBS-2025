@@ -36,6 +36,8 @@ There are some updates in landings by state and fishery, but are overall small (
 
 ### Additional Items for Discussion
 
-* 
+* What to use for at-sea-hake 2024 value?
+* What to use for fixed-gear discard 2024 value?
+* Reconsider the assumed proportions of Rougheye in historical period for Oregon 
 
 

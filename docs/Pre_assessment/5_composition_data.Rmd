@@ -4,7 +4,7 @@
 
 ## Commercial length compositions
 
-Commercial data is available for all fleets, which will allow for the estimation of selectivity (**Figures Lt_trawl, Lt_Lt_trawl_discard, Lt_nontrawl, Lt_nontrawl_discard, and Lt_ashop**). Data go back into the 1990s for the trawl and non-trawl landed fisheries, and starts in the 2000s for the at-sea-hake fishery. Dead discard fishery data begin in the 2010s. Aggregated length compositions (**Figure Lt_agg**) offers a look at how the composition compare in sampling the population. The trawl fishery gets smaller unsexed fish relative to the non-trawl and at-sea-hake fishery. The trawl dead discards, all unsexed, also show much smaller fish. The dead discards from the non-trawl fishery look to include slightly larger fish than the landings.
+Commercial data is available for all fleets, which will allow for the estimation of selectivity (**Figures Lt_trawl, Lt_Lt_trawl_discard, Lt_nontrawl, Lt_nontrawl_discard, and Lt_ashop**). Data go back into the 1990s for the trawl and non-trawl landed fisheries, and starts in the 2000s for the at-sea-hake fishery. Dead discard fishery data begin in the 2010s. Aggregated length compositions (**Figure Lt_agg**) offers a look at how the composition compare in sampling the population. The trawl fishery gets smaller unsexed fish relative to the non-trawl and at-sea-hake fishery. The trawl dead discards, all unsexed, also show much smaller fish. The dead discards from the non-trawl fishery look to include slightly larger fish than the landings. Comparing the common years in the 2013 to data being presented for the current assessment shows no difference (**Figures Lt_trawl_compare, Lt_Lt_trawl_discard_compare, Lt_nontrawl_compare, Lt_nontrawl_discard_compare, and Lt_ashop_compare**).
 
 The 2013 assessment considered blocking of selectivity as well as dome-shaped selectivity for all fleets and surveys. Dome-shaped selectivity is an appropriate choice given that natural refugia in the habitats of Rougheye and Blackspotted rockfishes (based on depth and rugged habitat preference) are difficult to access and sample with the two major gear types and may explain why older, larger individuals are less present in the data. We note, though, that large and old individuals are encountered in both fisheries and surveys, so there is some selection occurring for those sizes and ages.
 
@@ -12,7 +12,15 @@ The 2013 assessment considered blocking of selectivity as well as dome-shaped se
 
 \
 
+![**Figure Lt_trawl_compare. Length composition data by year between the 2013 and 2025 assessments for the Rougheye/Blackspotted rockfish complex based on fish sampled in the trawl survey.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/trawl_length_comp_comparisons.png){width="75%"} 
+
+\
+
 ![**Figure Lt_trawl_discard. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on dead discarded fish in the trawl fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt8mkt0.png){width="75%"} 
+
+\
+
+![**Figure Lt_trawl_discard_compare. Length composition data by year between the 2013 and 2025 assessments for the Rougheye/Blackspotted rockfish complex based on dead discarded fish sampled in the trawl survey.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/discard_trawl_length_comp_comparisons.png){width="75%"} 
 
 \
 
@@ -20,7 +28,15 @@ The 2013 assessment considered blocking of selectivity as well as dome-shaped se
 
 \
 
+![**Figure Lt_nontrawl_compare. Length composition data by year between the 2013 and 2025 assessments for the Rougheye/Blackspotted rockfish complex based on fish sampled in the non-trawl survey.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/HKL_length_comp_comparisons.png){width="75%"} 
+
+\
+
 ![**Figure Lt_nontrawl_discard. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on dead discarded fish in the non-trawl fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt9mkt0.png){width="75%"} 
+
+\
+
+![**Figure Lt_nontrawl_discard_compare. Length composition data by year between the 2013 and 2025 assessments for the Rougheye/Blackspotted rockfish complex based on dead discarded fish sampled in the non-trawl survey.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/discard_HKL_length_comp_comparisons.png){width="75%"} 
 
 \
 
@@ -43,7 +59,15 @@ Three of the four surveys have length composition data that allow for estimation
 
 \
 
+![**Figure Lt_tri_compare. Length composition data by year between the 2013 and 2025 assessments for the Rougheye/Blackspotted rockfish complex based on fish sampled in the Triennial bottom trawl survey.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/triennial_length_comp_comparisons.png){width="75%"} 
+
+\
+
 ![**Figure Lt_AKslope. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the Alaska Fishery Science Center slope survey.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt3mkt0.png){width="75%"} 
+
+\
+
+![**Figure Lt_AKslope_compare. Length composition data by year between the 2013 and 2025 assessments for the Rougheye/Blackspotted rockfish complex based on fish sampled in the Alaska Fishery Science Center slope survey.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/AK_slope_length_comp_comparisons.png){width="75%"} 
 
 \
 
