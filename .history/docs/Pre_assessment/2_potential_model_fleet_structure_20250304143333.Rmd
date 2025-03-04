@@ -1,0 +1,38 @@
+# Stock Structure
+There are at least two questions to consider when considering stock structure for Rougheye and Blackspotted rockfishes. 
+
+1. **Rougheye and Blackspotted rockfishes are two different species-- can we separate them as two stocks and conduct separate assessments?** These two species remain difficult to differentiate visually in the catch, thus remain reported as a species complex. Frey et al. (*in prep.*) provided insight into the ability of the Northwest Fisheries Science Center West Coast Groundfish Bottom Trawl Survey biologists to identify the two species, with 90% of genetically identified Rougheye rockfish being correctly identified in the field. When mis-identifications occured, it was usually a Blackspotted rockfish being mis-identified as a Rougheye rockfish. There were few mis-identifications when a fish was identified as a Blackspotted rockfish. While this is promising for potential future species-specific data coming from the survey, it does not alleviate the historical problem of separating out fishery data into the two species. Frey et al. (*in prep.*) therefore also considered whether ecological factors like depth or latitude could help separate samples by species. They found that both species occur within the range of this assessment's considered areas (California to Washington), and heavily spatially overlap. Interestingly, there seem to be relative hot spots for these species where one species is more common than the other, and in general, Rougheye rockfish seems to be more common than Blackspotted rockfish (however, Blackspotted rockfish may be the more common of the two in parts of Alaska). Overall, there seems to be no current approach to separate current or historical fishery data reliably to separate these two species into two stocks, so we will maintain a species complex approach, though given absolute presence off the U.S. west coast, this may be considered more of a Rougheye than Blackspotted stock assessment. We also note that throughout the range of these stocks, all assessments have maintained a species complex approach.
+2. **Both species range into Canada and Alaska-- are they one stock?** While genetics studies have focused mostly on identifying the species, little is known about the population structure of either of these species. This assessment and the 2013 assessment represent the most southerly range of these species. Comparing the absolute abundance of the 2013 assessment to the most current estimates of the Alaskan stocks, the absolute number in this southerly range is much smaller than in the Gulf of Alaska (GOA), but higher than the Bering Sea/Aleutian Island (BSAI) stock (**Figure 3**). The two smaller stocks have similar trend of decline and stabilization, whereas the higher biomass GOA stock looks to have not dropped at all over the time period considered (**Figure 4**). 
+
+
+![**Figure 3. Estimates of spawning biomass (current spawning output/unfished spawning output) for the Rougheye/Blackspotted rockfish complex from the two most recent Alaska (Bering Sea/Aluetian Islands (BSIA) and Gulf of Alaska (GOA)) and the 2013 U.S. west coast stock assessment.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/SB_comps.png){width="75%"} 
+
+\
+
+![**Figure 4. Estimates of relative stock size (current spawning output/unfished spawning output) relative to 1977 (the common year in all stock assessments compared) for the Rougheye/Blackspotted rockfish complex from the two most recent Alaska (Bering Sea/Aluetian Islands (BSAI) and Gulf of Alaska (GOA)) and the 2013 U.S. west coast stock assessment.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Status_comp.png){width="75%"} 
+
+\
+
+# Sex Structure
+
+The 2013 stock assessment used a one sex model configuration. This was based on the observation that the biology of females and males is very similar, thus justifying the simplifying assumption of one sex. The Biology section below demonstrates that females and males do have generally similar growth, though there are differences, but may have different natural mortality. The current assessment will use a 2 sex configuration that allows for setting female and male parameters either equal (i.e., functionally equivalent to a one sex model) and or sex-specific. 
+
+# Fleet Structure
+
+Currently, the following fleet structure is being considered for modelling commercial fishery removals as there is no record of a recreational fishery for this stock complex:
+ 
+1. Commercial trawl
+2. Commercial fixed gear (mainly the long-line fishery)
+3. At-sea hake fishery 
+4. Dead discard trawl
+5. Dead discard non-trawl
+
+Defining fleets is largely based on differing fleet selectivity (i.e., how the fishery captures fish by length and/or age). In the stock assessment model, selectivity translates into how the removals are taken via length and/or age out of the population. The above three fishery types are distinguished by different fishing activities that result in different selectivities. The first fleets are the same as those defined in the 2013 assessment, but we plan on adding an additional two discard fleets instead of modelling retention (**Figures Discard_1 and Discard_2** shows this choice does not affect model results, regardless of the selectivity form being assumed for the discard fleets.). We plan on using a length-based selectivity curve for all fleets for the current stock assessment model (same as was done in the 2013 assessment), as there is no reason to believe significant age-based selectivity is occurring. We will consider both logistic and dome-shaped selectivity options.
+
+\
+
+![**Figure Discard_1. Comparison of spawning output using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare1_spawnbio__discard_fleets.png){width="75%"} 
+
+![**Figure Discard_2. Comparison of relative spawning output using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare1_spawnbio__discard_fleets.png){width="75%"} 
+
+\

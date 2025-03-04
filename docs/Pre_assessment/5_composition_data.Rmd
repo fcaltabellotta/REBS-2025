@@ -4,7 +4,7 @@
 
 ## Commercial length compositions
 
-Commercial data is available for all fleets, which will allow for the estimation of selectivity (**Figures Lt_trawl, Lt_Lt_trawl_discard, Lt_nontrawl, Lt_nontrawl_discard, and Lt_ashop**). Data go back into the 1990s for the trawl and non-trawl landed fisheries, and starts in the 2000s for the at-sea-hake fishery. Dead discard fishery data begin in the 2010s. Aggregated length compositions (**Figure Lt_agg**) offers a look at how the composition compare in sampling the population. The trawl fishery gets smaller unsexed fish relative to the non-trawl and at-sea-hake fishery. The trawl dead discards, all unsexed, also show much smaller fish. The dead discards from the non-trawl fishery look to include slightly larger fish than the landings. Comparing the common years in the 2013 to data being presented for the current assessment shows no difference (**Figures Lt_trawl_compare, Lt_Lt_trawl_discard_compare, Lt_nontrawl_compare, Lt_nontrawl_discard_compare, and Lt_ashop_compare**).
+Commercial data is available for all fleets, which will allow for the estimation of selectivity (**Figures Lt_trawl, Lt_Lt_trawl_discard, Lt_nontrawl, Lt_nontrawl_discard, and Lt_ashop**). Data go back into the 1990s for the trawl and non-trawl landed fisheries, and starts in the 2000s for the at-sea-hake fishery. Dead discard fishery data begin in the 2010s. Aggregated length compositions (**Figure Lt_agg**) offers a look at how the composition compare in sampling the population. The trawl fishery gets smaller unsexed fish relative to the non-trawl and at-sea-hake fishery. The trawl dead discards, all unsexed, also show much smaller fish. The dead discards from the non-trawl fishery look to include slightly larger fish than the landings. Comparing the common years in the 2013 to data being presented for the current assessment shows very little to no difference (**Figures Lt_trawl_compare, Lt_Lt_trawl_discard_compare, Lt_nontrawl_compare, Lt_nontrawl_discard_compare, and Lt_ashop_compare**).
 
 The 2013 assessment considered blocking of selectivity as well as dome-shaped selectivity for all fleets and surveys. Dome-shaped selectivity is an appropriate choice given that natural refugia in the habitats of Rougheye and Blackspotted rockfishes (based on depth and rugged habitat preference) are difficult to access and sample with the two major gear types and may explain why older, larger individuals are less present in the data. We note, though, that large and old individuals are encountered in both fisheries and surveys, so there is some selection occurring for those sizes and ages.
 
@@ -44,6 +44,10 @@ The 2013 assessment considered blocking of selectivity as well as dome-shaped se
 
 \
 
+![**Figure Lt_ashop_compare. Length composition data by year between the 2013 and 2025 assessments for the Rougheye/Blackspotted rockfish complex based on fish sampled in the at-sea hake fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/ashop_length_comp_comparisons.png){width="75%"} 
+
+\
+
 ![**Figure Lt_agg. Aggregated length composition data over all years by year, sex, and fleet for the Rougheye/Blackspotted rockfish complex.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat__aggregated_across_time.png){width="75%"} 
 
 \
@@ -80,19 +84,35 @@ Three of the four surveys have length composition data that allow for estimation
 \
 
 
-## Sample sizes
+## Effective Sample Sizes
 
 Effective input sample sizes for lengths are an indicator of how much weight the model will put on fitting the length composition data. A higher effective sample size, the more the model will attempt to fit that data. The effective sample size is not usually the number of fish that are sampled, but a measure of independent samples. This means that the fish caught are random samples from the population. When fish are caught together, they could be of similar size or age, and therefore not necessarily a random sample of the population. Some combination of number of fish and number of independent sampling units like hauls or sets are often used. 
 
-Effective sample sizes for each fishing (**Figure Neff_FD**) and survey (**Figure Neff_FI**) fleets are given below. Higher effective sample sizes tend to be in the most recent years, and most years are below or around 100. Discard fishery samples are unsexed, while all other sources of lengths are largely sexed. 
+For the 2025 stock assessment, we use the equation based on the number of trips and fish to calculate the effective sample size by year, fleet and sex for commercial fisheries. These equations are currently the standard ones used across groundfish stock assessments.
 
 \
 
-![**Figure Neff_FD. Effective sample sizes by year and fishing fleet. Shape color indicates whether samples were unsexed or sexed.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_FD.png){width="75%"} 
+<center>
+
+If N~fish~/N~trips~ is < 44:  $N_{eff} = N_{trips} + 0.138 * N_{fish}$
+
+If N~fish~/N~trips~ is ≥ 44:  $N_{eff} = 7.06 * N_{trips}$
+
+</center>
 
 \
 
-![**Figure Neff_FI. Effective sample sizes by year and survey. All survey samples were sexed.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_FI.png){width="75%"} 
+For surveys, unique tows are recorded and multiplied by 2.43 to calculate the input effective sample size. This equation is commonly used for West Coast slope groundfish and based on Stewart and Hamel (2014).
+
+Input effective sample sizes for each fishing (**Figure Neff_FD**) and survey (**Figure Neff_FI**) fleet are given below. Higher effective sample sizes tend to be in the most recent years, and most years are below or around 100. Discard fishery samples are unsexed, while all other sources of lengths are largely sexed. Sample sizes for common years between the 2013 and current assessment are typically higher for the current stock assessment.
+
+\
+
+![**Figure Neff_FD. Input effective sample sizes by year and fishing fleet. Shape color indicates whether samples were unsexed or sexed. Bars show the input samples sizes for the 2025 assessment; blue dots are the 2013 input sample sizes.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_FD.png){width="75%"} 
+
+\
+
+![**Figure Neff_FI. Input effective sample sizes by year and survey. All survey samples were sexed. Bars show the input samples sizes for the 2025 assessment; blue dots are the 2013 input sample sizes. **](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_FI.png){width="75%"} 
 
 \
 
@@ -109,7 +129,7 @@ Age samples are available from four sources (3 fishery-dependent and 1 fishery-i
 3. At-sea-hake fishery
 4. WCGBTS
 
-Age (x-axis) by length bins (y-axis) samples for each data source are shown in **Figures AgeC_trawlnon, AgeC_nontrawl, AgeC_ashop, and AgeC_wcgbts**. Comparison of age composition data between the 2013 and current stock assessment are shown in **Figure Age_WCGBTS_compare** for the WCGBTS samples.
+Age (x-axis) by length bins (y-axis) samples for each data source are shown in **Figures AgeC_trawlnon, AgeC_nontrawl, AgeC_ashop, and AgeC_wcgbts**. Comparison of age composition data between the 2013 and current stock assessment are shown in **Figures  Age_trawl_compare, Age_ashop_compare, and Age_WCGBTS_compare** for the WCGBTS samples. We expect these age sample to change in the next couple months as more ages become available, but the below comparisons are what are currently available.
 
 \
 
@@ -121,6 +141,14 @@ Age (x-axis) by length bins (y-axis) samples for each data source are shown in *
 
 ![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt3mkt0_page1.png){width="45%"}<caption>![](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_condAALdat_bubflt3mkt0_page2.png){width="45%"} <caption>
 **Figure AgeC_ashop. Age composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the at-sea hake fishery. Bubble size indicates composition.**
+
+\
+
+![**Figure Age_trawl_compare. Age composition data by year between the 2013 and 2025 assessments for the Rougheye/Blackspotted rockfish complex based on fish sampled in the trawl fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/trawl_age_comp_comparisons.png){width="75%"} 
+
+\
+
+![**Figure Age_ashop_compare. Age composition data by year between the 2013 and 2025 assessments for the Rougheye/Blackspotted rockfish complex based on fish sampled in the at-sea-hake fishery.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/ashop_age_comp_comparisons.png){width="75%"} 
 
 \
 
@@ -137,7 +165,9 @@ Age (x-axis) by length bins (y-axis) samples for each data source are shown in *
 
 ## Ageing error
 
+Fish do not directly tell us their age (and would we believe them anyway?), so an ageing structure, something that records the age of a fish, is needed to allow us to measure how long a fish has lived. Otoliths and other ageing structures are used, but are not always easy to read the age, leading to uncertainty in the age. In order to measure this uncertainty,  one reader can read an ageing structure multiple times or different readers may age them. The difference in readers is also important when understanding how to interpret ages from different labs or individuals. THis ageing error matrices offers a way to help interpret the uncertainty in ages that are used in the stock assessment. 
 
+We calculate the ageing error, exploring bias and imprecision, for our age samples, by applying the ageing error code found in the pfmc-assessment GitHub repository. We do not currently have all of the age reading comparisons needed to calculate these matrices, so this analysis will come later in the process of preparing data for the assessment. 
 
 \
 

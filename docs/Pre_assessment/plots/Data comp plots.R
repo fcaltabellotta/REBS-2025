@@ -51,26 +51,42 @@ ggplot(Catch_comp_in_All,aes(Year,Landings,color=as.factor(Assessment)))+
 Neff_in<-read.csv("C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_inputs.csv")
 write.csv(Neff_in,"C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Neff_inputs.csv")
 Neff_in.FD<-subset(Neff_in,Type=="FD")
+Neff_in.FD.2025<-subset(Neff_in.FD,Assessment=="2025")
+Neff_in.FD.2013<-subset(Neff_in.FD,Assessment=="2013")
 Neff_in.FI<-subset(Neff_in,Type=="FI")
+Neff_in.FI.2013<-subset(Neff_in.FI,Assessment=="2013")
+Neff_in.FI.2025<-subset(Neff_in.FI,Assessment=="2025")
 
 
-ggplot(Neff_in.FD,aes(as.numeric(Year),as.numeric(Neff),color=as.factor(Sex)))+
-  geom_point()+
+
+ggplot(Neff_in.FD.2025,aes(as.numeric(Year),as.numeric(Neff),color=as.factor(Sex),fill=as.factor(Sex)))+
+  geom_bar(stat = "identity")+
   facet_wrap(vars(Fleet))+
   ylab("Input Effective Sample Size")+
   xlab("Year")+
   theme_bw()+
   theme(legend.position="bottom")+
-  labs(color="Sex")
+  labs(color="Sex",fill="Sex")+
+  scale_fill_manual(values=c("orange","black"))+
+  scale_colour_manual(values=c("orange","black"))+
+  geom_point(data=Neff_in.FD.2013,aes(as.numeric(Year),as.numeric(Neff)),col="blue")
+  
 
-ggplot(Neff_in.FI,aes(as.numeric(Year),as.numeric(Neff),color=as.factor(Sex)))+
-  geom_point()+
+ggplot(Neff_in.FI.2025,aes(as.numeric(Year),as.numeric(Neff),fill=as.factor(Sex)))+
+  #geom_bar(stat = "identity")+
+  geom_col()+
   facet_wrap(vars(Fleet))+
   ylab("Input Effective Sample Size")+
   xlab("Year")+
   theme_bw()+
   theme(legend.position="bottom")+
-  labs(color="Sex")
+  labs(color="Sex",fill="Sex")+
+  scale_fill_manual(values=c("orange","orange"))+
+  scale_colour_manual(values=c("orange","orange"))+
+  geom_point(data=Neff_in.FI.2013,aes(as.numeric(Year),as.numeric(Neff)),col="blue")
+
+
+
 
 
 ####################
