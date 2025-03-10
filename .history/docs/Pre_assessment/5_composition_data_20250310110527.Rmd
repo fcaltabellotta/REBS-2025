@@ -175,7 +175,7 @@ We calculate the ageing error, exploring bias and imprecision, for our age sampl
 
 ## Additional Items for Discussion
 
-* Why do we see the multi-modal length distribution in the two surveys and one discard fleet, especially given it is at a similar size?
+* Why do we see the multi-modal distribution in the two surveys and one discard fleet, especially given it is at a similar size?
 
 \
 
