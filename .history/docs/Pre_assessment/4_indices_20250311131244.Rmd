@@ -1,0 +1,64 @@
+# Indices of Abundance
+
+Given Rougheye/Blackspotted are associated with deep, structured habitats, it can be difficult to survey them with trawl gear. Four general fishery-independent bottom trawl surveys were used in the 2013 assessment, and are again included in this assessment:
+
+* Triennial (every three years) survey (1980-2004; **Figure Index_Tri**)
+* Alaska Fishery Science Center Slope survey (1997-2001; **Figure Index_AFSC_slope**)
+* Northwest Fisheries Science Center Slope Center (1999-2001; **Figure Index_NWFSC_slope**)
+* West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2204; **Figure Index_WCGBTS**)
+
+Only the WCGBTS has new data for this assessment, but new methods (Spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/)) to develop an index of abundance were applied to all surveys to update all indices. Two distributions (gamma and lognormal) were considered, as was the case in 2013 model when a non-spatial generalized linear mixed model was used to develop indices of abundance.
+
+Comparing the standardized versions (i.e., Z-scores) of the indices shows very similar trends among each model output (**Figure Z_score_Indices**), suggesting little difference in choice of model type. The variance in the indices is generally high (0.3-0.5; **Figure Sd_log_Indices**), suggesting the information content in these indices is low. This is not a surprise given the challenge of sampling these species with trawl gear.
+
+\
+
+![**Figure Index_Tri. Comparison of index values for the Triennial Trawl Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Tri_comps.png){width="75%"} 
+
+\
+
+![**Figure Index_AFSC_slope. Comparison of index values for the Alaska Fishery Science Center Slope Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/AFSC_slope_comp.png){width="75%"} 
+
+\
+
+![**Figure Index_NWFSC_slope. Comparison of index values for the NWFSC Slope Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/NWFSCslope_comps.png){width="75%"} 
+
+\
+
+![**Figure Index_WCGBTS. Comparison of index values for the West Coast Groundfish Bottom Trawl Survey using the 2013 GLMM approach and the 2025 sdmTMB approaches. Error bars are 95% confidence intervals.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/WCGBTS_comps.png){width="75%"} 
+
+\
+
+![**Figure Index_Zscore. Comparison of model-based index Z-score values by each survey. Z-scores standardize the scale of the index so different model outputs can be compared.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Z_score_Indices.png){width="75%"} 
+
+\
+
+![**Figure Index_sdlog. Comparison of model-based log-space standard deviation values by each survey. These measures of uncertainty are comparable across models and among surveys.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Sd_log_Indices.png){width="75%"} 
+
+\
+
+Details on the WCBGTS index: the data were truncated to depths less than 875 m prior to modelling given that there were zero positive encounters in depths deeper than 875 m. The prediction grid was also truncated to only include available survey locations in depths between 55-875 m to limit extrapolating beyond the data and edge effects. 
+
+The response variable in the model was catch (mt) with an offset of area (km2) to account for differences in effort. Fixed effects were estimated for each year. The following additional covariate was included: pass. 
+
+Spatial variation, but not spatiotemporal variation, was included in the encounter probability and the positive catch rate model. Spatial variation was approximated using 200 knots, where more knots led to non-estimable standard errors.
+
+# Model bridging with abundance indices
+
+
+
+\
+
+![**Figure Index_comp_SO. Comparison of spawning output among abundance index treatments from the 2013 and current Rougheye/Blackspotted Rockfishes assessments.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare1_spawnbio_indices_comp.png){width="75%"} 
+
+\
+
+![**Figure Index_comp_RSS. Comparison of relative spawning output among abundance index treatments from the 2013 and current Rougheye/Blackspotted Rockfishes assessments.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare3_Bratio_indices_comp.png){width="75%"} 
+
+\
+
+## Additional Items for Discussion
+
+* Are there any other indices we should be considering?
+
+\

@@ -43,6 +43,19 @@ The response variable in the model was catch (mt) with an offset of area (km2) t
 
 Spatial variation, but not spatiotemporal variation, was included in the encounter probability and the positive catch rate model. Spatial variation was approximated using 200 knots, where more knots led to non-estimable standard errors.
 
+# Model bridging with abundance indices
+
+There are two different ways of considering how the new indices affect the model relative to the 2013 stock assessment while keeping all other data the same as in 2013. One is to use the same four indices with the new approach to creating the abundance indices (as shown in the above section). The second is to extend the WCGBTS index to the most recent available year (as it is the only one that can be extended). The comparisons are shown in **Figure Index_comp_SO** and **Figure Index_comp_RSS** and demonstrate that the updated and extended versions of the indices do not make significant changes in either the scale or status. 
+
+\
+
+![**Figure Index_comp_SO. Comparison of spawning output among abundance index treatments from the 2013 and current Rougheye/Blackspotted Rockfishes assessments.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare1_spawnbio_indices_comp.png){width="75%"} 
+
+\
+
+![**Figure Index_comp_RSS. Comparison of relative spawning output among abundance index treatments from the 2013 and current Rougheye/Blackspotted Rockfishes assessments.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare3_Bratio_indices_comp.png){width="75%"} 
+
+\
 
 ## Additional Items for Discussion
 
