@@ -2,11 +2,11 @@
 ---
 title: "2025 Pre-assessment workshop for Rougheye and Blackspotted rockfishes in waters off the US West Coast"
 author: 
-  - Jason M. Cope, Northwest Fisheries Science Center
-  - Vladlena Gertseva, Northwest Fisheries Science Center
-  - Fabio P. Caltabellotta, Washington Department of Fish and Wildlife
-  - R. Claire Rosemond, Northwest Fisheries Science Center
-  - Alison D. Whitman, Oregon Department of Fish and Wildlife
+  - Jason M. Cope, Northwest Fisheries Science Cente, jason.cope@noaa.gov
+  - Vladlena Gertseva, Northwest Fisheries Science Center, vladlena.Gertseva@noaa.gov
+  - Fabio P. Caltabellotta, Washington Department of Fish and Wildlife, Fabio.PriorCaltabellotta@dfw.wa.gov 
+  - R. Claire Rosemond, Northwest Fisheries Science Center, claire.rosemond@noaa.gov 
+  - Alison D. Whitman, Oregon Department of Fish and Wildlife, alison.D.WHITMAN@odfw.oregon.gov
 date: "`r Sys.Date()`"
 output: 
   html_document:
