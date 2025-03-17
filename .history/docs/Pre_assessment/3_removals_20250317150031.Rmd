@@ -17,6 +17,10 @@ There are some updates in landings by state and fishery, but are overall small (
 
 \
 
+![**Figure RE_BS_density. Catch-per-unit-effort of Rougheye/Blackspotted rockfishes along the U.S. west coast.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/cpue_map.png){width="75%"} 
+
+\
+
 ![**Figure Ct_All. Landings across all states for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/Catch_comp_All.png){width="75%"} 
 
 \
