@@ -1,0 +1,24 @@
+# Summary of the 2013 Assessment 
+
+The last assessment of the Rougheye and Blackspotted rockfishes in U.S. West coast waters was conducted in 2013. The estimated stock status for the beginning of 2013 was 47% of the unfished stock size, and the stock size never showed a decline below the target biomass of 40% of the unfished stock size over the period of time assessed (**Figures 1 and 2**). This assessment was informed by both length and age compositions, mean weights, and several indices of abundance. Despite the number of different data types, the large amount of ageing error and mostly flat and largely uncertain indices of abundance resulted in wide uncertainty intervals around the derived outputs like stock size and status. The complete 2013 assessment document can be found [here](https://www.pcouncil.org/documents/2014/01/the-status-of-rougheye-rockfish-sebastes-aleutianus-and-blackspotted-rockfish-s-melanostictus-as-a-complex-along-the-u-s-west-coast-in-2013-published-january-6-2014.pdf/).
+
+
+# Bridging the assessment model from Stock Synthesis 3.24 to 3.30 
+
+More than 10 years have passed from the last assessment and in that time, the model and the Stock Synthesis 3 (SS3) modelling framework has undergone many changes. While the specific changes in the model can be found in the model [change log](https://github.com/orgs/nmfs-ost/projects/11), here we simply update the model from the older 3.24O version to the newer 3.30.22.1 version. We want to ensure that any update to the newest SS3 model software is not a cause of any changes in model outputs when we hold all data and model specifications to be exactly the same as in 2013. We therefore transferred all the older data and model specifications to the newest version of SS3 and compared the outputs. The status (**Figure 1**) and scale (**Figure 2**) of both models are exactly the same, as are the estimates of within model uncertainty. This allows us to conclude that we can move forward using the latest version of SS3 without concern of inheriting any model difference due solely to the choice of the SS3 version.
+
+\
+
+![**Figure 1. Estimates of relative stock size (current spawning output/unfished spawning output) for the Rougheye/Blackspotted rockfish complex in U.S. west coast waters from the 2013 assessment, and compared to the using the same data in the newest version of SS3 (3.330.22.1). Shading denotes 95% confidence intervals.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare4_Bratio_uncertainty.png){width="75%"} 
+
+![**Figure 2. Estimates of spawning biomass for the Rougheye/Blackspotted rockfish complex in U.S. west coast waters from the 2013 assessment, and compared to the same data in the newest version of SS3 (3.330.22.1). Shading denotes 95% confidence intervals.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/compare2_spawnbio_uncertainty.png){width="75%"} 
+
+\
+
+## Unresolved Questions and Issues from the 2013 Assessment
+
+  1. Historical landings and discards 
+  2. Natural mortality 
+  3. Maturity and fecundity 
+  4. Age data and error
+  5. Understanding the stock structure and biology of Rougheye and Blackspotted rockfishes

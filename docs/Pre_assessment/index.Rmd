@@ -4,8 +4,8 @@ title: "2025 Pre-assessment workshop for Rougheye and Blackspotted rockfishes in
 author: 
   - Jason M. Cope, Northwest Fisheries Science Cente, jason.cope@noaa.gov
   - Vladlena Gertseva, Northwest Fisheries Science Center, vladlena.Gertseva@noaa.gov
+  - R. Claire Rosemond, Northwest Fisheries Science Center, claire.rosemond@noaa.gov
   - Fabio P. Caltabellotta, Washington Department of Fish and Wildlife, Fabio.PriorCaltabellotta@dfw.wa.gov 
-  - R. Claire Rosemond, Northwest Fisheries Science Center, claire.rosemond@noaa.gov 
   - Alison D. Whitman, Oregon Department of Fish and Wildlife, alison.D.WHITMAN@odfw.oregon.gov
 date: "`r Sys.Date()`"
 output: 
@@ -44,7 +44,7 @@ dir <- "C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment"
 
 # Overview
 
-Description of data and model specification being considered for use in the 2025 assessment of Rougheye and Blackspotted rockfishes. These two species, together, are treated as a combined species complex. Rougheye and Blackspotted rockfishes are difficult to visually distinguish, thus most data are only available for the Rougheye/Blackspotted rockfish complex, not at the species level.  
+The document provides a description of data available at the time of the workshop and model specifications being considered for use in the 2025 assessment of Rougheye and Blackspotted rockfishes. These two species, together, are treated as a combined species complex. Rougheye and Blackspotted rockfishes are genetically distinct, but difficult to visually distinguish, thus most data are only available for the Rougheye/Blackspotted rockfish complex, not at the species level. They range from northern California up to and throughout Alaska. They both greatly overlap in latitude and depth, and are generally considered slope rockfish, with an otogentic shift from shallower to deeper, and adults commonly found at 360 m. Rougheye seems to be proportionally more abundant when survey samples are genetically identified, and Blackspotted tend to be found, on average, deeper than Rougheye. They can school and may segregate by size and age. While we treat these species as one assessed stock from this point forward, we recognize and are mindful of the above distinctions as we conduct our analyses.
 
 
 ```{r child = "1_summary_of_2021_assessment.Rmd"}
