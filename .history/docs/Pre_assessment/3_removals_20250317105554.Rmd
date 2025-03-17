@@ -38,5 +38,3 @@ There are some updates in landings by state and fishery, but are overall small (
 
 * What to use for at-sea-hake 2024 value?
 * What to use for trawl and non-trawl discard 2024 value?
-
-\
