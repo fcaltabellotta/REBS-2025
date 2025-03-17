@@ -1,6 +1,7 @@
 library(ggplot2)
 library(dplyr)
 library(viridis)
+library(reshape2)
 
 #Length, weight and age data
 Lt_Wt_Age<-read.csv("C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/Lt_Wt_Age.csv")
@@ -131,13 +132,13 @@ ggplot(data=age_mat,aes(Ages,Pop_prop,color=M_val))+
   geom_point(data=M_pts,inherit.aes=FALSE,aes(Age_M,Pop_prop_M),size=3.5,color="black")+
   geom_point(data=M_pts,inherit.aes=FALSE,aes(Age_M,Pop_prop_M),size=3,color=viridis(5))
 
-
+age.peak<-21
 age_comps_agg<-melt(table(Lt_Wt_Age$Age,Lt_Wt_Age$Sex))
 colnames(age_comps_agg)<-c("Ages","Sex","Freq")
 age_comps_agg<-age_comps_agg[age_comps_agg$Freq>0,]
 age_comps_agg<-age_comps_agg[age_comps_agg$Sex!="U",]
 age_comps_agg.df<-data.frame(age_comps_agg,Freq_ln=log(age_comps_agg$Freq))
-age_comps_agg_peak<-age_comps_agg[age_comps_agg$Age>20,]
+age_comps_agg_peak<-age_comps_agg[age_comps_agg$Age>age.peak,]
 age_comps_agg_peak.df<-data.frame(age_comps_agg_peak,Freq_ln=log(age_comps_agg_peak$Freq))
 
 
@@ -158,7 +159,7 @@ ggplot(age_comps_agg.df,aes(Ages,Freq_ln))+
   geom_point(data=age_comps_agg_peak.df,aes(Ages,Freq_ln),color="red")+
   geom_smooth(method = "lm",data=age_comps_agg_peak.df)+
   facet_wrap(vars(Sex))+
-  annotate("text",x=100,y=5.4,label=paste0("Peak age = 21"),size=5)+
+  annotate("text",x=100,y=5.4,label=paste0("Peak age = ",age.peak),size=5)+
   geom_text(data = data.frame(Ages = c(100,100),Sex=c("F","M"),Freq=c(NA,NA), Freq_ln = c(5,5),
                             label = c(paste0("Z = ",round(cc_lm.F$coefficients[2],3)),paste0("Z = ",round(cc_lm.M$coefficients[2],3)))),
                             aes(label = label),color="black",size=5)
