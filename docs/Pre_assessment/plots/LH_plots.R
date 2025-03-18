@@ -133,12 +133,13 @@ ggplot(data=age_mat,aes(Ages,Pop_prop,color=M_val))+
   geom_point(data=M_pts,inherit.aes=FALSE,aes(Age_M,Pop_prop_M),size=3,color=viridis(5))
 
 age.peak<-21
+age.cut<-100
 age_comps_agg<-melt(table(Lt_Wt_Age$Age,Lt_Wt_Age$Sex))
 colnames(age_comps_agg)<-c("Ages","Sex","Freq")
 age_comps_agg<-age_comps_agg[age_comps_agg$Freq>0,]
 age_comps_agg<-age_comps_agg[age_comps_agg$Sex!="U",]
 age_comps_agg.df<-data.frame(age_comps_agg,Freq_ln=log(age_comps_agg$Freq))
-age_comps_agg_peak<-age_comps_agg[age_comps_agg$Age>age.peak,]
+age_comps_agg_peak<-age_comps_agg[age_comps_agg$Age>age.peak&age_comps_agg$Age<=age.cut,]
 age_comps_agg_peak.df<-data.frame(age_comps_agg_peak,Freq_ln=log(age_comps_agg_peak$Freq))
 
 

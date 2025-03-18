@@ -59,7 +59,7 @@ Three of the four surveys have length composition data that allow for estimation
 
 \
 
-![**Figure Lt_tri. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the Triennial bottom trawl survey. Red is female; blue is male.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt3mkt0.png){width="75%"} 
+![**Figure Lt_tri. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the Triennial bottom trawl survey. Red is female; blue is male.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt4mkt0.png){width="75%"} 
 
 \
 
@@ -67,7 +67,7 @@ Three of the four surveys have length composition data that allow for estimation
 
 \
 
-![**Figure Lt_AKslope. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the Alaska Fishery Science Center slope survey. Red is female; blue is male.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt3mkt0.png){width="75%"} 
+![**Figure Lt_AKslope. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the Alaska Fishery Science Center slope survey. Red is female; blue is male.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt5mkt0.png){width="75%"} 
 
 \
 
@@ -75,7 +75,7 @@ Three of the four surveys have length composition data that allow for estimation
 
 \
 
-![**Figure Lt_WCGBTS. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the West Coast Groundfish Bottom Trawl Survey. Red is female; blue is male.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt3mkt0.png){width="75%"} 
+![**Figure Lt_WCGBTS. Length composition data by sex and year for the Rougheye/Blackspotted rockfish complex based on fish sampled in the West Coast Groundfish Bottom Trawl Survey. Red is female; blue is male.**](C:/Users/Jason.Cope/Documents/Github/REBS-2025/docs/Pre_assessment/plots/comp_lendat_bubflt7mkt0.png){width="75%"} 
 
 \
 
