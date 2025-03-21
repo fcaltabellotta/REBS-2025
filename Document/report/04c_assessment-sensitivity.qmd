@@ -1,1 +1,63 @@
+## Characterizing uncertainty
 ### Sensitivity Analyses {#sec-assmt-sens}
+Sensitivity analyses were conducted to evaluate model sensitivity to alternative data treatment and model specifications.
+
+#### Data treatment sensitivities
+Data treatments explored were as follows:
+
+- Treatment of abundance indiecs 
+	  1. 2015 dockside survey
+    2. 2015 dockside survey, no extra variance estimated
+  	3. No extra variance on private boat index
+  	
+  	- Data weighting
+  	11. No data-weighting
+  	12. Dirichlet data-weighting
+  	13. McAllister-Ianelli data weighting
+
+- Other
+  	14. 2015 removal history
+  	
+Likelihood values and estimates of key parameters and derived quantities from each sensitivity are available in Table . Derived quantities relative to the reference model are provided in Figure . Time series of spawning output and relative spawning output are shown in Figures  and .
+
+#### Model Specification Sensitivities {#senstivities}
+Model specifications looked at the estimation of individual and combinations of life history parameters, the estimation of recruitment, and the treatment of fecundity and selectivity. All scenarios match the reference model specifications in all other aspects unless otherwise stated.
+
+- Life history estimation
+	- Natural mortality ($M$)
+		1. Estimate $M$
+		2. Lorenzen age varying $M$
+		3. Use Oregon 2023 assessment sex-specific M values (females = 0.19; males = 0.17)
+		4. Maintain sex ratio in age and length data (sex option 3) and estimate $M$
+	
+	- Growth parameters
+	 	6. Fix all growth parameters to external values
+	 	5. Fix all growth parameters to external values, estimate $M$
+		7. Estimate $L_min$
+	 	8. Fix $t_0$ = 0
+	 	9. Estimate $CV_{young}$ and $CV_{old}$
+	
+	- Reproductive Biology
+	 	10. Use biological maturity ogive
+	 	11. Use functional maturity ogive
+	 	12. Fecundity proportional to weight
+
+	- Recruitment estimation
+	 	13. No recruitment estimation
+	 	14. Estimate recruitment for all years in the model
+ 
+ Other
+ 
+Likelihood values and estimates of key parameters and derived quantities from each sensitivity are available in Table . Derived quantities relative to the reference model are provided in Figure . Time series of spawning output and relative spawning output are shown in Figures  and . None of the sensitivities indicated an overfished stock.
+ 
+### Likelihood Profiles
+
+
+### Retrospective Analysis
+
+A five-year retrospective analysis was conducted by running the model and sequentially removing one year of data up through minus 5 years. Retrospective spawning output (Figure ) and relatives stock status (Figure ) estimates show a generally consistent pattern in population scale and trend, within the error of the reference model. All models show the population increasing. This results in a stock status in the precautionary zone over the 5 year consideration. The Mohn's rho evaluation of the degree of retrospective pattern in given in Table  and shown in Figure . The relative error in the data peels are below significant levels. 
+
+
+### Unresolved Problems and Major Uncertainties
+
+There are no major unresolved problems in the stock assessment, but there are many sources of uncertainty. Natural mortality remains a large source of uncertainty. The estimation of growth also required fixing certain parameters, leading to an underestimation of uncertainty in the model. The stock-recruit relationship is assumed to be a Beverton-Holt relationship with a fixed steepness of 0.72. Large uncertainty was shown if the nature of this relationship varies either deterministically or over time. The full time series of recruitment deviations were not informed, which creates some historical and contemporary uncertainty. Likewise, all life history values are assumed constant, so any time-varying issues that are directional could create more uncertainty. 

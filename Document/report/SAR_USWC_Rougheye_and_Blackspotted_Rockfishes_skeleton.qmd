@@ -62,8 +62,12 @@ bibliography:
 #| echo: false 
 #| warning: false 
 #| eval: true 
+
+spp <- "Rougheye/Blackspotted"
+Spp <- "Rougheye/Blackspotted"
+
 # load converted output from asar::convert_output() 
-output <- utils::read.csv('C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/update//reye_blkspt_convert_output.csv') 
+output <- utils::read.csv('C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/update/reye_blkspt_convert_output.csv') 
 # Call reference points and quantities below 
 output <- output |> 
   dplyr::mutate(estimate = as.numeric(estimate), 
@@ -125,6 +129,8 @@ sbend <- output2 |>
   dplyr::filter(grepl('spawning_biomass', label), year == end_year) |>
   dplyr::pull(estimate) |>
     unique()
+#Terminal year stock status
+stock.status.current<-output[output$label=="biomass_ratio",2][length(output[output$label=="biomass_ratio",2])]
 # overall natural mortality or at age 
 M <- output |>
   dplyr::filter(grepl('natural_mortality', label)) |>
@@ -151,11 +157,12 @@ R0 <- output |>
 
 ``` 
 
+
 {{< pagebreak >}} 
 
 Please cite this publication as: 
 
-Cope, J.M., V. Gertseva, F. Caltabellotta, C. Rosemond, A.D. Whitman. Status of the Rougheye and Blackspotted Rockfishes stock off the U.S. West Coast in 2025.2025. Prepared by [COMMITTEE]. [XX] p.
+Cope, J.M., V. Gertseva, R.C. Rosemond, F. Caltabellotta,  A.D. Whitman. Status of the Rougheye and Blackspotted Rockfishes stock off the U.S. West Coast in 2025.2025. Prepared by [COMMITTEE]. [XX] p.
 
  {{< pagebreak >}} 
 
@@ -226,36 +233,13 @@ cat(a, sep = '\n')
  {{< pagebreak >}} 
 
 ```{r, results='asis'}
-#| label: 'assessment-benchmarks'
+#| label: 'management'
 #| eval: true
 #| echo: false
 #| warning: false
-a <- knitr::knit_child('04d_assessment-benchmarks.qmd', quiet = TRUE)
+a <- knitr::knit_child('05_management.qmd', quiet = TRUE)
 cat(a, sep = '\n')
 ```
-
- {{< pagebreak >}} 
-
-```{r, results='asis'}
-#| label: 'assessment-projections'
-#| eval: true
-#| echo: false
-#| warning: false
-a <- knitr::knit_child('04e_assessment-projections.qmd', quiet = TRUE)
-cat(a, sep = '\n')
-```
-
- {{< pagebreak >}} 
-
-```{r, results='asis'}
-#| label: 'discussion'
-#| eval: true
-#| echo: false
-#| warning: false
-a <- knitr::knit_child('05_discussion.qmd', quiet = TRUE)
-cat(a, sep = '\n')
-```
-
  {{< pagebreak >}} 
 
 ```{r, results='asis'}

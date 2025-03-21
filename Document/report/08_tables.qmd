@@ -1,4 +1,4 @@
-## Tables {#sec-tables}
+## Tables 
  
 ```{r} 
 #| label: 'set-rda-dir-tbls'
@@ -8,6 +8,6 @@
 #| include: false
 library(flextable)
 
-rda_dir <- 'C:/Users/Jason.Cope/Documents/Current Action/Assessments/Black rockfish 2022/Data/OR/Ageing error/rda_files'
+rda_dir <- 'C:/Users/kiva.oken/Desktop/yellowtail_2025/rda_files'
 ``` 
 

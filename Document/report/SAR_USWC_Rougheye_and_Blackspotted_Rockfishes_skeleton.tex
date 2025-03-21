@@ -89,6 +89,39 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{hyphenat}
 \usepackage{graphicx}
@@ -201,7 +234,7 @@
 U.S. West Coast in 2025}
 \author{Jason M. Cope \and Vladlena Gertseva \and NA \and NA \and Alison
 D. Whitman}
-\date{2025-02-20}
+\date{2025-03-20}
 
 \begin{document}
   \begin{titlepage}
@@ -330,114 +363,870 @@ D. Whitman}
 
 Please cite this publication as:
 
-Cope, J.M., V. Gertseva, F. Caltabellotta, C. Rosemond, A.D. Whitman.
+Cope, J.M., V. Gertseva, R.C. Rosemond, F. Caltabellotta, A.D. Whitman.
 Status of the Rougheye and Blackspotted Rockfishes stock off the U.S.
 West Coast in 2025.2025. Prepared by {[}COMMITTEE{]}. {[}XX{]} p.
 
 \newpage{}
 
-\section{Executive Summary}\label{sec-exec-sum}
+\subsection{Executive Summary}\label{executive-summary}
 
-\subsection{Assessment Model}\label{assessment-model}
+\subsubsection{Stock Description}\label{stock-description}
 
-\subsection{Reference Points, Stock Status, and
-Projections}\label{reference-points-stock-status-and-projections}
+\subsubsection{Catches}\label{catches}
+
+\subsubsection{Data and Assessments}\label{data-and-assessments}
+
+\subsubsection{Stock Output and
+Dynamics}\label{stock-output-and-dynamics}
+
+\subsubsection{Recruitment}\label{recruitment}
+
+\subsubsection{Exploitation Status}\label{exploitation-status}
+
+\subsubsection{Ecosysystem
+Consideration}\label{ecosysystem-consideration}
+
+\subsubsection{Reference Points}\label{reference-points}
+
+\subsubsection{Management Performance}\label{management-performance}
+
+\subsubsection{Evaluation of Scientific
+Uncertainty}\label{evaluation-of-scientific-uncertainty}
+
+\subsubsection{Harvest Projections and Decision
+Tables}\label{harvest-projections-and-decision-tables}
+
+\subsubsection{Unresolved Problems and Major
+Uncertainties}\label{unresolved-problems-and-major-uncertainties}
+
+\subsubsection{Research and Data Needs}\label{research-and-data-needs}
 
 \newpage{}
 
-\section{Introduction}\label{sec-intro}
+\section{Introduction}\label{introduction}
 
 Testing adding in an introduction for Rougheye and Blackspotted
 Rockfishes. There is currently no read of parameters for child
 documents.
 
-\subsection{Management History}\label{management-history}
-
-\subsection{Fishery Descriptions}\label{fishery-descriptions}
-
-\subsection{Ecosystem Considerations}\label{ecosystem-considerations}
-
-\newpage{}
-
-\section{Data}\label{sec-data}
-
-\subsection{Stock ID}\label{stock-id}
+\subsection{Basic Information}\label{basic-information}
 
 \subsection{Life History}\label{life-history}
 
-\subsection{Landings}\label{landings}
+\subsection{Ecosystem considerations}\label{ecosystem-considerations}
 
-\subsection{Indices and
-Standardization}\label{indices-and-standardization}
+\subsection{Historical and Current Fishery
+Information}\label{historical-and-current-fishery-information}
 
-\subsection{Composition Data}\label{composition-data}
+\subsection{Management History}\label{management-history}
 
-\subsection{Absolute Abundance}\label{absolute-abundance}
+\subsection{Management performance}\label{management-performance-1}
 
-\subsection{Environmental/Ecosystem Indicator
-Data}\label{environmentalecosystem-indicator-data}
-
-\newpage{}
-
-\section{Assessment}\label{sec-assmt-config}
-
-\subsection{Current Modeling Approach}\label{current-modeling-approach}
-
-\subsection{Configuration of the Base
-Model}\label{configuration-of-the-base-model}
+\subsection{Fisheries off Canada and
+Alaska}\label{fisheries-off-canada-and-alaska}
 
 \newpage{}
 
-\subsection{Modeling Results}\label{sec-assmt-results}
+\section{Data}\label{data}
 
-\subsubsection{Parameter Estimates}\label{parameter-estimates}
+Data from a wide range of programs were available for possible inclusion
+in the current assessment model. Descriptions of each data source
+included in the model (Figure ) and sources that were explored but not
+included in the base model are provided below. Data that were excluded
+from the base model were excluded only after being explicitly explored
+during the development of this stock assessment and found to be
+inappropriate for use or had not changed since their past exploration
+for previous Rougheye/Blackspotted stock assessments when they were not
+used.
 
-\subsubsection{Recruitment Estimates and
-Deviations}\label{recruitment-estimates-and-deviations}
+\subsection{Fishery-dependent data}\label{fishery-dependent-data}
 
-\subsubsection{Model Fits}\label{model-fits}
+\subsubsection{Landings}\label{landings}
 
-\subsubsection{Model Diagnostics}\label{model-diagnostics}
+\paragraph{Trawl}\label{trawl}
+
+\paragraph{Non-trawl}\label{non-trawl}
+
+\paragraph{At-sea-hake fishery}\label{at-sea-hake-fishery}
+
+\subsubsection{Discards}\label{discards}
+
+\paragraph{Trawl}\label{trawl-1}
+
+\paragraph{Non-trawl}\label{non-trawl-1}
+
+\subsubsection{Biological data}\label{biological-data}
+
+\paragraph{Length and Age Sample
+Sizes}\label{length-and-age-sample-sizes}
+
+\subparagraph{Multinomial Sample Sizes}\label{multinomial-sample-sizes}
+
+Initial input values for the multinomial samples sizes determine the
+relative weights applied in fitting the annual composition data within
+the set of observations for each fishing fleet in the model. The initial
+input values in this assessment were based on the following equation
+developed by I. Stewart and S. Miller (NWFSC), and presented at the 2006
+Stock Assessment Data and Modeling workshop. The input sample sizes for
+all commercial data were calculated based on a combination of trips and
+fish sampled:
+
+\begin{centering}
+
+Input effN = $N_{\text{trips}} + 0.138 * N_{\text{fish}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $<$ 44
+
+Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $\geq$ 44
+
+\end{centering}
+
+\paragraph{Trawl}\label{trawl-2}
+
+\paragraph{Non-trawl}\label{non-trawl-2}
+
+\paragraph{At-sea-hake fishery}\label{at-sea-hake-fishery-1}
+
+\subsection{Fishery-independent data}\label{fishery-independent-data}
+
+\subsubsection{Abundance indices}\label{abundance-indices}
+
+\paragraph{NWFSC West Coast Groundfish Bottom Trawl
+Survey}\label{nwfsc-west-coast-groundfish-bottom-trawl-survey}
+
+\paragraph{NWFSC Slope Survey}\label{nwfsc-slope-survey}
+
+\paragraph{AFSC Slope Survey}\label{afsc-slope-survey}
+
+\paragraph{AFSC/NWFSC West Coast Triennial Shelf
+Survey}\label{afscnwfsc-west-coast-triennial-shelf-survey}
+
+\subsubsection{Biological data}\label{biological-data-1}
+
+\paragraph{NWFSC West Coast Groundfish Bottom Trawl
+Survey}\label{nwfsc-west-coast-groundfish-bottom-trawl-survey-1}
+
+\paragraph{NWFSC Slope Survey}\label{nwfsc-slope-survey-1}
+
+\paragraph{AFSC Slope Survey}\label{afsc-slope-survey-1}
+
+\paragraph{AFSC/NWFSC West Coast Triennial Shelf
+Survey}\label{afscnwfsc-west-coast-triennial-shelf-survey-1}
+
+\subsection{Biological Parameters}\label{biological-parameters}
+
+\subsubsection{Natural Mortality}\label{natural-mortality}
+
+\begin{centering}
+
+$M=\frac{5.4}{A_{\text{max}}}$
+
+\end{centering}
+
+\vspace{0.5cm}
+
+where \(M\) is natural mortality and \({A_{\text{max}}}\) is the assumed
+maximum age. The prior is defined as a lognormal distribution with mean
+\(ln(5.4/A_{\text{max}})\) and standard error = 0.31.
+
+\subsubsection{Age and Growth
+Relationship}\label{age-and-growth-relationship}
+
+\begin{centering}
+
+Females $L_{\infty}$ =  cm; $k$ =  per year; $t_0$ = 
+
+Males $L_{\infty}$ =  cm; $k$ =  per year; $t_0$ = 
+
+\end{centering}
+
+\subsubsection{Ageing Bias and
+Precision}\label{ageing-bias-and-precision}
+
+\subsubsection{Length-Weight
+Relationship}\label{length-weight-relationship}
+
+\subsubsection{Maturity}\label{maturity}
+
+\subsubsection{Fecundity}\label{fecundity}
+
+\subsubsection{Stock-Recruitment Function and
+Compensation}\label{stock-recruitment-function-and-compensation}
+
+\subsubsection{Sex Ratio}\label{sex-ratio}
+
+No information on the sex ratio at birth was available so it was assumed
+to be 50:50.
+
+\subsection{Environmental and ecosystem
+data}\label{environmental-and-ecosystem-data}
+
+This stock assessment does not explicitly incorporate trophic
+interactions, habitat factors or environmental factors into the
+assessment model. More predation, diet and habitat work, and mechanistic
+linkages to environmental conditions would be needed to incorporate
+these elements into the stock assessment and should remain a priority.
+McClure et al. (\textbf{mcclure\_vulnerability\_2023?}) report the
+climate vulnerability for several west coast groundfishes, including
+Rougheye/Blackspotted. Rougheye/Blackspotted demonstrated both high
+biological sensitivity and high climate exposure risk, to give it an
+overall high vulnerability score to climate change. This result should
+also be considered with the fact that, like many rockfishes, periods of
+low productivity is not unusual to Rougheye/Blackspotted and their
+extended longevity (though admittedly this seems shorter than previously
+believed and should be reconsidered) has historically allowed them to
+wait for advantageous productivity periods. Stressors such as habitat
+degradation and climate change could bring significant challenges to
+population sustainability. Regardless, no environmental or ecosystem
+data are directly incorporated into the stock assessment model.
 
 \newpage{}
 
-\subsection{Sensitivity Analyses}\label{sec-assmt-sens}
+\subsection{Assessment}\label{assessment}
+
+\subsubsection{History of Modeling
+Approaches}\label{history-of-modeling-approaches}
+
+\subsubsection{Most Recent STAR Panel
+Recommendations}\label{most-recent-star-panel-recommendations}
+
+\subsubsection{Response to SSC Groundfish Subcommittee
+Recommendations}\label{response-to-ssc-groundfish-subcommittee-recommendations}
+
+\subsection{Current Modelling
+Platform}\label{current-modelling-platform}
+
+Stock Synthesis version 3.30.22.1 was used as the statistical
+catch-at-age modelling framework. This framework allows the integration
+of a variety of data types and model specifications. The Stock
+Assessmetn Continuum tool (https://github.com/shcaba/SS-DL-tool) was
+used also used to explore model effciency, likelihood profiling,
+retrospective analyses, and plotting sensitivities. The companion R
+package r4ss (version 1.38.0) along with R version 4.2.2 were used to
+investigate and plot model fits.
+
+\subsubsection{Bridging the Assessment Model from Stock Synthesis 3.24
+(2013) to 3.30
+(2025)}\label{bridging-the-assessment-model-from-stock-synthesis-3.24-2013-to-3.30-2025}
+
+Since several years have passed from the last assessment model, the
+Stock Synthesis (SS3) modelling framework has undergone many changes.
+While the specific changes in the model can be found in the model
+\href{https://github.com/nmfs-stock-synthesis/stock-synthesis/blob/v3.30.19/Change_log_for_SS_3.30.xlsx?raw=true}{change
+log}, here we simply update the model from the older 3.24O version to
+the newer 3.30.22.1 version. The point here is to present any
+differences in the model outputs when using the same information. This
+was first done by migrating the data and parameter specifications from
+the former files to the newer files. This migration was assisted using
+the \href{https://github.com/shcaba/SS-DL-tool}{SS-DL tool}. Once the
+old data was transferred to the SS 3.30.22.1 file, the model was run
+allowing the same parameters estimation specification as in the 2013
+model.
+
+These model comparisons are adequate to move ahead using the newest
+version of SS3 3.30.21 without expecting large differences in reference
+models being due to versions of SS3.
+
+\subsection{Model Structure, Evaluation, and
+Specification}\label{model-structure-evaluation-and-specification}
+
+\subsubsection{Fleet and Survey
+Designations}\label{fleet-and-survey-designations}
+
+The Washington model is structured to track several fleets and include
+data from several surveys:
+
+\begin{itemize}
+\tightlist
+\item
+  Fleet 1: Commerical trawl fishery
+\item
+  Fleet 2: Commercial non-trawl (mostly jig) fishery
+\item
+  Fleet 3: Recreational boat fishery
+\item
+  Survey 1: Private boat\\
+\item
+  Survey 2: Charter
+\item
+  Survey 3: Tagging
+\item
+  Survey 4: Nearshore
+\item
+  Survey 5: OCNMS subadult-adult survey
+\item
+  Survey 6: OCNMS young-of-the-year survey
+\end{itemize}
+
+The specifications of the assessment are listed in Table
+\ref{tab:model-structure}.
+
+\subsection{Model Likelihood
+Components}\label{model-likelihood-components}
+
+There are five primary likelihood components for each assessment model:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Fit to survey indices of abundance.
+\item
+  Fit to length composition samples.
+\item
+  Fit to age composition samples (all fit as conditional age-at-length).
+\item
+  Penalties on recruitment deviations (specified differently for each
+  model).
+\item
+  Prior distribution penalties
+\end{enumerate}
+
+\subsection{Reference Model Exploration, Key Assumptions and
+Specification}\label{reference-model-exploration-key-assumptions-and-specification}
+
+The reference model for Washington Rougheye/Blackspotted was developed
+to balance parsimony and realism, and the goal was to estimate a
+spawning output trajectory and relative stock status for the population
+of Rougheye/Blackspotted in state and federal waters off Washington. The
+model contains many assumptions to achieve parsimony and uses different
+data types and sources to estimate reality. A series of investigative
+model runs were done to achieve the final base model. Constructing
+integrated models (i.e., those fitting many data types) takes
+considerable model exploration using different configurations of the
+following treatments:
+
+\begin{itemize}
+\tightlist
+\item
+  Data types
+\item
+  Parameter treatments: which parameter can, cannot and do not need to
+  be estimated
+\item
+  Phasing of parameter estimation
+\item
+  Data weighting
+\item
+  Exploration of local vs global minima (see Model Convergence and
+  Acceptability section below)
+\end{itemize}
+
+The different biological data with and without the catch time series
+(and no additional data weighting) were first included to obtain an
+understanding of the signal of stock status coming from the data (Figure
+). The length and age only models assume a constant catch over the
+entire time series, while estimating the selectivity of each fleet.
+Under this constraint, the lengths suggest a stock a bit lower than the
+reference model, while the ages consider the stock is extremely
+depleted. Putting the two data sources together produce an intermediate
+stock status in the lower precautionary zone. Adding the catch time
+series substantially changes the stock status trajectory, with length or
+age only model above the reference stocks status. Combining the two came
+out just under the reference model. Only one model includes recruitment
+deviations, and demonstrates more dynamics behavior similar to that seen
+when biological compositions are unweighted (see Model Specification
+Sensitivities section ).
+
+Stock scale was comparable once removal history was included, and
+demonstrates a large sensitivity to the scale of the stock given the
+data with no additional weighting included (Figure ).
+
+Numerous exploratory models that included all data types and a variety
+of model specifications were subsequently explored and too numerous to
+fully report. In summary, the estimation of which life history
+parameters to estimate and fix was liberally explored.
+
+The following is a list of things that were explored, typically in
+combination with one another
+
+\begin{itemize}
+\tightlist
+\item
+  Estimate or fix \(M\)
+\item
+  Estimate or fix any of the three growth parameter for each sex
+\item
+  Estimate or fix the stock-recruit relationship
+\item
+  Estimate or assume constant recruitment. If estimating recruitment,
+  for what years?
+\item
+  Estimate or fix survey catchability for each survey
+\item
+  Estimate additional survey variance for which survey
+\item
+  Estimate or fix selectivity parameters
+\item
+  Logistic or dome-shaped selectivity?
+\end{itemize}
+
+After much consideration, it was determined that some parameters were
+inestimable (\(M\), \(L_{min}\) for both sexes), some did not move much
+for initial values and could be fixed (e.g., CV at length values, some
+selectivity parameters), and others could be estimated (e.g.,
+\(L_{\infty}\), \(k\), \(lnR_0\)). Estimation of \(L_min\) returned very
+high estimates of \(L_{\infty}\) for both sexes, thus the \(L_{min}\)
+value for both females and males was fixed to the external estimates. No
+priors were used on any of the estimated parameters except female
+\(L_{\infty}\) which used a normal prior and a standard deviation set a
+bit higher from the external fit to the growth curve (0.2).
+Length-at-maturity, fecundity-weight, and length-weight relationship,
+steepness (\(h\)) and recruitment variance were all fixed.
+
+The selectivity of all fisheries were estimated as logistic even if
+dome-shaped selectivity was an option (and starting values begin at a
+strong dome-shaped position). Constant selectivity was assumed for the
+whole time period as there was no reason to suggest otherwise, and is
+consistent with the previous stock assessment treatment.
+
+The full list of estimate and fixed parameters are found in Table \}.
+
+The biggest uncertainty was in the treatment of sex-specific \(M\), as
+estimation came in very low for both sexes versus observed ages in the
+population and the treatment in the last assessment. This parameter
+affects both scale and status, and thus is a valuable parameter to
+consider for characterizing model specification error and defining
+states of nature. Both likelihood profiles and sensitivities explore the
+influence of this parameter on derived model outputs.
+
+General attributes of the reference model are that indices of abundance
+are assumed to have lognormal measurement errors. Length compositions
+and conditional age at length samples are all assumed to follow a
+multinomial sampling distribution, where the sample size is fixed at the
+input sample size calculated during compositional example, and where
+this input sample size is subsequently reweighted to account for
+additional sources of overdispersion (see below). Recruitment deviations
+were also estimated are assumed to follow a lognormal distribution,
+where the standard deviation of this distribution is tuned as explained
+below.
+
+Sensitivity scenarios and likelihood profiles (on \(lnR_0\), steepness,
+and natural mortality) were used to explore uncertainty in the above
+model specifications and are reported below.
+
+\subsubsection{Data Weighting}\label{data-weighting}
+
+The reference model allowed for the estimation of additional variance on
+all surveys except the taggin and OCNMS adult survey, both of which
+already had very high input variances. The ability to add variance to
+indices allows the model to balance model fit to that data while
+acknowledging that variances may be underestimated in the index
+standardization. A sensitivity was run with no extra variance estimated,
+as well as removal of the index data were explored.
+
+Initial sample sizes for the commercial and recreational fleet length
+and conditional age-at-length compositions were based on the number of
+input effective samples sizes. The method of Francis (2011), equation
+TA1.8, was then used to balance the length and conditional age-at-length
+composition data among other inputs and likelihood components. The
+Francis method treats mean length and age as indices, with effective
+sample size defining the variance around the mean. If the variability
+around the mean does not encompass model predictions, the data should be
+down-weighted until predictions fit within the intervals. This method
+accounts for correlation in the data (i.e., the multinomial
+distribution), but can be sensitive to years that are outliers, as the
+amount of down-weighting is applied to all years within a data source,
+and are not year-specific. Sensitivities were performed examining
+different data-weighting treatments: 1) the Dirichlet-Multinomial
+approach (Thorson et al. 2017), 2) the McAllister-Ianelli Harmonic Mean
+approach (McAllister and Ianelli 1997), or 3) no data-weighting of
+lengths.
+
+\subsubsection{Model Changes from the Last
+Assessment}\label{model-changes-from-the-last-assessment}
+
+Besides the additional of eight years of data and some changes in the
+estimation of some parameters, the biggest changes to the 2015
+assessment are:
+
+\begin{itemize}
+\tightlist
+\item
+  Change in the removal history, especially the trawl fishery 3A catches
+  from Astoria.
+\item
+  Breaking the dockside survey into separate private and charter boat
+  surveys. This allowed the ability to exclude years in the charter boat
+  fishery that showed more effects from bag limits.
+\item
+  Addition of the nearshore survey, and both OCNMS surveys.
+\end{itemize}
 
 \newpage{}
 
-\subsection{Management Benchmarks}\label{sec-assmt-bench}
+\subsubsection{Reference Model Diagnostics and
+Results}\label{reference-model-diagnostics-and-results}
+
+\paragraph{Model Convergence and Acceptability}\label{model-convergence}
+
+\subsubsection{Base Model Results}\label{base-model-results}
+
+\paragraph{Fits to the Data}\label{fits-to-the-data}
+
+\subparagraph{Lengths}\label{lengths}
+
+\paragraph{Conditional Age at Length and Marginal
+Ages}\label{conditional-age-at-length-and-marginal-ages}
+
+\paragraph{Fits to Indices of
+Abundance}\label{fits-to-indices-of-abundance}
+
+\subsubsection{Reference Model Outputs}\label{reference-model-outputs}
+
+\paragraph{Parameter Estimates}\label{parameter-estimates}
+
+\paragraph{Population Trajectory}\label{population-trajectory}
 
 \newpage{}
 
-\subsection{Projections}\label{sec-assmt-proj}
+\subsection{Characterizing
+uncertainty}\label{characterizing-uncertainty}
+
+\subsubsection{Sensitivity Analyses}\label{sec-assmt-sens}
+
+Sensitivity analyses were conducted to evaluate model sensitivity to
+alternative data treatment and model specifications.
+
+\paragraph{Data treatment
+sensitivities}\label{data-treatment-sensitivities}
+
+Data treatments explored were as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  Treatment of abundance indiecs 1. 2015 dockside survey
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    2015 dockside survey, no extra variance estimated
+  \item
+    No extra variance on private boat index
+  \end{enumerate}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Data weighting
+  \end{itemize}
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \setcounter{enumi}{10}
+  \tightlist
+  \item
+    No data-weighting
+  \item
+    Dirichlet data-weighting
+  \item
+    McAllister-Ianelli data weighting
+  \end{enumerate}
+\item
+  Other
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \setcounter{enumi}{13}
+  \tightlist
+  \item
+    2015 removal history
+  \end{enumerate}
+\end{itemize}
+
+Likelihood values and estimates of key parameters and derived quantities
+from each sensitivity are available in Table . Derived quantities
+relative to the reference model are provided in Figure . Time series of
+spawning output and relative spawning output are shown in Figures and .
+
+\paragraph{Model Specification Sensitivities}\label{senstivities}
+
+Model specifications looked at the estimation of individual and
+combinations of life history parameters, the estimation of recruitment,
+and the treatment of fecundity and selectivity. All scenarios match the
+reference model specifications in all other aspects unless otherwise
+stated.
+
+\begin{itemize}
+\tightlist
+\item
+  Life history estimation
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Natural mortality (\(M\))
+
+    \begin{enumerate}
+    \def\labelenumi{\arabic{enumi}.}
+    \tightlist
+    \item
+      Estimate \(M\)
+    \item
+      Lorenzen age varying \(M\)
+    \item
+      Use Oregon 2023 assessment sex-specific M values (females = 0.19;
+      males = 0.17)
+    \item
+      Maintain sex ratio in age and length data (sex option 3) and
+      estimate \(M\)
+    \end{enumerate}
+  \item
+    Growth parameters
+
+    \begin{enumerate}
+    \def\labelenumi{\arabic{enumi}.}
+    \setcounter{enumi}{5}
+    \tightlist
+    \item
+      Fix all growth parameters to external values
+    \item
+      Fix all growth parameters to external values, estimate \(M\)
+    \item
+      Estimate \(L_min\)
+    \item
+      Fix \(t_0\) = 0
+    \item
+      Estimate \(CV_{young}\) and \(CV_{old}\)
+    \end{enumerate}
+  \item
+    Reproductive Biology
+
+    \begin{enumerate}
+    \def\labelenumi{\arabic{enumi}.}
+    \setcounter{enumi}{9}
+    \tightlist
+    \item
+      Use biological maturity ogive
+    \item
+      Use functional maturity ogive
+    \item
+      Fecundity proportional to weight
+    \end{enumerate}
+  \item
+    Recruitment estimation
+
+    \begin{enumerate}
+    \def\labelenumi{\arabic{enumi}.}
+    \setcounter{enumi}{12}
+    \tightlist
+    \item
+      No recruitment estimation
+    \item
+      Estimate recruitment for all years in the model
+    \end{enumerate}
+  \end{itemize}
+\end{itemize}
+
+Other
+
+Likelihood values and estimates of key parameters and derived quantities
+from each sensitivity are available in Table . Derived quantities
+relative to the reference model are provided in Figure . Time series of
+spawning output and relative spawning output are shown in Figures and .
+None of the sensitivities indicated an overfished stock.
+
+\subsubsection{Likelihood Profiles}\label{likelihood-profiles}
+
+\subsubsection{Retrospective Analysis}\label{retrospective-analysis}
+
+A five-year retrospective analysis was conducted by running the model
+and sequentially removing one year of data up through minus 5 years.
+Retrospective spawning output (Figure ) and relatives stock status
+(Figure ) estimates show a generally consistent pattern in population
+scale and trend, within the error of the reference model. All models
+show the population increasing. This results in a stock status in the
+precautionary zone over the 5 year consideration. The Mohn's rho
+evaluation of the degree of retrospective pattern in given in Table and
+shown in Figure . The relative error in the data peels are below
+significant levels.
+
+\subsubsection{Unresolved Problems and Major
+Uncertainties}\label{unresolved-problems-and-major-uncertainties-1}
+
+There are no major unresolved problems in the stock assessment, but
+there are many sources of uncertainty. Natural mortality remains a large
+source of uncertainty. The estimation of growth also required fixing
+certain parameters, leading to an underestimation of uncertainty in the
+model. The stock-recruit relationship is assumed to be a Beverton-Holt
+relationship with a fixed steepness of 0.72. Large uncertainty was shown
+if the nature of this relationship varies either deterministically or
+over time. The full time series of recruitment deviations were not
+informed, which creates some historical and contemporary uncertainty.
+Likewise, all life history values are assumed constant, so any
+time-varying issues that are directional could create more uncertainty.
 
 \newpage{}
 
-\section{Discussion}\label{sec-discussion}
+\section{Management}\label{management}
+
+\subsection{Reference Points}\label{reference-points-1}
+
+Reference points were based on the rockfish FMSY proxy
+(\(\text{SPR}_{50\%}\)), target relative biomass (40\%), and estimated
+selectivity and catch for each fleet (Table \ref{tab:ReferencePoints}).
+The Rougheye/Blackspotted population in Washington at the start of 2023
+is estimated to be just above the target biomass, and fishing intensity
+during 2022 is estimated to be just below the fishing intensity target
+(Figure \ref{fig:phase}). The yield values are lower than the previous
+assessment for similar reference points due to updated life history
+estimates and estimates of the total scale of the population, despite
+the overall stock status being a bit higher. The proxy MSY values of
+management quantities are by definition more conservative compared to
+the estimated MSY and MSY relative to 40\% of unfished spawning output
+because of the assumed steepness value. Sustainable total yield,
+removals, using the proxy \(\text{SPR}_{50\%}\) is 471 mt. The spawning
+output equivalent to 40\% of the unfished spawning output
+(\(\text{SO}_{40\%}\)) calculated using the SPR target
+(\(\text{SPR}_{50\%}\)) was 7,828 billions of eggs.
+
+Recent removals since 2017 have been at or below the point estimate of
+potential long-term yields calculated using an \(\text{SPR}_{50\%}\)
+reference point (Figure \ref{fig:1-spr}), leading to a population that
+has continued to increase over recent years with the assistance of above
+average recruitment between 2003-2014, despite below average recruitment
+starting in 2015. The equilibrium estimates of yield relative to biomass
+based on a steepness value fixed at are provided in Figure
+\ref{fig:yield}, where vertical dashed lines indicate the estimate of
+fraction unfished at the start of 2027 (current) and the estimated
+management targets calculated based on the relative target biomass (B
+target), the SPR target, and the maximum sustainable yield (MSY).
+
+The 2023 spawning biomass relative to unfished equilibrium spawning
+biomass, based on the 2022 fishing year, is 80.5397\%, above the
+management target of 40\% of unfished spawning output. The relative
+biomass and the ratio of the estimated SPR to the management target
+(\(\text{SPR}_{50\%}\)) across all model years are shown in Figure
+\ref{fig:phase} where warmer colors (red) represent early years and
+colder colors (blue) represent recent years. There have been periods
+where the stock status has decreased below the target and limit relative
+biomass, and fishing intensity has been higher than the target fishing
+intensity based on \(\text{SPR}_{50\%}\).
+
+\subsection{Management performance}\label{management-performance-2}
+
+Rougheye/Blackspotted removals have been below the equivalent Annual
+Catch Limit (ACL) over the recent decade (Table \ref{tab:manage}). The
+ACL declined in 2017 relative to earlier years based on the 2015
+assessment of Rougheye/Blackspotted (Cope et al. 2016). In the last ten
+years, catches peaked in 2016 at 369 mt. Since then catches have
+declined to a recent low of 130 mt in 2020 with the catches in the final
+two model years remaining low with 197 mt in 2021 and 166 mt in 2022.
+The OFL has not been exceeded in any year over the past 10 years.
+
+\subsection{Harvest Projections and Decision
+Tables}\label{harvest-projections-and-decision-tables-1}
+
+The Rougheye/Blackspotted assessment is being considered as a category 1
+assessment with a \(P^*\) = 0.45, \(\sigma\) = 0.50, and a time-varying
+buffer applied to set the ABC below the OFL. These multipliers are also
+combined with the rockfish MSY proxy of SPR\textsubscript{50} and the
+40-10 harvest control rule to calculate OFLs and ACLs. A twelve-year
+(2023-2034) projection of the reference model using these specifications
+along with input removals for 2023 and 2024 provided by the Groundfish
+Management Team (Katie Pierson, ODFW, pers. comm.) is provided in Table
+\ref{tab:project}.
+
+Uncertainty in management quantities for the reference model was
+characterized by exploring various model specifications in a decision
+table, with the desire for states of nature to represent uncertainty in
+both scale and relative stock status Initial explorations considering
+alternative specifications of natural mortality. This was based on using
+the estimated \(M\) scenario as a low state of nature and applying the
+sex-specific \(M\) values from the 2023 Oregon model as the high state
+of nature. These produced wide states of nature (Figure
+\ref{fig:stateofnature_SO} and Figure \ref{fig:stateofnature_depl}).
+Discussion with the STAR panel led to defining two other states of
+nature based on the reference model uncertainty in ending spawning
+output. Low and high states of nature were determined by applying an
+initial recruitment (\(lnR_0\)) value that lead to current spawning
+output values equivalent to the 12.5\% and 87.5\% percentile values from
+the current spawning output distribution (Figure
+\ref{fig:stateofnature_SO} and Figure \ref{fig:stateofnature_depl}) that
+are not as widely spread as the initial states of nature, but are
+constructed from the current model specifications. The resultant
+decision table (Table \ref{tab:dec-tab}) was built around the initial
+\(lnR_0\) states of nature approach. The catch rows assume P* values of
+0.45 and 0.4, then a constant catch using the yield at FSPR=0.5.
+
+\subsection{Evaluation of Scientific
+Uncertainty}\label{evaluation-of-scientific-uncertainty-1}
+
+\#The model-estimated uncertainty around the 2027 spawning biomass was
+\(\sigma\) = 100 and the uncertainty around the OFL was \(\sigma\) = NA.
+This is likely underestimate of overall uncertainty because of the
+necessity to fix some life history parameters such as natural mortality
+and steepness, as well as a lack of explicit incorporation of model
+structural uncertainty. The alternative states of nature used to bracket
+uncertainty in the decision table assist with encapsulating model
+structure uncertainty.
+
+\subsection{Research and Data Needs}\label{research-and-data-needs-1}
+
+This section briefly highlights progress on research and data needs
+identified in the most recent (2015) Rougheye/Blackspotted assessment,
+and then provides recommendations for future research.
+
+Research and data needs identified in the last assessment (italics) are
+listed here followed by a brief response for each.
 
 \newpage{}
 
-\section{Acknowledgements}\label{sec-acknowledgements}
+\subsection{Acknowledgements}\label{sec-acknowledgements}
 
 \newpage{}
 
-\section{References}\label{sec-refs}
+\subsection{References}\label{references}
 
 \newpage{}
 
-\section{Tables}\label{sec-tables}
+\subsection{Tables}\label{tables}
 
 \newpage{}
 
-\section{Figures}\label{sec-figures}
+\subsection{Figures}\label{figures}
 
 \newpage{}
 
-\section{Notes}\label{sec-notes}
+\subsection{Notes}\label{notes}
 
 \newpage{}
 
-\section{Appendices}\label{sec-appendix}
+\subsection*{Appendices}\label{sec-appendix}
+\addcontentsline{toc}{subsection}{Appendices}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-cope_assessments_2016}
+Cope, J. M., David B. Sampson, Andi Stephens, Meisha Key, Patrick P.
+Mirick, Megan M. Stachura, Tien-Shui Tsou, et al. 2016. {``Assessments
+of {California}, {Oregon}, and {Washington} Stocks of Black Rockfish
+(\emph{{Sebastes} Melanops}) in 2015.''} Pacific Fishery Management
+Council, 7700 Ambassador Place NE, Suite 200, Portland, OR 97220:
+Pacific Fishery Management Council.
+
+\bibitem[\citeproctext]{ref-francis_data_2011}
+Francis, R. I. C. Chris. 2011. {``Data Weighting in Statistical
+Fisheries Stock Assessment Models.''} \emph{Canadian Journal of
+Fisheries and Aquatic Sciences} 68 (6): 1124--38.
+\url{https://doi.org/10.1139/f2011-025}.
+
+\bibitem[\citeproctext]{ref-mcallister_bayesian_1997}
+McAllister, M. K., and J. N. Ianelli. 1997. {``Bayesian Stock Assessment
+Using Catch-Age Data and the Sampling --- Importance Resampling
+Algorithm.''} \emph{Canadian Journal of Fisheries and Aquatic Sciences}
+54 (2): 284--300. \url{https://doi.org/10.1139/f96-285}.
+
+\bibitem[\citeproctext]{ref-thorson_model-based_2017}
+Thorson, James T., Kelli F. Johnson, R. D. Methot, and I. G. Taylor.
+2017. {``Model-Based Estimates of Effective Sample Size in Stock
+Assessment Models Using the {Dirichlet}-Multinomial Distribution.''}
+\emph{Fisheries Research} 192: 84--93.
+\url{https://doi.org/10.1016/j.fishres.2016.06.005}.
+
+\end{CSLReferences}
 
 
 
