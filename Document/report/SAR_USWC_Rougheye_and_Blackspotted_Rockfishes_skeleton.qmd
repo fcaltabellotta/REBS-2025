@@ -15,10 +15,20 @@ author:
         city: 'Seattle'
         state: 'WA'
         postal-code: '98112-2097'
-  - name: 'NA'
-    affiliations: NO AFFILIATION
-  - name: 'NA'
-    affiliations: NO AFFILIATION
+  - name: 'R. Claire Rosmond'
+    affiliations:
+      - name: 'NOAA Fisheries Northwest Fisheries Science Center'
+        address: '2032 SE Osu Drive'
+        city: 'Newport'
+        state: 'OR'
+        postal-code: '97365-5275'
+ #- name: NA
+#    affiliations:
+#      - name: 'Washington Department of Fish and Wildlife'
+#        address: '48 Devonshire Road'
+#        city: 'Montesano'
+#        state: 'WA'
+#        postal-code: '98563'
   - name: 'Alison D. Whitman'
     affiliations:
       - name: 'Oregon Department of Fish and Wildlife'
@@ -57,14 +67,34 @@ params:
 bibliography: 
 -  asar_references.bib 
 ---
+
+```{r, results='asis'}
+#| label: 'load_packages'
+#| eval: true
+#| echo: false
+#| warning: false
+a <- knitr::knit_child('001_load_packages.qmd', quiet = TRUE)
+cat(a, sep = '\n')
+```
+
+
 ```{r} 
 #| label: 'output_and_quantities'
 #| echo: false 
 #| warning: false 
 #| eval: true 
 
-spp <- "Rougheye/Blackspotted"
-Spp <- "Rougheye/Blackspotted"
+spp <- "Rougheye/Blackspotted rockfishes"
+Spp <- "Rougheye/Blackspotted rockfishes"
+
+#Main model directory
+#model_dir <- here::here("model", "_bridging", model_name)
+model_dir <- "C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/report/ref_model"
+plot_dir<-"C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/report/plots_4_doc"
+sens_dir <-"C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/report/Sensis"
+retro_dir <- "C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/report/Retros"
+#Table directory
+table_dir <- file.path(model_dir, "tables")
 
 # load converted output from asar::convert_output() 
 output <- utils::read.csv('C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/update/reye_blkspt_convert_output.csv') 
@@ -165,6 +195,29 @@ Please cite this publication as:
 Cope, J.M., V. Gertseva, R.C. Rosemond, F. Caltabellotta,  A.D. Whitman. Status of the Rougheye and Blackspotted Rockfishes stock off the U.S. West Coast in 2025.2025. Prepared by [COMMITTEE]. [XX] p.
 
  {{< pagebreak >}} 
+ 
+ 
+#```{r, results='asis'}
+##| label: 'load_tables'
+##| eval: true
+##| echo: false
+##| warning: false
+#a <- knitr::knit_child('002_load_tables.qmd', quiet = TRUE)
+#cat(a, sep = '\n')
+#```
+
+
+```{r, results='asis'}
+#| label: 'disclaimer'
+#| eval: true
+#| echo: false
+#| warning: false
+a <- knitr::knit_child('00a_disclaimer.qmd', quiet = TRUE)
+cat(a, sep = '\n')
+```
+
+ {{< pagebreak >}} 
+
 
 ```{r, results='asis'}
 #| label: 'executive_summary'

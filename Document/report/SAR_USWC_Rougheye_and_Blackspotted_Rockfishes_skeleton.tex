@@ -160,6 +160,20 @@
 \ModifyLayer[addvoffset=-.6ex]{plain.scrheadings.foot.above.line}
 \setkomafont{pageheadfoot}{\small}
 
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -220,7 +234,7 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Status of the Rougheye and Blackspotted Rockfishes stock off the U.S. West Coast in 2025},
-  pdfauthor={Jason M. Cope; Vladlena Gertseva; NA; NA; Alison D. Whitman},
+  pdfauthor={Jason M. Cope; Vladlena Gertseva; R. Claire Rosmond; Alison D. Whitman},
   pdflang={en},
   colorlinks=true,
   linkcolor={blue},
@@ -232,9 +246,9 @@
 
 \title{Status of the Rougheye and Blackspotted Rockfishes stock off the
 U.S. West Coast in 2025}
-\author{Jason M. Cope \and Vladlena Gertseva \and NA \and NA \and Alison
-D. Whitman}
-\date{2025-03-20}
+\author{Jason M. Cope \and Vladlena Gertseva \and R. Claire
+Rosmond \and Alison D. Whitman}
+\date{2025-04-14}
 
 \begin{document}
   \begin{titlepage}
@@ -281,10 +295,7 @@ D. Whitman}
    {\large{Vladlena Gertseva}}{\textsuperscript{1}}%
   %
   ,
-   {\large{NA}}{\textsuperscript{2}}%
-  %
-  ,
-   {\large{NA}}{\textsuperscript{2}}%
+   {\large{R. Claire Rosmond}}{\textsuperscript{2}}%
   %
   %
   { and \large{Alison D. Whitman}}%
@@ -311,8 +322,12 @@ D. Whitman}
   %
   \par\hangindent=1em\hangafter=1%
   %
-  {2}.~{NO AFFILIATION}%
+  {2}.~{NOAA Fisheries Northwest Fisheries Science Center}%
   %
+  %
+  % Ross recommends putting address on one line
+  , %
+  {2032 SE Osu Drive}%
   %
   \par\hangindent=1em\hangafter=1%
   %
@@ -369,6 +384,19 @@ West Coast in 2025.2025. Prepared by {[}COMMITTEE{]}. {[}XX{]} p.
 
 \newpage{}
 
+\#\texttt{\{r,\ results=\textquotesingle{}asis\textquotesingle{}\}\ \#\#\textbar{}\ label:\ \textquotesingle{}load\_tables\textquotesingle{}\ \#\#\textbar{}\ eval:\ true\ \#\#\textbar{}\ echo:\ false\ \#\#\textbar{}\ warning:\ false\ \#a\ \textless{}-\ knitr::knit\_child(\textquotesingle{}002\_load\_tables.qmd\textquotesingle{},\ quiet\ =\ TRUE)\ \#cat(a,\ sep\ =\ \textquotesingle{}\textbackslash{}n\textquotesingle{})\ \#}
+
+\section*{Disclaimer}\label{disclaimer}
+\addcontentsline{toc}{section}{Disclaimer}
+
+These materials do not constitute a formal publication and are for
+information only. They are in a pre-review, pre-decisional state and
+should not be formally cited or reproduced. They are to be considered
+provisional and do not represent any determination or policy of NOAA or
+the Department of Commerce.
+
+\newpage{}
+
 \subsection{Executive Summary}\label{executive-summary}
 
 \subsubsection{Stock Description}\label{stock-description}
@@ -406,11 +434,144 @@ Uncertainties}\label{unresolved-problems-and-major-uncertainties}
 
 \section{Introduction}\label{introduction}
 
-Testing adding in an introduction for Rougheye and Blackspotted
-Rockfishes. There is currently no read of parameters for child
-documents.
+This document presents the stock assessment for the Rougheye
+(\emph{Sebastes aleutianus}) and Blackspotted (\emph{Sebastes
+melanostictus}) rockfishes, two species that form one management
+complex. This report is for the year 2025 in state and federal waters
+from California to Washington State, excluding consideration of the
+Puget Sound and Salish Sea. It seeks to use available catch, biological
+compositions in the for of lengths and ages, and potential indices of
+abundance.
 
-\subsection{Basic Information}\label{basic-information}
+\subsection{Stock Structure}\label{stock-structure}
+
+Rougheye rockfish were first described in 1811 as \emph{Perca
+variabilis} by German zoologist Peter Simon Pallas (Jordan and Evermann
+1898), and assigned to various taxa at least 15 times since (Love et
+al.~2002). Some descriptions noted both light and dark color morphs,
+which, along with possible confusion with several morphologically
+similar co-occurring species (e.g., S. borealis and S. melanostomus)
+have contributed to the persistent ambiguity in formal descriptions of
+Rougheye Rockfish (Orr and Hawkins 2008). The first genetic studies
+conducted in the late 1960s and early 1970s (e.g., Tsuyuki et al.~1968,
+Tsuyuki and Westrheim 1970) observed diversity suggestive of two genetic
+types within specimens identified as Rougheye Rockfish. Allozyme studies
+conducted over the next two decades (e.g., Seeb 1986, Hawkins et
+al.~1997, Hawkins et al.~2005) provided additional evidence suggesting
+two separate genetic types within field-identified Rougheye Rockfish.
+Genetic variation between the two types, supported by both nuclear and
+mitochondrial DNA, was determined to be sufficiently conclusive to
+separate two species: ``Type I'' and ``Type II'' Rougheye Rockfish
+(Gharrett et al.~2005). Meristic and morphometric comparisons of the two
+species suggested certain characters such as gill raker counts and
+length, snout length, anal base length, and pectoral fin base were
+significantly different, and in combination could reliably, though not
+definitively, distinguish between the species (Gharrett et al.~2006).
+The two separate species were formally re-described by Orr and Hawkins
+(2008) with the Type II group retaining \emph{S. aleutianus} and the
+common name Rougheye Rockfish. Blackspotted rockfish was proposed as the
+common name for the Type I group along with the scientific name of
+\emph{S. melanostictus}, re-establishing nomenclature from one of the
+species complex's earlier descriptions (cf.~Matsubara 1934).
+
+Though Rougheye and Blackspotted rockfishes are genetically distinct,
+they remain difficult to visually distinguish, thus most data
+historically and contemporaneously are only available for the
+Rougheye/Blackspotted rockfish complex, not at the species level. They
+both range from northern California up to and throughout Alaska. They
+both greatly overlap in latitude and depth, and are generally considered
+slope rockfish, with an otogentic shift from shallower to deeper, and
+adults commonly found at 360 m. Rougheye seems to be proportionally more
+abundant when survey samples are genetically identified, and
+Blackspotted tend to be found, on average, deeper than Rougheye. They
+can school and may segregate by size and age. While we treat these
+species as one assessed stock from this point forward, we recognize and
+are mindful of the above distinctions as we conduct our analyses.
+
+There are at least two questions to think about when considering stock
+structure for Rougheye and Blackspotted rockfishes.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Rougheye and Blackspotted rockfishes are two different species-- can
+  we separate them as two stocks and conduct separate assessments? These
+  two species remain difficult to differentiate visually in the catch,
+  thus remain reported as a species complex. Frey et al.~(in prep.)
+  provided insight into the ability of the Northwest Fisheries Science
+  Center West Coast Groundfish Bottom Trawl Survey biologists to
+  identify the two species, with 90\% of genetically identified Rougheye
+  rockfish being correctly identified in the field. When
+  mis-identifications occured, it was usually a Blackspotted rockfish
+  being mis-identified as a Rougheye rockfish. There were few
+  mis-identifications when a fish was identified as a Blackspotted
+  rockfish. While this is promising for potential future
+  species-specific data coming from the survey, it does not alleviate
+  the historical problem of separating fishery data into the two
+  species. Frey et al.~(in prep.) therefore also considered whether
+  ecological factors like depth or latitude could help separate samples
+  by species. They found that both species occur within the range of
+  this assessment's considered areas (California to Washington), and
+  heavily spatially overlap. Interestingly, there seem to be relative
+  hot spots for these species where one species is more common than the
+  other, and in general, Rougheye rockfish seems to be more common than
+  Blackspotted rockfish (however, Blackspotted rockfish may be the more
+  common of the two in parts of Alaska). Overall, there seems to be
+  little ability to separate current or historical fishery data reliably
+  in order to separate these two species into two stocks, so we will
+  maintain a species complex approach, though given absolute presence
+  off the U.S. West coast, this may be considered more of a Rougheye
+  than Blackspotted stock assessment. We also note that throughout the
+  range of these stocks, all assessments have maintained a species
+  complex approach.
+\item
+  Both species range into Canada and Alaska-- are they one stock? While
+  genetics studies have focused mostly on identification of the two
+  species, little is known about the population structure of either
+  species. This assessment and the 2013 assessment represent the most
+  southerly range of these species. Comparing the absolute abundance of
+  the 2013 assessment to the most current estimates of the Alaskan
+  stocks, the absolute number in this southerly range is much smaller
+  than in the Gulf of Alaska (GOA), but higher than the Bering
+  Sea/Aleutian Island (BSAI) stock (Figure~\ref{fig-SO_comp}). The two
+  smaller stocks have similar trend of decline and stabilization,
+  whereas the higher biomass GOA stock looks to have not dropped at all
+  over the time period considered (Figure~\ref{fig-RSS_comp}).
+\end{enumerate}
+
+These two species may hybridize on occasion (Love 2011). These species
+are closely related to shortraker rockfish (S. borealis) and are
+sometimes difficult to distinguish from shortraker rockfish without
+looking at the gill rakers.
+
+\subsection{Life History Information}\label{life-history-information}
+
+Rougheye and blackspotted rockfish share broad overlap in their depth
+and geographic distributions from the Eastern Aleutian Islands along the
+North American continental margin to southern Oregon, with blackspotted
+rockfish's range extending east beyond the Aleutian chain to the Pacific
+Coast of Japan (Gharrett et al.~2005, Hawkins et al.~2005, Orr and
+Hawkins 2008). Both species are encountered at depths shallower than 100
+m to at least 439 m, however, blackspotted rockfish tend to be more
+prevalent in deeper waters (Hawkins et al.~2005, Orr and Hawkins 2008).
+Genetic information is not available to provide positive species
+identification in historical survey and landings information, but these
+data indicate that density of the nominal rougheye rockfish complex
+decreases sharply south of the Oregon-California border (42° N). Studies
+suggest that rougheye rockfish account for a greater proportion of the
+species complex along the coast of Washington and Oregon than in Alaskan
+waters (Gharrett et al.~2005, Hawkins et al.~2005, Orr and Hawkins
+2008). Recent discussions with port samplers in southern Oregon suggest
+that both rougheye and blackspotted rockfish are encountered with some
+regularity in the commercial trawl and fixed-gear landings in
+Charleston, Port Orford, and Brookings, with blackspotted rockfish
+composing approximately one third to one half of identified specimens
+(C. Good and N. Wilsman, ODFW, pers. comm.).
+
+The west coast of the U.S. is the southern portion of the range of
+rougheye rockfish, and it is likely that the population north of the
+U.S.-Canada border is not a separate stock. The connectivity of rougheye
+populations throughout its range is unknown.
 
 \subsection{Life History}\label{life-history}
 
@@ -437,8 +598,8 @@ included in the base model are provided below. Data that were excluded
 from the base model were excluded only after being explicitly explored
 during the development of this stock assessment and found to be
 inappropriate for use or had not changed since their past exploration
-for previous Rougheye/Blackspotted stock assessments when they were not
-used.
+for previous Rougheye/Blackspotted rockfishes stock assessments when
+they were not used.
 
 \subsection{Fishery-dependent data}\label{fishery-dependent-data}
 
@@ -567,17 +728,18 @@ linkages to environmental conditions would be needed to incorporate
 these elements into the stock assessment and should remain a priority.
 McClure et al. (\textbf{mcclure\_vulnerability\_2023?}) report the
 climate vulnerability for several west coast groundfishes, including
-Rougheye/Blackspotted. Rougheye/Blackspotted demonstrated both high
-biological sensitivity and high climate exposure risk, to give it an
-overall high vulnerability score to climate change. This result should
-also be considered with the fact that, like many rockfishes, periods of
-low productivity is not unusual to Rougheye/Blackspotted and their
-extended longevity (though admittedly this seems shorter than previously
-believed and should be reconsidered) has historically allowed them to
-wait for advantageous productivity periods. Stressors such as habitat
-degradation and climate change could bring significant challenges to
-population sustainability. Regardless, no environmental or ecosystem
-data are directly incorporated into the stock assessment model.
+Rougheye/Blackspotted rockfishes. Rougheye/Blackspotted rockfishes
+demonstrated both high biological sensitivity and high climate exposure
+risk, to give it an overall high vulnerability score to climate change.
+This result should also be considered with the fact that, like many
+rockfishes, periods of low productivity is not unusual to
+Rougheye/Blackspotted rockfishes and their extended longevity (though
+admittedly this seems shorter than previously believed and should be
+reconsidered) has historically allowed them to wait for advantageous
+productivity periods. Stressors such as habitat degradation and climate
+change could bring significant challenges to population sustainability.
+Regardless, no environmental or ecosystem data are directly incorporated
+into the stock assessment model.
 
 \newpage{}
 
@@ -684,16 +846,16 @@ There are five primary likelihood components for each assessment model:
 \subsection{Reference Model Exploration, Key Assumptions and
 Specification}\label{reference-model-exploration-key-assumptions-and-specification}
 
-The reference model for Washington Rougheye/Blackspotted was developed
-to balance parsimony and realism, and the goal was to estimate a
-spawning output trajectory and relative stock status for the population
-of Rougheye/Blackspotted in state and federal waters off Washington. The
-model contains many assumptions to achieve parsimony and uses different
-data types and sources to estimate reality. A series of investigative
-model runs were done to achieve the final base model. Constructing
-integrated models (i.e., those fitting many data types) takes
-considerable model exploration using different configurations of the
-following treatments:
+The reference model for Washington Rougheye/Blackspotted rockfishes was
+developed to balance parsimony and realism, and the goal was to estimate
+a spawning output trajectory and relative stock status for the
+population of Rougheye/Blackspotted rockfishes in state and federal
+waters off Washington. The model contains many assumptions to achieve
+parsimony and uses different data types and sources to estimate reality.
+A series of investigative model runs were done to achieve the final base
+model. Constructing integrated models (i.e., those fitting many data
+types) takes considerable model exploration using different
+configurations of the following treatments:
 
 \begin{itemize}
 \tightlist
@@ -1067,19 +1229,19 @@ time-varying issues that are directional could create more uncertainty.
 Reference points were based on the rockfish FMSY proxy
 (\(\text{SPR}_{50\%}\)), target relative biomass (40\%), and estimated
 selectivity and catch for each fleet (Table \ref{tab:ReferencePoints}).
-The Rougheye/Blackspotted population in Washington at the start of 2023
-is estimated to be just above the target biomass, and fishing intensity
-during 2022 is estimated to be just below the fishing intensity target
-(Figure \ref{fig:phase}). The yield values are lower than the previous
-assessment for similar reference points due to updated life history
-estimates and estimates of the total scale of the population, despite
-the overall stock status being a bit higher. The proxy MSY values of
-management quantities are by definition more conservative compared to
-the estimated MSY and MSY relative to 40\% of unfished spawning output
-because of the assumed steepness value. Sustainable total yield,
-removals, using the proxy \(\text{SPR}_{50\%}\) is 471 mt. The spawning
-output equivalent to 40\% of the unfished spawning output
-(\(\text{SO}_{40\%}\)) calculated using the SPR target
+The Rougheye/Blackspotted rockfishes population in Washington at the
+start of 2023 is estimated to be just above the target biomass, and
+fishing intensity during 2022 is estimated to be just below the fishing
+intensity target (Figure \ref{fig:phase}). The yield values are lower
+than the previous assessment for similar reference points due to updated
+life history estimates and estimates of the total scale of the
+population, despite the overall stock status being a bit higher. The
+proxy MSY values of management quantities are by definition more
+conservative compared to the estimated MSY and MSY relative to 40\% of
+unfished spawning output because of the assumed steepness value.
+Sustainable total yield, removals, using the proxy \(\text{SPR}_{50\%}\)
+is 471 mt. The spawning output equivalent to 40\% of the unfished
+spawning output (\(\text{SO}_{40\%}\)) calculated using the SPR target
 (\(\text{SPR}_{50\%}\)) was 7,828 billions of eggs.
 
 Recent removals since 2017 have been at or below the point estimate of
@@ -1107,27 +1269,28 @@ intensity based on \(\text{SPR}_{50\%}\).
 
 \subsection{Management performance}\label{management-performance-2}
 
-Rougheye/Blackspotted removals have been below the equivalent Annual
-Catch Limit (ACL) over the recent decade (Table \ref{tab:manage}). The
-ACL declined in 2017 relative to earlier years based on the 2015
-assessment of Rougheye/Blackspotted (Cope et al. 2016). In the last ten
-years, catches peaked in 2016 at 369 mt. Since then catches have
-declined to a recent low of 130 mt in 2020 with the catches in the final
-two model years remaining low with 197 mt in 2021 and 166 mt in 2022.
-The OFL has not been exceeded in any year over the past 10 years.
+Rougheye/Blackspotted rockfishes removals have been below the equivalent
+Annual Catch Limit (ACL) over the recent decade (Table
+\ref{tab:manage}). The ACL declined in 2017 relative to earlier years
+based on the 2015 assessment of Rougheye/Blackspotted rockfishes (Cope
+et al. 2016). In the last ten years, catches peaked in 2016 at 369 mt.
+Since then catches have declined to a recent low of 130 mt in 2020 with
+the catches in the final two model years remaining low with 197 mt in
+2021 and 166 mt in 2022. The OFL has not been exceeded in any year over
+the past 10 years.
 
 \subsection{Harvest Projections and Decision
 Tables}\label{harvest-projections-and-decision-tables-1}
 
-The Rougheye/Blackspotted assessment is being considered as a category 1
-assessment with a \(P^*\) = 0.45, \(\sigma\) = 0.50, and a time-varying
-buffer applied to set the ABC below the OFL. These multipliers are also
-combined with the rockfish MSY proxy of SPR\textsubscript{50} and the
-40-10 harvest control rule to calculate OFLs and ACLs. A twelve-year
-(2023-2034) projection of the reference model using these specifications
-along with input removals for 2023 and 2024 provided by the Groundfish
-Management Team (Katie Pierson, ODFW, pers. comm.) is provided in Table
-\ref{tab:project}.
+The Rougheye/Blackspotted rockfishes assessment is being considered as a
+category 1 assessment with a \(P^*\) = 0.45, \(\sigma\) = 0.50, and a
+time-varying buffer applied to set the ABC below the OFL. These
+multipliers are also combined with the rockfish MSY proxy of
+SPR\textsubscript{50} and the 40-10 harvest control rule to calculate
+OFLs and ACLs. A twelve-year (2023-2034) projection of the reference
+model using these specifications along with input removals for 2023 and
+2024 provided by the Groundfish Management Team (Katie Pierson, ODFW,
+pers. comm.) is provided in Table \ref{tab:project}.
 
 Uncertainty in management quantities for the reference model was
 characterized by exploring various model specifications in a decision
@@ -1166,8 +1329,8 @@ structure uncertainty.
 \subsection{Research and Data Needs}\label{research-and-data-needs-1}
 
 This section briefly highlights progress on research and data needs
-identified in the most recent (2015) Rougheye/Blackspotted assessment,
-and then provides recommendations for future research.
+identified in the most recent (2015) Rougheye/Blackspotted rockfishes
+assessment, and then provides recommendations for future research.
 
 Research and data needs identified in the last assessment (italics) are
 listed here followed by a brief response for each.
@@ -1187,6 +1350,65 @@ listed here followed by a brief response for each.
 \newpage{}
 
 \subsection{Figures}\label{figures}
+
+\subsubsection{Introduction}\label{introduction-1}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton_files/figure-pdf/fig-map-1.pdf}
+
+}
+
+\caption{\label{fig-map}Map of the assessment area.}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/SB_comps.png}
+
+}
+
+\caption{\label{fig-SO_comp}Estimates of spawning biomass (current
+spawning output/unfished spawning output) for the Rougheye/Blackspotted
+rockfish complex from the two most recent Alaska (Bering Sea/Aleutian
+Islands (BSAI) and Gulf of Alaska (GOA)) and the 2013 U.S. west coast
+stock assessment.}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/Status_comp.png}
+
+}
+
+\caption{\label{fig-RSS_comp}Estimates of relative stock size (current
+spawning output/unfished spawning output) relative to 1977 (the common
+year in all stock assessments compared) for the Rougheye/Blackspotted
+rockfish complex from the two most recent Alaska (Bering Sea/Aleutian
+Islands (BSAI) and Gulf of Alaska (GOA)) and the 2013 U.S. west coast
+stock assessment.}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{ref_model/plots/data_plot.png}
+
+}
+
+\caption{\label{fig-data}Data used in the base model.}
+
+\end{figure}%
 
 \newpage{}
 
