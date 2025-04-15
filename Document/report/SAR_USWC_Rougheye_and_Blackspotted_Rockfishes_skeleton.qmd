@@ -84,8 +84,8 @@ cat(a, sep = '\n')
 #| warning: false 
 #| eval: true 
 
-spp <- "Rougheye/Blackspotted rockfishes"
-Spp <- "Rougheye/Blackspotted rockfishes"
+spp <- "Rougheye/Blackspotted Rockfishes"
+Spp <- "Rougheye/Blackspotted Rockfishes"
 
 #Main model directory
 #model_dir <- here::here("model", "_bridging", model_name)
