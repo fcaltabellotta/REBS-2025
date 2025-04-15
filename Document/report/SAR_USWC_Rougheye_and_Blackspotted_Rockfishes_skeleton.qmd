@@ -22,13 +22,13 @@ author:
         city: 'Newport'
         state: 'OR'
         postal-code: '97365-5275'
- #- name: NA
-#    affiliations:
-#      - name: 'Washington Department of Fish and Wildlife'
-#        address: '48 Devonshire Road'
-#        city: 'Montesano'
-#        state: 'WA'
-#        postal-code: '98563'
+  - name: 'Fabio P. Caltabellotta'
+    affiliations:
+      - name: 'Washington Department of Fish and Wildlife'
+        address: '48 Devonshire Road'
+        city: 'Montesano'
+        state: 'WA'
+        postal-code: '98563'
   - name: 'Alison D. Whitman'
     affiliations:
       - name: 'Oregon Department of Fish and Wildlife'
@@ -192,7 +192,7 @@ R0 <- output |>
 
 Please cite this publication as: 
 
-Cope, J.M., V. Gertseva, R.C. Rosemond, F. Caltabellotta,  A.D. Whitman. Status of the Rougheye and Blackspotted Rockfishes stock off the U.S. West Coast in 2025.2025. Prepared by [COMMITTEE]. [XX] p.
+Cope, J.M., V. Gertseva, R.C. Rosemond, F.P. Caltabellotta,  A.D. Whitman. Status of the Rougheye and Blackspotted Rockfishes stock off the U.S. West Coast in 2025.2025. Prepared by [COMMITTEE]. [XX] p.
 
  {{< pagebreak >}} 
  

@@ -25,12 +25,12 @@ Rougheye/Blackspotted Rockfishes are often associated with structure, such as ha
 
 Like all *Sebastes* species, Rougheye and Blackspotted Rockfishes give birth to live young. Larvae released has been documented between February and June and extrusion lengths are between 4.5-5.3 mm [@love_rockfishes_2002]. There are no studies on the fecundity of rougheye rockfish on the west coast of the U.S.
 
-A wide range of prey items make up the diet of rougheye rockfish.  Crangid and pandalid shrimps make up the majority of their diets, and larger individuals, greater than 30 cm, feeding upon other fishes [@love_certainly_2011].  They are also known to feed upon gammarid amphipods; mysids, crabs, polychaetes, and octopuses [@love_rockfishes_2002; @love_certainly_2011].
+A wide range of prey items make up the diet of rougheye rockfish.  Crangid and pandalid shrimps make up the majority of their diets, and larger individuals, greater than 30 cm, feeding upon other fishes (Love 2011).  They are also known to feed upon gammarid amphipods; mysids, crabs, polychaetes, and octopuses [@love_rockfishes_2002; @love_certainly_2011].
 
 
 ## Ecosystem considerations
 
-
+<!-- Ecosystem considerations that include relevant information on how environmental drivers, prey, competition, predation, and/or (habitat requirements/preferences may affect stock’s status, vital rates (growth, survival, productivity, recruitment), or range and distribution. Ecosystem considerations may also include how these factors, cross-FMP interactions with other fisheries and human social dynamics that may affect the stock (e.g., reliance and dependence by fishing communities, non-target species constraining harvest rates). The length and depth of this section will depend on availability of information from published studies and Integrated Ecosystem Assessment reports, expertise of the STAT, and whether ecosystem factors contribute quantitative information to the assessment. This is not required for an update assessment if a citation to the previous assessment is provided.  -->
 
 ## Historical and Current Fishery Information
 

@@ -25,7 +25,7 @@ Rougheye/Blackspotted Rockfishes are often associated with structure, such as ha
 
 Like all *Sebastes* species, Rougheye and Blackspotted Rockfishes give birth to live young. Larvae released has been documented between February and June and extrusion lengths are between 4.5-5.3 mm [@love_rockfishes_2002]. There are no studies on the fecundity of rougheye rockfish on the west coast of the U.S.
 
-A wide range of prey items make up the diet of rougheye rockfish.  Crangid and pandalid shrimps make up the majority of their diets, and larger individuals, greater than 30 cm, feeding upon other fishes [@love_certainly_2011].  They are also known to feed upon gammarid amphipods; mysids, crabs, polychaetes, and octopuses [@love_rockfishes_2002; @love_certainly_2011].
+A wide range of prey items make up the diet of rougheye rockfish.  Crangid and pandalid shrimps make up the majority of their diets, and larger individuals, greater than 30 cm, feeding upon other fishes (Love 2011).  They are also known to feed upon gammarid amphipods; mysids, crabs, polychaetes, and octopuses [@love_rockfishes_2002; @love_certainly_2011].
 
 
 ## Ecosystem considerations
