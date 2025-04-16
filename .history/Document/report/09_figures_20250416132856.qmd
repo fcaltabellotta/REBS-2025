@@ -412,7 +412,7 @@ knitr::include_graphics(
 ```
 
 
-## Sensitivity Analyses and Retrospectives
+## Sensitivity Analyse and Retrospectives
 
 
 ## Likelihood Profiles
