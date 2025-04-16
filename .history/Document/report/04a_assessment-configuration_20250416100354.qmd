@@ -89,11 +89,9 @@ There are five primary likelihood components for each assessment model:
 4. Penalties on recruitment deviations (specified differently for each model).
 5. Prior distribution penalties
 
-In addition, there is a catch component to the likelihood, but catches are essentially fit without error. Additionally, there is a crash penalty that is invoked if true catches would cause the stock to go extinct. The penalty would alter catches to avoid extinction, but any presence of a crash penalty is used as in indication that the model has been mispecified, so this likelihood contribution should always be 0.
-
 ## Reference Model Exploration, Key Assumptions and Specification
 
-The reference model for `r spp` was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory and relative stock status for the stocks of `r spp` in state and federal waters off the U.S. west coast. The model contains many assumptions to achieve parsimony and uses different data types and sources to estimate reality. A series of investigative model runs were done to achieve the final base model. Constructing integrated models (i.e., those fitting many data types) takes considerable model exploration using different configurations of the following treatments:
+The reference model for `r spp` was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory and relative stock status for the population of `r spp` in state and federal waters off the U.S. west coast. The model contains many assumptions to achieve parsimony and uses different data types and sources to estimate reality. A series of investigative model runs were done to achieve the final base model. Constructing integrated models (i.e., those fitting many data types) takes considerable model exploration using different configurations of the following treatments:
 
 - Data types
 - Parameter treatments: which parameter can, cannot and do not need to be estimated
@@ -101,7 +99,7 @@ The reference model for `r spp` was developed to balance parsimony and realism, 
 - Data weighting
 - Exploration of local minima vs global minimum (see Model Convergence and Acceptability section below)
 
-The different biological data with and without the catch time series (and no additional data weighting) were first included to obtain an understanding of the signal of stock status coming from the data (Figure XXXXXX). The length and age only models assume a constant catch over the entire time series, while estimating the selectivity of each fleet. Under this constraint, the lengths suggest a stock a bit lower than the reference model, while the ages consider the stock is extremely depleted. Putting the two data sources together produce an intermediate stock status in the lower precautionary zone. Adding the catch time series substantially changes the stock status trajectory, with length or age only model above the reference stocks status. Combining the two came out just under the reference model. Only one model includes recruitment deviations, and demonstrates more dynamics behavior similar to that seen when biological compositions are unweighted (see Model Specification Sensitivities section ). 
+The different biological data with and without the catch time series (and no additional data weighting) were first included to obtain an understanding of the signal of stock status coming from the data (Figure ). The length and age only models assume a constant catch over the entire time series, while estimating the selectivity of each fleet. Under this constraint, the lengths suggest a stock a bit lower than the reference model, while the ages consider the stock is extremely depleted. Putting the two data sources together produce an intermediate stock status in the lower precautionary zone. Adding the catch time series substantially changes the stock status trajectory, with length or age only model above the reference stocks status. Combining the two came out just under the reference model. Only one model includes recruitment deviations, and demonstrates more dynamics behavior similar to that seen when biological compositions are unweighted (see Model Specification Sensitivities section ). 
 
 Stock scale was comparable once removal history was included, and demonstrates a large sensitivity to the scale of the stock given the data with no additional weighting included (Figure ).
 
@@ -132,18 +130,15 @@ Sensitivity scenarios and likelihood profiles (on $lnR_0$, steepness, and natura
 
 ### Data Weighting
 
-The reference model allowed for the estimation of additional variance on all surveys. The ability to add variance to indices allows the model to balance model fit to that data while acknowledging that variances may be underestimated in the index standardization. A sensitivity was run with no extra variance estimated, as well as removal of the index data were explored.
+The reference model allowed for the estimation of additional variance on all surveys except the taggin and OCNMS adult survey, both of which already had very high input variances. The ability to add variance to indices allows the model to balance model fit to that data while acknowledging that variances may be underestimated in the index standardization. A sensitivity was run with no extra variance estimated, as well as removal of the index data were explored.
 
-Initial sample sizes for the commercial fleet length and conditional age-at-length compositions were based on the number of input effective samples sizes. The method of @francis_data_2011, equation TA1.8, was then used to balance the length and conditional age-at-length composition data among other inputs and likelihood components. The Francis method treats mean length and age as indices, with effective sample size defining the variance around the mean. If the variability around the mean does not encompass model predictions, the data should be down-weighted until predictions fit within the intervals. This method accounts for correlation in the data (i.e., the multinomial distribution), but can be sensitive to years that are outliers, as the amount of down-weighting is applied to all years within a data source, and are not year-specific. Sensitivities were performed examining different data-weighting treatments: 1) the Dirichlet-Multinomial approach [@thorson_model-based_2017], 2) the McAllister-Ianelli Harmonic Mean approach [@mcallister_bayesian_1997], or 3) no data-weighting of lengths.
+Initial sample sizes for the commercial and recreational fleet length and conditional age-at-length compositions were based on the number of input effective samples sizes. The method of Francis [-@francis_data_2011], equation TA1.8, was then used to balance the length and conditional age-at-length composition data among other inputs and likelihood components. The Francis method treats mean length and age as indices, with effective sample size defining the variance around the mean. If the variability around the mean does not encompass model predictions, the data should be down-weighted until predictions fit within the intervals. This method accounts for correlation in the data (i.e., the multinomial distribution), but can be sensitive to years that are outliers, as the amount of down-weighting is applied to all years within a data source, and are not year-specific. Sensitivities were performed examining different data-weighting treatments: 1) the Dirichlet-Multinomial approach [@thorson_model-based_2017], 2) the McAllister-Ianelli Harmonic Mean approach [@mcallister_bayesian_1997], or 3) no data-weighting of lengths.
 
 
 ### Model Changes from the Last Assessment
 
 Besides the additional of eight years of data and some changes in the estimation of some parameters, the biggest changes to the 2015 assessment are:
 
-- Change in the removal history, particularly updates to historical data and new catches since 2013.
-- Adding discard fleets instead of using retention curves.
-- Using spatio-temporal approaches (sdmTMB) to define indices of abundance versus the former GLMM approach.
-- Adding more biological compositions, mainly in years since 2013, but also some historical ages.
-- Specifying a two sex instead of one sex model.
-
+- Change in the removal history, especially the trawl fishery 3A catches from Astoria.
+- Breaking the dockside survey into separate private and charter boat surveys. This allowed the ability to exclude years in the charter boat fishery that showed more effects from bag limits.
+- Addition of the nearshore survey, and both OCNMS surveys.

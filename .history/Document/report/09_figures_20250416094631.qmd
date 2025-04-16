@@ -129,7 +129,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of spawning output using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment."
+#| fig-cap: "Comparison of spawning output using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment"
 #| fig-alt: "Comparing spawning output in the 2013 assessment using retention curves vs. separate discard fleets."
 
 knitr::include_graphics(
@@ -137,15 +137,3 @@ knitr::include_graphics(
 )
 ``` 
 
-```{r} 
-#| label: fig-Discard_comp_RSS
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of relative spawning output using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Comparing relative stock size in the 2013 assessment using retention curves vs. separate discard fleets."
-
-knitr::include_graphics(
-  file.path(plot_dir, "compare3_Bratio_discard_fleets.png")
-)
-``` 

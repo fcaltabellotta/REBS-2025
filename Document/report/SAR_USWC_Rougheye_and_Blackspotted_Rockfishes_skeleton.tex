@@ -248,7 +248,7 @@
 U.S. West Coast in 2025}
 \author{Jason M. Cope \and Vladlena Gertseva \and R. Claire
 Rosmond \and Fabio P. Caltabellotta \and Alison D. Whitman}
-\date{2025-04-15}
+\date{2025-04-16}
 
 \begin{document}
   \begin{titlepage}
@@ -909,8 +909,94 @@ model.
 \subsubsection{History of Modeling
 Approaches}\label{history-of-modeling-approaches}
 
+A previous Category 3 stock assessment was conducted for the U.S.
+Pacific Coast stock of Rougheye Rockfish (not including Blackspotted) in
+2010 by Dick and MacCall (2010) using depletion-based stock reduction
+analysis (DB-SRA). That model estimated the population had greater than
+a 50\% probability of exceeding the estimated proxy overfishing level in
+2010 if the harvest remained at the observed levels. DB-SRA estimated a
+proxy OFL for rougheye rockfish of 78.7 mt with a 95\% confidence
+interval between 4.7-587 metric tons.
+
+A 2013 benchmark stock assessment (Hicks, Wetzel, and Harms 2013)
+updated the modeling framework to the integrated statistical
+catch-at-age model Stock Synthesis 3, which is different from the
+delay-difference model with an assumed stock status prior in 2010 used
+in the DB-SRA analysis. The 2013 assessment used a substantially updated
+catch history, indices of abundance, and biological compositions
+(lengths and ages). The natural mortality value was also updated to be
+higher than that used in the DB-SRA model. The stock assessment was
+accepted for management as a Category 2 stock assessment.
+
 \subsubsection{Most Recent STAR Panel
 Recommendations}\label{most-recent-star-panel-recommendations}
+
+There were several recommendations from the 2013 STAR panel, broken into
+two categories
+
+\paragraph{General recommendations}\label{general-recommendations}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Investigate data-weighting options. \emph{This has been an ongoing
+  research topic in stock assessments since this panel, and several
+  options are no available for consideration.}
+\item
+  A workshop for constructing abundance indices from survey GLMMs.
+  \emph{This is another topic that has developed greatly since this
+  time. Our use of spatio-temporal models are described in the data
+  section on abundance indices.}
+\item
+  Continue collection of ages. \emph{This had been done, and this
+  assessment benefits from several more years of age data.}
+\item
+  Exploring historical catches. \emph{This again has been an ongoing
+  topic and addressed for many of our groundfishes. We use the latest
+  estimates in this assessment.}
+\item
+  SSC guidance on decision tables. \emph{Decision table discussion
+  evolve after every stock assessment cycle, and we are using the latest
+  approaches to decision tables in this assessment.}
+\item
+  Investigate fishery-independent slope surveys, such as submersibles.
+  \emph{These surveys are not currently available for slope species.}
+\end{enumerate}
+
+\paragraph{Stock-specific
+recommendations}\label{stock-specific-recommendations}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Collecting additional age data. \emph{This has been done and included
+  in this stock assessment.}
+\item
+  Collecting genetic material to explore distinguishing Rougheye and
+  Blackspotted Rockfishes. \emph{This work has been done as was
+  presented earlier in the document when discussing stock structure
+  decisions.}
+\item
+  The cause of the re-occurring decrease in sizes around 40cm.
+  \$\$\$\$\$\$\$\$\$\$\$\$\$\$\$
+\item
+  Additional maturity and fecundity studies. \emph{While no fecundity
+  studies are available, updated maturity is presented in the maturity
+  section of the document.}
+\item
+  Age validation. \emph{While no age validation study has been
+  completed, the agers are confident what annuli represent a year's
+  worth of growth. Multiple ages are available and ageing error is
+  characterized in this stock assessment.}
+\item
+  Understanding stock structure. \emph{Discussed in the stock structure
+  section of this document.}
+\item
+  Connectivity of stocks across the species ranges. \emph{This is also
+  discussed in the stock structure section of the document.}
+\end{enumerate}
 
 \subsubsection{Response to SSC Groundfish Subcommittee
 Recommendations}\label{response-to-ssc-groundfish-subcommittee-recommendations}
@@ -918,36 +1004,36 @@ Recommendations}\label{response-to-ssc-groundfish-subcommittee-recommendations}
 \subsection{Current Modelling
 Platform}\label{current-modelling-platform}
 
-Stock Synthesis version 3.30.22.1 was used as the statistical
+Stock Synthesis version 3.30.23.1 was used as the statistical
 catch-at-age modelling framework. This framework allows the integration
 of a variety of data types and model specifications. The Stock
-Assessmetn Continuum tool (https://github.com/shcaba/SS-DL-tool) was
-used also used to explore model effciency, likelihood profiling,
+Assessment Continuum tool (https://github.com/shcaba/SS-DL-tool) was
+used also used to explore model efficiency, likelihood profiling,
 retrospective analyses, and plotting sensitivities. The companion R
-package r4ss (version 1.38.0) along with R version 4.2.2 were used to
+package r4ss (version 1.51.0) along with R version 4.4.3 were used to
 investigate and plot model fits.
 
 \subsubsection{Bridging the Assessment Model from Stock Synthesis 3.24
 (2013) to 3.30
 (2025)}\label{bridging-the-assessment-model-from-stock-synthesis-3.24-2013-to-3.30-2025}
 
-Since several years have passed from the last assessment model, the
-Stock Synthesis (SS3) modelling framework has undergone many changes.
-While the specific changes in the model can be found in the model
-\href{https://github.com/nmfs-stock-synthesis/stock-synthesis/blob/v3.30.19/Change_log_for_SS_3.30.xlsx?raw=true}{change
-log}, here we simply update the model from the older 3.24O version to
-the newer 3.30.22.1 version. The point here is to present any
-differences in the model outputs when using the same information. This
-was first done by migrating the data and parameter specifications from
-the former files to the newer files. This migration was assisted using
-the \href{https://github.com/shcaba/SS-DL-tool}{SS-DL tool}. Once the
-old data was transferred to the SS 3.30.22.1 file, the model was run
-allowing the same parameters estimation specification as in the 2013
-model.
-
-These model comparisons are adequate to move ahead using the newest
-version of SS3 3.30.21 without expecting large differences in reference
-models being due to versions of SS3.
+More than 10 years have passed from the last assessment and in that
+time, the model and the Stock Synthesis 3 (SS3) modelling framework has
+undergone many changes. While the specific changes in the model can be
+found in the model
+\href{https://github.com/orgs/nmfs-ost/projects/11}{change log}, here we
+simply update the model from the older 3.24O version to the newer
+3.30.22.1 version. We want to ensure that any update to the newest SS3
+model software is not a cause of any changes in model outputs when we
+hold all data and model specifications to be exactly the same as in
+2013. We therefore transferred all the older data and model
+specifications to the newest version of SS3 and compared the outputs.
+The status (Figure~\ref{fig-RSS_2013}) and scale
+(Figure~\ref{fig-SO_2013}) of both models are exactly the same, as are
+the estimates of within model uncertainty. This allows us to conclude
+that we can move forward using the latest version of SS3 without concern
+of inheriting any model difference due solely to the choice of the SS3
+version.
 
 \subsection{Model Structure, Evaluation, and
 Specification}\label{model-structure-evaluation-and-specification}
@@ -955,29 +1041,89 @@ Specification}\label{model-structure-evaluation-and-specification}
 \subsubsection{Fleet and Survey
 Designations}\label{fleet-and-survey-designations}
 
-The Washington model is structured to track several fleets and include
-data from several surveys:
+The model is structured to track several fleets and include data from
+several surveys. Defining fleets is largely based on differing fleet
+selectivity (i.e., how the fishery captures fish by length and/or age).
+In the stock assessment model, selectivity translates into how the
+removals are taken via length and/or age out of the population.
+Currently, the following fleet structure is being used to model
+commercial fishery removals as there is no record of a recreational
+fishery for this stock complex:
 
 \begin{itemize}
 \tightlist
 \item
-  Fleet 1: Commerical trawl fishery
+  Fleet 1: Commercial trawl fishery
 \item
-  Fleet 2: Commercial non-trawl (mostly jig) fishery
+  Fleet 2: Commercial fixed gear (mainly the long-line fishery) fishery
 \item
-  Fleet 3: Recreational boat fishery
+  Fleet 3: At-sea hake fishery
 \item
-  Survey 1: Private boat\\
+  Fleet 4: Contemporary mid-water fishery
 \item
-  Survey 2: Charter
+  Fleet 5: Dead discard trawl
 \item
-  Survey 3: Tagging
+  Fleet 6: Dead discard non-trawl
+\end{itemize}
+
+In 2013 assessment, fisheries removals were split among three fleets
+--trawl, hook-and-line and at-sea hake fishery bycatch. For the first
+two fleets (trawl and hook-and-line), removals were divided between
+landings and discards, with selectivity and retention curves estimated
+within the model.
+
+For this assessment, we plan to treat discards in trawl and non-trawl
+fisheries as separate fleets from landings fleets. This approach
+provides several advantages, including:
+
+\begin{itemize}
+\tightlist
 \item
-  Survey 4: Nearshore
+  With separate discard fleets, we can easily track relative amounts of
+  landings and discards within a fishery (they are not being combined
+  into the total catch).
 \item
-  Survey 5: OCNMS subadult-adult survey
+  This approach provides more flexibility to explore different
+  selectivity assumptions for both landed and discarded fish
+  --dome-shaped vs asymptotic, mirroring one to the other, etc.
 \item
-  Survey 6: OCNMS young-of-the-year survey
+  We can easily compare how similar (or different) selection curves for
+  retained and discarded fish (easier than in case of selectivity and
+  retention curves estimated within a single fleet).
+\item
+  The biological data for landings and discards are collected
+  independently (port sampling vs on-board observers), using different
+  sampling approaches. Treating landings and discards as separate fleets
+  in the model allows us to weight these data separately as well, to
+  balance the representation of samples.
+\end{itemize}
+
+The change in treating discards as separate fleets does not impact model
+results (Figure~\ref{fig-Discard_comp_SO} and
+Figure~\ref{fig-Discard_comp_RSS}), regardless of the selectivity form
+being assumed for the discard fleets. This provides evidence moving to
+using discard fleets will not induce \emph{a prior} differences in the
+model outputs, but it will offer more modelling flexibility.
+
+We use length-based selectivity curves for all fleets for the current
+stock assessment model (as was done in the 2013 assessment), as there is
+no reason to believe significant age-based selectivity is occurring. We
+will consider logistic and dome-shaped selectivity options.
+
+As reported in the data section, the following surveys are included in
+the model:
+
+\begin{itemize}
+\tightlist
+\item
+  Survey 1: Triennial (every three years) survey (1980-2004)\\
+\item
+  Survey 2: Alaska Fishery Science Center Slope survey (1997-2001)
+\item
+  Survey 3: Northwest Fisheries Science Center Slope Center (1999-2001)
+\item
+  Survey 4: West Coast Groundfish Bottom Trawl Survey (WCGBTS;
+  2003-2024)
 \end{itemize}
 
 The specifications of the assessment are listed in Table
@@ -1004,14 +1150,21 @@ There are five primary likelihood components for each assessment model:
   Prior distribution penalties
 \end{enumerate}
 
+In addition, there is a catch component to the likelihood, but catches
+are essentially fit without error. Additionally, there is a crash
+penalty that is invoked if true catches would cause the stock to go
+extinct. The penalty would alter catches to avoid extinction, but any
+presence of a crash penalty is used as in indication that the model has
+been mispecified, so this likelihood contribution should always be 0.
+
 \subsection{Reference Model Exploration, Key Assumptions and
 Specification}\label{reference-model-exploration-key-assumptions-and-specification}
 
-The reference model for Washington Rougheye/Blackspotted Rockfishes was
-developed to balance parsimony and realism, and the goal was to estimate
-a spawning output trajectory and relative stock status for the
-population of Rougheye/Blackspotted Rockfishes in state and federal
-waters off Washington. The model contains many assumptions to achieve
+The reference model for Rougheye/Blackspotted Rockfishes was developed
+to balance parsimony and realism, and the goal was to estimate a
+spawning output trajectory and relative stock status for the stocks of
+Rougheye/Blackspotted Rockfishes in state and federal waters off the
+U.S. west coast. The model contains many assumptions to achieve
 parsimony and uses different data types and sources to estimate reality.
 A series of investigative model runs were done to achieve the final base
 model. Constructing integrated models (i.e., those fitting many data
@@ -1030,14 +1183,14 @@ configurations of the following treatments:
 \item
   Data weighting
 \item
-  Exploration of local vs global minima (see Model Convergence and
-  Acceptability section below)
+  Exploration of local minima vs global minimum (see Model Convergence
+  and Acceptability section below)
 \end{itemize}
 
 The different biological data with and without the catch time series
 (and no additional data weighting) were first included to obtain an
 understanding of the signal of stock status coming from the data (Figure
-). The length and age only models assume a constant catch over the
+XXXXXX). The length and age only models assume a constant catch over the
 entire time series, while estimating the selectivity of each fleet.
 Under this constraint, the lengths suggest a stock a bit lower than the
 reference model, while the ages consider the stock is extremely
@@ -1130,21 +1283,20 @@ model specifications and are reported below.
 \subsubsection{Data Weighting}\label{data-weighting}
 
 The reference model allowed for the estimation of additional variance on
-all surveys except the taggin and OCNMS adult survey, both of which
-already had very high input variances. The ability to add variance to
-indices allows the model to balance model fit to that data while
-acknowledging that variances may be underestimated in the index
-standardization. A sensitivity was run with no extra variance estimated,
-as well as removal of the index data were explored.
+all surveys. The ability to add variance to indices allows the model to
+balance model fit to that data while acknowledging that variances may be
+underestimated in the index standardization. A sensitivity was run with
+no extra variance estimated, as well as removal of the index data were
+explored.
 
-Initial sample sizes for the commercial and recreational fleet length
-and conditional age-at-length compositions were based on the number of
-input effective samples sizes. The method of Francis (2011), equation
-TA1.8, was then used to balance the length and conditional age-at-length
-composition data among other inputs and likelihood components. The
-Francis method treats mean length and age as indices, with effective
-sample size defining the variance around the mean. If the variability
-around the mean does not encompass model predictions, the data should be
+Initial sample sizes for the commercial fleet length and conditional
+age-at-length compositions were based on the number of input effective
+samples sizes. The method of Francis (2011), equation TA1.8, was then
+used to balance the length and conditional age-at-length composition
+data among other inputs and likelihood components. The Francis method
+treats mean length and age as indices, with effective sample size
+defining the variance around the mean. If the variability around the
+mean does not encompass model predictions, the data should be
 down-weighted until predictions fit within the intervals. This method
 accounts for correlation in the data (i.e., the multinomial
 distribution), but can be sensitive to years that are outliers, as the
@@ -1165,14 +1317,18 @@ assessment are:
 \begin{itemize}
 \tightlist
 \item
-  Change in the removal history, especially the trawl fishery 3A catches
-  from Astoria.
+  Change in the removal history, particularly updates to historical data
+  and new catches since 2013.
 \item
-  Breaking the dockside survey into separate private and charter boat
-  surveys. This allowed the ability to exclude years in the charter boat
-  fishery that showed more effects from bag limits.
+  Adding discard fleets instead of using retention curves.
 \item
-  Addition of the nearshore survey, and both OCNMS surveys.
+  Using spatio-temporal approaches (sdmTMB) to define indices of
+  abundance versus the former GLMM approach.
+\item
+  Adding more biological compositions, mainly in years since 2013, but
+  also some historical ages.
+\item
+  Specifying a two sex instead of one sex model.
 \end{itemize}
 
 \newpage{}
@@ -1571,6 +1727,66 @@ stock assessment.}
 
 \end{figure}%
 
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/compare4_Bratio_uncertainty.png}
+
+}
+
+\caption{\label{fig-RSS_2013}Estimates of relative stock size (current
+spawning output/unfished spawning output) for the Rougheye/Blackspotted
+rockfish complex in U.S. west coast waters from the 2013 assessment, and
+compared to the using the same data in the newest version of SS3
+(3.330.22.1).}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/compare2_spawnbio_uncertainty.png}
+
+}
+
+\caption{\label{fig-SO_2013}Estimates of spawning output for the
+Rougheye/Blackspotted rockfish complex in U.S. west coast waters from
+the 2013 assessment, and compared to the same data in the newest version
+of SS3 (3.330.22.1). Shading denotes 95\% confidence intervals. Shading
+denotes 95\% confidence intervals.}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/compare1_spawnbio__discard_fleets.png}
+
+}
+
+\caption{\label{fig-Discard_comp_SO}Comparison of spawning output using
+retention curves or discard fleets using the 2013 Rougheye/Blackspotted
+Rockfishes assessment.}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/compare3_Bratio_discard_fleets.png}
+
+}
+
+\caption{\label{fig-Discard_comp_RSS}Comparison of relative spawning
+output using retention curves or discard fleets using the 2013
+Rougheye/Blackspotted Rockfishes assessment.}
+
+\end{figure}%
+
 \newpage{}
 
 \subsection{Notes}\label{notes}
@@ -1589,6 +1805,12 @@ of {California}, {Oregon}, and {Washington} Stocks of Black Rockfish
 (\emph{{Sebastes} Melanops}) in 2015.''} Pacific Fishery Management
 Council, 7700 Ambassador Place NE, Suite 200, Portland, OR 97220:
 Pacific Fishery Management Council.
+
+\bibitem[\citeproctext]{ref-dick_estimates_2010}
+Dick, E. J., and A. D MacCall. 2010. {``Estimates of Sustainable Yield
+for 50 Data-Poor Stocks in the {Pacifc} Coast Ground {Fishery}
+{Management} {Plan}.''} \emph{NOAA Technical Memorandum NMFS}
+NOAA-TM-NMFS-SWFSC-460.
 
 \bibitem[\citeproctext]{ref-douglas_species_1998}
 Douglas, David A., and Oregon Fish Division. 1998. {``Species
