@@ -8,9 +8,7 @@
 rda_dir <- here::here('rda_files')
 ``` 
 
-
 ### Introduction
-
 
 ```{r} 
 #| label: fig-map
@@ -52,6 +50,8 @@ text(-120, 47, "Washington")
 text(-121, 44, "Oregon")
 text(-119.5, 37, "California")
 text(-115.5, 32.1, "Mexico")
+
+
 ``` 
 
 ```{r} 
@@ -65,6 +65,7 @@ text(-115.5, 32.1, "Mexico")
 knitr::include_graphics(
   file.path(plot_dir, "SB_comps.png")
 )
+
 ``` 
 
 ```{r} 
@@ -78,13 +79,10 @@ knitr::include_graphics(
 knitr::include_graphics(
   file.path(plot_dir, "Status_comp.png")
 )
+
 ``` 
 
-\newpage
-
-
 ### Data
-
 
 ```{r} 
 #| label: fig-data
@@ -98,8 +96,6 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "data_plot.png")
 )
 ``` 
-
-\newpage
 
 
 ### Biology
@@ -208,9 +204,6 @@ knitr::include_graphics(
 )
 ``` 
 
-\newpage
-
-
 ### Model Bridging
 
 ```{r} 
@@ -224,6 +217,7 @@ knitr::include_graphics(
 knitr::include_graphics(
   file.path(plot_dir, "compare4_Bratio_uncertainty.png")
 )
+
 ```
 
 ```{r} 
@@ -238,9 +232,6 @@ knitr::include_graphics(
   file.path(plot_dir, "compare2_spawnbio_uncertainty.png")
 )
 ``` 
-
-\newpage
-
 
 ### Model Specification
 
@@ -269,9 +260,6 @@ knitr::include_graphics(
   file.path(plot_dir, "compare3_Bratio_discard_fleets.png")
 )
 ``` 
-
-\newpage
-
 
 ### Time-series
 
@@ -420,17 +408,11 @@ knitr::include_graphics(
 
 ```
 
-\newpage
-
 
 ## Sensitivity Analyses and Retrospectives
 
-\newpage
 
 ## Likelihood Profiles
 
-\newpage
 
 ## Reference Points and Forecasts
-
-\newpage
