@@ -1,0 +1,15 @@
+## Tables 
+ 
+#| echo: false
+
+if (file.exists(table_dir)) {
+  # Load in rda files created by:
+  # r4ss::table_exec_summary
+  # r4ss::table_pars
+  # r4ss::table_parcounts
+  
+  all_files <- list.files(table_dir)
+  all_rda_files <- all_files[grep(".rda", all_files)]
+  for (a in 1:length(all_rda_files)) {
+    load(file.path(table_dir, all_rda_files[a]))
+  }

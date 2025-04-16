@@ -414,6 +414,23 @@ the Department of Commerce.
 
 \subsubsection{Stock Description}\label{stock-description}
 
+This document presents the stock assessment for the Rougheye
+(\emph{Sebastes aleutianus}) and Blackspotted (\emph{Sebastes
+melanostictus}) Rockfishes, two species that form one management
+complex. Despite some identification advances and Rougheye and
+Blackspotted rockfishes are clearly genetically distinct species, data
+historically and contemporaneously remain available mostly for the
+Rougheye/Blackspotted Rockfish complex, not consistently at the species
+level. While we treat these species as one assessed stock complex, we
+recognize and are mindful of the above species distinctions as we
+conduct our analyses. This report is for the year 2025 in state and
+federal waters from California to Washington State, excluding
+consideration of the Puget Sound and Salish Sea (Figure~\ref{fig-map}).
+It seeks to use available catch, biological compositions in the for of
+lengths and ages, and potential indices of abundance and is the first
+assessment since the 2013 stock assessment (Hicks, Wetzel, and Harms
+2013).
+
 \subsubsection{Catches}\label{catches}
 
 \subsubsection{Data and Assessments}\label{data-and-assessments}
@@ -2066,6 +2083,57 @@ Canada} 27 (12): 2233--54. \url{https://doi.org/10.1139/f70-252}.
 \newpage{}
 
 \subsection{Tables}\label{tables}
+
+\#\textbar{} echo: false
+
+if (file.exists(table\_dir)) \{ \# Load in rda files created by: \#
+r4ss::table\_exec\_summary \# r4ss::table\_pars \#
+r4ss::table\_parcounts
+
+all\_files \textless- list.files(table\_dir) all\_rda\_files \textless-
+all\_files{[}grep(``.rda'', all\_files){]} for (a in
+1:length(all\_rda\_files)) \{ load(file.path(table\_dir,
+all\_rda\_files{[}a{]})) \}
+
+catches\_es\_table \textless- catches\_es\(table
+  catches_es_cap <- catches_es\)cap rm(catches\_es)
+
+ssb\_es\_table \textless- ssb\_es\(table
+  ssb_es_cap <- ssb_es\)cap rm(ssb\_es)
+
+spr\_es\_table \textless- spr\_es\(table
+  spr_es_cap <- spr_es\)cap rm(spr\_es)
+
+recr\_es\_table \textless- recr\_es\(table
+  recr_es_cap <- recr_es\)cap rm(recr\_es)
+
+reference\_points\_table \textless- reference\_points\(table
+  reference_points_cap <- reference_points\)cap rm(reference\_points)
+
+recent\_management\_table \textless- recent\_management\(table
+  recent_management_cap <- recent_management\)cap rm(recent\_management)
+
+projections\_table \textless- projections\(table
+  projections_cap <- projections\)cap rm(projections)
+
+compweight\_table \textless- table\_compweight\(table
+  compweight_cap <- table_compweight\)cap rm(table\_compweight)
+
+config\_table \textless- table\_config\(table
+  config_cap <- table_config\)cap rm(table\_config)
+
+parcount\_table \textless- table\_parcounts\(table
+  parcount_cap <- table_parcounts\)cap rm(table\_parcounts)
+
+par\_table \textless- table\_pars\(table
+  par_cap <- table_pars\)cap rm(table\_pars)
+
+time\_series\_table \textless- time\_series\(table
+  time_series_cap <- time_series\)cap rm(time\_series)
+
+eval\_tables \textless- TRUE \} else \{ eval\_tables \textless- FALSE \}
+
+```
 
 \newpage{}
 
