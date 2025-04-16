@@ -836,7 +836,31 @@ Survey}\label{afscnwfsc-west-coast-triennial-shelf-survey-1}
 
 \subsection{Biological Parameters}\label{biological-parameters}
 
+The major biological inputs to the models are natural mortality, age and
+growth parameters, weight-length, maturity and stock-recruitment
+parameters. The following sections outline the treatment of each
+section.
+
 \subsubsection{Natural Mortality}\label{natural-mortality}
+
+Natural mortality is a highly influential parameter in age-structured
+stock assessments. It defines the rate of natural death by age, and thus
+establishes a stable age-structure and expectation of longevity, and
+interacts with growth and reproduction to determine stock productivity.
+It is a very difficult parameter to directly measure, thus empirical
+relationships based on life history parameters are often used to
+indirectly determine its value or build prior distributions in belief of
+what it is in the event we do attempt to estimate it in the model (Jason
+M. Cope and Hamel (2022); Hamel and Cope (2022); Maunder et al. (2023)).
+If length and age data are available, it may be possible to estimate it
+in the model.
+
+An estimate of maximum age tends to be the most reliable life history
+parameter related to natural mortality to inform its estimation. Jason
+M. Cope and Hamel (2022)
+(\href{https://connect.fisheries.noaa.gov/natural-mortality-tool/}{The
+Natural Mortality Tool}) provide the most up-to-date examination of the
+relationship between maximum age and natural mortality
 
 \begin{centering}
 
@@ -848,31 +872,224 @@ $M=\frac{5.4}{A_{\text{max}}}$
 
 where \(M\) is natural mortality and \({A_{\text{max}}}\) is the assumed
 maximum age. The prior is defined as a lognormal distribution with mean
-\(ln(5.4/A_{\text{max}})\) and standard error = 0.31.
+\(ln(5.4/A_{\text{max}})\) and standard error = 0.31. This is the
+equation typically used to estimate a natural mortality point estimate,
+but is underpinned by the choice of the value of \({A_{\text{max}}}\).
+This equation assumes that the proportion of the stable population at
+this maximum age is 0.4517\%. If we take humans as an example, the
+longest lived human is 122 years. This is not the maximum age, but the
+oldest ever recorded age. The maximum age that corresponds to 0.4517\%
+of the population is around 100 years. For Rougheye/Blackspotted, the
+oldest ever aged individual is 205 years with unknown ageing error. We
+did not consider this as a realistic maximum age.
+
+The 2013 U.S. west coast stock assessment used a prior built around a
+mean of 0.034 (corresponding to a maximum age of 163), but estimated
+natural mortality at 0.042 (maximum age between 128-129 years; Figure
+M). The 2023 Gulf of Alaska assessment built a prior conditional on a
+estimate of natural mortality from their 5 oldest aged individuals that
+ranged from 126-135 years. This resulted in a mean value of 0.042,
+similar to the 2013 U.S. west coast stock assessment. The 2023 Bering
+Sea/Aleutian Islands assessment used M = 0.05 (assumed longevity of
+108), and the recent Canadian assessments considered a range of M values
+from 0.03 to 0.055 (assumed maximum ages of 180 to 98 years;
+Figure~\ref{fig-Mcurves}).
+
+We attempt to estimate natural mortality, as was done in the 2013 U.S.
+West coast assessment. Examining the available age data, the oldest 10
+individuals range from 139 to 165 and were all males. For females, the
+10 oldest individuals range from 130 to 121 years. If those oldest ages
+were used in the Hamel and Cope (2022) longevity estimator, these ages
+would correspond to a range of natural mortality values of 0.033 to
+0.039 for males, which include the mean of the prior used in the 2013
+assessment. For females, it corresponds to natural mortality values of
+0.039 to 0.045. All these assume that the sampled population has enough
+of an age structure still available for sampling, as opposed to having
+some level of age truncation from the theoretical unfished stable age
+distribution.
+
+Related to this issue of possible age truncation, applying a catch curve
+analysis (taking the log of the abundance of numbers of samples in
+available age classes) on the aggregated ages across all age sources by
+sex, the total mortality (Natural + Fishing mortality= Total mortality)
+is 0.046 for females and 0.035 for males, which may indicate the natural
+mortality could be lower than that used in the 2013 assessment, but
+within the range of values considered in other areas
+(Figure~\ref{fig-CC_Z}). This also indicates the possibility of
+estimating sex-specific natural mortality, as natural mortality may
+differ by sex. The two sex model allows for this type of model
+specification exploration. Further exploration was done my truncating
+the upper ages considered, with the assumption that the older ages may
+also not be sampled fully (i.e., dome-shaped selectivity). We considered
+both 100 (Figure~\ref{fig-CC_Z_100}) and 80 (Figure~\ref{fig-CC_Z_80})
+as upper age cut-offs. The less older individuals included, the higher
+the estimate of total mortality, and this a higher natural mortality.
+But we can see a general overestimate of how many older individuals are
+expected using these higher Z values, thus dome-shapeness does not see
+to explain the sampling of these older individuals.
+
+One challenge to estimating natural mortality within the model is the
+interaction of estimating dome-shaped selectivity with estimating
+natural mortality. If all fleets assume some level of dome-shaped
+selectivity, it is difficult to determine if the unseen larger, older
+individuals are due to natural death or fishing mortality. Typically, at
+least one major fleet needs to achieve full selectivity for the larger,
+older individuals. The 2013 assessment suggested some dome-shaped
+selectivity in the two major fleets, thus any natural mortality
+estimates are evaluated depending on the forms of fleet selectivity.
 
 \subsubsection{Age and Growth
 Relationship}\label{age-and-growth-relationship}
 
+Age and length data are used to estimate important growth parameters.
+Figure~\ref{fig-AL_1} has the currently available age and length data.
+Female and male sample sizes are very similar. Estimated growth curves
+are also presented in Figure~\ref{fig-AL_1} and the parameters are
+provided in Table AL\_1. The West Coast Groundfish Bottom Trawl Survey
+clearly and importantly samples the smallest, youngest individuals
+compared to the other two data sources. This allows for a better
+estimate of the age at size 0 (t\textsubscript{0}) and growth
+coefficient (k). The female asymptotic size
+(L\textsubscript{\(\infty\)}) is estimated notably higher from the
+PacFIN data, though male estimates of Linf are similar across the data
+sets. The overall externally derived estimates of female and male
+Rougheye/Blackspotted Rockfishes are
+
 \begin{centering}
 
-Females $L_{\infty}$ =  cm; $k$ =  per year; $t_0$ = 
+Females $L_{\infty}$ = 58.81 cm; $k$ = 0.08; $t_0$ = -1.19
 
-Males $L_{\infty}$ =  cm; $k$ =  per year; $t_0$ = 
+Males $L_{\infty}$ = 57.13 cm; $k$ = 0.09; $t_0$ = -1.26
 
 \end{centering}
+
+The coefficient of variation (CV) of length by age and sex are shown in
+Figure~\ref{fig-AL_2}. This is a measure of the variation in length for
+a given age class. Sample sizes are highest from the youngest ages up to
+around 70 (females) to 80 (males) years. The smoothed line shows the
+average response, and indicates similar CVs values for females and
+males, with the highest at the youngest ages, but generally 0.1. The
+amount and range of age samples, along with repeated length samples
+within an age class, allows growth parameters
+(L\textsubscript{\(\infty\)}, k, t\textsubscript{0}, and CVs at age) to
+be estimated in the model. Ages are conditioned on lengths in the model
+in order to estimate growth within the model. We also explore
+sensitivity in growth values by pre-specifying growth to different
+values.
+
+We note that the growth values being estimated in our data are notably
+different than those used in Alaska. For instance, the growth paramters
+for the BSAI stock is L\textsubscript{\(\infty\)} = 51.43, k = 0.06 and
+t\textsubscript{0} = -3.30 and L\textsubscript{\(\infty\)} = 54.2 cm, k
+= 0.07, t\textsubscript{0}= -1.5 for the GOA population (both sexes
+combined). These growth parameters shows a larger size and faster growth
+of the West Coast stock complex versus those in Alaska, though the West
+Coast stock complex is more similar to the GOA complex.
 
 \subsubsection{Ageing Bias and
 Precision}\label{ageing-bias-and-precision}
 
+Counting ages from ageing structures in long-lived, temparate fishes is
+challenging. Ages derived from these structures can be hard to reproduce
+within and between readers (i.e., imprecision), and may not contain the
+true age (i.e., bias). Stock assessment outputs can be affected by bias
+and imprecision in ageing, thus it is important to quantify and
+integrate this source of variability when fitting age data in
+assessments. In Stock Synthesis 3, this is done by including ageing
+error matrices that include the mean age (row 1) and standard deviation
+in age (row 2). Ageing bias is implemented when the inputted mean age
+deviates from the expected middle age for any given age bin (e.g., 1.75
+inputted versus 1.5 being the true age); ageing imprecision is given as
+the standard deviation for each age bin.
+
+There are two main readers to assign to the available ages. Reader 1
+read samples from the earliest period through 2018 and Reader 2 read
+samples from 2019 to 2022. Age bias plots show little bias within and
+between the readers (Figure ).
+
+Estimation of ageing error matrices used the approach of -Punt et al.
+(2008) and release 1.1.0 of the R package
+\href{https://github.com/pfmc-assessments/nwfscAgeingError}{nwfscAgeingError}
+(J. T. Thorson, Stewart, and Punt 2012). The ageing error matrix offers
+a way to calculate both bias and imprecision in age reads. Reader 1 is
+always considered unbiased, but may be imprecise. Bias relative to the
+primary reader is given for the second or additional readers. Several
+model configurations are available for exploration based on either the
+functional form (e.g., constant CV, curvilinear standard deviation, or
+curvilinear CV) of the bias in the second read or reader or in the
+precision of the readers. Model selection uses AIC corrected for small
+sample size (AICc), which converges to AIC when sample sizes are large.
+Bayesian Information Criterion (BIC) was also considered when selecting
+a final model. Table XXXX provides model selection results of
+intra-reader comparisons for the two readers.
+
+The calculated bias relationships from the best fit model are shown in
+Figure XXXX and confirm small to little bias between readers. Figure
+XXXX shows the imprecision estimates of the best fit models. Each ageing
+error matrix was then applied to the appropriate time and fleet
+combination.
+
 \subsubsection{Length-Weight
 Relationship}\label{length-weight-relationship}
 
+Female and male length-weight relationships were determined using data
+from the PacFIN database, West Coast Groundfish Bottom Trawl Survey, and
+ASHOP samples. Samples size by sex were: female (N=13839), males
+(13625), and unknown sex (53). Each of the data sources estimated very
+similar length-weight relationships (Figure~\ref{fig-LW1}).
+
+The resultant sex-specific length-weight relationships are given in
+Figure~\ref{fig-LW2}, with the following individual values:
+
+\begin{itemize}
+\tightlist
+\item
+  Females: W = 0.000008L\^{}3.15
+\item
+  Males: W = 0.000012L\^{}3.07
+\end{itemize}
+
+These values are very similar to the previous assessment that used a
+combine sex value of a=0.0000096 and b=3.12000 (Figure~\ref{fig-LW2}).
+
 \subsubsection{Maturity}\label{maturity}
+
+An updated maturity analysis for the Rougheye/Blackspotted rockfish
+complex with additional samples to estimate the length at which 50\% of
+females in the population are mature (L50) is completed. Biological
+maturity identifies females that are physiologically capable of
+spawning. Functional maturity identifies females that are
+physiologically capable of spawning and will likely spawn in a given
+year. The most recent L50 estimate (not yet updated) of biological
+maturity is 43.84 cm and the most recent L50 estimate (not yet updated)
+of functional maturity is 48.44 cm.
 
 \subsubsection{Fecundity}\label{fecundity}
 
+The 2013 U.S. west coast stock assessment assumed that fecundity was
+proportional to weight. Dick et al.~(2017) provided a study on
+rockfishes showing that rockfishes routinely have a non-proportional
+relationship of fecundity to weight, with larger individuals producing
+more eggs than expected only by weight. Neither Rougheye or Blackspotted
+rockfishes have a species- of subfamily-specific estimate for this
+relationship, so this stock assessment uses the unobserved Genus
+Sebastes values of a = 6.538e-06 and b = 4.043 using the F=aL\^{}b
+relationship.
+
 \subsubsection{Stock-Recruitment Function and
 Compensation}\label{stock-recruitment-function-and-compensation}
+
+The Beverton-Holt stock recruit relationship is assumed, as it was in
+the 2013 assessment, to describe the relationship between spawning
+biomass and recruitment. The steepness parameter may be considered for
+estimation, but it is notoriously difficult to estimate in assessment
+models. The 2013 stock assessment used the previous rockfish steepness
+mean value of 0.77, but this has subsequently been updated to 0.72, to a
+value that represents a stock with somewhat lower recruitment
+compensation. Natural variation in recruitment (i.e., not
+deterministically taken from the stock-recruit curve) is apparent in the
+length and age data (as notable length or age classes growing/ageing
+over time), so deviations in recruitment are estimated.
 
 \subsubsection{Sex Ratio}\label{sex-ratio}
 
@@ -1303,9 +1520,9 @@ distribution), but can be sensitive to years that are outliers, as the
 amount of down-weighting is applied to all years within a data source,
 and are not year-specific. Sensitivities were performed examining
 different data-weighting treatments: 1) the Dirichlet-Multinomial
-approach (Thorson et al. 2017), 2) the McAllister-Ianelli Harmonic Mean
-approach (McAllister and Ianelli 1997), or 3) no data-weighting of
-lengths.
+approach (James T. Thorson et al. 2017), 2) the McAllister-Ianelli
+Harmonic Mean approach (McAllister and Ianelli 1997), or 3) no
+data-weighting of lengths.
 
 \subsubsection{Model Changes from the Last
 Assessment}\label{model-changes-from-the-last-assessment}
@@ -1589,12 +1806,12 @@ intensity based on \(\text{SPR}_{50\%}\).
 Rougheye/Blackspotted Rockfishes removals have been below the equivalent
 Annual Catch Limit (ACL) over the recent decade (Table
 \ref{tab:manage}). The ACL declined in 2017 relative to earlier years
-based on the 2015 assessment of Rougheye/Blackspotted Rockfishes (Cope
-et al. 2016). In the last ten years, catches peaked in 2016 at 369 mt.
-Since then catches have declined to a recent low of 130 mt in 2020 with
-the catches in the final two model years remaining low with 197 mt in
-2021 and 166 mt in 2022. The OFL has not been exceeded in any year over
-the past 10 years.
+based on the 2015 assessment of Rougheye/Blackspotted Rockfishes (J. M.
+Cope et al. 2016). In the last ten years, catches peaked in 2016 at 369
+mt. Since then catches have declined to a recent low of 130 mt in 2020
+with the catches in the final two model years remaining low with 197 mt
+in 2021 and 166 mt in 2022. The OFL has not been exceeded in any year
+over the past 10 years.
 
 \subsection{Harvest Projections and Decision
 Tables}\label{harvest-projections-and-decision-tables-1}
@@ -1659,6 +1876,192 @@ listed here followed by a brief response for each.
 \newpage{}
 
 \subsection{References}\label{references}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-cope_assessments_2016}
+Cope, J. M., David B. Sampson, Andi Stephens, Meisha Key, Patrick P.
+Mirick, Megan M. Stachura, Tien-Shui Tsou, et al. 2016. {``Assessments
+of {California}, {Oregon}, and {Washington} Stocks of Black Rockfish
+(\emph{{Sebastes} Melanops}) in 2015.''} Pacific Fishery Management
+Council, 7700 Ambassador Place NE, Suite 200, Portland, OR 97220:
+Pacific Fishery Management Council.
+
+\bibitem[\citeproctext]{ref-cope_upgrading_2022}
+Cope, Jason M., and Owen S. Hamel. 2022. {``Upgrading from {M} Version
+0.2: {An} Application-Based Method for Practical Estimation, Evaluation
+and Uncertainty Characterization of Natural Mortality.''}
+\emph{Fisheries Research} 256 (December): 106493.
+\url{https://doi.org/10.1016/j.fishres.2022.106493}.
+
+\bibitem[\citeproctext]{ref-dick_estimates_2010}
+Dick, E. J., and A. D MacCall. 2010. {``Estimates of Sustainable Yield
+for 50 Data-Poor Stocks in the {Pacifc} Coast Ground {Fishery}
+{Management} {Plan}.''} \emph{NOAA Technical Memorandum NMFS}
+NOAA-TM-NMFS-SWFSC-460.
+
+\bibitem[\citeproctext]{ref-douglas_species_1998}
+Douglas, David A., and Oregon Fish Division. 1998. {``Species
+Composition of Rockfish in Catches by {Oregon} Trawlers, 1963-93.''}
+Marine \{Program\}.
+
+\bibitem[\citeproctext]{ref-francis_data_2011}
+Francis, R. I. C. Chris. 2011. {``Data Weighting in Statistical
+Fisheries Stock Assessment Models.''} \emph{Canadian Journal of
+Fisheries and Aquatic Sciences} 68 (6): 1124--38.
+\url{https://doi.org/10.1139/f2011-025}.
+
+\bibitem[\citeproctext]{ref-gharrett_genetically_2006}
+Gharrett, A. J., C. W. Mecklenburg, L. W. Seeb, Z. Li, A. P. Matala, A.
+K. Gray, and J. Heifetz. 2006. {``Do {Genetically} {Distinct} {Rougheye}
+{Rockfish} {Sibling} {Species} {Differ} {Phenotypically}?''}
+\emph{Transactions of the American Fisheries Society} 135 (3): 792--800.
+\url{https://doi.org/10.1577/T05-136.1}.
+
+\bibitem[\citeproctext]{ref-gharrett_two_2005}
+Gharrett, Anthony J., Andrew P. Matala, Eric L. Peterson, Andrew K.
+Gray, Zhouzhou Li, and Jonathan Heifetz. 2005. {``Two {Genetically}
+{Distinct} {Forms} of {Rougheye} {Rockfish} {Are} {Different}
+{Species}.''} \emph{Transactions of the American Fisheries Society} 134
+(1): 242--60. \url{https://doi.org/10.1577/T04-055.1}.
+
+\bibitem[\citeproctext]{ref-hamel_development_2022}
+Hamel, Owen S., and Jason M. Cope. 2022. {``Development and
+Considerations for Application of a Longevity-Based Prior for the
+Natural Mortality Rate.''} \emph{Fisheries Research} 256 (December):
+106477. \url{https://doi.org/10.1016/j.fishres.2022.106477}.
+
+\bibitem[\citeproctext]{ref-harris_using_2019}
+Harris, Jeremy P., Charles Hutchinson, and Sharon Wildes. 2019. {``Using
+Otolith Morphometric Analysis to Improve Species Discrimination of
+Blackspotted Rockfish ({Sebastes} Melanostictus) and Rougheye Rockfish
+({S}. Aleutianus).''} \emph{Fishery Bulletin} 117 (3): 234--45.
+\url{https://go.gale.com/ps/i.do?p=AONE&sw=w&issn=00900656&v=2.1&it=r&id=GALE\%7CA603632222&sid=googleScholar&linkaccess=abs}.
+
+\bibitem[\citeproctext]{ref-hawkins_genetic_2005}
+Hawkins, Sharon L., Jonathan Heifetz, Christine M. Kondzela, John Pohl,
+Richard L. Wilmot, Oleg N. Katugin, and Vladimir N. Tuponogov. 2005.
+{``Genetic Variation of Rougheye Rockfish ({Sebastes} Aleutianus) and
+Shortraker Rockfish ({S}. Borealis) Inferred from Allozymes.''}
+\emph{Fishery Bulletin} 103 (3): 524--35.
+
+\bibitem[\citeproctext]{ref-hawkins_genetic_1997}
+Hawkins, Sharon, Jonathan Heifetz, and John Pohl. 1997. {``Genetic
+Population Structure of Rougheye Rockfish ({Sebastes} Aleutianus)
+Inferred from Allozyme Variation.''} National \{Marine\} \{Fisheries\}
+\{Service\}, \{Alaska\} \{Fishery\} \{Science\} \{Quarterly\} \{Report\}
+July - August - September.
+
+\bibitem[\citeproctext]{ref-hicks_status_2013}
+Hicks, Allan C, Chantell Wetzel, and John Harms. 2013. {``The Status of
+Rougheye Rockfish ({Sebastes} Aleutianus) and Blackspotted Rockfish
+({S}. Melanostictus) as a Complex Along the {U}.{S}. {West} {Coast} in
+2013.''} Pacific Fishery Management Council, 7700 Ambassador Place NE,
+Suite 200, Portland, OR 97220.
+
+\bibitem[\citeproctext]{ref-jordan_fishes_1898}
+Jordan, David Starr, and Barton Warren Evermann. 1898. {``The Fishes of
+{North} and {Middle} {America}: {A} Descriptive Catalogue of the Species
+of Fish-Like Vertebrates Found in the Waters of {North} {America}, North
+of the {Isthmus} of {Panama}, Pt. {II}.''} \emph{Bulletin of the United
+States National Museum} 47: 1241--2183.
+
+\bibitem[\citeproctext]{ref-love_certainly_2011}
+Love, M. S. 2011. \emph{Certainly {More} {Than} {You} {Want} to {Know}
+{About} the {Fishes} of the {Pacific} {Coast}}. Really Big Press.
+
+\bibitem[\citeproctext]{ref-love_rockfishes_2002}
+Love, M. S., M. Yoklavich, and L. Thorsteinson. 2002. \emph{The
+{Rockfishes} of the {Northeast} {Pacific}}. 1st Edition. Berkeley:
+University of California Press.
+
+\bibitem[\citeproctext]{ref-matsubara_1934}
+Matsubara, K. 1934. {``Studies on the Scorpaenoid Fishes of Japan. I.
+Descriptions of One New Genus and Five New Species.''} \emph{Journal of
+the Imperial Fishery Institute} 30: 199.
+\url{https://cir.nii.ac.jp/crid/1370283693151216527}.
+
+\bibitem[\citeproctext]{ref-maunder_review_2023}
+Maunder, Mark N., Owen S. Hamel, Hui-Hua Lee, Kevin R. Piner, Jason M.
+Cope, André E. Punt, James N. Ianelli, Claudio Castillo-Jordán, Maia S.
+Kapur, and Richard D. Methot. 2023. {``A Review of Estimation Methods
+for Natural Mortality and Their Performance in the Context of Fishery
+Stock Assessment.''} \emph{Fisheries Research} 257 (January): 106489.
+\url{https://doi.org/10.1016/j.fishres.2022.106489}.
+
+\bibitem[\citeproctext]{ref-mcallister_bayesian_1997}
+McAllister, M. K., and J. N. Ianelli. 1997. {``Bayesian Stock Assessment
+Using Catch-Age Data and the Sampling --- Importance Resampling
+Algorithm.''} \emph{Canadian Journal of Fisheries and Aquatic Sciences}
+54 (2): 284--300. \url{https://doi.org/10.1139/f96-285}.
+
+\bibitem[\citeproctext]{ref-McClure:2023:VCC}
+McClure, Michelle M., Melissa A. Haltuch, Ellen Willis-Norton, David D.
+Huff, Elliott L. Hazen, Lisa G. Crozier, Michael G. Jacox, et al. 2023.
+{``Vulnerability to Climate Change of Managed Stocks in the {California
+Current} Large Marine Ecosystem.''} \emph{Frontiers in Marine Science}
+10. \url{https://doi.org/10.3389/fmars.2023.1103767}.
+
+\bibitem[\citeproctext]{ref-niska_species_1976}
+Niska, Edwin L. 1976. {``Species {Compositionof} Rockfish in Catches by
+{Oregon} {Trawlers}, 1963-71.''} Informational \{Report\} 76-7.
+
+\bibitem[\citeproctext]{ref-orr_species_2008}
+Orr, James W., and Sharon Hawkins. 2008. {``Species of the Rougheye
+Rockfish Complex: Resurrection of {Sebastes} Melanostictus ({Matsubara},
+1934) and a Redescription of {Sebastes} Aleutianus ({Jordan} and
+{Evermann}, 1898)({Teleostei}: {Scorpaeniformes}).''} \emph{Fishery
+Bulletin} 106 (2): 111--34. \url{http://aquaticcommons.org/8844/}.
+
+\bibitem[\citeproctext]{ref-punt_quantifying_2008}
+Punt, A. E., D. C. Smith, K. KrusicGolub, and S. Robertson. 2008.
+{``Quantifying Age-Reading Error for Use in Fisheries Stock Assessments,
+with Application to Species in {A}ustralia's Southern and Eastern
+Scalefish and Shark Fishery.''} \emph{Canadian Journal of Fisheries and
+Aquatic Sciences} 65 (9): 1991--2005.
+\url{https://doi.org/10.1139/F08-111}.
+
+\bibitem[\citeproctext]{ref-rogers_status_1996}
+Rogers, J. S., M. Wilkins, D. Kamakawa, Farron R. Wallace, T. Builder,
+M. Zimmerman, M. Kander, and B. Culver. 1996. {``Status of the
+{Remaining} {Rockfish} in the {Sebastes} {Complex} in 1996 and
+Recommendations for Management in 1997.''} Pacific Fishery Management
+Council 2130 SW fifth Ave. Suite 224, Portland, Ore. 97210.
+
+\bibitem[\citeproctext]{ref-seeb_biochemical_1986}
+Seeb, L. W. 1986. \emph{Biochemical {Systematics} and {Evolution} of the
+{Scorpaenid} {Genus} {Sebastes}}. University of Washington.
+\url{https://books.google.com/books?id=CfJ6nQEACAAJ}.
+
+\bibitem[\citeproctext]{ref-thorson_nwfscageingerror:_2012}
+Thorson, J. T., Ian J. Stewart, and A. E. Punt. 2012.
+{``{nwfscAgeingError}: A User Interface in {R} for the {P}unt \emph{Et
+Al}. (2008) Method for Calculating Ageing Error and Imprecision.''}
+\emph{Available from:
+Http://Github.com/Pfmc-Assessments/nwfscAgeingError/}.
+
+\bibitem[\citeproctext]{ref-thorson_model-based_2017}
+Thorson, James T., Kelli F. Johnson, R. D. Methot, and I. G. Taylor.
+2017. {``Model-Based Estimates of Effective Sample Size in Stock
+Assessment Models Using the {Dirichlet}-Multinomial Distribution.''}
+\emph{Fisheries Research} 192: 84--93.
+\url{https://doi.org/10.1016/j.fishres.2016.06.005}.
+
+\bibitem[\citeproctext]{ref-tsuyuki_contribution_1968}
+Tsuyuki, H., E. Roberts, R. H. Lowes, W. Hadaway, and S. J. Westrheim.
+1968. {``Contribution of {Protein} {Electrophoresis} to {Rockfish}
+({Scorpaenidae}) {Systematics}.''} \emph{Journal of the Fisheries
+Research Board of Canada} 25 (11): 2477--2501.
+\url{https://doi.org/10.1139/f68-216}.
+
+\bibitem[\citeproctext]{ref-tsuyuki_analyses_1970}
+Tsuyuki, H., and S. J. Westrheim. 1970. {``Analyses of the {Sebastes}
+Aleutianus--{S}. Melanostomus {Complex}, and {Description} of a New
+{Scorpaenid} {Species}, {Sebastes} Caenaematicus, in the {Northeast}
+{Pacific} {Ocean}.''} \emph{Journal of the Fisheries Research Board of
+Canada} 27 (12): 2233--54. \url{https://doi.org/10.1139/f70-252}.
+
+\end{CSLReferences}
 
 \newpage{}
 
@@ -1731,6 +2134,127 @@ stock assessment.}
 
 \centering{
 
+\includegraphics{plots_4_doc/M_values.png}
+
+}
+
+\caption{\label{fig-Mcurves}Natural mortality curves by age in years for
+values of natural mortality used in various Rougheye/Blackspotted
+Rockfish stock assessments. Dots indicate the range of assumed maximum
+ages using the equation from Hamel and Cope 2022.}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/Catch_curve_plot_FM.png}
+
+}
+
+\caption{\label{fig-CC_Z}Catch curve (log abundance by age) analysis on
+aggregated ages over all age sources by sex (black points). The peak
+selected age was 21 for both sexes, so the linear model was run from age
+21 until the oldest age (red points). The slope of the linear model is
+equal to the estimate of an aggregate total mortality (Z).}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/Catch_curve_plot_FM_21_100.png}
+
+}
+
+\caption{\label{fig-CC_Z_100}Catch curve (log abundance by age) analysis
+on aggregated ages over all age sources by sex (black points). The peak
+selected age was 21 for both sexes with a max age of 100, so the linear
+model was run from age 21 until age 100 (red points). The slope of the
+linear model is equal to the estimate of an aggregate total mortality
+(Z).}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/Catch_curve_plot_FM_21_80.png}
+
+}
+
+\caption{\label{fig-CC_Z_80}Catch curve (log abundance by age) analysis
+on aggregated ages over all age sources by sex (black points). The peak
+selected age was 21 for both sexes with a max age of 80, so the linear
+model was run from age 21 until age 80 (red points). The slope of the
+linear model is equal to the estimate of an aggregate total mortality
+(Z).}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/Age_length_plot.png}
+
+}
+
+\caption{\label{fig-AL_1}Age and length data, with fitted von
+Bertalanffy growth curves, by sex and data source for the
+Rougheye/Blackspotted rockfish complex. Sample sizes (N) are also
+provided.}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/Lt_age_CV_FM.png}
+
+}
+
+\caption{\label{fig-AL_2}Coefficient of variation by age and sex for all
+sources of Rougheye/Blackspotted rockfishes ages. Sample sizes (N) are
+also indicated by size of the point. The line is a smoothed loess
+(polynomial) line that gives a moving average of CV by age and sex.}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/L_W_plots.png}
+
+}
+
+\caption{\label{fig-LW1}Length and weight samples by sex and data
+source. Lines are the power function fits by data source.}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/F_M_ltwt_plot.png}
+
+}
+
+\caption{\label{fig-LW2}Realized length and weight relationships for
+female and male Rougheye/Blackspotted Rockfishes.}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
 \includegraphics{plots_4_doc/compare4_Bratio_uncertainty.png}
 
 }
@@ -1793,158 +2317,7 @@ Rougheye/Blackspotted Rockfishes assessment.}
 
 \newpage{}
 
-\subsection*{Appendices}\label{sec-appendix}
-\addcontentsline{toc}{subsection}{Appendices}
-
-\phantomsection\label{refs}
-\begin{CSLReferences}{1}{0}
-\bibitem[\citeproctext]{ref-cope_assessments_2016}
-Cope, J. M., David B. Sampson, Andi Stephens, Meisha Key, Patrick P.
-Mirick, Megan M. Stachura, Tien-Shui Tsou, et al. 2016. {``Assessments
-of {California}, {Oregon}, and {Washington} Stocks of Black Rockfish
-(\emph{{Sebastes} Melanops}) in 2015.''} Pacific Fishery Management
-Council, 7700 Ambassador Place NE, Suite 200, Portland, OR 97220:
-Pacific Fishery Management Council.
-
-\bibitem[\citeproctext]{ref-dick_estimates_2010}
-Dick, E. J., and A. D MacCall. 2010. {``Estimates of Sustainable Yield
-for 50 Data-Poor Stocks in the {Pacifc} Coast Ground {Fishery}
-{Management} {Plan}.''} \emph{NOAA Technical Memorandum NMFS}
-NOAA-TM-NMFS-SWFSC-460.
-
-\bibitem[\citeproctext]{ref-douglas_species_1998}
-Douglas, David A., and Oregon Fish Division. 1998. {``Species
-Composition of Rockfish in Catches by {Oregon} Trawlers, 1963-93.''}
-Marine \{Program\}.
-
-\bibitem[\citeproctext]{ref-francis_data_2011}
-Francis, R. I. C. Chris. 2011. {``Data Weighting in Statistical
-Fisheries Stock Assessment Models.''} \emph{Canadian Journal of
-Fisheries and Aquatic Sciences} 68 (6): 1124--38.
-\url{https://doi.org/10.1139/f2011-025}.
-
-\bibitem[\citeproctext]{ref-gharrett_genetically_2006}
-Gharrett, A. J., C. W. Mecklenburg, L. W. Seeb, Z. Li, A. P. Matala, A.
-K. Gray, and J. Heifetz. 2006. {``Do {Genetically} {Distinct} {Rougheye}
-{Rockfish} {Sibling} {Species} {Differ} {Phenotypically}?''}
-\emph{Transactions of the American Fisheries Society} 135 (3): 792--800.
-\url{https://doi.org/10.1577/T05-136.1}.
-
-\bibitem[\citeproctext]{ref-gharrett_two_2005}
-Gharrett, Anthony J., Andrew P. Matala, Eric L. Peterson, Andrew K.
-Gray, Zhouzhou Li, and Jonathan Heifetz. 2005. {``Two {Genetically}
-{Distinct} {Forms} of {Rougheye} {Rockfish} {Are} {Different}
-{Species}.''} \emph{Transactions of the American Fisheries Society} 134
-(1): 242--60. \url{https://doi.org/10.1577/T04-055.1}.
-
-\bibitem[\citeproctext]{ref-harris_using_2019}
-Harris, Jeremy P., Charles Hutchinson, and Sharon Wildes. 2019. {``Using
-Otolith Morphometric Analysis to Improve Species Discrimination of
-Blackspotted Rockfish ({Sebastes} Melanostictus) and Rougheye Rockfish
-({S}. Aleutianus).''} \emph{Fishery Bulletin} 117 (3): 234--45.
-\url{https://go.gale.com/ps/i.do?p=AONE&sw=w&issn=00900656&v=2.1&it=r&id=GALE\%7CA603632222&sid=googleScholar&linkaccess=abs}.
-
-\bibitem[\citeproctext]{ref-hawkins_genetic_2005}
-Hawkins, Sharon L., Jonathan Heifetz, Christine M. Kondzela, John Pohl,
-Richard L. Wilmot, Oleg N. Katugin, and Vladimir N. Tuponogov. 2005.
-{``Genetic Variation of Rougheye Rockfish ({Sebastes} Aleutianus) and
-Shortraker Rockfish ({S}. Borealis) Inferred from Allozymes.''}
-\emph{Fishery Bulletin} 103 (3): 524--35.
-
-\bibitem[\citeproctext]{ref-hawkins_genetic_1997}
-Hawkins, Sharon, Jonathan Heifetz, and John Pohl. 1997. {``Genetic
-Population Structure of Rougheye Rockfish ({Sebastes} Aleutianus)
-Inferred from Allozyme Variation.''} National \{Marine\} \{Fisheries\}
-\{Service\}, \{Alaska\} \{Fishery\} \{Science\} \{Quarterly\} \{Report\}
-July - August - September.
-
-\bibitem[\citeproctext]{ref-hicks_status_2013}
-Hicks, Allan C, Chantell Wetzel, and John Harms. 2013. {``The Status of
-Rougheye Rockfish ({Sebastes} Aleutianus) and Blackspotted Rockfish
-({S}. Melanostictus) as a Complex Along the {U}.{S}. {West} {Coast} in
-2013.''} Pacific Fishery Management Council, 7700 Ambassador Place NE,
-Suite 200, Portland, OR 97220.
-
-\bibitem[\citeproctext]{ref-jordan_fishes_1898}
-Jordan, David Starr, and Barton Warren Evermann. 1898. {``The Fishes of
-{North} and {Middle} {America}: {A} Descriptive Catalogue of the Species
-of Fish-Like Vertebrates Found in the Waters of {North} {America}, North
-of the {Isthmus} of {Panama}, Pt. {II}.''} \emph{Bulletin of the United
-States National Museum} 47: 1241--2183.
-
-\bibitem[\citeproctext]{ref-love_certainly_2011}
-Love, M. S. 2011. \emph{Certainly {More} {Than} {You} {Want} to {Know}
-{About} the {Fishes} of the {Pacific} {Coast}}. Really Big Press.
-
-\bibitem[\citeproctext]{ref-love_rockfishes_2002}
-Love, M. S., M. Yoklavich, and L. Thorsteinson. 2002. \emph{The
-{Rockfishes} of the {Northeast} {Pacific}}. 1st Edition. Berkeley:
-University of California Press.
-
-\bibitem[\citeproctext]{ref-matsubara_1934}
-Matsubara, K. 1934. {``Studies on the Scorpaenoid Fishes of Japan. I.
-Descriptions of One New Genus and Five New Species.''} \emph{Journal of
-the Imperial Fishery Institute} 30: 199.
-\url{https://cir.nii.ac.jp/crid/1370283693151216527}.
-
-\bibitem[\citeproctext]{ref-mcallister_bayesian_1997}
-McAllister, M. K., and J. N. Ianelli. 1997. {``Bayesian Stock Assessment
-Using Catch-Age Data and the Sampling --- Importance Resampling
-Algorithm.''} \emph{Canadian Journal of Fisheries and Aquatic Sciences}
-54 (2): 284--300. \url{https://doi.org/10.1139/f96-285}.
-
-\bibitem[\citeproctext]{ref-McClure:2023:VCC}
-McClure, Michelle M., Melissa A. Haltuch, Ellen Willis-Norton, David D.
-Huff, Elliott L. Hazen, Lisa G. Crozier, Michael G. Jacox, et al. 2023.
-{``Vulnerability to Climate Change of Managed Stocks in the {California
-Current} Large Marine Ecosystem.''} \emph{Frontiers in Marine Science}
-10. \url{https://doi.org/10.3389/fmars.2023.1103767}.
-
-\bibitem[\citeproctext]{ref-niska_species_1976}
-Niska, Edwin L. 1976. {``Species {Compositionof} Rockfish in Catches by
-{Oregon} {Trawlers}, 1963-71.''} Informational \{Report\} 76-7.
-
-\bibitem[\citeproctext]{ref-orr_species_2008}
-Orr, James W., and Sharon Hawkins. 2008. {``Species of the Rougheye
-Rockfish Complex: Resurrection of {Sebastes} Melanostictus ({Matsubara},
-1934) and a Redescription of {Sebastes} Aleutianus ({Jordan} and
-{Evermann}, 1898)({Teleostei}: {Scorpaeniformes}).''} \emph{Fishery
-Bulletin} 106 (2): 111--34. \url{http://aquaticcommons.org/8844/}.
-
-\bibitem[\citeproctext]{ref-rogers_status_1996}
-Rogers, J. S., M. Wilkins, D. Kamakawa, Farron R. Wallace, T. Builder,
-M. Zimmerman, M. Kander, and B. Culver. 1996. {``Status of the
-{Remaining} {Rockfish} in the {Sebastes} {Complex} in 1996 and
-Recommendations for Management in 1997.''} Pacific Fishery Management
-Council 2130 SW fifth Ave. Suite 224, Portland, Ore. 97210.
-
-\bibitem[\citeproctext]{ref-seeb_biochemical_1986}
-Seeb, L. W. 1986. \emph{Biochemical {Systematics} and {Evolution} of the
-{Scorpaenid} {Genus} {Sebastes}}. University of Washington.
-\url{https://books.google.com/books?id=CfJ6nQEACAAJ}.
-
-\bibitem[\citeproctext]{ref-thorson_model-based_2017}
-Thorson, James T., Kelli F. Johnson, R. D. Methot, and I. G. Taylor.
-2017. {``Model-Based Estimates of Effective Sample Size in Stock
-Assessment Models Using the {Dirichlet}-Multinomial Distribution.''}
-\emph{Fisheries Research} 192: 84--93.
-\url{https://doi.org/10.1016/j.fishres.2016.06.005}.
-
-\bibitem[\citeproctext]{ref-tsuyuki_contribution_1968}
-Tsuyuki, H., E. Roberts, R. H. Lowes, W. Hadaway, and S. J. Westrheim.
-1968. {``Contribution of {Protein} {Electrophoresis} to {Rockfish}
-({Scorpaenidae}) {Systematics}.''} \emph{Journal of the Fisheries
-Research Board of Canada} 25 (11): 2477--2501.
-\url{https://doi.org/10.1139/f68-216}.
-
-\bibitem[\citeproctext]{ref-tsuyuki_analyses_1970}
-Tsuyuki, H., and S. J. Westrheim. 1970. {``Analyses of the {Sebastes}
-Aleutianus--{S}. Melanostomus {Complex}, and {Description} of a New
-{Scorpaenid} {Species}, {Sebastes} Caenaematicus, in the {Northeast}
-{Pacific} {Ocean}.''} \emph{Journal of the Fisheries Research Board of
-Canada} 27 (12): 2233--54. \url{https://doi.org/10.1139/f70-252}.
-
-\end{CSLReferences}
+\subsection{Appendices}\label{sec-appendix}
 
 
 

@@ -95,12 +95,11 @@ Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is 
 
 
 ## Biological Parameters
-The major biological inputs to the models are natural mortality, age and growth parameters, weight-length, maturity and stock-recruitment parameters. The following sections outline the treatment of each section.
+
 
 ### Natural Mortality
-Natural mortality is a highly influential parameter in age-structured stock assessments. It defines the rate of natural death by age, and thus establishes a stable age-structure and expectation of longevity, and interacts with growth and reproduction to determine stock productivity. It is a very difficult parameter to directly measure, thus empirical relationships based on life history parameters are often used to indirectly determine its value or build prior distributions in belief of what it is in the event we do attempt to estimate it in the model (@cope_upgrading_2022; @hamel_development_2022; @maunder_review_2023). If length and age data are available, it may be possible to estimate it in the model.
 
-An estimate of maximum age tends to be the most reliable life history parameter related to natural mortality to inform its estimation. @cope_upgrading_2022 ([The Natural Mortality Tool](https://connect.fisheries.noaa.gov/natural-mortality-tool/)) provide the most up-to-date examination of the relationship between maximum age and natural mortality
+
 
 \begin{centering}
 
@@ -110,15 +109,8 @@ $M=\frac{5.4}{A_{\text{max}}}$
 
 \vspace{0.5cm}
 
-where $M$ is natural mortality and ${A_{\text{max}}}$ is the assumed maximum age. The prior is defined as a lognormal distribution with mean $ln(5.4/A_{\text{max}})$ and standard error = 0.31. This is the equation typically used to estimate a natural mortality point estimate, but is underpinned by the choice of the value of ${A_{\text{max}}}$. This equation assumes that the proportion of the stable population at this maximum age is 0.4517%. If we take humans as an example, the longest lived human is 122 years. This is not the maximum age, but the oldest ever recorded age. The maximum age that corresponds to 0.4517% of the population is around 100 years. For Rougheye/Blackspotted, the oldest ever aged individual is 205 years with unknown ageing error. We did not consider this as a realistic maximum age.
+where $M$ is natural mortality and ${A_{\text{max}}}$ is the assumed maximum age. The prior is defined as a lognormal distribution with mean $ln(5.4/A_{\text{max}})$ and standard error = 0.31.
 
-The 2013 U.S. west coast stock assessment used a prior built around a mean of 0.034 (corresponding to a maximum age of 163), but estimated natural mortality at 0.042 (maximum age between 128-129 years; Figure M). The 2023 Gulf of Alaska assessment built a prior conditional on a estimate of natural mortality from their 5 oldest aged individuals that ranged from 126-135 years. This resulted in a mean value of 0.042, similar to the 2013 U.S. west coast stock assessment. The 2023 Bering Sea/Aleutian Islands assessment used M = 0.05 (assumed longevity of 108), and the recent Canadian assessments considered a range of M values from 0.03 to 0.055 (assumed maximum ages of 180 to 98 years; @fig-Mcurves). 
-
-We attempt to estimate natural mortality, as was done in the 2013 U.S. West coast assessment. Examining the available age data, the oldest 10 individuals range from 139 to 165 and were all males. For females, the 10 oldest individuals range from 130 to 121 years. If those oldest ages were used in the @hamel_development_2022 longevity estimator, these ages would correspond to a range of natural mortality values of 0.033 to 0.039 for males, which include the mean of the prior used in the 2013 assessment. For females, it corresponds to natural mortality values of 0.039 to 0.045. All these assume that the sampled population has enough of an age structure still available for sampling, as opposed to having some level of age truncation from the theoretical unfished stable age distribution.  
-
-Related to this issue of possible age truncation, applying a catch curve analysis (taking the log of the abundance of numbers of samples in available age classes) on the aggregated ages across all age sources by sex, the total mortality (Natural + Fishing mortality= Total mortality) is 0.046 for females and 0.035 for males, which may indicate the natural mortality could be lower than that used in the 2013 assessment, but within the range of values considered in other areas (@fig-CC_Z). This also indicates the possibility of estimating sex-specific natural mortality, as natural mortality may differ by sex. The two sex model allows for this type of model specification exploration. Further exploration was done my truncating the upper ages considered, with the assumption that the older ages may also not be sampled fully (i.e., dome-shaped selectivity). We considered both 100 (@fig-CC_Z_100) and 80 (@fig-CC_Z_80) as upper age cut-offs. The less older individuals included, the higher the estimate of total mortality, and this a higher natural mortality. But we can see a general overestimate of how many older individuals are expected using these higher Z values, thus dome-shapeness does not see to explain the sampling of these older individuals.
-
-One challenge to estimating natural mortality within the model is the interaction of estimating dome-shaped selectivity with estimating natural mortality. If all fleets assume some level of dome-shaped selectivity, it is difficult to determine if the unseen larger, older individuals are due to natural death or fishing mortality. Typically, at least one major fleet needs to achieve full selectivity for the larger, older individuals. The 2013 assessment suggested some dome-shaped selectivity in the two major fleets, thus any natural mortality estimates are evaluated depending on the forms of fleet selectivity.
 
 
 ### Age and Growth Relationship
@@ -139,11 +131,11 @@ We note that the growth values being estimated in our data are notably different
 ### Ageing Bias and Precision
 Counting ages from ageing structures in long-lived, temparate fishes is challenging. Ages derived from these structures can be hard to reproduce within and between readers (i.e., imprecision), and may not contain the true age (i.e., bias). Stock assessment outputs can be affected by bias and imprecision in ageing, thus it is important to quantify and integrate this source of variability when fitting age data in assessments. In Stock Synthesis 3, this is done by including ageing error matrices that include the mean age (row 1) and standard deviation in age (row 2). Ageing bias is implemented when the inputted mean age deviates from the expected middle age for any given age bin (e.g., 1.75 inputted versus 1.5 being the true age); ageing imprecision is given as the standard deviation for each age bin.
 
-There are two main readers to assign to the available ages. Reader 1 read samples from the earliest period through 2018 and Reader 2 read samples from 2019 to 2022. Age bias plots show little bias within and between the readers (Figure ). 
+WDFW has two main readers to assign to the available ages. Reader 1 read samples from the earliest period through 2018 and Reader 2 read samples from 2019 to 2022. Age bias plots show little bias within and between the readers (Figure ). 
 
 Estimation of ageing error matrices used the approach of -@punt_quantifying_2008 and release 1.1.0 of the R package \href{https://github.com/pfmc-assessments/nwfscAgeingError}{nwfscAgeingError} [@thorson_nwfscageingerror:_2012]. The ageing error matrix offers a way to calculate both bias and imprecision in age reads. Reader 1 is always considered unbiased, but may be imprecise. Bias relative to the primary reader is given for the second or additional readers. Several model configurations are available for exploration based on either the functional form (e.g., constant CV, curvilinear standard deviation, or curvilinear CV) of the bias in the second read or reader or in the precision of the readers. Model selection uses AIC corrected for small sample size (AICc), which converges to AIC when sample sizes are large. Bayesian Information Criterion (BIC) was also considered when selecting a final model. Table XXXX provides model selection results of intra-reader comparisons for the two readers.
 
-The calculated bias relationships from the best fit model are shown in Figure XXXX and confirm small to little bias between readers. Figure XXXX shows the imprecision estimates of the best fit models. Each ageing error matrix was then applied to the appropriate time and fleet combination.
+The calculated bias relationships from the best fit model are shown in Figure \ref{fig:age-error-bias} and confirm small to little bias between readers. Figure \ref{fig:age-error-sd} shows the imprecision estimates of the best fit models. Each ageing error matrix was then applied to the appropriate time and fleet combination.
 
 
 ### Length-Weight Relationship

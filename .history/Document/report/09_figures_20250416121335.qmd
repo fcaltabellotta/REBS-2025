@@ -131,20 +131,7 @@ knitr::include_graphics(
 #| fig-alt: "Catch curve analysis for ages 21 to 100."
 
 knitr::include_graphics(
-  file.path(plot_dir, "Catch_curve_plot_FM_21_100.png")
-)
-``` 
-
-```{r} 
-#| label: fig-CC_Z_80
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Catch curve (log abundance by age) analysis on aggregated ages over all age sources by sex (black points). The peak selected age was 21 for both sexes with a max age of 80, so the linear model was run from age 21 until age 80 (red points). The slope of the linear model is equal to the estimate of an aggregate total mortality (Z)."
-#| fig-alt: "Catch curve analysis for ages 21 to 80."
-
-knitr::include_graphics(
-  file.path(plot_dir, "Catch_curve_plot_FM_21_80.png")
+  file.path(plot_dir, "Catch_curve_plot_FM.png")
 )
 ``` 
 
