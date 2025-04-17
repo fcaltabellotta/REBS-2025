@@ -16,6 +16,8 @@ when they were not used.
 
 ### Landings
 
+Recent commercial landings of rougheye rockfish (2000-2024 for Washington, 1987–2022 for Oregon and 1981–2022 for California,) were obtained from PacFIN, a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries 
+Service (NMFS). Catch data were extracted from PacFIN on April 21, 2015, by state and then combined into the fishing fleets used in the assessment. Time series of recent landings by fleet and state are reported in Table  X and shown in Figures X to X.
 
 #### Trawl
 
