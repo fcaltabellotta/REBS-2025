@@ -41,6 +41,11 @@ Comparison of rougheye rockfish historical landings by state and fleet between t
 
 
 ### Discards
+Historically, little to no discarding of rougheye rockfish was observed for rougheye rockfish, prior to the introduction of trip limits for rockfish in early 2000. 
+The historical discard information (often referred to as the Pikitch data) comes from a study by Ellen Pikitch that collected trawl discards from 1985–1987 (Pikitch et al. 1988). The study was conducted off the coast of Washington and Oregon with no participating vessels fishing off the coast of California (Pikitch et al. 1988; Rogers and Pikitch 1992). Participation in the study was voluntary and included vessels using bottom, midwater, and shrimp trawl gears. Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow, and recorded the weight of species retained and discarded in the sample. There were limited observations of rougheye rockfish in the Pikitch study.  Of 211 available rougheye rockfish catch records, only 33 have discard weight greater than zero. The sum of the ropugheye discard weight was 73.25 lbs while the sum of the utilized weight was 21,987.89 lbs, so that discard rate (discard weight over total weight) is of just 0.33%. 
+In 2002, the West Coast Groundfish Observer Program (WCGOP) was implemented on the West Coast of the United States, which began with gathering bycatch and discard information for the limited entry trawl and fixed gear fleets. Observer coverage has expanded to include the California halibut trawl, the nearshore fixed gear and pink shrimp trawl fisheries. Since 2011, trawl fisheries have been managed with catch shares under a system of annual individual fishing quotas (IFQs) for the shoreside sector (i.e., vessels delivering to shoreside processors) and harvest cooperatives for the at-sea hake sectors (catcher-processors who catch and process hake at sea; and Motherships, factory processors that take delivery of hake from catcher vessels at sea). Constant monitoring of catch using observers or electronic monitoring (EM) is required to participate in the trawl catch share fishery. 
+
+
 #### Trawl
 
 
