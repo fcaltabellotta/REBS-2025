@@ -58,7 +58,7 @@ While stock-specific OFLs/ABCs were not historically set for `r Spp` specificall
 
 ## Fisheries off Canada and Alaska
 
-Rougheye Rockfish are distributed throughout Canada and Alaska and are commonly caught in trawl and hook & line fisheries.  Alaska conducts assessments biennially for the Rougheye/Blackspotted complex, but Canada has not completed a formal assessment of this species.  The fisheries and assessments for each country are described below.
+Rougheye rockfish are distributed throughout Canada and Alaska and are commonly caught in trawl and hook & line fisheries.  Alaska conducts assessments biennially for the Rougheye/Blackspotted complex, but Canada has not completed a formal assessment of this species.  The fisheries and assessments for each country are described below.
 
 Rougheye rockfish have been managed as a bycatch only species in Alaska since 1991 with catches ranging between 130 and 2,418 mt (Shotwell et al. 2011 REPLACE WITH NEWER ASSESSMENT). In 2011, 65% of the catch was from bottom trawls, 29% from longline fisheries, and the remaining 6% from pelagic trawls.  The rougheye/blackspotted complex in Alaska had total allowable catch (TAC) levels established in 2005, which have generally been between 30% and 40% of the potential quota. 
 
