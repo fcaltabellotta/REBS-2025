@@ -29,7 +29,7 @@ The Oregon PacFIN landings for the period between 1987 and 1999 were supplemente
 
 The California historical landings were informed by several sources. Landings from the most recent “historical” period (between 1969 and 1980) were available from the CalCOM database for the California Cooperative Survey (CalCOM) database. Earlier landing records (between 1931 and 1968) were reconstructed by the Southwest Fisheries Science Center (Ralston et al. 2010). 
 
-Comparison of rougheye rockfish historical landings by state and fleet between this and 2013 assessment is provided in Figure 5. Historical Oregon and California landings did not change. Slight discrepancies between California landings used in the 2019 and 2023 assessments in Figure 5 are caused by the fact that fishing year in 2019 model was defined from November of previous year to October of current year, since North and South fleets were further divided into Winter and Summer fisheries. We did not have access to original annual landings used in 2013 full assessment and then in 2019 update assessment, and therefore comparison between California landings used in the 2019 and 2023 assessments in Figure 5 is approximate, but still able to illustrate that California landings did not change. The noticeable difference in this assessment from 2019 model is in Washington landings. This year Washington Department of Fish and Wildlife completed historical catch reconstruction of rougheye rockfish, and newly estimated landings are lower than those used in previous assessment. Historical landings in 2013 assessment were based on preliminary estimates and might have included catches from Puget Sound and Canadian waters (pers. comm. T. Tsou, WDFW). New Washington historical landings are more consistent with history of commercial removals on the U.S. West Coast and represent improvement to the assessment. 
+Comparison of rougheye rockfish historical landings by state and fleet between this and 2013 assessment is provided in Figure X. Historical Oregon and California landings did not change. Slight discrepancies between California landings used in the 2019 and 2023 assessments in Figure X are caused by the fact that fishing year in 2019 model was defined from November of previous year to October of current year, since North and South fleets were further divided into Winter and Summer fisheries. We did not have access to original annual landings used in 2013 full assessment and then in 2019 update assessment, and therefore comparison between California landings used in the 2019 and 2023 assessments in Figure X is approximate, but still able to illustrate that California landings did not change. The noticeable difference in this assessment from 2019 model is in Washington landings. This year Washington Department of Fish and Wildlife completed historical catch reconstruction of rougheye rockfish, and newly estimated landings are lower than those used in previous assessment. Historical landings in 2013 assessment were based on preliminary estimates and might have included catches from Puget Sound and Canadian waters (pers. comm. T. Tsou, WDFW). New Washington historical landings are more consistent with history of commercial removals on the U.S. West Coast and represent improvement to the assessment. 
 
 #### Trawl
 
@@ -82,7 +82,25 @@ Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is 
 <!-- Fishery-independent data: Description of surveys used in the assessment, description of methods to estimate abundance indices, sample size information for length- and age- composition data by survey and year, including both the number of tows (or drops or sites for hook and line data) and fish sampled. Include complete tables and figures and date of data extraction.   -->
 
 ### Abundance indices
+
+Given Rougheye/Blackspotted are associated with deep, structured habitats, it can be difficult to survey them with trawl gear. Four general fishery-independent bottom trawl surveys were used in the 2013 assessment, and are again included in this assessment:
+
+* Triennial (every three years) survey (1980-2004)
+* Alaska Fishery Science Center Slope survey (1997-2001)
+* Northwest Fisheries Science Center Slope Center (1999-2001)
+* West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)
+
+Only the WCGBTS has new data for this assessment, but new methods (spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/)) to develop an index of abundance were applied to all surveys to update all indices. Two distributions (gamma and lognormal) were considered, as was the case in 2013 model when a non-spatial generalized linear mixed model was used to develop indices of abundance.
+
+Comparing the standardized versions (i.e., Z-scores, which puts all the indices on the same scale for better comparison of trends) of the indices shows very similar trends among each model output, suggesting little difference in choice of model type. The variance in the indices is generally high (0.3-0.5), suggesting the information content in these indices is low. This is not a surprise given the challenge of sampling these species with trawl gear. Overall, catches densities are highest in northern Oregon and Washington. 
+
 #### NWFSC West Coast Groundfish Bottom Trawl Survey
+
+The data were truncated to depths less than 875 m prior to modelling given that there were zero positive encounters in depths deeper than 875 m. The prediction grid was also truncated to only include available survey locations in depths between 55-875 m to limit extrapolating beyond the data and edge effects. 
+
+The response variable in the model was catch (mt) with an offset of area (km2) to account for differences in effort. Fixed effects were estimated for each year. The following additional covariate was included: pass. 
+
+Spatial variation, but not spatiotemporal variation, was included in the encounter probability and the positive catch rate model. Spatial variation was approximated using 200 knots, where more knots led to non-estimable standard errors.
 
 
 #### NWFSC Slope Survey
