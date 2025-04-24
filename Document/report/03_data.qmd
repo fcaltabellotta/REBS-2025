@@ -16,8 +16,8 @@ when they were not used.
 
 ### Landings
 #### Recent landings
-Recent commercial landings of rougheye rockfish (2000-2024 for Washington, 1987–2022 for Oregon and 1981–2022 for California,) were obtained from PacFIN, a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries 
-Service (NMFS). Catch data were extracted from PacFIN on April 21, 2015, by state and then combined into the fishing fleets used in the assessment. Time series of recent landings by fleet and state are reported in Table  X and shown in Figures X to X.
+Recent commercial landings of rougheye rockfish (2000-2024 for Washington, 1987–2024 for Oregon and 1981–2024 for California,) were obtained from PacFIN, a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries 
+Service (NMFS). Catch data were extracted from PacFIN on April 21, 2025, by state and then combined into the fishing fleets used in the assessment. Time series of recent landings by fleet and state are reported in Table  X and shown in Figures X to X.
 
 #### Historical Landings
 Historical landings of rougheye rockfish were reconstructed by state, by year. 
@@ -25,7 +25,7 @@ Historical landings of rougheye rockfish were reconstructed by state, by year.
 The Washington historical landings (1908–2000) were provided by Washington Department of Fish and Wildlife, who recently conducted historical catch reconstruction for rockfish special including rougheye rockfish (pers. comm. T. Tsou, Washington Department of Fish and Wildlife (WDFW)). 
 
 The Oregon historical landings (1896–1986) were obtained from Oregon historical catch reconstruction, conducted by Oregon Department of Fish and Wildlife in collaboration with NWFSC (Karnowski et al. 2014). 
-The Oregon PacFIN landings for the period between 1987 and 1999 were supplemented with the additional estimates of rougheye rockfish landings reported within unspecified rockfish market categories, provided by the ODFW. It was recently determined that a portion of Oregon commercial rockfish landings reside in unspecified rockfish market categories in PacFIN (i.e., URCK and POP1). 
+The Oregon PacFIN landings for the period between 1987 and 1999 were supplemented with the additional estimates of rougheye rockfish landings reported within unspecified rockfish market categories, provided by the ODFW. It was recently determined that a portion of Oregon commercial rockfish landings reside in unspecified rockfish market categories in PacFIN (i.e., URCK and POP1; @ODFW_URCK_POP_recon). 
 
 The California historical landings were informed by several sources. Landings from the most recent “historical” period (between 1969 and 1980) were available from the CalCOM database for the California Cooperative Survey (CalCOM) database. Earlier landing records (between 1931 and 1968) were reconstructed by the Southwest Fisheries Science Center (Ralston et al. 2010). 
 
