@@ -248,7 +248,7 @@
 U.S. West Coast in 2025}
 \author{Jason M. Cope \and Vladlena Gertseva \and R. Claire
 Rosmond \and Fabio P. Caltabellotta \and Alison D. Whitman}
-\date{2025-04-21}
+\date{2025-04-22}
 
 \begin{document}
   \begin{titlepage}
@@ -719,29 +719,27 @@ Alaska}\label{fisheries-off-canada-and-alaska}
 
 Rougheye Rockfish are distributed throughout Canada and Alaska and are
 commonly caught in trawl and hook \& line fisheries. Alaska conducts
-assessments biennially for the Rougheye/Blackspotted complex, but Canada
-has not completed a formal assessment of this species. The fisheries and
-assessments for each country are described below.
+assessments biennially for the Rougheye/Blackspotted complex, and two
+have been recently done: one for the Bering Sea and Aluetian Islands
+(Spencer, Ianelli, and Laman 2003) and the other for the Gulf of Alaska
+(Sullivan et al. 2023). Canada completed an assessment in 2020 (Starr
+and Haigh 2020). The fisheries and assessments for each country are
+described below.
 
 Rougheye rockfish have been managed as a bycatch only species in Alaska
-since 1991 with catches ranging between 130 and 2,418 mt (Shotwell et
-al.~2011 REPLACE WITH NEWER ASSESSMENT). In 2011, 65\% of the catch was
-from bottom trawls, 29\% from longline fisheries, and the remaining 6\%
-from pelagic trawls. The rougheye/blackspotted complex in Alaska had
-total allowable catch (TAC) levels established in 2005, which have
-generally been between 30\% and 40\% of the potential quota.
-
-The last full assessment for rougheye rockfish in Alaska was done in
-2011 (Shotwell et al.~2011 REPLACE WITH NEWER ASSESSMENT), although was
-updated in 2012 with recent catch information. The assessment used
-catches, fishery age and size compositions, trawl and longline survey
-biomass estimates, trawl survey age compositions, and longline survey
-size compositions. Natural mortality was estimated using a prior with a
-mean of 0.03 (from McDermott (1994)) and an arbitrary small coefficient
-of variation of 10\%. The estimated natural mortality was 0.034. Female
-spawning biomass was well above the target of B40\% and the allowable
-biological catch (ABC) for 2012 was 1,223 mt. The stock is not estimated
-to be overfished and it is not likely that overfishing is occurring.
+since 1991 with catches ranging between 130 and 2,418 mt and peaking in
+the late 1980s and early 1990s (Sullivan et al. 2023). Generally, about
+55-75\% of the catch are trawl-caught and 30-45\% from hook-and-line
+(mainly, longline) fisheries. Since 2017 the move to pot gear in the
+sablefish fishery has decreased the longline catches. Discards since
+2013 have ranged from 11.6\% (in 2023) and 45\% (in 2018). The
+Rougheye/Blackspotted complex catch levels generally are between 20\%
+and 60\% of the Total Allowable Catch since the 2005 when the complex
+began to be managed separately. The most recent age-structured
+integrated stock assessments of this complex in the Bering Sea and
+Aluetian Islands (Spencer, Ianelli, and Laman 2003) and for the Gulf of
+Alaska (Sullivan et al. 2023) do not indicate either overfishing or the
+stocks being overfished.
 
 Canada identified two species of rougheye rockfish (Type I and Type II)
 in 2007 and designated both species of special concern, which means that
@@ -760,10 +758,13 @@ blackspotted rockfishes (Canada 2012). Five high priority and seven low
 priority actions have been identified to address the threats to the
 populations and support the management goal.
 
-The species pair is targeted in some areas of British Columbia waters
-and occurs frequently in the bottom trawl and hook \& line fisheries.
-Recent catches have fluctuated around 1,000 mt and the coastwide Total
-Allowable Catch (TAC) for 2012 was 1,140 mt.
+The first Canadian stock assessment for these species, using a
+integrated catch-at-age model, was conducted in 2022 to estimated stock
+status of two Rougheye/Blackspotted (REBS) rockfishes management units
+(REBS north and REBS south) a the beginning of 2021. The REBS north
+stock was in the healthy zone in the reference model. The REBS south
+stock was likely in the healthy zone, but with an elevated possibility
+of being in the cautious zone.
 
 \newpage{}
 
@@ -824,16 +825,16 @@ Cooperative Survey (CalCOM) database. Earlier landing records (between
 Center (Ralston et al.~2010).
 
 Comparison of rougheye rockfish historical landings by state and fleet
-between this and 2013 assessment is provided in Figure 5. Historical
+between this and 2013 assessment is provided in Figure X. Historical
 Oregon and California landings did not change. Slight discrepancies
 between California landings used in the 2019 and 2023 assessments in
-Figure 5 are caused by the fact that fishing year in 2019 model was
+Figure X are caused by the fact that fishing year in 2019 model was
 defined from November of previous year to October of current year, since
 North and South fleets were further divided into Winter and Summer
 fisheries. We did not have access to original annual landings used in
 2013 full assessment and then in 2019 update assessment, and therefore
 comparison between California landings used in the 2019 and 2023
-assessments in Figure 5 is approximate, but still able to illustrate
+assessments in Figure X is approximate, but still able to illustrate
 that California landings did not change. The noticeable difference in
 this assessment from 2019 model is in Washington landings. This year
 Washington Department of Fish and Wildlife completed historical catch
@@ -891,8 +892,57 @@ Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is 
 
 \subsubsection{Abundance indices}\label{abundance-indices}
 
+Given Rougheye/Blackspotted are associated with deep, structured
+habitats, it can be difficult to survey them with trawl gear. Four
+general fishery-independent bottom trawl surveys were used in the 2013
+assessment, and are again included in this assessment:
+
+\begin{itemize}
+\tightlist
+\item
+  Triennial (every three years) survey (1980-2004)
+\item
+  Alaska Fishery Science Center Slope survey (1997-2001)
+\item
+  Northwest Fisheries Science Center Slope Center (1999-2001)
+\item
+  West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)
+\end{itemize}
+
+Only the WCGBTS has new data for this assessment, but new methods
+(spatial and spatiotemporal GLMMs with TMB or
+\href{https://pbs-assess.github.io/sdmTMB/}{sdmTMB}) to develop an index
+of abundance were applied to all surveys to update all indices. Two
+distributions (gamma and lognormal) were considered, as was the case in
+2013 model when a non-spatial generalized linear mixed model was used to
+develop indices of abundance.
+
+Comparing the standardized versions (i.e., Z-scores, which puts all the
+indices on the same scale for better comparison of trends) of the
+indices shows very similar trends among each model output, suggesting
+little difference in choice of model type. The variance in the indices
+is generally high (0.3-0.5), suggesting the information content in these
+indices is low. This is not a surprise given the challenge of sampling
+these species with trawl gear. Overall, catches densities are highest in
+northern Oregon and Washington.
+
 \paragraph{NWFSC West Coast Groundfish Bottom Trawl
 Survey}\label{nwfsc-west-coast-groundfish-bottom-trawl-survey}
+
+The data were truncated to depths less than 875 m prior to modelling
+given that there were zero positive encounters in depths deeper than 875
+m. The prediction grid was also truncated to only include available
+survey locations in depths between 55-875 m to limit extrapolating
+beyond the data and edge effects.
+
+The response variable in the model was catch (mt) with an offset of area
+(km2) to account for differences in effort. Fixed effects were estimated
+for each year. The following additional covariate was included: pass.
+
+Spatial variation, but not spatiotemporal variation, was included in the
+encounter probability and the positive catch rate model. Spatial
+variation was approximated using 200 knots, where more knots led to
+non-estimable standard errors.
 
 \paragraph{NWFSC Slope Survey}\label{nwfsc-slope-survey}
 
@@ -2132,6 +2182,24 @@ Council 2130 SW fifth Ave. Suite 224, Portland, Ore. 97210.
 Seeb, L. W. 1986. \emph{Biochemical {Systematics} and {Evolution} of the
 {Scorpaenid} {Genus} {Sebastes}}. University of Washington.
 \url{https://books.google.com/books?id=CfJ6nQEACAAJ}.
+
+\bibitem[\citeproctext]{ref-spencer_assessment_2023}
+Spencer, Paul D, James N Ianelli, and Ned Laman. 2003. {``Assessment of
+the {Blackspotted} and {Rougheye} {Rockfish} {Stock} {Complex} in the
+{Bering} {Sea} and {Aleutian} {Islands}.''} \{NPFMC\} \{Bering\} \{Sea\}
+and \{Aleutian\} \{Islands\} \{SAFE\}.
+
+\bibitem[\citeproctext]{ref-starr_rougheyeblackspotted_2020}
+Starr, P J, and R Haigh. 2020. {``Rougheye/{Blackspotted} {Rockfish}
+({Sebastes} Aleutianus/Melanostictus) Stock Assessment for {British}
+{Columbia} in 2020.''} \emph{DFO Can. Sci. Advis. Sec. Res. Doc.}
+2020/020: 384.
+
+\bibitem[\citeproctext]{ref-sullivan_assessment_2023}
+Sullivan, J. Y., J. A. Zahner, M. C. Siple, and B. E. Ferriss. 2023.
+{``Assessment of the {Rougheye} and {Blackspotted} {Rockfish} Stock
+Complex in the {Gulf} of {Alaska}.''} \{NPFMC\} \{Gulf\} of \{Alaska\}
+\{SAFE\}.
 
 \bibitem[\citeproctext]{ref-thorson_nwfscageingerror:_2012}
 Thorson, J. T., Ian J. Stewart, and A. E. Punt. 2012.

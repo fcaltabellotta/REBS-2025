@@ -64,7 +64,13 @@ Rougheye rockfish have been managed as a bycatch only species in Alaska since 19
 
 Canada identified two species of rougheye rockfish (Type I and Type II) in 2007 and designated both species of special concern, which means that they may become threatened or endangered because of a combination of biological characteristics and identified threats [@cosewic_2007]. This designation was given because biomass estimates are uncertain and no strong trends are observed, there is evidence of truncation of the age distribution and overall mortality has doubled, it is a long-lived, low-fecundity Sebastes species, which is susceptible to population collapse and slow recovery, and because the difficulty in separating the two species may result in potential impacts on one of the species going unnoticed. Subsequently, the species were identified as rougheye rockfish and blackspotted rockfish and a management plan was created in 2012 with a goal of sustaining the populations of rougheye and blackspotted rockfishes [@fisheries_and_oceans_canada_management_2012]. Five high priority and seven low priority actions have been identified to address the threats to the populations and support the management goal. 
 
-The first Canadian stock assessment for these species, using a integrated catch-at-age model, was conducted in 2022 to estimated stock status of two Rougheye/Blackspotted (REBS) rockfishes management units (REBS north and REBS south) a the beginning of 2021. The REBS north stock was in the healthy zone in the reference model. The REBS south stock was likely in the healthy zone, but with an elevated possibility of being in the cautious zone. 
+The first stock assessment, using a integrated catch-at-age model, was conducted in 2022 to estimated stock status of two Rougheye/Blackspotted (REBS) rockfishes management units (REBS north and REBS south) a the beginning of 2021. The REBS north stock was in the healthy zone in the reference model, as well as in all of the sensitivity runs. The REBS south stock was likely in the healthy zone, but with an elevated possibility of being in the cautious zone. 
+
+The species pair is targeted in some areas of British Columbia waters and occurs frequently in the bottom trawl and hook & line fisheries. Recent catches have fluctuated around 1,000 mt and the coastwide Total Allowable Catch (TAC) for 2012 was 1,140 mt.
+
+
+
+
 
 
 
