@@ -139,7 +139,7 @@ Initial sample sizes for the length and conditional age-at-length compositions w
 
 Besides the additional of eight years of data and some changes in the estimation of some parameters, the biggest changes to the 2015 assessment are:
 
-- Change in the removal history, particularly updates to historical data and new catches since 2013. The updated historical catches cause only small changes when applied to the 2013 stock assessment model .
+- Change in the removal history, particularly updates to historical data and new catches since 2013.
 - Adding discard fleets instead of using retention curves.
 - Using spatio-temporal approaches (sdmTMB) to define indices of abundance versus the former GLMM approach.
 - Adding more biological compositions, mainly in years since 2013, but also some historical ages.

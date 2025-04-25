@@ -10,21 +10,42 @@ abline(h=95,v=80,col="red")
 library(pivottabler)
 library(openxlsx)
 
-load("C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/PacFIN/PacFIN.BSPR--REYE--UDW1.bds.22.Apr.2025.RData")
+load("C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/PacFIN/2025-04-24/PacFIN.BSPR--REYE--UDW1.bds.24.Apr.2025.RData")
 
 qhpvt(subset(bds.pacfin,AGENCY_CODE=="O"),rows="SAMPLE_YEAR",columns="FINAL_FISH_AGE_IN_YEARS","n()")
 
 
 pt <- PivotTable$new()
 pt$addData(bds.pacfin)
-pt$addColumnDataGroups("FINAL_FISH_AGE_IN_YEARS")
 pt$addColumnDataGroups("AGENCY_CODE")
+pt$addColumnDataGroups("FINAL_FISH_AGE_IN_YEARS")
 pt$addRowDataGroups("SAMPLE_YEAR")
 pt$defineCalculation(calculationName="TotalAges", summariseExpression="n()")
 pt$evaluatePivot()
 
 wb <- createWorkbook(creator = Sys.getenv("USERNAME"))
-addWorksheet(wb, "Data")
+addWorksheet(wb, "Ages_by_year_agency")
 pt$writeToExcelWorksheet(wb=wb, wsName="Ages_by_year_agency", 
                          topRowNumber=1, leftMostColumnNumber=1, applyStyles=FALSE)
-saveWorkbook(wb, file="C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/PacFIN/AgesPVT.xlsx", overwrite = TRUE)
+saveWorkbook(wb, file="C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/PacFIN/2025-04-24/AgesPVT.xlsx", overwrite = TRUE)
+
+bds.pacfin.ages<-bds.pacfin[!is.na(bds.pacfin$FINAL_FISH_AGE_IN_YEARS),]
+
+pt <- PivotTable$new()
+pt$addData(bds.pacfin.ages)
+pt$addColumnDataGroups("agedby1")
+pt$addColumnDataGroups("FINAL_FISH_AGE_IN_YEARS")
+pt$addRowDataGroups("AGENCY_CODE")
+pt$addRowDataGroups("SAMPLE_YEAR")
+pt$defineCalculation(calculationName="TotalAges", summariseExpression="n()")
+pt$evaluatePivot()
+
+wb <- createWorkbook(creator = Sys.getenv("USERNAME"))
+addWorksheet(wb, "Ages_by_year_reader")
+pt$writeToExcelWorksheet(wb=wb, wsName="Ages_by_year_reader", 
+                         topRowNumber=1, leftMostColumnNumber=1, applyStyles=FALSE)
+saveWorkbook(wb, file="C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/PacFIN/2025-04-24/Ages_Reader_PVT.xlsx", overwrite = TRUE)
+
+
+#
+write.csv(bds.pacfin.ages[,c(61,87:89,93:95)],"C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/Age exchanges/pacfin_reads.csv")

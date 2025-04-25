@@ -105,77 +105,12 @@ knitr::include_graphics(
 #| warning: false 
 #| eval: true 
 #| fig-cap: "Landings across all states for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
-#| fig-alt: "Landings comparisons between landings used in 2013 to updated landings."
+#| fig-alt: "Landings comparisons from 2013 to update landings."
 
 knitr::include_graphics(
-  file.path(plot_dir, "Catch_comp_all.png")
+  file.path(model_dir, "plots", "data_plot.png")
 )
-```
-
-```{r} 
-#| label: fig-Ct_CA
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "California state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
-#| fig-alt: "Landings comparisons for California between landings used in 2013 to updated landings."
-
-knitr::include_graphics(
-  file.path(plot_dir, "Catch_comp_CA.png")
-)
-```
-
-```{r} 
-#| label: fig-Ct_OR
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Oregon state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
-#| fig-alt: "Landings comparisons for Oregon between landings used in 2013 to updated landings."
-
-knitr::include_graphics(
-  file.path(plot_dir, "Catch_comp_OR.png")
-)
-```
-
-```{r} 
-#| label: fig-Ct_WA
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "WA. Washington state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
-#| fig-alt: "Landings comparisons for Washington between landings used in 2013 to updated landings."
-
-knitr::include_graphics(
-  file.path(plot_dir, "Catch_comp_WA.png")
-)
-```
-
-```{r} 
-#| label: fig-Ct_compsSO
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Spawning output comparison using different historical catches."
-
-knitr::include_graphics(
-  file.path(plot_dir, "compare1_spawnbio_updatedCt.png")
-)
-```
-
-```{r} 
-#| label: fig-Ct_compsRSS
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of relative spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Relative stock status comparison using different historical catches."
-
-knitr::include_graphics(
-  file.path(plot_dir, "compare3_Bratio_updatedCt.png")
-)
-```
+``` 
 
 
 \newpage

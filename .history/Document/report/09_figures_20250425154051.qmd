@@ -108,7 +108,7 @@ knitr::include_graphics(
 #| fig-alt: "Landings comparisons between landings used in 2013 to updated landings."
 
 knitr::include_graphics(
-  file.path(plot_dir, "Catch_comp_all.png")
+  file.path(model_dir, "plots", "data_plot.png")
 )
 ```
 
@@ -121,7 +121,7 @@ knitr::include_graphics(
 #| fig-alt: "Landings comparisons for California between landings used in 2013 to updated landings."
 
 knitr::include_graphics(
-  file.path(plot_dir, "Catch_comp_CA.png")
+  file.path(model_dir, "plots", "data_plot.png")
 )
 ```
 
@@ -134,7 +134,7 @@ knitr::include_graphics(
 #| fig-alt: "Landings comparisons for Oregon between landings used in 2013 to updated landings."
 
 knitr::include_graphics(
-  file.path(plot_dir, "Catch_comp_OR.png")
+  file.path(model_dir, "plots", "data_plot.png")
 )
 ```
 
@@ -147,33 +147,7 @@ knitr::include_graphics(
 #| fig-alt: "Landings comparisons for Washington between landings used in 2013 to updated landings."
 
 knitr::include_graphics(
-  file.path(plot_dir, "Catch_comp_WA.png")
-)
-```
-
-```{r} 
-#| label: fig-Ct_compsSO
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Spawning output comparison using different historical catches."
-
-knitr::include_graphics(
-  file.path(plot_dir, "compare1_spawnbio_updatedCt.png")
-)
-```
-
-```{r} 
-#| label: fig-Ct_compsRSS
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of relative spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Relative stock status comparison using different historical catches."
-
-knitr::include_graphics(
-  file.path(plot_dir, "compare3_Bratio_updatedCt.png")
+  file.path(model_dir, "plots", "data_plot.png")
 )
 ```
 

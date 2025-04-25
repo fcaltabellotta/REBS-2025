@@ -1,7 +1,7 @@
 # Data
 
 Data from a wide range of programs were available for possible inclusion in the current
-assessment model. Descriptions of each data source included in the model (@fig-data) and
+assessment model. Descriptions of each data source included in the model (Figure - ADD FIGURE ) and
 sources that were explored but not included in the base model are provided below. Data
 that were excluded from the base model were excluded only after being explicitly explored
 during the development of this stock assessment and found to be inappropriate for use or
@@ -27,9 +27,9 @@ The Oregon PacFIN landings for the period between 1987 and 1999 were supplemente
 
 The California historical landings were informed by several sources. Landings from the most recent “historical” period (between 1969 and 1980) were available from the CalCOM database for the California Cooperative Survey (CalCOM) database. Earlier landing records (between 1931 and 1968) were reconstructed by the Southwest Fisheries Science Center (@ralston_documentation_2010). 
 
-Comparison of Rougheye/Blackspotted rockfish historical landings by state and fleet between this and 2013 assessment is provided in @fig-Ct_All. Historical California and Oregon landings did not change substantially (@fig-Ct_CA and @fig-Ct_OR), with the exception of the magnitude of hte catch in a few years. The largest differences in this assessment from 2013 model are in Washington landings (@fig-Ct_WA). For 2025, WDFW completed historical catch reconstruction of Rougheye/Blackspotted rockfish, and newly estimated landings are lower than those used in previous assessment. Historical landings in 2013 assessment were based on preliminary estimates and might have included catches from Puget Sound and Canadian waters (pers. comm. T. Tsou, WDFW). New Washington historical landings are more consistent with the history of commercial removals on the U.S. West Coast and represent an improvement in estimated landings for Washington. 
+Comparison of Rougheye/Blackspotted rockfish historical landings by state and fleet between this and 2013 assessment is provided in Figure @fig-Ct_All. Historical California and Oregon landings did not change substantially (Figures @fig-Ct_CA and Figure @fig-Ct_OR), with the exception of the magnitude of hte catch in a few years. The largest differences in this assessment from 2013 model are in Washington landings (Figure @fig-Ct_WA). For 2025, WDFW completed historical catch reconstruction of Rougheye/Blackspotted rockfish, and newly estimated landings are lower than those used in previous assessment. Historical landings in 2013 assessment were based on preliminary estimates and might have included catches from Puget Sound and Canadian waters (pers. comm. T. Tsou, WDFW). New Washington historical landings are more consistent with history of commercial removals on the U.S. West Coast and represent improvement to the assessment. 
 
-Comparing the update historical data with that used in the 2013 stock assessment shows only minor differences (@fig-Ct_compsSO; @fig-Ct_compsRSS).
+
 
 #### Recent Landings
 Recent commercial landings of rougheye rockfish (2001-2024 for Washington, 1987–2024 for Oregon and 1981–2024 for California,) were obtained from PacFIN, a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries Service (NMFS). Catch data were extracted from PacFIN on April 21, 2025, by state and then combined into the fishing fleets used in the assessment. Time series of recent landings by fleet and state are reported in Table  X and shown in Figures X to X. (ADD THESE TABLE/FIGURES)

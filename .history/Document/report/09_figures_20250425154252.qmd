@@ -151,32 +151,6 @@ knitr::include_graphics(
 )
 ```
 
-```{r} 
-#| label: fig-Ct_compsSO
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Spawning output comparison using different historical catches."
-
-knitr::include_graphics(
-  file.path(plot_dir, "compare1_spawnbio_updatedCt.png")
-)
-```
-
-```{r} 
-#| label: fig-Ct_compsRSS
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of relative spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Relative stock status comparison using different historical catches."
-
-knitr::include_graphics(
-  file.path(plot_dir, "compare3_Bratio_updatedCt.png")
-)
-```
-
 
 \newpage
 
