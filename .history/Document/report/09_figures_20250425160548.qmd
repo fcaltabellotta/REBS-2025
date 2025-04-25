@@ -190,10 +190,10 @@ knitr::include_graphics(
 #| warning: false 
 #| eval: true 
 #| fig-cap: "Comparison of spawning output using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data. The 1 sex model has double the biomass because it includes both females and males."
-#| fig-alt: "Comparing spawning output with 1 and 2 sex model specifications."
+#| fig-alt: "Natural mortality curves by age for different values of natural mortality."
 
 knitr::include_graphics(
-  file.path(plot_dir, "1v2sex_spawnbio.png")
+  file.path(plot_dir, "M_values.png")
 )
 ``` 
 
@@ -203,10 +203,10 @@ knitr::include_graphics(
 #| warning: false 
 #| eval: true 
 #| fig-cap: "Comparison of spawning output using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data."
-#| fig-alt: "Comparing relative stock status with 1 and 2 sex model specifications."
+#| fig-alt: "Natural mortality curves by age for different values of natural mortality."
 
 knitr::include_graphics(
-  file.path(plot_dir, "1v2sex_Bratio_uncertainty.png")
+  file.path(plot_dir, "M_values.png")
 )
 ``` 
 

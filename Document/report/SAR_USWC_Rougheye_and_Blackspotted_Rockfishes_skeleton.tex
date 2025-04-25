@@ -969,7 +969,22 @@ Survey}\label{afscnwfsc-west-coast-triennial-shelf-survey-1}
 The major biological inputs to the models are natural mortality, age and
 growth parameters, weight-length, maturity and stock-recruitment
 parameters. The following sections outline the treatment of each
-section.
+section. One change from the previous assessment is moving to a two sex
+from the one-sex specification from 2013. The 2013 stock assessment
+one-sex specification was based on the observation that the biology of
+females and males was very similar, thus justifying the simplifying
+assumption of one sex. The following sections below demonstrates that
+females and males do generally have similar growth, though there are
+differences, but may have different natural mortality values. The
+current assessment will use a two sex configuration that allows for
+flexibility to set female and male parameters either equal (i.e.,
+functionally equivalent to a one sex model) and or sex-specific.
+Figure~\ref{fig-Sex1vs2_SO} and Figure~\ref{fig-Sex1vs2_Bratio} show
+that using a two sex configuration with the same life history parameters
+for females and males is equivalent to the one sex model. Note that the
+one sex model sums up both female and male biomass, thus why it is twice
+the size as the two sex female-only spawning output
+(Figure~\ref{fig-Sex1vs2_Bratio}).
 
 \subsubsection{Natural Mortality}\label{natural-mortality}
 
@@ -1665,8 +1680,7 @@ assessment are:
 \tightlist
 \item
   Change in the removal history, particularly updates to historical data
-  and new catches since 2013. The updated historical catches cause only
-  small changes when applied to the 2013 stock assessment model .
+  and new catches since 2013.
 \item
   Adding discard fleets instead of using retention curves.
 \item
@@ -2453,6 +2467,35 @@ Rougheye/Blackspotted Rockfishes assessment.}
 \newpage
 
 \subsubsection{Biology}\label{biology}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/1v2sex_spawnbio.png}
+
+}
+
+\caption{\label{fig-Sex1vs2_SO}Comparison of spawning output using the 1
+sex and 2 sexes set to equal values models based on the 2013
+Rougheye/Blackspotted Rockfishes assessment data. The 1 sex model has
+double the biomass because it includes both females and males.}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{plots_4_doc/1v2sex_Bratio_uncertainty.png}
+
+}
+
+\caption{\label{fig-Sex1vs2_Bratio}Comparison of spawning output using
+the 1 sex and 2 sexes set to equal values models based on the 2013
+Rougheye/Blackspotted Rockfishes assessment data.}
+
+\end{figure}%
 
 \begin{figure}
 
