@@ -14,8 +14,17 @@ when they were not used.
 
 <!-- Commercial fisheries landings by state, year, and gear (PacFIN is the standard source for recent domestic commercial landings), historical catch estimates, discards, recreational fisheries catches, foreign removals; sample size information for length- and age-composition data by state, year and gear, including both the number of trips and fish sampled. Description of methods to estimate abundance indices, sample size information by survey and year. Include complete tables and figures and date of data extraction. -->
 
+Fishery depended data for Rougheye/Blackspotted complex in this assessment were divided among six fleets, which included:
+Bottom trawl fleet
+Bottom trawl discard
+Non-trawl fleet
+Non-trawl discard
+Midwater trawl fleet
+Bycatch within the at-sea hake fleet.
+
+There are no recreational landings of this complex on the West coast. 
+
 ### Landings
-This 2025 Rougheye/Blackspotted assessment only considered commercial landings. There are no recreational landings of this complex on the West coast. 
 
 #### Historical Landings
 Historical landings of Rougheye/Blackspotted rockfish were reconstructed by state, by year. 
