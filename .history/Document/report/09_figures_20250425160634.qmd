@@ -193,7 +193,7 @@ knitr::include_graphics(
 #| fig-alt: "Comparing spawning output with 1 and 2 sex model specifications."
 
 knitr::include_graphics(
-  file.path(plot_dir, "1v2sex_spawnbio.png")
+  file.path(plot_dir, "M_values.png")
 )
 ``` 
 
@@ -206,7 +206,7 @@ knitr::include_graphics(
 #| fig-alt: "Comparing relative stock status with 1 and 2 sex model specifications."
 
 knitr::include_graphics(
-  file.path(plot_dir, "1v2sex_Bratio_uncertainty.png")
+  file.path(plot_dir, "M_values.png")
 )
 ``` 
 

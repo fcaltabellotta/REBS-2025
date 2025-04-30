@@ -1,7 +1,7 @@
-# Data CLAIRE TEST
+# Data
 
 Data from a wide range of programs were available for possible inclusion in the current
-assessment model. Descriptions of each data source included in the model (@fig-data) and
+assessment model. Descriptions of each data source included in the model (Figure - ADD FIGURE ) and
 sources that were explored but not included in the base model are provided below. Data
 that were excluded from the base model were excluded only after being explicitly explored
 during the development of this stock assessment and found to be inappropriate for use or
@@ -14,39 +14,22 @@ when they were not used.
 
 <!-- Commercial fisheries landings by state, year, and gear (PacFIN is the standard source for recent domestic commercial landings), historical catch estimates, discards, recreational fisheries catches, foreign removals; sample size information for length- and age-composition data by state, year and gear, including both the number of trips and fish sampled. Description of methods to estimate abundance indices, sample size information by survey and year. Include complete tables and figures and date of data extraction. -->
 
-Fishery depended data for Rougheye/Blackspotted complex in this assessment are divided among six fleets, which include:
-* Fleet 1: Commercial bottom trawl fishery
-* Fleet 2: Commercial non-trawl gear (mainly the long-line fishery) fishery
-* Fleet 3: Dead discard bottom trawl fleet
-* Fleet 4: Dead discard non-trawl fleet
-* Fleet 5: Contemporary mid-water fishery
-* Fleet 6: Bycatch within the at-sea hake fishery 
-
-There are no recreational landings of this complex on the West coast. 
-
 ### Landings
-
-#### Recent landings
-Recent commercial landings of rougheye rockfish (2000-2024 for Washington, 1987–2022 for Oregon and 1981–2022 for California,) were obtained from PacFIN, a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries 
-Service (NMFS). Catch data were extracted from PacFIN on April 21, 2015, by state and then combined into the fishing fleets used in the assessment. Time series of recent landings by fleet and state are reported in Table  X and shown in Figures X to X.
+This 2025 Rougheye/Blackspotted assessment only considered commercial landings. There are no recreational landings of this complex on the West coast. 
 
 #### Historical Landings
 Historical landings of Rougheye/Blackspotted rockfish were reconstructed by state, by year. 
 
-The Washington historical landings (1889–2000) were provided by Washington Department of Fish and Wildlife (WDFW), who recently conducted historical catch reconstruction for rockfish special including rougheye rockfish (pers. comm. T. Tsou, WDFW). The three main sources used in this reconstruction (SpeciesSumOutput2_2017.csv- ADD TABLE) are from the US Fish Commission Report (UFSC), Washington Bound Volumes, and Washington Statistical Bulletin. The historical species composition is based on the various historical reports and interviews of old-time fishermen and dockside samplers. The 1981 to 2000 landings are different from PacFIN records due to a revised approach for apportioning out more unidentified rockfish (“URCK”) in fish tickets to the species level. This revised approach relaxed the borrowing rules for missing data currently used in the WDFW species allocation algorithm (Tsou at al., 2015 - CAN'T FIND IN BIB). New Washington historical landings represent improvement to the assessment. 
+The Washington historical landings (1889–2000) were provided by Washington Department of Fish and Wildlife (WDFW), who recently conducted historical catch reconstruction for rockfish special including rougheye rockfish (pers. comm. T. Tsou, WDFW). The three main sources used in this reconstruction (SpeciesSumOutput2_2017.csv- ADD TABLE) are from the US Fish Commission Report (UFSC), Washington Bound Volumes, and Washington Statistical Bulletin. The historical species composition is based on the various historical reports and interviews of old-time fishermen and dockside samplers. The 1981 to 2000 landings are different from PacFIN records due to a revised approach for apportioning out more unidentified rockfish (“URCK”) in fish tickets to the species level. This revised approach relaxed the borrowing rules for missing data currently used in the WDFW species allocation algorithm (Tsou at al., 2015 - CAN'T FIND IN BIB). 
 
 The Oregon historical landings (1896–1986) were obtained from Oregon historical catch reconstruction, conducted by Oregon Department of Fish and Wildlife in collaboration with NWFSC (@karnowski_historical_2014). 
 The Oregon PacFIN landings for the period between 1987 and 1999 were supplemented with the additional estimates of Rougheye/Blackspotted rockfish landings reported within unspecified rockfish market categories, provided by the ODFW (i.e., URCK and POP1; @ODFW_URCK_POP_recon). 
 
 The California historical landings were informed by several sources. Landings from the most recent “historical” period (between 1969 and 1980) were available from the CalCOM database for the California Cooperative Survey (CalCOM) database. Earlier landing records (between 1931 and 1968) were reconstructed by the Southwest Fisheries Science Center (@ralston_documentation_2010). 
 
-Comparison of Rougheye/Blackspotted rockfish historical landings by state and fleet between this and 2013 assessment is provided in @fig-Ct_All. 
+Comparison of Rougheye/Blackspotted rockfish historical landings by state and fleet between this and 2013 assessment is provided in Figure @fig-Ct_All. Historical California and Oregon landings did not change substantially (Figures @Catch_comp_OR and Figure @Catch_comp_CA), with the exception of the magnitude of hte catch in a few years. The largest differences in this assessment from 2013 model are in Washington landings (Figure @Catch_comp_WA). For 2025, WDFW completed historical catch reconstruction of Rougheye/Blackspotted rockfish, and newly estimated landings are lower than those used in previous assessment. Historical landings in 2013 assessment were based on preliminary estimates and might have included catches from Puget Sound and Canadian waters (pers. comm. T. Tsou, WDFW). New Washington historical landings are more consistent with history of commercial removals on the U.S. West Coast and represent improvement to the assessment. 
 
-The largest differences in this assessment from 2013 model are in Washington landings (@fig-Ct_WA), with newly estimated landings being generally lower than those used in previous assessment.  The new WDFW catch reconstruction completed by WDFW is considered an improvement.  
 
-Historical California and Oregon landings did not change substantially (@fig-Ct_CA and @fig-Ct_OR), with the exception of the magnitude of hte catch in a few years. Discrepancies in California and Oregon non-trawl landings between the 2013 and 2025 assessments are caused by the fact that non-trawl fleet in 2013 assessment was limited to only fixed gear, when in 2025 assessment non-trawl includes all non-trawl gear groups.  Slight discrepancies in Oregon trawl landings between 1987 and 1999, are from adding  previously non-reported landings of Rougheye/Blackspotted in the unspecified rockfish market categories (see details above). 
-
-Comparing the update historical data with that used in the 2013 stock assessment shows only minor differences (@fig-Ct_compsSO; @fig-Ct_compsRSS).
 
 #### Recent Landings
 Recent commercial landings of rougheye rockfish (2001-2024 for Washington, 1987–2024 for Oregon and 1981–2024 for California,) were obtained from PacFIN, a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries Service (NMFS). Catch data were extracted from PacFIN on April 21, 2025, by state and then combined into the fishing fleets used in the assessment. Time series of recent landings by fleet and state are reported in Table  X and shown in Figures X to X. (ADD THESE TABLE/FIGURES)
@@ -56,11 +39,7 @@ Recent commercial landings of rougheye rockfish (2001-2024 for Washington, 1987�
 NOTE - Ali added heading but I'm guessing Vlada should write?
 
 ### Discards
-
-#### Trawl
-
 NOTE - Ali removed the fleet subheadings under this but add back if needed!
-
 
 
 
@@ -130,7 +109,7 @@ Spatial variation, but not spatiotemporal variation, was included in the encount
 
 
 ## Biological Parameters
-The major biological inputs to the models are natural mortality, age and growth parameters, weight-length, maturity and stock-recruitment parameters. The following sections outline the treatment of each section. One change from the previous assessment is moving to a two sex from the one-sex specification from 2013. The 2013 stock assessment one-sex specification was based on the observation that the biology of females and males was very similar, thus justifying the simplifying assumption of one sex. The following sections below demonstrates that females and males do generally have similar growth, though there are differences, but may have different natural mortality values. The current assessment will use a two sex configuration that allows for flexibility to set female and male parameters either equal (i.e., functionally equivalent to a one sex model) and or sex-specific. @fig-Sex1vs2_SO and @fig-Sex1vs2_Bratio show that using a two sex configuration with the same life history parameters for females and males is equivalent to the one sex model. Note that the one sex model sums up both female and male biomass, thus why it is twice the size as the two sex female-only spawning output (@fig-Sex1vs2_Bratio).
+The major biological inputs to the models are natural mortality, age and growth parameters, weight-length, maturity and stock-recruitment parameters. The following sections outline the treatment of each section.
 
 ### Natural Mortality
 Natural mortality is a highly influential parameter in age-structured stock assessments. It defines the rate of natural death by age, and thus establishes a stable age-structure and expectation of longevity, and interacts with growth and reproduction to determine stock productivity. It is a very difficult parameter to directly measure, thus empirical relationships based on life history parameters are often used to indirectly determine its value or build prior distributions in belief of what it is in the event we do attempt to estimate it in the model (@cope_upgrading_2022; @hamel_development_2022; @maunder_review_2023). If length and age data are available, it may be possible to estimate it in the model.

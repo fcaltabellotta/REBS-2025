@@ -55,6 +55,7 @@ text(-115.5, 32.1, "Mexico")
 ``` 
 
 ```{r} 
+
 #| label: fig-SO_comp
 #| echo: false 
 #| warning: false 
@@ -99,116 +100,10 @@ knitr::include_graphics(
 )
 ``` 
 
-```{r} 
-#| label: fig-Ct_All
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Landings across all states for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
-#| fig-alt: "Landings comparisons between landings used in 2013 to updated landings."
-
-knitr::include_graphics(
-  file.path(plot_dir, "Catch_comp_all.png")
-)
-```
-
-```{r} 
-#| label: fig-Ct_CA
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "California state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
-#| fig-alt: "Landings comparisons for California between landings used in 2013 to updated landings."
-
-knitr::include_graphics(
-  file.path(plot_dir, "Catch_comp_CA.png")
-)
-```
-
-```{r} 
-#| label: fig-Ct_OR
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Oregon state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
-#| fig-alt: "Landings comparisons for Oregon between landings used in 2013 to updated landings."
-
-knitr::include_graphics(
-  file.path(plot_dir, "Catch_comp_OR.png")
-)
-```
-
-```{r} 
-#| label: fig-Ct_WA
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "WA. Washington state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
-#| fig-alt: "Landings comparisons for Washington between landings used in 2013 to updated landings."
-
-knitr::include_graphics(
-  file.path(plot_dir, "Catch_comp_WA.png")
-)
-```
-
-```{r} 
-#| label: fig-Ct_compsSO
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Spawning output comparison using different historical catches."
-
-knitr::include_graphics(
-  file.path(plot_dir, "compare1_spawnbio_updatedCt.png")
-)
-```
-
-```{r} 
-#| label: fig-Ct_compsRSS
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of relative spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Relative stock status comparison using different historical catches."
-
-knitr::include_graphics(
-  file.path(plot_dir, "compare3_Bratio_updatedCt.png")
-)
-```
-
-
 \newpage
 
 
 ### Biology
-
-
-```{r} 
-#| label: fig-Sex1vs2_SO
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of spawning output using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data. The 1 sex model has double the biomass because it includes both females and males."
-#| fig-alt: "Comparing spawning output with 1 and 2 sex model specifications."
-
-knitr::include_graphics(
-  file.path(plot_dir, "1v2sex_spawnbio.png")
-)
-``` 
-
-```{r} 
-#| label: fig-Sex1vs2_Bratio
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of spawning output using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data."
-#| fig-alt: "Comparing relative stock status with 1 and 2 sex model specifications."
-
-knitr::include_graphics(
-  file.path(plot_dir, "1v2sex_Bratio_uncertainty.png")
-)
-``` 
 
 ```{r} 
 #| label: fig-Mcurves
