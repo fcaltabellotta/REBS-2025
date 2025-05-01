@@ -365,7 +365,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Estimates of spawning output for the Rougheye/Blackspotted rockfish complex in U.S. west coast waters from the 2013 assessment, and compared to the same data in the newest version of SS3 (3.30.22.1). Shading denotes 95% confidence intervals. Shading denotes 95% confidence intervals."
+#| fig-cap: "Estimates of spawning output for the Rougheye/Blackspotted rockfish complex in U.S. west coast waters from the 2013 assessment, and compared to the same data in the newest version of SS3 (3.330.22.1). Shading denotes 95% confidence intervals. Shading denotes 95% confidence intervals."
 #| fig-alt: "Comparing spawning output in the 2013 version of SS3 with the newest SS3 version."
 
 knitr::include_graphics(
