@@ -117,6 +117,59 @@ Spatial variation, but not spatiotemporal variation, was included in the encount
 
 #### AFSC/NWFSC West Coast Triennial Shelf Survey
 
+The triennial survey was first conducted by the AFSC in 1977 and spanned the timeframe from 1977–
+2004. The survey’s design and sampling methods are most recently described in **Weinberg et al. (2002)**.
+Its basic design was a series of equally-spaced transects from which searches for tows in a specific depth
+range were initiated **(Figure X)**. The survey design has changed slightly over the period of time **(Table X,
+Figure X)**. In general, all of the surveys were conducted in the mid-summer through early fall: the 1977
+survey was conducted from early July through late September; the surveys from 1980 through 1989 ran
+from mid-July to late September; the 1992 survey spanned from mid-July through early October; the 1995
+survey was conducted from early June to late August; the 1998 survey ran from early June through early
+August; and the 2001 and 2004 surveys were conducted in May-July **(Figure X)**.
+
+Haul depths ranged from 91–457 m during the 1977 survey with no hauls shallower than 91 m. The
+surveys in 1980, 1983, and 1986 covered the West Coast south to 36.8°N latitude and a depth range of
+55–366 meters. The surveys in 1989 and 1992 covered the same depth range but extended the southern
+range to 34.5°N (near Point Conception). From 1995 through 2004, the surveys covered the depth range
+55–500 meters and surveyed south to 34.5°N. In the final year of the triennial series (2004), the
+NWFSC’s Fishery Resource and Monitoring division (FRAM) conducted the survey and followed very
+similar protocols as the AFSC.
+
+<!-- NEED TO UPDATE THIS: Given the different depths surveyed during 1977, the data from that year were not included in this
+assessment. Water hauls **(Zimmermann et al. 2003)** and tows located in Canadian waters were also
+excluded from the analysis of this survey. The survey was analyzed as an early series (1980–1992) and a
+late series (1995–2004), as has been done in other West Coast rockfish assessments. -->
+
+<!-- NEED TO UPDATE THIS: The indices for the early and late series of this survey were estimated separately using a GLMM with the
+stratifications shown in **Table X**. Boxplots of the deviance for the late and early triennial survey series are
+shown in **Figure X** and show that the lognormal distribution had the lowest median deviance for both
+series. Random or fixed strata-year effects produced similar deviance, and the random strata-year effects
+were chosen as the final models. Selection of using the extreme catch event mixture distribution (ECE)
+was done by investigating the Q-Q plots in **Figure X**. The Q-Q plot for no ECE does not show any
+departures from the assumed distribution, and the ECE Q-Q plot did not show improvement. Therefore,
+the lognormal distribution without the ECE mixture distribution and random effects on the year-strata
+interaction were used to estimate the indices shown in **Figure X** and **Table X**. The early series suggests a
+possible slightly increasing trend in biomass from 1983–1992, while the late series showed no discernible
+trend and alternated between high and low estimates from 1995–2004. The design-based estimates
+(average density expanded to the stratum area then summed over strata) are compared to the model-based estimates in **Figure X**. 
+Similar trends are seen for both sets of estimates, but the design-based estimates
+are consistently greater than the model-based estimates by more than a factor of 2. This suggests that the
+scale of the model-based estimates may be low, which may be caused by incorrect expansion to the
+proper area. This is not an issue with the assessment because a catchability coefficient relating the survey
+biomass to the assessment model biomass is estimated without any prior assumption on what value that
+catchability coefficient should be. Therefore, caution is advised if attempting to interpret the value of that
+estimated catchability coefficient. -->
+
+<!-- NEED TO UPDATE THIS: Length frequencies for each year were expanded using the same stratification as the GLMM, except that
+no observations were available for 1983 **(Figure X)**. Because sex ratios showed no discernible trend
+across years and surveys, and rougheye rockfish show no tendency toward sexual dimorphism (see
+sections below), we pooled male, female, and unsexed length data in this analysis. There was
+considerable variability in length frequencies in the triennial survey data. Mean length in the triennial
+survey declined during the period 1986–1992 from 31.0 cm to 21.9 cm, and there was no clear trend in
+mean length from 1995–2004. Mean length in the late period (1995–2004) was larger than mean length
+in the early period (1980–1992), except in 2004. This further supports the split into early and late
+periods. -->
+
 
 ### Biological data
 #### NWFSC West Coast Groundfish Bottom Trawl Survey
