@@ -307,10 +307,10 @@ knitr::include_graphics(
 #| warning: false 
 #| eval: true 
 #| fig-cap: "Estimated imprecision (as a standard deviation) used for each of the seven ageing error matrices."
-#| fig-alt: "Imprecision of ageing as used in each ageing error matrix."
+#| fig-alt: "Imprecision in the ageing error matrices."
 
 knitr::include_graphics(
-  file.path(plot_dir, "AE_SD.png")
+  file.path(plot_dir, "AE_Bias.png")
 )
 ``` 
 
