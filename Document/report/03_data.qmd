@@ -1,4 +1,4 @@
-# Data CLAIRE TEST
+# Data
 
 Data from a wide range of programs were available for possible inclusion in the current
 assessment model. Descriptions of each data source included in the model (@fig-data) and
