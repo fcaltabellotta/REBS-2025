@@ -310,7 +310,7 @@ knitr::include_graphics(
 #| fig-alt: "Imprecision of ageing as used in each ageing error matrix."
 
 knitr::include_graphics(
-  file.path(plot_dir, "AE_SD.png")
+  file.path(plot_dir, "AE_Bias.png")
 )
 ``` 
 
