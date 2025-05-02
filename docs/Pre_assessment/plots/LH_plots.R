@@ -5,6 +5,7 @@ library(reshape2)
 
 #Length, weight and age data
 Lt_Wt_Age<-read.csv("C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/Lt_Wt_Age.csv")
+Lt_Wt_Age<-read.csv("C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/Lt_Wt_Age_42425.csv")
 
 #############################
 #Length-weight relationship #

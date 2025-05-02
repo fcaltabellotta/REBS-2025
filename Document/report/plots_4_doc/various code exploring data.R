@@ -49,3 +49,12 @@ saveWorkbook(wb, file="C:/Users/Jason.Cope/Documents/Current Action/Assessments/
 
 #
 write.csv(bds.pacfin.ages[,c(61,87:89,93:95)],"C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/Age exchanges/pacfin_reads.csv")
+
+#Get lengths, weights and ages from final PacFIN pull
+bds.pacfin<-bds.pacfin[bds.pacfin$FISH_WEIGHT_UNITS!="P"|is.na(bds.pacfin$FISH_WEIGHT_UNITS),]
+#bds.pacfin[bds.pacfin$FISH_LENGTH_UNITS=="MM",]<-bds.pacfin[bds.pacfin$FISH_LENGTH_UNITS=="MM",45]/10
+
+bds.pacfin.ltwtage<-bds.pacfin[,c(45,48,49,61,68)]
+bds.pacfin.ltwtage[which(bds.pacfin.ltwtage$FISH_LENGTH_UNITS=="MM"),1]<-bds.pacfin.ltwtage[which(bds.pacfin.ltwtage$FISH_LENGTH_UNITS=="MM"),1]/10
+bds.pacfin.ltwtage[,2]<-bds.pacfin.ltwtage[,2]/1000
+write.csv(bds.pacfin.ltwtage,"C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/pacfin_bds_42425_ltwtage.csv")
