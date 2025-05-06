@@ -20,11 +20,9 @@ landings <- model_output[["catch"]] |>
    ) |>
    dplyr::rename(
      Year = Yr,
-     `Trawl (mt)` = TRAWL,
-     `Trawl Discard (mt)` = TRAWL_DISCARD,
-     `Non-trawl (mt)` = NON_TRAWL,
-     `Non-trawl discard (mt)` = NON_TRAWL_DISCARD,
-     `At-sea-Hake (mt)` = AT_SEA_HAKE
+     `Trawl (mt)` = TWL,
+     `Hook and Line (mt)` = HKL,
+     `Pot (mt)` = Pot
    ) |>
    dplyr::ungroup()
 kableExtra::kable(
@@ -55,7 +53,7 @@ kableExtra::kable(
 recent_management_table |>
   gt::gt() |>
   gt::fmt_number(
-    columns = 2:5,
+    columns = 2:6,
     decimals = 0
   ) |>
   gt::tab_options(
@@ -73,30 +71,28 @@ recent_management_table |>
 
 \pagebreak
 
+```{r, results = "asis"}
+#| label: tbl-area-spex
+#| warning: false
+#| echo: false
+#| tbl-cap: "Adopted coastwide OFL (mt) and ABC (mt) values and the area-based ACL (mt) north and south of 36 N. latitude by year."
+#| tbl-pos: H
 
-#```{r, results = "asis"}
-##| label: tbl-area-spex
-##| warning: false
-##| echo: false
-##| tbl-cap: "Adopted coastwide OFL (mt) and ABC (mt) values and the area-based ACL (mt) north and south of 36 N. latitude by year."
-##| tbl-pos: H
+area_management_table |>
+  gt::gt() |>
+  gt::fmt_number(
+    columns = c(2:5),
+    decimals = 0
+  ) |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE 
+  ) |>
+  gt::as_latex()
 
-#area_management_table |>
-#  gt::gt() |>
-#  gt::fmt_number(
-#    columns = c(2:5),
-#    decimals = 0
-#  ) |>
-#  gt::tab_options(
-#    table.font.size = 12,
-#    latex.use_longtable = TRUE 
-#  ) |>
-#  gt::as_latex()
-
-#```
+```
 
 \pagebreak
-
 
 ```{r}
 #| label: tbl-model-config
@@ -261,41 +257,41 @@ kableExtra::kable(
 
 ::: {.landscape}
 
-#```{r, results = "asis"}
-##| label: tbl-projections
-##| warning: false
-##| echo: false
-##| eval: !expr eval_tables 
-##| tbl-cap: !expr if(eval_tables) projections_cap 
-##| tbl-pos: H
+```{r, results = "asis"}
+#| label: tbl-projections
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) projections_cap 
+#| tbl-pos: H
 
-#projections_table |>
-#  gt::gt() |>
-#  gt::fmt_number(
-#    columns = c(2:5, 7:9),
-#    decimals = 0
-#  ) |>
-#  gt::fmt_number(
-#    columns = c(6, 10),
-#    decimals = 3
-#  ) |>
-#  gt::tab_options(
-#    table.font.size = 12,
-#    latex.use_longtable = TRUE 
-#  ) |>
-#  gt::sub_missing(
-#    columns = tidyselect::everything(),
-#    missing_text = "---"
-#  ) |>
-#  gt::cols_align(
- #   align = "center"
- # ) |>
- # gt::cols_width(
- #   tidyselect::everything() ~ px(75)
- # ) |>
- # gt::as_latex()
+projections_table |>
+  gt::gt() |>
+  gt::fmt_number(
+    columns = c(2:5, 7:9),
+    decimals = 0
+  ) |>
+  gt::fmt_number(
+    columns = c(6, 10),
+    decimals = 3
+  ) |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE 
+  ) |>
+  gt::sub_missing(
+    columns = tidyselect::everything(),
+    missing_text = "---"
+  ) |>
+  gt::cols_align(
+    align = "center"
+  ) |>
+  gt::cols_width(
+    tidyselect::everything() ~ px(75)
+  ) |>
+  gt::as_latex()
 
-#```
+```
 
 :::
 

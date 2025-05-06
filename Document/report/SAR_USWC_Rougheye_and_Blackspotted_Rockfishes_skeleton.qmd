@@ -58,6 +58,8 @@ format:
       - bottom=1in
       - right=1in
       - left=1in
+    link-citations: true
+    fig-pos: 'H'
 output-file: 'Rougheye_and_Blackspotted_Rockfishes_SAR_2025' 
 params:
    office: 'NWFSC'
@@ -95,6 +97,8 @@ sens_dir <-"C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/report/Sensi
 retro_dir <- "C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/report/Retros"
 #Table directory
 table_dir <- file.path(model_dir, "tables")
+
+model_output <- r4ss::SS_output(model_dir)
 
 # load converted output from asar::convert_output() 
 output <- utils::read.csv('C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/update/reye_blkspt_convert_output.csv') 
@@ -197,14 +201,14 @@ Cope, J.M., V. Gertseva, R.C. Rosemond, F.P. Caltabellotta,  A.D. Whitman. Statu
  {{< pagebreak >}} 
  
  
-#```{r, results='asis'}
-##| label: 'load_tables'
-##| eval: true
-##| echo: false
-##| warning: false
-#a <- knitr::knit_child('002_load_tables.qmd', quiet = TRUE)
-#cat(a, sep = '\n')
-#```
+```{r, results='asis'}
+#| label: 'load_tables'
+#| eval: true
+#| echo: false
+#| warning: false
+a <- knitr::knit_child('002_load_tables.qmd', quiet = TRUE)
+cat(a, sep = '\n')
+```
 
 
 ```{r, results='asis'}

@@ -16,6 +16,7 @@ ggplot(Lt_Wt_Age[!is.na(Lt_Wt_Age$Sex),],aes(x=as.numeric(Length),y=as.numeric(W
   facet_wrap(vars(Sex))+
   xlab("Length (cm)")+
   ylab("Weight (kg)")+
+  theme_bw()+
   stat_smooth(method = 'nls', 
               formula = y ~ a*x^b, 
               se = FALSE, 
@@ -47,6 +48,7 @@ ex_Lt_Wt_est<-bind_rows(ex_Lt_Wt_list, .id = "column_label")
 
 ggplot(ex_Lt_Wt_est,aes(Lt.in,Wt.in,color=Sex))+
   geom_line(aes(linetype=Sex),lwd=2)+
+  theme_bw()+
   annotate("text",x=20,y=8,label=paste0("Female: a=",round(Lt_Wt_Age_Sex_coeffs[2,1],8),"; b=",round(Lt_Wt_Age_Sex_coeffs[2,2],2)))+
   annotate("text",x=20,y=7.5,label=paste0("Male: a=",round(Lt_Wt_Age_Sex_coeffs[3,1],7),"; b=",round(Lt_Wt_Age_Sex_coeffs[3,2],2)))
 
@@ -179,5 +181,14 @@ geom_point(data=age_comps_agg_peak.df,aes(Ages,Freq_ln),color="red")+
   geom_smooth(method = "lm",data=age_comps_agg_peak.df)+
   annotate("text",x=100,y=5.4,label=paste0("Peak age = 21"),size=5)+
   annotate("text",x=100,y=5,label=paste0("Z = -0.04172"),size=5)
+
+
+#Ageing error matrix plot
+AE.reader.in<-read.csv("C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/report/plots_4_doc/AE_matrices_plot.csv")
+ggplot(AE.reader.in,aes(Year,factor(Source,levels=c("WCGBTS","At-sea-hake","Commercial"))))+
+  geom_point(shape=as.character(AE.reader.in$Reader),size=3,col="blue")+
+  theme_bw()+
+#  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
+  ylab("Data source")
 
 
