@@ -293,8 +293,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Ageing error matrix assignments by year and data source. The number indicates which ageing error matrix was used for conditional ages within those years and data sources. 'Commercial' is a combination of all commercial fleets."
-#| fig-alt: "The x-axis is year and the y-axis is the data source, for example 'Commercial'. The numbers going along the rows in the figure indicate which ageing error matrix is used in which year of that data sources. There is a total of 7 different ageing error matrices."
+#| fig-cap: "Ageing error matrix assignments by year and data source. The number indicates which ageing error matrix was used for conditional ages within those years and data sources. "Commercial" is a combination of all commercial fleets."
+#| fig-alt: "The x-axis is year and the y-axis is the data source, for example "Commercial". The numbers going along the rows in the figure indicate which ageing error matrix is used in which year of that data sources. There is a total of 7 different ageing error matrices."
 
 knitr::include_graphics(
   file.path(plot_dir, "AE_matrix_plot.png")
