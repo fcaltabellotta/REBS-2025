@@ -1,30 +1,30 @@
 #C file created using an r4ss function
-#C file write time: 2025-05-06  09:56:01
+#C file write time: 2025-05-10  03:49:07
 #
 2025_rougheye_data.ss #_datfile
-2025_rougheye_control.ss #_ctlfile
-0 #_init_values_src
+control.ss_new #_ctlfile
+1 #_init_values_src
 1 #_run_display_detail
 1 #_detailed_age_structure
 0 #_checkup
 0 #_parmtrace
-0 #_cumreport
+1 #_cumreport
 1 #_prior_like
 1 #_soft_bounds
 1 #_N_bootstraps
 10 #_last_estimation_phase
-1 #_MCMCburn
-1 #_MCMCthin
+10 #_MCMCburn
+2 #_MCMCthin
 0 #_jitter_fraction
-1914 #_minyr_sdreport
-2024 #_maxyr_sdreport
+-1 #_minyr_sdreport
+-2 #_maxyr_sdreport
 0 #_N_STD_yrs
-1e-05 #_converge_criterion
+0.001 #_converge_criterion
 0 #_retro_yr
-10 #_min_age_summary_bio
+3 #_min_age_summary_bio
 1 #_depl_basis
 1 #_depl_denom_frac
-1 #_SPR_basis
+4 #_SPR_basis
 1 #_F_std_units
 0 #_F_std_basis
 0 #_MCMC_output_detail

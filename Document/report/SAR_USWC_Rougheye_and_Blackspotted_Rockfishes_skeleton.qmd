@@ -98,7 +98,7 @@ retro_dir <- "C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/report/Ret
 #Table directory
 table_dir <- file.path(model_dir, "tables")
 
-model_output <- r4ss::SS_output(model_dir)
+model_output <- r4ss::SS_output(model_dir,verbose=FALSE,printstats=FALSE)
 
 # load converted output from asar::convert_output() 
 output <- utils::read.csv('C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/update/reye_blkspt_convert_output.csv') 

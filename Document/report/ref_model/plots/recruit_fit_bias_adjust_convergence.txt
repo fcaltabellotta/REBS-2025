@@ -1,18 +1,18 @@
 $par
-[1] 1959.0274754 1999.0000044 2012.4131973 2024.3982911    0.4521801
+[1] 1971.9220540 1999.6022460 2012.0000000 2024.0669329    0.5346327
 
 $objective
-[1] 0.7369289
+[1] 0.6669895
 
 $convergence
 [1] 1
 
 $iterations
-[1] 164
+[1] 121
 
 $evaluations
 function gradient 
-     200      968 
+     200      648 
 
 $message
 [1] "function evaluation limit reached without convergence (9)"
