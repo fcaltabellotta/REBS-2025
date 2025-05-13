@@ -31,15 +31,6 @@ catches_es_table |>
   gt::cols_align(
     align = "center"
   ) |>
-  cols_label(
-    "BOTTOM_TRAWL (mt)" = "Trawl",
-    "BOTTOM_TRAWL_DISCARD (mt)" = "Trawl \n discard",
-    "NON_TRAWL (mt)" = "Non-trawl",
-    "NON_TRAWL_DISCARD (mt)" = "Non-trawl \n discard",
-    "MIDWATER_TRAWL (mt)" = "Midwater \n trawl",
-    "AT_SEA_HAKE (mt)" = "At-sea-hake",
-    "Total Catch (mt)" = "Total Catch"
-  )|>
   #cols_width(
   #  everything() ~ px(75)
   #) |>
@@ -366,19 +357,19 @@ projections_table |>
 :::
 
 ```{r, results = "asis"}
-##| label: tbl-es-decision
-##| warning: false
-##| echo: false
-##| eval: !expr eval_tables 
-##| tbl-cap: !expr if(eval_tables) decision_table_cap 
-##| tbl-pos: H
+#| label: tbl-es-decision
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) decision_table_cap 
+#| tbl-pos: H
 
-#table_decision(
-#  list(mod_low_A, mod_base_A, mod_high_A),
-#  list(mod_low_B, mod_base_B, mod_high_B),
-# list(mod_low_C, mod_base_C, mod_high_C)
-#
-#
+table_decision(
+  list(mod_low_A, mod_base_A, mod_high_A),
+  list(mod_low_B, mod_base_B, mod_high_B),
+  list(mod_low_C, mod_base_C, mod_high_C)
+)
+
 ```
 
 

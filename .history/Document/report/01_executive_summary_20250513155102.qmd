@@ -32,13 +32,12 @@ catches_es_table |>
     align = "center"
   ) |>
   cols_label(
-    "BOTTOM_TRAWL (mt)" = "Trawl",
-    "BOTTOM_TRAWL_DISCARD (mt)" = "Trawl \n discard",
-    "NON_TRAWL (mt)" = "Non-trawl",
-    "NON_TRAWL_DISCARD (mt)" = "Non-trawl \n discard",
-    "MIDWATER_TRAWL (mt)" = "Midwater \n trawl",
-    "AT_SEA_HAKE (mt)" = "At-sea-hake",
-    "Total Catch (mt)" = "Total Catch"
+    "BOTTOM_TRAWL (mt)" = "Trawl \n (mt)",
+    "BOTTOM_TRAWL_DISCARD (mt)" = "Trawl discard \n (mt)",
+    "NON_TRAWL (mt)" = "Non-trawl \n (mt)",
+    "NON_TRAWL_DISCARD (mt)" = "Non-trawl discard \n (mt)",
+    "MIDWATER_TRAWL (mt)" = "Midwater trawl \n (mt)",
+    "AT_SEA_HAKE (mt)" = "At-sea-hake \n (mt)"
   )|>
   #cols_width(
   #  everything() ~ px(75)

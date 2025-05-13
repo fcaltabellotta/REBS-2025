@@ -37,8 +37,7 @@ catches_es_table |>
     "NON_TRAWL (mt)" = "Non-trawl",
     "NON_TRAWL_DISCARD (mt)" = "Non-trawl \n discard",
     "MIDWATER_TRAWL (mt)" = "Midwater \n trawl",
-    "AT_SEA_HAKE (mt)" = "At-sea-hake",
-    "Total Catch (mt)" = "Total Catch"
+    "AT_SEA_HAKE (mt)" = "At-sea-hake"
   )|>
   #cols_width(
   #  everything() ~ px(75)

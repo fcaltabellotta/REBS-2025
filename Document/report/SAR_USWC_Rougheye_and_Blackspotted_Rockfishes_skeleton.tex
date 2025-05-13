@@ -64,6 +64,46 @@
 \fi
 \makeatother
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -256,7 +296,7 @@
 U.S. West Coast in 2025}
 \author{Jason M. Cope \and Vladlena Gertseva \and R. Claire
 Rosmond \and Fabio P. Caltabellotta \and Alison D. Whitman}
-\date{2025-05-12}
+\date{2025-05-13}
 
 \begin{document}
   \begin{titlepage}
@@ -391,8 +431,6 @@ Rosmond \and Fabio P. Caltabellotta \and Alison D. Whitman}
 \setcounter{tocdepth}{3}
 \tableofcontents
 }
-\listoffigures
-\listoftables
 
 \newpage{}
 
@@ -416,9 +454,9 @@ the Department of Commerce.
 
 \newpage{}
 
-\subsection{Executive Summary}\label{executive-summary}
+\section{Executive Summary}\label{executive-summary}
 
-\subsubsection{Stock Description}\label{stock-description}
+\subsection{Stock Description}\label{stock-description}
 
 This document presents the stock assessment for the Rougheye
 (\emph{Sebastes aleutianus}) and Blackspotted (\emph{Sebastes
@@ -437,7 +475,7 @@ lengths and ages, and potential indices of abundance and is the first
 assessment since the 2013 stock assessment
 (\citeproc{ref-hicks_status_2013}{Hicks, Wetzel, and Harms 2013}).
 
-\subsubsection{Catches}\label{catches}
+\subsection{Catches}\label{catches}
 
 Rougheye/Blackspotted Rockfishes are mainly incidentally caught and
 retained, and caught mainly by trawl (both bottom and midwater) and
@@ -460,7 +498,10 @@ catch (mt) summed across fleets.}
 \tabularnewline
 
 \toprule
-Year & BOTTOM\_TRAWL (mt) & BOTTOM\_TRAWL\_DISCARD (mt) & NON\_TRAWL (mt) & NON\_TRAWL\_DISCARD (mt) & MIDWATER\_TRAWL (mt) & AT\_SEA\_HAKE (mt) & Total Catch (mt) \\ 
+Year & Trawl & Trawl 
+ discard & Non-trawl & Non-trawl 
+ discard & Midwater 
+ trawl & At-sea-hake & Total Catch (mt) \\ 
 \midrule\addlinespace[2.5pt]
 2015 & 31 & 10 & 47 & 14 & 19.26010 & 21.8019 & 142.1482 \\ 
 2016 & 31 & 8 & 60 & 13 & 15.53260 & 29.6339 & 157.2776 \\ 
@@ -571,7 +612,7 @@ unfished spawning output for the base model.}
 
 \end{figure}%
 
-\subsubsection{Recruitment}\label{recruitment}
+\subsection{Recruitment}\label{recruitment}
 
 The estimated largest recruitment event throughout the time series was
 in 2008, which supported an increase in the population leading up to
@@ -623,6 +664,474 @@ Year & Recruitment (1,000s) & Lower Interval (1,000s) & Upper Interval (1,000s) 
 for the base model.}
 
 \end{figure}%
+
+\subsection{Ecosysystem Consideration}\label{ecosysystem-consideration}
+
+The assessment includes a sensitivity model with an oceanographic
+recruitment index. A number of ecosystem and environmental conditions
+were compiled by a team of ecosystem scientists at the NWFSC specific to
+the life history and distribution of northern yellowtail. These
+conditions included an evaluation of oceanographic conditions impacting
+recruitment, habitat change, prey availability, predator and competitor
+abundance, and climate vulnerability.
+
+\subsection{Reference Points}\label{reference-points}
+
+A list of estimates of the current state of the population, as well as
+reference points based on 1) a target unfished spawning output of 40\%,
+2) a spawning potential ratio of 0.5, and 3) the model estimate of
+maximum sustainable yield, are all listed in
+Table~\ref{tbl-ref-points-es}. SPR, or the spawning potential ratio, is
+the fraction of expected lifetime reproductive output under a given
+fishing intensity divided by unfished expected lifetime reproductive
+output.
+
+\clearpage
+
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{lrrr}
+
+\caption{\label{tbl-ref-points-es}Summary of reference points and
+management quantities, including estimates of the 95 percent intervals.}
+
+\tabularnewline
+
+\toprule
+Reference Point & Estimate & Lower Interval & Upper Interval \\ 
+\midrule\addlinespace[2.5pt]
+Unfished Spawning Biomass (mt) & 33,823,300.0 & -37,731,849.1 & 105,378,449.1 \\ 
+Unfished Age 3+ Biomass (mt) & 91,888,400 & -102,443,989 & 286,220,789 \\ 
+Unfished Recruitment (R0) & 2,517,380 & -2,812,409 & 7,847,169 \\ 
+2025 Spawning Biomass (mt) & 33,149,000 & -36,989,879 & 103,287,879 \\ 
+2025 Fraction Unfished & 0.980 & 0.863 & 1.097 \\ 
+Reference Points Based SB40\% & — & — & — \\ 
+Proxy Spawning Biomass (mt) SB40\% & 13,529,300 & -15,092,838 & 42,151,438 \\ 
+SPR Resulting in SB40\% & 0.458 & 0.458 & 0.458 \\ 
+Exploitation Rate Resulting in SB40\% & 0.025 & 0.023 & 0.027 \\ 
+Yield with SPR Based On SB40\% (mt) & 1,066,490 & -1,190,075 & 3,323,055 \\ 
+Reference Points Based on SPR Proxy for MSY & — & — & — \\ 
+Proxy Spawning Biomass (mt) (SPR50) & 15,090,400 & -16,834,277 & 47,015,077 \\ 
+SPR50 & 0.500 & — & — \\ 
+Exploitation Rate Corresponding to SPR50 & 0.022 & 0.020 & 0.024 \\ 
+Yield with SPR50 at SB SPR (mt) & 1,020,570 & -1,138,801 & 3,179,941 \\ 
+Reference Points Based on Estimated MSY Values & — & — & — \\ 
+Spawning Biomass (mt) at MSY (SB MSY) & 9,559,670 & -10,664,022 & 29,783,362 \\ 
+SPR MSY & 0.352 & 0.346 & 0.359 \\ 
+Exploitation Rate Corresponding to SPR MSY & 0.035 & 0.032 & 0.038 \\ 
+MSY (mt) & 1,123,230 & -1,253,579 & 3,500,039 \\ 
+\bottomrule
+
+\end{longtable}
+
+\endgroup
+
+\subsection{Management Performance}\label{management-performance}
+
+Although catch increased substantially in 2017, it has still been well
+below the overfishing limit, allowable biological catch, and annual
+catch limit (Table~\ref{tbl-es-management}). Attainment of the OFL has
+averaged around 50\% since the increase in landings, and was even lower
+in prior years.
+
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{rcccr}
+
+\caption{\label{tbl-es-management}Recent trend in the overfishing limits
+(OFL), the acceptable biological catches (ABCs), the annual catch limits
+(ACLs), and the total dead catch (landings + discards) all in metric
+tons (mt).}
+
+\tabularnewline
+
+\toprule
+Year & OFL (mt) & ABC (mt) & ACL (mt) & Total dead catch (mt) \\ 
+\midrule\addlinespace[2.5pt]
+2015 & NA & NA & NA & 142.1482 \\ 
+2016 & NA & NA & NA & 157.2776 \\ 
+2017 & NA & NA & NA & 168.4370 \\ 
+2018 & NA & NA & NA & 286.1558 \\ 
+2019 & NA & NA & NA & 240.7692 \\ 
+2020 & NA & NA & NA & 116.7398 \\ 
+2021 & NA & NA & NA & 116.9144 \\ 
+2022 & NA & NA & NA & 141.1317 \\ 
+2023 & NA & NA & NA & 119.3817 \\ 
+2024 & NA & NA & NA & 141.0490 \\ 
+\bottomrule
+
+\end{longtable}
+
+\endgroup
+
+\subsection{Evaluation of Scientific
+Uncertainty}\label{evaluation-of-scientific-uncertainty}
+
+The largest uncertainty in this model is the inability to fit a marked
+increase in the bottom trawl survey from 2014-2019. This coincides with
+an increase in catch-per-unit-effort from the midwater trawl fishery
+(which accounts for the majority of landings). The increase is likely
+due to the record 2008 year class, but the estimated size of the year
+class does not lead to a large enough increase to fit the survey index,
+and it is especially hard to fit the sudden decrease and then flattening
+of the index, given the estimated natural mortality rate and that
+catches were relatively stable from 2017-2024. The current assessment
+estimates that the stock is more depleted than it was in 2017, the time
+of the last assessment, which is likely the case. The magnitude of that
+difference is more uncertain.
+
+\subsection{Harvest Projections and Decision
+Tables}\label{harvest-projections-and-decision-tables}
+
+Projections of the overfishing limit, acceptable biological catch, and
+annual catch limit, all based on a P* of 0.45 and a log-space standard
+deviation of the overfishing limit of 0.5 are included in
+Table~\ref{tbl-es-projections}. Assumed catches for 2025 and 2026 for
+this projection were provided by the Groundfish Management Team, and
+catches from 2027 onward assume full attainment of the acceptable
+biological catch.
+
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{>{\centering\arraybackslash}p{\dimexpr 56.25pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 56.25pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 56.25pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 56.25pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 56.25pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 56.25pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 56.25pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 56.25pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 56.25pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 56.25pt -2\tabcolsep-1.5\arrayrulewidth}}
+
+\caption{\label{tbl-es-projections}Potential OFLs (mt), ABCs (mt), ACLs
+(mt), the buffer between the OFL and ABC, estimated spawning biomass,
+and fraction unfished with adopted OFLs and ACLs and assumed catch for
+the first two years of the projection period.}
+
+\tabularnewline
+
+\toprule
+Year & Adopted OFL (mt) & Adopted ACL (mt) & Assumed Catch (mt) & OFL (mt) & Buffer & ABC (mt) & ACL (mt) & Spawning Biomass (mt) & Fraction Unfished \\ 
+\midrule\addlinespace[2.5pt]
+2025 & — & — & 2,035,440 & — & — & — & — & 33,149,000.000 & 0.980 \\ 
+2026 & — & — & 1,991,420 & — & — & — & — & 32,335,500.000 & 0.956 \\ 
+2027 & — & — & — & 1,949,140 & 0.935 & 1,822,440 & 1,822,440 & 31,562,700.000 & 0.933 \\ 
+2028 & — & — & — & 1,911,430 & 0.930 & 1,777,630 & 1,777,630 & 30,875,500.000 & 0.913 \\ 
+2029 & — & — & — & 1,875,500 & 0.926 & 1,736,710 & 1,736,710 & 30,224,400.000 & 0.894 \\ 
+2030 & — & — & — & 1,841,290 & 0.922 & 1,697,670 & 1,697,670 & 29,607,400.000 & 0.875 \\ 
+2031 & — & — & — & 1,808,660 & 0.917 & 1,658,550 & 1,658,550 & 29,022,500.000 & 0.858 \\ 
+2032 & — & — & — & 1,777,390 & 0.913 & 1,622,760 & 1,622,760 & 28,467,200.000 & 0.842 \\ 
+2033 & — & — & — & 1,747,170 & 0.909 & 1,588,180 & 1,588,180 & 27,937,000.000 & 0.826 \\ 
+2034 & — & — & — & 1,717,890 & 0.904 & 1,552,970 & 1,552,970 & 27,428,300.000 & 0.811 \\ 
+2035 & — & — & — & 1,689,580 & 0.900 & 1,520,620 & 1,520,620 & 26,939,700.000 & 0.796 \\ 
+2036 & — & — & — & 1,662,280 & 0.896 & 1,489,410 & 1,489,410 & 26,469,300.000 & 0.783 \\ 
+\bottomrule
+
+\end{longtable}
+
+\endgroup
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#| label: tbl{-}es{-}decision}
+\DocumentationTok{\#\#| warning: false}
+\DocumentationTok{\#\#| echo: false}
+\DocumentationTok{\#\#| eval: !expr eval\_tables }
+\DocumentationTok{\#\#| tbl{-}cap: !expr if(eval\_tables) decision\_table\_cap }
+\DocumentationTok{\#\#| tbl{-}pos: H}
+
+\CommentTok{\#table\_decision(}
+\CommentTok{\#  list(mod\_low\_A, mod\_base\_A, mod\_high\_A),}
+\CommentTok{\#  list(mod\_low\_B, mod\_base\_B, mod\_high\_B),}
+\CommentTok{\# list(mod\_low\_C, mod\_base\_C, mod\_high\_C)}
+\CommentTok{\#}
+\CommentTok{\#}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Unresolved Problems and Major
+Uncertainties}\label{unresolved-problems-and-major-uncertainties}
+
+Test G
+
+\subsection{Research and Data Needs}\label{research-and-data-needs}
+
+Test H
+
+\newpage{}
+
+\setlength{\parskip}{5mm plus1mm minus1mm}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\setcounter{section}{0}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+
+\section{Introduction}\label{introduction}
+
+This document presents the stock assessment for the Rougheye
+(\emph{Sebastes aleutianus}) and Blackspotted (\emph{Sebastes
+melanostictus}) rockfishes, two species that form one management
+complex. This report is for the year 2025 in state and federal waters
+from California to Washington State, excluding consideration of the
+Puget Sound and Salish Sea (Figure~\ref{fig-map}). It seeks to use
+available catch, biological compositions in the for of lengths and ages,
+and potential indices of abundance and is the first assessment since the
+2013 stock assessment (\citeproc{ref-hicks_status_2013}{Hicks, Wetzel,
+and Harms 2013}).
+
+\subsection{Stock Structure}\label{stock-structure}
+
+There are at least two questions to think about when considering stock
+structure for Rougheye and Blackspotted rockfishes when doing a stock
+assessment.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Rougheye and Blackspotted rockfishes are two different species-- can
+  we separate them as two stocks and conduct separate assessments?
+  Rougheye rockfish were first described in 1811 as \emph{Perca
+  variabilis} by German zoologist Peter Simon Pallas
+  (\citeproc{ref-jordan_fishes_1898}{Jordan and Evermann 1898}), and
+  assigned to various taxa at least 15 times since
+  (\citeproc{ref-love_rockfishes_2002}{Love, Yoklavich, and Thorsteinson
+  2002}). Some descriptions noted both light and dark color morphs,
+  which, along with possible confusion with several morphologically
+  similar co-occurring species (e.g., \emph{S. borealis} and \emph{S.
+  melanostomus}) have contributed to the persistent ambiguity in formal
+  descriptions of Rougheye Rockfish (\citeproc{ref-orr_species_2008}{Orr
+  and Hawkins 2008}). The first genetic studies conducted in the late
+  1960s and early 1970s
+  (\citeproc{ref-tsuyuki_contribution_1968}{Tsuyuki et al. 1968};
+  \citeproc{ref-tsuyuki_analyses_1970}{Tsuyuki and Westrheim 1970})
+  observed diversity suggestive of two genetic types within specimens
+  identified as Rougheye Rockfish. Allozyme studies conducted over the
+  next two decades (\citeproc{ref-seeb_biochemical_1986}{Seeb 1986};
+  \citeproc{ref-hawkins_genetic_1997}{S. Hawkins, Heifetz, and Pohl
+  1997}; \citeproc{ref-hawkins_genetic_2005}{S. L. Hawkins et al. 2005})
+  provided additional evidence suggesting two separate genetic types
+  within field-identified Rougheye Rockfish. Genetic variation between
+  the two types, supported by both nuclear and mitochondrial DNA, was
+  determined to be sufficiently conclusive to separate two species:
+  ``Type I'' and ``Type II'' Rougheye Rockfish
+  (\citeproc{ref-gharrett_two_2005}{Anthony J. Gharrett et al. 2005}).
+  Meristic and morphometric comparisons of the two species suggested
+  certain characters such as gill raker counts and length, snout length,
+  anal base length, and pectoral fin base were significantly different,
+  and in combination could reliably, though not definitively,
+  distinguish between the
+  species(\citeproc{ref-gharrett_genetically_2006}{A. J. Gharrett et al.
+  2006}). The two separate species were formally re-described by Orr and
+  Hawkins (\citeproc{ref-orr_species_2008}{2008}) with the Type II group
+  retaining \emph{S. aleutianus} and the common name Rougheye Rockfish.
+  Blackspotted rockfish was proposed as the common name for the Type I
+  group along with the scientific name of \emph{S. melanostictus},
+  re-establishing nomenclature from one of the species complex's earlier
+  descriptions (\citeproc{ref-matsubara_1934}{Matsubara 1934}).
+\end{enumerate}
+
+These two species remain difficult to consistently differentiate
+visually in the catch, thus are still commonly reported and treated as a
+species complex. Otolith morphometrics (e.g., shape, size, weight) have
+shown some promise in possibly identifying these species in Alaskan
+waters (97.3\% Blackspotted and 86.2\% of Rougheye rockfishes were
+accurately identified) and possibly using older otoliths to break out
+historical information by species
+(\citeproc{ref-harris_using_2019}{Harris, Hutchinson, and Wildes 2019}).
+Frey et al.~(in prep.) provided insight into the ability of the
+Northwest Fisheries Science Center West Coast Groundfish Bottom Trawl
+Survey biologists to identify the two species, with 90\% of genetically
+identified Rougheye rockfish being correctly identified in the field.
+When mis-identifications occurred, it was usually a Blackspotted
+rockfish being mis-identified as a Rougheye rockfish. There were few
+mis-identifications when a fish was identified as a Blackspotted
+rockfish. While this is promising for potential future species-specific
+data coming from the survey, it does not alleviate the historical
+problem of separating fishery data into the two species. Frey et al.~(in
+prep.) therefore also considered whether ecological factors like depth
+or latitude could help separate samples by species. They found that both
+species occur within the range of this assessment's considered areas
+(California to Washington), and heavily spatially overlap.
+Interestingly, there seem to be relative hot spots for these species
+where one species is more common than the other, and in general,
+Rougheye rockfish seems to be more common than Blackspotted rockfish
+(however, Blackspotted rockfish may be the more common of the two in
+parts of Alaska; Anthony J. Gharrett et al.
+(\citeproc{ref-gharrett_two_2005}{2005}); S. L. Hawkins et al.
+(\citeproc{ref-hawkins_genetic_2005}{2005}); Orr and Hawkins
+(\citeproc{ref-orr_species_2008}{2008})). Overall, there seems to be
+little ability to separate current or historical fishery data reliably
+in order to separate these two species into two stocks, so we will
+maintain a species complex approach, though given absolute presence off
+the U.S. West coast, this may be considered more of a Rougheye than
+Blackspotted stock assessment. We also note that throughout the range of
+these stocks, all current assessments to this point have maintained a
+species complex approach.
+
+Despite some identification advances and Rougheye and Blackspotted
+rockfishes are clearly genetically distinct species, data historically
+and contemporaneously remain available only for the
+Rougheye/Blackspotted Rockfish complex, not at the species level. While
+we treat these species as one assessed stock complex, we recognize and
+are mindful of the above species distinctions as we conduct our
+analyses.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Both species range into Canada and Alaska-- are they one stock? While
+  genetics studies have focused mostly on identification of the two
+  species, little is known about the population structure of either
+  species. This assessment and the 2013 assessment
+  (\citeproc{ref-hicks_status_2013}{Hicks, Wetzel, and Harms 2013})
+  represent the most southerly range of these species. Comparing the
+  absolute abundance of the 2013 assessment to the most current
+  estimates of the Alaskan stocks, the absolute number in this southerly
+  range is much smaller than in the Gulf of Alaska (GOA), but higher
+  than in the Bering Sea/Aleutian Island (BSAI) stock
+  (Figure~\ref{fig-SO_comp}). The two smaller stocks have similar trend
+  of decline and stabilization, whereas the higher biomass GOA stock
+  looks to have not dropped at all over the time period considered
+  (Figure~\ref{fig-RSS_comp}). We assume here that the west coast stocks
+  of Rougheye/Blackspotted rockfishes are distinct management units from
+  those in Alaska.
+\end{enumerate}
+
+\subsection{Life History}\label{life-history}
+
+Rougheye and Blackspotted Rockfishes range from northern California up
+to and throughout Alaska and into Japan
+(\citeproc{ref-gharrett_two_2005}{Anthony J. Gharrett et al. 2005};
+\citeproc{ref-hawkins_genetic_2005}{S. L. Hawkins et al. 2005};
+\citeproc{ref-orr_species_2008}{Orr and Hawkins 2008}). Both are
+long-lived (\textgreater100 years), with Rougheye Rockfish having the
+distinction of the oldest ever aged \emph{Sebastes} species at 205 years
+old. They both greatly overlap in latitude and depth (shallower than 100
+m to at least 439 m), and are generally considered slope rockfish, with
+an ontogenetic shift from shallower to deeper, and adults commonly found
+at 360 m (around 200 fathoms). Rougheye seems to be proportionally more
+abundant when survey samples are genetically identified, and
+Blackspotted Rockfish tend to be found, on average, deeper than Rougheye
+Rockfish (\citeproc{ref-hawkins_genetic_2005}{S. L. Hawkins et al.
+2005}; \citeproc{ref-orr_species_2008}{Orr and Hawkins 2008}).
+
+Rougheye/Blackspotted Rockfishes are often associated with structure,
+such as hard, rocky bottoms and steep habitats. They are rarely found on
+the deep flats. They can be found alone or in aggregations
+(\citeproc{ref-love_rockfishes_2002}{Love, Yoklavich, and Thorsteinson
+2002}), with aggregations often differentiated by age. Younger fish may
+school and are often found in shallower waters on the shelf, junveiles
+and subadults can be found together, and larger fish may form larger
+aggregations in the Pacific Northwest during the autumn and winter.
+These two species may also hybridize on occasion
+(\citeproc{ref-love_certainly_2011}{Love 2011}). These species are
+closely related to Shortraker Rockfish (\emph{S. borealis}) and are
+sometimes difficult to distinguish from Shortraker Rockfish without
+looking at the gill rakers. One major distinguishing feature of Rougheye
+Rockfish are the 2--10 spines along the lower rim of their eyes, hence
+the common name ``rougheye''.
+
+Like all \emph{Sebastes} species, Rougheye and Blackspotted Rockfishes
+give birth to live young. Larvae released has been documented between
+February and June and extrusion lengths are between 4.5-5.3 mm
+(\citeproc{ref-love_rockfishes_2002}{Love, Yoklavich, and Thorsteinson
+2002}). There are no studies on the fecundity of rougheye rockfish on
+the west coast of the U.S.
+
+A wide range of prey items make up the diet of rougheye rockfish.
+Crangid and pandalid shrimps make up the majority of their diets, and
+larger individuals, greater than 30 cm, feeding upon other fishes
+(\citeproc{ref-love_certainly_2011}{Love 2011}). They are also known to
+feed upon gammarid amphipods; mysids, crabs, polychaetes, and octopuses
+(\citeproc{ref-love_rockfishes_2002}{Love, Yoklavich, and Thorsteinson
+2002}; \citeproc{ref-love_certainly_2011}{Love 2011}).
+
+\subsection{Ecosystem considerations}\label{ecosystem-considerations}
+
+\subsection{Historical and Current Fishery
+Information}\label{historical-and-current-fishery-information}
+
+Rougheye/Blackspotted Rockfishes are not often targeted by a specific
+fishery, but are desirable and marketable, thus are typically retained
+when captured. They are often captured in bottom trawl, mid-water trawl,
+and longline fisheries. Small numbers have been observed in pot, shrimp,
+and recreational fisheries.
+
+After many attempts to start trawl fisheries off the west coast of the
+United States in the late 1800's, the availability of the otter trawl
+and the diesel engine in the mid-1920's helped the trawl fisheries
+expand (\citeproc{ref-douglas_species_1998}{Douglas and Division 1998}).
+The trawl fisheries really became established during World War II when
+demand increased for shark livers and bottomfish. A mink food fishery
+also developed during World War II
+(\citeproc{ref-jones_oregon_1961}{Jones and Harry 1961}), and post-war
+catches for rockfishes, including Rougheye/Blackspotted Rockfishes,
+increased (\citeproc{ref-niska_species_1976}{Niska 1976}). Foreign
+fleets began fishing for rockfish in the mid 1960's until the EEZ was
+implemented in 1977 (\citeproc{ref-rogers_species_2003}{J. B. Rogers
+2003}). Since 1977, landings of rockfish were high until management
+restrictions were implemented in 2000. Longline catches of rougheye
+rockfish are present from the turn of the century and continue in recent
+years, targeting sablefish and halibut. The catches by state for the
+trawl and hook \& line fleets as well as for the Pacific whiting at-sea
+fleet are shown in ******.
+
+A long-term directed fishery has not occurred for rougheye rockfish and
+historical discarding practices are not well known. Rougheye rockfish
+inhabit deeper water as adults, which were fished less often
+historically. More detailed information of the fisheries by state is
+given in Section ******* where the reconstructed landings are discussed.
+
+\subsection{Management History and
+Performance}\label{management-history-and-performance}
+
+Rougheye/Blackspotted Rockfishes has been a small component of
+groundfish fisheries and catches of Rougheye/Blackspotted Rockfishes
+have been governed by restrictions on assemblages of species, of which
+these species are a member. However, the distribution of fishing effort
+in areas where Rougheye/Blackspotted Rockfishes might be encountered has
+also been affected by catch restrictions on co-occurring, rebuilding
+species, as well as associated area closures instituted to promote
+rebuilding. The first imposed landings limits on a coastwide Sebastes
+complex (Rougheye/Blackspotted Rockfishes being one of the 50 rockfishes
+in the complex) were instituted in 1983. Ongoing concern that shelf and
+slope rockfishes may be undergoing overfishing led the attempt by J. S.
+Rogers et al. (\citeproc{ref-rogers_status_1996}{1996}) to describe the
+status of most rockfishes contained in the Sebastes complex.
+Rougheye/Blackspotted Rockfishes information content was low, and using
+the Triennial survey to calculate an average biomass and assuming that
+fishing mortality equals natural mortality provided estimates of
+exploitation rates that indicated the stock was undergoing very high
+exploitation rates in both management areas. The dividing line between
+the northern and southern management areas was shifted to 40º 10' N
+latitude in 1999 and the Sebastes complex was subsequently divided into
+nearshore, shelf, and slope complexes in 2000. Rougheye/Blackspotted
+Rockfishes has been managed under trip limits for the minor slope
+rockfish complex in both north and south management areas since this
+time.
+
+Table (\citeproc{ref-management-summary}{\textbf{management-summary?}})
+summarizes major management changes since 2000. Some important changes
+include the implementation of Rockfish Conservation Areas (RCA's) in
+2002, the beginning of trawl rationalization in 2011, and the lifting of
+the RCAs beginning in 2020 with the removal of the trawl RCA in Oregon
+and California and loosening restrictions in the non-trawl RCAs in 2023
+and 2024.
+
+Though managed as part of a complex, OFL contributions for
+Rougheye/Blackspotted Rockfishes were calculated using DB-SRA in 2010
+for the 2011-2012 management cycle. This lead to the observation that
+recent catches had frequently exceeded the OFL contribution estimated
+using data-poor, catch-only methods provided a strong indication that a
+more thorough evaluation of Rougheye/Blackspotted Rockfishes stock
+status and sustainable harvest levels be undertaken, using all available
+data. A full assessment of Rougheye/Blackspotted Rockfishes was
+undertaken in 2013 and indicated the stock complex was above management
+target levels (Hicks, Wetzel, and Harms
+(\citeproc{ref-hicks_status_2013}{2013})). Recent management performance
+for Rougheye/Blackspotted Rockfishes as a part of the nothern minor
+slope rockfish complex is provided in Table
+(\citeproc{ref-managment-performance}{\textbf{managment-performance?}})
+(ALI IS STILL CREATING THIS TABLE - WILL ADD TEXT FOR IT LATER).
 
 \subsection{Fisheries off Canada and
 Alaska}\label{fisheries-off-canada-and-alaska}
@@ -968,15 +1477,15 @@ interacts with growth and reproduction to determine stock productivity.
 It is a very difficult parameter to directly measure, thus empirical
 relationships based on life history parameters are often used to
 indirectly determine its value or build prior distributions in belief of
-what it is in the event we do attempt to estimate it in the model (Jason
-M. Cope and Hamel (\citeproc{ref-cope_upgrading_2022}{2022}); Hamel and
-Cope (\citeproc{ref-hamel_development_2022}{2022}); Maunder et al.
+what it is in the event we do attempt to estimate it in the model (Cope
+and Hamel (\citeproc{ref-cope_upgrading_2022}{2022}); Hamel and Cope
+(\citeproc{ref-hamel_development_2022}{2022}); Maunder et al.
 (\citeproc{ref-maunder_review_2023}{2023})). If length and age data are
 available, it may be possible to estimate it in the model.
 
 An estimate of maximum age tends to be the most reliable life history
-parameter related to natural mortality to inform its estimation. Jason
-M. Cope and Hamel (\citeproc{ref-cope_upgrading_2022}{2022})
+parameter related to natural mortality to inform its estimation. Cope
+and Hamel (\citeproc{ref-cope_upgrading_2022}{2022})
 (\href{https://connect.fisheries.noaa.gov/natural-mortality-tool/}{The
 Natural Mortality Tool}) provide the most up-to-date examination of the
 relationship between maximum age and natural mortality
@@ -1877,7 +2386,7 @@ shown in Figure . The relative error in the data peels are below
 significant levels.
 
 \subsubsection{Unresolved Problems and Major
-Uncertainties}\label{unresolved-problems-and-major-uncertainties}
+Uncertainties}\label{unresolved-problems-and-major-uncertainties-1}
 
 There are no major unresolved problems in the stock assessment, but
 there are many sources of uncertainty. Natural mortality remains a large
@@ -1892,119 +2401,6 @@ Likewise, all life history values are assumed constant, so any
 time-varying issues that are directional could create more uncertainty.
 
 \newpage{}
-
-\section{Management}\label{management}
-
-\subsection{Reference Points}\label{reference-points}
-
-Reference points were based on the rockfish FMSY proxy
-(\(\text{SPR}_{50\%}\)), target relative biomass (40\%), and estimated
-selectivity and catch for each fleet (Table \ref{tab:ReferencePoints}).
-The Rougheye/Blackspotted Rockfishes population in Washington at the
-start of 2023 is estimated to be just above the target biomass, and
-fishing intensity during 2022 is estimated to be just below the fishing
-intensity target (Figure \ref{fig:phase}). The yield values are lower
-than the previous assessment for similar reference points due to updated
-life history estimates and estimates of the total scale of the
-population, despite the overall stock status being a bit higher. The
-proxy MSY values of management quantities are by definition more
-conservative compared to the estimated MSY and MSY relative to 40\% of
-unfished spawning output because of the assumed steepness value.
-Sustainable total yield, removals, using the proxy \(\text{SPR}_{50\%}\)
-is 471 mt. The spawning output equivalent to 40\% of the unfished
-spawning output (\(\text{SO}_{40\%}\)) calculated using the SPR target
-(\(\text{SPR}_{50\%}\)) was 7,828 billions of eggs.
-
-Recent removals since 2017 have been at or below the point estimate of
-potential long-term yields calculated using an \(\text{SPR}_{50\%}\)
-reference point (Figure \ref{fig:1-spr}), leading to a population that
-has continued to increase over recent years with the assistance of above
-average recruitment between 2003-2014, despite below average recruitment
-starting in 2015. The equilibrium estimates of yield relative to biomass
-based on a steepness value fixed at are provided in Figure
-\ref{fig:yield}, where vertical dashed lines indicate the estimate of
-fraction unfished at the start of 2027 (current) and the estimated
-management targets calculated based on the relative target biomass (B
-target), the SPR target, and the maximum sustainable yield (MSY).
-
-The 2023 spawning biomass relative to unfished equilibrium spawning
-biomass, based on the 2022 fishing year, is 80.5397\%, above the
-management target of 40\% of unfished spawning output. The relative
-biomass and the ratio of the estimated SPR to the management target
-(\(\text{SPR}_{50\%}\)) across all model years are shown in Figure
-\ref{fig:phase} where warmer colors (red) represent early years and
-colder colors (blue) represent recent years. There have been periods
-where the stock status has decreased below the target and limit relative
-biomass, and fishing intensity has been higher than the target fishing
-intensity based on \(\text{SPR}_{50\%}\).
-
-\subsection{Management performance}\label{management-performance}
-
-Rougheye/Blackspotted Rockfishes removals have been below the equivalent
-Annual Catch Limit (ACL) over the recent decade (Table
-\ref{tab:manage}). The ACL declined in 2017 relative to earlier years
-based on the 2015 assessment of Rougheye/Blackspotted Rockfishes
-(\citeproc{ref-cope_assessments_2016}{J. M. Cope et al. 2016}). In the
-last ten years, catches peaked in 2016 at 369 mt. Since then catches
-have declined to a recent low of 130 mt in 2020 with the catches in the
-final two model years remaining low with 197 mt in 2021 and 166 mt in
-2022. The OFL has not been exceeded in any year over the past 10 years.
-
-\subsection{Harvest Projections and Decision
-Tables}\label{harvest-projections-and-decision-tables}
-
-The Rougheye/Blackspotted Rockfishes assessment is being considered as a
-category 1 assessment with a \(P^*\) = 0.45, \(\sigma\) = 0.50, and a
-time-varying buffer applied to set the ABC below the OFL. These
-multipliers are also combined with the rockfish MSY proxy of
-SPR\textsubscript{50} and the 40-10 harvest control rule to calculate
-OFLs and ACLs. A twelve-year (2023-2034) projection of the reference
-model using these specifications along with input removals for 2023 and
-2024 provided by the Groundfish Management Team (Katie Pierson, ODFW,
-pers. comm.) is provided in Table \ref{tab:project}.
-
-Uncertainty in management quantities for the reference model was
-characterized by exploring various model specifications in a decision
-table, with the desire for states of nature to represent uncertainty in
-both scale and relative stock status Initial explorations considering
-alternative specifications of natural mortality. This was based on using
-the estimated \(M\) scenario as a low state of nature and applying the
-sex-specific \(M\) values from the 2023 Oregon model as the high state
-of nature. These produced wide states of nature (Figure
-\ref{fig:stateofnature_SO} and Figure \ref{fig:stateofnature_depl}).
-Discussion with the STAR panel led to defining two other states of
-nature based on the reference model uncertainty in ending spawning
-output. Low and high states of nature were determined by applying an
-initial recruitment (\(lnR_0\)) value that lead to current spawning
-output values equivalent to the 12.5\% and 87.5\% percentile values from
-the current spawning output distribution (Figure
-\ref{fig:stateofnature_SO} and Figure \ref{fig:stateofnature_depl}) that
-are not as widely spread as the initial states of nature, but are
-constructed from the current model specifications. The resultant
-decision table (Table \ref{tab:dec-tab}) was built around the initial
-\(lnR_0\) states of nature approach. The catch rows assume P* values of
-0.45 and 0.4, then a constant catch using the yield at FSPR=0.5.
-
-\subsection{Evaluation of Scientific
-Uncertainty}\label{evaluation-of-scientific-uncertainty}
-
-\#The model-estimated uncertainty around the 2027 spawning biomass was
-\(\sigma\) = 100 and the uncertainty around the OFL was \(\sigma\) = NA.
-This is likely underestimate of overall uncertainty because of the
-necessity to fix some life history parameters such as natural mortality
-and steepness, as well as a lack of explicit incorporation of model
-structural uncertainty. The alternative states of nature used to bracket
-uncertainty in the decision table assist with encapsulating model
-structure uncertainty.
-
-\subsection{Research and Data Needs}\label{research-and-data-needs}
-
-This section briefly highlights progress on research and data needs
-identified in the most recent (2015) Rougheye/Blackspotted Rockfishes
-assessment, and then provides recommendations for future research.
-
-Research and data needs identified in the last assessment (italics) are
-listed here followed by a brief response for each.
 
 \newpage{}
 
@@ -2022,14 +2418,6 @@ Canada, Fisheries and Oceans. 2012. {``Management {Plan} for the
 and {S}. Melanostictus) and {Longspine} {Thornyhead} ({Sebastolobus}
 Altivelis) in {Canada} {[}{Final}{]}.''}
 
-\bibitem[\citeproctext]{ref-cope_assessments_2016}
-Cope, J. M., David B. Sampson, Andi Stephens, Meisha Key, Patrick P.
-Mirick, Megan M. Stachura, Tien-Shui Tsou, et al. 2016. {``Assessments
-of {California}, {Oregon}, and {Washington} Stocks of Black Rockfish
-(\emph{{Sebastes} Melanops}) in 2015.''} Pacific Fishery Management
-Council, 7700 Ambassador Place NE, Suite 200, Portland, OR 97220:
-Pacific Fishery Management Council.
-
 \bibitem[\citeproctext]{ref-cope_upgrading_2022}
 Cope, Jason M., and Owen S. Hamel. 2022. {``Upgrading from {M} Version
 0.2: {An} Application-Based Method for Practical Estimation, Evaluation
@@ -2043,17 +2431,57 @@ for 50 Data-Poor Stocks in the {Pacifc} Coast Ground {Fishery}
 {Management} {Plan}.''} \emph{NOAA Technical Memorandum NMFS}
 NOAA-TM-NMFS-SWFSC-460.
 
+\bibitem[\citeproctext]{ref-douglas_species_1998}
+Douglas, David A., and Oregon Fish Division. 1998. {``Species
+Composition of Rockfish in Catches by {Oregon} Trawlers, 1963-93.''}
+Marine \{Program\}.
+
 \bibitem[\citeproctext]{ref-francis_data_2011}
 Francis, R. I. C. Chris. 2011. {``Data Weighting in Statistical
 Fisheries Stock Assessment Models.''} \emph{Canadian Journal of
 Fisheries and Aquatic Sciences} 68 (6): 1124--38.
 \url{https://doi.org/10.1139/f2011-025}.
 
+\bibitem[\citeproctext]{ref-gharrett_genetically_2006}
+Gharrett, A. J., C. W. Mecklenburg, L. W. Seeb, Z. Li, A. P. Matala, A.
+K. Gray, and J. Heifetz. 2006. {``Do {Genetically} {Distinct} {Rougheye}
+{Rockfish} {Sibling} {Species} {Differ} {Phenotypically}?''}
+\emph{Transactions of the American Fisheries Society} 135 (3): 792--800.
+\url{https://doi.org/10.1577/T05-136.1}.
+
+\bibitem[\citeproctext]{ref-gharrett_two_2005}
+Gharrett, Anthony J., Andrew P. Matala, Eric L. Peterson, Andrew K.
+Gray, Zhouzhou Li, and Jonathan Heifetz. 2005. {``Two {Genetically}
+{Distinct} {Forms} of {Rougheye} {Rockfish} {Are} {Different}
+{Species}.''} \emph{Transactions of the American Fisheries Society} 134
+(1): 242--60. \url{https://doi.org/10.1577/T04-055.1}.
+
 \bibitem[\citeproctext]{ref-hamel_development_2022}
 Hamel, Owen S., and Jason M. Cope. 2022. {``Development and
 Considerations for Application of a Longevity-Based Prior for the
 Natural Mortality Rate.''} \emph{Fisheries Research} 256 (December):
 106477. \url{https://doi.org/10.1016/j.fishres.2022.106477}.
+
+\bibitem[\citeproctext]{ref-harris_using_2019}
+Harris, Jeremy P., Charles Hutchinson, and Sharon Wildes. 2019. {``Using
+Otolith Morphometric Analysis to Improve Species Discrimination of
+Blackspotted Rockfish ({Sebastes} Melanostictus) and Rougheye Rockfish
+({S}. Aleutianus).''} \emph{Fishery Bulletin} 117 (3): 234--45.
+\url{https://go.gale.com/ps/i.do?p=AONE&sw=w&issn=00900656&v=2.1&it=r&id=GALE\%7CA603632222&sid=googleScholar&linkaccess=abs}.
+
+\bibitem[\citeproctext]{ref-hawkins_genetic_2005}
+Hawkins, Sharon L., Jonathan Heifetz, Christine M. Kondzela, John Pohl,
+Richard L. Wilmot, Oleg N. Katugin, and Vladimir N. Tuponogov. 2005.
+{``Genetic Variation of Rougheye Rockfish ({Sebastes} Aleutianus) and
+Shortraker Rockfish ({S}. Borealis) Inferred from Allozymes.''}
+\emph{Fishery Bulletin} 103 (3): 524--35.
+
+\bibitem[\citeproctext]{ref-hawkins_genetic_1997}
+Hawkins, Sharon, Jonathan Heifetz, and John Pohl. 1997. {``Genetic
+Population Structure of Rougheye Rockfish ({Sebastes} Aleutianus)
+Inferred from Allozyme Variation.''} National \{Marine\} \{Fisheries\}
+\{Service\}, \{Alaska\} \{Fishery\} \{Science\} \{Quarterly\} \{Report\}
+July - August - September.
 
 \bibitem[\citeproctext]{ref-hicks_status_2013}
 Hicks, Allan C, Chantell Wetzel, and John Harms. 2013. {``The Status of
@@ -2062,10 +2490,36 @@ Rougheye Rockfish ({Sebastes} Aleutianus) and Blackspotted Rockfish
 2013.''} Pacific Fishery Management Council, 7700 Ambassador Place NE,
 Suite 200, Portland, OR 97220.
 
+\bibitem[\citeproctext]{ref-jones_oregon_1961}
+Jones, W. A., and G. Y. Harry Jr. 1961. {``The {Oregon} {Trawl}
+{Fishery} for {Mink} {Food}-1948-1957.''} 8 (1).
+
+\bibitem[\citeproctext]{ref-jordan_fishes_1898}
+Jordan, David Starr, and Barton Warren Evermann. 1898. {``The Fishes of
+{North} and {Middle} {America}: {A} Descriptive Catalogue of the Species
+of Fish-Like Vertebrates Found in the Waters of {North} {America}, North
+of the {Isthmus} of {Panama}, Pt. {II}.''} \emph{Bulletin of the United
+States National Museum} 47: 1241--2183.
+
 \bibitem[\citeproctext]{ref-karnowski_historical_2014}
 Karnowski, M., V. V. Gertseva, and Andi Stephens. 2014. {``Historical
 {Reconstruction} of {Oregon}'s {Commercial} {Fisheries} {Landings}.''}
 Salem, OR: Oregon Department of Fish; Wildlife.
+
+\bibitem[\citeproctext]{ref-love_certainly_2011}
+Love, M. S. 2011. \emph{Certainly {More} {Than} {You} {Want} to {Know}
+{About} the {Fishes} of the {Pacific} {Coast}}. Really Big Press.
+
+\bibitem[\citeproctext]{ref-love_rockfishes_2002}
+Love, M. S., M. Yoklavich, and L. Thorsteinson. 2002. \emph{The
+{Rockfishes} of the {Northeast} {Pacific}}. 1st Edition. Berkeley:
+University of California Press.
+
+\bibitem[\citeproctext]{ref-matsubara_1934}
+Matsubara, K. 1934. {``Studies on the Scorpaenoid Fishes of Japan. I.
+Descriptions of One New Genus and Five New Species.''} \emph{Journal of
+the Imperial Fishery Institute} 30: 199.
+\url{https://cir.nii.ac.jp/crid/1370283693151216527}.
 
 \bibitem[\citeproctext]{ref-maunder_review_2023}
 Maunder, Mark N., Owen S. Hamel, Hui-Hua Lee, Kevin R. Piner, Jason M.
@@ -2088,6 +2542,17 @@ Huff, Elliott L. Hazen, Lisa G. Crozier, Michael G. Jacox, et al. 2023.
 Current} Large Marine Ecosystem.''} \emph{Frontiers in Marine Science}
 10. \url{https://doi.org/10.3389/fmars.2023.1103767}.
 
+\bibitem[\citeproctext]{ref-niska_species_1976}
+Niska, Edwin L. 1976. {``Species {Compositionof} Rockfish in Catches by
+{Oregon} {Trawlers}, 1963-71.''} Informational \{Report\} 76-7.
+
+\bibitem[\citeproctext]{ref-orr_species_2008}
+Orr, James W., and Sharon Hawkins. 2008. {``Species of the Rougheye
+Rockfish Complex: Resurrection of {Sebastes} Melanostictus ({Matsubara},
+1934) and a Redescription of {Sebastes} Aleutianus ({Jordan} and
+{Evermann}, 1898)({Teleostei}: {Scorpaeniformes}).''} \emph{Fishery
+Bulletin} 106 (2): 111--34. \url{http://aquaticcommons.org/8844/}.
+
 \bibitem[\citeproctext]{ref-punt_quantifying_2008}
 Punt, A. E., D. C. Smith, K. KrusicGolub, and S. Robertson. 2008.
 {``Quantifying Age-Reading Error for Use in Fisheries Stock Assessments,
@@ -2106,6 +2571,24 @@ National Marine.
 Report, COSEWIC Status. 2007. {``COSEWIC Assessment and Status Report on
 the Rougheye Rockfish Sebastes Sp. Type i and Sebastes Sp. Type II in
 Canada.''} Ottawa.
+
+\bibitem[\citeproctext]{ref-rogers_species_2003}
+Rogers, J. B. 2003. {``Species Allocation of \emph{Sebastes} and
+\emph{Sebastolobus} Species Caught by Foreign Countries Off
+{Washington}, {Oregon}, and {California}, {U}.{S}.{A}. In 1965-1976.''}
+Unpublished document.
+
+\bibitem[\citeproctext]{ref-rogers_status_1996}
+Rogers, J. S., M. Wilkins, D. Kamakawa, Farron R. Wallace, T. Builder,
+M. Zimmerman, M. Kander, and B. Culver. 1996. {``Status of the
+{Remaining} {Rockfish} in the {Sebastes} {Complex} in 1996 and
+Recommendations for Management in 1997.''} Pacific Fishery Management
+Council 2130 SW fifth Ave. Suite 224, Portland, Ore. 97210.
+
+\bibitem[\citeproctext]{ref-seeb_biochemical_1986}
+Seeb, L. W. 1986. \emph{Biochemical {Systematics} and {Evolution} of the
+{Scorpaenid} {Genus} {Sebastes}}. University of Washington.
+\url{https://books.google.com/books?id=CfJ6nQEACAAJ}.
 
 \bibitem[\citeproctext]{ref-spencer_assessment_2023}
 Spencer, Paul D, James N Ianelli, and Ned Laman. 2003. {``Assessment of
@@ -2138,6 +2621,20 @@ Thorson, James T., Kelli F. Johnson, R. D. Methot, and I. G. Taylor.
 Assessment Models Using the {Dirichlet}-Multinomial Distribution.''}
 \emph{Fisheries Research} 192: 84--93.
 \url{https://doi.org/10.1016/j.fishres.2016.06.005}.
+
+\bibitem[\citeproctext]{ref-tsuyuki_contribution_1968}
+Tsuyuki, H., E. Roberts, R. H. Lowes, W. Hadaway, and S. J. Westrheim.
+1968. {``Contribution of {Protein} {Electrophoresis} to {Rockfish}
+({Scorpaenidae}) {Systematics}.''} \emph{Journal of the Fisheries
+Research Board of Canada} 25 (11): 2477--2501.
+\url{https://doi.org/10.1139/f68-216}.
+
+\bibitem[\citeproctext]{ref-tsuyuki_analyses_1970}
+Tsuyuki, H., and S. J. Westrheim. 1970. {``Analyses of the {Sebastes}
+Aleutianus--{S}. Melanostomus {Complex}, and {Description} of a New
+{Scorpaenid} {Species}, {Sebastes} Caenaematicus, in the {Northeast}
+{Pacific} {Ocean}.''} \emph{Journal of the Fisheries Research Board of
+Canada} 27 (12): 2233--54. \url{https://doi.org/10.1139/f70-252}.
 
 \end{CSLReferences}
 
@@ -4183,7 +4680,7 @@ tidyselect::everything(), \# missing\_text = ``---'' \# )
 
 \subsection{Figures}\label{figures}
 
-\subsubsection{Introduction}\label{introduction}
+\subsubsection{Introduction}\label{introduction-1}
 
 \begin{figure}[H]
 
