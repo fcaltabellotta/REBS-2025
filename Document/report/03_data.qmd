@@ -196,7 +196,7 @@ There are no `r spp` age data from the Triennial Survey.
 
 ### AFSC Slope Survey
 #### Survey Description
-
+The AFSC slope survey was initiated in 1984. The survey methods are described in Lauth (2000). Prior to 1997, the survey was conducted in different latitudinal ranges each year (Table 5). In this assessment, only data from 1997, 1999, 2000 and 2001 were used – these years were consistent in latitudinal range (from 34o30’ N. latitude to the U.S.-Canada border) and depth coverage (183-1280 m; 100-700 fm).
 #### Abundance Index
 
 #### Length Compositions
@@ -214,6 +214,7 @@ There are no `r spp` age data from the AFSC Slope Survey.
 
 ### NWFSC Slope Survey
 #### Survey Description
+The NWFSC slope survey was conducted annually from 1999 to 2002 (Keller et al., 2007). The surveyed area ranged between 34o50’ and 48o07’ N. latitude, encompassing the U.S. Vancouver, Columbia, Eureka, Monterey INPFC areas, and a portion of the Conception area, and consistently covered depths from 100 to 700 fm (183-1280 m) (Table 5).
 
 #### Abundance Index
 
