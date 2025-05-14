@@ -80,9 +80,29 @@ Non-trawl discard amounts are provided in Table XX. Non-trawl discard of `r Spp`
 
 #### Length and Age Sample Sizes
 
-##### Multinomial Sample Sizes
+The fishery length and age data for bottom trawl, non-trawl and midwater trawl fleets were obtained from \gls{pacfin} Biological Data System (BDS) database. The fishery length and age samples were collected by port samplers.
 
-Initial input values for the multinomial samples sizes determine the relative weights applied in fitting the annual composition data within the set of observations for each fishing fleet in the model.  The initial input values in this assessment were based on the following equation developed by I. Stewart and S. Miller (NWFSC), and presented at the 2006 Stock Assessment Data and Modeling workshop. The input sample sizes for all commercial data were calculated based on a combination of trips and fish sampled:
+Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the catches in each year. The first length bin includes all observations less than 10 cm and the last bin includes all fish 80 cm and longer. Age distributions included bins from age 1 to age 100, with the first bin including all fish ages 0 and 1 and the last bin including all fish age 100 and above.
+
+Commercial length-frequency distributions were developed for each fleet and year, for which observations were available. Females and males distributions were treated separately, to track sex-specific differences. For each fleet, the raw observations (compiled from the \gls{pacfin} and \gls{calcom} databases) were expanded to the trip level, to account for differences in samples sizes relative catch weights among trips (first stage expansion). The expanded length observations were then further expanded to state level, to account for differences in sampling intensity of `r Spp` landings among states combined into a single fleet (second stage expansion). The expansion algorithm can be illustrated with the following equation:
+
+\begin{centering}
+
+$N_{b,j,y} = \displaystyle\sum_{s=1}^{s=k}\displaystyle\sum_{t=1}^{t=n}L_{b,j,t} \cdot
+\left(\frac{LC_t}{SC_t}\right) \cdot \left(\frac{LC_{s,y}}{SC_{s,y}}\right)$
+
+\end{centering}
+
+Were $N_{b,j,y}$ is the number of lengths in each length bin ($b$) by sex ($j$) and year ($y$) within each fleet. $L_{b,j,t}$ represents an individual length sample by bin ($b$) and sex ($j$) within an individual fishing trip ($t$). As the first stage expansion, $L_{b,j,t}$ was multiplied by the ratio of landed catch ($LC_t$) within that trip ($t$) to portion of catch sampled for lengths ($SC_t$) within the same trip ($t$). In the second stage expansion, the individual length sample ($L_{b,j,t}$) was multiplied by the ratio of landed catch ($LC_{s,y}$) within individual state ($s$) and year ($y$) to catch weights sampled for lengths ($SC_{s,y}$) within the same state ($s$) and year ($y$). As the final step, the expanded length samples from the same size bin and sex were summed across all trips and states (combined into a single fleet) within a single year, to obtain the total number of lengths in each length bin by sex, year and fleet ($N_{b,j,y}$). The same calculations were repeated for each length bin (26 bins total), to develop sex specific length frequencies for each fishing fleet by year. Since coastwide catches in the assessment model were divided between South (California) and North (Oregon-Washington) fleets, the second stage expansion of length samples was relevant to only North fleet.
+
+Age distributions were included in the model as conditional-age-at-length (CAAL) observations. The marginal age-compositions were also included, but only for easier viewing of strong cohorts. The conditional-age-at-length data were not expanded and were binned according to length, age, sex, and year.
+
+The filtering and cleaning of the \gls{pacfin} data and the length and age composition expansion was conducted using the pacfintools package in R [@johnson_pacfin_2023]. The filtering steps included removing samples with missing vital information.
+
+Length and age data collected from commercial landings for each fleet are summarized by the number of trips and fish sampled by year. Figures XX show plots of the commercial length and age composition data across time for each fishery fleet.
+
+##### Multinomial Sample Sizes
+Initial input values for the multinomial samples sizes determine the relative weights applied in fitting the annual composition data within the set of observations for each fishing fleet in the model.  The initial input values in this assessment were were calculated as a function of the number of trips and number of fish via the Stewart Method (pers.comm. I. Stewart, International Pacific Halibut Commission (IPHC)). The method is based on analysis of the input and model derived effective sample sizes from West Coast groundfish stock assessments. A piece-wise linear regression was used to estimate the increase in effective sample size per sample based on fish-per-sample and the maximum effective sample size for large numbers of individual fish. The resulting equations are:
 
 \begin{centering}
 
