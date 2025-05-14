@@ -13,6 +13,7 @@ when they were not used.
 ## Fishery-dependent data
 
 <!-- Commercial fisheries landings by state, year, and gear (PacFIN is the standard source for recent domestic commercial landings), historical catch estimates, discards, recreational fisheries catches, foreign removals; sample size information for length- and age-composition data by state, year and gear, including both the number of trips and fish sampled. Description of methods to estimate abundance indices, sample size information by survey and year. Include complete tables and figures and date of data extraction. -->
+`r Spp` are not often targeted by a specific fishery, but are desirable and marketable, thus are typically retained when captured. They are often captured in bottom trawl, mid-water trawl, and longline fisheries. Small numbers have been observed in pot, shrimp.
 
 Fishery depended data for Rougheye/Blackspotted complex in this assessment are divided among six fleets, which include:
 * Fleet 1: Commercial bottom trawl fishery
@@ -22,9 +23,9 @@ Fishery depended data for Rougheye/Blackspotted complex in this assessment are d
 * Fleet 5: Contemporary mid-water fishery
 * Fleet 6: Bycatch within the at-sea hake fishery 
 
-There are no recreational landings of this complex on the West coast. 
+Recreational catch is inconsequential and not accounted for in this assessment. 
 
-### Landings
+### Commercial Fishery Landings
 
 #### Recent landings
 Recent commercial landings of `r Spp` (2000-2024 for Washington, 1987–2022 for Oregon and 1981–2022 for California,) were obtained from PacFIN, a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries 
@@ -48,8 +49,10 @@ Historical California and Oregon landings did not change substantially (@fig-Ct_
 
 Comparing the update historical data with that used in the 2013 stock assessment shows only minor differences (@fig-Ct_compsSO; @fig-Ct_compsRSS).
 
-#### At-Sea Hake Catches
+#### Bycatch in the foreign POP fishery
+Between mid-1960s and mid-1970s, foreign trawl fleets from the former Soviet Union, Japan, Poland, Bulgaria and East Germany targeted aggregations of Pacific ocean perch in the Northeast Pacific Ocean, in the waters off the U.S. West Coast (Love et al., 2002). Rogers (2003) estimated removals of POP and other species caught within this foreign POP fishery, including removals of `r Spp`. In the assessment, `r Spp` bycatch in the foreign POP fishery between 1966 and 1976 as estimated by Rogers (2003) were added to Commercial bottom trawl fleet.
 
+#### At-Sea Hake Catches
 `r Spp` has long been bycaught in the fishery for the coastal population of Pacific hake, which is almost exclusively conducted with mid-water trawls. Large-scale harvesting of Pacific hake in the United States began in 1966, when factory trawlers from the Soviet Union and other countries began targeting this stock. After the 200-mile U.S. Exclusive Economic Zone was declared in 1977, a Joint-Venture fishery was initiated between United States trawlers and Soviet factory trawlers acting as mother-ships (larger, slower ships for fish processing and storage while at sea). By 1989 the U.S. fleet capacity had grown to a level sufficient to harvest the entire quota, and no further foreign fishing was allowed. The Pacific hake fishery is currently 100% observed by the at-sea hake observer program (A-SHOP) and data on bycatch species, including `r Spp`, is being routinely collected. 
 
 Annual amounts of `r Spp` bycatch (retained and discarded) in the Pacific hake fishery were obtained from the North Pacific Database Program (NORPAC). That time series covers the period between 1977 and 2024 and include catches removed by foreign and domestic fisheries as well as those obtained during the time of Joint Ventures (JV). `r Spp` removals within the at-sea hake fishery were treated in the model as a separate fleet.
@@ -62,7 +65,7 @@ Historically, little to no discarding was observed for `r Spp`.
 The historical discard information comes from Pikitch et al. (1988), and often referred to as the Pikitch study. The Pikitch study was conducted between 1985 and 1987 between 4842’ and 4260’ N. latitude, which is primarily within the Columbia INPFC area (Pikitch et al. 1988, Rogers and Pikitch 1992). Participation in the study was voluntary and included vessels using bottom, midwater and shrimp trawl gears. Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow, and recorded the weight of species retained and discarded in the sample. There were limited observations of `r Spp`  in the Pikitch study.  There are no midwater trawl records of `r Spp`, and only few fish records of bottom trawl catches, based on which for bottom trawl discard rate (discard weight over total weight) is just 0.09%. Therefore, no historical discard was assumed in the model.
 
 #### Recent Discard
-In 2002, the West Coast Groundfish Observer Program (WCGOP) was implemented on the West Coast of the United States, which began with gathering bycatch and discard information for the limited entry trawl and fixed gear fleets. Observer coverage has expanded to include the California halibut trawl, the nearshore fixed gear and pink shrimp trawl fisheries. Since 2011, trawl fisheries have been managed with catch shares under a system of annual individual fishing quotas (IFQs) for the shoreside sector (i.e., vessels delivering to shoreside processors) and harvest cooperatives for the at-sea hake sectors (catcher-processors who catch and process hake at sea; and Motherships, factory processors that take delivery of hake from catcher vessels at sea). Constant monitoring of catch using observers or electronic monitoring (EM) is required to participate in the trawl catch share fishery. 
+With the introduction of trip limits for rockfish in early 2000, limited discard has been observed in bottom trawl and non-trawl fisheries. In 2002, the West Coast Groundfish Observer Program (WCGOP) was implemented on the West Coast of the United States, which began with gathering bycatch and discard information for the limited entry trawl and fixed gear fleets. Observer coverage has expanded to include the California halibut trawl, the nearshore fixed gear and pink shrimp trawl fisheries. Since 2011, trawl fisheries have been managed with catch shares under a system of annual individual fishing quotas (IFQs) for the shoreside sector (i.e., vessels delivering to shoreside processors) and harvest cooperatives for the at-sea hake sectors (catcher-processors who catch and process hake at sea; and Motherships, factory processors that take delivery of hake from catcher vessels at sea). Constant monitoring of catch using observers or electronic monitoring (EM) is required to participate in the trawl catch share fishery. 
 
 The discard amounts of `r Spp` for the period between 2002 and 2023 were obtained from WCGOP by year and fleet (bottom trawl, mid-water trawl and non-trawl).Discard amounts were provided for both the catch share and the non-catch share sector for `r Spp`.  
 
@@ -76,9 +79,7 @@ Bottom trawl discard amounts are provided in Table XX. Prior to 2011, before the
 ##### Non-Trawl Discard
 Non-trawl discard amounts are provided in Table XX. Non-trawl discard of `r Spp` were made in both catch share and non-catch share sectors. Discard amounts in these sectors were combined by year to represent total discard within the fleet. The discards within the fleets ranged between 0.5 metrci ton and 35 metric tons, with 10 metric tons as average per year.
 
-### Biological data
-
-#### Length and Age Sample Sizes
+### Fishery Length and Age Data
 
 The fishery length and age data for bottom trawl, non-trawl and midwater trawl fleets were obtained from \gls{pacfin} Biological Data System (BDS) database. The fishery length and age samples were collected by port samplers.
 
@@ -101,7 +102,6 @@ The filtering and cleaning of the \gls{pacfin} data and the length and age compo
 
 Length and age data collected from commercial landings for each fleet are summarized by the number of trips and fish sampled by year. Figures XX show plots of the commercial length and age composition data across time for each fishery fleet.
 
-##### Multinomial Sample Sizes
 Initial input values for the multinomial samples sizes determine the relative weights applied in fitting the annual composition data within the set of observations for each fishing fleet in the model.  The initial input values in this assessment were were calculated as a function of the number of trips and number of fish via the Stewart Method (pers.comm. I. Stewart, International Pacific Halibut Commission (IPHC)). The method is based on analysis of the input and model derived effective sample sizes from West Coast groundfish stock assessments. A piece-wise linear regression was used to estimate the increase in effective sample size per sample based on fish-per-sample and the maximum effective sample size for large numbers of individual fish. The resulting equations are:
 
 \begin{centering}
@@ -111,6 +111,10 @@ Input effN = $N_{\text{trips}} + 0.138 * N_{\text{fish}}$ if $N_{\text{fish}}/N_
 Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $\geq$ 44
 
 \end{centering}
+
+Discard length composition data for both discard fleets were available from WCGOP. WCGOP length composition data were not sex-specific. WCGOP raw observations were expanded to the haul level, to account for differences in catch among hauls. 
+
+No age data were available for discarded fish.
 
 ## Fishery-independent data
 
