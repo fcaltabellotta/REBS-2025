@@ -56,7 +56,9 @@ Recent commercial landings of rougheye rockfish (2001-2024 for Washington, 1987â
 
 #### At-Sea Hake Landings
 
-NOTE - Ali added heading but I'm guessing Vlada should write?
+`r Spp` has long been bycaught in the fishery for the coastal population of Pacific hake, which is almost exclusively conducted with mid-water trawls. Large-scale harvesting of Pacific hake in the United States began in 1966, when factory trawlers from the Soviet Union and other countries began targeting this stock. After the 200-mile U.S. Exclusive Economic Zone was declared in 1977, a Joint-Venture fishery was initiated between United States trawlers and Soviet factory trawlers acting as mother-ships (larger, slower ships for fish processing and storage while at sea). By 1989 the U.S. fleet capacity had grown to a level sufficient to harvest the entire quota, and no further foreign fishing was allowed. The Pacific hake fishery is currently 100% observed by the at-sea hake observer program (A-SHOP) and data on bycatch species, including `r Spp`, is being routinely collected. 
+
+Annual amounts of `r Spp` bycatch in the Pacific hake fishery are available from the North Pacific Database Program (NORPAC). That time series covers the period between 1977 and 2024 and include catches removed by foreign and domestic fisheries as well as those obtained during the time of Joint Ventures (JV). 
 
 ### Discards
 
