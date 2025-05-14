@@ -64,17 +64,17 @@ The historical discard information comes from Pikitch et al. (1988), and often r
 #### Recent Discard
 In 2002, the West Coast Groundfish Observer Program (WCGOP) was implemented on the West Coast of the United States, which began with gathering bycatch and discard information for the limited entry trawl and fixed gear fleets. Observer coverage has expanded to include the California halibut trawl, the nearshore fixed gear and pink shrimp trawl fisheries. Since 2011, trawl fisheries have been managed with catch shares under a system of annual individual fishing quotas (IFQs) for the shoreside sector (i.e., vessels delivering to shoreside processors) and harvest cooperatives for the at-sea hake sectors (catcher-processors who catch and process hake at sea; and Motherships, factory processors that take delivery of hake from catcher vessels at sea). Constant monitoring of catch using observers or electronic monitoring (EM) is required to participate in the trawl catch share fishery. 
 
-The discard amounts of `r Spp` for the period between 2002 and 2023 were obtained from WCGOP by year and fleet (bottom trawl, mid-water trawl and non-trawl).Discard amounts were provided for both the catch share and the non-catch share sector for `r Spp`.  Mid-water trawl discard was not present in non-catch share sector and was very minimal (virtually non-existing) in catch-share sector, with discard rate averaging to 0.1% per year. In the model, no discard was assumed in mid-water trawl fleet. The discarding amounts of `r Spp` within bottom trawl and non-trawl fleets have been relatively low, and were included in the modelas separate fleets. 
+The discard amounts of `r Spp` for the period between 2002 and 2023 were obtained from WCGOP by year and fleet (bottom trawl, mid-water trawl and non-trawl).Discard amounts were provided for both the catch share and the non-catch share sector for `r Spp`.  
+
+Mid-water trawl discard was not present in non-catch share sector and was extremely minimal (virtually non-existing) in catch-share sector, with discard rate averaging to 10kg per year. Therefroe, in the model, no discard was assumed for mid-water trawl fleet. 
+
+The discarding amounts of `r Spp` within bottom trawl and non-trawl fleets were included in the model as separate fleets. 
 
 ##### Bottom Trawl Discard
-
-Bottom trawl discard amounts are provided in Table XX. Bottom trawl discard of `r Spp` for 2002-2011 were made in both catch share and non-catch share sectors, while discards for 2011-2023 period were only made within catch share fleet, and were extremely low.
+Bottom trawl discard amounts are provided in Table XX. Prior to 2011, before the start of the catch share program, the discard of `r Spp` ranged between 1 metric ton and 60 metric tons, averaging at 23 metric tons a year. After 2011, the discard has been very low, not exceeding 0.5 metric ton a year.
 
 ##### Non-Trawl Discard
-
-Non-trawl discard amounts are provided in Table XX. Non-trawl discard of `r Spp` for 2002-2011 were made in both catch share and non-catch share sectors, while discards for 2011-2023 period were only made within catch share fleet, and were extremely low.
-
-
+Non-trawl discard amounts are provided in Table XX. Non-trawl discard of `r Spp` were made in both catch share and non-catch share sectors. Discard amounts in these sectors were combined by year to represent total discard within the fleet. The discards within the fleets ranged between 0.5 metrci ton and 35 metric tons, with 10 metric tons as average per year.
 
 ### Biological data
 
