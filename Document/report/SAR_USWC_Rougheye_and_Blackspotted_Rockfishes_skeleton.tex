@@ -200,6 +200,15 @@
 \ModifyLayer[addvoffset=-.6ex]{plain.scrheadings.foot.above.line}
 \setkomafont{pageheadfoot}{\small}
 
+% Landscape tables and figures
+\usepackage{pdflscape}
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}}
+
+% Acronyms
+\usepackage[acronym]{glossaries}
+\glsdisablehyper
+\loadglsentries{sa4ss_glossaries.tex}
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
@@ -296,7 +305,7 @@
 U.S. West Coast in 2025}
 \author{Jason M. Cope \and Vladlena Gertseva \and R. Claire
 Rosmond \and Fabio P. Caltabellotta \and Alison D. Whitman}
-\date{2025-05-13}
+\date{2025-05-14}
 
 \begin{document}
   \begin{titlepage}
@@ -501,7 +510,7 @@ catch (mt) summed across fleets.}
 Year & Trawl & Trawl 
  discard & Non-trawl & Non-trawl 
  discard & Midwater 
- trawl & At-sea-hake & Total Catch (mt) \\ 
+ trawl & At-sea-hake & Total Catch \\ 
 \midrule\addlinespace[2.5pt]
 2015 & 31 & 10 & 47 & 14 & 19.26010 & 21.8019 & 142.1482 \\ 
 2016 & 31 & 8 & 60 & 13 & 15.53260 & 29.6339 & 157.2776 \\ 
@@ -1209,6 +1218,11 @@ they were not used.
 
 \subsection{Fishery-dependent data}\label{fishery-dependent-data}
 
+Rougheye/Blackspotted Rockfishes are not often targeted by a specific
+fishery, but are desirable and marketable, thus are typically retained
+when captured. They are often captured in bottom trawl, mid-water trawl,
+and longline fisheries. Small numbers have been observed in pot, shrimp.
+
 Fishery depended data for Rougheye/Blackspotted complex in this
 assessment are divided among six fleets, which include: * Fleet 1:
 Commercial bottom trawl fishery * Fleet 2: Commercial non-trawl gear
@@ -1217,26 +1231,28 @@ trawl fleet * Fleet 4: Dead discard non-trawl fleet * Fleet 5:
 Contemporary mid-water fishery * Fleet 6: Bycatch within the at-sea hake
 fishery
 
-There are no recreational landings of this complex on the West coast.
+Recreational catch is inconsequential and not accounted for in this
+assessment.
 
-\subsubsection{Landings}\label{landings}
+\subsubsection{Commercial Fishery
+Landings}\label{commercial-fishery-landings}
 
 \paragraph{Recent landings}\label{recent-landings}
 
-Recent commercial landings of rougheye rockfish (2000-2024 for
-Washington, 1987--2022 for Oregon and 1981--2022 for California,) were
-obtained from PacFIN, a regional fisheries database that manages
-fishery-dependent information in cooperation with West Coast state
-agencies and National Marine Fisheries Service (NMFS). Catch data were
-extracted from PacFIN on April 21, 2015, by state and then combined into
-the fishing fleets used in the assessment. Time series of recent
-landings by fleet and state are reported in Table X and shown in Figures
-X to X.
+Recent commercial landings of Rougheye/Blackspotted Rockfishes
+(2000-2024 for Washington, 1987--2022 for Oregon and 1981--2022 for
+California,) were obtained from PacFIN, a regional fisheries database
+that manages fishery-dependent information in cooperation with West
+Coast state agencies and National Marine Fisheries Service (NMFS). Catch
+data were extracted from PacFIN on April 21, 2015, by state and then
+combined into the fishing fleets used in the assessment. Time series of
+recent landings by fleet and state are reported in Table X and shown in
+Figures X to X.
 
 \paragraph{Historical Landings}\label{historical-landings}
 
-Historical landings of Rougheye/Blackspotted rockfish were reconstructed
-by state, by year.
+Historical landings of Rougheye/Blackspotted Rockfishes were
+reconstructed by state, by year (Table X, Figure X).
 
 The Washington historical landings (1889--2000) were provided by
 Washington Department of Fish and Wildlife (WDFW), who recently
@@ -1274,69 +1290,223 @@ Center (Ralston et al.
 
 Comparison of Rougheye/Blackspotted rockfish historical landings by
 state and fleet between this and 2013 assessment is provided in
-Figure~\ref{fig-Ct_All}.
-
-The largest differences in this assessment from 2013 model are in
-Washington landings (Figure~\ref{fig-Ct_WA}), with newly estimated
-landings being generally lower than those used in previous assessment.
-The new WDFW catch reconstruction completed by WDFW is considered an
-improvement.
+Figure~\ref{fig-Ct_All}. The largest differences in this assessment from
+2013 model are in Washington landings (Figure~\ref{fig-Ct_WA}), with
+newly estimated landings being generally lower than those used in
+previous assessment. The new WDFW catch reconstruction completed by WDFW
+is considered an improvement.
 
 Historical California and Oregon landings did not change substantially
 (Figure~\ref{fig-Ct_CA} and Figure~\ref{fig-Ct_OR}), with the exception
-of the magnitude of hte catch in a few years. Discrepancies in
-California and Oregon non-trawl landings between the 2013 and 2025
-assessments are caused by the fact that non-trawl fleet in 2013
-assessment was limited to only fixed gear, when in 2025 assessment
-non-trawl includes all non-trawl gear groups. Slight discrepancies in
-Oregon trawl landings between 1987 and 1999, are from adding previously
-non-reported landings of Rougheye/Blackspotted in the unspecified
-rockfish market categories (see details above).
+of a few years. Discrepancies in California and Oregon non-trawl
+landings between the 2013 and 2025 assessments are caused by the fact
+that non-trawl fleet in 2013 assessment was limited to only fixed gear,
+when in 2025 assessment non-trawl includes all non-trawl gear groups.
+Slight discrepancies in Oregon trawl landings between 1987 and 1999, are
+from adding previously non-reported landings of Rougheye/Blackspotted in
+the unspecified rockfish market categories (see details above).
 
-Comparing the update historical data with that used in the 2013 stock
-assessment shows only minor differences (Figure~\ref{fig-Ct_compsSO};
-Figure~\ref{fig-Ct_compsRSS}).
+The update in historical changes shows only minor differences in model
+outputs (Figure~\ref{fig-Ct_compsSO}; Figure~\ref{fig-Ct_compsRSS}).
 
-\paragraph{Recent Landings}\label{recent-landings-1}
+\paragraph{Bycatch in the foreign POP
+fishery}\label{bycatch-in-the-foreign-pop-fishery}
 
-ADD FLEET STRUCTURE
+Between mid-1960s and mid-1970s, foreign trawl fleets from the former
+Soviet Union, Japan, Poland, Bulgaria and East Germany targeted
+aggregations of Pacific ocean perch in the Northeast Pacific Ocean, in
+the waters off the U.S. West Coast (Love et al., 2002). Rogers (2003)
+estimated removals of POP and other species caught within this foreign
+POP fishery, including removals of Rougheye/Blackspotted Rockfishes. In
+the assessment, Rougheye/Blackspotted Rockfishes bycatch in the foreign
+POP fishery between 1966 and 1976 as estimated by Rogers (2003) were
+added to Commercial bottom trawl fleet.
 
-Recent commercial landings of rougheye rockfish (2001-2024 for
-Washington, 1987--2024 for Oregon and 1981--2024 for California,) were
-obtained from PacFIN, a regional fisheries database that manages
-fishery-dependent information in cooperation with West Coast state
-agencies and National Marine Fisheries Service (NMFS). Catch data were
-extracted from PacFIN on April 21, 2025, by state and then combined into
-the fishing fleets used in the assessment. Time series of recent
-landings by fleet and state are reported in Table X and shown in Figures
-X to X. (ADD THESE TABLE/FIGURES)
+\paragraph{At-Sea Hake Catches}\label{at-sea-hake-catches}
 
-\paragraph{At-Sea Hake Landings}\label{at-sea-hake-landings}
+Rougheye/Blackspotted Rockfishes has long been bycaught in the fishery
+for the coastal population of Pacific hake, which is almost exclusively
+conducted with mid-water trawls. Large-scale harvesting of Pacific hake
+in the United States began in 1966, when factory trawlers from the
+Soviet Union and other countries began targeting this stock. After the
+200-mile U.S. Exclusive Economic Zone was declared in 1977, a
+Joint-Venture fishery was initiated between United States trawlers and
+Soviet factory trawlers acting as mother-ships (larger, slower ships for
+fish processing and storage while at sea). By 1989 the U.S. fleet
+capacity had grown to a level sufficient to harvest the entire quota,
+and no further foreign fishing was allowed. The Pacific hake fishery is
+currently 100\% observed by the at-sea hake observer program (A-SHOP)
+and data on bycatch species, including Rougheye/Blackspotted Rockfishes,
+is being routinely collected.
 
-NOTE - Ali added heading but I'm guessing Vlada should write?
+Annual amounts of Rougheye/Blackspotted Rockfishes bycatch (retained and
+discarded) in the Pacific hake fishery were obtained from the North
+Pacific Database Program (NORPAC). That time series covers the period
+between 1977 and 2024 and include catches removed by foreign and
+domestic fisheries as well as those obtained during the time of Joint
+Ventures (JV). Rougheye/Blackspotted Rockfishes removals within the
+at-sea hake fishery were treated in the model as a separate fleet.
 
 \subsubsection{Discards}\label{discards}
 
-\paragraph{Trawl}\label{trawl}
+\paragraph{Historical discard}\label{historical-discard}
 
-NOTE - Ali removed the fleet subheadings under this but add back if
-needed!
+Historically, little to no discarding was observed for
+Rougheye/Blackspotted Rockfishes.
 
-\subsubsection{Biological data}\label{biological-data}
+The historical discard information comes from Pikitch et al.~(1988), and
+often referred to as the Pikitch study. The Pikitch study was conducted
+between 1985 and 1987 between 4842' and 4260' N. latitude, which is
+primarily within the Columbia INPFC area (Pikitch et al.~1988, Rogers
+and Pikitch 1992). Participation in the study was voluntary and included
+vessels using bottom, midwater and shrimp trawl gears. Observers of
+normal fishing operations on commercial vessels collected the data,
+estimated the total weight of the catch by tow, and recorded the weight
+of species retained and discarded in the sample. There were limited
+observations of Rougheye/Blackspotted Rockfishes in the Pikitch study.
+There are no midwater trawl records of Rougheye/Blackspotted Rockfishes,
+and only few fish records of bottom trawl catches, based on which for
+bottom trawl discard rate (discard weight over total weight) is just
+0.09\%. Therefore, no historical discard was assumed in the model.
 
-\paragraph{Length and Age Sample
-Sizes}\label{length-and-age-sample-sizes}
+\paragraph{Recent Discard}\label{recent-discard}
 
-\subparagraph{Multinomial Sample Sizes}\label{multinomial-sample-sizes}
+With the introduction of trip limits for rockfish in early 2000, limited
+discard has been observed in bottom trawl and non-trawl fisheries. In
+2002, the West Coast Groundfish Observer Program (WCGOP) was implemented
+on the West Coast of the United States, which began with gathering
+bycatch and discard information for the limited entry trawl and fixed
+gear fleets. Observer coverage has expanded to include the California
+halibut trawl, the nearshore fixed gear and pink shrimp trawl fisheries.
+Since 2011, trawl fisheries have been managed with catch shares under a
+system of annual individual fishing quotas (IFQs) for the shoreside
+sector (i.e., vessels delivering to shoreside processors) and harvest
+cooperatives for the at-sea hake sectors (catcher-processors who catch
+and process hake at sea; and Motherships, factory processors that take
+delivery of hake from catcher vessels at sea). Constant monitoring of
+catch using observers or electronic monitoring (EM) is required to
+participate in the trawl catch share fishery.
+
+The discard amounts of Rougheye/Blackspotted Rockfishes for the period
+between 2002 and 2023 were obtained from WCGOP by year and fleet (bottom
+trawl, mid-water trawl and non-trawl).Discard amounts were provided for
+both the catch share and the non-catch share sector for
+Rougheye/Blackspotted Rockfishes.
+
+Mid-water trawl discard was not present in non-catch share sector and
+was extremely minimal (virtually non-existing) in catch-share sector,
+with discard rate averaging to 10kg per year. Therefroe, in the model,
+no discard was assumed for mid-water trawl fleet.
+
+The discarding amounts of Rougheye/Blackspotted Rockfishes within bottom
+trawl and non-trawl fleets were included in the model as separate
+fleets.
+
+\subparagraph{Bottom Trawl Discard}\label{bottom-trawl-discard}
+
+Bottom trawl discard amounts are provided in Table XX. Prior to 2011,
+before the start of the catch share program, the discard of
+Rougheye/Blackspotted Rockfishes ranged between 1 metric ton and 60
+metric tons, averaging at 23 metric tons a year. After 2011, the discard
+has been very low, not exceeding 0.5 metric ton a year.
+
+\subparagraph{Non-Trawl Discard}\label{non-trawl-discard}
+
+Non-trawl discard amounts are provided in Table XX. Non-trawl discard of
+Rougheye/Blackspotted Rockfishes were made in both catch share and
+non-catch share sectors. Discard amounts in these sectors were combined
+by year to represent total discard within the fleet. The discards within
+the fleets ranged between 0.5 metrci ton and 35 metric tons, with 10
+metric tons as average per year.
+
+\subsubsection{Fishery Length and Age
+Data}\label{fishery-length-and-age-data}
+
+\paragraph{Commercial Landings Length and
+Ages}\label{commercial-landings-length-and-ages}
+
+The fishery length and age data for bottom trawl, non-trawl and midwater
+trawl fleets were obtained from \gls{pacfin} Biological Data System
+(BDS) database. The fishery length and age samples were collected by
+port samplers.
+
+Length bins from 10 to 80 cm in 2 cm increments were used to summarize
+the length frequency of the catches in each year. The first length bin
+includes all observations less than 10 cm and the last bin includes all
+fish 80 cm and longer. Age distributions included bins from age 1 to age
+100, with the first bin including all fish ages 0 and 1 and the last bin
+including all fish age 100 and above.
+
+Commercial length-frequency distributions were developed for each fleet
+and year, for which observations were available. Females and males
+distributions were treated separately, to track sex-specific
+differences. For each fleet, the raw observations (compiled from the
+\gls{pacfin} and \gls{calcom} databases) were expanded to the trip
+level, to account for differences in samples sizes relative catch
+weights among trips (first stage expansion). The expanded length
+observations were then further expanded to state level, to account for
+differences in sampling intensity of Rougheye/Blackspotted Rockfishes
+landings among states combined into a single fleet (second stage
+expansion). The expansion algorithm can be illustrated with the
+following equation:
+
+\begin{centering}
+
+$N_{b,j,y} = \displaystyle\sum_{s=1}^{s=k}\displaystyle\sum_{t=1}^{t=n}L_{b,j,t} \cdot
+\left(\frac{LC_t}{SC_t}\right) \cdot \left(\frac{LC_{s,y}}{SC_{s,y}}\right)$
+
+\end{centering}
+
+Were \(N_{b,j,y}\) is the number of lengths in each length bin (\(b\))
+by sex (\(j\)) and year (\(y\)) within each fleet. \(L_{b,j,t}\)
+represents an individual length sample by bin (\(b\)) and sex (\(j\))
+within an individual fishing trip (\(t\)). As the first stage expansion,
+\(L_{b,j,t}\) was multiplied by the ratio of landed catch (\(LC_t\))
+within that trip (\(t\)) to portion of catch sampled for lengths
+(\(SC_t\)) within the same trip (\(t\)). In the second stage expansion,
+the individual length sample (\(L_{b,j,t}\)) was multiplied by the ratio
+of landed catch (\(LC_{s,y}\)) within individual state (\(s\)) and year
+(\(y\)) to catch weights sampled for lengths (\(SC_{s,y}\)) within the
+same state (\(s\)) and year (\(y\)). As the final step, the expanded
+length samples from the same size bin and sex were summed across all
+trips and states (combined into a single fleet) within a single year, to
+obtain the total number of lengths in each length bin by sex, year and
+fleet (\(N_{b,j,y}\)). The same calculations were repeated for each
+length bin (26 bins total), to develop sex specific length frequencies
+for each fishing fleet by year. Since coastwide catches in the
+assessment model were divided between South (California) and North
+(Oregon-Washington) fleets, the second stage expansion of length samples
+was relevant to only North fleet.
+
+Age distributions were included in the model as
+conditional-age-at-length (CAAL) observations. The marginal
+age-compositions were also included, but only for easier viewing of
+strong cohorts. The conditional-age-at-length data were not expanded and
+were binned according to length, age, sex, and year.
+
+The filtering and cleaning of the \gls{pacfin} data and the length and
+age composition expansion was conducted using the pacfintools package in
+R (\citeproc{ref-johnson_pacfin_2023}{\textbf{johnson\_pacfin\_2023?}}).
+The filtering steps included removing samples with missing vital
+information.
+
+Length and age data collected from commercial landings for each fleet
+are summarized by the number of trips and fish sampled by year. Figures
+XX show plots of the commercial length and age composition data across
+time for each fishery fleet.
 
 Initial input values for the multinomial samples sizes determine the
 relative weights applied in fitting the annual composition data within
 the set of observations for each fishing fleet in the model. The initial
-input values in this assessment were based on the following equation
-developed by I. Stewart and S. Miller (NWFSC), and presented at the 2006
-Stock Assessment Data and Modeling workshop. The input sample sizes for
-all commercial data were calculated based on a combination of trips and
-fish sampled:
+input values in this assessment were were calculated as a function of
+the number of trips and number of fish via the Stewart Method
+(pers.comm. I. Stewart, International Pacific Halibut Commission
+(IPHC)). The method is based on analysis of the input and model derived
+effective sample sizes from West Coast groundfish stock assessments. A
+piece-wise linear regression was used to estimate the increase in
+effective sample size per sample based on fish-per-sample and the
+maximum effective sample size for large numbers of individual fish. The
+resulting equations are:
 
 \begin{centering}
 
@@ -1346,19 +1516,31 @@ Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is 
 
 \end{centering}
 
+\subparagraph{Commercial Discard
+Lengths}\label{commercial-discard-lengths}
+
+Discard length composition data for both discard fleets were available
+from WCGOP. WCGOP length composition data were not sex-specific. WCGOP
+raw observations were expanded to the haul level, to account for
+differences in catch among hauls.
+
+No age data were available for discarded fish.
+
+\subparagraph{At-sea hake Fishery Length and Age
+Compositions}\label{at-sea-hake-fishery-length-and-age-compositions}
+
+The length and age data were provided for
+
 \subsection{Fishery-independent data}\label{fishery-independent-data}
 
-\subsubsection{Abundance indices}\label{abundance-indices}
-
-Given Rougheye/Blackspotted are associated with deep, structured
-habitats, it can be difficult to survey them with trawl gear. Four
-general fishery-independent bottom trawl surveys were used in the 2013
-assessment, and are again included in this assessment:
+Data from four fishery-independent surveys were used in this assessment,
+which included three historical survey and one current survey:
 
 \begin{itemize}
 \tightlist
 \item
-  Triennial (every three years) survey (1980-2004)
+  AFSC/NWFSC West Coast Triennial (every three years) Shelf survey
+  (1980-2004)
 \item
   Alaska Fishery Science Center Slope survey (1997-2001)
 \item
@@ -1367,47 +1549,33 @@ assessment, and are again included in this assessment:
   West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)
 \end{itemize}
 
-Only the WCGBTS has new data for this assessment, but new methods
-(spatial and spatiotemporal GLMMs with TMB or
-\href{https://pbs-assess.github.io/sdmTMB/}{sdmTMB}) to develop an index
-of abundance were applied to all surveys to update all indices. Two
-distributions (gamma and lognormal) were considered, as was the case in
-2013 model when a non-spatial generalized linear mixed model was used to
-develop indices of abundance.
+Three sources of information are produced by these surveys: indices of
+relative abundance, length-frequency distributions, and age-frequency
+distributions.
 
-Comparing the standardized versions (i.e., Z-scores, which puts all the
-indices on the same scale for better comparison of trends) of the
-indices shows very similar trends among each model output, suggesting
-little difference in choice of model type. The variance in the indices
-is generally high (0.3-0.5), suggesting the information content in these
-indices is low. This is not a surprise given the challenge of sampling
-these species with trawl gear. Overall, catches densities are highest in
-northern Oregon and Washington.
+Geostatistical models of biomass density were fit to survey data using
+spatial and spatiotemporal GLMMs with TMB or
+\href{https://pbs-assess.github.io/sdmTMB/}{sdmTMB}. Only the WCGBTS has
+new data for this assessment, but new methods to develop an index of
+abundance were applied to all surveys to update all indices. The model
+used a delta model with a lognormal distribution for the catch-rate
+component. Two distributions (gamma and lognormal) were considered for
+the catch-rate component, but the lognormal error structure was used
+because it is able to better account for extreme catch events observed
+for Rougheye/Blackspotted Rockfishes in all four surveys. Comparing the
+standardized versions (i.e., Z-scores, which puts all the indices on the
+same scale for better comparison of trends) of the indices shows very
+similar trends among each model output, suggesting little difference in
+choice of model type. The variance in the indices is generally high
+(0.3-0.5), suggesting the information content in these indices is low.
+This is not a surprise given the challenge of sampling these species
+with trawl gear. Overall, catches densities are highest in northern
+Oregon and Washington.
 
-\paragraph{NWFSC West Coast Groundfish Bottom Trawl
-Survey}\label{nwfsc-west-coast-groundfish-bottom-trawl-survey}
-
-The data were truncated to depths less than 875 m prior to modelling
-given that there were zero positive encounters in depths deeper than 875
-m. The prediction grid was also truncated to only include available
-survey locations in depths between 55-875 m to limit extrapolating
-beyond the data and edge effects.
-
-The response variable in the model was catch (mt) with an offset of area
-(km2) to account for differences in effort. Fixed effects were estimated
-for each year. The following additional covariate was included: pass.
-
-Spatial variation, but not spatiotemporal variation, was included in the
-encounter probability and the positive catch rate model. Spatial
-variation was approximated using 200 knots, where more knots led to
-non-estimable standard errors.
-
-\paragraph{NWFSC Slope Survey}\label{nwfsc-slope-survey}
-
-\paragraph{AFSC Slope Survey}\label{afsc-slope-survey}
-
-\paragraph{AFSC/NWFSC West Coast Triennial Shelf
+\subsubsection{AFSC/NWFSC West Coast Triennial Shelf
 Survey}\label{afscnwfsc-west-coast-triennial-shelf-survey}
+
+\paragraph{Survey Description}\label{survey-description}
 
 The triennial survey was first conducted by the AFSC in 1977 and spanned
 the timeframe from 1977-- 2004. The survey's design and sampling methods
@@ -1434,17 +1602,199 @@ south to 34.5°N. In the final year of the triennial series (2004), the
 NWFSC's Fishery Resource and Monitoring division (FRAM) conducted the
 survey and followed very similar protocols as the AFSC.
 
-\subsubsection{Biological data}\label{biological-data-1}
+Given the different depths surveyed during 1977, the data from that year
+were not included in this assessment. Water hauls \textbf{(Zimmermann et
+al.~2003)} and tows located in Canadian waters were also excluded from
+the analysis of this survey. The survey was analyzed as an early series
+(1980--1992) and a late series (1995--2004), as has been done in other
+West Coast rockfish assessments.
 
-\paragraph{NWFSC West Coast Groundfish Bottom Trawl
-Survey}\label{nwfsc-west-coast-groundfish-bottom-trawl-survey-1}
+\paragraph{Abundance Index}\label{abundance-index}
 
-\paragraph{NWFSC Slope Survey}\label{nwfsc-slope-survey-1}
+Geostatistical models of biomass density were fit to survey data using
+spatial and spatiotemporal GLMMs with TMB or
+\href{https://pbs-assess.github.io/sdmTMB/}{sdmTMB}. The model used a
+delta model with a lognormal distribution for the catch-rate component.
 
-\paragraph{AFSC Slope Survey}\label{afsc-slope-survey-1}
+A logit-link was used for encounter probability and a log-link for
+positive catch rates. The response variable was catch (mt) with an
+offset of area (km\(^2\)) to account for differences in effort. Fixed
+effects were estimated for each year. The following additional
+covariates were included: pass. Vessel-year effects, which have
+traditionally been included in index standardization for this survey,
+were not included as the estimated variance for the random effect was
+close to zero. Vessel-year effects were more prominent when models did
+not include spatial effects and were included for each unique
+combination of vessel and year in the data to account for the random
+selection of commercial vessels used during sampling
+(\citeproc{ref-helser_generalized_2004}{Helser, Punt, and Methot 2004};
+\citeproc{ref-thorson_accounting_2014}{J. T. Thorson and Ward 2014}).
 
-\paragraph{AFSC/NWFSC West Coast Triennial Shelf
-Survey}\label{afscnwfsc-west-coast-triennial-shelf-survey-1}
+Spatial and spatiotemporal variation was included in the encounter
+probability and the positive catch rate model. Spatial variation was
+approximated using 200 knots, where more knots led to non-estimable
+standard errors because the positive encounters are too sparse to
+support the dense spatiotemporal structure.
+
+In this assessment, two indices with a split in 1995 (to account for
+change in spatial coverage and survey timing) were used, with separate
+catchability parameters estimated for pre-1995 period and from 1995
+forward. Sensitivity analysis was conducted to evaluate impact of using
+a single abundance index (1980--2004).
+
+\paragraph{Length Compositions}\label{length-compositions}
+
+Length bins from 10 to 80 cm in 2 cm increments were used to summarize
+the length frequency of the survey catches in each year. Table XX shows
+the number of lengths taken by the survey.
+
+Length compositions were separated into males and females. These length
+compositions were expanded to account for subsampling tows, with further
+expansion based upon the stratification by depth and latitude. The
+stratifications for length data expansions are provided in Table XX.
+
+The input sample sizes for length composition data for all
+fishery-independent surveys were calculated based on Stewart and Hamel
+(\citeproc{ref-stewart_bootstrapping_2014}{2014}) as
+\(\text{Input N}_{y} = 2.43*N_{tow}\) where the 2.43 value was estimated
+for a group of shelf and slope rockfish species.
+
+Processing of length data was conducted using the \{nwfscSurvey\}
+package in R
+(\citeproc{ref-wetzel_nwfscsurvey_2023}{\textbf{wetzel\_nwfscsurvey\_2023?}}).
+
+There are no Rougheye/Blackspotted Rockfishes age data from the
+Triennial Survey.
+
+\subsubsection{AFSC Slope Survey}\label{afsc-slope-survey}
+
+\paragraph{Survey Description}\label{survey-description-1}
+
+The AFSC slope survey was initiated in 1984. The survey methods are
+described in Lauth (2000). Prior to 1997, the survey was conducted in
+different latitudinal ranges each year (Table 5). In this assessment,
+only data from 1997, 1999, 2000 and 2001 were used -- these years were
+consistent in latitudinal range (from 34o30' N. latitude to the
+U.S.-Canada border) and depth coverage (183-1280 m; 100-700 fm).
+\#\#\#\# Abundance Index
+
+\paragraph{Length Compositions}\label{length-compositions-1}
+
+Length bins from 10 to 80 cm in 2 cm increments were used to summarize
+the length frequency of the survey catches in each year. Table XX shows
+the number of lengths taken by the survey.
+
+Length compositions were separated into males and females. These length
+compositions were expanded to account for subsampling tows, with further
+expansion based upon the stratification by depth and latitude. The
+stratifications for length data expansions are provided in Table XX.
+
+The input sample sizes for length composition data for all
+fishery-independent surveys were calculated based on Stewart and Hamel
+(\citeproc{ref-stewart_bootstrapping_2014}{2014}) as
+\(\text{Input N}_{y} = 2.43*N_{tow}\) where the 2.43 value was estimated
+for a group of shelf and slope rockfish species.
+
+Processing of length data was conducted using the \{nwfscSurvey\}
+package in R
+(\citeproc{ref-wetzel_nwfscsurvey_2023}{\textbf{wetzel\_nwfscsurvey\_2023?}}).
+
+There are no Rougheye/Blackspotted Rockfishes age data from the AFSC
+Slope Survey.
+
+\subsubsection{NWFSC Slope Survey}\label{nwfsc-slope-survey}
+
+\paragraph{Survey Description}\label{survey-description-2}
+
+The NWFSC slope survey was conducted annually from 1999 to 2002 (Keller
+et al., 2007). The surveyed area ranged between 34o50' and 48o07' N.
+latitude, encompassing the U.S. Vancouver, Columbia, Eureka, Monterey
+INPFC areas, and a portion of the Conception area, and consistently
+covered depths from 100 to 700 fm (183-1280 m) (Table 5).
+
+\paragraph{Abundance Index}\label{abundance-index-1}
+
+There are no Rougheye/Blackspotted Rockfishes length and age data from
+the NWFSC Slope Survey. Given that spatial coverage of NWFSC Slope
+Survey is the same of AFSC Slope Survey, selectivity of the NWFSC SLope
+Survey was assumed the same as selectivity of AFSC Slope Survey
+(mirrored in the model).
+
+\subsubsection{NWFSC West Coast Groundfish Bottom Trawl
+Survey}\label{nwfsc-west-coast-groundfish-bottom-trawl-survey}
+
+\paragraph{Survey Description}\label{survey-description-3}
+
+The WCGBTS is based on a random-grid design; covering the coastal waters
+from a depth of 55--1,280 m (\citeproc{ref-bradburn_2003_2011}{Bradburn,
+Keller, and Horness 2011}). This design generally uses four
+industry-chartered vessels per year assigned to a roughly equal number
+of randomly selected grid cells and divided into two `passes' of the
+coast. Two vessels fish from north to south during each pass between
+late May to early October. This design therefore incorporates both
+vessel-to-vessel differences in catchability, as well as variance
+associated with selecting a relatively small number (approximately 700)
+of possible cells from a very large set of possible cells spread from
+the Mexican to the Canadian borders.
+
+\paragraph{Abundance Index}\label{abundance-index-2}
+
+Geostatistical models of biomass density were fit to survey data using
+spatial and spatiotemporal GLMMs with TMB or
+\href{https://pbs-assess.github.io/sdmTMB/}{sdmTMB}. The model used a
+delta model with a lognormal distribution for the catch-rate component.
+
+The data were truncated to depths less than 875 m prior to modelling
+given that there were zero positive encounters in depths deeper than 875
+m. The prediction grid was also truncated to only include available
+survey locations in depths between 55-875 m to limit extrapolating
+beyond the data and edge effects.
+
+The response variable in the model was catch (mt) with an offset of area
+(km2) to account for differences in effort. Fixed effects were estimated
+for each year. The following additional covariate was included: pass.
+Spatial variation, but not spatiotemporal variation, was included in the
+encounter probability and the positive catch rate model. Spatial
+variation was approximated using 200 knots, where more knots led to
+non-estimable standard errors.
+
+\paragraph{Length and Age
+compositions}\label{length-and-age-compositions}
+
+Length bins from 1o to 80 cm in 2 cm increments were used to summarize
+the length frequency of the survey catches in each year. The first
+length bin includes all observations less than 12 cm and the last bin
+includes all fish larger than 80 cm. Table
+\ref{tab:sample-size-length-wcgbts} shows the number of lengths taken by
+the survey.
+
+Length compositions were separated into males and females. These length
+compositions were expanded to account for subsampling tows, with further
+expansion based upon the stratification by depth and latitude. The
+stratification for length data expansions are provided in Table
+\ref{tab:strata-wcgbts}.
+
+Age distributions included bins from age 1 to age 100, with the last bin
+including all fish of greater age. Table
+\ref{tab:sample-size-age-wcgbts} shows the number of ages taken by the
+survey. Age distributions were included in the model as
+conditional-age-at-length (CAAL) observations. The marginal
+\gls{s-wcgbt} age-compositions were also included, but only for easier
+viewing of strong cohorts. The conditional-age-at-length data were not
+expanded and were binned according to length, age, sex, and year.
+
+The input sample sizes for length and marginal age-composition data for
+all fishery-independent surveys The input sample sizes for length
+composition data for all fishery-independent surveys were calculated
+based on Stewart and Hamel
+(\citeproc{ref-stewart_bootstrapping_2014}{2014}) as
+\(\text{Input N}_{y} = 2.43*N_{tow}\) where the 2.43 value was estimated
+for a group of shelf and slope rockfish species.
+
+The input sample size of CAAL data was set at the number of fish at each
+length by sex and by year. The marginal age compositions were only used
+for comparing the implied fits while the CAAL data were used in the
+likelihood.
 
 \subsection{Biological Parameters}\label{biological-parameters}
 
@@ -2412,6 +2762,13 @@ time-varying issues that are directional could create more uncertainty.
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-bradburn_2003_2011}
+Bradburn, M. J., A. A. Keller, and B. H. Horness. 2011. {``The 2003 to
+2008 {U}.{S}. {W}est {C}oast Bottom Trawl Surveys of Groundfish
+Resources Off {W}ashington, {O}regon, and {C}alifornia: Estimates of
+Distribution, Abundance, Length, and Age Composition.''} NMFS-NWFSC-114.
+Seattle, WA: {U}.{S}. Department of Commerce.
+
 \bibitem[\citeproctext]{ref-fisheries_and_oceans_canada_management_2012}
 Canada, Fisheries and Oceans. 2012. {``Management {Plan} for the
 {Rougheye}/{Blackspotted} {Rockfish} {Complex} ({Sebastes} Aleutianus
@@ -2482,6 +2839,11 @@ Population Structure of Rougheye Rockfish ({Sebastes} Aleutianus)
 Inferred from Allozyme Variation.''} National \{Marine\} \{Fisheries\}
 \{Service\}, \{Alaska\} \{Fishery\} \{Science\} \{Quarterly\} \{Report\}
 July - August - September.
+
+\bibitem[\citeproctext]{ref-helser_generalized_2004}
+Helser, T. E., A. E. Punt, and R. D. Methot. 2004. {``A Generalized
+Linear Mixed Model Analysis of a Multi-Vessel Fishery Resouce Survey.''}
+\emph{Fisheries Research} 70: 251--64.
 
 \bibitem[\citeproctext]{ref-hicks_status_2013}
 Hicks, Allan C, Chantell Wetzel, and John Harms. 2013. {``The Status of
@@ -2602,6 +2964,12 @@ Starr, P J, and R Haigh. 2020. {``Rougheye/{Blackspotted} {Rockfish}
 {Columbia} in 2020.''} \emph{DFO Can. Sci. Advis. Sec. Res. Doc.}
 2020/020: 384.
 
+\bibitem[\citeproctext]{ref-stewart_bootstrapping_2014}
+Stewart, Ian J., and Owen S. Hamel. 2014. {``Bootstrapping of Sample
+Sizes for Length- or Age-Composition Data Used in Stock Assessments.''}
+\emph{Canadian Journal of Fisheries and Aquatic Sciences} 71 (4):
+581--88. \url{https://doi.org/10.1139/cjfas-2013-0289}.
+
 \bibitem[\citeproctext]{ref-sullivan_assessment_2023}
 Sullivan, J. Y., J. A. Zahner, M. C. Siple, and B. E. Ferriss. 2023.
 {``Assessment of the {Rougheye} and {Blackspotted} {Rockfish} Stock
@@ -2614,6 +2982,12 @@ Thorson, J. T., Ian J. Stewart, and A. E. Punt. 2012.
 Al}. (2008) Method for Calculating Ageing Error and Imprecision.''}
 \emph{Available from:
 Http://Github.com/Pfmc-Assessments/nwfscAgeingError/}.
+
+\bibitem[\citeproctext]{ref-thorson_accounting_2014}
+Thorson, J. T., and E. J. Ward. 2014. {``Accounting for Vessel Effects
+When Standardizing Catch Rates from Cooperative Surveys.''}
+\emph{Fisheries Research} 155: 168--76.
+\url{https://doi.org/10.1016/j.fishres.2014.02.036}.
 
 \bibitem[\citeproctext]{ref-thorson_model-based_2017}
 Thorson, James T., Kelli F. Johnson, R. D. Methot, and I. G. Taylor.

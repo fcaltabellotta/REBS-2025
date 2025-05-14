@@ -50,6 +50,7 @@ format:
       - 'support_files/_titlepage.tex'
     include-in-header:
       - 'support_files/in-header.tex'
+      - 'support_files/pfmc.tex'
     toc: true
     lof: false
     lot: false

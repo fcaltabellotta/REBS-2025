@@ -81,7 +81,7 @@ Non-trawl discard amounts are provided in Table XX. Non-trawl discard of `r Spp`
 ### Fishery Length and Age Data
 #### Commercial Landings Length and Ages
 
-The fishery length and age data for bottom trawl, non-trawl and midwater trawl fleets were obtained from the \gls{pacfin} Biological Data System (BDS) database. The fishery length and age samples were collected by port samplers.
+The fishery length and age data for bottom trawl, non-trawl and midwater trawl fleets were obtained from \gls{pacfin} Biological Data System (BDS) database. The fishery length and age samples were collected by port samplers.
 
 Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the catches in each year. The first length bin includes all observations less than 10 cm and the last bin includes all fish 80 cm and longer. Age distributions included bins from age 1 to age 100, with the first bin including all fish ages 0 and 1 and the last bin including all fish age 100 and above.
 
