@@ -68,7 +68,7 @@ With the introduction of trip limits for rockfish in early 2000, limited discard
 
 The discard amounts of `r Spp` for the period between 2002 and 2023 were obtained from WCGOP by year and fleet (bottom trawl, mid-water trawl and non-trawl).Discard amounts were provided for both the catch share and the non-catch share sector for `r Spp`.  
 
-Mid-water trawl discard was not present in non-catch share sector and was extremely minimal (virtually non-existing) in catch-share sector, with discard rate averaging to 10kg per year. Therefroe, in the model, no discard was assumed for mid-water trawl fleet. 
+Mid-water trawl discard was not present in non-catch share sector and was extremely minimal (virtually non-existing) in catch-share sector, with discard rate averaging to 10kg per year. Therefore, in the model, no discard was assumed for mid-water trawl fleet. 
 
 The discarding amounts of `r Spp` within bottom trawl and non-trawl fleets were included in the model as separate fleets. 
 
