@@ -68,7 +68,7 @@ With the introduction of trip limits for rockfish in early 2000, limited discard
 
 The discard amounts of `r Spp` for the period between 2002 and 2023 were obtained from WCGOP by year and fleet (bottom trawl, mid-water trawl and non-trawl).Discard amounts were provided for both the catch share and the non-catch share sector for `r Spp`.  
 
-Mid-water trawl discard was not present in non-catch share sector and was extremely minimal (virtually non-existing) in catch-share sector, with discard rate averaging to 10kg per year. Therefore, in the model, no discard was assumed for mid-water trawl fleet. 
+Mid-water trawl discard was not present in non-catch share sector and was extremely minimal (virtually non-existing) in catch-share sector, with discard rate averaging to 10kg per year. Therefroe, in the model, no discard was assumed for mid-water trawl fleet. 
 
 The discarding amounts of `r Spp` within bottom trawl and non-trawl fleets were included in the model as separate fleets. 
 
@@ -81,7 +81,7 @@ Non-trawl discard amounts are provided in Table XX. Non-trawl discard of `r Spp`
 ### Fishery Length and Age Data
 #### Commercial Landings Length and Ages
 
-The fishery length and age data for bottom trawl, non-trawl and midwater trawl fleets were obtained from the \gls{pacfin} Biological Data System (BDS) database. The fishery length and age samples were collected by port samplers.
+The fishery length and age data for bottom trawl, non-trawl and midwater trawl fleets were obtained from {{<glossary pacfin>}} Biological Data System (BDS) database. The fishery length and age samples were collected by port samplers.
 
 Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the catches in each year. The first length bin includes all observations less than 10 cm and the last bin includes all fish 80 cm and longer. Age distributions included bins from age 1 to age 100, with the first bin including all fish ages 0 and 1 and the last bin including all fish age 100 and above.
 
@@ -119,13 +119,9 @@ No age data were available for discarded fish.
 
 ##### At-sea hake Fishery Length and Age Compositions
 
-The sex-specific length and age data were available for At-sea hake fleet. 
+The length and age data were provided for 
 
-As in case, of other fleets, length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the catches in each year. The first length bin includes all observations less than 10 cm and the last bin includes all fish 80 cm and longer. Age distributions included bins from age 1 to age 100, with the first bin including all fish ages 0 and 1 and the last bin including all fish age 100 and above.
 
-At-sea hake raw lengths observations were expanded to the haul level, to account for differences in catch among hauls. 
-
-Age distributions were included in the model as conditional-age-at-length (CAAL) observations. The marginal age-compositions were also included, but only for easier viewing of strong cohorts. The conditional-age-at-length data were not expanded and were binned according to length, age, sex, and year.
 
 ## Fishery-independent data
 
