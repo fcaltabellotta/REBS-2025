@@ -119,9 +119,13 @@ No age data were available for discarded fish.
 
 ##### At-sea hake Fishery Length and Age Compositions
 
-The length and age data were provided for 
+The sex-specific length and age data were available for At-sea hake fleet. 
 
+As in case, of other fleets, length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the catches in each year. The first length bin includes all observations less than 10 cm and the last bin includes all fish 80 cm and longer. Age distributions included bins from age 1 to age 100, with the first bin including all fish ages 0 and 1 and the last bin including all fish age 100 and above.
 
+At-sea hake raw lengths observations were expanded to the haul level, to account for differences in catch among hauls. 
+
+Age distributions were included in the model as conditional-age-at-length (CAAL) observations. The marginal age-compositions were also included, but only for easier viewing of strong cohorts. The conditional-age-at-length data were not expanded and were binned according to length, age, sex, and year.
 
 ## Fishery-independent data
 
