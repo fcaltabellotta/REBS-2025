@@ -5,6 +5,7 @@ library(reshape2)
 
 #Length, weight and age data
 Lt_Wt_Age<-read.csv("C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/Lt_Wt_Age.csv")
+Lt_Wt_Age<-read.csv("C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/Lt_Wt_Age_42425.csv")
 
 #############################
 #Length-weight relationship #
@@ -89,6 +90,7 @@ Lt_Age_Sex_F<-subset(Lt_Age_Sex_MF,Sex=="F")
 Lt_Age_Sex_F<-Lt_Age_Sex_F[!is.na(Lt_Age_Sex_F$Age),]
 Lt_Age_Sex_M<-subset(Lt_Age_Sex_MF,Sex=="M")
 Lt_Age_Sex_M<-Lt_Age_Sex_M[!is.na(Lt_Age_Sex_M$Age),]
+write.csv(rbind(Lt_Age_Sex_F,Lt_Age_Sex_M),"C:/Users/Jason.Cope/Documents/Current Action/Assessments/Rougheye_blackspotted_2025/assessment inputs/F_M_Age_Lt.csv")
 
 LtAge_nums_F<-colSums(table(Lt_Age_Sex_F))
 LtAge_nums_M<-colSums(table(Lt_Age_Sex_M))
