@@ -1,16 +1,16 @@
-## Assessment
+# Assessment
 
-### History of Modeling Approaches
+## History of Modeling Approaches
 
 A previous Category 3 stock assessment was conducted for the U.S. Pacific Coast stock of Rougheye Rockfish (not including Blackspotted) in 2010 by @dick_estimates_2010 using depletion-based stock reduction analysis (DB-SRA).  That model estimated the population had greater than a 50% probability of exceeding the estimated proxy overfishing level in 2010 if the harvest remained at the observed levels.  DB-SRA estimated a proxy OFL for rougheye rockfish of 78.7 mt with a 95% confidence interval between 4.7-587 metric tons.  
 
 A 2013 benchmark stock assessment [@hicks_status_2013] updated the modeling framework to the integrated statistical catch-at-age model Stock Synthesis 3, which is different from the delay-difference model with an assumed stock status prior in 2010 used in the DB-SRA analysis. The 2013 assessment used a substantially updated catch history, indices of abundance, and biological compositions (lengths and ages). The natural mortality value was also updated to be higher than that used in the DB-SRA model. The stock assessment was accepted for management as a Category 2 stock assessment.
 
-### Most Recent STAR Panel Recommendations
+## Most Recent STAR Panel Recommendations
 
 There were several recommendations from the 2013 STAR panel, broken into two categories
 
-#### General recommendations
+### General recommendations
 
 1. Investigate data-weighting options. *This has been an ongoing research topic in stock assessments since this panel, and several options are no available for consideration.*
 2. A workshop for constructing abundance indices from survey GLMMs. *This is another topic that has developed greatly since this time. Our use of spatio-temporal models are described in the data section on abundance indices.*
@@ -19,25 +19,27 @@ There were several recommendations from the 2013 STAR panel, broken into two cat
 5. SSC guidance on decision tables. *Decision table discussion evolve after every stock assessment cycle, and we are using the latest approaches to decision tables in this assessment.*
 6. Investigate fishery-independent slope surveys, such as submersibles. *These surveys are not currently available for slope species.*
 
-#### Stock-specific recommendations
+### Stock-specific recommendations
 
 1. Collecting additional age data. *This has been done and included in this stock assessment.*
 2. Collecting genetic material to explore distinguishing Rougheye and Blackspotted Rockfishes. *This work has been done as was presented earlier in the document when discussing stock structure decisions.*
-3. The cause of the re-occurring decrease in sizes around 40cm. $$$$$$$$$$$$$$$
+3. The cause of the re-occurring decrease in sizes around 40cm.
 4. Additional maturity and fecundity studies. *While no fecundity studies are available, updated maturity is presented in the maturity section of the document.*
 5. Age validation. *While no age validation study has been completed, the agers are confident what annuli represent a year's worth of growth. Multiple ages are available and ageing error is characterized in this stock assessment.*
 6. Understanding stock structure. *Discussed in the stock structure section of this document.*
 7. Connectivity of stocks across the species ranges. *This is also discussed in the stock structure section of the document.*
   
 
-### Response to SSC Groundfish Subcommittee Recommendations
+## Response to SSC Groundfish Subcommittee Recommendations
+
+
 
 ## Current Modelling Platform
 
 Stock Synthesis version 3.30.23.1 was used as the statistical catch-at-age modelling framework. This framework allows the integration of a variety of data types and model specifications. The Stock Assessment Continuum tool (https://github.com/shcaba/SS-DL-tool) was used also used to explore model efficiency, likelihood profiling, retrospective analyses, and plotting sensitivities. The companion R package r4ss (version 1.51.0) along with R version 4.4.3 were used to investigate and plot model fits.
 
 
-### Bridging the Assessment Model from Stock Synthesis 3.24 (2013) to 3.30 (2025)
+## Bridging the Assessment Model from Stock Synthesis 3.24 (2013) to 3.30 (2025)
 
 More than 10 years have passed from the last assessment and in that time, the model and the Stock Synthesis 3 (SS3) modelling framework has undergone many changes. While the specific changes in the model can be found in the model [change log](https://github.com/orgs/nmfs-ost/projects/11), here we simply update the model from the older 3.24O version to the newer 3.30.22.1 version. We want to ensure that any update to the newest SS3 model software is not a cause of any changes in model outputs when we hold all data and model specifications to be exactly the same as in 2013. We therefore transferred all the older data and model specifications to the newest version of SS3 and compared the outputs. The status (@fig-RSS_2013) and scale (@fig-SO_2013) of both models are exactly the same, as are the estimates of within model uncertainty. This allows us to conclude that we can move forward using the latest version of SS3 without concern of inheriting any model difference due solely to the choice of the SS3 version. 
 
@@ -49,11 +51,11 @@ More than 10 years have passed from the last assessment and in that time, the mo
 The model is structured to track several fleets and include data from several surveys. Defining fleets is largely based on differing fleet selectivity (i.e., how the fishery captures fish by length and/or age). In the stock assessment model, selectivity translates into how the removals are taken via length and/or age out of the population. Currently, the following fleet structure is being used to model commercial fishery removals as there is no record of a recreational fishery for this stock complex:
 
 * Fleet 1: Commercial trawl fishery
-* Fleet 2: Commercial fixed gear (mainly the long-line fishery) fishery
-* Fleet 3: At-sea hake fishery 
-* Fleet 4: Contemporary mid-water fishery
-* Fleet 5: Dead discard trawl
-* Fleet 6: Dead discard non-trawl
+* Fleet 2: Dead discard trawl
+* Fleet 3: Commercial fixed gear (mainly the long-line) fishery 
+* Fleet 4: Dead discard non-trawl
+* Fleet 5: Contemporary mid-water fishery
+* Fleet 6: At-sea hake fishery
 
 In 2013 assessment, fisheries removals were split among three fleets –trawl, hook-and-line and at-sea hake fishery bycatch.  For the first two fleets (trawl and hook-and-line), removals were divided between landings and discards, with selectivity and retention curves estimated within the model. 
 
@@ -77,7 +79,7 @@ As reported in the data section, the following surveys are included in the model
 
 The specifications of the assessment are listed in Table \ref{tab:model-structure}.
 
-## Model Likelihood Components
+### Model Likelihood Components
 
 There are five primary likelihood components for each assessment model:
 
@@ -89,7 +91,7 @@ There are five primary likelihood components for each assessment model:
 
 In addition, there is a catch component to the likelihood, but catches are essentially fit without error. Additionally, there is a crash penalty that is invoked if true catches would cause the stock to go extinct. The penalty would alter catches to avoid extinction, but any presence of a crash penalty is used as in indication that the model has been mispecified, so this likelihood contribution should always be 0.
 
-## Reference Model Exploration, Key Assumptions and Specification
+### Reference Model Exploration, Key Assumptions and Specification
 
 The reference model for `r spp` was developed to balance parsimony and realism, and the goal was to estimate a spawning output trajectory and relative stock status for the stocks of `r spp` in state and federal waters off the U.S. west coast. The model contains many assumptions to achieve parsimony and uses different data types and sources to estimate reality. A series of investigative model runs were done to achieve the final base model. Constructing integrated models (i.e., those fitting many data types) takes considerable model exploration using different configurations of the following treatments:
 
@@ -142,6 +144,7 @@ Besides the additional of eight years of data and some changes in the estimation
 - Change in the removal history, particularly updates to historical data and new catches since 2013. 
 - Adding discard fleets instead of using retention curves.
 - Using spatio-temporal approaches (sdmTMB) to define indices of abundance versus the former GLMM approach.
-- Adding more biological compositions, mainly in years since 2013, but also some historical ages.
-- Specifying a two sex instead of one sex model.
+- Adding more biological compositions, mainly in years since 2013, but also some historical ages. 
+- Specifying a two sex instead of one sex model, which allows for sex-specific estimation of natural mortality and growth.
+- Allowing the bottom trawl fishery to have dome-shaped selectivity, consistent with the bottom trawl surveys.
 

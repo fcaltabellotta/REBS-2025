@@ -305,7 +305,7 @@
 U.S. West Coast in 2025}
 \author{Jason M. Cope \and Vladlena Gertseva \and R. Claire
 Rosmond \and Fabio P. Caltabellotta \and Alison D. Whitman}
-\date{2025-05-14}
+\date{2025-05-21}
 
 \begin{document}
   \begin{titlepage}
@@ -1223,13 +1223,15 @@ fishery, but are desirable and marketable, thus are typically retained
 when captured. They are often captured in bottom trawl, mid-water trawl,
 and longline fisheries. Small numbers have been observed in pot, shrimp.
 
-Fishery depended data for Rougheye/Blackspotted complex in this
+Fishery depended data for Rougheye/Blackspotted Rockfishes in this
 assessment are divided among six fleets, which include: * Fleet 1:
-Commercial bottom trawl fishery * Fleet 2: Commercial non-trawl gear
-(mainly the long-line fishery) fishery * Fleet 3: Dead discard bottom
-trawl fleet * Fleet 4: Dead discard non-trawl fleet * Fleet 5:
-Contemporary mid-water fishery * Fleet 6: Bycatch within the at-sea hake
-fishery
+Commercial bottom trawl fishery. This fleet includes domestic catches as
+well asRougheye/Blackspotted Rockfishes bycatch in historical foreign
+fishery targeting Pacific Ocean Perch in the 1960s-1970s. * Fleet 2:
+Commercial non-trawl gear (mainly the long-line fishery) fishery * Fleet
+3: Dead discard in bottom trawl fleet. * Fleet 4: Dead discard in
+non-trawl fleet. * Fleet 5: Contemporary mid-water fishery * Fleet 6:
+Bycatch within the at-sea hake fishery
 
 Recreational catch is inconsequential and not accounted for in this
 assessment.
@@ -1389,14 +1391,14 @@ participate in the trawl catch share fishery.
 
 The discard amounts of Rougheye/Blackspotted Rockfishes for the period
 between 2002 and 2023 were obtained from WCGOP by year and fleet (bottom
-trawl, mid-water trawl and non-trawl).Discard amounts were provided for
-both the catch share and the non-catch share sector for
-Rougheye/Blackspotted Rockfishes.
+trawl, mid-water trawl and non-trawl). Discard amounts for
+Rougheye/Blackspotted Rockfishes were provided for both the catch share
+and the non-catch share sector.
 
 Mid-water trawl discard was not present in non-catch share sector and
 was extremely minimal (virtually non-existing) in catch-share sector,
-with discard rate averaging to 10kg per year. Therefroe, in the model,
-no discard was assumed for mid-water trawl fleet.
+with discard amounts averaging to 10kg per year. Therefore, in the
+model, no discard was assumed for mid-water trawl fleet.
 
 The discarding amounts of Rougheye/Blackspotted Rockfishes within bottom
 trawl and non-trawl fleets were included in the model as separate
@@ -1416,7 +1418,7 @@ Non-trawl discard amounts are provided in Table XX. Non-trawl discard of
 Rougheye/Blackspotted Rockfishes were made in both catch share and
 non-catch share sectors. Discard amounts in these sectors were combined
 by year to represent total discard within the fleet. The discards within
-the fleets ranged between 0.5 metrci ton and 35 metric tons, with 10
+the fleets ranged between 0.5 metric ton and 35 metric tons, with 10
 metric tons as average per year.
 
 \subsubsection{Fishery Length and Age
@@ -1426,9 +1428,9 @@ Data}\label{fishery-length-and-age-data}
 Ages}\label{commercial-landings-length-and-ages}
 
 The fishery length and age data for bottom trawl, non-trawl and midwater
-trawl fleets were obtained from the \gls{pacfin} Biological Data System
-(BDS) database. The fishery length and age samples were collected by
-port samplers.
+trawl fleets were obtained from the PacFIN Biological Data System (BDS)
+database. The fishery length and age samples were collected by port
+samplers.
 
 Length bins from 10 to 80 cm in 2 cm increments were used to summarize
 the length frequency of the catches in each year. The first length bin
@@ -1440,9 +1442,8 @@ including all fish age 100 and above.
 Commercial length-frequency distributions were developed for each fleet
 and year, for which observations were available. Females and males
 distributions were treated separately, to track sex-specific
-differences. For each fleet, the raw observations (compiled from the
-\gls{pacfin} and \gls{calcom} databases) were expanded to the trip
-level, to account for differences in samples sizes relative catch
+differences. For each fleet, the raw observations were expanded to the
+trip level, to account for differences in samples sizes relative catch
 weights among trips (first stage expansion). The expanded length
 observations were then further expanded to state level, to account for
 differences in sampling intensity of Rougheye/Blackspotted Rockfishes
@@ -1484,29 +1485,25 @@ age-compositions were also included, but only for easier viewing of
 strong cohorts. The conditional-age-at-length data were not expanded and
 were binned according to length, age, sex, and year.
 
-The filtering and cleaning of the \gls{pacfin} data and the length and
-age composition expansion was conducted using the pacfintools package in
-R (\citeproc{ref-johnson_pacfin_2023}{\textbf{johnson\_pacfin\_2023?}}).
-The filtering steps included removing samples with missing vital
-information.
+The filtering and cleaning of the PacFIN data and the length and age
+composition expansion was conducted using the pacfintools package in R
+(Wetzel et al.~2025) The filtering steps included removing samples with
+missing vital information.
 
 Length and age data collected from commercial landings for each fleet
 are summarized by the number of trips and fish sampled by year. Figures
 XX show plots of the commercial length and age composition data across
 time for each fishery fleet.
 
-Initial input values for the multinomial samples sizes determine the
-relative weights applied in fitting the annual composition data within
-the set of observations for each fishing fleet in the model. The initial
-input values in this assessment were were calculated as a function of
-the number of trips and number of fish via the Stewart Method
-(pers.comm. I. Stewart, International Pacific Halibut Commission
-(IPHC)). The method is based on analysis of the input and model derived
-effective sample sizes from West Coast groundfish stock assessments. A
-piece-wise linear regression was used to estimate the increase in
-effective sample size per sample based on fish-per-sample and the
-maximum effective sample size for large numbers of individual fish. The
-resulting equations are:
+The initial input values for marginal length and age compisitions in
+this assessment were calculated as a function of the number of trips and
+number of fish via the Stewart Method (pers.comm. I. Stewart,
+International Pacific Halibut Commission (IPHC)). The method is based on
+analysis of the input and model derived effective sample sizes from West
+Coast groundfish stock assessments. A piece-wise linear regression was
+used to estimate the increase in effective sample size per sample based
+on fish-per-sample and the maximum effective sample size for large
+numbers of individual fish. The resulting equations are:
 
 \begin{centering}
 
@@ -1516,25 +1513,53 @@ Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is 
 
 \end{centering}
 
+The input sample size of CAAL data was set at the number of fish at each
+length by sex and by year. The marginal age compositions were only used
+for comparing the implied fits while the CAAL data were used in the
+likelihood.
+
 \subparagraph{Commercial Discard
 Lengths}\label{commercial-discard-lengths}
 
-Discard length composition data for both discard fleets were available
-from WCGOP. WCGOP length composition data were not sex-specific. WCGOP
-raw observations were expanded to the haul level, to account for
-differences in catch among hauls.
+Discard length composition data for both bottom trawl and non-trawl
+discard fleets were available from WCGOP. WCGOP length composition data
+were not sex-specific. WCGOP raw observations were expanded to the haul
+level, to account for differences in catch among hauls. The initial
+input values for length compisitions were calculated as a function of
+the number of trips and number of fish.
 
 No age data were available for discarded fish.
 
 \subparagraph{At-sea hake Fishery Length and Age
 Compositions}\label{at-sea-hake-fishery-length-and-age-compositions}
 
-The length and age data were provided for
+The sex-specific length and age data were available for At-sea hake
+fleet.
+
+Length bins from 10 to 80 cm in 2 cm increments were used to summarize
+the length frequency of the catches in each year. The first length bin
+includes all observations less than 10 cm and the last bin includes all
+fish 80 cm and longer. Age distributions included bins from age 1 to age
+100, with the first bin including all fish ages 0 and 1 and the last bin
+including all fish age 100 and above.
+
+At-sea hake raw lengths observations were expanded to the haul level, to
+account for differences in catch among hauls. Input sample sizes were
+based on the number of hauls sampled by year.
+
+Age distributions were included in the model as
+conditional-age-at-length (CAAL) observations. The
+conditional-age-at-length data were not expanded and were binned
+according to length, age, sex, and year. The input sample size of CAAL
+data was set at the number of fish at each length by sex and by year.
+
+The marginal age compositions were only used for comparing the implied
+fits while the CAAL data were used in the likelihood.
 
 \subsection{Fishery-independent data}\label{fishery-independent-data}
 
 Data from four fishery-independent surveys were used in this assessment,
-which included three historical survey and one current survey:
+which included three historical surveys and one current survey:
 
 \begin{itemize}
 \tightlist
@@ -1578,9 +1603,9 @@ Survey}\label{afscnwfsc-west-coast-triennial-shelf-survey}
 \paragraph{Survey Description}\label{survey-description}
 
 The triennial survey was first conducted by the AFSC in 1977 and spanned
-the timeframe from 1977-- 2004. The survey's design and sampling methods
-are most recently described in \textbf{Weinberg et al.~(2002)}. Its
-basic design was a series of equally-spaced transects from which
+the time frame from 1977-- 2004. The survey's design and sampling
+methods are most recently described in \textbf{Weinberg et al.~(2002)}.
+Its basic design was a series of equally-spaced transects from which
 searches for tows in a specific depth range were initiated
 \textbf{(Figure X)}. The survey design has changed slightly over the
 period of time \textbf{(Table X, Figure X)}. In general, all of the
@@ -1599,7 +1624,7 @@ The surveys in 1989 and 1992 covered the same depth range but extended
 the southern range to 34.5°N (near Point Conception). From 1995 through
 2004, the surveys covered the depth range 55--500 meters and surveyed
 south to 34.5°N. In the final year of the triennial series (2004), the
-NWFSC's Fishery Resource and Monitoring division (FRAM) conducted the
+NWFSC's Fishery Resource and Monitoring (FRAM) division conducted the
 survey and followed very similar protocols as the AFSC.
 
 Given the different depths surveyed during 1977, the data from that year
@@ -1676,7 +1701,27 @@ different latitudinal ranges each year (Table 5). In this assessment,
 only data from 1997, 1999, 2000 and 2001 were used -- these years were
 consistent in latitudinal range (from 34o30' N. latitude to the
 U.S.-Canada border) and depth coverage (183-1280 m; 100-700 fm).
-\#\#\#\# Abundance Index
+
+\paragraph{Abundance Index}\label{abundance-index-1}
+
+Geostatistical models of biomass density were fit to survey data using
+spatial and spatiotemporal GLMMs with TMB or
+\href{https://pbs-assess.github.io/sdmTMB/}{sdmTMB}. The model used a
+delta model with a lognormal distribution for the catch-rate component.
+
+The data were truncated to depths less than 875 m prior to modelling
+given that there were zero positive encounters in depths deeper than 875
+m. The prediction grid was also truncated to only include available
+survey locations in depths between 55-875 m to limit extrapolating
+beyond the data and edge effects.
+
+The response variable in the model was catch (mt) with an offset of area
+(km2) to account for differences in effort. Fixed effects were estimated
+for each year. The following additional covariate was included: pass.
+Spatial variation, but not spatiotemporal variation, was included in the
+encounter probability and the positive catch rate model. Spatial
+variation was approximated using 200 knots, where more knots led to
+non-estimable standard errors.
 
 \paragraph{Length Compositions}\label{length-compositions-1}
 
@@ -1712,7 +1757,26 @@ latitude, encompassing the U.S. Vancouver, Columbia, Eureka, Monterey
 INPFC areas, and a portion of the Conception area, and consistently
 covered depths from 100 to 700 fm (183-1280 m) (Table 5).
 
-\paragraph{Abundance Index}\label{abundance-index-1}
+\paragraph{Abundance Index}\label{abundance-index-2}
+
+Geostatistical models of biomass density were fit to survey data using
+spatial and spatiotemporal GLMMs with TMB or
+\href{https://pbs-assess.github.io/sdmTMB/}{sdmTMB}. The model used a
+delta model with a lognormal distribution for the catch-rate component.
+
+The data were truncated to depths less than 875 m prior to modelling
+given that there were zero positive encounters in depths deeper than 875
+m. The prediction grid was also truncated to only include available
+survey locations in depths between 55-875 m to limit extrapolating
+beyond the data and edge effects.
+
+The response variable in the model was catch (mt) with an offset of area
+(km2) to account for differences in effort. Fixed effects were estimated
+for each year. The following additional covariate was included: pass.
+Spatial variation, but not spatiotemporal variation, was included in the
+encounter probability and the positive catch rate model. Spatial
+variation was approximated using 200 knots, where more knots led to
+non-estimable standard errors.
 
 There are no Rougheye/Blackspotted Rockfishes length and age data from
 the NWFSC Slope Survey. Given that spatial coverage of NWFSC Slope
@@ -1725,19 +1789,20 @@ Survey}\label{nwfsc-west-coast-groundfish-bottom-trawl-survey}
 
 \paragraph{Survey Description}\label{survey-description-3}
 
-The WCGBTS is based on a random-grid design; covering the coastal waters
-from a depth of 55--1,280 m (\citeproc{ref-bradburn_2003_2011}{Bradburn,
-Keller, and Horness 2011}). This design generally uses four
-industry-chartered vessels per year assigned to a roughly equal number
-of randomly selected grid cells and divided into two `passes' of the
-coast. Two vessels fish from north to south during each pass between
-late May to early October. This design therefore incorporates both
-vessel-to-vessel differences in catchability, as well as variance
-associated with selecting a relatively small number (approximately 700)
-of possible cells from a very large set of possible cells spread from
-the Mexican to the Canadian borders.
+The West Coast Groundfish Bottom Trawl Survey (WCGBTS) is conducted
+annually since 2003. It is based on a random-grid design; covering the
+coastal waters from a depth of 55--1,280 m
+(\citeproc{ref-bradburn_2003_2011}{Bradburn, Keller, and Horness 2011}).
+This design generally uses four industry-chartered vessels per year
+assigned to a roughly equal number of randomly selected grid cells and
+divided into two `passes' of the coast. Two vessels fish from north to
+south during each pass between late May to early October. This design
+therefore incorporates both vessel-to-vessel differences in
+catchability, as well as variance associated with selecting a relatively
+small number (approximately 700) of possible cells from a very large set
+of possible cells spread from the Mexican to the Canadian borders.
 
-\paragraph{Abundance Index}\label{abundance-index-2}
+\paragraph{Abundance Index}\label{abundance-index-3}
 
 Geostatistical models of biomass density were fit to survey data using
 spatial and spatiotemporal GLMMs with TMB or
@@ -1936,9 +2001,9 @@ Rougheye/Blackspotted Rockfishes are
 
 \begin{centering}
 
-Females $L_{\infty}$ = 58.81 cm; $k$ = 0.08; $t_0$ = -1.19
+Females $L_{\infty}$ = 59.03 cm; $k$ = 0.07; $t_0$ = -2.45
 
-Males $L_{\infty}$ = 57.13 cm; $k$ = 0.09; $t_0$ = -1.26
+Males $L_{\infty}$ = 56.69 cm; $k$ = 0.08; $t_0$ = -2.03
 
 \end{centering}
 
@@ -2114,9 +2179,9 @@ into the stock assessment model.
 
 \newpage{}
 
-\subsection{Assessment}\label{assessment}
+\section{Assessment}\label{assessment}
 
-\subsubsection{History of Modeling
+\subsection{History of Modeling
 Approaches}\label{history-of-modeling-approaches}
 
 A previous Category 3 stock assessment was conducted for the U.S.
@@ -2140,13 +2205,13 @@ catch history, indices of abundance, and biological compositions
 higher than that used in the DB-SRA model. The stock assessment was
 accepted for management as a Category 2 stock assessment.
 
-\subsubsection{Most Recent STAR Panel
+\subsection{Most Recent STAR Panel
 Recommendations}\label{most-recent-star-panel-recommendations}
 
 There were several recommendations from the 2013 STAR panel, broken into
 two categories
 
-\paragraph{General recommendations}\label{general-recommendations}
+\subsubsection{General recommendations}\label{general-recommendations}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2176,7 +2241,7 @@ two categories
   \emph{These surveys are not currently available for slope species.}
 \end{enumerate}
 
-\paragraph{Stock-specific
+\subsubsection{Stock-specific
 recommendations}\label{stock-specific-recommendations}
 
 \begin{enumerate}
@@ -2192,7 +2257,6 @@ recommendations}\label{stock-specific-recommendations}
   decisions.}
 \item
   The cause of the re-occurring decrease in sizes around 40cm.
-  \$\$\$\$\$\$\$\$\$\$\$\$\$\$\$
 \item
   Additional maturity and fecundity studies. \emph{While no fecundity
   studies are available, updated maturity is presented in the maturity
@@ -2210,7 +2274,7 @@ recommendations}\label{stock-specific-recommendations}
   discussed in the stock structure section of the document.}
 \end{enumerate}
 
-\subsubsection{Response to SSC Groundfish Subcommittee
+\subsection{Response to SSC Groundfish Subcommittee
 Recommendations}\label{response-to-ssc-groundfish-subcommittee-recommendations}
 
 \subsection{Current Modelling
@@ -2225,7 +2289,7 @@ retrospective analyses, and plotting sensitivities. The companion R
 package r4ss (version 1.51.0) along with R version 4.4.3 were used to
 investigate and plot model fits.
 
-\subsubsection{Bridging the Assessment Model from Stock Synthesis 3.24
+\subsection{Bridging the Assessment Model from Stock Synthesis 3.24
 (2013) to 3.30
 (2025)}\label{bridging-the-assessment-model-from-stock-synthesis-3.24-2013-to-3.30-2025}
 
@@ -2267,15 +2331,15 @@ fishery for this stock complex:
 \item
   Fleet 1: Commercial trawl fishery
 \item
-  Fleet 2: Commercial fixed gear (mainly the long-line fishery) fishery
+  Fleet 2: Dead discard trawl
 \item
-  Fleet 3: At-sea hake fishery
+  Fleet 3: Commercial fixed gear (mainly the long-line) fishery
 \item
-  Fleet 4: Contemporary mid-water fishery
+  Fleet 4: Dead discard non-trawl
 \item
-  Fleet 5: Dead discard trawl
+  Fleet 5: Contemporary mid-water fishery
 \item
-  Fleet 6: Dead discard non-trawl
+  Fleet 6: At-sea hake fishery
 \end{itemize}
 
 In 2013 assessment, fisheries removals were split among three fleets
@@ -2341,7 +2405,7 @@ the model:
 The specifications of the assessment are listed in Table
 \ref{tab:model-structure}.
 
-\subsection{Model Likelihood
+\subsubsection{Model Likelihood
 Components}\label{model-likelihood-components}
 
 There are five primary likelihood components for each assessment model:
@@ -2369,7 +2433,7 @@ extinct. The penalty would alter catches to avoid extinction, but any
 presence of a crash penalty is used as in indication that the model has
 been mispecified, so this likelihood contribution should always be 0.
 
-\subsection{Reference Model Exploration, Key Assumptions and
+\subsubsection{Reference Model Exploration, Key Assumptions and
 Specification}\label{reference-model-exploration-key-assumptions-and-specification}
 
 The reference model for Rougheye/Blackspotted Rockfishes was developed
@@ -2541,33 +2605,38 @@ assessment are:
   Adding more biological compositions, mainly in years since 2013, but
   also some historical ages.
 \item
-  Specifying a two sex instead of one sex model.
+  Specifying a two sex instead of one sex model, which allows for
+  sex-specific estimation of natural mortality and growth.
+\item
+  Allowing the bottom trawl fishery to have dome-shaped selectivity,
+  consistent with the bottom trawl surveys.
 \end{itemize}
 
 \newpage{}
 
-\subsubsection{Reference Model Diagnostics and
+\subsection{Reference Model Diagnostics and
 Results}\label{reference-model-diagnostics-and-results}
 
-\paragraph{Model Convergence and Acceptability}\label{model-convergence}
+\subsubsection{Model Convergence and
+Acceptability}\label{model-convergence}
 
-\subsubsection{Base Model Results}\label{base-model-results}
+\subsection{Base Model Results}\label{base-model-results}
 
-\paragraph{Fits to the Data}\label{fits-to-the-data}
+\subsubsection{Fits to the Data}\label{fits-to-the-data}
 
-\subparagraph{Lengths}\label{lengths}
+\paragraph{Lengths}\label{lengths}
 
-\paragraph{Conditional Age at Length and Marginal
+\subsubsection{Conditional Age at Length and Marginal
 Ages}\label{conditional-age-at-length-and-marginal-ages}
 
-\paragraph{Fits to Indices of
+\subsubsection{Fits to Indices of
 Abundance}\label{fits-to-indices-of-abundance}
 
-\subsubsection{Reference Model Outputs}\label{reference-model-outputs}
+\subsection{Reference Model Outputs}\label{reference-model-outputs}
 
-\paragraph{Parameter Estimates}\label{parameter-estimates}
+\subsubsection{Parameter Estimates}\label{parameter-estimates}
 
-\paragraph{Population Trajectory}\label{population-trajectory}
+\subsubsection{Population Trajectory}\label{population-trajectory}
 
 \newpage{}
 
@@ -2754,11 +2823,11 @@ time-varying issues that are directional could create more uncertainty.
 
 \newpage{}
 
-\subsection{Acknowledgements}\label{sec-acknowledgements}
+\section{Acknowledgements}\label{sec-acknowledgements}
 
 \newpage{}
 
-\subsection{References}\label{references}
+\section{References}\label{references}
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
@@ -3014,7 +3083,7 @@ Canada} 27 (12): 2233--54. \url{https://doi.org/10.1139/f70-252}.
 
 \newpage{}
 
-\subsection{Tables}\label{tables}
+\section{Tables}\label{tables}
 
 \begingroup\fontsize{8}{10}\selectfont
 
@@ -5052,9 +5121,9 @@ tidyselect::everything(), \# missing\_text = ``---'' \# )
 
 \newpage{}
 
-\subsection{Figures}\label{figures}
+\section{Figures}\label{figures}
 
-\subsubsection{Introduction}\label{introduction-1}
+\subsection{Introduction}\label{introduction-1}
 
 \begin{figure}[H]
 
@@ -5103,7 +5172,7 @@ stock assessment.}
 
 \newpage
 
-\subsubsection{Data}\label{data-1}
+\subsection{Data}\label{data-1}
 
 \begin{figure}[H]
 
@@ -5203,7 +5272,7 @@ Rougheye/Blackspotted Rockfishes assessment.}
 
 \newpage
 
-\subsubsection{Biology}\label{biology}
+\subsection{Biology}\label{biology}
 
 \begin{figure}[H]
 
@@ -5400,7 +5469,7 @@ female and male Rougheye/Blackspotted Rockfishes.}
 
 \newpage
 
-\subsubsection{Model Bridging}\label{model-bridging}
+\subsection{Model Bridging}\label{model-bridging}
 
 \begin{figure}[H]
 
@@ -5436,7 +5505,7 @@ denotes 95\% confidence intervals.}
 
 \newpage
 
-\subsubsection{Model Specification}\label{model-specification}
+\subsection{Model Specification}\label{model-specification}
 
 \begin{figure}[H]
 
@@ -5468,7 +5537,7 @@ Rougheye/Blackspotted Rockfishes assessment.}
 
 \newpage
 
-\subsubsection{Time-series}\label{time-series}
+\subsection{Time-series}\label{time-series}
 
 \begin{figure}[H]
 
@@ -5611,11 +5680,11 @@ Forecasts}\label{reference-points-and-forecasts}
 
 \newpage{}
 
-\subsection{Notes}\label{notes}
+\section{Notes}\label{notes}
 
 \newpage{}
 
-\subsection{Appendices}\label{sec-appendix}
+\section{Appendices}\label{sec-appendix}
 
 
 

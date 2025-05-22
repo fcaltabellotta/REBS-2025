@@ -75,9 +75,13 @@ ggplot(Lt_Wt_Age[!is.na(Lt_Wt_Age$Sex),],aes(x=as.numeric(Age),y=as.numeric(Leng
 
 N_ages<-rowSums(table(Lt_Wt_Age[,3:4])) #Total age and length sample sizes
 
+############################
 ##Calculate CV plot by sex##
+############################
+
 Lt_Age_Sex<-Lt_Wt_Age[,c(1,3,4)]
 Lt_Age_Sex_MF<-Lt_Age_Sex[Lt_Age_Sex$Sex!="U",]
+Lt_Age_Sex_MF<-Lt_Age_Sex_MF[!is.na(Lt_Age_Sex_MF$Age),]
 
 #Calculate mean and sds by sex
 LtAge_mean<-Lt_Age_Sex_MF %>% group_by(Age,Sex) %>% summarize(ltvar = mean(as.numeric(Length),na.rm=TRUE))
@@ -108,6 +112,7 @@ LtAge_CV<-data.frame(Age=LtAge_mean_sortsex$Age,Sex=LtAge_mean_sortsex$Sex,CV=(L
 
 ggplot(LtAge_CV,aes(Age,CV))+
   geom_point(aes(size=N),shape=21,fill="white",stroke=2)+
+  ylim(c(0,0.3))+
   facet_wrap(vars(Sex))+
   geom_smooth(method = "loess")
   
@@ -135,7 +140,9 @@ ggplot(data=age_mat,aes(Ages,Pop_prop,color=M_val))+
   geom_point(data=M_pts,inherit.aes=FALSE,aes(Age_M,Pop_prop_M),size=3,color=viridis(5))
 
 age.peak<-21
+age.cut<-80
 age.cut<-100
+age.cut<-165
 age_comps_agg<-melt(table(Lt_Wt_Age$Age,Lt_Wt_Age$Sex))
 colnames(age_comps_agg)<-c("Ages","Sex","Freq")
 age_comps_agg<-age_comps_agg[age_comps_agg$Freq>0,]
@@ -168,10 +175,13 @@ ggplot(age_comps_agg.df,aes(Ages,Freq_ln))+
                             aes(label = label),color="black",size=5)
 
 #Both sexes combined
-age_comps_agg<-table(Lt_Wt_Age$Age)
-age_comps_agg.df<-data.frame(Ages=as.numeric(names(age_comps_agg)),Freq=as.numeric(age_comps_agg),Freq_ln=log(as.numeric(age_comps_agg)))
-age_comps_agg_peak<-age_comps_agg[21:length(age_comps_agg)]
-age_comps_agg_peak.df<-data.frame(Ages=as.numeric(names(age_comps_agg_peak)),Freq=as.numeric(age_comps_agg_peak),Freq_ln=log(as.numeric(age_comps_agg_peak)))
+#age_comps_agg<-table(Lt_Wt_Age$Age)
+#age_comps_agg.df<-data.frame(Ages=as.numeric(names(age_comps_agg)),Freq=as.numeric(age_comps_agg),Freq_ln=log(as.numeric(age_comps_agg)))
+#age_comps_agg_peak<-age_comps_agg[21:length(age_comps_agg)]
+#age_comps_agg_peak.df<-data.frame(Ages=as.numeric(names(age_comps_agg_peak)),Freq=as.numeric(age_comps_agg_peak),Freq_ln=log(as.numeric(age_comps_agg_peak)))
+
+cc_lm<-lm(age_comps_agg_peak.df$Freq_ln~age_comps_agg_peak.df$Age)
+cc_lm$coefficients[2]
 
 ggplot(age_comps_agg.df,aes(Ages,Freq_ln))+
   geom_point()+
@@ -179,6 +189,6 @@ ggplot(age_comps_agg.df,aes(Ages,Freq_ln))+
 geom_point(data=age_comps_agg_peak.df,aes(Ages,Freq_ln),color="red")+
   geom_smooth(method = "lm",data=age_comps_agg_peak.df)+
   annotate("text",x=100,y=5.4,label=paste0("Peak age = 21"),size=5)+
-  annotate("text",x=100,y=5,label=paste0("Z = -0.04172"),size=5)
+  annotate("text",x=100,y=5,label=paste0("Z = -0.043"),size=5)
 
 

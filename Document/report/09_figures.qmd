@@ -1,4 +1,4 @@
-## Figures 
+# Figures 
  
 ```{r} 
 #| label: 'set-rda-dir-figs'
@@ -9,8 +9,7 @@ rda_dir <- here::here('rda_files')
 ``` 
 
 
-### Introduction
-
+## Introduction
 
 ```{r} 
 #| label: fig-map
@@ -83,7 +82,7 @@ knitr::include_graphics(
 \newpage
 
 
-### Data
+## Data
 
 
 ```{r} 
@@ -181,7 +180,7 @@ knitr::include_graphics(
 \newpage
 
 
-### Biology
+## Biology
 
 
 ```{r} 
@@ -358,7 +357,7 @@ knitr::include_graphics(
 \newpage
 
 
-### Model Bridging
+## Model Bridging
 
 ```{r} 
 #| label: fig-RSS_2013
@@ -389,7 +388,7 @@ knitr::include_graphics(
 \newpage
 
 
-### Model Specification
+## Model Specification
 
 ```{r} 
 #| label: fig-Discard_comp_SO
@@ -420,7 +419,7 @@ knitr::include_graphics(
 \newpage
 
 
-### Time-series
+## Time-series
 
 ```{r} 
 #| label: fig-sb

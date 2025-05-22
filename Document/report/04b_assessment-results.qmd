@@ -1,29 +1,29 @@
-### Reference Model Diagnostics and Results
+## Reference Model Diagnostics and Results
 
 
-#### Model Convergence and Acceptability {#model-convergence}
+### Model Convergence and Acceptability {#model-convergence}
 
 
-### Base Model Results
+## Base Model Results
 
 
-#### Fits to the Data
+### Fits to the Data
 
 
-##### Lengths
+#### Lengths
 
 
-#### Conditional Age at Length and Marginal Ages
+### Conditional Age at Length and Marginal Ages
 
 
-#### Fits to Indices of Abundance
+### Fits to Indices of Abundance
 
 
-### Reference Model Outputs 
+## Reference Model Outputs 
 
 
-#### Parameter Estimates
+### Parameter Estimates
 
 
-#### Population Trajectory
+### Population Trajectory
 
