@@ -24,7 +24,7 @@ catches_es_table |>
     decimals = 0
   ) |>
   gt::tab_options(
-    table.font.size = 12,
+    table.font.size = 10,
     # if want to not have tables the width of the page include the below option:
     latex.use_longtable = TRUE 
   ) |>
@@ -38,7 +38,7 @@ catches_es_table |>
     "NON_TRAWL_DISCARD (mt)" = "Non-trawl \n discard",
     "MIDWATER_TRAWL (mt)" = "Midwater \n trawl",
     "AT_SEA_HAKE (mt)" = "At-sea-hake",
-    "Total Catch (mt)" = "Total Catch"
+    "Total Landings (mt)" = "Total Landings"
   )|>
   #cols_width(
   #  everything() ~ px(75)
@@ -119,7 +119,7 @@ knitr::include_graphics(file.path(model_dir,"plots/ts7_Spawning_output_with_95_i
 #| fig-alt: ""
 #| fig-pos: H
 
-knitr::include_graphics(file.path(model_dir,"plots/ts9_Relative_spawning_biomass_intervals.png"))
+knitr::include_graphics(file.path(model_dir,"plots/ts9_Relative_spawning_output_intervals.png"))
 
 ```
 
