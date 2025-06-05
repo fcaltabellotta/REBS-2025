@@ -72,8 +72,8 @@ if (file.exists(table_dir)) {
 ```{r}
 #| echo: false
 
-  time_series_table[, "Spawning Biomass (mt)"] <- 
-    round(time_series_table[, "Spawning Biomass (mt)"], 0)
+  time_series_table[, "Spawning output"] <- 
+    round(time_series_table[, "Spawning output"], 0)
   time_series_table[, "Fraction Unfished"] <- 
     round(time_series_table[, "Fraction Unfished"], 3)
   time_series_table[, "Age-0 Recruits (1,000s)"] <- 

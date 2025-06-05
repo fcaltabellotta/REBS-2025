@@ -6,15 +6,15 @@
 #_Source_code_at:_https://github.com/nmfs-ost/ss3-source-code
 
 #C file created using an r4ss function
-#C file write time: 2025-05-10  03:49:07
+#C file write time: 2025-06-01  11:52:54
 2025_rougheye_data.ss
-control.ss_new
+2025_rougheye_control.ss
 1 # 0=use init values in control file; 1=use ss.par
 1 # run display detail (0 = minimal; 1=one line per iter; 2=each logL)
 1 # detailed output (0=minimal for data-limited, 1=high (w/ wtatage.ss_new), 2=brief, 3=custom) 
 #COND: custom report options: -100 to start with minimal; -101 to start with all; -number to remove, +number to add, -999 to end
 0 # write 1st iteration details to echoinput.sso file (0,1) 
-0 # write parm values to ParmTrace.sso (0=no,1=good,active; 2=good,all; 3=every_iter,all_parms; 4=every,active)
+1 # write parm values to ParmTrace.sso (0=no,1=good,active; 2=good,all; 3=every_iter,all_parms; 4=every,active)
 1 # write to cumreport.sso (0=no,1=like&timeseries; 2=add survey fits)
 1 # Include prior_like for non-estimated parameters (0,1) 
 1 # Use Soft Boundaries to aid convergence (0,1) (recommended)
@@ -41,5 +41,5 @@ control.ss_new
 0 # F_std_scaling: 0=no scaling; 1=F/Fspr; 2=F/Fmsy; 3=F/Fbtgt; where F means annual F_std, Fmsy means F_std@msy; values >=11 invoke N multiyr using 10s and 100s digit; append .1 to invoke log(ratio)
 0 # MCMC output detail: integer part (0=default; 1=adds obj func components; 2= +write_report_for_each_mceval); and decimal part (added to SR_LN(R0) on first call to mcmc)
 0 # ALK tolerance ***disabled in code
--1 # random number seed for bootstrap data (-1 to use long(time) as seed): # 1746876934
+-1 # random number seed for bootstrap data (-1 to use long(time) as seed): # 1748816457
 3.30 # check value for end of file and for version control

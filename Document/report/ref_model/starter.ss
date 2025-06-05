@@ -1,13 +1,13 @@
 #C file created using an r4ss function
-#C file write time: 2025-05-10  03:49:07
+#C file write time: 2025-06-01  11:52:54
 #
 2025_rougheye_data.ss #_datfile
-control.ss_new #_ctlfile
+2025_rougheye_control.ss #_ctlfile
 1 #_init_values_src
 1 #_run_display_detail
 1 #_detailed_age_structure
 0 #_checkup
-0 #_parmtrace
+1 #_parmtrace
 1 #_cumreport
 1 #_prior_like
 1 #_soft_bounds
