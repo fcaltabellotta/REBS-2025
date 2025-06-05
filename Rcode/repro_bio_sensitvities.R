@@ -10,6 +10,11 @@ library(ggplot2)
 
 base_model_dir <- file.path(here::here('models','base_model'))
 
+#add plots to base model folder
+
+#base_replist <- SS_output(dir = base_model_dir)
+#SS_plots(base_replist)
+
 rcr_base_model_dir <- file.path(here::here('models','rcr_base_model'))
 
 copy_SS_inputs(
