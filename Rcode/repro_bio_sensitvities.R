@@ -5,6 +5,13 @@ library(purrr)
 library(furrr)
 library(ggplot2)
 
+#testing ref folder
+
+ref_model <- r4ss::SS_read(here::here('Document','report','ref_model'))
+#this error:
+#Multiple files in directory match pattern *.par, choosing based on the preferences described in the help for get_par_name(): ss3.par
+
+#copied over the files from the google drive in models/base_model
 
 #run base model
 
@@ -12,8 +19,9 @@ base_model_dir <- file.path(here::here('models','base_model'))
 
 #add plots to base model folder
 
-#base_replist <- SS_output(dir = base_model_dir)
-#SS_plots(base_replist)
+base_replist <- SS_output(dir = base_model_dir)
+SS_plots(base_replist)
+
 
 rcr_base_model_dir <- file.path(here::here('models','rcr_base_model'))
 
