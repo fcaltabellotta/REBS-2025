@@ -84,7 +84,6 @@ knitr::include_graphics(
 
 ## Data
 
-
 ```{r} 
 #| label: fig-data
 #| echo: false 
@@ -95,6 +94,19 @@ knitr::include_graphics(
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "data_plot.png")
+)
+``` 
+
+```{r} 
+#| label: fig-landings
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Landings by fleet."
+#| fig-alt: "Landings by fleet."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "catch2_landings_stacked.png")
 )
 ``` 
 
