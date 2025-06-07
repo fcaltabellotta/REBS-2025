@@ -84,7 +84,7 @@ Length bins from 10 to 80 cm in 2 cm increments were used to summarize the lengt
 #### Commercial Landings Length and Ages
 The fishery length and age data for bottom trawl, non-trawl and midwater trawl fleets, based on samples collected by port samplers, were obtained from the PacFIN Biological Data System (BDS) database and extracted on April 24, 2025. The number of trips and fish sampled for lengths and ages by fleet and year are summarized in Tables XX-XX. 
 
-Commercial length-frequency distributions were developed for each fleet and year, for which observations were available. Females and males distributions were treated separately, to track sex-specific differences. For each fleet, the raw observations were expanded to the trip level, to account for differences in samples sizes relative catch weights among trips (first stage expansion). The expanded length observations were then further expanded to state level, to account for differences in sampling intensity of `r Spp` landings among states combined into a single fleet (second stage expansion). The expansion algorithm can be illustrated with the following equation:
+Commercial length-frequency distributions were developed for each fleet and year, for which observations were available (Figire. Females and males distributions were treated separately, to track sex-specific differences. For each fleet, the raw observations were expanded to the trip level, to account for differences in samples sizes relative catch weights among trips (first stage expansion). The expanded length observations were then further expanded to state level, to account for differences in sampling intensity of `r Spp` landings among states combined into a single fleet (second stage expansion). The expansion algorithm can be illustrated with the following equation:
 
 \begin{centering}
 
@@ -129,18 +129,18 @@ The marginal age compositions were constructed, but only used in the model for e
 
 <!-- Fishery-independent data: Description of surveys used in the assessment, description of methods to estimate abundance indices, sample size information for length- and age- composition data by survey and year, including both the number of tows (or drops or sites for hook and line data) and fish sampled. Include complete tables and figures and date of data extraction.   -->
 
-Data from four fishery-independent surveys were used in this assessment, which included three historical surveys and one current survey: 
+Data from four fishery-independent surveys were used in this assessment: 
 
 * AFSC/NWFSC West Coast Triennial (every three years) Shelf survey (1980-2004)
 * Alaska Fishery Science Center Slope survey (1997, 1999-2001)
 * Northwest Fisheries Science Center Slope Center (1999-2002)
 * West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)
 
-Information produced by these surveys included indices of relative abundance, length-frequency distributions, and age-frequency distributions. 
+Information produced by these surveys included indices of relative abundance (all four surveys), length-frequency distributions (Triennial survey and WCGBTS), and age-frequency distributions (WCGBTS). 
 
-Only the WCGBTS has new data for this assessment, but new methods to develop an index of abundance were applied to all surveys to update all indices. We used geostatistical models of biomass density to fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/). The method is based on a delta model. Two distributions (gamma and lognormal) were considered for the catch-rate component, but the lognormal error structure was selected because it was shown to be able to better account for extreme catch events observed for `r spp` in all four surveys. Comparing the standardized versions (i.e., Z-scores, which puts all the indices on the same scale for better comparison of trends) of the indices shows very similar trends among each model output, suggesting little difference in choice of model type. The variance in the indices is generally high (0.3-0.5), suggesting the information content in these indices is low. This is not a surprise given the challenge of sampling these species with trawl gear. Overall, catches densities are highest in northern Oregon and Washington. 
+Only the WCGBTS has new data for this assessment, but new methods were applied to all surveys to develop new indices of abundance. We used geostatistical models of biomass density to fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/). The method is based on a delta model. Two distributions (gamma and lognormal) were considered for the catch-rate component, but the lognormal error structure was selected for all surveys because it was shown to be able to better account for extreme catch events. Comparing the standardized versions (i.e., Z-scores, which puts all the indices on the same scale for better comparison of trends)  shows very similar trends among each model output in the indices, suggesting little difference in choice of model type. The variance in the indices is generally high (0.3-0.5), suggesting the information content in these indices is low, which is consistent with the known challenge of sampling these species with trawl gear. Overall, catches densities are highest in northern Oregon and Washington. 
 
-Description of each survey is provided below; information available from each survey is also discussed.  
+Description of each survey is provided below; information available from each survey and methods used to process the data are also discussed.  
 
 ### AFSC/NWFSC West Coast Triennial Shelf Survey
 #### Survey Description
@@ -246,11 +246,20 @@ There are no `r spp` length and age data from the NWFSC Slope Survey. Given that
 The West Coast Groundfish Bottom Trawl Survey (WCGBTS) is conducted annually since 2003 (Table XX). The survey’s design and sampling methods are most recently described in @bradburn_2003_2011. The survey is based on a random-grid design, covering the coastal waters from a depth of 100 to 700 fm (183-1280 m). This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two 'passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
 
 #### Abundance Index
-Geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/). The model used a delta model with a lognormal distribution for the catch-rate component.
+Geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/)[@kristensen_tmb:_2016] via the R package \gls{sdmtmb} [@Anderson:2022:SRP].. The model used a delta model with a lognormal distribution for the catch-rate component.
 
 The data were truncated to depths less than 875 m prior to modelling given that there were zero positive encounters in depths deeper than 875 m. The prediction grid was also truncated to only include available survey locations in depths between 55-875 m to limit extrapolating beyond the data and edge effects. 
 
 The response variable in the model was catch (mt) with an offset of area (km2) to account for differences in effort. Fixed effects were estimated for each year. The following additional covariate was included: pass. Spatial variation, but not spatiotemporal variation, was included in the encounter probability and the positive catch rate model. Spatial variation was approximated using 200 knots, where more knots led to non-estimable standard errors.
+
+The data were truncated to depths less than 675 m prior to modeling given that there were zero positive encounters in depths deeper than 675 m. The prediction grid was also truncated to only include available survey locations in depths between 55-875 m to limit extrapolating beyond the data and edge effects.
+
+The model used a delta model with a lognormal distribution for the catch-rate component. The model used a delta model with a lognormal distribution for the catch-rate component. A logit-link was used for encounter probability and a log-link for positive catch rates. The response variable was catch (mt) with an offset of area (km$^2$) to account for differences in effort. Fixed effects were estimated for each year. The following additional covariates were included: pass. Vessel-year effects, which have traditionally been included in index standardization for this survey, were not included as the estimated variance for the random effect was close to zero. Vessel-year effects were more prominent when models did not include spatial effects and were included for each unique combination of vessel and year in the data to account for the random selection of commercial vessels used during sampling [@helser_generalized_2004; @thorson_accounting_2014].
+
+Spatial and spatiotemporal variation was included in the encounter probability and the positive catch rate model.
+Spatial variation was approximated using 500 knots, where more knots led to non-estimable standard errors because the positive encounters are too sparse to support the dense spatiotemporal structure.
+
+The estimated distribution of `r spp` density for 2004 is shown in Figure \ref{fig:survey-density}.
 
 #### Length and Age compositions
 Length bins from 1o to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year (Figure XX). Table XX shows the number of lengths taken by the survey. 

@@ -163,6 +163,32 @@ knitr::include_graphics(
 ```
 
 ```{r} 
+#| label: fig-length_flt1_1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for bottom trawl fleet."
+#| fig-alt: "Length composition data for bottom trawl fleet."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lendat_flt1mkt0_page1.png")
+)
+``` 
+
+```{r} 
+#| label: fig-length_flt1_2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for bottom trawl fleet, continued."
+#| fig-alt: "Length composition data for bottom trawl fleet, continued."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lendat_flt1mkt0_page2.png")
+)
+``` 
+
+```{r} 
 #| label: fig-Ct_compsSO
 #| echo: false 
 #| warning: false 
