@@ -5,6 +5,9 @@ library(purrr)
 library(furrr)
 library(ggplot2)
 
+
+#SET UP BASE MODEL, DONT NEED TO RERUN THIS
+#############################################################################
 #testing ref folder
 
 ref_model <- r4ss::SS_read(here::here('Document','report','ref_model'))
@@ -46,12 +49,38 @@ SS_plots(replist)
 
 ##############################################################
 
+#start sensitivity runs here
+
 model_directory <- here::here(
   'models')
 base_model_name <- here::here(
   'models',
-  'rcr_base_model'
+  'base_model'
 )
-exe_loc <- here::here('models/rcr_base_model/ss3')
+exe_loc <- here::here('models/base_model/ss3')
 base_model <- SS_read(base_model_name, ss_new = TRUE)
 base_out <- SS_output(base_model_name)
+
+###############################################################
+#################  Proportional fecundity to weight ###########
+###############################################################
+
+sensi_mod <- base_model
+
+#ctl <- sensi_mod$ctl 
+
+#base model is 2 (cubic), change it to 1 (linear)
+sensi_mod$ctl$fecundity_option <- 1
+
+SS_write(
+  sensi_mod,
+  file.path(
+    model_directory,
+    'repro_sensitivities',
+    'proportional_fecundity'
+  ),
+  overwrite = TRUE
+)
+
+####################################################
+
