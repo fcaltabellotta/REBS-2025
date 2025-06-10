@@ -126,28 +126,27 @@ The selectivity of all fisheries and surveys were estimated either as logistic o
 
 The full list of estimate and fixed parameters are found in @tbl-param. 
 
-The biggest uncertainty was in the treatment of sex-specific $M$ and the selectivity of the bottom trawl fishery. The combination of these two sources covered the extent of all other sources of uncertainty observed and presented in the "Characterizing uncertainty" section of the document. The parameters uncertainty is different than the uncertainty derived from data treatment, such as ageing error and data-weighting. While these issues cause large uncertainty in stock scale and status estimates, the choice of treatments are based on the common challenge of balancing information content (i.e., what should the data be informing in the stock assessment) in the data within an integrated statistical frameworks. Those explorations are also provided in the "Characterizing uncertainty" section.
+The biggest uncertainty was in the treatment of sex-specific $M$ and the selectivity of the bottom trawl fishery. The combination of these two sources covered the extent of all other sources of uncertainty observed and presented in the "Characterizing Uncertainty" section of the document. The parameters uncertainty is different than the uncertainty derived from data treatment, such as ageing error and data-weighting. While these issues cause large uncertainty in stock scale and status estimates, the choice of treatments are based on the common challenge of balancing information content (i.e., what should the data be informing in the stock assessment) in the data within an integrated statistical frameworks. Those explorations are also provided in the "Characterizing Uncertainty" section.
 
 General attributes of the reference model are that indices of abundance are assumed to have lognormal measurement errors. Length compositions and conditional age at length samples are all assumed to follow a multinomial sampling distribution, where the sample size is fixed at the input sample size calculated during compositional example, and where this input sample size is subsequently reweighted to account for additional sources of overdispersion (see below). Recruitment deviations were also estimated are assumed to follow a lognormal distribution, where the standard deviation of this distribution is tuned as noted above.
 
-Sensitivity scenarios and likelihood profiles (on $lnR_0$, steepness, and natural mortality) were used to explore uncertainty in the above model specifications and are reported in the "Characterizing uncertainty" section. 
+Sensitivity scenarios and likelihood profiles (on $lnR_0$, steepness, and natural mortality) were used to explore uncertainty in the above model specifications and are reported below. 
 
 ### Data Weighting
 
-Initial sample sizes for the length and conditional age-at-length compositions were also considered for additional data-weighting. The method of @francis_data_2011, specifically equation TA1.8, was used to re-weight the length and conditional age-at-length composition data against other inputs and likelihood components. The Francis method treats mean length and age as indices, with effective sample size defining the variance around the mean. If the variability around the mean does not encompass model predictions, the data should be down-weighted until predictions fit within the intervals. This method accounts for correlation in the data (i.e., the multinomial distribution), but can be sensitive to years that are outliers, as the amount of down-weighting is applied to all years within a data source, and are not year-specific. Sensitivities were performed examining different data-weighting treatments: 1) the Dirichlet-Multinomial approach [@thorson_model-based_2017], 2) the McAllister-Ianelli Harmonic Mean approach [@mcallister_bayesian_1997], or 3) no additional data-weighting.
+The reference model allowed for the estimation of additional variance on all surveys. The ability to add variance to indices allows the model to balance model fit to that data while acknowledging that variances may be underestimated in the index standardization. A sensitivity was run with no extra variance estimated, as well as removal of the index data were explored.
 
-The ability to estimate additional variance for indices allows the model to balance model fit to that data while acknowledging that variances may be underestimated in the index standardization. Given the large inputted variances and the limited contrast in the index trends did not require the consideration of further variance estimation. Removal of the index data was explored to demonstrate the limited influence of this data in the model.
+Initial sample sizes for the length and conditional age-at-length compositions were also considered for additional data-weighting. The method of @francis_data_2011, specifically equation TA1.8, was used to re-weight the length and conditional age-at-length composition data against other inputs and likelihood components. The Francis method treats mean length and age as indices, with effective sample size defining the variance around the mean. If the variability around the mean does not encompass model predictions, the data should be down-weighted until predictions fit within the intervals. This method accounts for correlation in the data (i.e., the multinomial distribution), but can be sensitive to years that are outliers, as the amount of down-weighting is applied to all years within a data source, and are not year-specific. Sensitivities were performed examining different data-weighting treatments: 1) the Dirichlet-Multinomial approach [@thorson_model-based_2017], 2) the McAllister-Ianelli Harmonic Mean approach [@mcallister_bayesian_1997], or 3) no additional data-weighting.
 
 
 ### Model Changes from the Last Assessment
 
-The biggest changes to the 2013 assessment are:
+Besides the additional of eight years of data and some changes in the estimation of some parameters, the biggest changes to the 2015 assessment are:
 
 - Change in the removal history, particularly updates to historical data and new catches since 2013. 
 - Adding discard fleets instead of using retention curves.
 - Using spatio-temporal approaches (sdmTMB) to define indices of abundance versus the former GLMM approach.
 - Adding more biological compositions, mainly in years since 2013, but also some historical ages. 
 - Specifying a two sex instead of one sex model, which allows for sex-specific estimation of natural mortality and growth.
-- Updated and more ageing error matrices
-- Allowing the bottom trawl fishery to have some amount of dome-shaped selectivity, consistent with the bottom trawl surveys.
+- Allowing the bottom trawl fishery to have dome-shaped selectivity, consistent with the bottom trawl surveys.
 

@@ -3,7 +3,7 @@
 
 ### Model Convergence and Acceptability {#model-convergence}
 
-While there is no definitive measure of model convergence, several measures are routinely applied. These criteria include a low maximum gradient (`r model_output$maximum_gradient_component`), inversion of the Hessian (passed), acceptable fits to data (passed), and reasonable parameter values (passed). 
+While there is no definitive measure of model convergence, several measures are routinely applied. These criteria include a low maximum gradient (`r model$maximum_gradient_component`), inversion of the Hessian (passed), acceptable fits to data (passed), and reasonable parameter values (passed). 
 
 Model efficiency was explored by doing a short run Bayesian analysis using the Random Walk Metropolis with 2,000 draws, keeping all the draws and examining the fast mixing parameters. Those estimated parameters that do not move much from the initial values slow the model down and are recommended to be fixed at the starting value [@monnahan_overcoming_2019]. No additional parameters were fixed based on this analysis (@fig-pairs_plot_fast).
 

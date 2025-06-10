@@ -454,10 +454,51 @@ knitr::include_graphics(
 )
 ``` 
 
+```{r} 
+#| label: fig-M-profile-explore
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Likelihood profile and component likelihoods used to establish a fixed value for male natural mortality. "
+#| fig-alt: "This is a four panel figure. Each panel from top left clockwise around to bottom left: Total likelihood with components; the length components; the survey components; the age components. The total likelihood is composed of conflicting information, as lengths push for larger natural mortality values, and ages push for lower values. The surve components have little information natural mortality."
+
+knitr::include_graphics(
+  file.path(plot_dir, "piner_panel_NatM_uniform_Mal_GP_1.png")
+)
+``` 
+
 \newpage
 
 
 ## Time-series
+
+```{r} 
+#| label: fig-pairs_plot_fast
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pairs plots of the fastest mixing parameters from running 2000 posterior draws (keeping every draw) using the random walk Metropolis algorithm. Parameters that show little to no movement are recommended to be fixed to improve model speed and efficiency."
+#| fig-alt: "The model output that produce these plots are available upon request"
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(plot_dir, "pairs_plot_fast.png")
+)
+```
+
+```{r} 
+#| label: fig-jitter001
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Jitter runs (using a value of 0.01) for the reference model, with jitter run number on the x-axis and -log likelihood value on the y-axis. Blue dot are models that match the likelihood value of the reference model, while red dots deviate from the reference model. All red dots are above the blue dots, indicating no better fit to the reference model was found."
+#| fig-alt: "These model files are available in the stock assessment archive"
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "Jitter Results_0.01", "jitterplot.png")
+)
+```
 
 ```{r} 
 #| label: fig-sb

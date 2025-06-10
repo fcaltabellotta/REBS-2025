@@ -134,20 +134,19 @@ Sensitivity scenarios and likelihood profiles (on $lnR_0$, steepness, and natura
 
 ### Data Weighting
 
-Initial sample sizes for the length and conditional age-at-length compositions were also considered for additional data-weighting. The method of @francis_data_2011, specifically equation TA1.8, was used to re-weight the length and conditional age-at-length composition data against other inputs and likelihood components. The Francis method treats mean length and age as indices, with effective sample size defining the variance around the mean. If the variability around the mean does not encompass model predictions, the data should be down-weighted until predictions fit within the intervals. This method accounts for correlation in the data (i.e., the multinomial distribution), but can be sensitive to years that are outliers, as the amount of down-weighting is applied to all years within a data source, and are not year-specific. Sensitivities were performed examining different data-weighting treatments: 1) the Dirichlet-Multinomial approach [@thorson_model-based_2017], 2) the McAllister-Ianelli Harmonic Mean approach [@mcallister_bayesian_1997], or 3) no additional data-weighting.
+The reference model allowed for the estimation of additional variance on all surveys. The ability to add variance to indices allows the model to balance model fit to that data while acknowledging that variances may be underestimated in the index standardization. A sensitivity was run with no extra variance estimated, as well as removal of the index data were explored.
 
-The ability to estimate additional variance for indices allows the model to balance model fit to that data while acknowledging that variances may be underestimated in the index standardization. Given the large inputted variances and the limited contrast in the index trends did not require the consideration of further variance estimation. Removal of the index data was explored to demonstrate the limited influence of this data in the model.
+Initial sample sizes for the length and conditional age-at-length compositions were also considered for additional data-weighting. The method of @francis_data_2011, specifically equation TA1.8, was used to re-weight the length and conditional age-at-length composition data against other inputs and likelihood components. The Francis method treats mean length and age as indices, with effective sample size defining the variance around the mean. If the variability around the mean does not encompass model predictions, the data should be down-weighted until predictions fit within the intervals. This method accounts for correlation in the data (i.e., the multinomial distribution), but can be sensitive to years that are outliers, as the amount of down-weighting is applied to all years within a data source, and are not year-specific. Sensitivities were performed examining different data-weighting treatments: 1) the Dirichlet-Multinomial approach [@thorson_model-based_2017], 2) the McAllister-Ianelli Harmonic Mean approach [@mcallister_bayesian_1997], or 3) no additional data-weighting.
 
 
 ### Model Changes from the Last Assessment
 
-The biggest changes to the 2013 assessment are:
+Besides the additional of eight years of data and some changes in the estimation of some parameters, the biggest changes to the 2015 assessment are:
 
 - Change in the removal history, particularly updates to historical data and new catches since 2013. 
 - Adding discard fleets instead of using retention curves.
 - Using spatio-temporal approaches (sdmTMB) to define indices of abundance versus the former GLMM approach.
 - Adding more biological compositions, mainly in years since 2013, but also some historical ages. 
 - Specifying a two sex instead of one sex model, which allows for sex-specific estimation of natural mortality and growth.
-- Updated and more ageing error matrices
 - Allowing the bottom trawl fishery to have some amount of dome-shaped selectivity, consistent with the bottom trawl surveys.
 
