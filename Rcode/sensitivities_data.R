@@ -10,6 +10,9 @@ library(purrr)
 library(furrr)
 library(ggplot2)
 
+#file.create("C:/Github/REBS-2025/.here")
+#here::here()
+
 model_directory <- here::here(
   'Document',
   'report',
@@ -70,14 +73,14 @@ SS_write(
 
 # testing a run manually 
 
-setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/01_no_Triennial")
-shell("ss3 -nohess",wait = T) # no hessian
-
-
+#setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/01_no_Triennial")
+#shell("ss3 -nohess",wait = T) # no hessian
 
 ## 2) remove AK slope survey
 
 sensi_mod <- base_model
+
+sensi_mod$start$init_values_src<-0
 
 sensi_mod$dat$CPUE <- sensi_mod$dat$CPUE |>
   filter(index != 8)
@@ -113,6 +116,8 @@ SS_write(
 
 sensi_mod <- base_model
 
+sensi_mod$start$init_values_src<-0
+
 sensi_mod$dat$CPUE <- sensi_mod$dat$CPUE |>
   filter(index != 9)
 
@@ -147,6 +152,8 @@ SS_write(
 
 sensi_mod <- base_model
 
+sensi_mod$start$init_values_src<-0
+
 sensi_mod$dat$CPUE <- sensi_mod$dat$CPUE |>
   filter(index != 10)
 
@@ -176,10 +183,11 @@ SS_write(
   overwrite = TRUE
 )
 
-
 ## 5) remove all indices
 
 sensi_mod <- base_model
+
+sensi_mod$start$init_values_src<-0
 
 sensi_mod$dat$CPUE$year <- -1 * sensi_mod$dat$CPUE$year
 sensi_mod$ctl$Q_options <- sensi_mod$ctl$Q_parms <- NULL
@@ -363,15 +371,15 @@ sensi_mod$dat$lencomp <- sensi_mod$dat$lencomp |>
 
 # note from Jason on REBS - will estimate selex without lengths first, then fix
 
-sensi_mod$ctl$size_selex_parms[
-  grepl('TRIENNIAL', rownames(sensi_mod$ctl$size_selex_parms)),
-]$PHASE <-
-  abs(
-    sensi_mod$ctl$size_selex_parms[
-      grepl('TRIENNIAL', rownames(sensi_mod$ctl$size_selex_parms)),
-    ]$PHASE
-  ) *
-  -1
+# sensi_mod$ctl$size_selex_parms[
+#   grepl('TRIENNIAL', rownames(sensi_mod$ctl$size_selex_parms)),
+# ]$PHASE <-
+#   abs(
+#     sensi_mod$ctl$size_selex_parms[
+#       grepl('TRIENNIAL', rownames(sensi_mod$ctl$size_selex_parms)),
+#     ]$PHASE
+#   ) *
+#   -1
 
 SS_write(
   sensi_mod,
@@ -391,15 +399,15 @@ sensi_mod <- base_model
 sensi_mod$dat$lencomp <- sensi_mod$dat$lencomp |>
   filter(fleet != 8)
 
-sensi_mod$ctl$size_selex_parms[
-  grepl('AK_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
-]$PHASE <-
-  abs(
-    sensi_mod$ctl$size_selex_parms[
-      grepl('AK_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
-    ]$PHASE
-  ) *
-  -1
+# sensi_mod$ctl$size_selex_parms[
+#   grepl('AK_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
+# ]$PHASE <-
+#   abs(
+#     sensi_mod$ctl$size_selex_parms[
+#       grepl('AK_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
+#     ]$PHASE
+#   ) *
+#   -1
 
 SS_write(
   sensi_mod,
@@ -418,15 +426,15 @@ sensi_mod <- base_model
 sensi_mod$dat$lencomp <- sensi_mod$dat$lencomp |>
   filter(fleet != 9)
 
-sensi_mod$ctl$size_selex_parms[
-  grepl('NW_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
-]$PHASE <-
-  abs(
-    sensi_mod$ctl$size_selex_parms[
-      grepl('NW_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
-    ]$PHASE
-  ) *
-  -1
+# sensi_mod$ctl$size_selex_parms[
+#   grepl('NW_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
+# ]$PHASE <-
+#   abs(
+#     sensi_mod$ctl$size_selex_parms[
+#       grepl('NW_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
+#     ]$PHASE
+#   ) *
+#   -1
 
 SS_write(
   sensi_mod,
@@ -445,15 +453,15 @@ sensi_mod <- base_model
 sensi_mod$dat$lencomp <- sensi_mod$dat$lencomp |>
   filter(fleet != 10)
 
-sensi_mod$ctl$size_selex_parms[
-  grepl('WCGBTS', rownames(sensi_mod$ctl$size_selex_parms)),
-]$PHASE <-
-  abs(
-    sensi_mod$ctl$size_selex_parms[
-      grepl('WCGBTS', rownames(sensi_mod$ctl$size_selex_parms)),
-    ]$PHASE
-  ) *
-  -1
+# sensi_mod$ctl$size_selex_parms[
+#   grepl('WCGBTS', rownames(sensi_mod$ctl$size_selex_parms)),
+# ]$PHASE <-
+#   abs(
+#     sensi_mod$ctl$size_selex_parms[
+#       grepl('WCGBTS', rownames(sensi_mod$ctl$size_selex_parms)),
+#     ]$PHASE
+#   ) *
+#   -1
 
 SS_write(
   sensi_mod,
@@ -934,7 +942,7 @@ sens_names_ls <- list(
 )
 
 # outdir starts at here() - I think!
-outdir <- 'Document/report/Sensis/data_sensitivities/00_data_sensitivities_output'
+outdir <- 'Document/report/Sensis/figures'
 
 purrr::imap(
   sens_names_ls,
@@ -1092,7 +1100,7 @@ sensitivity_output <- SSsummarize(
   big_sensitivity_output[!names(big_sensitivity_output) %in% "index_and_comp_data/22_no_length_comps"]
 )
 
-length_comps_2_clean <- length_comps_2[length_comps_2$dir != "index_and_comp_data/22_no_length_comps", ]
+#length_comps_2_clean <- length_comps_2[length_comps_2$dir != "index_and_comp_data/22_no_length_comps", ]
 
 sens_names <- bind_rows(modeling, indices, age_comps, length_comps_1, length_comps_2_clean)
 

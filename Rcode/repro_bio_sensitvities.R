@@ -5,6 +5,9 @@ library(purrr)
 library(furrr)
 library(ggplot2)
 
+
+#SET UP BASE MODEL, DONT NEED TO RERUN THIS
+#############################################################################
 #testing ref folder
 
 ref_model <- r4ss::SS_read(here::here('Document','report','ref_model'))
@@ -46,12 +49,197 @@ SS_plots(replist)
 
 ##############################################################
 
+#start sensitivity runs here
+
 model_directory <- here::here(
   'models')
 base_model_name <- here::here(
   'models',
-  'rcr_base_model'
+  'base_model'
 )
-exe_loc <- here::here('models/rcr_base_model/ss3')
+#exe_loc <- here::here('models/base_model')
 base_model <- SS_read(base_model_name, ss_new = TRUE)
 base_out <- SS_output(base_model_name)
+
+###############################################################
+#################  Proportional fecundity to weight ###########
+###############################################################
+
+base_model <- SS_read(base_model_name, ss_new = TRUE)
+
+sensi_mod <- base_model
+
+sensi_dir <- here::here('models/repro_sensitivities/proportional_fecundity')
+
+sensi_mod$start$init_values_src <- 0
+
+#base model fecundity option is 2 (cubic), change it to 1 (linear)
+sensi_mod$ctl$fecundity_option <- 1
+
+SS_write(
+  sensi_mod,
+  sensi_dir,
+  overwrite = TRUE
+)
+
+r4ss::get_ss3_exe(dir = sensi_dir)
+
+r4ss::run(dir = sensi_dir, show_in_console = TRUE, extras = "-nohess")
+
+replist <- r4ss::SS_output(dir = sensi_dir)
+r4ss::SS_plots(replist)
+
+####################################################
+#try this with ss_new = FALSE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+base_model <- SS_read(base_model_name, ss_new = FALSE)
+
+sensi_mod <- base_model
+
+sensi_dir <- here::here('models/repro_sensitivities/proportional_fecundity_old')
+
+#base model fecundity option is 2 (cubic), change it to 1 (linear)
+sensi_mod$ctl$fecundity_option <- 1 #linear fecundity to length
+
+SS_write(
+  sensi_mod,
+  sensi_dir,
+  overwrite = TRUE
+)
+
+r4ss::get_ss3_exe(dir = sensi_dir)
+
+r4ss::run(dir = sensi_dir, show_in_console = TRUE, extras = "-nohess")
+
+replist <- r4ss::SS_output(dir = sensi_dir)
+r4ss::SS_plots(replist)
+
+#there is a small difference between these runs
+
+###############################################################
+#################  Functional maturity A50 ###################
+###############################################################
+
+base_model <- SS_read(base_model_name, ss_new = TRUE)
+
+sensi_mod <- base_model
+
+sensi_dir <- here::here('models/repro_sensitivities/maturity_a50')
+
+sensi_mod$start$init_values_src <- 0
+
+sensi_mod$ctl$maturity_option <- 2 #age logistic
+#supply A50 values
+
+sensi_mod$ctl$MG_parms["Mat50%_Fem_GP_1", ]$INIT <- 26.01807
+sensi_mod$ctl$MG_parms["Mat50%_Fem_GP_1", ]$PRIOR <- 26.01807
+
+sensi_mod$ctl$MG_parms["Mat_slope_Fem_GP_1", ]$INIT <- -0.13084
+sensi_mod$ctl$MG_parms["Mat_slope_Fem_GP_1", ]$PRIOR <- -0.13084
+
+SS_write(
+  sensi_mod,
+  sensi_dir,
+  overwrite = TRUE
+)
+
+r4ss::get_ss3_exe(dir = sensi_dir)
+
+r4ss::run(dir = sensi_dir, show_in_console = TRUE, extras = "-nohess")
+
+replist <- r4ss::SS_output(dir = sensi_dir)
+r4ss::SS_plots(replist)
+
+###############################################################
+###  Genetically confirmed Blackspotted functional L50  ############
+###############################################################
+
+base_model <- SS_read(base_model_name, ss_new = TRUE)
+
+sensi_mod <- base_model
+
+sensi_dir <- here::here('models/repro_sensitivities/blackspotted_l50')
+
+sensi_mod$start$init_values_src <- 0
+
+sensi_mod$ctl$MG_parms["Mat50%_Fem_GP_1", ]$INIT <- 51.44882
+sensi_mod$ctl$MG_parms["Mat50%_Fem_GP_1", ]$PRIOR <- 51.44882
+
+sensi_mod$ctl$MG_parms["Mat_slope_Fem_GP_1", ]$INIT <- -0.2926
+sensi_mod$ctl$MG_parms["Mat_slope_Fem_GP_1", ]$PRIOR <- -0.2926
+
+SS_write(
+  sensi_mod,
+  sensi_dir,
+  overwrite = TRUE
+)
+
+r4ss::get_ss3_exe(dir = sensi_dir)
+
+r4ss::run(dir = sensi_dir, show_in_console = TRUE, extras = "-nohess")
+
+replist <- r4ss::SS_output(dir = sensi_dir)
+r4ss::SS_plots(replist)
+
+###############################################################
+###  Genetically confirmed Rougheye functional L50  ############
+###############################################################
+
+base_model <- SS_read(base_model_name, ss_new = TRUE)
+
+sensi_mod <- base_model
+
+sensi_dir <- here::here('models/repro_sensitivities/rougheye_l50')
+
+sensi_mod$start$init_values_src <- 0
+
+sensi_mod$ctl$MG_parms["Mat50%_Fem_GP_1", ]$INIT <- 43.56674
+sensi_mod$ctl$MG_parms["Mat50%_Fem_GP_1", ]$PRIOR <- 43.56674
+
+sensi_mod$ctl$MG_parms["Mat_slope_Fem_GP_1", ]$INIT <- -0.42588
+sensi_mod$ctl$MG_parms["Mat_slope_Fem_GP_1", ]$PRIOR <- -0.42588
+
+SS_write(
+  sensi_mod,
+  sensi_dir,
+  overwrite = TRUE
+)
+
+r4ss::get_ss3_exe(dir = sensi_dir)
+
+r4ss::run(dir = sensi_dir, show_in_console = TRUE, extras = "-nohess")
+
+replist <- r4ss::SS_output(dir = sensi_dir)
+r4ss::SS_plots(replist)
+
+###############################################################
+###################  Biological L50  ##########################
+###############################################################
+
+base_model <- SS_read(base_model_name, ss_new = TRUE)
+
+sensi_mod <- base_model
+
+sensi_dir <- here::here('models/repro_sensitivities/biological_l50')
+
+sensi_mod$start$init_values_src <- 0
+
+sensi_mod$ctl$MG_parms["Mat50%_Fem_GP_1", ]$INIT <- 42.91512
+sensi_mod$ctl$MG_parms["Mat50%_Fem_GP_1", ]$PRIOR <- 42.91512
+
+sensi_mod$ctl$MG_parms["Mat_slope_Fem_GP_1", ]$INIT <- -0.26047
+sensi_mod$ctl$MG_parms["Mat_slope_Fem_GP_1", ]$PRIOR <- -0.26047
+
+SS_write(
+  sensi_mod,
+  sensi_dir,
+  overwrite = TRUE
+)
+
+r4ss::get_ss3_exe(dir = sensi_dir)
+
+r4ss::run(dir = sensi_dir, show_in_console = TRUE, extras = "-nohess")
+
+replist <- r4ss::SS_output(dir = sensi_dir)
+r4ss::SS_plots(replist)
+
