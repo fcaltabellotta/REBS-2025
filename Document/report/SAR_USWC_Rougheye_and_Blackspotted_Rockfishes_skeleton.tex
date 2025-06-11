@@ -1244,7 +1244,7 @@ assessment are divided among six fleets, which include:
 \end{itemize}
 
 For description and details on fleet structure, please refer to Section
-\ref{Fleet and Survey Designations}.
+Section~\ref{sec-fleet}.
 
 \subsubsection{Commercial Fishery
 Landings}\label{commercial-fishery-landings}
@@ -1582,7 +1582,7 @@ Data from four fishery-independent surveys were used in this assessment:
   Northwest Fisheries Science Center Slope Center (1999-2002)
 \end{itemize}
 
-These surveys temporal and spatial coverage is summarized in Table XX.
+The surveys temporal and spatial coverage is summarized in Table XX.
 
 Information produced by these surveys included indices of relative
 abundance (all four surveys), length-frequency distributions (WCGBTS and
@@ -1641,14 +1641,16 @@ within the \{indexwc\} R package (Johnson et al.2025). Code to reproduce
 the analysis is available online. These models can account for latent
 spatial factors with a constant spatial Gaussian random field and
 spatiotemporal deviations to evolve as a random walk Guassian random
-field (Thorson et al.~2015). Tweedie, delta-binomial, delta-gamma, and
-mixture distributions, which allow for extreme catch events, were
-investigated. Results are only shown for the distribution that led to
-the best model diagnostics, e.g., similar distributions of theoretical
-normal quantiles and model quantiles, high precision, lack of extreme
-predictions that are incompatible with yellowtail life history, and low
-AIC. Estimates of biomass from this best model were predicted using a
-grid based on available survey locations.
+field (J. T. Thorson et al.
+(\citeproc{ref-thorson_geostatistical_2015}{2015})). Tweedie,
+delta-binomial, delta-gamma, and mixture distributions, which allow for
+extreme catch events, were investigated. Results are only shown for the
+distribution that led to the best model diagnostics, e.g., similar
+distributions of theoretical normal quantiles and model quantiles, high
+precision, lack of extreme predictions that are incompatible with
+yellowtail life history, and low AIC. Estimates of biomass from this
+best model were predicted using a grid based on available survey
+locations.
 
 The data were truncated to depths less than 875 m prior to modelling
 given that there were zero positive encounters in depths deeper than 875
@@ -2235,26 +2237,37 @@ into the stock assessment model.
 \subsection{History of Modeling
 Approaches}\label{history-of-modeling-approaches}
 
-A previous Category 3 stock assessment was conducted for the U.S.
-Pacific Coast stock of Rougheye Rockfish (not including Blackspotted) in
-2010 by Dick and MacCall (\citeproc{ref-dick_estimates_2010}{2010})
-using depletion-based stock reduction analysis (DB-SRA). That model
-estimated the population had greater than a 50\% probability of
-exceeding the estimated proxy overfishing level in 2010 if the harvest
-remained at the observed levels. DB-SRA estimated a proxy OFL for
-rougheye rockfish of 78.7 mt with a 95\% confidence interval between
-4.7-587 metric tons.
+Rougheye Rockfish (not including Blackspotted) on the U.S. Pacific Coast
+was fist evaluated in 2010 by Dick and MacCall
+(\citeproc{ref-dick_estimates_2010}{2010}) using depletion-based stock
+reduction analysis (DB-SRA), as Category 3 stock. That model estimated
+the population had greater than a 50\% probability of exceeding the
+estimated proxy overfishing level in 2010 if the harvest remained at the
+observed levels. DB-SRA estimated a proxy OFL for Rougheye Rockfish of
+78.7 mt with a 95\% confidence interval between 4.7-587 metric tons.
 
-A 2013 benchmark stock assessment
-(\citeproc{ref-hicks_status_2013}{Hicks, Wetzel, and Harms 2013})
-updated the modeling framework to the integrated statistical
-catch-at-age model Stock Synthesis 3, which is different from the
-delay-difference model with an assumed stock status prior in 2010 used
-in the DB-SRA analysis. The 2013 assessment used a substantially updated
-catch history, indices of abundance, and biological compositions
-(lengths and ages). The natural mortality value was also updated to be
-higher than that used in the DB-SRA model. The stock assessment was
-accepted for management as a Category 2 stock assessment.
+Then,Rougheye/Blackspotted Rockfishes was assessment in 2013
+(\citeproc{ref-hicks_status_2013}{Hicks, Wetzel, and Harms 2013}). A
+2013 benchmark stock assessment used Stock Synthesis (version 3.24O)
+integrated statistical catch-at-age model, which is different from the
+delay-difference model with an assumed stock status prior DB-SRA
+analysis used in 2010. The stock assessment has been used for management
+as a Category 2 stock assessment. The 2013 assessment used a
+substantially updated catch history, indices of abundance, and
+biological compositions (lengths and ages). The natural mortality value
+was also updated to be higher value than the one used in the DB-SRA
+model. The 2013 assessment also assumed logistic selectivity for all
+fleets and surveys, except for Triennial Shelf Survey, which was allowed
+to be dome-shaped. With higher natural mortality and asymptotic
+selectivity assumptions, the 2013 assessment estimated 2013 spawning
+biomass to be at 47\% relative to unfished equilibrium spawning biomass,
+with a 95\% confidence interval between 30.5\% - 64.2\%. The 2013
+spawning biomass was estimated to be 2,552 metric tons, with a 95\%
+confidence interval between 1,024 - 4,081 metric tons.
+
+This benchmark assessment represent the first assessment of
+Rougheye/Blackspotted Rockfishes since 2013
+(\citeproc{ref-hicks_status_2013}{Hicks, Wetzel, and Harms 2013}). .
 
 \subsection{Most Recent STAR Panel
 Recommendations}\label{most-recent-star-panel-recommendations}
@@ -2365,8 +2378,7 @@ version.
 \subsection{Model Structure, Evaluation, and
 Specification}\label{model-structure-evaluation-and-specification}
 
-\subsubsection{Fleet and Survey
-Designations}\label{fleet-and-survey-designations}
+\subsubsection{Fleet and Survey Designations}\label{sec-fleet}
 
 The model is structured to track several fleets and include data from
 several surveys. Defining fleets is largely based on differing fleet
@@ -3227,6 +3239,13 @@ Sullivan, J. Y., J. A. Zahner, M. C. Siple, and B. E. Ferriss. 2023.
 {``Assessment of the {Rougheye} and {Blackspotted} {Rockfish} Stock
 Complex in the {Gulf} of {Alaska}.''} \{NPFMC\} \{Gulf\} of \{Alaska\}
 \{SAFE\}.
+
+\bibitem[\citeproctext]{ref-thorson_geostatistical_2015}
+Thorson, J. T., A. O. Shelton, E. J. Ward, and H. J. Skaug. 2015.
+{``Geostatistical Delta-Generalized Linear Mixed Models Improve
+Precision for Estimated Abundance Indices for {West} {Coast}
+Groundfishes.''} \emph{ICES Journal of Marine Science} 72 (5):
+1297--1310. \url{https://doi.org/10.1093/icesjms/fsu243}.
 
 \bibitem[\citeproctext]{ref-thorson_nwfscageingerror:_2012}
 Thorson, J. T., Ian J. Stewart, and A. E. Punt. 2012.
