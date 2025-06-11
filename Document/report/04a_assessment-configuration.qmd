@@ -2,9 +2,11 @@
 
 ## History of Modeling Approaches
 
-A previous Category 3 stock assessment was conducted for the U.S. Pacific Coast stock of Rougheye Rockfish (not including Blackspotted) in 2010 by @dick_estimates_2010 using depletion-based stock reduction analysis (DB-SRA).  That model estimated the population had greater than a 50% probability of exceeding the estimated proxy overfishing level in 2010 if the harvest remained at the observed levels.  DB-SRA estimated a proxy OFL for rougheye rockfish of 78.7 mt with a 95% confidence interval between 4.7-587 metric tons.  
+Rougheye Rockfish (not including Blackspotted) on the U.S. Pacific Coast was fist evaluated in 2010 by @dick_estimates_2010 using depletion-based stock reduction analysis (DB-SRA), as Category 3 stock. That model estimated the population had greater than a 50% probability of exceeding the estimated proxy overfishing level in 2010 if the harvest remained at the observed levels.  DB-SRA estimated a proxy OFL for Rougheye Rockfish of 78.7 mt with a 95% confidence interval between 4.7-587 metric tons.
 
-A 2013 benchmark stock assessment [@hicks_status_2013] updated the modeling framework to the integrated statistical catch-at-age model Stock Synthesis 3, which is different from the delay-difference model with an assumed stock status prior in 2010 used in the DB-SRA analysis. The 2013 assessment used a substantially updated catch history, indices of abundance, and biological compositions (lengths and ages). The natural mortality value was also updated to be higher than that used in the DB-SRA model. The stock assessment was accepted for management as a Category 2 stock assessment.
+Then,`r Spp` was assessment in 2013 [@hicks_status_2013]. A 2013 benchmark stock assessment used Stock Synthesis (version 3.24O) integrated statistical catch-at-age model, which is different from the delay-difference model with an assumed stock status prior DB-SRA analysis used in 2010. The stock assessment has been used for management as a Category 2 stock assessment. The 2013 assessment used a substantially updated catch history, indices of abundance, and biological compositions (lengths and ages). The natural mortality value was also updated to be higher value than the one used in the DB-SRA model. The 2013 assessment also assumed logistic selectivity for all fleets and surveys, except for Triennial Shelf Survey, which was allowed to be dome-shaped. With higher natural mortality and asymptotic selectivity assumptions, the 2013 assessment estimated 2013 spawning biomass to be at 47% relative to unfished equilibrium spawning biomass, with a 95% confidence interval between 30.5% - 64.2%. The 2013 spawning biomass was estimated to be 2,552 metric tons, with a 95% confidence interval between	1,024 - 4,081 metric tons.
+
+This benchmark assessment represents the first assessment of `r Spp` since 2013 [@hicks_status_2013]. Within this assessment, we re-evaluated all the data sources available for `r Spp`, re-analysed previously used data with current statistical methods and best practices, and re-evaluated modelling assumptions. Detailed description of changes made since 2013 assessment is provided in @sec-model. 
 
 ## Most Recent STAR Panel Recommendations
 
@@ -44,40 +46,44 @@ Stock Synthesis version 3.30.23.1 was used as the statistical catch-at-age model
 More than 10 years have passed from the last assessment and in that time, the model and the Stock Synthesis 3 (SS3) modelling framework has undergone many changes. While the specific changes in the model can be found in the model [change log](https://github.com/orgs/nmfs-ost/projects/11), here we simply update the model from the older 3.24O version to the newer 3.30.22.1 version. We want to ensure that any update to the newest SS3 model software is not a cause of any changes in model outputs when we hold all data and model specifications to be exactly the same as in 2013. We therefore transferred all the older data and model specifications to the newest version of SS3 and compared the outputs. The status (@fig-RSS_2013) and scale (@fig-SO_2013) of both models are exactly the same, as are the estimates of within model uncertainty. This allows us to conclude that we can move forward using the latest version of SS3 without concern of inheriting any model output differences due to the choice of the SS3 version. 
 
 
-## Model Structure, Evaluation, and Specification
+## Model Structure, Evaluation, and Specification {#sec-model}
 
-### Fleet and Survey Designations
+### Fleet and Survey Designations {#sec-fleet}
 
-The model is structured to track several fleets and include data from several surveys. Defining fleets is largely based on differing fleet selectivity (i.e., how the fishery captures fish by length and/or age). In the stock assessment model, selectivity translates into how the removals are taken via length and/or age out of the population. Currently, the following fleet structure is being used to model commercial fishery removals as there is no record of a recreational fishery for this stock complex:
+The model is structured to track six fleets and include data from four surveys. 
 
-* Fleet 1: Commercial trawl fishery
-* Fleet 2: Dead discard trawl
-* Fleet 3: Commercial fixed gear (mainly the long-line) fishery 
-* Fleet 4: Dead discard non-trawl
-* Fleet 5: Contemporary mid-water fishery
-* Fleet 6: At-sea hake fishery
+Defining fleets is largely based on differing fleet selectivity (i.e., how the fishery captures fish by length and/or age). In the stock assessment model, selectivity translates into how the removals are taken via length and/or age out of the population. In this assessment, the following fleet structure is being used to model commercial fishery removals:
 
-In 2013 assessment, fisheries removals were split among three fleets –trawl, hook-and-line and at-sea hake fishery bycatch.  For the first two fleets (trawl and hook-and-line), removals were divided between landings and discards, with selectivity and retention curves estimated within the model. 
+* Fleet 1: Commercial bottom trawl fishery.
+* Fleet 2: Dead discard from bottom trawl fishery.
+* Fleet 3: Commercial non-trawl (mainly the long-line) fishery.
+* Fleet 4: Dead discard from non-trawl fishery.
+* Fleet 5: Contemporary mid-water trawl fishery.
+* Fleet 6: At-sea hake fishery bycatch.
 
-For this assessment, we plan to treat discards in trawl and non-trawl fisheries as separate fleets from landings fleets. This approach provides several advantages, including:
+In 2013 assessment [@hicks_status_2013], fisheries removals were split among three fleets - trawl, hook-and-line and at-sea hake fishery bycatch.  For the first two fleets (trawl and hook-and-line), removals were divided between landings and discards, with selectivity and retention curves estimated within the model. 
+
+Historically, no discarding was observed for `r Spp` [@pikitch_evaluation_1988], see @sec-historical_discard for details. The 2013 assessment estimated zero historical discard for both trawl and fixed gear fleets, based on the available data. In this assessment, we treat discards in trawl and non-trawl fisheries as separate fleets from landings fleets, with WCGOP data informing removals in these fleets, observed since the introduction of trip limits for rockfish in early 2000. 
+
+Treating discards as separates fleets from landings provides several advantages, including:
 
 * With separate discard fleets, we can easily track relative amounts of landings and discards within a fishery (they are not being combined into the total catch).
-* This approach provides more flexibility to explore different selectivity assumptions for both landed and discarded fish –dome-shaped vs asymptotic, mirroring one to the other, etc.
-* We can easily compare how similar (or different) selection curves for retained and discarded fish (easier than in case of selectivity and retention curves estimated within a single fleet), while avoiding hard to diagnose issues that come from estimating retention curves.
-* The biological data for landings and discards are collected independently (port sampling vs on-board observers), using different sampling approaches. Treating landings and discards as separate fleets in the model allows us to weight these data separately as well, to balance the representation of samples.
+* This approach provides more flexibility to explore different selectivity assumptions for both landed and discarded fish dome-shaped vs asymptotic, mirroring one to the other, etc.
+* This approach allows to avoid hard to diagnose issues that come from estimating retention curves (especially with limited amount of data).
+* The biological data for landings and discards are collected independently (port sampling vs on-board observers), and using different sampling approaches. Treating landings and discards as separate fleets in the model allows us to weight those data sources separately as well, to balance the representation of samples.
 
-The change in treating discards as separate fleets does not impact model results (@fig-Discard_comp_SO and @fig-Discard_comp_RSS), regardless of the selectivity form being assumed for the discard fleets. This provides evidence moving to using discard fleets will not induce *a prior* differences in the model outputs, but it will offer more modelling flexibility. 
+The change in treating discards as separate fleets does not impact model results (@fig-Discard_comp_SO and @fig-Discard_comp_RSS), regardless of the selectivity form being assumed for the discard fleets. 
 
-We use length-based selectivity curves for all fleets for the current stock assessment model (as was done in the 2013 assessment), as there is no reason to believe significant age-based selectivity is occurring. We consider logistic and dome-shaped selectivity options during reference model development.
+In this assessment, we also split trawl fishery data into bottom trawl and mid-water trawl fleets. Catch data indicates that contribution of mid-water trawl catches gradually grew over the past 20 years, and now mid-water trawl catches represent majority of the trawl removals (@fig-landings). Historical information on mid-water catches of `r Spp` comes from @pikitch_evaluation_1988, which has no records of mid-water trawl catches of `r Spp`, neither retained nor discarded. Also, Oregon historical catch reconstruction [@karnowski_historical_2014] has one record of only 0.0002 metric tons of `r Spp` taken in 1985, even though the mid-water trawl catches had their own market category in Oregon since the early-1980s [@karnowski_historical_2014], and multiple rockfish species are reported as caught by this gear. This information suggest that historically `r Spp` mid-water catches were negligible. In the model, the catches in the contemporary mid-water trawl fleet are informed by PacFIN.
 
-As reported in the data section, the following surveys are included in the model:
+As reported in @sec-surveys, the following surveys are included in the model:
 
-* Survey 1: Triennial (every three years) survey (1980-2004)  
-* Survey 2: Alaska Fishery Science Center Slope survey (1997-2001)
-* Survey 3: Northwest Fisheries Science Center Slope Center (1999-2001)
-* Survey 4: West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)
+* Survey 1: West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)
+* Survey 2: Triennial (every three years) Survey (1980-2004)  
+* Survey 3: Alaska Fishery Science Center (AFSC) Slope Survey (1997-2001)
+* Survey 4: Northwest Fisheries Science Center (NWFSC) Slope Survey (1999-2001)
 
-The specifications of the assessment are listed in Table \ref{tab:model-structure}.
+We use length-based selectivity curves for all fleets for this stock assessment model (as was done in the 2013 assessment), as there is no evidence that significant age-based selectivity is occurring. We considered logistic and dome-shaped selectivity options for various combinations of fleets and time periods during model development. 
 
 ### Model Likelihood Components
 

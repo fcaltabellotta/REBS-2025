@@ -18,7 +18,7 @@ Data from a wide range of sources were evaluated within this assessment. Data so
 * Fleet 5: Contemporary mid-water trawl fishery.
 * Fleet 6: At-sea hake fishery bycatch.
 
-For description and details on fleet structure, please refer to Section \ref{Fleet and Survey Designations}. 
+For description and details on fleet structure, please refer to Section @sec-fleet. 
 
 ### Commercial Fishery Landings
 Recent and historical fisheries catches were compiled by state and then combined into the fishing fleets used in the assessment. Time series of catches by fleet and state are reported in Table X. @fig-landings shows catches by fleet.
@@ -56,7 +56,7 @@ Annual amounts of `r Spp` bycatch (retained and discarded) in the Pacific hake f
 
 ### Discards
 
-#### Historical discard
+#### Historical discard {#sec-historical_discard}
 Historically, little to no discarding was observed for `r Spp`. 
 
 The historical discard information comes from Pikitch et al. (1988), and often referred to as the Pikitch study. The Pikitch study was conducted between 1985 and 1987 between 48°42’ and 42°60’ N. latitude, which is primarily within the Columbia INPFC area (Pikitch et al. 1988). Participation in the study was voluntary and included vessels using bottom, midwater and shrimp trawl gears. Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow, and recorded the weight of species retained and discarded in the sample. 
@@ -125,18 +125,18 @@ Age distributions were included in the model as CAAL observations, binned accord
 
 The marginal age compositions were constructed, but only used in the model for evaluating the implied fits, while the CAAL data were used in the likelihood.
 
-## Fishery-independent data
+## Fishery-independent data {#sec-surveys}
 
 <!-- Fishery-independent data: Description of surveys used in the assessment, description of methods to estimate abundance indices, sample size information for length- and age- composition data by survey and year, including both the number of tows (or drops or sites for hook and line data) and fish sampled. Include complete tables and figures and date of data extraction.   -->
 
 Data from four fishery-independent surveys were used in this assessment: 
 
-* West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)
-* AFSC/NWFSC West Coast Triennial (every three years) Shelf Survey (1980-2004)
-* Alaska Fishery Science Center Slope survey (1997, 1999-2001)
-* Northwest Fisheries Science Center Slope Center (1999-2002)
+* Survey 1: West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)
+* Survey 2: Triennial (every three years) Survey (1980-2004)  
+* Survey 3: Alaska Fishery Science Center (AFSC) Slope Survey (1997-2001)
+* Survey 4: Northwest Fisheries Science Center (NWFSC) Slope Survey (1999-2001)
 
-These surveys temporal and spatial coverage is summarized in Table XX. 
+The surveys temporal and spatial coverage is summarized in Table XX. 
 
 Information produced by these surveys included indices of relative abundance (all four surveys), length-frequency distributions (WCGBTS and Triennial survey), and age-frequency distributions (WCGBTS). 
 
@@ -152,7 +152,7 @@ Description of each survey is provided below; information available from each su
 The West Coast Groundfish Bottom Trawl Survey (WCGBTS) is conducted annually since 2003 (Table XX). The survey’s design and sampling methods are most recently described in @bradburn_2003_2011. The survey is based on a random-grid design, covering the coastal waters from a depth of 100 to 700 fm (183-1280 m). This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two 'passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
 
 #### Abundance Index
-Geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/)[@kristensen_tmb:_2016] via the R package \gls{sdmtmb} [@Anderson:2022:SRP] as configured within the {indexwc} R package (Johnson et al.2025). Code to reproduce the analysis is available online. These models can account for latent spatial factors with a constant spatial Gaussian random field and spatiotemporal deviations to evolve as a random walk Guassian random field (Thorson et al. 2015). Tweedie, delta-binomial, delta-gamma, and mixture distributions, which allow for extreme catch events, were investigated. Results are only shown for the distribution that led to the best model diagnostics, e.g., similar distributions of theoretical normal quantiles and model quantiles, high precision, lack of extreme predictions that are incompatible with yellowtail life history, and low AIC. Estimates of biomass from this best model were predicted using a grid based on available survey locations.
+Geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/)[@kristensen_tmb:_2016] via the R package \gls{sdmtmb} [@Anderson:2022:SRP] as configured within the {indexwc} R package (Johnson et al.2025). Code to reproduce the analysis is available online. These models can account for latent spatial factors with a constant spatial Gaussian random field and spatiotemporal deviations to evolve as a random walk Guassian random field [@thorson_geostatistical_2015]. Tweedie, delta-binomial, delta-gamma, and mixture distributions, which allow for extreme catch events, were investigated. Results are only shown for the distribution that led to the best model diagnostics, e.g., similar distributions of theoretical normal quantiles and model quantiles, high precision, lack of extreme predictions that are incompatible with yellowtail life history, and low AIC. Estimates of biomass from this best model were predicted using a grid based on available survey locations.
 
 The data were truncated to depths less than 875 m prior to modelling given that there were zero positive encounters in depths deeper than 875 m. The prediction grid was also truncated to only include available survey locations in depths between 55-875 m to limit extrapolating beyond the data and edge effects. 
 

@@ -209,7 +209,7 @@ knitr::include_graphics(
 #| fig-alt: "WCGBTS index."
 
 knitr::include_graphics(
-  file.path(plot_dir, "wcgbts_index_coastwide.png")
+  file.path(model_dir, "plots", "index1_cpuedata_WCGBTS.png")
 )
 ``` 
 
