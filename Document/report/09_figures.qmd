@@ -500,6 +500,19 @@ knitr::include_graphics(
 )
 ``` 
 
+```{r} 
+#| label: fig-Bratio_Bridging
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Time series of fraction of unfished spawning output for briding analysis."
+#| fig-alt: "Time series of fraction of unfished spawning output for briding analysis."
+
+knitr::include_graphics(
+  file.path(plot_dir, "bridging_compare4_Bratio_uncertainty.png")
+)
+``` 
+
 \newpage
 
 
