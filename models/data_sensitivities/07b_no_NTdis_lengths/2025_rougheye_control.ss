@@ -1,6 +1,6 @@
 #Control File
 #C file created using an r4ss function
-#C file write time: 2025-06-09  15:00:27
+#C file write time: 2025-06-10  14:20:20
 #
 0 # 0 means do not read wtatage.ss; 1 means read and usewtatage.ss and also read and use growth parameters
 1 #_N_Growth_Patterns
@@ -62,7 +62,7 @@
    -3	       4	      3.153	      3.153	  99	0	-3	0	0	0	0	0	0	0	#_Wtlen_2_Fem_GP_1   
     1	      60	    46.5346	    46.5346	  99	0	-3	0	0	0	0	0	0	0	#_Mat50%_Fem_GP_1    
   -30	       3	   -0.25353	   -0.25353	  99	0	-3	0	0	0	0	0	0	0	#_Mat_slope_Fem_GP_1 
-   -3	       3	  6.538e-06	  6.538e-06	   1	0	-3	0	0	0	0	0	0	0	#_Eggs_alpha_Fem_GP_1
+   -3	       3	7.21847e-05	7.21847e-05	   1	0	-3	0	0	0	0	0	0	0	#_Eggs_alpha_Fem_GP_1
    -3	       5	      4.043	      4.043	   1	0	-3	0	0	0	0	0	0	0	#_Eggs_beta_Fem_GP_1 
 0.001	     0.2	      0.036	   -3.38875	0.31	3	-2	0	0	0	0	0	0	0	#_NatM_p_1_Mal_GP_1  
  -100	      25	   -2.67562	         12	  10	0	 2	0	0	0	0	0	0	0	#_L_at_Amin_Mal_GP_1 
@@ -175,7 +175,7 @@
  -15	12	  4.56674	  3	99	0	 3	0	0	0	0	0	4	2	#_SizeSel_P_3_BOTTOM_TRAWL(1)        
  -15	20	  2.95095	 20	99	0	 4	0	0	0	0	0	4	2	#_SizeSel_P_4_BOTTOM_TRAWL(1)        
 -999	20	     -999	0.5	99	0	-3	0	0	0	0	0	0	0	#_SizeSel_P_5_BOTTOM_TRAWL(1)        
- -15	20	-0.639165	0.5	99	0	 4	0	0	0	0	0	4	2	#_SizeSel_P_6_BOTTOM_TRAWL(1)        
+ -15	20	-0.639163	0.5	99	0	 4	0	0	0	0	0	4	2	#_SizeSel_P_6_BOTTOM_TRAWL(1)        
   15	79	    25.26	 45	99	0	 3	0	0	0	0	0	1	2	#_SizeSel_P_1_BOTTOM_TRAWL_DISCARD(2)
  -15	20	      -15	-15	99	0	-4	0	0	0	0	0	0	0	#_SizeSel_P_2_BOTTOM_TRAWL_DISCARD(2)
  -15	12	  4.88781	  3	99	0	 3	0	0	0	0	0	1	2	#_SizeSel_P_3_BOTTOM_TRAWL_DISCARD(2)
@@ -193,7 +193,7 @@
  -15	12	  3.74795	  3	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_3_NON_TRAWL_DISCARD(4)   
  -15	20	  2.66224	 20	99	0	 4	0	0	0	0	0	0	0	#_SizeSel_P_4_NON_TRAWL_DISCARD(4)   
 -999	20	     -999	0.5	99	0	-3	0	0	0	0	0	0	0	#_SizeSel_P_5_NON_TRAWL_DISCARD(4)   
- -15	20	-0.191828	0.5	99	0	 4	0	0	0	0	0	0	0	#_SizeSel_P_6_NON_TRAWL_DISCARD(4)   
+ -15	20	-0.191827	0.5	99	0	 4	0	0	0	0	0	0	0	#_SizeSel_P_6_NON_TRAWL_DISCARD(4)   
   15	79	  52.1718	 45	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_1_MIDWATER_TRAWL(5)      
  -15	20	      -15	-15	99	0	-4	0	0	0	0	0	0	0	#_SizeSel_P_2_MIDWATER_TRAWL(5)      
  -15	12	  4.56739	  3	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_3_MIDWATER_TRAWL(5)      
@@ -211,7 +211,7 @@
  -15	12	  3.52488	  3	99	0	 3	0	0	0	0	0	3	2	#_SizeSel_P_3_TRIENNIAL(7)           
  -15	20	   3.9489	 20	99	0	 4	0	0	0	0	0	3	2	#_SizeSel_P_4_TRIENNIAL(7)           
 -999	20	     -999	0.5	99	0	-2	0	0	0	0	0	0	0	#_SizeSel_P_5_TRIENNIAL(7)           
- -15	20	 -2.58378	0.5	99	0	 4	0	0	0	0	0	3	2	#_SizeSel_P_6_TRIENNIAL(7)           
+ -15	20	 -2.58379	0.5	99	0	 4	0	0	0	0	0	3	2	#_SizeSel_P_6_TRIENNIAL(7)           
   13	50	  37.2893	 35	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_1_AK_SLOPE(8)            
  -15	20	      -15	-15	99	0	-4	0	0	0	0	0	0	0	#_SizeSel_P_2_AK_SLOPE(8)            
  -15	12	  4.94301	  5	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_3_AK_SLOPE(8)            
@@ -235,7 +235,7 @@
 -15	20	  2.65296	 20	99	0	4	#_SizeSel_P_4_BOTTOM_TRAWL(1)_BLK4repl_1892        
 -15	20	  2.75007	 20	99	0	4	#_SizeSel_P_4_BOTTOM_TRAWL(1)_BLK4repl_2002        
 -15	20	 -1.59153	 15	99	0	4	#_SizeSel_P_6_BOTTOM_TRAWL(1)_BLK4repl_1892        
--15	20	-0.934232	 15	99	0	4	#_SizeSel_P_6_BOTTOM_TRAWL(1)_BLK4repl_2002        
+-15	20	-0.934231	 15	99	0	4	#_SizeSel_P_6_BOTTOM_TRAWL(1)_BLK4repl_2002        
  15	79	  47.6726	 45	99	0	3	#_SizeSel_P_1_BOTTOM_TRAWL_DISCARD(2)_BLK1repl_1892
 -15	12	  6.31793	  3	99	0	3	#_SizeSel_P_3_BOTTOM_TRAWL_DISCARD(2)_BLK1repl_1892
 -15	20	  3.01264	 20	99	0	4	#_SizeSel_P_4_BOTTOM_TRAWL_DISCARD(2)_BLK1repl_1892
@@ -245,13 +245,13 @@
 -15	12	  3.04684	  3	99	0	3	#_SizeSel_P_3_NON_TRAWL(3)_BLK2repl_1892           
 -15	12	  3.80818	  3	99	0	3	#_SizeSel_P_3_NON_TRAWL(3)_BLK2repl_2011           
 -15	20	  3.17429	 20	99	0	4	#_SizeSel_P_4_NON_TRAWL(3)_BLK2repl_1892           
--15	20	  2.32305	 20	99	0	4	#_SizeSel_P_4_NON_TRAWL(3)_BLK2repl_2011           
+-15	20	  2.32304	 20	99	0	4	#_SizeSel_P_4_NON_TRAWL(3)_BLK2repl_2011           
 -15	20	 -2.28517	0.5	99	0	4	#_SizeSel_P_6_NON_TRAWL(3)_BLK2repl_1892           
--15	20	-0.626138	0.5	99	0	4	#_SizeSel_P_6_NON_TRAWL(3)_BLK2repl_2011           
+-15	20	-0.626137	0.5	99	0	4	#_SizeSel_P_6_NON_TRAWL(3)_BLK2repl_2011           
  13	50	  17.3552	 25	99	0	3	#_SizeSel_P_1_TRIENNIAL(7)_BLK3repl_1892           
 -15	12	  2.08532	  3	99	0	3	#_SizeSel_P_3_TRIENNIAL(7)_BLK3repl_1892           
--15	20	  5.10582	 20	99	0	4	#_SizeSel_P_4_TRIENNIAL(7)_BLK3repl_1892           
--15	20	 -4.28738	0.5	99	0	4	#_SizeSel_P_6_TRIENNIAL(7)_BLK3repl_1892           
+-15	20	  5.10583	 20	99	0	4	#_SizeSel_P_4_TRIENNIAL(7)_BLK3repl_1892           
+-15	20	 -4.28739	0.5	99	0	4	#_SizeSel_P_6_TRIENNIAL(7)_BLK3repl_1892           
 # info on dev vectors created for selex parms are reported with other devs after tag parameter section
 #
 0 #  use 2D_AR1 selectivity(0/1):  experimental feature
