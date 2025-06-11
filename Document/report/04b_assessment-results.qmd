@@ -18,11 +18,12 @@ An extra effort was given to ensure the model did not rest on a local likelihood
 
 #### Lengths
 
-Fits to the length data are examined based on the Pearson residuals-at-length, the annual mean lengths, and aggregated length composition data for the commercial and recreational fleets. The aggregate fit to each length composition demonstrates acceptable fits to each fleet and survey source (@agg-len-fit). One noticeable behavior is the trade-off in fit between the fit in the bottom trawl fishery versus the fit in the at-sea-hake (ASHOP) fishery. This current model specification was the best trade off of fits between the two. 
+Fits to the length data are examined based on the Pearson residuals-at-length, the annual mean lengths, and aggregated length composition data for the commercial and recreational fleets. The aggregate fit to each length composition demonstrates acceptable fits to each fleet and survey source (@fig-agg-len-fit). One noticeable behavior is the trade-off in fit between the fit in the bottom trawl fishery versus the fit in the at-sea-hake (ASHOP) fishery. This current model specification was the best trade off of fits between the two. 
 
 Fits to the annual length composition are provided for the following fisheries and surveys:
 
-Fishery
+<u>Fishery</u>
+
 * Bottom trawl (@fig-len-fit-bt-1 and @fig-len-fit-bt-2)
 * Bottom trawl discard (@fig-len-fit-btdis)
 * Non-trawl (@fig-len-fit-nt-1 and @fig-len-fit-nt-2)
@@ -30,7 +31,8 @@ Fishery
 * Midwater trawl (@fig-len-fit-midt)
 * At-sea-hake (@fig-len-fit-ashop)
 
-Surveys
+<u>Surveys</u>
+
 * Triennial (@fig-len-fit-tri)
 * Alaska slope (@fig-len-fit-akslope)
 * West Coast Groundfish Bottom Trawl (@fig-len-fit-wcgbts)
@@ -38,12 +40,18 @@ Surveys
 
 Pearson residuals of fits to the fishery (@fig-peasrson-resids-fishery) and survey (@fig-peasrson-resids-survey) length data are reasonably small with no distinct patterns. 
 
-Model fits to the mean lengths, assuming Francis data-weighting, do not closely follow the dynamics in means lengths in the relatively small trawl fishery (Figure \ref{fig:trawl-mean-len-fit}). The mean lengths generally follow the trend seen in the non-trawl fishery (Figure \ref{fig:nontrawl-mean-len-fit}) and recreational (Figure \ref{fig:rec-mean-len-fit}) fisheries, but still miss the detailed dynamics. The tagging survey fits are one of the better in the model (Figure \ref{fig:tag-mean-len-fit}). Fits to the mean length in the Nearshore survey, only three points at this point, are not particularly good (Figure \ref{fig:nearshore-mean-len-fit}). The fits to the mean length data from the dive survey does follow the general trend in the data (Figure \ref{fig:ocnms-mean-len-fit}). All length weighting are near the value of 1 as is expected when using the Francis weighting method. One thing to note is the general weak contrast in the data over the past two decades.
+Model fits to the mean lengths, assuming Francis data-weighting of 1 and blocking patterns, demonstrate fits within the error bars of most years and no strong residual patterns (@fig-meanlt-bt to @fig-meanlt-wcgbts). A notable observation in the means lengths within blocks generally show a lack of trend, not surprising given how many years an individual may be at its maximum size. This is in contrast with the age data that do show more nuances in age structure trend (see next section on age fits for more detail). This demonstrates the general lack of contrast in the length data.
 
-Aggregate fits over year by fleet are shown in Figure \ref{fig:agg-len-fit}. The aggregates are fairly good, though there does seem to be a slight underfitting of the bigger individuals seen in the fishery-based samples.   
 
-### Conditional Age at Length and Marginal Ages
+### Ages
 
+#### Conditional Age at Length
+
+Fits to the sex-specific conditional age at length data are examined based on the age-at-length Pearson residuals, the annual mean ages, and mean age at length by year for the four fishery and one survey source. Pearson residuals were of reasonable size with no distinct patterns (@fig-peasrson-resids-age-bt1 to @fig-peasrson-resids-age-wcgbts3), as most of the residuals were small and not noteworthy and demonstrate the expected shape of the growth curve. There is more contrast in the age data compared to the length data (@fig-trawl-mean-caal to @fig-wcgbts-mean-caal). While the mean age for fisheries varied by gear selectivity (25-35 years for bottom trawl; 30-40 years for non-trawl; ~40 for midwater trawl; 40-50 years for the at-sea-hake fishery), one commonality was the increase in mean age in the last year of the model. This consistent increase in mean age across fisheries with different selectivities is important to remember when interpreting the retrospective pattern of the model. Mean age for the West Coast Groundfish Bottom Trawl survey, which catch much smaller and less larger individuals, fluctuated around 20 and did not show an mean age increase in the final year. Fits to the mean ages by length bins show acceptable fits consistent with model expectations (@fig-call-plot-bt1 to @fig-call-plot-wcgbts6).
+
+#### Marginal Age
+
+Marginal age compositions are not fit in the model, but they are included in order to see how well they fit the reference model without influencing the likelihood [Appendix D](#app_d). Marginal length and age composition cannot be used in the same model ginve the overlap of the same fish in both samples. This is why ages conditioned on lengths are often used with the length compositions. But it still stands that age compositions, instead of lengths, could be used. So adding the marginal age compositions passively (i.e., not contributing to the overall likelihood of the model) can offer insight into how consistent they are with the current model fit. Overall the fits are very good, and in an exploratory model run the length compositions were replaced with the age compositions and a very similar model result was obtained. Thus the conditional age at length compositions coupled with either length or age compositions provide similar results. This is likely due to the fact that the conditional ages capture the underlying age structure sufficiently to following the age structure over time.  
 
 ### Fits to Indices of Abundance
 

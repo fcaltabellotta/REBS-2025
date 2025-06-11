@@ -580,6 +580,8 @@ knitr::include_graphics(
 
 ## Fits to data
 
+### Lengths
+
 ```{r} 
 #| label: fig-agg-len-fit
 #| echo: false 
@@ -776,8 +778,581 @@ knitr::include_graphics(
 )
 ```
 
+```{r} 
+#| label: fig-meanlt-bt
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean length (cm) index from the bottom trawl fishery with 95 percent confidence intervals based on sample sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png")
+)
+```
+
+```{r} 
+#| label: fig-meanlt-btdis
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean length (cm) index from the bottom trawl discard fishery with 95 percent confidence intervals based on sample sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png")
+)
+```
+
+```{r} 
+#| label: fig-meanlt-nt
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean length (cm) index from the non-trawl fishery with 95 percent confidence intervals based on sample sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png")
+)
+```
+
+```{r} 
+#| label: fig-meanlt-ntdis
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean length (cm) index from the non-trawl discard fishery with 95 percent confidence intervals based on sample sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png")
+)
+```
+
+```{r} 
+#| label: fig-meanlt-midt
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean length (cm) index from the midwater trawl fishery with 95 percent confidence intervals based on sample sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png")
+)
+```
+
+```{r} 
+#| label: fig-meanlt-ashop
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean length (cm) index from the at-sea-hake fishery with 95 percent confidence intervals based on sample sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png")
+)
+```
+
+```{r} 
+#| label: fig-meanlt-tri
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean length (cm) index from the Triennial survey with 95 percent confidence intervals based on sample sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png")
+)
+```
+
+```{r} 
+#| label: fig-meanlt-akslope
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean length (cm) index from the Alaskan slope survey with 95 percent confidence intervals based on sample sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_data_weighting_TA1-8_AK_SLOPE.png")
+)
+```
+
+```{r} 
+#| label: fig-meanlt-wcgbts
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean length (cm) index from the West Coast Groundfish Bottom Trawl survey with 95 percent confidence intervals based on sample sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_data_weighting_TA1-8_WCGBTS.png")
+)
+```
+
 \newpage
 
+### Ages
+
+
+```{r} 
+#| label: fig-peasrson-resids-age-bt1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pearson residuals of conditional age at length fits for the bottom trawl fishery in the years 2008-2021. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALdat_bubflt1mkt0_page1.png")
+)
+```
+
+```{r} 
+#| label: fig-peasrson-resids-age-bt2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pearson residuals of conditional age at length fits for the bottom trawl fishery in the years 2022-2024. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALdat_bubflt1mkt0_page2.png")
+)
+```
+
+```{r} 
+#| label: fig-peasrson-resids-age-nt1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pearson residuals of conditional age at length fits for the non-trawl fishery in the years 2008-2021. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_residsflt3mkt0_page1.png")
+)
+```
+
+```{r} 
+#| label: fig-peasrson-resids-age-nt2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pearson residuals of conditional age at length fits for the non-trawl fishery in the years 2022-2024. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_residsflt3mkt0_page2.png")
+)
+```
+
+```{r} 
+#| label: fig-peasrson-resids-age-midt
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pearson residuals of conditional age at length fits for the midwater trawl fishery. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_residsflt5mkt0.png")
+)
+```
+
+```{r} 
+#| label: fig-peasrson-resids-age-ashop1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pearson residuals of conditional age at length fits for the at-sea-hake fishery in the years 2008-2022. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_residsflt6mkt0_page1.png")
+)
+```
+
+```{r} 
+#| label: fig-peasrson-resids-age-ashop2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pearson residuals of conditional age at length fits for the at-sea-hake fishery in the years 2023-2024. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_residsflt6mkt0_page2.png")
+)
+```
+
+```{r} 
+#| label: fig-peasrson-resids-age-wcgbts1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pearson residuals of conditional age at length fits for the West Coast Groundfish Bottom Trawl survey in the years 2003-2010. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_residsflt10mkt0_page1.png")
+)
+```
+
+```{r} 
+#| label: fig-peasrson-resids-age-wcgbts2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pearson residuals of conditional age at length fits for the West Coast Groundfish Bottom Trawl survey in the years 2011-2018. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_residsflt10mkt0_page2.png")
+)
+```
+
+```{r} 
+#| label: fig-peasrson-resids-age-wcgbts3
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pearson residuals of conditional age at length fits for the West Coast Groundfish Bottom Trawl survey in the years 2019-2024. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_residsflt10mkt0_page3.png")
+)
+```
+
+```{r} 
+#| label: fig-trawl-mean-caal
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean age from conditional age-at-length data for the trawl fishery with 95% confidence intervals based on current samples sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png")
+)
+```
+
+```{r} 
+#| label: fig-nontrawl-mean-caal
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean age from conditional age-at-length data for the non-trawl fishery with 95% confidence intervals based on current samples sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png")
+)
+```
+
+
+```{r} 
+#| label: fig-midwater-mean-caal
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean age from conditional age-at-length data for the midwater trawl fishery with 95% confidence intervals based on current samples sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png")
+)
+```
+
+```{r} 
+#| label: fig-ashop-mean-caal
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean age from conditional age-at-length data for the at-sea-hake fishery with 95% confidence intervals based on current samples sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png")
+)
+```
+
+```{r} 
+#| label: fig-wcgbts-mean-caal
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Mean age from conditional age-at-length data for the West Coast Groundfish Bottom Trawl survey with 95% confidence intervals based on current samples sizes and data weighting."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-bt1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the bottom trawl fishery in years 2008-2011. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt1mkt0_page1.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-bt2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the bottom trawl fishery in years 2012-2021. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt1mkt0_page2.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-bt3
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the bottom trawl fishery in years 2022-2024. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt1mkt0_page3.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-nt1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the non-trawl fishery in years 2008-2011. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt3mkt0_page1.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-nt2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the non-trawl fishery in years 2012-2021. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt3mkt0_page2.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-nt3
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the non-trawl fishery in years 2022-2024. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt3mkt0_page3.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-midt1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the midwater trawl fishery in years 2011-2022. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt5mkt0_page1.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-midt2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the non-trawl fishery in years 2023-2024. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt5mkt0_page2.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-ashop1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the at-sea-hake fishery in years 2008-2016. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt6mkt0_page1.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-ashop2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the at-sea-hake fishery in years 2019-2022. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt6mkt0_page2.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-ashop3
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the at-sea-hake fishery in years 2023-2024. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt6mkt0_page3.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-wcgbts1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the West Coast Groundfish Bottom Trawl survey in years 2003-2006. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt10mkt0_page1.png")
+)
+```
+
+```{r} 
+#| label: fig-call-plot-wcgbts2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the West Coast Groundfish Bottom Trawl survey in years 2007-2010. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt10mkt0_page2.png")
+)
+```
+```{r} 
+#| label: fig-call-plot-wcgbts3
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the West Coast Groundfish Bottom Trawl survey in years 2011-2014. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt10mkt0_page3.png")
+)
+```
+```{r} 
+#| label: fig-call-plot-wcgbts4
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the West Coast Groundfish Bottom Trawl survey in years 2015-2018. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt10mkt0_page4.png")
+)
+```
+```{r} 
+#| label: fig-call-plot-wcgbts5
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the West Coast Groundfish Bottom Trawl survey in years 2019-2023. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt10mkt0_page5.png")
+)
+```
+```{r} 
+#| label: fig-call-plot-wcgbts6
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional age at length plot showing mean age (left panels) and standard deviation (right panels) for the West Coast Groundfish Bottom Trawl survey in 2024. The CIs are 90% based on adding 1.64 SE of mean to the data for the left panels and the standard error of mean age at length (obs. and exp.) with 90% CIs based on the chi-square distribution."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt10mkt0_page6.png")
+)
+```
 
 ## Model outputs
 

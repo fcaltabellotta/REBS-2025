@@ -2750,48 +2750,106 @@ Fits to the length data are examined based on the Pearson
 residuals-at-length, the annual mean lengths, and aggregated length
 composition data for the commercial and recreational fleets. The
 aggregate fit to each length composition demonstrates acceptable fits to
-each fleet and survey source
-((\citeproc{ref-agg-len-fit}{\textbf{agg-len-fit?}})). One noticeable
-behavior is the trade-off in fit between the fit in the bottom trawl
-fishery versus the fit in the at-sea-hake (ASHOP) fishery. This current
-model specification was the best trade off of fits between the two.
+each fleet and survey source (Figure~\ref{fig-agg-len-fit}). One
+noticeable behavior is the trade-off in fit between the fit in the
+bottom trawl fishery versus the fit in the at-sea-hake (ASHOP) fishery.
+This current model specification was the best trade off of fits between
+the two.
 
 Fits to the annual length composition are provided for the following
 fisheries and surveys:
 
+Fishery
+
 \begin{itemize}
 \tightlist
 \item
-  Bottom Trawl Fishery (@)
+  Bottom trawl (Figure~\ref{fig-len-fit-bt-1} and
+  Figure~\ref{fig-len-fit-bt-2})
+\item
+  Bottom trawl discard (Figure~\ref{fig-len-fit-btdis})
+\item
+  Non-trawl (Figure~\ref{fig-len-fit-nt-1} and
+  Figure~\ref{fig-len-fit-nt-2})
+\item
+  Non-trawl discard (Figure~\ref{fig-len-fit-ntdis})
+\item
+  Midwater trawl (Figure~\ref{fig-len-fit-midt})
+\item
+  At-sea-hake (Figure~\ref{fig-len-fit-ashop})
 \end{itemize}
 
-Pearson residuals of fits to the fishery and survey length data are
-reasonably small with no distinct patterns (Figure
-\ref{fig:lt-pearson-resids}).
+Surveys
 
-Model fits to the mean lengths, assuming Francis data-weighting, do not
-closely follow the dynamics in means lengths in the relatively small
-trawl fishery (Figure \ref{fig:trawl-mean-len-fit}). The mean lengths
-generally follow the trend seen in the non-trawl fishery (Figure
-\ref{fig:nontrawl-mean-len-fit}) and recreational (Figure
-\ref{fig:rec-mean-len-fit}) fisheries, but still miss the detailed
-dynamics. The tagging survey fits are one of the better in the model
-(Figure \ref{fig:tag-mean-len-fit}). Fits to the mean length in the
-Nearshore survey, only three points at this point, are not particularly
-good (Figure \ref{fig:nearshore-mean-len-fit}). The fits to the mean
-length data from the dive survey does follow the general trend in the
-data (Figure \ref{fig:ocnms-mean-len-fit}). All length weighting are
-near the value of 1 as is expected when using the Francis weighting
-method. One thing to note is the general weak contrast in the data over
-the past two decades.
+\begin{itemize}
+\tightlist
+\item
+  Triennial (Figure~\ref{fig-len-fit-tri})
+\item
+  Alaska slope (Figure~\ref{fig-len-fit-akslope})
+\item
+  West Coast Groundfish Bottom Trawl (Figure~\ref{fig-len-fit-wcgbts})
+\end{itemize}
 
-Aggregate fits over year by fleet are shown in Figure
-\ref{fig:agg-len-fit}. The aggregates are fairly good, though there does
-seem to be a slight underfitting of the bigger individuals seen in the
-fishery-based samples.
+Pearson residuals of fits to the fishery
+(Figure~\ref{fig-peasrson-resids-fishery}) and survey
+(Figure~\ref{fig-peasrson-resids-survey}) length data are reasonably
+small with no distinct patterns.
 
-\subsubsection{Conditional Age at Length and Marginal
-Ages}\label{conditional-age-at-length-and-marginal-ages}
+Model fits to the mean lengths, assuming Francis data-weighting of 1 and
+blocking patterns, demonstrate fits within the error bars of most years
+and no strong residual patterns (Figure~\ref{fig-meanlt-bt} to
+Figure~\ref{fig-meanlt-wcgbts}). A notable observation in the means
+lengths within blocks generally show a lack of trend, not surprising
+given how many years an individual may be at its maximum size. This is
+in contrast with the age data that do show more nuances in age structure
+trend (see next section on age fits for more detail). This demonstrates
+the general lack of contrast in the length data.
+
+\subsubsection{Ages}\label{ages}
+
+\paragraph{Conditional Age at Length}\label{conditional-age-at-length}
+
+Fits to the sex-specific conditional age at length data are examined
+based on the age-at-length Pearson residuals, the annual mean ages, and
+mean age at length by year for the four fishery and one survey source.
+Pearson residuals were of reasonable size with no distinct patterns
+(Figure~\ref{fig-peasrson-resids-age-bt1} to
+Figure~\ref{fig-peasrson-resids-age-wcgbts3}), as most of the residuals
+were small and not noteworthy and demonstrate the expected shape of the
+growth curve. There is more contrast in the age data compared to the
+length data (Figure~\ref{fig-trawl-mean-caal} to
+Figure~\ref{fig-wcgbts-mean-caal}). While the mean age for fisheries
+varied by gear selectivity (25-35 years for bottom trawl; 30-40 years
+for non-trawl; \textasciitilde40 for midwater trawl; 40-50 years for the
+at-sea-hake fishery), one commonality was the increase in mean age in
+the last year of the model. This consistent increase in mean age across
+fisheries with different selectivities is important to remember when
+interpreting the retrospective pattern of the model. Mean age for the
+West Coast Groundfish Bottom Trawl survey, which catch much smaller and
+less larger individuals, fluctuated around 20 and did not show an mean
+age increase in the final year. Fits to the mean ages by length bins
+show acceptable fits consistent with model expectations
+(Figure~\ref{fig-call-plot-bt1} to Figure~\ref{fig-call-plot-wcgbts6}).
+
+\paragraph{Marginal Age}\label{marginal-age}
+
+Marginal age compositions are not fit in the model, but they are
+included in order to see how well they fit the reference model without
+influencing the likelihood \hyperref[app_d]{Appendix D}. Marginal length
+and age composition cannot be used in the same model ginve the overlap
+of the same fish in both samples. This is why ages conditioned on
+lengths are often used with the length compositions. But it still stands
+that age compositions, instead of lengths, could be used. So adding the
+marginal age compositions passively (i.e., not contributing to the
+overall likelihood of the model) can offer insight into how consistent
+they are with the current model fit. Overall the fits are very good, and
+in an exploratory model run the length compositions were replaced with
+the age compositions and a very similar model result was obtained. Thus
+the conditional age at length compositions coupled with either length or
+age compositions provide similar results. This is likely due to the fact
+that the conditional ages capture the underlying age structure
+sufficiently to following the age structure over time.
 
 \subsubsection{Fits to Indices of
 Abundance}\label{fits-to-indices-of-abundance}
@@ -5978,6 +6036,8 @@ better fit to the reference model was found.}
 
 \subsection{Fits to data}\label{fits-to-data}
 
+\subsubsection{Lengths}\label{lengths-1}
+
 \begin{figure}[H]
 
 \centering{
@@ -6177,7 +6237,684 @@ McAllister-Ianelli tuning method.}
 
 \end{figure}%
 
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_lenfit__page1_multi-fleet_comparison.png}
+
+}
+
+\caption{\label{fig-peasrson-resids-fishery}Pearson residuals of length
+fits for each fishing fleet. Closed bubble are positive residuals
+(observed \textgreater{} expected) and open bubbles are negative
+residuals (observed \textless{} expected).}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_lenfit__page2_multi-fleet_comparison.png}
+
+}
+
+\caption{\label{fig-peasrson-resids-survey}Pearson residuals of length
+fits for each survey. Closed bubble are positive residuals (observed
+\textgreater{} expected) and open bubbles are negative residuals
+(observed \textless{} expected).}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png}
+
+}
+
+\caption{\label{fig-meanlt-bt}Mean length (cm) index from the bottom
+trawl fishery with 95 percent confidence intervals based on sample sizes
+and data weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png}
+
+}
+
+\caption{\label{fig-meanlt-btdis}Mean length (cm) index from the bottom
+trawl discard fishery with 95 percent confidence intervals based on
+sample sizes and data weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png}
+
+}
+
+\caption{\label{fig-meanlt-nt}Mean length (cm) index from the non-trawl
+fishery with 95 percent confidence intervals based on sample sizes and
+data weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png}
+
+}
+
+\caption{\label{fig-meanlt-ntdis}Mean length (cm) index from the
+non-trawl discard fishery with 95 percent confidence intervals based on
+sample sizes and data weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png}
+
+}
+
+\caption{\label{fig-meanlt-midt}Mean length (cm) index from the midwater
+trawl fishery with 95 percent confidence intervals based on sample sizes
+and data weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png}
+
+}
+
+\caption{\label{fig-meanlt-ashop}Mean length (cm) index from the
+at-sea-hake fishery with 95 percent confidence intervals based on sample
+sizes and data weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png}
+
+}
+
+\caption{\label{fig-meanlt-tri}Mean length (cm) index from the Triennial
+survey with 95 percent confidence intervals based on sample sizes and
+data weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_AK_SLOPE.png}
+
+}
+
+\caption{\label{fig-meanlt-akslope}Mean length (cm) index from the
+Alaskan slope survey with 95 percent confidence intervals based on
+sample sizes and data weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS.png}
+
+}
+
+\caption{\label{fig-meanlt-wcgbts}Mean length (cm) index from the West
+Coast Groundfish Bottom Trawl survey with 95 percent confidence
+intervals based on sample sizes and data weighting.}
+
+\end{figure}%
+
 \newpage
+
+\subsubsection{Ages}\label{ages-1}
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png}
+
+}
+
+\caption{\label{fig-peasrson-resids-age-bt1}Pearson residuals of
+conditional age at length fits for the bottom trawl fishery in the years
+2008-2021. Closed bubble are positive residuals (observed \textgreater{}
+expected) and open bubbles are negative residuals (observed \textless{}
+expected).}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png}
+
+}
+
+\caption{\label{fig-peasrson-resids-age-bt2}Pearson residuals of
+conditional age at length fits for the bottom trawl fishery in the years
+2022-2024. Closed bubble are positive residuals (observed \textgreater{}
+expected) and open bubbles are negative residuals (observed \textless{}
+expected).}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt3mkt0_page1.png}
+
+}
+
+\caption{\label{fig-peasrson-resids-age-nt1}Pearson residuals of
+conditional age at length fits for the non-trawl fishery in the years
+2008-2021. Closed bubble are positive residuals (observed \textgreater{}
+expected) and open bubbles are negative residuals (observed \textless{}
+expected).}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt3mkt0_page2.png}
+
+}
+
+\caption{\label{fig-peasrson-resids-age-nt2}Pearson residuals of
+conditional age at length fits for the non-trawl fishery in the years
+2022-2024. Closed bubble are positive residuals (observed \textgreater{}
+expected) and open bubbles are negative residuals (observed \textless{}
+expected).}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt5mkt0.png}
+
+}
+
+\caption{\label{fig-peasrson-resids-age-midt}Pearson residuals of
+conditional age at length fits for the midwater trawl fishery. Closed
+bubble are positive residuals (observed \textgreater{} expected) and
+open bubbles are negative residuals (observed \textless{} expected).}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt6mkt0_page1.png}
+
+}
+
+\caption{\label{fig-peasrson-resids-age-ashop1}Pearson residuals of
+conditional age at length fits for the at-sea-hake fishery in the years
+2008-2022. Closed bubble are positive residuals (observed \textgreater{}
+expected) and open bubbles are negative residuals (observed \textless{}
+expected).}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt6mkt0_page2.png}
+
+}
+
+\caption{\label{fig-peasrson-resids-age-ashop2}Pearson residuals of
+conditional age at length fits for the at-sea-hake fishery in the years
+2023-2024. Closed bubble are positive residuals (observed \textgreater{}
+expected) and open bubbles are negative residuals (observed \textless{}
+expected).}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt10mkt0_page1.png}
+
+}
+
+\caption{\label{fig-peasrson-resids-age-wcgbts1}Pearson residuals of
+conditional age at length fits for the West Coast Groundfish Bottom
+Trawl survey in the years 2003-2010. Closed bubble are positive
+residuals (observed \textgreater{} expected) and open bubbles are
+negative residuals (observed \textless{} expected).}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt10mkt0_page2.png}
+
+}
+
+\caption{\label{fig-peasrson-resids-age-wcgbts2}Pearson residuals of
+conditional age at length fits for the West Coast Groundfish Bottom
+Trawl survey in the years 2011-2018. Closed bubble are positive
+residuals (observed \textgreater{} expected) and open bubbles are
+negative residuals (observed \textless{} expected).}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt10mkt0_page3.png}
+
+}
+
+\caption{\label{fig-peasrson-resids-age-wcgbts3}Pearson residuals of
+conditional age at length fits for the West Coast Groundfish Bottom
+Trawl survey in the years 2019-2024. Closed bubble are positive
+residuals (observed \textgreater{} expected) and open bubbles are
+negative residuals (observed \textless{} expected).}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png}
+
+}
+
+\caption{\label{fig-trawl-mean-caal}Mean age from conditional
+age-at-length data for the trawl fishery with 95\% confidence intervals
+based on current samples sizes and data weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png}
+
+}
+
+\caption{\label{fig-nontrawl-mean-caal}Mean age from conditional
+age-at-length data for the non-trawl fishery with 95\% confidence
+intervals based on current samples sizes and data weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png}
+
+}
+
+\caption{\label{fig-midwater-mean-caal}Mean age from conditional
+age-at-length data for the midwater trawl fishery with 95\% confidence
+intervals based on current samples sizes and data weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png}
+
+}
+
+\caption{\label{fig-ashop-mean-caal}Mean age from conditional
+age-at-length data for the at-sea-hake fishery with 95\% confidence
+intervals based on current samples sizes and data weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png}
+
+}
+
+\caption{\label{fig-wcgbts-mean-caal}Mean age from conditional
+age-at-length data for the West Coast Groundfish Bottom Trawl survey
+with 95\% confidence intervals based on current samples sizes and data
+weighting.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page1.png}
+
+}
+
+\caption{\label{fig-call-plot-bt1}Conditional age at length plot showing
+mean age (left panels) and standard deviation (right panels) for the
+bottom trawl fishery in years 2008-2011. The CIs are 90\% based on
+adding 1.64 SE of mean to the data for the left panels and the standard
+error of mean age at length (obs. and exp.) with 90\% CIs based on the
+chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page2.png}
+
+}
+
+\caption{\label{fig-call-plot-bt2}Conditional age at length plot showing
+mean age (left panels) and standard deviation (right panels) for the
+bottom trawl fishery in years 2012-2021. The CIs are 90\% based on
+adding 1.64 SE of mean to the data for the left panels and the standard
+error of mean age at length (obs. and exp.) with 90\% CIs based on the
+chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page3.png}
+
+}
+
+\caption{\label{fig-call-plot-bt3}Conditional age at length plot showing
+mean age (left panels) and standard deviation (right panels) for the
+bottom trawl fishery in years 2022-2024. The CIs are 90\% based on
+adding 1.64 SE of mean to the data for the left panels and the standard
+error of mean age at length (obs. and exp.) with 90\% CIs based on the
+chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page1.png}
+
+}
+
+\caption{\label{fig-call-plot-nt1}Conditional age at length plot showing
+mean age (left panels) and standard deviation (right panels) for the
+non-trawl fishery in years 2008-2011. The CIs are 90\% based on adding
+1.64 SE of mean to the data for the left panels and the standard error
+of mean age at length (obs. and exp.) with 90\% CIs based on the
+chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page2.png}
+
+}
+
+\caption{\label{fig-call-plot-nt2}Conditional age at length plot showing
+mean age (left panels) and standard deviation (right panels) for the
+non-trawl fishery in years 2012-2021. The CIs are 90\% based on adding
+1.64 SE of mean to the data for the left panels and the standard error
+of mean age at length (obs. and exp.) with 90\% CIs based on the
+chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page3.png}
+
+}
+
+\caption{\label{fig-call-plot-nt3}Conditional age at length plot showing
+mean age (left panels) and standard deviation (right panels) for the
+non-trawl fishery in years 2022-2024. The CIs are 90\% based on adding
+1.64 SE of mean to the data for the left panels and the standard error
+of mean age at length (obs. and exp.) with 90\% CIs based on the
+chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page1.png}
+
+}
+
+\caption{\label{fig-call-plot-midt1}Conditional age at length plot
+showing mean age (left panels) and standard deviation (right panels) for
+the midwater trawl fishery in years 2011-2022. The CIs are 90\% based on
+adding 1.64 SE of mean to the data for the left panels and the standard
+error of mean age at length (obs. and exp.) with 90\% CIs based on the
+chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page2.png}
+
+}
+
+\caption{\label{fig-call-plot-midt2}Conditional age at length plot
+showing mean age (left panels) and standard deviation (right panels) for
+the non-trawl fishery in years 2023-2024. The CIs are 90\% based on
+adding 1.64 SE of mean to the data for the left panels and the standard
+error of mean age at length (obs. and exp.) with 90\% CIs based on the
+chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page1.png}
+
+}
+
+\caption{\label{fig-call-plot-ashop1}Conditional age at length plot
+showing mean age (left panels) and standard deviation (right panels) for
+the at-sea-hake fishery in years 2008-2016. The CIs are 90\% based on
+adding 1.64 SE of mean to the data for the left panels and the standard
+error of mean age at length (obs. and exp.) with 90\% CIs based on the
+chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page2.png}
+
+}
+
+\caption{\label{fig-call-plot-ashop2}Conditional age at length plot
+showing mean age (left panels) and standard deviation (right panels) for
+the at-sea-hake fishery in years 2019-2022. The CIs are 90\% based on
+adding 1.64 SE of mean to the data for the left panels and the standard
+error of mean age at length (obs. and exp.) with 90\% CIs based on the
+chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page3.png}
+
+}
+
+\caption{\label{fig-call-plot-ashop3}Conditional age at length plot
+showing mean age (left panels) and standard deviation (right panels) for
+the at-sea-hake fishery in years 2023-2024. The CIs are 90\% based on
+adding 1.64 SE of mean to the data for the left panels and the standard
+error of mean age at length (obs. and exp.) with 90\% CIs based on the
+chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page1.png}
+
+}
+
+\caption{\label{fig-call-plot-wcgbts1}Conditional age at length plot
+showing mean age (left panels) and standard deviation (right panels) for
+the West Coast Groundfish Bottom Trawl survey in years 2003-2006. The
+CIs are 90\% based on adding 1.64 SE of mean to the data for the left
+panels and the standard error of mean age at length (obs. and exp.) with
+90\% CIs based on the chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page2.png}
+
+}
+
+\caption{\label{fig-call-plot-wcgbts2}Conditional age at length plot
+showing mean age (left panels) and standard deviation (right panels) for
+the West Coast Groundfish Bottom Trawl survey in years 2007-2010. The
+CIs are 90\% based on adding 1.64 SE of mean to the data for the left
+panels and the standard error of mean age at length (obs. and exp.) with
+90\% CIs based on the chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page3.png}
+
+}
+
+\caption{\label{fig-call-plot-wcgbts3}Conditional age at length plot
+showing mean age (left panels) and standard deviation (right panels) for
+the West Coast Groundfish Bottom Trawl survey in years 2011-2014. The
+CIs are 90\% based on adding 1.64 SE of mean to the data for the left
+panels and the standard error of mean age at length (obs. and exp.) with
+90\% CIs based on the chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page4.png}
+
+}
+
+\caption{\label{fig-call-plot-wcgbts4}Conditional age at length plot
+showing mean age (left panels) and standard deviation (right panels) for
+the West Coast Groundfish Bottom Trawl survey in years 2015-2018. The
+CIs are 90\% based on adding 1.64 SE of mean to the data for the left
+panels and the standard error of mean age at length (obs. and exp.) with
+90\% CIs based on the chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page5.png}
+
+}
+
+\caption{\label{fig-call-plot-wcgbts5}Conditional age at length plot
+showing mean age (left panels) and standard deviation (right panels) for
+the West Coast Groundfish Bottom Trawl survey in years 2019-2023. The
+CIs are 90\% based on adding 1.64 SE of mean to the data for the left
+panels and the standard error of mean age at length (obs. and exp.) with
+90\% CIs based on the chi-square distribution.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page6.png}
+
+}
+
+\caption{\label{fig-call-plot-wcgbts6}Conditional age at length plot
+showing mean age (left panels) and standard deviation (right panels) for
+the West Coast Groundfish Bottom Trawl survey in 2024. The CIs are 90\%
+based on adding 1.64 SE of mean to the data for the left panels and the
+standard error of mean age at length (obs. and exp.) with 90\% CIs based
+on the chi-square distribution.}
+
+\end{figure}%
 
 \subsection{Model outputs}\label{model-outputs}
 
