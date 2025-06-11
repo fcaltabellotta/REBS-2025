@@ -748,6 +748,34 @@ knitr::include_graphics(
 )
 ```
 
+```{r} 
+#| label: fig-peasrson-resids-fishery
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pearson residuals of length fits for each fishing fleet. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit__page1_multi-fleet_comparison.png")
+)
+```
+
+```{r} 
+#| label: fig-peasrson-resids-survey
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Pearson residuals of length fits for each survey. Closed bubble are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected)."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit__page2_multi-fleet_comparison.png")
+)
+```
+
 \newpage
 
 

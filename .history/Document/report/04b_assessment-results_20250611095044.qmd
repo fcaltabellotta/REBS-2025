@@ -22,21 +22,11 @@ Fits to the length data are examined based on the Pearson residuals-at-length, t
 
 Fits to the annual length composition are provided for the following fisheries and surveys:
 
-Fishery
-* Bottom trawl (@fig-len-fit-bt-1 and @fig-len-fit-bt-2)
-* Bottom trawl discard (@fig-len-fit-btdis)
-* Non-trawl (@fig-len-fit-nt-1 and @fig-len-fit-nt-2)
-* Non-trawl discard (@fig-len-fit-ntdis)
-* Midwater trawl (@fig-len-fit-midt)
-* At-sea-hake (@fig-len-fit-ashop)
+* Bottom trawl fishery (@fig-len-fit-bt-1 and @fig-len-fit-bt-2)
+* Bottom trawl discard fishery (@fig-len-fit-btdis)
+* Non-trawl fishery (@fig-len-fit-nt-1 and @fig-len-fit-nt-2)
 
-Surveys
-* Triennial (@fig-len-fit-tri)
-* Alaska slope (@fig-len-fit-akslope)
-* West Coast Groundfish Bottom Trawl (@fig-len-fit-wcgbts)
-
-
-Pearson residuals of fits to the fishery (@fig-peasrson-resids-fishery) and survey (@fig-peasrson-resids-survey) length data are reasonably small with no distinct patterns. 
+Pearson residuals of fits to the fishery and survey length data are reasonably small with no distinct patterns (Figure \ref{fig:lt-pearson-resids}). 
 
 Model fits to the mean lengths, assuming Francis data-weighting, do not closely follow the dynamics in means lengths in the relatively small trawl fishery (Figure \ref{fig:trawl-mean-len-fit}). The mean lengths generally follow the trend seen in the non-trawl fishery (Figure \ref{fig:nontrawl-mean-len-fit}) and recreational (Figure \ref{fig:rec-mean-len-fit}) fisheries, but still miss the detailed dynamics. The tagging survey fits are one of the better in the model (Figure \ref{fig:tag-mean-len-fit}). Fits to the mean length in the Nearshore survey, only three points at this point, are not particularly good (Figure \ref{fig:nearshore-mean-len-fit}). The fits to the mean length data from the dive survey does follow the general trend in the data (Figure \ref{fig:ocnms-mean-len-fit}). All length weighting are near the value of 1 as is expected when using the Francis weighting method. One thing to note is the general weak contrast in the data over the past two decades.
 
