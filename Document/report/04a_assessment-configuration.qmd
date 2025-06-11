@@ -40,17 +40,17 @@ More than 10 years have passed from the last assessment and in that time, the mo
 The 2013 assessment model was the starting point for this assessment. We included a number of improvements related to use of data, model structure and modeling techniques. Bridging analysis was conducted to illustrate the impact of incremental changes. Below, we describe the most important changes made since the last assessment:
 
 - Specifying a two-sex model, instead of one-sex model, to allow sex-specific estimation of natural mortality and growth.
-- Change in fleet structure, to include bottom trawl and non-trawl discards as separate fleets (see @sec-fleet for details). Results did not impact the model output (Figure XX).
-- Change in fleet structure, to split mid-water trawl catches from bottom trawl removals, to account for gradually increasing contribution of mid-water trawl catches. Results did not impact the model output (Figure XX).
-- Updated historical and current fishery removals, to include most up to date information. Since 2013 assessment, WDFW completed historical catch reconstruction of rockfish and newly estimated landings represent improvement. For the period between 1987 and 1999, Oregon PacFIN landings were supplemented with the additional estimates of `r Spp`landings reported within unspecified rockfish market categories. Results did not impact the model output (Figure XX).
-- Recalculated survey abundance indices using sdmTMB geostatistical model. Results did not impact the model output (Figure XX).
-- Adding more biological compositions, mainly in years since 2013, but also some historical ages. Ading more composition data resulted in sight increase in stock scale (Figure XX).
+- Change in fleet structure, to include bottom trawl and non-trawl discards as separate fleets (see @sec-fleet for details). Results did not impact the model output.
+- Change in fleet structure, to split mid-water trawl catches from bottom trawl removals, to account for gradually increasing contribution of mid-water trawl catches. Results did not impact the model output.
+- Updated historical and current fishery removals, to include most up to date information. Since 2013 assessment, WDFW completed historical catch reconstruction of rockfish and newly estimated landings represent improvement. For the period between 1987 and 1999, Oregon PacFIN landings were supplemented with the additional estimates of `r Spp`landings reported within unspecified rockfish market categories. Results did not impact the model output.
+- Recalculated survey abundance indices using sdmTMB geostatistical model. Results did not impact the model output.
+- Adding more biological compositions, mainly in years since 2013, but also some historical ages. Adding more composition data resulted in sight increase in stock scale (@fig-SO_Bridging).
 - Updated input sample sizes associated with fisheries and survey length composition data to using a function of number of trips and number and fish (rather than number of trips and number of hauls, as in previous assessment), to follow current best practices and ensure a consistent treatment of fishery and survey input data.
 - Updated ageing error matrices.
 - Updated weight-length, maturity and fecundity parameters, to include most up to date and improved information. Updating weight-length parameters did not produce a noticeable change. Model with new maturity parameters had slightly lower scale as length at 50% maturity now is slightly higher. 
 - Updated spawn-recruit parameters with Beverton-Holt steepness fixed at 0.72, and recruitment variability at 0.5 for consistency with the calculated recruitment variability in the model.
-- Allowing the bottom trawl fishery to have some amount of dome-shaped selectivity, consistent with the bottom trawl surveys. This change resulted in the increase of stock scale (Figure XX).
-- Fixing natural mortality for male at the value informed by Hamel and Cope (2022) based on maximum ages observed for `r Spp`, while estimating female natural mortality using Hamel and Cope (2022) prior, to allow natural mortality values in light with maximum ages observed.
+- Allowing the bottom trawl fishery to have some amount of dome-shaped selectivity, consistent with the bottom trawl surveys. This change resulted in the increase of stock scale (@fig-SO_Bridging).
+- Fixing natural mortality for male at the value informed by @hamel_development_2022 based on maximum ages observed for `r Spp`, while estimating female natural mortality using @hamel_development_2022 prior, to allow natural mortality values in light with maximum ages observed.
 
 The list above documents only the most important changes made to this assessment relative to the previous one. 
 
