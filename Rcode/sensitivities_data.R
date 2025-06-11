@@ -1,7 +1,10 @@
 ### RUN SENSITIVITIES FOR REBS 2025 UPDATE ASSESSMENT
 # CODE ADAPTED BY A. WHITMAN (ODFW) & E. PERL (NMFS OST) FROM K. OKEN (NWFSC)
 
-# LAST UPDATE: 06/03/2025
+# LAST UPDATE: 06/09/2025
+
+# output directory was corrected, so output available now
+# running models individually to ID ones with major issues
 
 library(here)
 library(r4ss)
@@ -10,22 +13,22 @@ library(purrr)
 library(furrr)
 library(ggplot2)
 
-#file.create("C:/Github/REBS-2025/.here")
-#here::here()
+# setwd("C:/Github/REBS-2025")
+# file.create(".here")
+# here::here()
 
 model_directory <- here::here(
-  'Document',
-  'report',
-  'Sensis')
+  'models'
+)
 base_model_name <- here::here(
-  'Document',
-  'report',
-  'Sensis',
-  'ref_model'
+  'models',
+  'base_model'
 )
 exe_loc <- here::here('Document/report/Sensis/ss3')
-base_model <- SS_read(base_model_name, ss_new = TRUE)
+base_model <- SS_read(base_model_name, ss_new = T)
 base_out <- SS_output(base_model_name)
+
+#base_model$start$init_values_src<-0 # will try if runs with ss_new = F doesn't work
 
 # Write sensitivities -----------------------------------------------------
 
@@ -37,7 +40,7 @@ sensi_mod <- base_model
 
 sensi_mod$start$init_values_src<-0
 
-sensi_mod$dat$CPUE <- sensi_mod$dat$CPUE |>
+sensi_mod$dat$CPUE <- sensi_mod$dat$CPUE %>%
   filter(index != 7)
 
 sensi_mod$ctl$Q_options <- sensi_mod$ctl$Q_options[
@@ -73,8 +76,12 @@ SS_write(
 
 # testing a run manually 
 
-#setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/01_no_Triennial")
-#shell("ss3 -nohess",wait = T) # no hessian
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/01_no_Triennial")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
 
 ## 2) remove AK slope survey
 
@@ -82,7 +89,7 @@ sensi_mod <- base_model
 
 sensi_mod$start$init_values_src<-0
 
-sensi_mod$dat$CPUE <- sensi_mod$dat$CPUE |>
+sensi_mod$dat$CPUE <- sensi_mod$dat$CPUE %>%
   filter(index != 8)
 
 sensi_mod$ctl$Q_options <- sensi_mod$ctl$Q_options[
@@ -100,6 +107,9 @@ sensi_mod$dat$lencomp <- sensi_mod$dat$lencomp |>
 #sensi_mod$dat$agecomp <- sensi_mod$dat$agecomp |>
 #  filter(fleet != 8)
 
+# i think I need to fix the NW slope because it's mirrored to this survey
+
+
 ## DON"T NEED TO REMOVE SIZE SELEX
 
 SS_write(
@@ -112,13 +122,20 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/02_no_AK_slope")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 ## 3) remove NW slope survey
 
 sensi_mod <- base_model
 
 sensi_mod$start$init_values_src<-0
 
-sensi_mod$dat$CPUE <- sensi_mod$dat$CPUE |>
+sensi_mod$dat$CPUE <- sensi_mod$dat$CPUE %>%
   filter(index != 9)
 
 sensi_mod$ctl$Q_options <- sensi_mod$ctl$Q_options[
@@ -148,13 +165,20 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/03_no_NW_slope")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 ## 4) remove WCGBTS survey
 
 sensi_mod <- base_model
 
 sensi_mod$start$init_values_src<-0
 
-sensi_mod$dat$CPUE <- sensi_mod$dat$CPUE |>
+sensi_mod$dat$CPUE <- sensi_mod$dat$CPUE %>%
   filter(index != 10)
 
 sensi_mod$ctl$Q_options <- sensi_mod$ctl$Q_options[
@@ -183,6 +207,13 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/04_no_WCGBTS")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 ## 5) remove all indices
 
 sensi_mod <- base_model
@@ -199,9 +230,9 @@ indices_no_catches <- c(7, 8, 9, 10)
 indices_und <- paste0(indices_no_catches, "_")
 indices_chr <- paste0("(", indices_no_catches, ")")
 
-sensi_mod$dat$lencomp <- sensi_mod$dat$lencomp |>
+sensi_mod$dat$lencomp <- sensi_mod$dat$lencomp %>%
   filter(!fleet %in% indices_no_catches)
-sensi_mod$dat$agecomp <- sensi_mod$dat$agecomp |>
+sensi_mod$dat$agecomp <- sensi_mod$dat$agecomp %>%
   filter(!fleet %in% indices_no_catches)
 
 SS_write(
@@ -213,10 +244,16 @@ SS_write(
   ),
   overwrite = TRUE
 )
+# 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/05_no_indices")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
 
 # Remove length comps -----------------------------------------------------
 
-# need to add runs that fix selex
+# need to add runs that estimate selex
 
 ## 6) remove bottom trawl and BT discard lengths
 
@@ -238,6 +275,13 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/06_no_BT_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 ## 6a) remove bottom trawl only lengths
 
 sensi_mod <- base_model
@@ -255,6 +299,13 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/06a_no_BTonly_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 ## 6b) remove bottom trawl discard lengths
 
 sensi_mod <- base_model
@@ -271,6 +322,12 @@ SS_write(
   ),
   overwrite = TRUE
 )
+
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/06b_no_BTdis_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
 
 
 ## 7) remove non-trawl and non-trawl discard lengths
@@ -290,6 +347,13 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/07_no_NT_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 ## 7a) remove non-trawl lengths
 
 sensi_mod <- base_model
@@ -306,6 +370,13 @@ SS_write(
   ),
   overwrite = TRUE
 )
+
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/07a_no_NTonly_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
 
 ## 7b) remove non-trawl discard lengths
 
@@ -324,6 +395,12 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/07b_no_NTdis_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
 ## 8) remove MWT lengths
 
 sensi_mod <- base_model
@@ -341,6 +418,11 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/08_no_MWT_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
 
 ## 9) remove at-sea hake lengths
 
@@ -359,6 +441,11 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/09_no_ASHOP_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
 
 ## 10) remove Triennial lengths
 
@@ -369,17 +456,17 @@ sensi_mod$dat$lencomp <- sensi_mod$dat$lencomp |>
 
 # Fix params by *-1 instead of removing them for indices - says Ian
 
-# note from Jason on REBS - will estimate selex without lengths first, then fix
+# note from Jason on REBS - will estimate selex without lengths after I run with fixing
 
-# sensi_mod$ctl$size_selex_parms[
-#   grepl('TRIENNIAL', rownames(sensi_mod$ctl$size_selex_parms)),
-# ]$PHASE <-
-#   abs(
-#     sensi_mod$ctl$size_selex_parms[
-#       grepl('TRIENNIAL', rownames(sensi_mod$ctl$size_selex_parms)),
-#     ]$PHASE
-#   ) *
-#   -1
+sensi_mod$ctl$size_selex_parms[
+  grepl('TRIENNIAL', rownames(sensi_mod$ctl$size_selex_parms)),
+]$PHASE <-
+  abs(
+    sensi_mod$ctl$size_selex_parms[
+      grepl('TRIENNIAL', rownames(sensi_mod$ctl$size_selex_parms)),
+    ]$PHASE
+  ) *
+  -1
 
 SS_write(
   sensi_mod,
@@ -391,6 +478,11 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/10_no_Triennial_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
 
 ## 11) remove AK slope lengths
 
@@ -399,15 +491,15 @@ sensi_mod <- base_model
 sensi_mod$dat$lencomp <- sensi_mod$dat$lencomp |>
   filter(fleet != 8)
 
-# sensi_mod$ctl$size_selex_parms[
-#   grepl('AK_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
-# ]$PHASE <-
-#   abs(
-#     sensi_mod$ctl$size_selex_parms[
-#       grepl('AK_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
-#     ]$PHASE
-#   ) *
-#   -1
+sensi_mod$ctl$size_selex_parms[
+  grepl('AK_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
+]$PHASE <-
+  abs(
+    sensi_mod$ctl$size_selex_parms[
+      grepl('AK_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
+    ]$PHASE
+  ) *
+  -1
 
 SS_write(
   sensi_mod,
@@ -419,6 +511,13 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/11_no_AKslope_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 ## 12) remove NW slope lengths
 
 sensi_mod <- base_model
@@ -426,15 +525,15 @@ sensi_mod <- base_model
 sensi_mod$dat$lencomp <- sensi_mod$dat$lencomp |>
   filter(fleet != 9)
 
-# sensi_mod$ctl$size_selex_parms[
-#   grepl('NW_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
-# ]$PHASE <-
-#   abs(
-#     sensi_mod$ctl$size_selex_parms[
-#       grepl('NW_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
-#     ]$PHASE
-#   ) *
-#   -1
+sensi_mod$ctl$size_selex_parms[
+  grepl('NW_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
+]$PHASE <-
+  abs(
+    sensi_mod$ctl$size_selex_parms[
+      grepl('NW_SLOPE', rownames(sensi_mod$ctl$size_selex_parms)),
+    ]$PHASE
+  ) *
+  -1
 
 SS_write(
   sensi_mod,
@@ -446,6 +545,13 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/12_no_NWslope_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 ## 13) remove WCGBTS lengths
 
 sensi_mod <- base_model
@@ -453,15 +559,15 @@ sensi_mod <- base_model
 sensi_mod$dat$lencomp <- sensi_mod$dat$lencomp |>
   filter(fleet != 10)
 
-# sensi_mod$ctl$size_selex_parms[
-#   grepl('WCGBTS', rownames(sensi_mod$ctl$size_selex_parms)),
-# ]$PHASE <-
-#   abs(
-#     sensi_mod$ctl$size_selex_parms[
-#       grepl('WCGBTS', rownames(sensi_mod$ctl$size_selex_parms)),
-#     ]$PHASE
-#   ) *
-#   -1
+sensi_mod$ctl$size_selex_parms[
+  grepl('WCGBTS', rownames(sensi_mod$ctl$size_selex_parms)),
+]$PHASE <-
+  abs(
+    sensi_mod$ctl$size_selex_parms[
+      grepl('WCGBTS', rownames(sensi_mod$ctl$size_selex_parms)),
+    ]$PHASE
+  ) *
+  -1
 
 SS_write(
   sensi_mod,
@@ -472,6 +578,13 @@ SS_write(
   ),
   overwrite = TRUE
 )
+
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/13_no_WCGBTS_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
 
 ## 14) remove all fishery length comps
 
@@ -497,6 +610,13 @@ SS_write(
   ),
   overwrite = TRUE
 )
+
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/14_no_fishery_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
 
 ## 15) remove all survey length comps
 
@@ -541,6 +661,13 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/15_no_survey_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 ## 16) remove all length comps
 
 sensi_mod <- base_model
@@ -584,6 +711,13 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/16_no_lengths")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 # Remove age comps --------------------------------------------------------
 
 ## 17) remove bottom trawl ages 
@@ -603,6 +737,13 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/17_no_BT_ages")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 ## 18) remove non-trawl ages
 
 sensi_mod <- base_model
@@ -619,6 +760,13 @@ SS_write(
   ),
   overwrite = TRUE
 )
+
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/18_no_NT_ages")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+# 
 
 ## 19) remove MWT trawl ages
 
@@ -637,6 +785,13 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/19_no_MWT_ages")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 ## 20) remove ASHOP ages
 
 sensi_mod <- base_model
@@ -654,6 +809,12 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/20_no_ASHOP_ages")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
 ## 21) remove WCGBTS ages
 
 sensi_mod <- base_model
@@ -670,6 +831,13 @@ SS_write(
   ),
   overwrite = TRUE
 )
+
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/21_no_WCGBTS_ages")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+# 
 
 ## 22) remove all fishery ages
 
@@ -696,6 +864,13 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/22_no_fishery_ages")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
+
 ## 23) remove all ages
 
 sensi_mod <- base_model
@@ -721,6 +896,12 @@ SS_write(
   overwrite = TRUE
 )
 
+# setwd("C:/Github/REBS-2025/Document/report/Sensis/data_sensitivities/23_no_ages")
+# shell("ss3 -nohess",wait = T) # no hessian
+# mydir<-getwd()
+# replist<-SS_output(mydir)
+# SS_plots(replist) # creates the plots
+
 
 # Run stuff ---------------------------------------------------------------
 
@@ -733,7 +914,7 @@ sensi_dirs <- c(
     full.names = TRUE
 ))
 
-tuning_mods <- grep('weighting', sensi_dirs)
+#tuning_mods <- grep('weighting', sensi_dirs)
 
 future::plan(future::multisession(
   workers = parallelly::availableCores(omit = 1)
@@ -745,7 +926,7 @@ results <- future_map(
     dir = .x,
     exe = exe_loc,
     extras = '-nohess',
-    skipfinished = FALSE
+    skipfinished = TRUE
   )
 )
 
@@ -913,16 +1094,14 @@ sens_names <- bind_rows(indices, age_comps, length_comps_fleet,
 
 # redefine the model_directory to get correct spot
 model_directory <- here::here(
-  'Document',
-  'report',
-  'Sensis')
+  'models')
 
 big_sensitivity_output <- SSgetoutput(
   dirvec = file.path(
     model_directory,
     c(
-      "ref_model",
-      glue::glue("Sensis/data_sensitivities/{subdir}", subdir = sens_names$dir)
+      "base_model",
+      glue::glue("{subdir}", subdir = sens_names$dir)
     )
   )
 ) |>
@@ -942,7 +1121,8 @@ sens_names_ls <- list(
 )
 
 # outdir starts at here() - I think!
-outdir <- 'Document/report/Sensis/figures'
+outdir <- here::here(
+  'Document/report/Sensis/output')
 
 purrr::imap(
   sens_names_ls,
