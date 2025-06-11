@@ -487,6 +487,19 @@ knitr::include_graphics(
 )
 ``` 
 
+```{r} 
+#| label: fig-SO_Bridging
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Time series of estimated spawning output for briding analysis."
+#| fig-alt: "Time series of estimated spawning output for briding analysis."
+
+knitr::include_graphics(
+  file.path(plot_dir, "bridging_compare2_spawnbio_uncertainty.png")
+)
+``` 
+
 \newpage
 
 
