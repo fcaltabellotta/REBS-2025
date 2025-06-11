@@ -136,6 +136,31 @@ parcount_table |>
 
  {{< pagebreak >}} 
  
+::: {.landscape}
+
+```{r}
+#| label: tbl-param
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) par_cap 
+#| tbl-pos: H
+
+par_table |>
+  flextable::flextable() |>
+  flextable::fontsize(size = 8) |>
+  flextable::width(
+    j = c(1, 2, 3, 4, 5, 6, 7),
+    width = c(2, 0.5, 0.5, 1.5, 0.5, 0.5, 2.5)
+  ) 
+
+```
+
+::: 
+
+ {{< pagebreak >}} 
+ 
+ 
 ```{r}
 #| label: tbl-likes
 #| warning: false
@@ -161,31 +186,7 @@ table |>
 ```
 
  {{< pagebreak >}} 
- 
-::: {.landscape}
 
-```{r}
-#| label: tbl-param
-#| warning: false
-#| echo: false
-#| eval: !expr eval_tables 
-#| tbl-cap: !expr if(eval_tables) par_cap 
-#| tbl-pos: H
-
-par_table |>
-  flextable::flextable() |>
-  flextable::fontsize(size = 8) |>
-  flextable::width(
-    j = c(1, 2, 3, 4, 5, 6, 7),
-    width = c(2, 0.5, 0.5, 1.5, 0.5, 0.5, 2.5)
-  ) 
-
-```
-
-::: 
-
- {{< pagebreak >}} 
- 
 
 ```{r, results = "asis"}
 #| label: tbl-ref-points

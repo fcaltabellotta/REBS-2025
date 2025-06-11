@@ -1485,6 +1485,66 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "index2_cpuefit_WCGBTS.png")
 )
 ```
+## Parameter estimates
+
+```{r} 
+#| label: fig-vbgf
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Estimated age and growth relatioship in the reference model .Shaded area indicates 95% distribution of length at age around estimated growth curve."
+#| fig-alt: "Values for the growth curve are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "bio1_sizeatage.png")
+)
+```
+
+```{r} 
+#| label: fig-sel-all
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Ending selectivity at length for each fishery and survey."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "sel01_multiple_fleets_length1.png")
+)
+```
+
+
+```{r} 
+#| label: fig-sel-comp
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Time-varying selectivity for each fleet and survey with time blocks."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "All_selectivityPlot.png")
+)
+```
+
+```{r} 
+#| label: fig-sel-all-age
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Ending selectivity at age derived from lengths for each fishery and survey."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "sel01_multiple_fleets_length1.png")
+)
+```
+
+
 
 ## Model outputs
 

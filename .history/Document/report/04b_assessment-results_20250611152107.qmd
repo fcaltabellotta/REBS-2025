@@ -70,6 +70,10 @@ Estimated growth parameters values are similar to the externally estimated value
 
 Estimated ending selectivity curves for each fleet and survey (@fig-sel-all) are a mix of dome-shaped (for bottom trawl gears) and logistic (for midwater gears) and look plausible given the biology (i.e., as a model convergence check for realism, the selectivity curves must look plausible). The surveys show the greatest degree of dome-shapeness, while the fisheries selectivities included sampling of at least some of the larger individuals. Time-varying selectivity showed mostly the same functional form for each fleet, despite changes in the selectivity, except for the non-trawl fishery, which changed from dome-shaped in the earlier blocks to logistic in the most recent time period (@fig-sel-tv-comp). The realized age selectivity based on the length-based selectivity show even more truncated sampling of older individuals in some of the dome-shaped fleets (@fig-sel-all-age). Values for the estimated selectivity parameters are in @tbl-param.
 
+Estimated selectivity curves for each fleet and survey (Figure \ref{fig:fleet_selectivity}) are all logistic (even though dome-shaped parameters were estimated) and look plausible given the biology (i.e., as a model convergence check for realism, the selectivity curves must look plausible). The commercial fisheies are more right shifted than the other the recreational fishery. The estimate of the peak size of selectivity for the fisheries biggest removal sources (trawl: = `r round(model$parameters[model$parameters$Label == "Size_DblN_peak_Trawl_wdis(1)", 3],2)` cm; non-trawl = `r round(model$parameters[model$parameters$Label == "Size_DblN_peak_Non-Trawl_wdis(2)", 3],2)` cm; recreational ocean boat = `r round(model$parameters[model$parameters$Label == "Size_DblN_peak_Ocean(3)", 3],2)` cm) are above the size of 50% functional maturity (40 cm). 
+
+
+
 
 ### Population Trajectory
 
