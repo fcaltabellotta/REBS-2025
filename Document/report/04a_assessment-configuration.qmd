@@ -49,7 +49,7 @@ More than 10 years have passed from the last assessment and in that time, the mo
 
 ## Model Structure, Evaluation, and Specification
 
-### Fleet and Survey Designations
+### Fleet and Survey Designations {#sec-fleet}
 
 The model is structured to track several fleets and include data from several surveys. Defining fleets is largely based on differing fleet selectivity (i.e., how the fishery captures fish by length and/or age). In the stock assessment model, selectivity translates into how the removals are taken via length and/or age out of the population. Currently, the following fleet structure is being used to model commercial fishery removals as there is no record of a recreational fishery for this stock complex:
 
