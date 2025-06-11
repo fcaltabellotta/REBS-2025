@@ -142,6 +142,8 @@ Information produced by these surveys included indices of relative abundance (al
 
 Only the WCGBTS has new data for this assessment, but new methods were applied to all surveys to develop new indices of abundance. In this assessment, geostatistical models of biomass density were used to fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/). The method is based on a delta model. Two distributions (gamma and lognormal) were considered for the catch-rate component. Comparing the standardized versions (i.e., Z-scores, which puts all the indices on the same scale for better comparison of trends)  shows very similar trends among each model output in the indices, suggesting little difference in choice of model type. The lognormal error structure was selected for all surveys because it was shown to be able to better account for extreme catch events. The variance in the indices is generally high (0.3-0.5), suggesting the information content in these indices is low. Overall, catch densities are highest in northern Oregon and Washington. 
 
+Standardized indices for all four surveys overlaid are shown in @fig-All_indices, where each index is rescaled to have mean observation = 1.0.
+
 Description of each survey is provided below; information available from each survey and methods used to process the data are also discussed. 
 
 ### NWFSC West Coast Groundfish Bottom Trawl Survey
@@ -192,7 +194,7 @@ WCGBTS index, when geostatistical models of biomass density were fit to survey d
 
 The Triennial Survey was analyzed as an early series (1980–1992) and a late series (1995–2004) to account for change in spatial coverage and survey timing, as `r Spp`exhibit ontogenetic movements when individuals gradually shift their distribution toward deeper waters as the grow and mature. Separate catchability parameters were estimated for pre-1995 period and from 1995 forward. Separate selectivity curves were estimated for early and late survey periods as well. 
 
-The estimated index is shown in @fig-Triennial_index. 
+The estimated index is shown in @fig-Triennial_index. The index exhibits an increase in biomass from 1995 forward, that corresponds to a change in Triennial Survey depth coverage, when the survye extended to the deeper area (Table XX)
 
 <!-- NEED TO UPDATE THIS: The indices for the early and late series of this survey were estimated separately using a GLMM with the
 stratifications shown in **Table X**. Boxplots of the deviance for the late and early triennial survey series are
@@ -232,7 +234,7 @@ The AFSC slope survey was initiated in 1984. The survey methods are described in
 The index standardization followed a similar procedure to one used to generate the
 WCGBTS and Triennial indeces, when geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/). The model used a delta model with a lognormal distribution for the catch-rate component. As in case of Triennial survey, no pass covariate was included in the analysis.
 
-The AFSC Slope Survey index is shown in @fig-AFSC_Slope_index.
+The AFSC Slope Survey index is shown in @fig-AFSC_Slope_index. The index is short, and does not exhibits significant change over the four year period. 
 
 #### Length Compositions
 Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year (Figure XX). Table XX shows the number of lengths taken by the survey. 
@@ -252,7 +254,7 @@ The NWFSC slope survey was conducted annually from 1999 to 2002. The survey’s 
 The index standardization followed a similar procedure to one used to generate the
 other survey indeces, when geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/). The model used a delta model with a lognormal distribution for the catch-rate component. No pass covariate was included in the analysis.
 
-The NWFSC Slope Survey index is shown in @fig-NWFSC_Slope_index.
+The NWFSC Slope Survey index is shown in @fig-NWFSC_Slope_index. The index is short, and, as in case of AFSC SLope Survey, does not exhibits significant change over the four year period. 
 
 There are no `r spp` length and age data from the NWFSC Slope Survey. Given that spatial coverage of NWFSC Slope Survey is the same of AFSC Slope Survey, selectivity of the NWFSC SLope Survey was assumed the same as selectivity of AFSC Slope Survey (mirrored in the model).   
 

@@ -189,6 +189,18 @@ knitr::include_graphics(
 ``` 
 
 ```{r} 
+#| label: fig-All_indices
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Standardized indices."
+#| fig-alt: "Standardized indices."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "index9_standcpueall.png")
+)
+```
+```{r} 
 #| label: fig-WCGBTS_index
 #| echo: false 
 #| warning: false 
