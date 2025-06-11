@@ -7,30 +7,30 @@ Data from a wide range of sources were evaluated within this assessment. Data so
 ## Fishery-dependent data
 
 <!-- Commercial fisheries landings by state, year, and gear (PacFIN is the standard source for recent domestic commercial landings), historical catch estimates, discards, recreational fisheries catches, foreign removals; sample size information for length- and age-composition data by state, year and gear, including both the number of trips and fish sampled. Description of methods to estimate abundance indices, sample size information by survey and year. Include complete tables and figures and date of data extraction. -->
-`r Spp` are not targeted by a specific fishery, but are desirable and marketable, thus are typically retained when captured. They are often captured in bottom trawl, mid-water trawl, and longline fisheries. Small numbers have been observed in pot and shrimp trawl. Recreational catch is inconsequential and not accounted for in this assessment. 
+`r Spp` are not targeted by a specific fishery, but are desirable and marketable, thus are typically retained when caught. They are often captured in bottom trawl, mid-water trawl, and longline fisheries. They are also commonly bycaught within the at-sea hake fishery. Small numbers have been observed in pot and shrimp trawl. Recreational catch is inconsequential and not accounted for in this assessment. 
 
-Fishery depended data for `r Spp` in this assessment are divided among six fleets, which include:
+`r Spp` fishery-dependent data in this assessment are divided among six fleets, which include:
 
-* Fleet 1: Commercial trawl fishery
-* Fleet 2: Dead discard trawl
-* Fleet 3: Commercial fixed gear (mainly the long-line) fishery 
-* Fleet 4: Dead discard non-trawl
-* Fleet 5: Contemporary mid-water fishery
-* Fleet 6: At-sea hake fishery
+* Fleet 1: Commercial bottom trawl fishery.
+* Fleet 2: Dead discard from bottom trawl fishery.
+* Fleet 3: Commercial non-trawl (mainly the long-line) fishery.
+* Fleet 4: Dead discard from non-trawl fishery.
+* Fleet 5: Contemporary mid-water trawl fishery.
+* Fleet 6: At-sea hake fishery bycatch.
 
 For description and details on fleet structure, please refer to Section \ref{Fleet and Survey Designations}. 
 
 ### Commercial Fishery Landings
-Recent and historical fisheries landings were compiled by state and then combined into the fishing fleets used in the assessment. Time series of landings by fleet and state are reported in Table  X. Time series of fisheries catches by fleet are shown in @fig-landings.
+Recent and historical fisheries catches were compiled by state and then combined into the fishing fleets used in the assessment. Time series of catches by fleet and state are reported in Table X. @fig-landings shows catches by fleet.
 
 #### Recent landings
 Recent commercial landings of `r Spp` (2000-2024 for Washington, 1987–2024 for Oregon and 1981–2024 for California,) were obtained from PacFIN, a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries 
 Service (NMFS). Catch data were extracted from PacFIN on April 24, 2025. 
 
 #### Historical Landings
-Historical landings of `r Spp` were reconstructed by state, by year (Table X). 
+Historical landings of `r Spp` were reconstructed by state. 
 
-The Washington historical landings (1889–2000) of `r Spp` were provided by Washington Department of Fish and Wildlife (WDFW), who recently conducted historical catch reconstruction for rockfish species including `r Spp` (pers. comm. T. Tsou, WDFW). The three main sources used in this reconstruction  included the US Fish Commission Report (UFSC), Washington Bound Volumes, and Washington Statistical Bulletin (SpeciesSumOutput2_2017.csv- ADD TABLE). The historical species composition was based on the various historical reports and interviews of fishermen and dockside samplers. The 1981 to 2000 landings are provided by WDFW as well (rather than obtaibed from PacFIN), since those landings are derived by WDFW via a improved method for apportioning out unidentified rockfish (URCK) category in fish tickets to the species level. This improved approach relaxed the borrowing rules for missing data used in the WDFW species allocation algorithm that feeds into PacFIN (pers. comm. T. Tsou, WDFW). New Washington historical landings represent improvement to the assessment. 
+The Washington historical landings (1889–2000) of `r Spp` were provided by Washington Department of Fish and Wildlife (WDFW), who recently conducted historical catch reconstruction for rockfish species, including `r Spp` (pers. comm. T. Tsou, WDFW). The three main sources used in this reconstruction  included the US Fish Commission Report (UFSC), Washington Bound Volumes, and Washington Statistical Bulletin (SpeciesSumOutput2_2017.csv- ADD TABLE). The historical species composition was based on the various historical reports and interviews of fishermen and dockside samplers. The landings between 1981 and 2000 were also provided by WDFW (rather than obtained from PacFIN), since WDFW developed and used a improved method for apportioning unidentified rockfish (URCK) category in fish tickets to the individual species landings. This improved approach relaxed the borrowing rules for missing data used in the WDFW species allocation algorithm that feeds into PacFIN (pers. comm. T. Tsou, WDFW). New Washington historical landings represent improvement to the assessment. 
 
 The Oregon historical landings (1896–1986) were obtained from Oregon historical catch reconstruction, conducted by Oregon Department of Fish and Wildlife (ODFW) in collaboration with NWFSC (@karnowski_historical_2014). 
 The Oregon landings for the period between 1987 and 1999 were also provided by the ODFW. For that peios, Oregon PacFIN landings were supplemented with the additional estimates of `r Spp`landings reported within unspecified rockfish market categories,  (i.e., URCK and POP1; @ODFW_URCK_POP_recon). 
