@@ -56,7 +56,7 @@ Annual amounts of `r Spp` bycatch (retained and discarded) in the Pacific hake f
 
 ### Discards
 
-#### Historical discard
+#### Historical discard {#sec-historical_discard}
 Historically, little to no discarding was observed for `r Spp`. 
 
 The historical discard information comes from Pikitch et al. (1988), and often referred to as the Pikitch study. The Pikitch study was conducted between 1985 and 1987 between 48°42’ and 42°60’ N. latitude, which is primarily within the Columbia INPFC area (Pikitch et al. 1988). Participation in the study was voluntary and included vessels using bottom, midwater and shrimp trawl gears. Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow, and recorded the weight of species retained and discarded in the sample. 
@@ -125,16 +125,16 @@ Age distributions were included in the model as CAAL observations, binned accord
 
 The marginal age compositions were constructed, but only used in the model for evaluating the implied fits, while the CAAL data were used in the likelihood.
 
-## Fishery-independent data
+## Fishery-independent data {#sec-surveys}
 
 <!-- Fishery-independent data: Description of surveys used in the assessment, description of methods to estimate abundance indices, sample size information for length- and age- composition data by survey and year, including both the number of tows (or drops or sites for hook and line data) and fish sampled. Include complete tables and figures and date of data extraction.   -->
 
 Data from four fishery-independent surveys were used in this assessment: 
 
-* West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)
-* AFSC/NWFSC West Coast Triennial (every three years) Shelf Survey (1980-2004)
-* Alaska Fishery Science Center Slope survey (1997, 1999-2001)
-* Northwest Fisheries Science Center Slope Center (1999-2002)
+* Survey 1: West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)
+* Survey 2: Triennial (every three years) Survey (1980-2004)  
+* Survey 3: Alaska Fishery Science Center (AFSC) Slope Survey (1997-2001)
+* Survey 4: Northwest Fisheries Science Center (NWFSC) Slope Survey (1999-2001)
 
 The surveys temporal and spatial coverage is summarized in Table XX. 
 
