@@ -74,7 +74,7 @@ Treating discards as separates fleets from landings provides several advantages,
 
 The change in treating discards as separate fleets does not impact model results (@fig-Discard_comp_SO and @fig-Discard_comp_RSS), regardless of the selectivity form being assumed for the discard fleets. 
 
-In this assessment, we also split trawl fishery data into bottom trawl and mid-water trawl fleets. Catch data indicates that contribution of mid-water trawl catches gradually grew over the past 20 years, and now mid-water trawl catches represent majority of the trawl removals (@fig-landings). Historical information on mid-water catches of `r Spp` comes from [-@pikitch_evaluation_1988], which has no records of mid-water trawl catches of `r Spp`, neither retained nor discarded. Also, Oregon historical catch reconstruction [@karnowski_historical_2014] has one record of only 0.0002 metric tons of `r Spp` taken in 1985, even though the mid-water trawl catches had their own market category in Oregon since the early-1980s [@karnowski_historical_2014], and multiple rockfish species are reported as caught by this gear. This information suggest that historically `r Spp` mid-water catches were negligible. In the model, the catches in the contemporary mid-water trawl fleet are informed by PacFIN.
+In this assessment, we also split trawl fishery data into bottom trawl and mid-water trawl fleets. Catch data indicates that contribution of mid-water trawl catches gradually grew over the past 20 years, and now mid-water trawl catches represent majority of the trawl removals (@fig-landings). Historical information on mid-water catches of `r Spp` comes from @pikitch_evaluation_1988, which has no records of mid-water trawl catches of `r Spp`, neither retained nor discarded. Also, Oregon historical catch reconstruction [@karnowski_historical_2014] has one record of only 0.0002 metric tons of `r Spp` taken in 1985, even though the mid-water trawl catches had their own market category in Oregon since the early-1980s [@karnowski_historical_2014], and multiple rockfish species are reported as caught by this gear. This information suggest that historically `r Spp` mid-water catches were negligible. In the model, the catches in the contemporary mid-water trawl fleet are informed by PacFIN.
 
 As reported in @sec-surveys, the following surveys are included in the model:
 
@@ -84,8 +84,6 @@ As reported in @sec-surveys, the following surveys are included in the model:
 * Survey 4: Northwest Fisheries Science Center (NWFSC) Slope Survey (1999-2001)
 
 We use length-based selectivity curves for all fleets for this stock assessment model (as was done in the 2013 assessment), as there is no evidence that significant age-based selectivity is occurring. We considered logistic and dome-shaped selectivity options for various combinations of fleets and time periods during model development. 
-
-The specifications of the assessment are listed in Table \ref{tab:model-structure}.
 
 ### Model Likelihood Components
 
