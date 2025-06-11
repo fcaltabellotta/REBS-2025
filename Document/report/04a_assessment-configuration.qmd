@@ -2,11 +2,11 @@
 
 ## History of Modeling Approaches
 
-Rougheye Rockfish (not including Blackspotted) on the U.S. Pacific Coast was fist evaluated in 2010 by @dick_estimates_2010 using depletion-based stock reduction analysis (DB-SRA), as Category 3 stock. That model estimated the population had greater than a 50% probability of exceeding the estimated proxy overfishing level in 2010 if the harvest remained at the observed levels.  DB-SRA estimated a proxy OFL for Rougheye Rockfish of 78.7 mt with a 95% confidence interval between 4.7-587 metric tons.
+Rougheye Rockfish (not including Blackspotted) on the U.S. Pacific Coast was first evaluated in 2010 by @dick_estimates_2010 using depletion-based stock reduction analysis (DB-SRA), as Category 3 stock. That model estimated the population had greater than a 50% probability of exceeding the estimated proxy overfishing level in 2010 if the harvest remained at the observed levels.  DB-SRA estimated a proxy OFL for Rougheye Rockfish of 78.7 mt with a 95% confidence interval between 4.7-587 metric tons.
 
 Then,`r Spp` was assessment in 2013 [@hicks_status_2013]. A 2013 benchmark stock assessment used Stock Synthesis (version 3.24O) integrated statistical catch-at-age model, which is different from the delay-difference model with an assumed stock status prior DB-SRA analysis used in 2010. The stock assessment has been used for management as a Category 2 stock assessment. The 2013 assessment used a substantially updated catch history, indices of abundance, and biological compositions (lengths and ages). The natural mortality value was also updated to be higher value than the one used in the DB-SRA model. The 2013 assessment also assumed logistic selectivity for all fleets and surveys, except for Triennial Shelf Survey, which was allowed to be dome-shaped. With higher natural mortality and asymptotic selectivity assumptions, the 2013 assessment estimated 2013 spawning biomass to be at 47% relative to unfished equilibrium spawning biomass, with a 95% confidence interval between 30.5% - 64.2%. The 2013 spawning biomass was estimated to be 2,552 metric tons, with a 95% confidence interval between	1,024 - 4,081 metric tons.
 
-This benchmark assessment represents the first assessment of `r Spp` since 2013 [@hicks_status_2013]. Within this assessment, we re-evaluated all the data sources available for `r Spp`, re-analysed previously used data with current statistical methods and best practices, and re-evaluated modelling assumptions. Detailed description of changes made since 2013 assessment is provided in @sec-model. 
+This benchmark assessment represents the first assessment of `r Spp` since 2013 [@hicks_status_2013]. Within this assessment, we re-evaluated all the data sources available for `r Spp`, re-analysed previously used data with current statistical methods and best practices, and re-evaluated modelling assumptions. Detailed description of changes made since 2013 assessment is provided in @sec-bridging. 
 
 ## Response to Most Recent STAR Panel Recommendations
 
@@ -31,23 +31,30 @@ There were several recommendations from the 2013 STAR panel, broken into two cat
 6. Understanding stock structure. *Discussed in the stock structure section of this document.*
 7. Connectivity of stocks across the species ranges. *This is also discussed in the stock structure section of the document.*
 
-## Bridging analysis
+## Bridging analysis {#sec-bridging}
 
 ### Bridging the Assessment Model from Stock Synthesis 3.24 (2013) to 3.30 (2025)
-
-More than 10 years have passed from the last assessment and in that time, the model and the Stock Synthesis 3 (SS3) modelling framework has undergone many changes. While the specific changes in the model can be found in the model [change log](https://github.com/orgs/nmfs-ost/projects/11), here we simply update the model from the older 3.24O version to the newer 3.30.22.1 version. We want to ensure that any update to the newest SS3 model software is not a cause of any changes in model outputs when we hold all data and model specifications to be exactly the same as in 2013. We therefore transferred all the older data and model specifications to the newest version of SS3 and compared the outputs. The status (@fig-RSS_2013) and scale (@fig-SO_2013) of both models are exactly the same, as are the estimates of within model uncertainty. This allows us to conclude that we can move forward using the latest version of SS3 without concern of inheriting any model output differences due to the choice of the SS3 version. 
+More than 10 years have passed from the last assessment and in that time, the model and the Stock Synthesis (SS3) modelling framework has undergone many changes. While the specific changes in the model can be found in the model [change log](https://github.com/orgs/nmfs-ost/projects/11), here we simply update the model from the older 3.24O version to the newer 3.30.22.1 version, to ensure that any update to the newest SS3 modeling software is not a cause of any changes in model outputs. We therefore transferred all the 2013 data and model specifications to the newest version of SS3 and compared the outputs. The status (@fig-RSS_2013) and scale (@fig-SO_2013) of both models are exactly the same, as are the estimates of within model uncertainty. This allows us to conclude that we can move forward using the latest version of SS3 without concern of inheriting any model output differences due to the choice of the SS3 version. 
 
 ### Model Changes from the Last Assessment
+The 2013 assessment model was the starting point for this assessment. We included a number of improvements related to use of data, model structure and modeling techniques. Bridging analysis was conducted to illustrate the impact of incremental changes. Below, we describe the most important changes made since the last assessment:
 
-The biggest changes to the 2013 assessment are:
+- Specifying a two-sex model, instead of one-sex model, to allow sex-specific estimation of natural mortality and growth.
+- Change in fleet structure, to include bottom trawl and non-trawl discards as separate fleets (see @sec-fleet for details). Results did not impact the model output (Figure XX).
+- Change in fleet structure, to split mid-water trawl catches from bottom trawl removals, to account for gradually increasing contribution of mid-water trawl catches. Results did not impact the model output (Figure XX).
+- Updated historical and current fishery removals, to include most up to date information. Since 2013 assessment, WDFW completed historical catch reconstruction of rockfish and newly estimated landings represent improvement. For the period between 1987 and 1999, Oregon PacFIN landings were supplemented with the additional estimates of `r Spp`landings reported within unspecified rockfish market categories. Results did not impact the model output (Figure XX).
+- Recalculated survey abundance indices using sdmTMB geostatistical model. Results did not impact the model output (Figure XX).
+- Adding more biological compositions, mainly in years since 2013, but also some historical ages. Ading more composition data resulted in sight increase in stock scale (Figure XX).
+- Updated input sample sizes associated with fisheries and survey length composition data to using a function of number of trips and number and fish (rather than number of trips and number of hauls, as in previous assessment), to follow current best practices and ensure a consistent treatment of fishery and survey input data.
+- Updated ageing error matrices.
+- Updated weight-length, maturity and fecundity parameters, to include most up to date and improved information. Updating weight-length parameters did not produce a noticeable change. Model with new maturity parameters had slightly lower scale as length at 50% maturity now is slightly higher. 
+- Updated spawn-recruit parameters with Beverton-Holt steepness fixed at 0.72, and recruitment variability at 0.5 for consistency with the calculated recruitment variability in the model.
+- Allowing the bottom trawl fishery to have some amount of dome-shaped selectivity, consistent with the bottom trawl surveys. This change resulted in the increase of stock scale (Figure XX).
+- Fixing natural mortality for male at the value informed by Hamel and Cope (2022) based on maximum ages observed for `r Spp`, while estimating female natural mortality using Hamel and Cope (2022) prior, to allow natural mortality values in light with maximum ages observed.
 
-- Change in the removal history, particularly updates to historical data and new catches since 2013. 
-- Adding discard fleets instead of using retention curves.
-- Using spatio-temporal approaches (sdmTMB) to define indices of abundance versus the former GLMM approach.
-- Adding more biological compositions, mainly in years since 2013, but also some historical ages. 
-- Specifying a two sex instead of one sex model, which allows for sex-specific estimation of natural mortality and growth.
-- Updated and more ageing error matrices
-- Allowing the bottom trawl fishery to have some amount of dome-shaped selectivity, consistent with the bottom trawl surveys.
+The list above documents only the most important changes made to this assessment relative to the previous one. 
+
+With new fecundity parameters, the model produces spawning output rather that spawning biomass, and 2013 model 2025 spawning outputs are no longer comparable. However, we ran 2013 model with new fecundity parameters to allow for comparison between assessments, and the results of bridging analysis with most impactful changes are shown in Figure XX to Figure XX. This assessment (compared to 2013 assessment) estimates higher stock scale, primarily due to change in treatment of fishery selectivity parameters. Change in selectivity assumptions allow for substantially improved fits to length and age composition data in fisheries and surveys, while changes in life history parameters (specifically, natural mortality) allowed for model to anchor the model on values consistent with maximum ages observed.    
 
 ## General Model Specifications
 
