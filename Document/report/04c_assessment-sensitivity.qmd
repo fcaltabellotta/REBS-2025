@@ -5,19 +5,20 @@ Sensitivity analyses were conducted to evaluate model sensitivity to alternative
 #### Data treatment sensitivities
 Data treatments explored were as follows:
 
-- Treatment of abundance indiecs 
-	  1. 2015 dockside survey
-    2. 2015 dockside survey, no extra variance estimated
-  	3. No extra variance on private boat index
+- Removal of single data sources 
+	- Remove a single index of abundance (Triennial, Alaska slope, NW slope, WCGBTS, all indices)
+	- For each fleet and index, including discard fleets, removal of length composition data
+	- For each fleet and the WCGBTS, removal of age composition data
   	
-  	- Data weighting
+- Data weighting - JASON - DID YOU DO THIS? ADD THIS. 
   	11. No data-weighting
   	12. Dirichlet data-weighting
   	13. McAllister-Ianelli data weighting
 
-- Other
-  	14. 2015 removal history
-  	
+- Other - DO WE HAVE OTHERS?
+
+Likelihood values and estimates of key parameters and derived quantities from each data source removal sensitivity are available in **TABLES XXX** . Additionally, time series of spawning output and relative spawning output are shown in Figures**. Derived quantities relative of all data removal sensitivities to the reference model are summarized in **Figure X**. Generally, the removal of indices of abundance decreased the spawning output and the relative spawning output. ALI WILL ADD MORE HERE... 
+
 Likelihood values and estimates of key parameters and derived quantities from each sensitivity are available in Table . Derived quantities relative to the reference model are provided in Figure . Time series of spawning output and relative spawning output are shown in Figures  and .
 
 #### Model Specification Sensitivities {#senstivities}
