@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="03_data_files/libs/clipboard/clipboard.min.js"></script>
+<script src="03_data_files/libs/quarto-html/quarto.js"></script>
+<script src="03_data_files/libs/quarto-html/popper.min.js"></script>
+<script src="03_data_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="03_data_files/libs/quarto-html/anchor.min.js"></script>
+<link href="03_data_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="03_data_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="03_data_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="03_data_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="03_data_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="data" class="level1">
+<h1>Data</h1>
+<p>Data from a wide range of sources were evaluated within this assessment. Data sources included in the assessment model are summarized in <strong>?@fig-data</strong>. Description of each data source used in the model is provided below.</p>
+<!--- Provide temporal and spatial resolutions or sample size where appropriate for each of the subsections, below.--->
+<section id="fishery-dependent-data" class="level2">
+<h2 class="anchored" data-anchor-id="fishery-dependent-data">Fishery-dependent data</h2>
+<!-- Commercial fisheries landings by state, year, and gear (PacFIN is the standard source for recent domestic commercial landings), historical catch estimates, discards, recreational fisheries catches, foreign removals; sample size information for length- and age-composition data by state, year and gear, including both the number of trips and fish sampled. Description of methods to estimate abundance indices, sample size information by survey and year. Include complete tables and figures and date of data extraction. -->
+<p><code>r Spp</code> are not targeted by a specific fishery, but are desirable and marketable, thus are typically retained when caught. They are often captured in bottom trawl, mid-water trawl, and longline fisheries. They are also commonly bycaught within the at-sea hake fishery. Small numbers have been observed in pot and shrimp trawl. Recreational catch is inconsequential and not accounted for in this assessment.</p>
+<p><code>r Spp</code> fishery-dependent data in this assessment are divided among six fleets, which include:</p>
+<ul>
+<li>Fleet 1: Commercial bottom trawl fishery.</li>
+<li>Fleet 2: Dead discard from bottom trawl fishery.</li>
+<li>Fleet 3: Commercial non-trawl (mainly the long-line) fishery.</li>
+<li>Fleet 4: Dead discard from non-trawl fishery.</li>
+<li>Fleet 5: Contemporary mid-water trawl fishery.</li>
+<li>Fleet 6: At-sea hake fishery bycatch.</li>
+</ul>
+<p>For description and details on fleet structure, please refer to Section <span class="math inline">\(\ref{Fleet and Survey Designations}\)</span>.</p>
+<section id="commercial-fishery-landings" class="level3">
+<h3 class="anchored" data-anchor-id="commercial-fishery-landings">Commercial Fishery Landings</h3>
+<p>Recent and historical fisheries catches were compiled by state and then combined into the fishing fleets used in the assessment. Time series of catches by fleet and state are reported in Table X. <strong>?@fig-landings</strong> shows catches by fleet.</p>
+<section id="recent-landings" class="level4">
+<h4 class="anchored" data-anchor-id="recent-landings">Recent landings</h4>
+<p>Recent commercial landings of <code>r Spp</code> (2000-2024 for Washington, 1987–2024 for Oregon and 1981–2024 for California,) were obtained from PacFIN, a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries Service (NMFS). Catch data were extracted from PacFIN on April 24, 2025.</p>
+</section>
+<section id="historical-landings" class="level4">
+<h4 class="anchored" data-anchor-id="historical-landings">Historical Landings</h4>
+<p>Historical landings of <code>r Spp</code> were reconstructed by state.</p>
+<p>The Washington historical landings (1889–2000) of <code>r Spp</code> were provided by Washington Department of Fish and Wildlife (WDFW), who recently conducted historical catch reconstruction for rockfish species, including <code>r Spp</code> (pers. comm. T. Tsou, WDFW). The three main sources used in this reconstruction included the US Fish Commission Report (UFSC), Washington Bound Volumes, and Washington Statistical Bulletin (SpeciesSumOutput2_2017.csv- ADD TABLE). The historical species composition was based on the various historical reports and interviews of fishermen and dockside samplers. The landings between 1981 and 2000 were also provided by WDFW (rather than obtained from PacFIN), since WDFW developed and used a improved method for apportioning unidentified rockfish (URCK) category in fish tickets to the individual species landings. This improved approach relaxed the borrowing rules for missing data used in the WDFW species allocation algorithm that feeds into PacFIN (pers. comm. T. Tsou, WDFW). New Washington historical landings represent improvement to the assessment.</p>
+<p>The Oregon historical landings (1896–1986) were obtained from Oregon historical catch reconstruction, conducted by Oregon Department of Fish and Wildlife (ODFW) in collaboration with NWFSC (<span class="citation" data-cites="karnowski_historical_2014">@karnowski_historical_2014</span>). The Oregon landings for the period between 1987 and 1999 were also provided by the ODFW. For that peios, Oregon PacFIN landings were supplemented with the additional estimates of <code>r Spp</code>landings reported within unspecified rockfish market categories, (i.e., URCK and POP1; <span class="citation" data-cites="ODFW_URCK_POP_recon">@ODFW_URCK_POP_recon</span>).</p>
+<p>The California historical landings were informed by several sources. Landings from the most recent “historical” period (between 1969 and 1980) were obtaned from the California Cooperative Survey (CalCOM) database. Earlier landing records (between 1931 and 1968) were informed by the rockfish historical catch reconstruction conducted by the NOAA’s Southwest Fisheries Science Center (<span class="citation" data-cites="ralston_documentation_2010">@ralston_documentation_2010</span>).</p>
+<p>Comparison of <code>r Spp</code> historical landings by state and fleet between this and 2013 assessment is provided in <strong>?@fig-Ct_All</strong>. The largest differences in this assessment from 2013 model are in Washington landings (<strong>?@fig-Ct_WA</strong>), with newly estimated landings being generally lower than those used in previous assessment. The new WDFW catch reconstruction completed by WDFW is considered an improvement.</p>
+<p>Historical California and Oregon landings did not change substantially (<strong>?@fig-Ct_CA</strong> and <strong>?@fig-Ct_OR</strong>), with the exception of a few years. Discrepancies in California and Oregon non-trawl landings between the 2013 and 2025 assessments are caused by the fact that non-trawl fleet in 2013 assessment was limited to only fixed gear, when in 2025 assessment non-trawl fleet includes all non-trawl gear groups. Slight discrepancies in Oregon trawl landings between 1987 and 1999, are from adding previously non-reported landings of <code>r Spp</code> in the unspecified rockfish market categories (see details above).</p>
+<p>The update in historical changes shows only minor differences in model outputs (<strong>?@fig-Ct_compsSO</strong>; <strong>?@fig-Ct_compsRSS</strong>).</p>
+</section>
+<section id="bycatch-in-the-foreign-pop-fishery" class="level4">
+<h4 class="anchored" data-anchor-id="bycatch-in-the-foreign-pop-fishery">Bycatch in the foreign POP fishery</h4>
+<p>Between mid-1960s and mid-1970s, foreign trawl fleets from the former Soviet Union, Japan, Poland, Bulgaria and East Germany targeted aggregations of Pacific ocean perch in the Northeast Pacific Ocean, in the waters off the U.S. West Coast (Love et al., 2002). Rogers (2003) estimated removals of rockfish species caught within this foreign POP fishery, including removals of <code>r Spp</code>. In the assessment, <code>r Spp</code> bycatch in the foreign POP fishery between 1966 and 1976 as estimated by Rogers (2003) were added to commercial bottom trawl fleet.</p>
+</section>
+<section id="at-sea-hake-catches" class="level4">
+<h4 class="anchored" data-anchor-id="at-sea-hake-catches">At-Sea Hake Catches</h4>
+<p><code>r Spp</code> has long been bycaught in the fishery for the coastal population of Pacific hake, which is almost exclusively conducted with mid-water trawls.</p>
+<p>Large-scale harvesting of Pacific hake in the United States began in late-1960s, when factory trawlers from the Soviet Union and other countries began targeting this stock. After the 200-mile U.S. Exclusive Economic Zone was declared in 1977, a Joint-Venture fishery was initiated between United States trawlers and Soviet factory trawlers acting as mother-ships (larger, slower ships for fish processing and storage while at sea). By 1989 the U.S. fleet capacity had grown to a level sufficient to harvest the entire quota, and no further foreign fishing was allowed. The Pacific hake fishery is currently 100% observed by the at-sea hake observer program (A-SHOP) and data on bycatch species, including <code>r Spp</code>, is being routinely collected.</p>
+<p>Annual amounts of <code>r Spp</code> bycatch (retained and discarded) in the Pacific hake fishery were obtained from the North Pacific Database Program (NORPAC). That time series covers the period between 1977 and 2024 and include catches by foreign and domestic fisheries as well as removals during the time of Joint Ventures (JV). <code>r Spp</code> catches within the at-sea hake fishery were treated in the model as a separate fleet.</p>
+</section>
+</section>
+<section id="discards" class="level3">
+<h3 class="anchored" data-anchor-id="discards">Discards</h3>
+<section id="historical-discard" class="level4">
+<h4 class="anchored" data-anchor-id="historical-discard">Historical discard</h4>
+<p>Historically, little to no discarding was observed for <code>r Spp</code>.</p>
+<p>The historical discard information comes from Pikitch et al.&nbsp;(1988), and often referred to as the Pikitch study. The Pikitch study was conducted between 1985 and 1987 between 48°42’ and 42°60’ N. latitude, which is primarily within the Columbia INPFC area (Pikitch et al.&nbsp;1988). Participation in the study was voluntary and included vessels using bottom, midwater and shrimp trawl gears. Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow, and recorded the weight of species retained and discarded in the sample.</p>
+<p>There are no midwater trawl records of <code>r Spp</code>in the Pikitch study, and only few fish records of bottom trawl catches, based on which discard rate (discard weight over total weight) for bottom trawl was just 0.09%. Therefore, no historical discard was assumed in the model.</p>
+</section>
+<section id="recent-discard" class="level4">
+<h4 class="anchored" data-anchor-id="recent-discard">Recent Discard</h4>
+<p>With the introduction of trip limits for rockfish in early 2000, limited discard has been observed for <code>r Spp</code>in bottom trawl and non-trawl fisheries.</p>
+<p>In 2002, the West Coast Groundfish Observer Program (WCGOP) was implemented on the West Coast of the United States, which began with gathering bycatch and discard information for the limited entry trawl and fixed gear fleets. Observer coverage has expanded to include the California halibut trawl, the nearshore fixed gear and pink shrimp trawl fisheries. Since 2011, trawl fisheries have been managed with catch shares under a system of annual individual fishing quotas (IFQs) for the shoreside sector (i.e., vessels delivering to shoreside processors) and harvest cooperatives for the at-sea hake sectors (catcher-processors who catch and process hake at sea; and Motherships, factory processors that take delivery of hake from catcher vessels at sea). Constant monitoring of catch using observers or electronic monitoring (EM) is required to participate in the trawl catch share fishery.</p>
+<p>The discard amounts of <code>r Spp</code> for the period between 2002 and 2023 were obtained from WCGOP by year and fleet (bottom trawl, mid-water trawl and non-trawl), for both the catch share and the non-catch share sector. The discarding amounts of <code>r Spp</code> within bottom trawl and non-trawl fleets were included in the model as separate fleets.</p>
+<p>Mid-water trawl discard was not present in non-catch share sector and was extremely minimal (virtually non-existing) in catch-share sector, with discard amounts averaging to 10kg per year. Therefore, in the model, no discard was assumed for mid-water trawl fleet.</p>
+<section id="bottom-trawl-discard" class="level5">
+<h5 class="anchored" data-anchor-id="bottom-trawl-discard">Bottom Trawl Discard</h5>
+<p>Bottom trawl discard amounts by year are provided in Table XX. Prior to 2011, before the start of the catch share program, the discard of <code>r Spp</code> ranged between 1 metric ton and 60 metric tons, averaging at 23 metric tons a year. After 2011, the discard has been very low, not exceeding 0.5 metric ton a year. No discard data were available for 2024, and we used the average discard amount for 2019 - 2023 period to approximate 2024 discards for bottom trawl discard fleet.</p>
+</section>
+<section id="non-trawl-discard" class="level5">
+<h5 class="anchored" data-anchor-id="non-trawl-discard">Non-Trawl Discard</h5>
+<p>Non-trawl discard amounts by year are provided in Table XX. Non-trawl discard of <code>r Spp</code> were made in both catch share and non-catch share sectors. Discard amounts in these sectors were combined by year to represent total discard within the fleet. The discards within this fleet ranged between 0.5 metric ton and 35 metric tons, with 10 metric tons as average per year. No discard data were available for 2024, and the 2023 discard amount was assumed for 2024 for non-trawl discard fleet.</p>
+</section>
+</section>
+</section>
+<section id="fishery-length-and-age-data" class="level3">
+<h3 class="anchored" data-anchor-id="fishery-length-and-age-data">Fishery Length and Age Data</h3>
+<p>Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the catches in each year. The first length bin includes all observations less than 10 cm and the last bin includes all fish 80 cm and longer. Age distributions included bins from age 1 to age 100, with the first bin including all fish ages 0 and 1 and the last bin including all fish age 100 and above.</p>
+<section id="commercial-landings-length-and-ages" class="level4">
+<h4 class="anchored" data-anchor-id="commercial-landings-length-and-ages">Commercial Landings Length and Ages</h4>
+<p>The fishery length and age data for bottom trawl, non-trawl and midwater trawl fleets, based on samples collected by port samplers, were obtained from the PacFIN Biological Data System (BDS) database and extracted on April 24, 2025. The number of trips and fish sampled for lengths and ages by fleet and year are summarized in Tables XX-XX.</p>
+<p>Commercial length-frequency distributions were developed for each fleet and year, for which observations were available (Figire. Females and males distributions were treated separately, to track sex-specific differences. For each fleet, the raw observations were expanded to the trip level, to account for differences in samples sizes relative catch weights among trips (first stage expansion). The expanded length observations were then further expanded to state level, to account for differences in sampling intensity of <code>r Spp</code> landings among states combined into a single fleet (second stage expansion). The expansion algorithm can be illustrated with the following equation:</p>
+<p>Where <span class="math inline">\(N_{b,j,y}\)</span> is the number of lengths in each length bin (<span class="math inline">\(b\)</span>) by sex (<span class="math inline">\(j\)</span>) and year (<span class="math inline">\(y\)</span>) within each fleet. <span class="math inline">\(L_{b,j,t}\)</span> represents an individual length sample by bin (<span class="math inline">\(b\)</span>) and sex (<span class="math inline">\(j\)</span>) within an individual fishing trip (<span class="math inline">\(t\)</span>). In the first stage expansion, <span class="math inline">\(L_{b,j,t}\)</span> was multiplied by the ratio of landed catch (<span class="math inline">\(LC_t\)</span>) within that trip (<span class="math inline">\(t\)</span>) to a portion of catch sampled for lengths (<span class="math inline">\(SC_t\)</span>) within the same trip (<span class="math inline">\(t\)</span>). In the second stage expansion, the individual length sample (<span class="math inline">\(L_{b,j,t}\)</span>) was multiplied by the ratio of landed catch (<span class="math inline">\(LC_{s,y}\)</span>) within individual state (<span class="math inline">\(s\)</span>) and year (<span class="math inline">\(y\)</span>) to catch weights sampled for lengths (<span class="math inline">\(SC_{s,y}\)</span>) within the same state (<span class="math inline">\(s\)</span>) and year (<span class="math inline">\(y\)</span>). As the final step, the expanded length samples from the same size bin and sex were summed across all trips and states (combined into a single fleet) within a single year, to obtain the total number of lengths in each length bin by sex, year and fleet (<span class="math inline">\(N_{b,j,y}\)</span>). The same calculations were repeated for each length bin, to develop sex specific length frequencies for each fishing fleet by year.</p>
+<p>Age distributions were included in the model as conditional-age-at-length (CAAL) observations. The marginal age-compositions were also included, but only for evaluating the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.</p>
+<p>The filtering and processing of the PacFIN length and age composition data were conducted using the pacfintools package in R (Wetzel et al.&nbsp;2025). The filtering steps included removing samples with missing vital information. Figures XX show the commercial length and age frequencies used in the model for each fleet.</p>
+<p>The initial input values for length compositions in this assessment were calculated as a function of the number of trips and number of fish via the Stewart Method (pers.comm. I. Stewart, International Pacific Halibut Commission (IPHC)). The method is based on analysis of the input and model derived effective sample sizes from West Coast groundfish stock assessments. A piece-wise linear regression was used to estimate the increase in effective sample size per sample based on fish-per-sample and the maximum effective sample size for large numbers of individual fish. The resulting equations are:</p>
+<p>The input sample size of CAAL data was set at the number of fish at each length by sex and by year.</p>
+<section id="commercial-discard-lengths" class="level5">
+<h5 class="anchored" data-anchor-id="commercial-discard-lengths">Commercial Discard Lengths</h5>
+<p>Discard length composition data for both bottom trawl and non-trawl discard fleets were available from WCGOP. Discard length composition data were not sex-specific. Discard raw legnth observations were expanded to the haul level, to account for differences in catch among hauls.</p>
+<p>The initial input values for length compositions were calculated via the Stewart Method (see above).</p>
+<p>No age data were available for discarded fish.</p>
+</section>
+<section id="at-sea-hake-fishery-length-and-age-compositions" class="level5">
+<h5 class="anchored" data-anchor-id="at-sea-hake-fishery-length-and-age-compositions">At-sea hake Fishery Length and Age Compositions</h5>
+<p>The sex-specific length and age data for at-sea hake fleet were collected by the at-sea hake observer program (a-shop) and available through NORPAC database. Input sample sizes for length compositions were based on the number of hauls sampled by year.</p>
+<p>Age distributions were included in the model as CAAL observations, binned according to length, age, sex, and year. The input sample size of CAAL data was set at the number of fish at each length by sex and by year.</p>
+<p>The marginal age compositions were constructed, but only used in the model for evaluating the implied fits, while the CAAL data were used in the likelihood.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="fishery-independent-data" class="level2">
+<h2 class="anchored" data-anchor-id="fishery-independent-data">Fishery-independent data</h2>
+<!-- Fishery-independent data: Description of surveys used in the assessment, description of methods to estimate abundance indices, sample size information for length- and age- composition data by survey and year, including both the number of tows (or drops or sites for hook and line data) and fish sampled. Include complete tables and figures and date of data extraction.   -->
+<p>Data from four fishery-independent surveys were used in this assessment:</p>
+<ul>
+<li>West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)</li>
+<li>AFSC/NWFSC West Coast Triennial (every three years) Shelf Survey (1980-2004)</li>
+<li>Alaska Fishery Science Center Slope survey (1997, 1999-2001)</li>
+<li>Northwest Fisheries Science Center Slope Center (1999-2002)</li>
+</ul>
+<p>These surveys temporal and spatial coverage is summarized in Table XX.</p>
+<p>Information produced by these surveys included indices of relative abundance (all four surveys), length-frequency distributions (WCGBTS and Triennial survey), and age-frequency distributions (WCGBTS).</p>
+<p>Only the WCGBTS has new data for this assessment, but new methods were applied to all surveys to develop new indices of abundance. In this assessment, geostatistical models of biomass density were used to fit to survey data using spatial and spatiotemporal GLMMs with TMB or <a href="https://pbs-assess.github.io/sdmTMB/">sdmTMB</a>. The method is based on a delta model. Two distributions (gamma and lognormal) were considered for the catch-rate component. Comparing the standardized versions (i.e., Z-scores, which puts all the indices on the same scale for better comparison of trends) shows very similar trends among each model output in the indices, suggesting little difference in choice of model type. The lognormal error structure was selected for all surveys because it was shown to be able to better account for extreme catch events. The variance in the indices is generally high (0.3-0.5), suggesting the information content in these indices is low. Overall, catch densities are highest in northern Oregon and Washington.</p>
+<p>Standardized indices for all four surveys overlaid are shown in <strong>?@fig-All_indices</strong>, where each index is rescaled to have mean observation = 1.0.</p>
+<p>Description of each survey is provided below; information available from each survey and methods used to process the data are also discussed.</p>
+<section id="nwfsc-west-coast-groundfish-bottom-trawl-survey" class="level3">
+<h3 class="anchored" data-anchor-id="nwfsc-west-coast-groundfish-bottom-trawl-survey">NWFSC West Coast Groundfish Bottom Trawl Survey</h3>
+<section id="survey-description" class="level4">
+<h4 class="anchored" data-anchor-id="survey-description">Survey Description</h4>
+<p>The West Coast Groundfish Bottom Trawl Survey (WCGBTS) is conducted annually since 2003 (Table XX). The survey’s design and sampling methods are most recently described in <span class="citation" data-cites="bradburn_2003_2011">@bradburn_2003_2011</span>. The survey is based on a random-grid design, covering the coastal waters from a depth of 100 to 700 fm (183-1280 m). This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two ‘passes’ of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.</p>
+</section>
+<section id="abundance-index" class="level4">
+<h4 class="anchored" data-anchor-id="abundance-index">Abundance Index</h4>
+<p>Geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or <a href="https://pbs-assess.github.io/sdmTMB/">sdmTMB</a><span class="citation" data-cites="kristensen_tmb:_2016">[@kristensen_tmb:_2016]</span> via the R package <span class="citation" data-cites="Anderson:2022:SRP">[@Anderson:2022:SRP]</span> as configured within the {indexwc} R package (Johnson et al.2025). Code to reproduce the analysis is available online. These models can account for latent spatial factors with a constant spatial Gaussian random field and spatiotemporal deviations to evolve as a random walk Guassian random field (Thorson et al.&nbsp;2015). Tweedie, delta-binomial, delta-gamma, and mixture distributions, which allow for extreme catch events, were investigated. Results are only shown for the distribution that led to the best model diagnostics, e.g., similar distributions of theoretical normal quantiles and model quantiles, high precision, lack of extreme predictions that are incompatible with yellowtail life history, and low AIC. Estimates of biomass from this best model were predicted using a grid based on available survey locations.</p>
+<p>The data were truncated to depths less than 875 m prior to modelling given that there were zero positive encounters in depths deeper than 875 m. The prediction grid was also truncated to only include available survey locations in depths between 55-875 m to limit extrapolating beyond the data and edge effects.</p>
+<p>The model used a delta model with a lognormal distribution for the catch-rate component. A logit-link was used for encounter probability and a log-link for positive catch rates. The response variable was catch (mt) with an offset of area (km<span class="math inline">\(^2\)</span>) to account for differences in effort. Fixed effects were estimated for each year. The following additional covariates were included: pass. Vessel-year effects, which have traditionally been included in index standardization for this survey, were not included as the estimated variance for the random effect was close to zero. Vessel-year effects were more prominent when models did not include spatial effects and were included for each unique combination of vessel and year in the data to account for the random selection of commercial vessels used during sampling <span class="citation" data-cites="helser_generalized_2004 thorson_accounting_2014">[@helser_generalized_2004; @thorson_accounting_2014]</span>.</p>
+<p>Spatial and spatiotemporal variation was included in the encounter probability and the positive catch rate model. Spatial variation was approximated using 400 knots, where more knots led to non-estimable standard errors because the positive encounters are too sparse to support the dense spatiotemporal structure.</p>
+<p>The index is flat and is shown in <strong>?@fig-WCGBTS_index</strong>.</p>
+</section>
+<section id="length-and-age-compositions" class="level4">
+<h4 class="anchored" data-anchor-id="length-and-age-compositions">Length and Age compositions</h4>
+<p>Length bins from 1o to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year (Figure XX). Table XX shows the number of lengths taken by the survey.</p>
+<p>Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R <span class="citation" data-cites="wetzel_nwfscsurvey_2023">[@wetzel_nwfscsurvey_2023]</span>. The stratification for length data expansions are provided in Table XX.</p>
+<p>The input sample sizes for length composition data were calculated based on Stewart and Hamel <span class="citation" data-cites="stewart_bootstrapping_2014">[-@stewart_bootstrapping_2014]</span> as <span class="math inline">\(\text{Input N}_{y} = 2.43*N_{tow}\)</span> where the 2.43 value was estimated for a group of shelf and slope rockfish species.</p>
+<p>Age distributions included bins from age 1 to age 100, with the last bin including all fish of greater age. Table XX shows the number of ages taken by the survey. Age distributions were included in the model as CAAL observations. The marginal age compositions were only used for comparing the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.</p>
+<p>The input sample size of CAAL data was set at the number of fish at each length by sex and by year.</p>
+</section>
+</section>
+<section id="afscnwfsc-west-coast-triennial-shelf-survey" class="level3">
+<h3 class="anchored" data-anchor-id="afscnwfsc-west-coast-triennial-shelf-survey">AFSC/NWFSC West Coast Triennial Shelf Survey</h3>
+<section id="survey-description-1" class="level4">
+<h4 class="anchored" data-anchor-id="survey-description-1">Survey Description</h4>
+<p>The Triennial Survey was first conducted by the AFSC in 1977 and continued until 2004. The survey’s design and sampling methods are most recently described in <strong>Weinberg et al.&nbsp;(2002)</strong>. Its basic design was a series of equally-spaced transects from which searches for tows in a specific depth range were initiated.</p>
+<p>The survey spatial coverage and timing has changed over the period of survey duration <strong>(Table X)</strong>.</p>
+<p>Haul depths ranged from 91–457 m during the 1977 survey with no hauls shallower than 91 m. The surveys in 1980, 1983, and 1986 covered the West Coast south to 36.8°N latitude and a depth range of 55–366 meters. The surveys in 1989 and 1992 covered the same depth range but extended the southern range to 34.5°N (near Point Conception). From 1995 through 2004, the surveys covered the consistent depth range 55–500 meters and surveyed south to 34.5°N. In the final year of the triennial series (2004), the NWFSC conducted the survey and followed very similar protocols as the AFSC, which conducted surveys in all previous years.</p>
+<p>All of the surveys were conducted in the mid-summer through early fall: the 1977 survey was conducted from early July through late September; the surveys from 1980 through 1989 ran from mid-July to late September; the 1992 survey spanned from mid-July through early October; the 1995 survey was conducted from early June to late August; the 1998 survey ran from early June through early August; and the 2001 and 2004 surveys were conducted in May-July <strong>(Figure X)</strong>.</p>
+<p>Water hauls <strong>(Zimmermann et al.&nbsp;2003)</strong> and tows located in Canadian waters were also excluded from the analysis of this survey. Given the different depths surveyed during 1977, the data from that year were not included in this assessment.</p>
+</section>
+<section id="abundance-index-1" class="level4">
+<h4 class="anchored" data-anchor-id="abundance-index-1">Abundance Index</h4>
+<p>The index standardization followed a similar procedure to one used to generate the WCGBTS index, when geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or <a href="https://pbs-assess.github.io/sdmTMB/">sdmTMB</a>. The model used a delta model with a lognormal distribution for the catch-rate component. No pass covariate was included in the analysis since Triennial Survey design did not include multiple passes.</p>
+<p>The Triennial Survey was analyzed as an early series (1980–1992) and a late series (1995–2004) to account for change in spatial coverage and survey timing, as <code>r Spp</code>exhibit ontogenetic movements when individuals gradually shift their distribution toward deeper waters as the grow and mature. Separate catchability parameters were estimated for pre-1995 period and from 1995 forward. Separate selectivity curves were estimated for early and late survey periods as well.</p>
+<p>The estimated index is shown in <strong>?@fig-Triennial_index</strong>. The index exhibits an increase in biomass from 1995 forward, that corresponds to a change in Triennial Survey depth coverage, when the survye extended to the deeper area (Table XX)</p>
+<!-- NEED TO UPDATE THIS: The indices for the early and late series of this survey were estimated separately using a GLMM with the
+stratifications shown in **Table X**. Boxplots of the deviance for the late and early triennial survey series are
+shown in **Figure X** and show that the lognormal distribution had the lowest median deviance for both
+series. Random or fixed strata-year effects produced similar deviance, and the random strata-year effects
+were chosen as the final models. Selection of using the extreme catch event mixture distribution (ECE)
+was done by investigating the Q-Q plots in **Figure X**. The Q-Q plot for no ECE does not show any
+departures from the assumed distribution, and the ECE Q-Q plot did not show improvement. Therefore,
+the lognormal distribution without the ECE mixture distribution and random effects on the year-strata
+interaction were used to estimate the indices shown in **Figure X** and **Table X**. The early series suggests a
+possible slightly increasing trend in biomass from 1983–1992, while the late series showed no discernible
+trend and alternated between high and low estimates from 1995–2004. The design-based estimates
+(average density expanded to the stratum area then summed over strata) are compared to the model-based estimates in **Figure X**. 
+Similar trends are seen for both sets of estimates, but the design-based estimates
+are consistently greater than the model-based estimates by more than a factor of 2. This suggests that the
+scale of the model-based estimates may be low, which may be caused by incorrect expansion to the
+proper area. This is not an issue with the assessment because a catchability coefficient relating the survey
+biomass to the assessment model biomass is estimated without any prior assumption on what value that
+catchability coefficient should be. Therefore, caution is advised if attempting to interpret the value of that
+estimated catchability coefficient. -->
+</section>
+<section id="length-compositions" class="level4">
+<h4 class="anchored" data-anchor-id="length-compositions">Length Compositions</h4>
+<p>Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year (Figure XX). Table XX shows the number of lengths taken by the survey.</p>
+<p>Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R <span class="citation" data-cites="wetzel_nwfscsurvey_2023">[@wetzel_nwfscsurvey_2023]</span>. The stratification for length data expansions are provided in Table XX.</p>
+<p>The input sample sizes for length composition data for all fishery-independent surveys were calculated based on Stewart and Hamel <span class="citation" data-cites="stewart_bootstrapping_2014">[-@stewart_bootstrapping_2014]</span> as <span class="math inline">\(\text{Input N}_{y} = 2.43*N_{tow}\)</span> where the 2.43 value was estimated for a group of shelf and slope rockfish species.</p>
+<p>There are no <code>r spp</code> age data from the Triennial Survey.</p>
+</section>
+</section>
+<section id="afsc-slope-survey" class="level3">
+<h3 class="anchored" data-anchor-id="afsc-slope-survey">AFSC Slope Survey</h3>
+<section id="survey-description-2" class="level4">
+<h4 class="anchored" data-anchor-id="survey-description-2">Survey Description</h4>
+<p>The AFSC slope survey was initiated in 1984. The survey methods are described in Lauth (2000). Prior to 1997, the survey was conducted in different latitudinal ranges each year (Table 5). In this assessment, only data from 1997, 1999, 2000 and 2001 were used – these years were consistent in latitudinal range (from 34°30’ N. latitude to the U.S.-Canada border) and depth coverage (183-1280 m; 100-700 fm).</p>
+</section>
+<section id="abundance-index-2" class="level4">
+<h4 class="anchored" data-anchor-id="abundance-index-2">Abundance Index</h4>
+<p>The index standardization followed a similar procedure to one used to generate the WCGBTS and Triennial indeces, when geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or <a href="https://pbs-assess.github.io/sdmTMB/">sdmTMB</a>. The model used a delta model with a lognormal distribution for the catch-rate component. As in case of Triennial survey, no pass covariate was included in the analysis.</p>
+<p>The AFSC Slope Survey index is shown in <strong>?@fig-AFSC_Slope_index</strong>. The index is short, and does not exhibits significant change over the four year period.</p>
+</section>
+<section id="length-compositions-1" class="level4">
+<h4 class="anchored" data-anchor-id="length-compositions-1">Length Compositions</h4>
+<p>Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year (Figure XX). Table XX shows the number of lengths taken by the survey.</p>
+<p>Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R <span class="citation" data-cites="wetzel_nwfscsurvey_2023">[@wetzel_nwfscsurvey_2023]</span>. The stratification for length data expansions are provided in Table XX.</p>
+<p>The input sample sizes for length composition data for all fishery-independent surveys were calculated based on Stewart and Hamel <span class="citation" data-cites="stewart_bootstrapping_2014">[-@stewart_bootstrapping_2014]</span> as <span class="math inline">\(\text{Input N}_{y} = 2.43*N_{tow}\)</span> where the 2.43 value was estimated for a group of shelf and slope rockfish species.</p>
+<p>There are no <code>r spp</code> age data from the AFSC Slope Survey.</p>
+</section>
+</section>
+<section id="nwfsc-slope-survey" class="level3">
+<h3 class="anchored" data-anchor-id="nwfsc-slope-survey">NWFSC Slope Survey</h3>
+<section id="survey-description-3" class="level4">
+<h4 class="anchored" data-anchor-id="survey-description-3">Survey Description</h4>
+<p>The NWFSC slope survey was conducted annually from 1999 to 2002. The survey’s design and sampling methods are described in Keller et al.(2007). The surveyed area ranged between 34°50’ and 48°07’ N. latitude, encompassing the U.S. Vancouver, Columbia, Eureka, Monterey INPFC areas, and a portion of the Conception area, and consistently covered depths from 100 to 700 fm (183-1280 m) (Table XX).</p>
+</section>
+<section id="abundance-index-3" class="level4">
+<h4 class="anchored" data-anchor-id="abundance-index-3">Abundance Index</h4>
+<p>The index standardization followed a similar procedure to one used to generate the other survey indeces, when geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or <a href="https://pbs-assess.github.io/sdmTMB/">sdmTMB</a>. The model used a delta model with a lognormal distribution for the catch-rate component. No pass covariate was included in the analysis.</p>
+<p>The NWFSC Slope Survey index is shown in <strong>?@fig-NWFSC_Slope_index</strong>. The index is short, and, as in case of AFSC SLope Survey, does not exhibits significant change over the four year period.</p>
+<p>There are no <code>r spp</code> length and age data from the NWFSC Slope Survey. Given that spatial coverage of NWFSC Slope Survey is the same of AFSC Slope Survey, selectivity of the NWFSC SLope Survey was assumed the same as selectivity of AFSC Slope Survey (mirrored in the model).</p>
+</section>
+</section>
+</section>
+<section id="biological-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="biological-parameters">Biological Parameters</h2>
+<p>The major biological inputs to the models are natural mortality, age and growth parameters, weight-length, maturity and stock-recruitment parameters. The following sections outline the treatment of each section. One change from the previous assessment is moving to a two sex from the one-sex specification from 2013. The 2013 stock assessment one-sex specification was based on the observation that the biology of females and males was very similar, thus justifying the simplifying assumption of one sex. The following sections below demonstrates that females and males do generally have similar growth, though there are differences, but may have different natural mortality values. The current assessment will use a two sex configuration that allows for flexibility to set female and male parameters either equal (i.e., functionally equivalent to a one sex model) and or sex-specific. <strong>?@fig-Sex1vs2_SO</strong> and <strong>?@fig-Sex1vs2_Bratio</strong> show that using a two sex configuration with the same life history parameters for females and males is equivalent to the one sex model. Note that the one sex model sums up both female and male biomass, thus why it is twice the size as the two sex female-only spawning output (<strong>?@fig-Sex1vs2_Bratio</strong>).</p>
+<section id="natural-mortality" class="level3">
+<h3 class="anchored" data-anchor-id="natural-mortality">Natural Mortality</h3>
+<p>Natural mortality is a highly influential parameter in age-structured stock assessments. It defines the rate of natural death by age, and thus establishes a stable age-structure and expectation of longevity, and interacts with growth and reproduction to determine stock productivity. It is a very difficult parameter to directly measure, thus empirical relationships based on life history parameters are often used to indirectly determine its value or build prior distributions in belief of what it is in the event we do attempt to estimate it in the model (<span class="citation" data-cites="cope_upgrading_2022">@cope_upgrading_2022</span>; <span class="citation" data-cites="hamel_development_2022">@hamel_development_2022</span>; <span class="citation" data-cites="maunder_review_2023">@maunder_review_2023</span>). If length and age data are available, it may be possible to estimate it in the model.</p>
+<p>An estimate of maximum age tends to be the most reliable life history parameter related to natural mortality to inform its estimation. <span class="citation" data-cites="cope_upgrading_2022">@cope_upgrading_2022</span> (<a href="https://connect.fisheries.noaa.gov/natural-mortality-tool/">The Natural Mortality Tool</a>) provide the most up-to-date examination of the relationship between maximum age and natural mortality</p>
+<p>where <span class="math inline">\(M\)</span> is natural mortality and <span class="math inline">\({A_{\text{max}}}\)</span> is the assumed maximum age. The prior is defined as a lognormal distribution with mean <span class="math inline">\(ln(5.4/A_{\text{max}})\)</span> and standard error = 0.31. This is the equation typically used to estimate a natural mortality point estimate, but is underpinned by the choice of the value of <span class="math inline">\({A_{\text{max}}}\)</span>. This equation assumes that the proportion of the stable population at this maximum age is 0.4517%. If we take humans as an example, the longest lived human is 122 years. This is not the maximum age, but the oldest ever recorded age. The maximum age that corresponds to 0.4517% of the population is around 100 years. For Rougheye/Blackspotted, the oldest ever aged individual is 205 years with unknown ageing error. We did not consider this as a realistic maximum age.</p>
+<p>The 2013 U.S. west coast stock assessment used a prior built around a mean of 0.034 (corresponding to a maximum age of 163), but estimated natural mortality at 0.042 (maximum age between 128-129 years; Figure M). The 2023 Gulf of Alaska assessment built a prior conditional on a estimate of natural mortality from their 5 oldest aged individuals that ranged from 126-135 years. This resulted in a mean value of 0.042, similar to the 2013 U.S. west coast stock assessment. The 2023 Bering Sea/Aleutian Islands assessment used M = 0.05 (assumed longevity of 108), and the recent Canadian assessments considered a range of M values from 0.03 to 0.055 (assumed maximum ages of 180 to 98 years; <strong>?@fig-Mcurves</strong>).</p>
+<p>We attempt to estimate natural mortality, as was done in the 2013 U.S. West coast assessment. Examining the available age data, the oldest 10 individuals range from 139 to 165 and were all males. For females, the 10 oldest individuals range from 130 to 121 years. If those oldest ages were used in the <span class="citation" data-cites="hamel_development_2022">@hamel_development_2022</span> longevity estimator, these ages would correspond to a range of natural mortality values of 0.033 to 0.039 for males, which include the mean of the prior used in the 2013 assessment. For females, it corresponds to natural mortality values of 0.039 to 0.045. All these assume that the sampled population has enough of an age structure still available for sampling, as opposed to having some level of age truncation from the theoretical unfished stable age distribution.</p>
+<p>Related to this issue of possible age truncation, applying a catch curve analysis (taking the log of the abundance of numbers of samples in available age classes) on the aggregated ages across all age sources by sex, the total mortality (Natural + Fishing mortality= Total mortality) is 0.046 for females and 0.035 for males, which may indicate the natural mortality could be lower than that used in the 2013 assessment, but within the range of values considered in other areas (<strong>?@fig-CC_Z</strong>). This also indicates the possibility of estimating sex-specific natural mortality, as natural mortality may differ by sex. The two sex model allows for this type of model specification exploration. Further exploration was done my truncating the upper ages considered, with the assumption that the older ages may also not be sampled fully (i.e., dome-shaped selectivity). We considered both 100 (<strong>?@fig-CC_Z_100</strong>) and 80 (<strong>?@fig-CC_Z_80</strong>) as upper age cut-offs. The less older individuals included, the higher the estimate of total mortality, and this a higher natural mortality. But we can see a general overestimate of how many older individuals are expected using these higher Z values, thus dome-shapeness does not see to explain the sampling of these older individuals.</p>
+<p>One challenge to estimating natural mortality within the model is the interaction of estimating dome-shaped selectivity with estimating natural mortality. If all fleets assume some level of dome-shaped selectivity, it is difficult to determine if the unseen larger, older individuals are due to natural death or fishing mortality. Typically, at least one major fleet needs to achieve full selectivity for the larger, older individuals. The 2013 assessment suggested some dome-shaped selectivity in the two major fleets, thus any natural mortality estimates are evaluated depending on the forms of fleet selectivity.</p>
+</section>
+<section id="growth-length-at-age" class="level3">
+<h3 class="anchored" data-anchor-id="growth-length-at-age">Growth (Length-at-Age)</h3>
+<p>Age and length data are used to estimate important growth parameters. <strong>?@fig-AL_1</strong> has the currently available age and length data. Female and male sample sizes are very similar. Estimated growth curves are also presented in <strong>?@fig-AL_1</strong> and the parameters are provided in Table AL_1. The West Coast Groundfish Bottom Trawl Survey clearly and importantly samples the smallest, youngest individuals compared to the other two data sources. This allows for a better estimate of the age at size 0 (t<sub>0</sub>) and growth coefficient (k). The female asymptotic size (L<sub><span class="math inline">\(\infty\)</span></sub>) is estimated notably higher from the PacFIN data, though male estimates of Linf are similar across the data sets. The overall externally derived estimates of female and male <code>r Spp</code> are</p>
+<p>The coefficient of variation (CV) of length by age and sex are shown in <strong>?@fig-AL_2</strong>. This is a measure of the variation in length for a given age class. Sample sizes are highest from the youngest ages up to around 70 (females) to 80 (males) years. The smoothed line shows the average response, and indicates similar CVs values for females and males, with the highest at the youngest ages, but generally 0.1. The amount and range of age samples, along with repeated length samples within an age class, allows growth parameters (L<sub><span class="math inline">\(\infty\)</span></sub>, k, t<sub>0</sub>, and CVs at age) to be estimated in the model. Ages are conditioned on lengths in the model in order to estimate growth within the model. We also explore sensitivity in growth values by pre-specifying growth to different values.</p>
+<p>We note that the growth values being estimated in our data are notably different than those used in Alaska. For instance, the growth parameters for the BSAI stock is L<sub><span class="math inline">\(\infty\)</span></sub> = 51.43, k = 0.06 and t<sub>0</sub> = -3.30 and L<sub><span class="math inline">\(\infty\)</span></sub> = 54.2 cm, k = 0.07, t<sub>0</sub>= -1.5 for the GOA population (both sexes combined). These growth parameters shows a larger size and faster growth of the West Coast stock complex versus those in Alaska, though the West Coast stock complex is more similar to the GOA complex.</p>
+</section>
+<section id="ageing-bias-and-precision" class="level3">
+<h3 class="anchored" data-anchor-id="ageing-bias-and-precision">Ageing Bias and Precision</h3>
+<p>Counting ages from ageing structures in long-lived, temperate fishes is challenging. Ages derived from these structures can be hard to reproduce within and between readers (i.e., imprecision), and may not contain the true age (i.e., bias). Stock assessment outputs can be affected by bias and imprecision in ageing, thus it is important to quantify and integrate this source of variability when fitting age data in assessments. In Stock Synthesis 3, this is done by including ageing error matrices that include the mean age (row 1) and standard deviation in age (row 2). Ageing bias is implemented when the inputted mean age deviates from the expected middle age for any given age bin (e.g., 1.75 inputted versus 1.5 being the true age for the age 1 bin); ageing imprecision is given as the standard deviation for each age bin.</p>
+<p>There are eight primary readers that provided the available ages, two of which often split the ageing duties. <strong>?@fig-AE_matrices</strong> shows which reader assignments are given to each year of ages by data source. Reader 7 is the mix of two readers that shared reading duties within years.</p>
+<p>Estimation of ageing error matrices used the approach of -<span class="citation" data-cites="punt_quantifying_2008">@punt_quantifying_2008</span> in two different forms: one developed in AD Model Builder ( <span class="citation" data-cites="thorson_nwfscageingerror:_2012">[@thorson_nwfscageingerror:_2012]</span>) and one adapted to Template Model Builder framework (). The ageing error matrix offers a way to calculate both bias and imprecision in age reads. Reader 1 is always considered unbiased, but may be imprecise. Bias relative to the primary reader is given for the second reader. There were three age readers that were assumed to be unbiased. In those cases, 12 model configurations based on different assumptions of imprecision (constant CV, curvilinear standard deviation, or curvilinear CV, along with an option to either share or independently estimate imprecision between readers) were considered. For the other four age readers that could be biased and/or imprecise, thirty-six total model configurations were explored that included the above imprecision models as well as an exploration of the functional form of bias (e.g., no bias, constant coefficient of variation, or non-linear bias) in the second reader.</p>
+<p>Model selection criteria included AIC corrected for small sample size (AICc), which converges to AIC when sample sizes are large, and Bayesian Information Criterion (BIC). Both ADMB and TMB were run using an (). Model selection was then compared between ADMB and TMB, which did not always agree, so model selection criteria was added across the two modeling approaches to get an overall model selection criteria. Ageing error matrices were also inspected for behavior in the best supported models to make sure outrageously large precision or bias was not chosen (effectively rendering the ages worthless, which is not an assumption of the quality of the ages). <strong>?@fig-AE_bias</strong> and <strong>?@fig-AE_SD</strong> show the bias and imprecision assumptions applied for each ageing error (AE) matrix.</p>
+</section>
+<section id="length-weight-relationship" class="level3">
+<h3 class="anchored" data-anchor-id="length-weight-relationship">Length-Weight Relationship</h3>
+<p>Female and male length-weight relationships were determined using data from the PacFIN database, West Coast Groundfish Bottom Trawl Survey, and ASHOP samples. Samples size by sex were: female (N=13839), males (13625), and unknown sex (53). Each of the data sources estimated very similar length-weight relationships (<strong>?@fig-LW1</strong>).</p>
+<p>The resultant sex-specific length-weight relationships are given in <strong>?@fig-LW2</strong>, with the following individual values:</p>
+<ul>
+<li>Females: W = 0.000008L^3.15</li>
+<li>Males: W = 0.000012L^3.07</li>
+</ul>
+<p>These values are very similar to the previous assessment that used a combine sex value of a=0.0000096 and b=3.12000 (<strong>?@fig-LW2</strong>).</p>
+</section>
+<section id="maturity" class="level3">
+<h3 class="anchored" data-anchor-id="maturity">Maturity</h3>
+<p>Maturity for the Rougheye/Blackspotted Rockfish complex was estimated using 473 maturity samples collected from 2015 to 2024 on gls{odfw} and gls{wdfw} surveys and the gls{indexwc} in California, Oregon, and Washington waters (M. Head, pers. comm.). The samples included 194 samples genetically assigned as Rougheye Rockfish, 71 samples genetically assigned as Blackspotted Rockfish, and 208 samples with no genetic assignment. The maturity schedule was assumed to be length-based, as in the 2013 benchmark assessment. This assessment used the functional classification of maturity to describe the maturity schedule, which not only identifies the individuals that are physiologically capable of producing yolk (those that are biologically mature), but also accounts for the occurrence of abortive maturation and skipped spawning, so the functional maturity classification is a more accurate representation of the individuals that may actually spawn in a given year. This is a difference from the 2013 benchmark assessment, which did not explicitly estimate functional maturity, and instead assumed the biological classification of maturity.</p>
+<p>Biological maturity and functional maturity observations were fitted in separate models. Biological maturity and functional maturity status observations (0 = immature and 1 = mature) were fitted in a logistic regression model (glm R function, family = binomial, link = “logit”). The estimated model parameters were used to calculate length at 50% maturity (L50%; <strong>Table XXX table Melissa provided</strong>) and maturity ogives (<strong>Fig. XXX figure Melissa provided, the one comparing biological and functional maturity</strong>). The delta method was used to calculate 95% confidence intervals of L50% estimates. The estimated L50% (functional maturity; L50%fxn) was 46.53 cm and the estimated slope of the maturity oogive was 0.25. Sensitivities were run using the estimate of biological maturity and the maturity estimate used in the 2013 benchmark assessment. There was little evidence of skipped spawning, so we did not explore fitting the data with a spline model.</p>
+<p>Because there are known life history differences between Rougheye Rockfish and Blackspotted Rockfish, maturity was also estimated for each species, using the samples that were genetically assigned to each species, respectively, using the same methods as above (<strong>Table XXX table Melissa provided and Figure XXX figure Melissa provided, the one comparing overall functional maturity at length and for the two species</strong>). Two sensitivities were run using the functional maturity L50% (and slope) estimated for 1) Rougheye Rockfish and 2) Blackspotted Rockfish (which mature at larger sizes on average than Rougheye Rockfish).</p>
+<p>Sensitivities were run using functional age at 50% maturity estimate for the species complex (n = 372) and for each species separately. Age at 50% maturity was estimated using the same methods as for length at 50% maturity (<strong>Table XXX table Melissa provided and Figure XXX figure Melissa provided, the one comparing overall functional maturity at age and for the two species</strong>).</p>
+</section>
+<section id="fecundity" class="level3">
+<h3 class="anchored" data-anchor-id="fecundity">Fecundity</h3>
+<p>The 2013 U.S. west coast stock assessment assumed that fecundity was proportional to weight. Dick et al.&nbsp;(2017) provided a study on rockfishes showing that rockfishes routinely have a non-proportional relationship of fecundity to weight, with larger individuals producing more eggs than expected only by weight. Neither Rougheye or Blackspotted rockfishes have a species- of subfamily-specific estimate for this relationship, so this stock assessment uses the unobserved Genus Sebastes values of <span class="math inline">\(a\)</span> = 6.538e-06 and <span class="math inline">\(b\)</span> = 4.043 using the F=aL^b relationship. In order to adapt the <span class="math inline">\(a\)</span> parameter for SS3, the equation (a*10^b)/1000 was used to scale the <span class="math inline">\(a\)</span> parameter to millions of eggs. This results in <span class="math inline">\(a\)</span> = 7.218466e-05.</p>
+</section>
+<section id="stock-recruitment-function-and-compensation" class="level3">
+<h3 class="anchored" data-anchor-id="stock-recruitment-function-and-compensation">Stock-Recruitment Function and Compensation</h3>
+<p>The Beverton-Holt stock recruit relationship is assumed, as it was in the 2013 assessment, to describe the relationship between spawning biomass and recruitment. The steepness parameter may be considered for estimation, but it is notoriously difficult to estimate in assessment models. The 2013 stock assessment used the previous rockfish steepness mean value of 0.77, but this has subsequently been updated to 0.72, to a value that represents a stock with somewhat lower recruitment compensation. Natural variation in recruitment (i.e., not deterministically taken from the stock-recruit curve) is apparent in the length and age data (as notable length or age classes growing/ageing over time), so deviations in recruitment are estimated.</p>
+</section>
+<section id="sex-ratio" class="level3">
+<h3 class="anchored" data-anchor-id="sex-ratio">Sex Ratio</h3>
+<p>No information on the sex ratio at birth was available so it was assumed to be 50:50.</p>
+</section>
+</section>
+<section id="environmental-and-ecosystem-data" class="level2">
+<h2 class="anchored" data-anchor-id="environmental-and-ecosystem-data">Environmental and ecosystem data</h2>
+<p>This stock assessment does not explicitly incorporate trophic interactions, habitat factors or environmental factors into the assessment model. More predation, diet and habitat work, and mechanistic linkages to environmental conditions would be needed to incorporate these elements into the stock assessment and should remain a priority. <span class="citation" data-cites="McClure:2023:VCC">@McClure:2023:VCC</span> report the climate vulnerability for several west coast groundfishes, including <code>r spp</code>. <code>r Spp</code> demonstrated both high biological sensitivity and high climate exposure risk, to give it an overall high vulnerability score to climate change. This result should also be considered with the fact that, like many rockfishes, periods of low productivity is not unusual to <code>r spp</code> and their extended longevity (though admittedly this seems shorter than previously believed and should be reconsidered) has historically allowed them to wait for advantageous productivity periods. Stressors such as habitat degradation and climate change could bring significant challenges to population sustainability. Regardless, no environmental or ecosystem data are directly incorporated into the stock assessment model.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
