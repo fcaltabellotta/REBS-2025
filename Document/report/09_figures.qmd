@@ -1485,6 +1485,66 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "index2_cpuefit_WCGBTS.png")
 )
 ```
+## Parameter estimates
+
+```{r} 
+#| label: fig-vbgf
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Estimated age and growth relatioship in the reference model .Shaded area indicates 95% distribution of length at age around estimated growth curve."
+#| fig-alt: "Values for the growth curve are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "bio1_sizeatage.png")
+)
+```
+
+```{r} 
+#| label: fig-sel-all
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Ending selectivity at length for each fishery and survey."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "sel01_multiple_fleets_length1.png")
+)
+```
+
+
+```{r} 
+#| label: fig-sel-comp
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Time-varying selectivity for each fleet and survey with time blocks."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "All_selectivityPlot.png")
+)
+```
+
+```{r} 
+#| label: fig-sel-all-age
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Ending selectivity at age derived from lengths for each fishery and survey."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "sel01_multiple_fleets_length1.png")
+)
+```
+
+
 
 ## Model outputs
 
@@ -1637,6 +1697,118 @@ knitr::include_graphics(
 
 
 ## Sensitivity Analyses and Retrospectives
+
+```{r}
+#| label: fig-sens_indices_spout
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Spawning output (millions of eggs) across data removal sensitivities (indices)."
+#
+knitr::include_graphics(
+    "Document/report/Sensis/output/indicescompare2_spawnbio_uncertainty.png"
+)
+```
+
+
+```{r}
+#| label: fig-sens_indices_relsp
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Relative spawning output (fraction unfished) across data removal sensitivities (indices)."
+#
+knitr::include_graphics(
+    "Document/report/Sensis/output/indicescompare4_Bratio_uncertainty.png"
+)
+```
+
+```{r}
+#| label: fig-sens_lens1_spout
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Spawning output (millions of eggs) across data removal sensitivities (length compositions by fleet)."
+#
+knitr::include_graphics(
+    "Document/report/Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png"
+)
+```
+
+
+```{r}
+#| label: fig-sens_lens1_relsp
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Relative spawning output (fraction unfished) across data removal sensitivities (length compositions by fleet)."
+#
+knitr::include_graphics(
+    "Document/report/Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png"
+)
+```
+
+```{r}
+#| label: fig-sens_lens2_spout
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Spawning output (millions of eggs) across data removal sensitivities (length compositions by source)."
+#
+knitr::include_graphics(
+    "Document/report/Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png"
+)
+```
+
+
+```{r}
+#| label: fig-sens_lens2_relsp
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Relative spawning output (fraction unfished) across data removal sensitivities (length compositions by source)."
+#
+knitr::include_graphics(
+    "Document/report/Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png"
+)
+```
+
+```{r}
+#| label: fig-sens_age_spout
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Spawning output (millions of eggs) across data removal sensitivities (age compositions by fleet)."
+#
+knitr::include_graphics(
+    "Document/report/Sensis/output/age_compscompare2_spawnbio_uncertainty.png"
+)
+```
+
+
+```{r}
+#| label: fig-sens_age_relsp
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Relative spawning output (fraction unfished) across data removal sensitivities (age compositions by fleet)."
+#
+knitr::include_graphics(
+    "Document/report/Sensis/output/age_compscompare4_Bratio_uncertainty.png"
+)
+```
+
+```{r}
+#| label: fig-sens_sum_data
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Relative change in management quantities across models conducted as sensitivities (removal of data sources)."
+#
+knitr::include_graphics(
+    "Document/report/Sensis/output/sens_summary.png"
+)
+```
 
 \newpage
 
