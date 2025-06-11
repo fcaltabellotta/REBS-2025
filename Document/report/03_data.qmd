@@ -136,7 +136,7 @@ Data from four fishery-independent surveys were used in this assessment:
 * Alaska Fishery Science Center Slope survey (1997, 1999-2001)
 * Northwest Fisheries Science Center Slope Center (1999-2002)
 
-These surveys temporal and spatial coverage is summarized in Table XX. 
+The surveys temporal and spatial coverage is summarized in Table XX. 
 
 Information produced by these surveys included indices of relative abundance (all four surveys), length-frequency distributions (WCGBTS and Triennial survey), and age-frequency distributions (WCGBTS). 
 
