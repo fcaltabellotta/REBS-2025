@@ -578,6 +578,179 @@ knitr::include_graphics(
 )
 ```
 
+## Fits to data
+
+```{r} 
+#| label: fig-agg-len-fit
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Aggregated length (cm) compositions over all years."
+#| fig-alt: "Each panel shows the expected and observed aggregate lengths for each fishery and survey. The expectations mostly follow the expected distributions for all length composition sources."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit__aggregated_across_time.png")
+)
+```
+
+```{r} 
+#| label: fig-len-fit-bt-1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Observed (gray density plot) and expected (density lines by sex) length compositions by year for the bottom trawl fishery in years available between 1995-2018.'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_flt1mkt0_page1.png")
+)
+```
+
+```{r} 
+#| label: fig-len-fit-bt-2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Observed (gray density plot) and expected (density lines by sex) length compositions by year for the bottom trawl fishery in years available between 2019-2024.'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_flt1mkt0_page2.png")
+)
+```
+
+```{r} 
+#| label: fig-len-fit-btdis
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Observed (gray density plot) and expected (density lines) length compositions by year for the bottom trawl discard fishery in years available between 2004-2023.'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_flt2mkt0.png")
+)
+```
+
+```{r} 
+#| label: fig-len-fit-nt-1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Observed (gray density plot) and expected (density lines by sex) length compositions by year for the non-trawl fishery in years available between 1996-2020.'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_flt3mkt0_page1.png")
+)
+```
+
+```{r} 
+#| label: fig-len-fit-nt-2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Observed (gray density plot) and expected (density lines by sex) length compositions by year for the non-trawl fishery in years available between 2021-2024.'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_flt3mkt0_page2.png")
+)
+```
+
+```{r} 
+#| label: fig-len-fit-ntdis
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Observed (gray density plot) and expected (density lines) length compositions by year for the midwater trawl fishery in years available between 2004-2024.'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_flt4mkt0.png")
+)
+```
+
+```{r} 
+#| label: fig-len-fit-midt
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Observed (gray density plot) and expected (density lines by sex) length compositions by year for the non-trawl discard fishery in years available between 2000-2023.'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_flt5mkt0.png")
+)
+```
+
+```{r} 
+#| label: fig-len-fit-ashop
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Observed (gray density plot) and expected (density lines by sex) length compositions by year for the at-sea-hake fishery in years available between 2003-2024.'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_flt6mkt0.png")
+)
+```
+
+```{r} 
+#| label: fig-len-fit-tri
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Observed (gray density plot) and expected (density lines by sex) length compositions by year for the Triennial Bottom Trawl Survey in years available between 1980-2004.'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_flt7mkt0.png")
+)
+```
+
+```{r} 
+#| label: fig-len-fit-akslope
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Observed (gray density plot) and expected (density lines by sex) length compositions by year for the Alaskan Slope Bottom Trawl Survey in years available between 1997-2001.'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_flt8mkt0.png")
+)
+```
+
+```{r} 
+#| label: fig-len-fit-wcgbts
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Observed (gray density plot) and expected (density lines by sex) length compositions by year for the West Coast Groundfish Bottom Trawl Survey in years available between 1980-2004.'N adj.' is the input sample size after data-weighting adjustment. N eff. is the calculated effective sample size used in the McAllister-Ianelli tuning method."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lenfit_flt10mkt0.png")
+)
+```
+
+\newpage
+
+
 ## Model outputs
 
 ```{r} 

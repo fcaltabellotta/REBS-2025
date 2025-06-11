@@ -53,19 +53,19 @@ SS_plots(replist)
 
 model_directory <- here::here(
   'models')
-base_model_name <- here::here(
+base_model_dir <- here::here(
   'models',
-  'base_model'
+  'RB_ref_model_updated'
 )
 #exe_loc <- here::here('models/base_model')
-base_model <- SS_read(base_model_name, ss_new = TRUE)
-base_out <- SS_output(base_model_name)
+base_model <- SS_read(base_model_dir, ss_new = TRUE)
+base_out <- SS_output(base_model_dir)
 
 ###############################################################
 #################  Proportional fecundity to weight ###########
 ###############################################################
 
-base_model <- SS_read(base_model_name, ss_new = TRUE)
+base_model <- SS_read(base_model_dir, ss_new = TRUE)
 
 sensi_mod <- base_model
 
@@ -75,6 +75,13 @@ sensi_mod$start$init_values_src <- 0
 
 #base model fecundity option is 2 (cubic), change it to 1 (linear)
 sensi_mod$ctl$fecundity_option <- 1
+
+#change a to 1, b to 0
+sensi_mod$ctl$MG_parms["Eggs_alpha_Fem_GP_1", ]$INIT <- 1
+sensi_mod$ctl$MG_parms["Eggs_alpha_Fem_GP_1", ]$PRIOR <- 1
+
+sensi_mod$ctl$MG_parms["Eggs_beta_Fem_GP_1", ]$INIT <- 0
+sensi_mod$ctl$MG_parms["Eggs_beta_Fem_GP_1", ]$PRIOR <- 0
 
 SS_write(
   sensi_mod,
@@ -89,10 +96,21 @@ r4ss::run(dir = sensi_dir, show_in_console = TRUE, extras = "-nohess")
 replist <- r4ss::SS_output(dir = sensi_dir)
 r4ss::SS_plots(replist)
 
+models <- c(base_model_dir, sensi_dir)
+models
+models_output <- SSgetoutput(dirvec = models)
+models_summary <- SSsummarize(models_output)
+SSplotComparisons(models_summary,
+                  plotdir = here::here("Rcode/SSplotComparisons_output/sensitivities/1_proportional_fecundity"),
+                  legendlabels = c("2025 base model", "Proportional fecundity"),
+                  print = TRUE
+)
+
+
 ####################################################
 #try this with ss_new = FALSE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-base_model <- SS_read(base_model_name, ss_new = FALSE)
+base_model <- SS_read(base_model_dir, ss_new = FALSE)
 
 sensi_mod <- base_model
 
@@ -120,7 +138,7 @@ r4ss::SS_plots(replist)
 #################  Functional maturity A50 ###################
 ###############################################################
 
-base_model <- SS_read(base_model_name, ss_new = TRUE)
+base_model <- SS_read(base_model_dir, ss_new = TRUE)
 
 sensi_mod <- base_model
 
@@ -150,11 +168,21 @@ r4ss::run(dir = sensi_dir, show_in_console = TRUE, extras = "-nohess")
 replist <- r4ss::SS_output(dir = sensi_dir)
 r4ss::SS_plots(replist)
 
+models <- c(base_model_dir, sensi_dir)
+models
+models_output <- SSgetoutput(dirvec = models)
+models_summary <- SSsummarize(models_output)
+SSplotComparisons(models_summary,
+                  plotdir = here::here("Rcode/SSplotComparisons_output/sensitivities/2_maturity_a50"),
+                  legendlabels = c("2025 base model", "Functional maturity A50"),
+                  print = TRUE
+)
+
 ###############################################################
 ###  Genetically confirmed Blackspotted functional L50  ############
 ###############################################################
 
-base_model <- SS_read(base_model_name, ss_new = TRUE)
+base_model <- SS_read(base_model_dir, ss_new = TRUE)
 
 sensi_mod <- base_model
 
@@ -181,11 +209,21 @@ r4ss::run(dir = sensi_dir, show_in_console = TRUE, extras = "-nohess")
 replist <- r4ss::SS_output(dir = sensi_dir)
 r4ss::SS_plots(replist)
 
+models <- c(base_model_dir, sensi_dir)
+models
+models_output <- SSgetoutput(dirvec = models)
+models_summary <- SSsummarize(models_output)
+SSplotComparisons(models_summary,
+                  plotdir = here::here("Rcode/SSplotComparisons_output/sensitivities/3_blackspotted_l50"),
+                  legendlabels = c("2025 base model", "Blackspotted functional maturity L50"),
+                  print = TRUE
+)
+
 ###############################################################
 ###  Genetically confirmed Rougheye functional L50  ############
 ###############################################################
 
-base_model <- SS_read(base_model_name, ss_new = TRUE)
+base_model <- SS_read(base_model_dir, ss_new = TRUE)
 
 sensi_mod <- base_model
 
@@ -212,11 +250,22 @@ r4ss::run(dir = sensi_dir, show_in_console = TRUE, extras = "-nohess")
 replist <- r4ss::SS_output(dir = sensi_dir)
 r4ss::SS_plots(replist)
 
+models <- c(base_model_dir, sensi_dir)
+models
+models_output <- SSgetoutput(dirvec = models)
+models_summary <- SSsummarize(models_output)
+SSplotComparisons(models_summary,
+                  plotdir = here::here("Rcode/SSplotComparisons_output/sensitivities/4_rougheye_l50"),
+                  legendlabels = c("2025 base model", "Rougheye functional maturity L50"),
+                  print = TRUE
+)
+
+
 ###############################################################
 ###################  Biological L50  ##########################
 ###############################################################
 
-base_model <- SS_read(base_model_name, ss_new = TRUE)
+base_model <- SS_read(base_model_dir, ss_new = TRUE)
 
 sensi_mod <- base_model
 
@@ -243,3 +292,31 @@ r4ss::run(dir = sensi_dir, show_in_console = TRUE, extras = "-nohess")
 replist <- r4ss::SS_output(dir = sensi_dir)
 r4ss::SS_plots(replist)
 
+models <- c(base_model_dir, sensi_dir)
+models
+models_output <- SSgetoutput(dirvec = models)
+models_summary <- SSsummarize(models_output)
+SSplotComparisons(models_summary,
+                  plotdir = here::here("Rcode/SSplotComparisons_output/sensitivities/5_biological_l50"),
+                  legendlabels = c("2025 base model", "Biological maturity L50"),
+                  print = TRUE
+)
+
+#################################################################
+
+#comparison plots for all repro sensitivities
+
+models <- c(base_model_dir, here::here('models/repro_sensitivities/proportional_fecundity'), 
+                            here::here('models/repro_sensitivities/maturity_a50'),
+                            here::here('models/repro_sensitivities/blackspotted_l50'),
+                            here::here('models/repro_sensitivities/rougheye_l50'),
+                            here::here('models/repro_sensitivities/biological_l50'))
+models
+models_output <- SSgetoutput(dirvec = models)
+models_summary <- SSsummarize(models_output)
+SSplotComparisons(models_summary,
+                  plotdir = here::here("Rcode/SSplotComparisons_output/sensitivities/6_all_repro_bio"),
+                  legendlabels = c("2025 base model", "Proportional fecundity", "Functional maturity A50", "Blackspotted functional maturity L50", "Rougheye functional maturity L50", "Biological maturity L50"),
+                  print = TRUE,
+                  legendloc = "bottomright"
+)
