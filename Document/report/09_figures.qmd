@@ -1301,6 +1301,7 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt10mkt0_page2.png")
 )
 ```
+
 ```{r} 
 #| label: fig-call-plot-wcgbts3
 #| echo: false 
@@ -1314,6 +1315,7 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt10mkt0_page3.png")
 )
 ```
+
 ```{r} 
 #| label: fig-call-plot-wcgbts4
 #| echo: false 
@@ -1327,6 +1329,7 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt10mkt0_page4.png")
 )
 ```
+
 ```{r} 
 #| label: fig-call-plot-wcgbts5
 #| echo: false 
@@ -1340,6 +1343,7 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt10mkt0_page5.png")
 )
 ```
+
 ```{r} 
 #| label: fig-call-plot-wcgbts6
 #| echo: false 
@@ -1351,6 +1355,134 @@ knitr::include_graphics(
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALfit_Andre_plotsflt10mkt0_page6.png")
+)
+```
+
+```{r} 
+#| label: fig-marage_bt
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Realized fits (lines) to the marginal age composition data (density) for the bottom trawl fishery."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_gstagefit_flt1mkt0.png")
+)
+```
+
+```{r} 
+#| label: fig-marage_nt
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Realized fits (lines) to the marginal age composition data (density) for the non-trawl fishery."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_gstagefit_flt3mkt0.png")
+)
+```
+
+```{r} 
+#| label: fig-marage_midt
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Realized fits (lines) to the marginal age composition data (density) for the midwater trawl fishery."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_gstagefit_flt5mkt0.png")
+)
+```
+
+```{r} 
+#| label: fig-marage_ashop
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Realized fits (lines) to the marginal age composition data (density) for the at-sea-hake fishery."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_gstagefit_flt6mkt0.png")
+)
+```
+
+```{r} 
+#| label: fig-marage_wcgbts
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Realized fits (lines) to the marginal age composition data (density) for the West Coast Groundfish Bottom Trawl survey."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_gstagefit_flt10mkt0.png")
+)
+```
+
+### Indices of Abundance
+
+```{r} 
+#| label: fig-index-tri
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Fit to index data for Triennial survey. Lines indicate 95% uncertainty interval around index values based on the assumption of lognormal error."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "index2_cpuefit_TRIENNIAL.png")
+)
+```
+
+```{r} 
+#| label: fig-index-akslope
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Fit to index data for the Alaska Slope survey. Lines indicate 95% uncertainty interval around index values based on the assumption of lognormal error."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "index2_cpuefit_AK_SLOPE.png")
+)
+```
+
+```{r} 
+#| label: fig-index-nwslope
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Fit to index data for Northwest Fisheries Science Center Slope survey. Lines indicate 95% uncertainty interval around index values based on the assumption of lognormal error."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "index2_cpuefit_NW_SLOPE.png")
+)
+```
+
+```{r} 
+#| label: fig-index-wcgbts
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Fit to index data for West Coast Groundfish Bottom Trawl survey. Lines indicate 95% uncertainty interval around index values based on the assumption of lognormal error."
+#| fig-alt: "The CompReport.sso contains the observed and expected values plotted in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "index2_cpuefit_WCGBTS.png")
 )
 ```
 
