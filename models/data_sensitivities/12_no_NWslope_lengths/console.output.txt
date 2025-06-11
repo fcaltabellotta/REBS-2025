@@ -1,0 +1,92 @@
+###
+console output
+2025-06-09 15:11:41.61965
+###
+ 
+ reading from starter.ss
+ reading from data file
+Data read successful 999
+
+ reading forecast file 
+ reading from control file
+End of control file successful! 999
+Begin setting up parameters ...  read parm file: ss3.par
+ found ss3.par
+ end of parameter section 
+Evaluating biology calculations once ... done
+Starting optimization of 'ss3' in phase 1 of 5 at Mon Jun  9 15:01:38 2025
+1 1 -log(L): 7333.96  Spbio: 511528 445061
+phase= 1 | nvar=136 | iter=  0 | nll=7.33e+03 | mag=4.84e-04 | par[  1]=MGparm[1]
+1 2 -log(L): 7333.96  Spbio: 511528 445061
+2 3 -log(L): 7333.96  Spbio: 511528 445061
+phase= 2 | nvar=146 | iter=  0 | nll=7.33e+03 | mag=8.66e-04 | par[  4]=MGparm[4]
+2 4 -log(L): 7333.96  Spbio: 511528 445061
+3 5 -log(L): 7333.96  Spbio: 511528 445061
+phase= 3 | nvar=176 | iter=  0 | nll=7.33e+03 | mag=8.66e-04 | par[  4]=MGparm[4]
+3 6 -log(L): 7333.96  Spbio: 511528 445061
+4 7 -log(L): 7333.96  Spbio: 511528 445061
+phase= 4 | nvar=200 | iter=  0 | nll=7.33e+03 | mag=1.02e-03 | par[199]=selparm[77]
+4 8 -log(L): 7334.08  Spbio: 513014 446454
+4 9 -log(L): 7333.96  Spbio: 511528 445062
+4 10 -log(L): 7333.96  Spbio: 511528 445062
+4 11 -log(L): 7333.96  Spbio: 511528 445062
+4 12 -log(L): 7333.96  Spbio: 511528 445062
+4 13 -log(L): 7333.96  Spbio: 511528 445062
+4 14 -log(L): 7333.96  Spbio: 511528 445062
+4 15 -log(L): 7333.96  Spbio: 511528 445062
+4 16 -log(L): 7333.96  Spbio: 511528 445062
+4 17 -log(L): 7333.96  Spbio: 511528 445062
+4 18 -log(L): 7333.96  Spbio: 511528 445062
+4 19 -log(L): 7333.96  Spbio: 511528 445062
+4 20 -log(L): 7333.96  Spbio: 511528 445062
+4 21 -log(L): 7333.96  Spbio: 511528 445062
+4 22 -log(L): 7333.96  Spbio: 511528 445062
+4 23 -log(L): 7333.96  Spbio: 511528 445062
+4 24 -log(L): 7333.96  Spbio: 511528 445062
+4 25 -log(L): 7333.96  Spbio: 511528 445062
+4 26 -log(L): 7333.96  Spbio: 511528 445062
+4 27 -log(L): 7333.96  Spbio: 511528 445062
+4 28 -log(L): 7333.96  Spbio: 511528 445062
+4 29 -log(L): 7333.96  Spbio: 511528 445062
+4 30 -log(L): 7333.96  Spbio: 511528 445062
+4 31 -log(L): 7333.96  Spbio: 511528 445062
+4 32 -log(L): 7333.96  Spbio: 511528 445062
+4 33 -log(L): 7333.96  Spbio: 511528 445062
+4 34 -log(L): 7333.96  Spbio: 511528 445062
+4 35 -log(L): 7333.96  Spbio: 511528 445062
+4 36 -log(L): 7333.96  Spbio: 511528 445062
+4 37 -log(L): 7333.96  Spbio: 511528 445062
+4 38 -log(L): 7333.96  Spbio: 511528 445062
+4 39 -log(L): 7333.96  Spbio: 511528 445062
+4 40 -log(L): 7333.96  Spbio: 511528 445062
+4 41 -log(L): 7333.96  Spbio: 511528 445062
+4 42 -log(L): 7333.96  Spbio: 511528 445062
+4 43 -log(L): 7333.96  Spbio: 511528 445062
+4 44 -log(L): 7333.96  Spbio: 511528 445062
+4 45 -log(L): 7333.96  Spbio: 511528 445062
+4 46 -log(L): 7333.96  Spbio: 511528 445062
+4 47 -log(L): 7333.96  Spbio: 511528 445062
+phase= 4 | nvar=200 | iter=  8 | nll=7.33e+03 | mag=1.52e-03 | par[  8]=MGparm[15]
+4 48 -log(L): 7333.96  Spbio: 511528 445062
+5 49 -log(L): 7333.96  Spbio: 511528 445062
+phase= 5 | nvar=213 | iter=  0 | nll=7.33e+03 | mag=1.52e-03 | par[  8]=MGparm[15]
+5 50 -log(L): 7334.46  Spbio: 517472 451224
+5 51 -log(L): 7333.96  Spbio: 511528 445062
+phase= 5 | nvar=213 | iter=  1 | nll=7.33e+03 | mag=7.85e-04 | par[  2]=MGparm[2]
+Optimization completed after 8 m 5.9 s with final statistics:
+  nll=7333.961600 | mag=7.84830e-04 | par[  2]=MGparm[2]
+
+5 52 -log(L): 7333.96  Spbio: 511528 445062
+Iterations: 52
+Finished calculating benchmarks
+Finished forecast
+Writing wtatage.ss_new
+Finished posteriors
+ finished appending to cumreport.sso 
+Finished final writing of report.sso
+Begin writing *.ss_new output files ... Finished writing *.ss_new output files
+
+!!  Run has completed  !! 
+!!  See warning.sso for 3 warnings  and 1 note 
+
+Finished running model 'ss3' after 10 m 2.7 s.
