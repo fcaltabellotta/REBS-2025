@@ -25,17 +25,12 @@ Model specifications looked at the estimation of individual and combinations of 
 
 - Life history estimation
 	- Natural mortality ($M$)
-		1. Estimate $M$
-		2. Lorenzen age varying $M$
-		3. Use Oregon 2023 assessment sex-specific M values (females = 0.19; males = 0.17)
-		4. Maintain sex ratio in age and length data (sex option 3) and estimate $M$
+		1. Fix natural mortality at the value used in the 2013 assessment ($M$ = 0.0420 yr^-1)
+		2. Estimate natural mortality for both sexes
+		3. Estimate natural mortality using Lorenzen's method
 	
 	- Growth parameters
-	 	6. Fix all growth parameters to external values
-	 	5. Fix all growth parameters to external values, estimate $M$
-		7. Estimate $L_min$
-	 	8. Fix $t_0$ = 0
-	 	9. Estimate $CV_{young}$ and $CV_{old}$
+	 	6. Fix growth parameters estimated externally: males ($L_{\infty}$ = 56.69 cm; $k$ = 0.08; $L_at_Amin$ = 0.32 cm) and females $L_{\infty}$ = 59.03 cm; $k$ = 0.07; $L_at_Amin$ = 0 cm)
 	
 	- Reproductive Biology
 	 	10. Use biological maturity ogive
