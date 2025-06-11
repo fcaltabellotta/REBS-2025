@@ -18,11 +18,9 @@ An extra effort was given to ensure the model did not rest on a local likelihood
 
 #### Lengths
 
-Fits to the length data are examined based on the Pearson residuals-at-length, the annual mean lengths, and aggregated length composition data for the commercial and recreational fleets. The aggregate fit to each length composition demonstrates acceptable fits to each fleet and survey source (@agg-len-fit). One noticeable behavior is the trade-off in fit between the fit in the bottom trawl fishery versus the fit in the at-sea-hake (ASHOP) fishery. This current model specification was the best trade off of fits between the two. 
+Fits to the length data are examined based on the Pearson residuals-at-length, the annual mean lengths, and aggregated length composition data for the commercial and recreational fleets. The aggregate fit to each length composition demonstrates acceptable fits to each fleet and survey source (@agg-len-fit). Once noticealb
 
-Fits to the annual length composition are provided for the following fisheries and surveys:
-
-* Bottom Trawl Fishery (@)
+Fits to the annual length composition are shown in [Appendix A](#app_a). 
 
 Pearson residuals of fits to the fishery and survey length data are reasonably small with no distinct patterns (Figure \ref{fig:lt-pearson-resids}). 
 
