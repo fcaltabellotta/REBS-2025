@@ -223,7 +223,7 @@ SSplotComparisons(models_summary,
 ###  Genetically confirmed Rougheye functional L50  ############
 ###############################################################
 
-base_model <- SS_read(base_model_name, ss_new = TRUE)
+base_model <- SS_read(base_model_dir, ss_new = TRUE)
 
 sensi_mod <- base_model
 
@@ -265,7 +265,7 @@ SSplotComparisons(models_summary,
 ###################  Biological L50  ##########################
 ###############################################################
 
-base_model <- SS_read(base_model_name, ss_new = TRUE)
+base_model <- SS_read(base_model_dir, ss_new = TRUE)
 
 sensi_mod <- base_model
 
