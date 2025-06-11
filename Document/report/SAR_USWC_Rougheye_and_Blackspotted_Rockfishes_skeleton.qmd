@@ -87,15 +87,17 @@ cat(a, sep = '\n')
 #| warning: false 
 #| eval: true 
 
+library(here)
+
 spp <- "Rougheye/Blackspotted Rockfishes"
 Spp <- "Rougheye/Blackspotted Rockfishes"
 
 #Main model directory
 #model_dir <- here::here("model", "_bridging", model_name)
-model_dir <- "C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/report/ref_model"
-plot_dir<-"C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/report/plots_4_doc"
-sens_dir <-"C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/report/Sensis"
-retro_dir <- "C:/Users/Jason.Cope/Documents/Github/REBS-2025/Document/report/Retros"
+model_dir <- file.path(here::here('Document','report','ref_model'))
+plot_dir<- file.path(here::here('Document','report','plots_4_doc'))
+sens_dir <- file.path(here::here('Document','report','Sensis'))
+retro_dir <- file.path(here::here('Document','report','Retros'))
 #Table directory
 table_dir <- file.path(model_dir, "tables")
 
