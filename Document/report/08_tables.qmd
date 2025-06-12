@@ -1,7 +1,7 @@
 # Tables 
 
 ```{r}
-#| label: management_summary
+#| label: tbl-management_summary
 #| warning: false
 #| echo: false
 #| tbl-cap: "Major management actions since 2000 that have impacted the management of the Rougheye/Blackspotted complex."
