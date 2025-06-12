@@ -56,8 +56,7 @@ With new fecundity parameters, the model produces spawning output rather that sp
 ## General Model Specifications
 
 ### Modelling Platform
-
-Stock Synthesis version 3.30.23.1 was used as the statistical catch-at-age modelling framework. This framework allows the integration of a variety of data types and model specifications. The Stock Assessment Continuum tool (https://github.com/shcaba/SS-DL-tool) was used also used to explore model efficiency, likelihood profiling, retrospective analyses, and plotting sensitivities. The companion R package r4ss (version 1.51.0) along with R version 4.4.3 were used to investigate and plot model fits.
+Stock Synthesis statistical catch-at-age modelling framework [@MethotWetzel2013], version 3.30.23.1, was used for this assessment. This framework allows the integration of a variety of data types and model specifications. The Stock Assessment Continuum tool (https://github.com/shcaba/SS-DL-tool) was also used to explore model efficiency, likelihood profiling, retrospective analyses, and plotting sensitivities. The companion R package r4ss (version 1.51.0) along with R version 4.4.3 were used to investigate and plot model fits.
 
 ### Model Structure
 
