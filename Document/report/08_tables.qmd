@@ -8,7 +8,7 @@
 
 management_summary <- read.csv(
   here::here("Document/report/rda_files/management-summary.csv"),
-  fileEncoding = "UTF-8"
+  fileEncoding = "latin1"
 )
 
 management_summary[] <- lapply(management_summary, function(x) {
