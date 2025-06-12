@@ -1,5 +1,28 @@
 # Tables 
- 
+
+```{r}
+#| label: management-summary
+#| warning: false
+#| echo: false
+#| tbl-cap: "Major management actions since 2000 that have impacted the management of the Rougheye/Blackspotted complex."
+
+management-summary <- read.csv(here::here("Document/report/rda_files/management-summary.csv"))
+management-summary |> 
+   gt::gt() |>
+   gt::cols_label(
+    `Year` = "Year",
+    `Management Action` = "Management Action"
+  ) |>
+   gt::tab_options(
+     table.font.size = 12,
+     latex.use_longtable = TRUE
+   ) |>
+   gt::as_latex()
+
+```
+
+\pagebreak
+
 ```{r}
 #| label: tbl-landings
 #| warning: false
