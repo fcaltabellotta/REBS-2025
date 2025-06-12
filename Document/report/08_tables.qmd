@@ -261,7 +261,9 @@ kableExtra::kable(
 
 \pagebreak
 
+
 <---- sensitivities --->
+
 
 ```{r}
 #| label: tbl-sensitivities-like-indices
@@ -303,7 +305,9 @@ table_sens(lens1)
 
 cat("\n\\end{landscape}\n") 
 
+
 \pagebreak
+
 
 ```{r}
 #| label: tbl-sensitivities-like-lens2
@@ -324,7 +328,9 @@ table_sens(lens2)
 
 cat("\n\\end{landscape}\n") 
 
+
 \pagebreak
+
 
 ```{r}
 #| label: tbl-sensitivities-like-age
@@ -345,7 +351,9 @@ table_sens(ages)
 
 cat("\n\\end{landscape}\n") 
 
+
 \pagebreak
+
 
 ::: {.landscape}
 
