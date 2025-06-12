@@ -1,13 +1,13 @@
 # Tables 
 
 ```{r}
-#| label: management-summary
+#| label: management_summary
 #| warning: false
 #| echo: false
 #| tbl-cap: "Major management actions since 2000 that have impacted the management of the Rougheye/Blackspotted complex."
 
-management-summary <- read.csv(here::here("Document/report/rda_files/management-summary.csv"))
-management-summary |> 
+management_summary <- read.csv(here::here("Document/report/rda_files/management-summary.csv"))
+management_summary |> 
    gt::gt() |>
    gt::cols_label(
     `Year` = "Year",
