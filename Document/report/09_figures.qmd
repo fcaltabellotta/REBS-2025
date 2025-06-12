@@ -775,6 +775,31 @@ knitr::include_graphics(
 ``` 
 
 ```{r} 
+#| label: fig-sex_comp_RSS
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Comparison of relative spawning output between one sex and two sex models."
+#| fig-alt: "Comparing relative stock size between one sex and two sex models."
+
+knitr::include_graphics(
+  file.path(plot_dir, "1vs2sex_Bratio.png")
+)
+``` 
+```{r} 
+#| label: fig-sex_comp_SO
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Comparison of spawning output between one sex and two sex models."
+#| fig-alt: "Comparing spawning output between one sex and two sex models."
+
+knitr::include_graphics(
+  file.path(plot_dir, "1v2sex_spawnbio.png")
+)
+``` 
+
+```{r} 
 #| label: fig-Discard_comp_RSS
 #| echo: false 
 #| warning: false 
@@ -786,7 +811,6 @@ knitr::include_graphics(
   file.path(plot_dir, "compare3_Bratio_discard_fleets.png")
 )
 ``` 
-
 ```{r} 
 #| label: fig-M-profile-explore
 #| echo: false 
