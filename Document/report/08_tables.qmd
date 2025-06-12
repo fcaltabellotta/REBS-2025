@@ -9,10 +9,10 @@
 management_summary <- read.csv(here::here("Document/report/rda_files/management-summary.csv"))
 management_summary |> 
    gt::gt() |>
-   gt::cols_label(
-    `Year` = "Year",
-    `Management_action` = "Management Action"
-  ) |>
+   #gt::cols_label(
+   # `Year` = "Year",
+   # `Management_action` = "Management Action"
+  #) |>
    gt::tab_options(
      table.font.size = 12,
      latex.use_longtable = TRUE
