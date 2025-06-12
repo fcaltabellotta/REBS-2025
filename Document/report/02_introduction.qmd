@@ -1,7 +1,14 @@
 # Introduction
+ Rougheye (*Sebastes aleutianus*) and Blackspotted (*Sebastes melanostictus*) rockfishes, two species that form one management complex. 
 
-This document presents the stock assessment for the Rougheye (*Sebastes aleutianus*) and Blackspotted (*Sebastes melanostictus*) rockfishes, two species that form one management complex. This report is for the year 2025 in state and federal waters from California to Washington State, excluding consideration of the Puget Sound and Salish Sea (@fig-map). It seeks to use available catch, biological compositions in the for of lengths and ages, and potential indices of abundance and is the first assessment since the 2013 stock assessment [@hicks_status_2013].
+Rougheye rockfish are a long-lived rockfish named after a series of 2–10 spines along the lower rim of their eyes.  They have also been called blackthroat or blacktip rockfish (Love et al. 2002, Love 2011). Blackspotted rockfish are distributed in similar locations as rougheye rockfish and it is very difficult to visually distinguish the two species. These two species may hybridize on occasion (Love 2011).  
 
+It has only been from recent genetic studies that these two separate species have been identified (Gharrett et al. 2005, Hawkins et al. 2005) and have had phenotypic characteristics useful for identifying the species in the field identified (Gharrett et al. 2005, Orr and Hawkins 2008).  Before then, data are available for one species called rougheye rockfish which included rougheye rockfish and blackspotted rockfish.  Due to the difficulty in distinguishing these two species and the lack of historical separation of the species in all of the data, this assessment combines any data for blackspotted rockfish with rougheye rockfish and provides management advice for the two species combined.  In this assessment, the term “rougheye rockfish” refers to rougheye/blackspotted rockfish unless specified.
+
+These species are also closely related to shortraker rockfish (S. borealis) and are sometimes difficult to distinguish from shortraker rockfish without looking at the gill rakers.  
+
+
+This document presents the stock assessment for the Rougheye (*Sebastes aleutianus*) and Blackspotted (*Sebastes melanostictus*) rockfishes, two species that form one management complex.  
 
 
 ## Choice of Stock Structure
@@ -24,7 +31,7 @@ While genetics studies have focused mostly on identification of the two species,
 `R Spp` are often associated with structure, such as hard, rocky bottoms and steep habitats. They are rarely found on the deep flats. They can be found alone or in aggregations [@love_rockfishes_2002], with aggregations often differentiated by age.  Younger fish may school and are often found in shallower waters on the shelf, junveiles and subadults can be found together, and larger fish may form larger aggregations in the Pacific Northwest during the autumn and winter. These two species may also hybridize on occasion [@love_certainly_2011]. These species are closely related to Shortraker Rockfish (*S. borealis*) and are sometimes difficult to distinguish from Shortraker Rockfish without looking at the gill rakers. One major distinguishing feature of Rougheye Rockfish are the 2–10 spines along the lower rim of their eyes, hence the common name "rougheye".
 
 ## A Map Showing the Scope of the Assessment
-This assessment treats the U.S. `r Spp` resource from the Mexican border to the Canadian border as a single coastwide stock. The U.S.-Canadian border is the northern boundary for the assessed stock, although the basis for this choice is due to political and current management needs rather than the population dynamics (@fig-map). 
+This assessment treats the U.S. `r Spp` resource from the Mexican border to the Canadian border as a single coastwide stock (@fig-map). The U.S.-Canadian border is the northern boundary for the assessed stock, although the basis for this choice is due to political and current management needs rather than the population dynamics  The assessment excludes consideration of the Puget Sound and Salish Sea.
 
 ## Important features of life history
 
