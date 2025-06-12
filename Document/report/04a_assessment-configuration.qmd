@@ -53,14 +53,18 @@ The list above documents only the most important changes made to this assessment
 
 With new fecundity parameters, the model produces spawning output rather that spawning biomass, and 2013 model 2025 spawning outputs are no longer comparable. However, we ran 2013 model with new fecundity parameters to allow for comparison between assessments, and the results of bridging analysis with most impactful changes are shown in @fig-SO_Bridging and @fig-Bratio_Bridging. This assessment (compared to 2013 assessment) estimates higher stock scale, primarily due to change in treatment of fishery selectivity parameters. Change in selectivity assumptions allow to substantially improve fits to length and age composition data in fisheries and surveys, while changes in life history parameters (specifically, natural mortality) allowed for model to anchor the model on natural mortality values consistent with maximum ages observed.    
 
-## General Model Specifications
+## General Model Structure and Specifications
+This stock assessment is for the Rougheye and Blackspotted rockfishes, two species that form one management complex. This assessment treats the U.S. `r Spp` resource from the Mexican border to the Canadian border as a single coastwide stock (@fig-map). The assessment excludes consideration of the Puget Sound and Salish Sea.
 
-### Modelling Platform
-Stock Synthesis statistical catch-at-age modelling framework [@MethotWetzel2013], version 3.30.23.1, was used for this assessment. This framework allows the integration of a variety of data types and model specifications. The Stock Assessment Continuum tool (https://github.com/shcaba/SS-DL-tool) was also used to explore model efficiency, likelihood profiling, retrospective analyses, and plotting sensitivities. The companion R package r4ss (version 1.51.0) along with R version 4.4.3 were used to investigate and plot model fits.
+This is a sex-specific model. The sex-ratio at birth is assumed to be 1:1. Females and males have separate growth curves (fully estimated within the model) and sex-specific weight-at-length parameters. The model assumes a constant natural mortality of 0.036 yr-1 for males, while natural mortality for females is estimated based on @hamel_development_2022.  The length frequency distributions are represented as thirty six 2-cm bins ranging between 10 and 80 cm. Population length bins are defined at a finer 2-cm scale, ranging between 4 and 84 cm. Age data is included as conditional age-at length compositions with bins ranging between 1 and 100 years. 
 
-### Model Structure
+The modeling period begins in 1892, and the stock prior to that is assumed to be in an unfished equilibrium condition. 
 
-### Area and Fleet Definitions {#sec-fleet}
+## Modelling Platform
+Stock Synthesis statistical catch-at-age modelling framework [@MethotWetzel2013], version 3.30.23.1, is used for this assessment. This framework allows the integration of a variety of data types and model specifications. The Stock Assessment Continuum tool (https://github.com/shcaba/SS-DL-tool) was also used to explore model efficiency, likelihood profiling, retrospective analyses, and plotting sensitivities. The companion R package r4ss (version 1.51.0) along with R version 4.4.3 were used to investigate and plot model fits.
+
+
+## Area and Fleet Definitions {#sec-fleet}
 This assessment treats the U.S. `r Spp` resource from the Mexican border to the Canadian border as a single coastwide stock. The U.S.-Canadian border is the northern boundary for the assessed stock, although the basis for this choice is due to political and current management needs rather than the population dynamics (@fig-map). 
 
 The model is structured to track six fleets and include data from four surveys. 
@@ -98,7 +102,7 @@ As reported in @sec-surveys, the following surveys are included in the model:
 
 We use length-based selectivity curves for all fleets for this stock assessment model (as was done in the 2013 assessment), as there is no evidence that significant age-based selectivity is occurring. We considered logistic and dome-shaped selectivity options for various combinations of fleets and time periods during model development. 
 
-### Model Likelihood Components
+## Model Likelihood Components
 
 There are five primary likelihood components for each assessment model:
  
