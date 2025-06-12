@@ -2241,10 +2241,10 @@ into the stock assessment model.
 
 \newpage{}
 
-\section{Assessment}\label{assessment}
+\section{Model}\label{model}
 
-\subsection{History of Modeling
-Approaches}\label{history-of-modeling-approaches}
+\subsection{History of Modeling Approaches Used for this
+Stock}\label{history-of-modeling-approaches-used-for-this-stock}
 
 Rougheye Rockfish (not including Blackspotted) on the U.S. Pacific Coast
 was fist evaluated in 2010 by Dick and MacCall
@@ -2283,8 +2283,8 @@ with current statistical methods and best practices, and re-evaluated
 modelling assumptions. Detailed description of changes made since 2013
 assessment is provided in Section~\ref{sec-model}.
 
-\subsection{Most Recent STAR Panel
-Recommendations}\label{most-recent-star-panel-recommendations}
+\subsection{Response to Most Recent STAR Panel
+Recommendations}\label{response-to-most-recent-star-panel-recommendations}
 
 There were several recommendations from the 2013 STAR panel, broken into
 two categories
@@ -2352,22 +2352,11 @@ recommendations}\label{stock-specific-recommendations}
   discussed in the stock structure section of the document.}
 \end{enumerate}
 
-\subsection{Response to SSC Groundfish Subcommittee
-Recommendations}\label{response-to-ssc-groundfish-subcommittee-recommendations}
+\subsection{Bridging analysis, including description of new modeling
+approaches and other changes from the last
+assessment}\label{bridging-analysis-including-description-of-new-modeling-approaches-and-other-changes-from-the-last-assessment}
 
-\subsection{Current Modelling
-Platform}\label{current-modelling-platform}
-
-Stock Synthesis version 3.30.23.1 was used as the statistical
-catch-at-age modelling framework. This framework allows the integration
-of a variety of data types and model specifications. The Stock
-Assessment Continuum tool (https://github.com/shcaba/SS-DL-tool) was
-used also used to explore model efficiency, likelihood profiling,
-retrospective analyses, and plotting sensitivities. The companion R
-package r4ss (version 1.51.0) along with R version 4.4.3 were used to
-investigate and plot model fits.
-
-\subsection{Bridging the Assessment Model from Stock Synthesis 3.24
+\subsubsection{Bridging the Assessment Model from Stock Synthesis 3.24
 (2013) to 3.30
 (2025)}\label{bridging-the-assessment-model-from-stock-synthesis-3.24-2013-to-3.30-2025}
 
@@ -2389,10 +2378,27 @@ that we can move forward using the latest version of SS3 without concern
 of inheriting any model output differences due to the choice of the SS3
 version.
 
+\subsection{General model
+specifications}\label{general-model-specifications}
+
+\subsubsection{Modelling Platform}\label{modelling-platform}
+
+Stock Synthesis version 3.30.23.1 was used as the statistical
+catch-at-age modelling framework. This framework allows the integration
+of a variety of data types and model specifications. The Stock
+Assessment Continuum tool (https://github.com/shcaba/SS-DL-tool) was
+used also used to explore model efficiency, likelihood profiling,
+retrospective analyses, and plotting sensitivities. The companion R
+package r4ss (version 1.51.0) along with R version 4.4.3 were used to
+investigate and plot model fits.
+
 \subsection{Model Structure, Evaluation, and
 Specification}\label{sec-model}
 
-\subsubsection{Fleet and Survey Designations}\label{sec-fleet}
+\subsubsection{Area and Fleet Definitions}\label{sec-fleet}
+
+This is a coastwide, single area model for Rougheye/Blackspotted
+Rockfishes, two species that form one management complex.
 
 The model is structured to track six fleets and include data from four
 surveys.
@@ -2427,15 +2433,8 @@ hook-and-line and at-sea hake fishery bycatch. For the first two fleets
 discards, with selectivity and retention curves estimated within the
 model.
 
-Historically, no discarding was observed for Rougheye/Blackspotted
-Rockfishes (\citeproc{ref-pikitch_evaluation_1988}{Pikitch, Erickson,
-and Wallace 1988}), see Section~\ref{sec-historical_discard} for
-details. The 2013 assessment estimated zero historical discard for both
-trawl and fixed gear fleets, based on the available data. In this
-assessment, we treat discards in trawl and non-trawl fisheries as
-separate fleets from landings fleets, with WCGOP data informing removals
-in these fleets, observed since the introduction of trip limits for
-rockfish in early 2000.
+In this assessment, we treat discards in trawl and non-trawl fisheries
+as separate fleets from landings fleets.
 
 Treating discards as separates fleets from landings provides several
 advantages, including:
@@ -2464,27 +2463,34 @@ advantages, including:
 The change in treating discards as separate fleets does not impact model
 results (Figure~\ref{fig-Discard_comp_SO} and
 Figure~\ref{fig-Discard_comp_RSS}), regardless of the selectivity form
-being assumed for the discard fleets.
+being assumed for the discard fleets. Historically, no discarding was
+observed for Rougheye/Blackspotted Rockfishes
+(\citeproc{ref-pikitch_evaluation_1988}{Pikitch, Erickson, and Wallace
+1988}), see Section~\ref{sec-historical_discard} for details. The 2013
+assessment estimated zero historical discard for both trawl and fixed
+gear fleets, based on the available data. In this assessment, therefore,
+we assume no discard until early 2000, when the first
+Rougheye/Blackspotted Rockfishes was observed after the introduction of
+trip limits for rockfish.
 
-In this assessment, we also split trawl fishery data into bottom trawl
-and mid-water trawl fleets. Catch data indicates that contribution of
-mid-water trawl catches gradually grew over the past 20 years, and now
-mid-water trawl catches represent majority of the trawl removals
-(Figure~\ref{fig-landings}). Historical information on mid-water catches
-of Rougheye/Blackspotted Rockfishes comes from Pikitch, Erickson, and
-Wallace (\citeproc{ref-pikitch_evaluation_1988}{1988}), which has no
-records of mid-water trawl catches of Rougheye/Blackspotted Rockfishes,
-neither retained nor discarded. Also, Oregon historical catch
-reconstruction (\citeproc{ref-karnowski_historical_2014}{Karnowski,
-Gertseva, and Stephens 2014}) has one record of only 0.0002 metric tons
-of Rougheye/Blackspotted Rockfishes taken in 1985, even though the
+We also split trawl fishery data into bottom trawl and mid-water trawl
+fleets. Catch data indicates that contribution of mid-water trawl
+catches gradually grew over the past 20 years, and now they represent
+majority of the trawl removals (Figure~\ref{fig-landings}). Historical
+information on mid-water catches of Rougheye/Blackspotted Rockfishes
+comes from Pikitch, Erickson, and Wallace
+(\citeproc{ref-pikitch_evaluation_1988}{1988}), which has no records of
+Rougheye/Blackspotted Rockfishes mid-water trawl catches, neither
+retained nor discarded. Also, Oregon historical catch reconstruction
+(\citeproc{ref-karnowski_historical_2014}{Karnowski, Gertseva, and
+Stephens 2014}) has only one record of 0.0002 metric tons of
+Rougheye/Blackspotted Rockfishes taken in 1985, even though the
 mid-water trawl catches had their own market category in Oregon since
 the early-1980s (\citeproc{ref-karnowski_historical_2014}{Karnowski,
 Gertseva, and Stephens 2014}), and multiple rockfish species are
 reported as caught by this gear. This information suggest that
 historically Rougheye/Blackspotted Rockfishes mid-water catches were
-negligible. In the model, the catches in the contemporary mid-water
-trawl fleet are informed by PacFIN.
+negligible.
 
 As reported in Section~\ref{sec-surveys}, the following surveys are
 included in the model:
@@ -2792,8 +2798,6 @@ values. Through the jittering and likelihood profiles, the present
 reference model represents the best fit to the data given the
 assumptions.
 
-\subsection{Base Model Results}\label{base-model-results}
-
 \subsubsection{Fits to the Data}\label{fits-to-the-data}
 
 \paragraph{Lengths}\label{lengths}
@@ -2912,7 +2916,95 @@ measure indicate the indices contribute little influence to the model
 
 \subsubsection{Parameter Estimates}\label{parameter-estimates}
 
+Estimated parameters by category are given in Table~\ref{tbl-n-param}.
+The reference model parameter estimates along with asymptotic standard
+errors are shown in Table~\ref{tbl-param} and the likelihood components
+are shown in Table~\ref{tbl-likes}. Estimates of derived outputs and
+reference points and approximate 95 percent asymptotic confidence
+intervals are provided in Table~\ref{tbl-ref-points}.
+
+The estimate of female natural mortality is higher than the assumed
+value for males, which fits the expectation given the oldest individuals
+in the population are all males, and within reason (0.039) given the
+oldest individual aged female sampled.
+
+Estimated growth parameters values are similar to the externally
+estimated values (Table~\ref{tbl-param} and Figure~\ref{fig-vbgf}),
+though with some important difference. The estimated \(L_{\infty}\) and
+\(k\) for both sexes were slightly greater and lower than the values
+estimated externally, respectively. This is not surprising, given
+external fits assume all variability is in the length at age, while the
+model incorporates ageing error. Both females and males reach their
+maximum size at relatively young ages (\textless{} half their presumed
+longevity), thus possibly limiting the information content of lengths on
+the underlying age structure.
+
+Estimated ending selectivity curves for each fleet and survey
+(Figure~\ref{fig-sel-all}) are a mix of dome-shaped (for bottom trawl
+gears) and logistic (for midwater gears) and look plausible given the
+biology (i.e., as a model convergence check for realism, the selectivity
+curves must look plausible). The surveys show the greatest degree of
+dome-shapeness, while the fisheries selectivities included sampling of
+at least some of the larger individuals. Time-varying selectivity showed
+mostly the same functional form for each fleet, despite changes in the
+selectivity, except for the non-trawl fishery, which changed from
+dome-shaped in the earlier blocks to logistic in the most recent time
+period (Figure~\ref{fig-sel-tv-comp}). The realized age selectivity
+based on the length-based selectivity show even more truncated sampling
+of older individuals in some of the dome-shaped fleets
+(Figure~\ref{fig-sel-all-age}). Values for the estimated selectivity
+parameters are in Table~\ref{tbl-param}.
+
+The estimate of initial recruitment (\(lnR_0\)) is much higher than the
+previous assessment (6.995 vs.~6.20). While this is a large increase in
+the scale of the stock, a value of 6.995 is not unusual for shelf and/or
+slope rockfish species. The estimate of (\(lnR_0\)) for
+Rougheye/Blackspotted Rockfishes is well within the range of other
+groundfishes in similar habitat (). And given this assessment is for two
+species, the estimate for (\(lnR_0\)) is reasonable. There is also a
+very large variability estimated for this parameter (Coefficient of
+variation = 0.621/6.995), thus scale is generally very poorly informed
+in this model.
+
 \subsubsection{Population Trajectory}\label{population-trajectory}
+
+The predicted spawning output (in millions of eggs) is provided in
+Table~\ref{tbl-ts} and plotted in Figure~\ref{fig-spawnout}. Estimated
+spawning output shows a decline in the early part of the time series due
+to poor recruitment, but rise before 1980 from offsetting recruitments
+(all not well informed), followed by a slight decline during the
+heaviest period of fishing, though moderated by recruitments in several
+years over the past 4 decades. The uncertainty around the estimate of
+spawning output is enormous, highlighting a major feature of the model
+output.
+
+Relative spawning output never declined below the management target
+(\(SO_{40\%}\)) and currently is estimated well above the target
+(Figure~\ref{fig-depl}; 0.87 in 2025). The uncertainty in stocks status
+also does not support the stock being below the management target of
+\(SO_{40\%}\). This uncertainty is based only on the asymptotic
+estimation of variance from one risk neutral model. Further uncertainty
+exploration is needed to capture a fuller range of uncertainty (see
+Sensitivity section).
+
+The time series of estimated annual recruitment deviations are shown in
+Figure~\ref{fig-recdevs}. The bias adjustment plot
+(Figure~\ref{fig-biasramp}) indicates that the most informed recruitment
+deviations occur after 1980. While post-1980 is the most informed, the
+recruitment deviations before that time period, while less assure, are
+important for the model to prepare the population structure for the
+upcoming increase in fishing while reconciling weak, but still present,
+signals in recruitment from the biological compositions that can contain
+information on recruitment for decades given the long-liveness of these
+species. Sensitvities to when recruitment estimation begins in the model
+is shown in the Sensitivity section. Numbers of age-0 individuals
+indicate those years of particularly strong recruitment
+(Figure~\ref{fig-recruits}). Noticeable recruitment years are seen in
+1988, 1993, 1999, 2008, 2010, 2012, and 2017 (Figure~\ref{fig-SR}). This
+amounts to roughly two notable recruitments per decade. Given this
+assessment is tracking two species, it is hard to tell whether the
+species are synchronized or showing their own recruiment pulse in this
+signal.
 
 \newpage{}
 
@@ -3030,32 +3122,33 @@ stated.
     \end{enumerate}
   \item
     Reproductive Biology
-
-    \begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{9}
-    \tightlist
-    \item
-      Use biological maturity ogive
-    \item
-      Use functional maturity ogive
-    \item
-      Fecundity proportional to weight
-    \end{enumerate}
-  \item
-    Recruitment estimation
-
-    \begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{12}
-    \tightlist
-    \item
-      No recruitment estimation
-    \item
-      Estimate recruitment for all years in the model
-    \end{enumerate}
   \end{itemize}
 \end{itemize}
+
+Sensitivity analyses were conducted to examine the impacts of including
+different reproductive biology data and parameterization in the
+assessment. We examined using proportional fecundity to weight (instead
+of an exponential relationship), functional maturity at age (instead of
+length), functional maturity at length for Blackspotted Rockfish
+(instead of all data available for the complex), functional maturity at
+length for Rougheye Rockfish (instead of all data available for the
+complex), and biological maturity at length for the complex (instead of
+functional maturity at length for the complex). Summaries of the model
+results for these sensitivities are presented in \textbf{Table X} and
+\textbf{Figure X}. Model output showed that the base model was most
+sensitive to using maturity at age instead of maturity at length, with a
+decrease in relative depletion from the 1970's to 1990's using maturity
+at age. For this long-lived species, age may be a more precise
+determination of maturity (because there is a wide range of lengths per
+age); however, age data is more limited. The base model was less
+sensitive to the other changes, with similar output between the base and
+alternative models.
+
+\begin{verbatim}
+- Recruitment estimation
+    13. No recruitment estimation
+    14. Estimate recruitment for all years in the model
+\end{verbatim}
 
 Other
 
@@ -3666,39 +3759,6 @@ Retention & 0 \\
 Retention time-variation & 0 \\ 
 Age selectivity & 0 \\ 
 Age selectivity time-variation & 0 \\ 
-\bottomrule
-
-\end{longtable}
-
-\endgroup
-
-\newpage{}
-
-\begingroup
-\fontsize{9.0pt}{10.8pt}\selectfont
-
-\begin{longtable}{lr}
-
-\caption{\label{tbl-likes}Likelihood components by source.}
-
-\tabularnewline
-
-\toprule
-Label & Total \\ 
-\midrule\addlinespace[2.5pt]
-TOTAL & 7,334.0 \\ 
-Catch & 0.0 \\ 
-Equil catch & 0.0 \\ 
-Survey & -26.8 \\ 
-Length comp & 574.8 \\ 
-Age comp & 6,783.5 \\ 
-Recruitment & 2.3 \\ 
-InitEQ Regime & 0.0 \\ 
-Forecast Recruitment & 0.0 \\ 
-Parm priors & 0.1 \\ 
-Parm softbounds & 0.0 \\ 
-Parm devs & 0.0 \\ 
-Crash Pen & 0.0 \\ 
 \bottomrule
 
 \end{longtable}
@@ -5279,6 +5339,39 @@ prior information {[}distribution(mean, SD){]} used in the base model.}
 \global\setlength{\tabcolsep}{\Oldtabcolsep}
 
 \renewcommand*{\arraystretch}{1}
+
+\newpage{}
+
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{lr}
+
+\caption{\label{tbl-likes}Likelihood components by source.}
+
+\tabularnewline
+
+\toprule
+Label & Total \\ 
+\midrule\addlinespace[2.5pt]
+TOTAL & 7,334.0 \\ 
+Catch & 0.0 \\ 
+Equil catch & 0.0 \\ 
+Survey & -26.8 \\ 
+Length comp & 574.8 \\ 
+Age comp & 6,783.5 \\ 
+Recruitment & 2.3 \\ 
+InitEQ Regime & 0.0 \\ 
+Forecast Recruitment & 0.0 \\ 
+Parm priors & 0.1 \\ 
+Parm softbounds & 0.0 \\ 
+Parm devs & 0.0 \\ 
+Crash Pen & 0.0 \\ 
+\bottomrule
+
+\end{longtable}
+
+\endgroup
 
 \newpage{}
 
@@ -7109,6 +7202,61 @@ around index values based on the assumption of lognormal error.}
 
 \end{figure}%
 
+\subsection{Parameter estimates}\label{parameter-estimates-1}
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/bio1_sizeatage.png}
+
+}
+
+\caption{\label{fig-vbgf}Estimated age and growth relatioship in the
+reference model .Shaded area indicates 95\% distribution of length at
+age around estimated growth curve.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/sel01_multiple_fleets_length1.png}
+
+}
+
+\caption{\label{fig-sel-all}Ending selectivity at length for each
+fishery and survey.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/All_selectivityPlot.png}
+
+}
+
+\caption{\label{fig-sel-tv-comp}Time-varying selectivity for each fleet
+and survey with time blocks.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/sel01_multiple_fleets_length1.png}
+
+}
+
+\caption{\label{fig-sel-all-age}Ending selectivity at age derived from
+lengths for each fishery and survey.}
+
+\end{figure}%
+
 \subsection{Model outputs}\label{model-outputs}
 
 \begin{figure}[H]
@@ -7119,8 +7267,8 @@ around index values based on the assumption of lognormal error.}
 
 }
 
-\caption{\label{fig-sb}Estimated time series of spawning output for the
-base model.}
+\caption{\label{fig-spawnout}Estimated time series of spawning output
+(in millions of eggs) for the reference model.}
 
 \end{figure}%
 
@@ -7133,24 +7281,9 @@ base model.}
 }
 
 \caption{\label{fig-depl}Estimated time series of fraction of unfished
-spawning output for the base model.}
+spawning output for the reference model.}
 
 \end{figure}%
-
-\begin{figure}[H]
-
-\centering{
-
-\includegraphics{ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
-
-}
-
-\caption{\label{fig-recruits}Estimated time series of age-0 recruits for
-the base model.}
-
-\end{figure}%
-
-\pagebreak
 
 \begin{figure}[H]
 
@@ -7178,6 +7311,36 @@ deviations (red line). Points are transformed variances relative to the
 assumed variance of recruitment.}
 
 \end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
+
+}
+
+\caption{\label{fig-recruits}Estimated time series of age-0 recruits for
+the base model.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/SR_curve2.png}
+
+}
+
+\caption{\label{fig-SR}Stock-recruit curve with labels on first, last,
+and years with (log) deviations \textgreater{} 0.5. Point colors
+indicate year, with warmer colors indicating earlier years and cooler
+colors in showing later years.}
+
+\end{figure}%
+
+\pagebreak
 
 \begin{figure}[H]
 

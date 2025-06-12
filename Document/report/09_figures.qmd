@@ -1517,7 +1517,7 @@ knitr::include_graphics(
 
 
 ```{r} 
-#| label: fig-sel-comp
+#| label: fig-sel-tv-comp
 #| echo: false 
 #| warning: false 
 #| eval: true 
@@ -1549,12 +1549,12 @@ knitr::include_graphics(
 ## Model outputs
 
 ```{r} 
-#| label: fig-sb
+#| label: fig-spawnout
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Estimated time series of spawning output for the base model."
-#| fig-alt: ""
+#| fig-cap: "Estimated time series of spawning output (in millions of eggs) for the reference model."
+#| fig-alt: "Values are provided in the Report.sso file."
 #| fig-pos: H
 
 knitr::include_graphics(
@@ -1568,8 +1568,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Estimated time series of fraction of unfished spawning output for the base model."
-#| fig-alt: ""
+#| fig-cap: "Estimated time series of fraction of unfished spawning output for the reference model."
+#| fig-alt: "Values are provided in the Report.sso file."
 #| fig-pos: H
 
 knitr::include_graphics(
@@ -1579,30 +1579,12 @@ knitr::include_graphics(
 
 
 ```{r} 
-#| label: fig-recruits
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Estimated time series of age-0 recruits for the base model."
-#| fig-alt: ""
-#| fig-pos: H
-
-knitr::include_graphics(
-  file.path(model_dir, "plots", "ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png")
-)
-
-```
-
-\pagebreak
-
-
-```{r} 
 #| label: fig-recdevs
 #| echo: false 
 #| warning: false 
 #| eval: true 
 #| fig-cap: "Estimated time series of recruitment deviations for the base model."
-#| fig-alt: ""
+#| fig-alt: "Values are provided in the Report.sso file."
 #| fig-pos: H
 
 knitr::include_graphics(
@@ -1611,15 +1593,13 @@ knitr::include_graphics(
 
 ```
 
-
-
 ```{r} 
 #| label: fig-biasramp
 #| echo: false 
 #| warning: false 
 #| eval: true 
 #| fig-cap: "Bias adjustment applied to the recruitment deviations (red line). Points are transformed variances relative to the assumed variance of recruitment."
-#| fig-alt: ""
+#| fig-alt: "Values are provided in the Report.sso file."
 #| fig-pos: H
 
 knitr::include_graphics(
@@ -1628,6 +1608,37 @@ knitr::include_graphics(
 
 ```
 
+```{r} 
+#| label: fig-recruits
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Estimated time series of age-0 recruits for the base model."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png")
+)
+
+```
+
+```{r} 
+#| label: fig-SR
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Stock-recruit curve with labels on first, last, and years with (log) deviations > 0.5. Point colors indicate year, with warmer colors indicating earlier years and cooler colors in showing later years."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "SR_curve2.png")
+)
+
+```
+
+\pagebreak
 
 ```{r} 
 #| label: fig-spr
@@ -1635,7 +1646,7 @@ knitr::include_graphics(
 #| warning: false 
 #| eval: true 
 #| fig-cap: "Estimated time series of fishing intensity for the base model."
-#| fig-alt: ""
+#| fig-alt: "Values are provided in the Report.sso file."
 #| fig-pos: H
 
 knitr::include_graphics(
@@ -1651,7 +1662,7 @@ knitr::include_graphics(
 #| warning: false 
 #| eval: true 
 #| fig-cap: "Phase plot of fishing intensity versus fraction unfished for the base model."
-#| fig-alt: ""
+#| fig-alt: "Values are provided in the Report.sso file."
 #| fig-pos: H
 
 knitr::include_graphics(
@@ -1667,7 +1678,7 @@ knitr::include_graphics(
 #| warning: false 
 #| eval: true 
 #| fig-cap: "Estimated yield curve with reference points for the base model."
-#| fig-alt: ""
+#| fig-alt: "Values are provided in the Report.sso file."
 #| fig-pos: H
 
 knitr::include_graphics(
@@ -1684,7 +1695,7 @@ knitr::include_graphics(
 #| warning: false 
 #| eval: true 
 #| fig-cap: "Dynamic B0 plot. The lower line shows the time series of estimated spawning output in the presence of fishing mortality. The upper line shows the time series that could occur under the same dynamics (including deviations in recruitment), but without fishing. The point at the left represents the unfished equilibrium."
-#| fig-alt: ""
+#| fig-alt: "Values are provided in the Report.sso file."
 #| fig-pos: H
 
 knitr::include_graphics(
