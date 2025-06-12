@@ -6,20 +6,28 @@
 #| echo: false
 #| tbl-cap: "Major management actions since 2000 that have impacted the management of the Rougheye/Blackspotted complex."
 
-management_summary <- read.csv(here::here("Document/report/rda_files/management-summary.csv"),
-  fileEncoding= "UTF-8"
-  )
-management_summary |> 
-   gt::gt() |>
-   gt::cols_label(
+management_summary <- read.csv(
+  here::here("Document/report/rda_files/management-summary.csv"),
+  fileEncoding = "UTF-8"
+)
+
+management_summary[] <- lapply(management_summary, function(x) {
+  x <- gsub("°", "\\\\textdegree{}", x, fixed = TRUE)
+  enc2utf8(as.character(x))
+})
+
+management_summary |>
+  gt::gt() |>
+  gt::cols_label(
     `Year` = "Year",
     `Management_action` = "Management Action"
-  #) |>
-   gt::tab_options(
-     table.font.size = 12,
-     latex.use_longtable = TRUE
-   ) |>
-   gt::as_latex()
+  ) |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  gt::as_latex()
+
 
 ```
 
