@@ -20,7 +20,7 @@ This document presents the stock assessment for the Rougheye (*Sebastes aleutian
 catches_es_table |>
   gt::gt() |>
   gt::fmt_number(
-    columns = 2:7, # depends on number of fleets with catch
+    columns = 2:9, # depends on number of fleets with catch
     decimals = 2
   ) |>
   gt::tab_options(
