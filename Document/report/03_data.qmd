@@ -100,7 +100,7 @@ Age distributions were included in the model as conditional-age-at-length (CAAL)
 
 The filtering and processing of the PacFIN length and age composition data were conducted using the \gls{pacfintools} package in R (Wetzel et al. 2025). The filtering steps included removing samples with missing vital information. 
 
-@fig-length_flt1_1 through @fig-caal_flt6_2 show the commercial length and age frequencies used in the model for each fleet, by year.
+@fig-length_flt1_1 through @fig-length_flt5 show length frequencies for bottom trawl, non-trawl and mid-water fleets by year, and @fig-caal_flt1_1 through @fig-caal_flt5 show the commercial length and CAAL distributions by year for the same fleets. 
 
 The initial input values for length compositions in this assessment were calculated as a function of the number of trips and number of fish via the Stewart Method (pers.comm. I. Stewart, International Pacific Halibut Commission (IPHC)). The method is based on analysis of the input and model derived effective sample sizes from West Coast groundfish stock assessments. A piece-wise linear regression was used to estimate the increase in effective sample size per sample based on fish-per-sample and the maximum effective sample size for large numbers of individual fish. The resulting equations are:
 
@@ -115,16 +115,18 @@ Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is 
 The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
 ##### Commercial Discard Lengths
-Discard length composition data for both bottom trawl and non-trawl discard fleets were available from WCGOP. Discard length composition data were not sex-specific. Discard raw legnth observations were expanded to the haul level, to account for differences in catch among hauls. 
+Discard length composition data for both bottom trawl and non-trawl discard fleets were available from WCGOP. Discard length composition data were not sex-specific. Discard raw length observations were expanded to the haul level, to account for differences in catch among hauls (@fig-length_flt2 and @fig-length_flt4). 
 
 The initial input values for length compositions were calculated via the Stewart Method (see above). 
 
 No age data were available for discarded fish.
 
 ##### At-sea hake Fishery Length and Age Compositions
-The sex-specific length and age data for at-sea hake fleet were collected by the at-sea hake observer program (a-shop) and available through NORPAC database. Input sample sizes for length compositions were based on the number of hauls sampled by year. 
+The sex-specific length and age data for at-sea hake fleet were collected by the at-sea hake observer program (a-shop) and available through NORPAC database (@fig-length_flt2 and @fig-length_flt4). 
 
-Age distributions were included in the model as CAAL observations, binned according to length, age, sex, and year. The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
+Age distributions were included in the model as CAAL observations, binned according to length, age, sex, and year (@fig-caal_flt6_1 through @fig-caal_flt6_2). 
+
+Input sample sizes for length compositions were based on the number of hauls sampled by year. The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
 The marginal age compositions were constructed, but only used in the model for evaluating the implied fits, while the CAAL data were used in the likelihood.
 
@@ -166,9 +168,13 @@ Length bins from 1o to 80 cm in 2 cm increments were used to summarize the lengt
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in **Table XX**.
 
-The input sample sizes for length composition data were calculated based on Stewart and Hamel [-@stewart_bootstrapping_2014] as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
+
 
 Age distributions included bins from age 1 to age 100, with the last bin including all fish of greater age. **Table XX** shows the number of ages taken by the survey. Age distributions were included in the model as CAAL observations. The marginal age compositions were only used for comparing the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.
+
+@fig-length_flt10_1 shows WCGBTS length frequencies by year, and @fig-caal_flt10_1 through @fig-caal_flt10_3 show the WCGBTS length and CAAL distributions by year. 
+
+The input sample sizes for length composition data were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
 The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
@@ -198,9 +204,9 @@ The estimated index is shown in @fig-Triennial_index. The index exhibits an incr
 #### Length Compositions
 Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year **(Figure XX)**. **Table XX** shows the number of lengths taken by the survey. 
 
-Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in Table XX.
+Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in Table XX. @fig-length_flt7 shows Triennial Survey length frequencies by year,
 
-The input sample sizes for length composition data for all fishery-independent surveys were calculated based on Stewart and Hamel [-@stewart_bootstrapping_2014] as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
+The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
 There are no `r spp` age data from the Triennial Survey.
 
@@ -218,9 +224,9 @@ The AFSC Slope Survey index is shown in @fig-AFSC_Slope_index. The index is shor
 #### Length Compositions
 Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year **(Figure XX)**. **Table XX** shows the number of lengths taken by the survey. 
 
-Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in Table XX.
+Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in Table XX. @fig-length_flt8 shows AFSC Slope Survey length frequencies by year.
 
-The input sample sizes for length composition data for all fishery-independent surveys were calculated based on Stewart and Hamel [-@stewart_bootstrapping_2014] as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
+The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
 There are no `r spp` age data from the AFSC Slope Survey.
 
