@@ -265,6 +265,44 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "comp_lendat_flt6mkt0.png")
 )
 ``` 
+```{r} 
+#| label: fig-length_flt10
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for WCGBTS."
+#| fig-alt: "Length composition data for WCGBTS."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lendat_flt10mkt0.png")
+)
+``` 
+
+```{r} 
+#| label: fig-length_flt7
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for Triennial Survey."
+#| fig-alt: "Length composition data for Triennial Survey."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lendat_flt7mkt0.png")
+)
+``` 
+```{r} 
+#| label: fig-length_flt8
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for AFSC Slope Survey."
+#| fig-alt: "Length composition data for AFSC Slope Survey."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lendat_flt8mkt0.png")
+)
+``` 
+
 
 ```{r} 
 #| label: fig-caal_flt1_1
@@ -343,7 +381,42 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALdat_bubflt6mkt0_page2.png")
 )
 ```
+```{r} 
+#| label: fig-caal_flt10_1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional ages-at-length composition data for WCGBTS."
+#| fig-alt: "Conditional ages-at-length composition data for WCGBTS."
 
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALdat_bubflt10mkt0_page1.png")
+)
+```
+```{r} 
+#| label: fig-caal_flt10_2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional ages-at-length composition data for WCGBTS, continued."
+#| fig-alt: "Conditional ages-at-length composition data for WCGBTS, continued."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALdat_bubflt10mkt0_page2.png")
+)
+```
+```{r} 
+#| label: fig-caal_flt10_3
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional ages-at-length composition data for WCGBTS, continued."
+#| fig-alt: "Conditional ages-at-length composition data for WCGBTS, continued."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALdat_bubflt10mkt0_page3.png")
+)
+```
 ```{r} 
 #| label: fig-All_indices
 #| echo: false 
