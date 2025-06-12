@@ -98,7 +98,7 @@ Where $N_{b,j,y}$ is the number of lengths in each length bin ($b$) by sex ($j$)
 
 Age distributions were included in the model as conditional-age-at-length (CAAL) observations. The marginal age-compositions were also included, but only for evaluating the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.
 
-The filtering and processing of the PacFIN length and age composition data were conducted using the \gls{pacfintools} package in R (Wetzel et al. 2025). The filtering steps included removing samples with missing vital information. 
+The filtering and processing of the PacFIN length and age composition data were conducted using the \gls{pacfintools} package in R [@nwfscSurvey_package_2025]. The filtering steps included removing samples with missing vital information. 
 
 @fig-length_flt1_1 through @fig-length_flt5 show length frequencies for bottom trawl, non-trawl and mid-water fleets by year, and @fig-caal_flt1_1 through @fig-caal_flt5 show the commercial length and CAAL distributions by year for the same fleets. 
 
@@ -204,7 +204,7 @@ The estimated index is shown in @fig-Triennial_index. The index exhibits an incr
 #### Length Compositions
 Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. **Table XX** shows the number of lengths taken by the survey. 
 
-Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in Table XX. @fig-length_flt7 shows Triennial Survey length frequencies by year,
+Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in Table XX. @fig-length_flt7 shows Triennial Survey length frequencies by year,
 
 The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
@@ -224,7 +224,7 @@ The AFSC Slope Survey index is shown in @fig-AFSC_Slope_index. The index is shor
 #### Length Compositions
 Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. **Table XX** shows the number of lengths taken by the survey. 
 
-Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in Table XX. @fig-length_flt8 shows AFSC Slope Survey length frequencies by year.
+Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in Table XX. @fig-length_flt8 shows AFSC Slope Survey length frequencies by year.
 
 The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
