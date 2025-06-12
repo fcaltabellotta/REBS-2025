@@ -21,21 +21,20 @@ Data from a wide range of sources were evaluated within this assessment. Data so
 For description and details on fleet structure, please refer to Section @sec-fleet. 
 
 ### Commercial Fishery Landings
-Recent and historical fisheries catches were compiled by state and then combined into the fishing fleets used in the assessment. Time series of catches by fleet and state are reported in Table X. @fig-landings shows catches by fleet.
+Recent and historical fisheries catches were compiled by state and then combined into the fishing fleets used in the assessment. Time series of catches by fleet and state are reported in **Table X**. @fig-landings shows catches by fleet.
 
 #### Recent landings
-Recent commercial landings of `r Spp` (2000-2024 for Washington, 1987–2024 for Oregon and 1981–2024 for California,) were obtained from PacFIN, a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries 
-Service (NMFS). Catch data were extracted from PacFIN on April 24, 2025. 
+Recent commercial landings of `r Spp` (2000-2024 for Washington, 1987–2024 for Oregon and 1981–2024 for California,) were obtained from [\gls{pacfin}](www.pacfin.psmfc.org), a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries Service (NMFS). Catch data were extracted from PacFIN on April 24, 2025. 
 
 #### Historical Landings
 Historical landings of `r Spp` were reconstructed by state. 
 
-The Washington historical landings (1889–2000) of `r Spp` were provided by Washington Department of Fish and Wildlife (WDFW), who recently conducted historical catch reconstruction for rockfish species, including `r Spp` (pers. comm. T. Tsou, WDFW). The three main sources used in this reconstruction  included the US Fish Commission Report (UFSC), Washington Bound Volumes, and Washington Statistical Bulletin (SpeciesSumOutput2_2017.csv- ADD TABLE). The historical species composition was based on the various historical reports and interviews of fishermen and dockside samplers. The landings between 1981 and 2000 were also provided by WDFW (rather than obtained from PacFIN), since WDFW developed and used a improved method for apportioning unidentified rockfish (URCK) category in fish tickets to the individual species landings. This improved approach relaxed the borrowing rules for missing data used in the WDFW species allocation algorithm that feeds into PacFIN (pers. comm. T. Tsou, WDFW). New Washington historical landings represent improvement to the assessment. 
+The Washington historical landings (1889–2000) of `r Spp` were provided by Washington Department of Fish and Wildlife (WDFW), who recently conducted historical catch reconstruction for rockfish species, including `r Spp` (pers. comm. T. Tsou, WDFW). The three main sources used in this reconstruction  included the US Fish Commission Report (UFSC), Washington Bound Volumes, and Washington Statistical Bulletin **(SpeciesSumOutput2_2017.csv- ADD TABLE)**. The historical species composition was based on the various historical reports and interviews of fishermen and dockside samplers. The landings between 1981 and 2000 were also provided by WDFW (rather than obtained from PacFIN), since WDFW developed and used a improved method for apportioning unidentified rockfish (URCK) category in fish tickets to the individual species landings. This improved approach relaxed the borrowing rules for missing data used in the WDFW species allocation algorithm that feeds into PacFIN (pers. comm. T. Tsou, WDFW). New Washington historical landings represent improvement to the assessment. 
 
 The Oregon historical landings (1896–1986) were obtained from Oregon historical catch reconstruction, conducted by Oregon Department of Fish and Wildlife (ODFW) in collaboration with NWFSC (@karnowski_historical_2014). 
-The Oregon landings for the period between 1987 and 1999 were also provided by the ODFW. For that peiod, Oregon PacFIN landings were supplemented with the additional estimates of `r Spp`landings reported within unspecified rockfish market categories (i.e., URCK and POP1; @ODFW_URCK_POP_recon). 
+The Oregon landings for the period between 1987 and 1999 were also provided by the ODFW. For that period, Oregon PacFIN landings were supplemented with the additional estimates of `r Spp`landings reported within unspecified rockfish market categories (i.e., URCK and POP1; @ODFW_URCK_POP_recon). 
 
-The California historical landings were informed by several sources. Landings from the most recent “historical” period (between 1969 and 1980) were obtaned from the California Cooperative Survey (CalCOM) database. Earlier landing records (between 1931 and 1968) were informed by the rockfish historical catch reconstruction conducted by the NOAA's Southwest Fisheries Science Center (@ralston_documentation_2010). 
+The California historical landings were informed by several sources. Landings from the most recent “historical” period (between 1969 and 1980) were obtained from the California Cooperative Survey (CalCOM) database. Earlier landing records (between 1931 and 1968) were informed by the rockfish historical catch reconstruction conducted by the NOAA's Southwest Fisheries Science Center (@ralston_documentation_2010). 
 
 Comparison of `r Spp` historical landings by state and fleet between this and 2013 assessment is provided in @fig-Ct_All. 
 The largest differences in this assessment from 2013 model are in Washington landings (@fig-Ct_WA), with newly estimated landings being generally lower than those used in previous assessment.  The new WDFW catch reconstruction completed by WDFW is considered an improvement.  
@@ -45,7 +44,7 @@ Historical California and Oregon landings did not change substantially (@fig-Ct_
 The update in historical changes shows only minor differences in model outputs (@fig-Ct_compsSO; @fig-Ct_compsRSS).
 
 #### Bycatch in the foreign POP fishery
-Between mid-1960s and mid-1970s, foreign trawl fleets from the former Soviet Union, Japan, Poland, Bulgaria and East Germany targeted aggregations of Pacific ocean perch in the Northeast Pacific Ocean, in the waters off the U.S. West Coast (Love et al., 2002). Rogers (2003) estimated removals of rockfish species caught within this foreign POP fishery, including removals of `r Spp`. In the assessment, `r Spp` bycatch in the foreign POP fishery between 1966 and 1976 as estimated by Rogers (2003) were added to commercial bottom trawl fleet.
+Between mid-1960s and mid-1970s, foreign trawl fleets from the former Soviet Union, Japan, Poland, Bulgaria and East Germany targeted aggregations of Pacific ocean perch in the Northeast Pacific Ocean, in the waters off the U.S. West Coast [@love_rockfishes_2002]. @rogers_species_2003 estimated removals of rockfish species caught within this foreign POP fishery, including removals of `r Spp`. In the assessment, `r Spp` bycatch in the foreign POP fishery between 1966 and 1976 as estimated by @rogers_species_2003 were added to commercial bottom trawl fleet.
 
 #### At-Sea Hake Catches
 `r Spp` has long been bycaught in the fishery for the coastal population of Pacific hake, which is almost exclusively conducted with mid-water trawls. 
@@ -59,9 +58,9 @@ Annual amounts of `r Spp` bycatch (retained and discarded) in the Pacific hake f
 #### Historical discard {#sec-historical_discard}
 Historically, little to no discarding was observed for `r Spp`. 
 
-The historical discard information comes from Pikitch et al. (1988), and often referred to as the Pikitch study. The Pikitch study was conducted between 1985 and 1987 between 48°42’ and 42°60’ N. latitude, which is primarily within the Columbia INPFC area (Pikitch et al. 1988). Participation in the study was voluntary and included vessels using bottom, midwater and shrimp trawl gears. Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow, and recorded the weight of species retained and discarded in the sample. 
+The historical discard information comes from @pikitch_evaluation_1988, and often referred to as the Pikitch study. The Pikitch study was conducted between 1985 and 1987 between 48°42’ and 42°60’ N. latitude, which is primarily within the Columbia INPFC area [@pikitch_evaluation_1988]. Participation in the study was voluntary and included vessels using bottom, midwater and shrimp trawl gears. Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow, and recorded the weight of species retained and discarded in the sample. 
 
-There are no midwater trawl records of `r Spp`in the Pikitch study, and only few fish records of bottom trawl catches, based on which  discard rate (discard weight over total weight) for bottom trawl was just 0.09%. Therefore, no historical discard was assumed in the model.
+There are no midwater trawl records of `r Spp`in the @pikitch_evaluation_1988, and only few fish records of bottom trawl catches, based on which  discard rate (discard weight over total weight) for bottom trawl was just 0.09%. Therefore, no historical discard was assumed in the model.
 
 #### Recent Discard
 With the introduction of trip limits for rockfish in early 2000, limited discard has been observed for `r Spp`in bottom trawl and non-trawl fisheries. 
@@ -73,18 +72,20 @@ The discard amounts of `r Spp` for the period between 2002 and 2023 were obtaine
 Mid-water trawl discard was not present in non-catch share sector and was extremely minimal (virtually non-existing) in catch-share sector, with discard amounts averaging to 10kg per year. Therefore, in the model, no discard was assumed for mid-water trawl fleet. 
 
 ##### Bottom Trawl Discard
-Bottom trawl discard amounts by year are provided in Table XX. Prior to 2011, before the start of the catch share program, the discard of `r Spp` ranged between 1 metric ton and 60 metric tons, averaging at 23 metric tons a year. After 2011, the discard has been very low, not exceeding 0.5 metric ton a year. No discard data were available for 2024, and we used the average discard amount for 2019 - 2023 period to approximate 2024 discards for bottom trawl discard fleet.
+Bottom trawl discard amounts by year are provided in **Table XX**. Prior to 2011, before the start of the catch share program, the discard of `r Spp` ranged between 1 metric ton and 60 metric tons, averaging at 23 metric tons a year. After 2011, the discard has been very low, not exceeding 0.5 metric ton a year. No discard data were available for 2024, and we used the average discard amount for 2019 - 2023 period to approximate 2024 discards for bottom trawl discard fleet.
 
 ##### Non-Trawl Discard
-Non-trawl discard amounts by year are provided in Table XX. Non-trawl discard of `r Spp` were made in both catch share and non-catch share sectors. Discard amounts in these sectors were combined by year to represent total discard within the fleet. The discards within this fleet ranged between 0.5 metric ton and 35 metric tons, with 10 metric tons as average per year. No discard data were available for 2024, and the 2023 discard amount was assumed for 2024 for non-trawl discard fleet.
+Non-trawl discard amounts by year are provided in **Table XX**. Non-trawl discard of `r Spp` were made in both catch share and non-catch share sectors. Discard amounts in these sectors were combined by year to represent total discard within the fleet. The discards within this fleet ranged between 0.5 metric ton and 35 metric tons, with 10 metric tons as average per year. No discard data were available for 2024, and the 2023 discard amount was assumed for 2024 for non-trawl discard fleet.
 
 ### Fishery Length and Age Data
 Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the catches in each year. The first length bin includes all observations less than 10 cm and the last bin includes all fish 80 cm and longer. Age distributions included bins from age 1 to age 100, with the first bin including all fish ages 0 and 1 and the last bin including all fish age 100 and above.
 
 #### Commercial Landings Length and Ages
-The fishery length and age data for bottom trawl, non-trawl and midwater trawl fleets, based on samples collected by port samplers, were obtained from the PacFIN Biological Data System (BDS) database and extracted on April 24, 2025. The number of trips and fish sampled for lengths and ages by fleet and year are summarized in Tables XX-XX. 
+The fishery length and age data for bottom trawl, non-trawl and midwater trawl fleets, based on samples collected by port samplers, were obtained from the PacFIN Biological Data System (BDS) database and extracted on April 24, 2025. The number of trips and fish sampled for lengths and ages by fleet and year are summarized in **Tables XX-XX**. 
 
-Commercial length-frequency distributions were developed for each fleet and year, for which observations were available (Figire. Females and males distributions were treated separately, to track sex-specific differences. For each fleet, the raw observations were expanded to the trip level, to account for differences in samples sizes relative catch weights among trips (first stage expansion). The expanded length observations were then further expanded to state level, to account for differences in sampling intensity of `r Spp` landings among states combined into a single fleet (second stage expansion). The expansion algorithm can be illustrated with the following equation:
+Commercial length-frequency distributions were developed for each fleet and year, for which observations were available
+
+Females and males distributions were treated separately, to track sex-specific differences. For each fleet, the raw observations were expanded to the trip level, to account for differences in samples sizes relative catch weights among trips (first stage expansion). The expanded length observations were then further expanded to state level, to account for differences in sampling intensity of `r Spp` landings among states combined into a single fleet (second stage expansion). The expansion algorithm can be illustrated with the following equation:
 
 \begin{centering}
 
@@ -97,7 +98,9 @@ Where $N_{b,j,y}$ is the number of lengths in each length bin ($b$) by sex ($j$)
 
 Age distributions were included in the model as conditional-age-at-length (CAAL) observations. The marginal age-compositions were also included, but only for evaluating the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.
 
-The filtering and processing of the PacFIN length and age composition data were conducted using the pacfintools package in R (Wetzel et al. 2025). The filtering steps included removing samples with missing vital information. Figures XX show the commercial length and age frequencies used in the model for each fleet.
+The filtering and processing of the PacFIN length and age composition data were conducted using the \gls{pacfintools} package in R (Wetzel et al. 2025). The filtering steps included removing samples with missing vital information. 
+
+@fig-length_flt1_1 through @fig-length_flt5 show length frequencies for bottom trawl, non-trawl and mid-water fleets by year, and @fig-caal_flt1_1 through @fig-caal_flt5 show the commercial length and CAAL distributions by year for the same fleets. 
 
 The initial input values for length compositions in this assessment were calculated as a function of the number of trips and number of fish via the Stewart Method (pers.comm. I. Stewart, International Pacific Halibut Commission (IPHC)). The method is based on analysis of the input and model derived effective sample sizes from West Coast groundfish stock assessments. A piece-wise linear regression was used to estimate the increase in effective sample size per sample based on fish-per-sample and the maximum effective sample size for large numbers of individual fish. The resulting equations are:
 
@@ -112,16 +115,18 @@ Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is 
 The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
 ##### Commercial Discard Lengths
-Discard length composition data for both bottom trawl and non-trawl discard fleets were available from WCGOP. Discard length composition data were not sex-specific. Discard raw legnth observations were expanded to the haul level, to account for differences in catch among hauls. 
+Discard length composition data for both bottom trawl and non-trawl discard fleets were available from WCGOP. Discard length composition data were not sex-specific. Discard raw length observations were expanded to the haul level, to account for differences in catch among hauls (@fig-length_flt2 and @fig-length_flt4). 
 
 The initial input values for length compositions were calculated via the Stewart Method (see above). 
 
 No age data were available for discarded fish.
 
 ##### At-sea hake Fishery Length and Age Compositions
-The sex-specific length and age data for at-sea hake fleet were collected by the at-sea hake observer program (a-shop) and available through NORPAC database. Input sample sizes for length compositions were based on the number of hauls sampled by year. 
+The sex-specific length and age data for at-sea hake fleet were collected by the at-sea hake observer program (a-shop) and available through NORPAC database (@fig-length_flt2 and @fig-length_flt4). 
 
-Age distributions were included in the model as CAAL observations, binned according to length, age, sex, and year. The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
+Age distributions were included in the model as CAAL observations, binned according to length, age, sex, and year (@fig-caal_flt6_1 through @fig-caal_flt6_2). 
+
+Input sample sizes for length compositions were based on the number of hauls sampled by year. The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
 The marginal age compositions were constructed, but only used in the model for evaluating the implied fits, while the CAAL data were used in the likelihood.
 
@@ -136,11 +141,11 @@ Data from four fishery-independent surveys were used in this assessment:
 * Survey 3: Alaska Fishery Science Center (AFSC) Slope Survey (1997-2001)
 * Survey 4: Northwest Fisheries Science Center (NWFSC) Slope Survey (1999-2001)
 
-The surveys temporal and spatial coverage is summarized in Table XX. 
+The surveys temporal and spatial coverage is summarized in **Table XX**. 
 
 Information produced by these surveys included indices of relative abundance (all four surveys), length-frequency distributions (WCGBTS and Triennial survey), and age-frequency distributions (WCGBTS). 
 
-Only the WCGBTS has new data for this assessment, but new methods were applied to all surveys to develop new indices of abundance. In this assessment, geostatistical models of biomass density were used to fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/). The method is based on a delta model. Two distributions (gamma and lognormal) were considered for the catch-rate component. Comparing the standardized versions (i.e., Z-scores, which puts all the indices on the same scale for better comparison of trends)  shows very similar trends among each model output in the indices, suggesting little difference in choice of model type. The lognormal error structure was selected for all surveys because it was shown to be able to better account for extreme catch events. The variance in the indices is generally high (0.3-0.5), suggesting the information content in these indices is low. Overall, catch densities are highest in northern Oregon and Washington. 
+Only the WCGBTS has new data for this assessment, but new methods were applied to all surveys to develop new indices of abundance. In this assessment, geostatistical models of biomass density were used to fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/). The method is based on a delta model. Two distributions (gamma and lognormal) were considered for the catch-rate component. Comparing the standardized versions (i.e., Z-scores, which puts all the indices on the same scale for better comparison of trends) shows very similar trends among each model output in the indices, suggesting little difference in choice of model type. The lognormal error structure was selected for all surveys because it was shown to be able to better account for extreme catch events. The variance in the indices is generally high (0.3-0.5), suggesting the information content in these indices is low. Overall, catch densities are highest in northern Oregon and Washington. 
 
 Standardized indices for all four surveys overlaid are shown in @fig-All_indices, where each index is rescaled to have mean observation = 1.0.
 
@@ -149,27 +154,27 @@ Description of each survey is provided below; information available from each su
 ### NWFSC West Coast Groundfish Bottom Trawl Survey
 
 #### Survey Description
-The West Coast Groundfish Bottom Trawl Survey (WCGBTS) is conducted annually since 2003 (Table XX). The survey’s design and sampling methods are most recently described in @bradburn_2003_2011. The survey is based on a random-grid design, covering the coastal waters from a depth of 100 to 700 fm (183-1280 m). This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two 'passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
+The \gls{s-wcgbt} is conducted annually since 2003 **(Table XX)**. The survey’s design and sampling methods are most recently described in detail in @keller2017. The survey is based on a random-grid design, covering the coastal waters from a depth of 100 to 700 fm (183-1280 m). This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two 'passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
 
 #### Abundance Index
-Geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/)[@kristensen_tmb:_2016] via the R package \gls{sdmtmb} [@Anderson:2022:SRP] as configured within the {indexwc} R package (Johnson et al.2025). Code to reproduce the analysis is available online. These models can account for latent spatial factors with a constant spatial Gaussian random field and spatiotemporal deviations to evolve as a random walk Guassian random field [@thorson_geostatistical_2015]. Tweedie, delta-binomial, delta-gamma, and mixture distributions, which allow for extreme catch events, were investigated. Results are only shown for the distribution that led to the best model diagnostics, e.g., similar distributions of theoretical normal quantiles and model quantiles, high precision, lack of extreme predictions that are incompatible with yellowtail life history, and low AIC. Estimates of biomass from this best model were predicted using a grid based on available survey locations.
+Geostatistical models of biomass density were fit to survey data from the \gls{s-wcgbt} using \gls{tmb} [@kristensen_tmb:_2016] via the \gls{sdmtmb} R package [@Anderson_2024_SRP] as configured within the [indexwc](https://github.com/pfmc-assessments/indexwc) R package [@Johnson_indexwc]. These models can account for latent spatial factors with a constant spatial Gaussian random field and spatiotemporal deviations to evolve as a random walk Gaussian random field [@thorson_geostatistical_2015]. Delta-gamma and delta-lognormal distributions were investigated. Results are only shown for the model that led to the best model diagnostics, defined as similar distributions of theoretical normal quantiles and model quantiles (**fig-wcgbts_qq**), high precision, lack of extreme predictions, and low \gls{aic}. Estimates of biomass from this best model were predicted using a grid based on available survey locations.
 
-The data were truncated to depths less than 875 m prior to modelling given that there were zero positive encounters in depths deeper than 875 m. The prediction grid was also truncated to only include available survey locations in depths between 55-875 m to limit extrapolating beyond the data and edge effects. 
+The final model used a delta model with a lognormal distribution for the catch-rate component. A logit-link was used for encounter probability and a log-link for positive catch rates. The response variable was catch (mt) with an offset of area swept (km^2^) to account for differences in effort. Fixed effects were estimated for each year and pass. The index was estimated for the area north of 42 degrees North. The data were truncated to depths shallower than 875 m prior to modeling given that there were zero positive encounters in depths deeper than 875 m. The prediction grid was also truncated to only include available survey locations in depths between 55-875 m to limit extrapolating beyond the data and edge effects. Spatial variation was included in the encounter probability and the positive catch rate model. Spatial variation was approximated using 200 knots, where more knots led to non-estimable standard errors because the positive encounters are too sparse to support the dense spatial structure.
 
-The model used a delta model with a lognormal distribution for the catch-rate component. A logit-link was used for encounter probability and a log-link for positive catch rates. The response variable was catch (mt) with an offset of area (km$^2$) to account for differences in effort. Fixed effects were estimated for each year. The following additional covariates were included: pass. Vessel-year effects, which have traditionally been included in index standardization for this survey, were not included as the estimated variance for the random effect was close to zero. Vessel-year effects were more prominent when models did not include spatial effects and were included for each unique combination of vessel and year in the data to account for the random selection of commercial vessels used during sampling [@helser_generalized_2004; @thorson_accounting_2014].
-
-Spatial and spatiotemporal variation was included in the encounter probability and the positive catch rate model. Spatial variation was approximated using 400 knots, where more knots led to non-estimable standard errors because the positive encounters are too sparse to support the dense spatiotemporal structure.
-
-The index is flat and is shown in @fig-WCGBTS_index. 
+The biomass estimates produced for this assessment using \gls{sdmtmb} are comparable to the biomass estimates produced in the previous benchmark assessment (@fig-WCGBTS_comparision). The index is relatively flat with high variation (@fig-WCGBTS_index).
 
 #### Length and Age compositions
-Length bins from 1o to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year (Figure XX). Table XX shows the number of lengths taken by the survey. 
+Length bins from 1o to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year **(Figure XX)**. **Table XX** shows the number of lengths taken by the survey. 
 
-Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in Table XX.
+Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in **Table XX**.
 
-The input sample sizes for length composition data were calculated based on Stewart and Hamel [-@stewart_bootstrapping_2014] as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
-Age distributions included bins from age 1 to age 100, with the last bin including all fish of greater age. Table XX shows the number of ages taken by the survey. Age distributions were included in the model as CAAL observations. The marginal age compositions were only used for comparing the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.
+
+Age distributions included bins from age 1 to age 100, with the last bin including all fish of greater age. **Table XX** shows the number of ages taken by the survey. Age distributions were included in the model as CAAL observations. The marginal age compositions were only used for comparing the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.
+
+@fig-length_flt10_1 shows WCGBTS length frequencies by year, and @fig-caal_flt10_1 through @fig-caal_flt10_3 show the WCGBTS length and CAAL distributions by year. 
+
+The input sample sizes for length composition data were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
 The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
@@ -186,7 +191,7 @@ Haul depths ranged from 91–457 m during the 1977 survey with no hauls shallowe
 All of the surveys were conducted in the mid-summer through early fall: the 1977
 survey was conducted from early July through late September; the surveys from 1980 through 1989 ran from mid-July to late September; the 1992 survey spanned from mid-July through early October; the 1995 survey was conducted from early June to late August; the 1998 survey ran from early June through early August; and the 2001 and 2004 surveys were conducted in May-July **(Figure X)**.
 
-Water hauls **(Zimmermann et al. 2003)** and tows located in Canadian waters were also excluded from the analysis of this survey. Given the different depths surveyed during 1977, the data from that year were not included in this assessment.  
+Water hauls [@zimmermann2001] and tows located in Canadian waters were also excluded from the analysis of this survey. Given the different depths surveyed during 1977, the data from that year were not included in this assessment.  
 
 #### Abundance Index
 The index standardization followed a similar procedure to one used to generate the
@@ -194,54 +199,34 @@ WCGBTS index, when geostatistical models of biomass density were fit to survey d
 
 The Triennial Survey was analyzed as an early series (1980–1992) and a late series (1995–2004) to account for change in spatial coverage and survey timing, as `r Spp`exhibit ontogenetic movements when individuals gradually shift their distribution toward deeper waters as the grow and mature. Separate catchability parameters were estimated for pre-1995 period and from 1995 forward. Separate selectivity curves were estimated for early and late survey periods as well. 
 
-The estimated index is shown in @fig-Triennial_index. The index exhibits an increase in biomass from 1995 forward, that corresponds to a change in Triennial Survey depth coverage, when the survye extended to the deeper area (Table XX)
-
-<!-- NEED TO UPDATE THIS: The indices for the early and late series of this survey were estimated separately using a GLMM with the
-stratifications shown in **Table X**. Boxplots of the deviance for the late and early triennial survey series are
-shown in **Figure X** and show that the lognormal distribution had the lowest median deviance for both
-series. Random or fixed strata-year effects produced similar deviance, and the random strata-year effects
-were chosen as the final models. Selection of using the extreme catch event mixture distribution (ECE)
-was done by investigating the Q-Q plots in **Figure X**. The Q-Q plot for no ECE does not show any
-departures from the assumed distribution, and the ECE Q-Q plot did not show improvement. Therefore,
-the lognormal distribution without the ECE mixture distribution and random effects on the year-strata
-interaction were used to estimate the indices shown in **Figure X** and **Table X**. The early series suggests a
-possible slightly increasing trend in biomass from 1983–1992, while the late series showed no discernible
-trend and alternated between high and low estimates from 1995–2004. The design-based estimates
-(average density expanded to the stratum area then summed over strata) are compared to the model-based estimates in **Figure X**. 
-Similar trends are seen for both sets of estimates, but the design-based estimates
-are consistently greater than the model-based estimates by more than a factor of 2. This suggests that the
-scale of the model-based estimates may be low, which may be caused by incorrect expansion to the
-proper area. This is not an issue with the assessment because a catchability coefficient relating the survey
-biomass to the assessment model biomass is estimated without any prior assumption on what value that
-catchability coefficient should be. Therefore, caution is advised if attempting to interpret the value of that
-estimated catchability coefficient. -->
+The estimated index is shown in @fig-Triennial_index. The index exhibits an increase in biomass from 1995 forward, that corresponds to a change in Triennial Survey depth coverage, when the survey extended to the deeper area **(Table XX)**.
 
 #### Length Compositions
-Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year (Figure XX). Table XX shows the number of lengths taken by the survey. 
+Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. **Table XX** shows the number of lengths taken by the survey. 
 
-Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in Table XX.
+Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in Table XX. @fig-length_flt7 shows Triennial Survey length frequencies by year,
 
-The input sample sizes for length composition data for all fishery-independent surveys were calculated based on Stewart and Hamel [-@stewart_bootstrapping_2014] as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
+The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
 There are no `r spp` age data from the Triennial Survey.
 
 ### AFSC Slope Survey
 
 #### Survey Description
-The AFSC slope survey was initiated in 1984. The survey methods are described in Lauth (2000). Prior to 1997, the survey was conducted in different latitudinal ranges each year (Table 5). In this assessment, only data from 1997, 1999, 2000 and 2001 were used – these years were consistent in latitudinal range (from 34°30’ N. latitude to the U.S.-Canada border) and depth coverage (183-1280 m; 100-700 fm).
+The AFSC slope survey was initiated in 1984. The survey methods are described in Lauth (2000). Prior to 1997, the survey was conducted in different latitudinal ranges each year. In this assessment, only data from 1997, 1999, 2000 and 2001 were used – these years were consistent in latitudinal range (from 34°30’ N. latitude to the U.S.-Canada border) and depth coverage (183-1280 m; 100-700 fm).
 
 #### Abundance Index
 The index standardization followed a similar procedure to one used to generate the
-WCGBTS and Triennial indeces, when geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/). The model used a delta model with a lognormal distribution for the catch-rate component. As in case of Triennial survey, no pass covariate was included in the analysis.
+WCGBTS and Triennial Survey indices, when geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/). The model used a delta model with a lognormal distribution for the catch-rate component. As in case of Triennial survey, no pass covariate was included in the analysis.
 
 The AFSC Slope Survey index is shown in @fig-AFSC_Slope_index. The index is short, and does not exhibits significant change over the four year period. 
 
 #### Length Compositions
-Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year (Figure XX). Table XX shows the number of lengths taken by the survey. 
+Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. **Table XX** shows the number of lengths taken by the survey. 
 
-Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in Table XX.
+Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@wetzel_nwfscsurvey_2023]. The stratification for length data expansions are provided in Table XX. @fig-length_flt8 shows AFSC Slope Survey length frequencies by year.
 
-The input sample sizes for length composition data for all fishery-independent surveys were calculated based on Stewart and Hamel [-@stewart_bootstrapping_2014] as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
+The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
 There are no `r spp` age data from the AFSC Slope Survey.
 
@@ -252,7 +237,7 @@ The NWFSC slope survey was conducted annually from 1999 to 2002. The survey’s 
 
 #### Abundance Index
 The index standardization followed a similar procedure to one used to generate the
-other survey indeces, when geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/). The model used a delta model with a lognormal distribution for the catch-rate component. No pass covariate was included in the analysis.
+other survey indices, when geostatistical models of biomass density were fit to survey data using spatial and spatiotemporal GLMMs with TMB or [sdmTMB](https://pbs-assess.github.io/sdmTMB/). The model used a delta model with a lognormal distribution for the catch-rate component. No pass covariate was included in the analysis.
 
 The NWFSC Slope Survey index is shown in @fig-NWFSC_Slope_index. The index is short, and, as in case of AFSC SLope Survey, does not exhibits significant change over the four year period. 
 
@@ -276,7 +261,7 @@ $M=\frac{5.4}{A_{\text{max}}}$
 
 where $M$ is natural mortality and ${A_{\text{max}}}$ is the assumed maximum age. The prior is defined as a lognormal distribution with mean $ln(5.4/A_{\text{max}})$ and standard error = 0.31. This is the equation typically used to estimate a natural mortality point estimate, but is underpinned by the choice of the value of ${A_{\text{max}}}$. This equation assumes that the proportion of the stable population at this maximum age is 0.4517%. If we take humans as an example, the longest lived human is 122 years. This is not the maximum age, but the oldest ever recorded age. The maximum age that corresponds to 0.4517% of the population is around 100 years. For Rougheye/Blackspotted, the oldest ever aged individual is 205 years with unknown ageing error. We did not consider this as a realistic maximum age.
 
-The 2013 U.S. west coast stock assessment used a prior built around a mean of 0.034 (corresponding to a maximum age of 163), but estimated natural mortality at 0.042 (maximum age between 128-129 years; Figure M). The 2023 Gulf of Alaska assessment built a prior conditional on a estimate of natural mortality from their 5 oldest aged individuals that ranged from 126-135 years. This resulted in a mean value of 0.042, similar to the 2013 U.S. west coast stock assessment. The 2023 Bering Sea/Aleutian Islands assessment used M = 0.05 (assumed longevity of 108), and the recent Canadian assessments considered a range of M values from 0.03 to 0.055 (assumed maximum ages of 180 to 98 years; @fig-Mcurves). 
+The 2013 U.S. west coast stock assessment used a prior built around a mean of 0.034 (corresponding to a maximum age of 163), but estimated natural mortality at 0.042 (maximum age between 128-129 years; **Figure M**). The 2023 Gulf of Alaska assessment built a prior conditional on a estimate of natural mortality from their 5 oldest aged individuals that ranged from 126-135 years. This resulted in a mean value of 0.042, similar to the 2013 U.S. west coast stock assessment. The 2023 Bering Sea/Aleutian Islands assessment used M = 0.05 (assumed longevity of 108), and the recent Canadian assessments considered a range of M values from 0.03 to 0.055 (assumed maximum ages of 180 to 98 years; @fig-Mcurves). 
 
 We attempt to estimate natural mortality, as was done in the 2013 U.S. West coast assessment. Examining the available age data, the oldest 10 individuals range from 139 to 165 and were all males. For females, the 10 oldest individuals range from 130 to 121 years. If those oldest ages were used in the @hamel_development_2022 longevity estimator, these ages would correspond to a range of natural mortality values of 0.033 to 0.039 for males, which include the mean of the prior used in the 2013 assessment. For females, it corresponds to natural mortality values of 0.039 to 0.045. All these assume that the sampled population has enough of an age structure still available for sampling, as opposed to having some level of age truncation from the theoretical unfished stable age distribution.  
 
