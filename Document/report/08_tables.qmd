@@ -11,7 +11,7 @@ management_summary |>
    gt::gt() |>
    gt::cols_label(
     `Year` = "Year",
-    `Management Action` = "Management Action"
+    `Management_action` = "Management Action"
   ) |>
    gt::tab_options(
      table.font.size = 12,
