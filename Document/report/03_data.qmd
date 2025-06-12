@@ -161,7 +161,7 @@ Geostatistical models of biomass density were fit to survey data from the \gls{s
 
 The final model used a delta model with a lognormal distribution for the catch-rate component. A logit-link was used for encounter probability and a log-link for positive catch rates. The response variable was catch (mt) with an offset of area swept (km^2^) to account for differences in effort. Fixed effects were estimated for each year and pass. The index was estimated for the area north of 42 degrees North. The data were truncated to depths shallower than 875 m prior to modeling given that there were zero positive encounters in depths deeper than 875 m. The prediction grid was also truncated to only include available survey locations in depths between 55-875 m to limit extrapolating beyond the data and edge effects. Spatial variation was included in the encounter probability and the positive catch rate model. Spatial variation was approximated using 200 knots, where more knots led to non-estimable standard errors because the positive encounters are too sparse to support the dense spatial structure.
 
-The biomass estimates produced for this assessment using \gls{sdmtmb} are comparable to the biomass estimates produced in the previous benchmark assessment (@fig-WCGBTS_comparision). The index is relatively flat with high variation (@fig-WCGBTS_index).
+The biomass estimates produced for this assessment using \gls{sdmtmb} are comparable to the biomass estimates produced in the previous benchmark assessment (@fig-WCGBTS_comparison). The index is relatively flat with high variation (@fig-WCGBTS_index).
 
 #### Length and Age compositions
 Length bins from 1o to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year **(Figure XX)**. **Table XX** shows the number of lengths taken by the survey. 
@@ -172,7 +172,7 @@ Length compositions were separated into males and females. These length composit
 
 Age distributions included bins from age 1 to age 100, with the last bin including all fish of greater age. **Table XX** shows the number of ages taken by the survey. Age distributions were included in the model as CAAL observations. The marginal age compositions were only used for comparing the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.
 
-@fig-length_flt10_1 shows WCGBTS length frequencies by year, and @fig-caal_flt10_1 through @fig-caal_flt10_3 show the WCGBTS length and CAAL distributions by year. 
+@fig-length_flt10 shows WCGBTS length frequencies by year, and @fig-caal_flt10_1 through @fig-caal_flt10_3 show the WCGBTS length and CAAL distributions by year. 
 
 The input sample sizes for length composition data were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
