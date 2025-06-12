@@ -23,7 +23,7 @@ management_summary |>
     `Management_action` = "Management Action"
   ) |>
   gt::cols_width(
-    Management_action ~ gt::px(200)
+    Management_action ~ gt::px(300)
   ) |>
   gt::tab_options(
     table.font.size = 12,
