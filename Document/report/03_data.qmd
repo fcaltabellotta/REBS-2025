@@ -24,8 +24,7 @@ For description and details on fleet structure, please refer to Section @sec-fle
 Recent and historical fisheries catches were compiled by state and then combined into the fishing fleets used in the assessment. Time series of catches by fleet and state are reported in Table X. @fig-landings shows catches by fleet.
 
 #### Recent landings
-Recent commercial landings of `r Spp` (2000-2024 for Washington, 1987–2024 for Oregon and 1981–2024 for California,) were obtained from PacFIN, a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries 
-Service (NMFS). Catch data were extracted from PacFIN on April 24, 2025. 
+Recent commercial landings of `r Spp` (2000-2024 for Washington, 1987–2024 for Oregon and 1981–2024 for California,) were obtained from [\gls{pacfin}](www.pacfin.psmfc.org), a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries Service (NMFS). Catch data were extracted from PacFIN on April 24, 2025. 
 
 #### Historical Landings
 Historical landings of `r Spp` were reconstructed by state. 
@@ -45,7 +44,7 @@ Historical California and Oregon landings did not change substantially (@fig-Ct_
 The update in historical changes shows only minor differences in model outputs (@fig-Ct_compsSO; @fig-Ct_compsRSS).
 
 #### Bycatch in the foreign POP fishery
-Between mid-1960s and mid-1970s, foreign trawl fleets from the former Soviet Union, Japan, Poland, Bulgaria and East Germany targeted aggregations of Pacific ocean perch in the Northeast Pacific Ocean, in the waters off the U.S. West Coast (Love et al., 2002). Rogers (2003) estimated removals of rockfish species caught within this foreign POP fishery, including removals of `r Spp`. In the assessment, `r Spp` bycatch in the foreign POP fishery between 1966 and 1976 as estimated by Rogers (2003) were added to commercial bottom trawl fleet.
+Between mid-1960s and mid-1970s, foreign trawl fleets from the former Soviet Union, Japan, Poland, Bulgaria and East Germany targeted aggregations of Pacific ocean perch in the Northeast Pacific Ocean, in the waters off the U.S. West Coast [@love_rockfishes_2002]. @rogers_species_2003 estimated removals of rockfish species caught within this foreign POP fishery, including removals of `r Spp`. In the assessment, `r Spp` bycatch in the foreign POP fishery between 1966 and 1976 as estimated by @rogers_species_2003 were added to commercial bottom trawl fleet.
 
 #### At-Sea Hake Catches
 `r Spp` has long been bycaught in the fishery for the coastal population of Pacific hake, which is almost exclusively conducted with mid-water trawls. 
@@ -59,9 +58,9 @@ Annual amounts of `r Spp` bycatch (retained and discarded) in the Pacific hake f
 #### Historical discard {#sec-historical_discard}
 Historically, little to no discarding was observed for `r Spp`. 
 
-The historical discard information comes from Pikitch et al. (1988), and often referred to as the Pikitch study. The Pikitch study was conducted between 1985 and 1987 between 48°42’ and 42°60’ N. latitude, which is primarily within the Columbia INPFC area (Pikitch et al. 1988). Participation in the study was voluntary and included vessels using bottom, midwater and shrimp trawl gears. Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow, and recorded the weight of species retained and discarded in the sample. 
+The historical discard information comes from @pikitch_evaluation_1988, and often referred to as the Pikitch study. The Pikitch study was conducted between 1985 and 1987 between 48°42’ and 42°60’ N. latitude, which is primarily within the Columbia INPFC area [@pikitch_evaluation_1988]. Participation in the study was voluntary and included vessels using bottom, midwater and shrimp trawl gears. Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow, and recorded the weight of species retained and discarded in the sample. 
 
-There are no midwater trawl records of `r Spp`in the Pikitch study, and only few fish records of bottom trawl catches, based on which  discard rate (discard weight over total weight) for bottom trawl was just 0.09%. Therefore, no historical discard was assumed in the model.
+There are no midwater trawl records of `r Spp`in the @pikitch_evaluation_1988, and only few fish records of bottom trawl catches, based on which  discard rate (discard weight over total weight) for bottom trawl was just 0.09%. Therefore, no historical discard was assumed in the model.
 
 #### Recent Discard
 With the introduction of trip limits for rockfish in early 2000, limited discard has been observed for `r Spp`in bottom trawl and non-trawl fisheries. 
@@ -84,7 +83,9 @@ Length bins from 10 to 80 cm in 2 cm increments were used to summarize the lengt
 #### Commercial Landings Length and Ages
 The fishery length and age data for bottom trawl, non-trawl and midwater trawl fleets, based on samples collected by port samplers, were obtained from the PacFIN Biological Data System (BDS) database and extracted on April 24, 2025. The number of trips and fish sampled for lengths and ages by fleet and year are summarized in Tables XX-XX. 
 
-Commercial length-frequency distributions were developed for each fleet and year, for which observations were available (Figire. Females and males distributions were treated separately, to track sex-specific differences. For each fleet, the raw observations were expanded to the trip level, to account for differences in samples sizes relative catch weights among trips (first stage expansion). The expanded length observations were then further expanded to state level, to account for differences in sampling intensity of `r Spp` landings among states combined into a single fleet (second stage expansion). The expansion algorithm can be illustrated with the following equation:
+Commercial length-frequency distributions were developed for each fleet and year, for which observations were available
+
+Females and males distributions were treated separately, to track sex-specific differences. For each fleet, the raw observations were expanded to the trip level, to account for differences in samples sizes relative catch weights among trips (first stage expansion). The expanded length observations were then further expanded to state level, to account for differences in sampling intensity of `r Spp` landings among states combined into a single fleet (second stage expansion). The expansion algorithm can be illustrated with the following equation:
 
 \begin{centering}
 
@@ -97,7 +98,9 @@ Where $N_{b,j,y}$ is the number of lengths in each length bin ($b$) by sex ($j$)
 
 Age distributions were included in the model as conditional-age-at-length (CAAL) observations. The marginal age-compositions were also included, but only for evaluating the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.
 
-The filtering and processing of the PacFIN length and age composition data were conducted using the pacfintools package in R (Wetzel et al. 2025). The filtering steps included removing samples with missing vital information. Figures XX show the commercial length and age frequencies used in the model for each fleet.
+The filtering and processing of the PacFIN length and age composition data were conducted using the \gls{pacfintools} package in R (Wetzel et al. 2025). The filtering steps included removing samples with missing vital information. 
+
+@fig-length_flt1_1 through @fig-caal_flt6_2 show the commercial length and age frequencies used in the model for each fleet, by year.
 
 The initial input values for length compositions in this assessment were calculated as a function of the number of trips and number of fish via the Stewart Method (pers.comm. I. Stewart, International Pacific Halibut Commission (IPHC)). The method is based on analysis of the input and model derived effective sample sizes from West Coast groundfish stock assessments. A piece-wise linear regression was used to estimate the increase in effective sample size per sample based on fish-per-sample and the maximum effective sample size for large numbers of individual fish. The resulting equations are:
 

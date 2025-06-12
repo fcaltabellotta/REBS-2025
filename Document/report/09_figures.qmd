@@ -189,6 +189,161 @@ knitr::include_graphics(
 ``` 
 
 ```{r} 
+#| label: fig-length_flt2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for bottom trawl discard fleet."
+#| fig-alt: "Length composition data for bottom trawl discard fleet."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lendat_flt2mkt0.png")
+)
+``` 
+
+```{r} 
+#| label: fig-length_flt3_1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for non-trawl fleet."
+#| fig-alt: "Length composition data for non-trawl fleet."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lendat_flt3mkt0_page1.png")
+)
+``` 
+
+```{r} 
+#| label: fig-length_flt3_2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for non-trawl fleet, continued."
+#| fig-alt: "Length composition data for non-trawl fleet, continued."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lendat_flt3mkt0_page2.png")
+)
+``` 
+
+```{r} 
+#| label: fig-length_flt4
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for non-trawl discard fleet."
+#| fig-alt: "Length composition data for non-trawl discard fleet."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lendat_flt4mkt0.png")
+)
+``` 
+
+```{r} 
+#| label: fig-length_flt5
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for mid-water trawl fleet."
+#| fig-alt: "Length composition data for mid-water trawl fleet."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lendat_flt5mkt0.png")
+)
+``` 
+
+```{r} 
+#| label: fig-length_flt6
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for At-sea Hake fleet."
+#| fig-alt: "Length composition data for At-sea Hake fleet."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_lendat_flt6mkt0.png")
+)
+``` 
+
+```{r} 
+#| label: fig-caal_flt1_1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for bottom trawl fleet."
+#| fig-alt: "Length composition data for bottom trawl fleet."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALdat_bubflt1mkt0_page1.png")
+)
+``` 
+
+```{r} 
+#| label: fig-caal_flt1_2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length composition data for bottom trawl fleet, continued."
+#| fig-alt: "Length composition data for bottom trawl fleet, continued."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALdat_bubflt1mkt0_page2.png")
+)
+``` 
+
+```{r} 
+#| label: fig-caal_flt3_1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional ages-at-length composition data for non-trawl fleet."
+#| fig-alt: "Conditional ages-at-length composition data for non-trawl fleet."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALdat_bubflt3mkt0_page1.png")
+)
+``` 
+
+```{r} 
+#| label: fig-caal_flt3_2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional ages-at-length composition data for non-trawl fleet, continued."
+#| fig-alt: "Conditional ages-at-length composition data for non-trawl fleet, continued."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALdat_bubflt3mkt0_page2.png")
+)
+``` 
+
+```{r} 
+#| label: fig-caal_flt6_1
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional ages-at-length composition data for At-Sea Hake fleet."
+#| fig-alt: "Conditional ages-at-length composition data for At-Sea Hake fleet."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALdat_bubflt6mkt0_page1.png")
+)
+``` 
+
+```{r} 
+#| label: fig-caal_flt6_2
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Conditional ages-at-length composition data for At-Sea Hake fleet, continued."
+#| fig-alt: "Conditional ages-at-length composition data for At-Sea Hake fleet, continued."
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "comp_condAALdat_bubflt6mkt0_page2.png")
+)
+``
+```{r} 
 #| label: fig-All_indices
 #| echo: false 
 #| warning: false 
@@ -200,6 +355,7 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "index9_standcpueall.png")
 )
 ```
+
 ```{r} 
 #| label: fig-WCGBTS_index
 #| echo: false 

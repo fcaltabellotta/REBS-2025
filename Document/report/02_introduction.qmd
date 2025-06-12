@@ -24,6 +24,7 @@ While genetics studies have focused mostly on identification of the two species,
 `R Spp` are often associated with structure, such as hard, rocky bottoms and steep habitats. They are rarely found on the deep flats. They can be found alone or in aggregations [@love_rockfishes_2002], with aggregations often differentiated by age.  Younger fish may school and are often found in shallower waters on the shelf, junveiles and subadults can be found together, and larger fish may form larger aggregations in the Pacific Northwest during the autumn and winter. These two species may also hybridize on occasion [@love_certainly_2011]. These species are closely related to Shortraker Rockfish (*S. borealis*) and are sometimes difficult to distinguish from Shortraker Rockfish without looking at the gill rakers. One major distinguishing feature of Rougheye Rockfish are the 2–10 spines along the lower rim of their eyes, hence the common name "rougheye".
 
 ## A Map Showing the Scope of the Assessment
+This assessment treats the U.S. `r Spp` resource from the Mexican border to the Canadian border as a single coastwide stock. The U.S.-Canadian border is the northern boundary for the assessed stock, although the basis for this choice is due to political and current management needs rather than the population dynamics (@fig-map). 
 
 ## Important features of life history
 

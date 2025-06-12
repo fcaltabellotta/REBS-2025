@@ -65,8 +65,7 @@ Stock Synthesis version 3.30.23.1 was used as the statistical catch-at-age model
 ### Model Structure
 
 ### Area and Fleet Definitions {#sec-fleet}
-
-This assessment is based on a coastwide, single area model for `r Spp`, two species that form one management complex.
+This assessment treats the U.S. `r Spp` resource from the Mexican border to the Canadian border as a single coastwide stock. The U.S.-Canadian border is the northern boundary for the assessed stock, although the basis for this choice is due to political and current management needs rather than the population dynamics (@fig-map). 
 
 The model is structured to track six fleets and include data from four surveys. 
 
