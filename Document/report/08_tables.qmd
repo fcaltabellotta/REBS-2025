@@ -274,13 +274,14 @@ kableExtra::kable(
 cat("\\begin{landscape}\n")
 
 source(here::here("Rcode/table_sens.R"))
-indices <- read.csv(here::here("Document","report", "Sensis", "output", "indices_table.csv")
+indices <- read.csv(here::here("Document","report", "Sensis", "output", "indices_table.csv"))
 
 names(indices) <- c("Label","Base","- Triennial","- AK Slope","-NW slope","- WCGBTS","No indices")
 
 table_sens(indices)
 
 cat("\n\\end{landscape}\n") 
+```
 
 \pagebreak
 
@@ -295,13 +296,15 @@ cat("\n\\end{landscape}\n")
 cat("\\begin{landscape}\n")
 
 source(here::here("Rcode/table_sens.R"))
-lens1 <- read.csv(here::here("Document","report", "Sensis", "output", "length_comps_fleet_table.csv")
+lens1 <- read.csv(here::here("Document","report", "Sensis", "output", "length_comps_fleet_table.csv"))
 
 names(lens1) <- c("Label","Base","- bottom trawl","- non-trawl","- mid-water trawl","- ASHOP","- Triennial","- AK slope","- NW slope","- WCGBTS")
 
 table_sens(lens1)
 
 cat("\n\\end{landscape}\n") 
+
+```
 
 \pagebreak
 
@@ -316,13 +319,15 @@ cat("\n\\end{landscape}\n")
 cat("\\begin{landscape}\n")
 
 source(here::here("Rcode/table_sens.R"))
-lens1 <- read.csv(here::here("Document","report", "Sensis", "output", "length_comps_all_table.csv")
+lens2 <- read.csv(here::here("Document","report", "Sensis", "output", "length_comps_all_table.csv"))
 
 names(lens2) <- c("Label","Base","- fishery","- survey","no lengths")
 
 table_sens(lens2)
 
 cat("\n\\end{landscape}\n") 
+
+```
 
 \pagebreak
 
@@ -337,7 +342,7 @@ cat("\n\\end{landscape}\n")
 cat("\\begin{landscape}\n")
 
 source(here::here("Rcode/table_sens.R"))
-ages <- read.csv(here::here("Document","report", "Sensis", "output", "age_comps_table.csv")
+ages <- read.csv(here::here("Document","report", "Sensis", "output", "age_comps_table.csv"))
 
 names(ages) <- c("Label","Base","- bottom trawl","- non-trawl","- mid-water trawl","- ASHOP","- WGCBTS","- fishery","no ages")
 
@@ -345,9 +350,11 @@ table_sens(ages)
 
 cat("\n\\end{landscape}\n") 
 
+```
+
 \pagebreak
 
-::: {.landscape}
+#::: {.landscape}
 
 #```{r, results = "asis"}
 ##| label: tbl-projections
@@ -385,6 +392,6 @@ cat("\n\\end{landscape}\n")
 
 #```
 
-:::
+#:::
 
-\pagebreak
+#\pagebreak
