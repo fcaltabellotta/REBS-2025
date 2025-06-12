@@ -59,15 +59,13 @@ With new fecundity parameters, the model produces spawning output rather that sp
 Stock Synthesis statistical catch-at-age modelling framework [@MethotWetzel2013], version 3.30.23.1, is used for this assessment. This framework allows the integration of a variety of data types and model specifications. The Stock Assessment Continuum tool (https://github.com/shcaba/SS-DL-tool) was also used to explore model efficiency, likelihood profiling, retrospective analyses, and plotting sensitivities. The companion R package r4ss (version 1.51.0) along with R version 4.4.3 were used to investigate and plot model fits.
 
 ### Model Structure
-This stock assessment is for the Rougheye and Blackspotted rockfishes, two species that form one management complex. This assessment treats the U.S. `r Spp` resource from the Mexican border to the Canadian border as a single coastwide stock (@fig-map). The assessment excludes consideration of the Puget Sound and Salish Sea.
+This stock assessment is for the `r Spp`, two species that form one management complex. Assessment area is from the U.S.-Mexican border om the south to the U.S. Canadian border on the north (@fig-map). The assessment excludes consideration of the Puget Sound and Salish Sea. Within this area, the assessment treats the U.S. `r Spp` resource as a single coastwide stock. 
 
 This is a sex-specific model. The sex-ratio at birth is assumed to be 1:1. Females and males have separate growth curves (fully estimated within the model) and sex-specific weight-at-length parameters. The model assumes a constant natural mortality of 0.036 yr-1 for males, while natural mortality for females is estimated based on @hamel_development_2022.  The length frequency distributions are represented as thirty six 2-cm bins ranging between 10 and 80 cm. Population length bins are defined at a finer 2-cm scale, ranging between 4 and 84 cm. Age data is included as conditional age-at length compositions with bins ranging between 1 and 100 years. 
 
 The modeling period begins in 1892, and the stock prior to that is assumed to be in an unfished equilibrium condition. 
 
-### Area and Fleet Definitions {#sec-fleet}
-This assessment treats the U.S. `r Spp` resource from the Mexican border to the Canadian border as a single coastwide stock. The U.S.-Canadian border is the northern boundary for the assessed stock, although the basis for this choice is due to political and current management needs rather than the population dynamics (@fig-map). 
-
+### Fleet Definitions {#sec-fleet}
 The model is structured to track six fleets and include data from four surveys. 
 
 Defining fleets is largely based on differing fleet selectivity (i.e., how the fishery captures fish by length and/or age). In the stock assessment model, selectivity translates into how the removals are taken via length and/or age out of the population. In this assessment, the following fleet structure is being used to model commercial fishery removals:
