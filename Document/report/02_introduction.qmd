@@ -1,8 +1,8 @@
 # Introduction
 
-Rougheye (*Sebastes aleutianus*) and Blackspotted (*Sebastes melanostictus*) rockfishes, two species that form one management complex. 
+Rougheye (*Sebastes aleutianus*) and Blackspotted (*Sebastes melanostictus*) rockfishes are two species that form one management complex. 
 
-Rougheye rockfish are a long-lived rockfish named after a series of 2–10 spines along the lower rim of their eyes.  They have also been called blackthroat or blacktip rockfish (Love et al. 2002, Love 2011). Blackspotted rockfish are distributed in similar locations as rougheye rockfish and it is very difficult to visually distinguish the two species. These two species may hybridize on occasion (Love 2011).  
+Rougheye rockfish are a long-lived rockfish named after a series of 2-10 spines along the lower rim of their eyes.  They have also been called blackthroat or blacktip rockfish (Love et al. 2002, Love 2011). Blackspotted rockfish are distributed in similar locations as rougheye rockfish and it is very difficult to visually distinguish the two species. These two species may hybridize on occasion (Love 2011).  
 
 It has only been from recent genetic studies that these two separate species have been identified (Gharrett et al. 2005, Hawkins et al. 2005) and have had phenotypic characteristics useful for identifying the species in the field identified (Gharrett et al. 2005, Orr and Hawkins 2008).  Before then, data are available for one species called rougheye rockfish which included rougheye rockfish and blackspotted rockfish.  Due to the difficulty in distinguishing these two species and the lack of historical separation of the species in all of the data, this assessment combines any data for blackspotted rockfish with rougheye rockfish and provides management advice for the two species combined.  In this assessment, the term “rougheye rockfish” refers to rougheye/blackspotted rockfish unless specified.
 
@@ -35,7 +35,7 @@ While genetics studies have focused mostly on identification of the two species,
 ## A Map Showing the Scope of the Assessment
 This assessment treats the U.S. `r Spp` resource from the Mexican border to the Canadian border as a single coastwide stock (@fig-map). The U.S.-Canadian border is the northern boundary for the assessed stock, although the basis for this choice is due to political and current management needs rather than the population dynamics  The assessment excludes consideration of the Puget Sound and Salish Sea.
 
-## Important features of life history
+## Life History
 
 Like all *Sebastes* species, `r Spp` give birth to live young. Larvae released has been documented between February and June and extrusion lengths are between 4.5-5.3 mm [@love_rockfishes_2002]. @dick_meta-analysis_2017 showed that rockfishes exhibit a non-proportional relationship of fecundity to weight, with larger individuals producing more eggs than expected only by weight. Although Neither Rougheye or Blackspotted Rockfishes have a species- or subfamily-specific estimate for this relationship,  this stock assessment uses the unobserved Genus Sebastes values to inform fecundity to weight relationship for `r Spp`.
 
