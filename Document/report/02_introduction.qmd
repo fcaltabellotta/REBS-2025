@@ -1,5 +1,4 @@
 # Introduction
-<<<<<<< HEAD
 
 Rougheye (*Sebastes aleutianus*) and Blackspotted (*Sebastes melanostictus*) rockfishes, two species that form one management complex. 
 
@@ -11,9 +10,6 @@ These species are also closely related to shortraker rockfish (S. borealis) and 
 
 
 This document presents the stock assessment for the Rougheye (*Sebastes aleutianus*) and Blackspotted (*Sebastes melanostictus*) rockfishes, two species that form one management complex.  
-=======
-Rougheye (*Sebastes aleutianus*) and Blackspotted (*Sebastes melanostictus*) Rockfishes are two species that form one management complex. Rougheye Rockfish are a long-lived rockfish named after a series of 2–10 spines along the lower rim of their eyes.  They have also been called blackthroat or blacktip rockfish [@love_rockfishes_2002, @love_certainly_2011]. Blackspotted Rockfish are distributed in similar locations as Rougheye Rockfish, and it is very difficult to visually distinguish the two species. These two species may hybridize on occasion [@love_certainly_2011].  
->>>>>>> bcaea1adf20669350b93d763b4bd85ecf3b6389c
 
 It has only been from recent genetic studies that these two separate species have been identified [@gharrett_genetically_2006, @hawkins_genetic_2005] and have had phenotypic characteristics useful for identifying the species in the field identified [@gharrett_genetically_2006, @orr_species_2008].  Before then, data are available for one species called Rougheye Rockfish which included Rougheye Rockfish and Blackspotted Rockfish.  Due to the difficulty in distinguishing these two species and the lack of historical separation of the species in all of the data, this assessment combines any data for Blackspotted Rockfish with Rougheye Rockfish into `r Spp` and provides management advice for the two species combined. These species are also closely related to Shortraker Rockfish (*Sebastes borealis*) and are sometimes difficult to distinguish from Shortraker Rockfish without looking at the gill rakers.  
 
