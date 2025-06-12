@@ -21,7 +21,7 @@ catches_es_table |>
   gt::gt() |>
   gt::fmt_number(
     columns = 2:5, # depends on number of fleets with catch
-    decimals = 0
+    decimals = 2
   ) |>
   gt::tab_options(
     table.font.size = 10,
@@ -78,7 +78,7 @@ ssb_es_table |>
   gt::gt() |>
   gt::fmt_number(
     columns = 2:4,
-    decimals = 2
+    decimals = 0
   ) |>
   gt::fmt_number(
     columns = 5:7,
@@ -127,6 +127,8 @@ knitr::include_graphics(file.path(model_dir,"plots/ts9_Relative_spawning_output_
 The estimated largest recruitment event throughout the time series was in 2008, which supported an increase in the population leading up to 2017 (@tbl-es-recr, @fig-es-recruits). Recruitment is estimated to be relatively low in the later 2010s, but the model estimates that 2021 and 2023 may support large year classes in the future, with the estimates driven by the new recruitment index for both years.
 
 <!-- Trends and current levels relative to virgin or historic levels-include table for last 10 years and graph with long term estimates. -->
+
+\clearpage
 
 ```{r, tbl-es-recr, results = "asis"}
 #| label: tbl-es-recr
