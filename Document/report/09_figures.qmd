@@ -9,7 +9,7 @@ rda_dir <- here::here('rda_files')
 ``` 
 
 
-## Introduction
+<!-- 02_Introduction -->
 
 ```{r} 
 #| label: fig-map
@@ -82,7 +82,7 @@ knitr::include_graphics(
 \newpage
 
 
-## Data
+<!-- 03_Data -->
 
 ```{r} 
 #| label: fig-data
@@ -342,7 +342,8 @@ knitr::include_graphics(
 knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALdat_bubflt6mkt0_page2.png")
 )
-``
+```
+
 ```{r} 
 #| label: fig-All_indices
 #| echo: false 
@@ -355,6 +356,19 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "index9_standcpueall.png")
 )
 ```
+
+```{r} 
+#| label: fig-WCGBTS_comparison
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Comparison of the West Coast Groundfish Bottom Trawl Survey (WCGBTS) index from the previous assessment (GLMM) and the WCGBTS index of abundance used in this assessment (sdmTMB, lognormal distribution)."
+#| fig-alt: "Comparison of the West Coast Groundfish Bottom Trawl Survey (WCGBTS) index from the previous assessment (GLMM) and the WCGBTS index of abundance used in this assessment (sdmTMB, lognormal distribution)."
+
+knitr::include_graphics(
+  file.path(plot_dir, "WCGBTS_comps.png")
+)
+``` 
 
 ```{r} 
 #| label: fig-WCGBTS_index
@@ -438,7 +452,7 @@ knitr::include_graphics(
 \newpage
 
 
-## Biology
+<!-- Biology -->
 
 
 ```{r} 
@@ -615,7 +629,7 @@ knitr::include_graphics(
 \newpage
 
 
-## Model Bridging
+<!-- Model bridging -->
 
 ```{r} 
 #| label: fig-RSS_2013
@@ -672,7 +686,7 @@ knitr::include_graphics(
 \newpage
 
 
-## Model Specification
+<!-- Model specification -->
 
 ```{r} 
 #| label: fig-Discard_comp_SO
@@ -715,8 +729,7 @@ knitr::include_graphics(
 
 \newpage
 
-
-## Model convergence and fits to data
+<!-- Model convergence and fits to data -->
 
 ```{r} 
 #| label: fig-pairs_plot_fast
@@ -760,9 +773,9 @@ knitr::include_graphics(
 )
 ```
 
-## Fits to data
+<!-- Fits to data -->
 
-### Lengths
+<!-- Lengths -->
 
 ```{r} 
 #| label: fig-agg-len-fit
@@ -1088,7 +1101,7 @@ knitr::include_graphics(
 
 \newpage
 
-### Ages
+<!-- Ages -->
 
 
 ```{r} 
@@ -1258,7 +1271,6 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png")
 )
 ```
-
 
 ```{r} 
 #| label: fig-midwater-mean-caal
@@ -1610,7 +1622,7 @@ knitr::include_graphics(
 )
 ```
 
-### Indices of Abundance
+<!-- Indices of abundance -->
 
 ```{r} 
 #| label: fig-index-tri
@@ -1667,7 +1679,8 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "index2_cpuefit_WCGBTS.png")
 )
 ```
-## Parameter estimates
+
+<!-- Parameter estimates -->
 
 ```{r} 
 #| label: fig-vbgf
@@ -1697,7 +1710,6 @@ knitr::include_graphics(
 )
 ```
 
-
 ```{r} 
 #| label: fig-sel-tv-comp
 #| echo: false 
@@ -1726,9 +1738,7 @@ knitr::include_graphics(
 )
 ```
 
-
-
-## Model outputs
+<!-- Model outputs -->
 
 ```{r} 
 #| label: fig-spawnout
@@ -1744,7 +1754,6 @@ knitr::include_graphics(
 )
 ```
 
-
 ```{r} 
 #| label: fig-depl
 #| echo: false 
@@ -1758,7 +1767,6 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "ts9_Relative_spawning_output_intervals.png")
 )
 ```
-
 
 ```{r} 
 #| label: fig-recdevs
@@ -1869,8 +1877,6 @@ knitr::include_graphics(
 
 ```
 
-
-
 ```{r} 
 #| label: fig-dyn-b0
 #| echo: false 
@@ -1888,8 +1894,7 @@ knitr::include_graphics(
 
 \newpage
 
-
-## Sensitivity Analyses and Retrospectives
+<!-- Sensitvity Analyses and Retrospectives -->
 
 ```{r}
 #| label: fig-sens_indices_spout
@@ -1928,7 +1933,6 @@ knitr::include_graphics(
 )
 ```
 
-
 ```{r}
 #| label: fig-sens_lens1_relsp
 #| echo: false
@@ -1953,7 +1957,6 @@ knitr::include_graphics(
 )
 ```
 
-
 ```{r}
 #| label: fig-sens_lens2_relsp
 #| echo: false
@@ -1977,7 +1980,6 @@ knitr::include_graphics(
     "Document/report/Sensis/output/age_compscompare2_spawnbio_uncertainty.png"
 )
 ```
-
 
 ```{r}
 #| label: fig-sens_age_relsp
@@ -2005,10 +2007,10 @@ knitr::include_graphics(
 
 \newpage
 
-## Likelihood Profiles
+<!-- Likelihood Profiles -->
 
 \newpage
 
-## Reference Points and Forecasts
+<!-- Reference Points and Forecasts -->
 
 \newpage
