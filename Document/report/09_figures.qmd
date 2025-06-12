@@ -2001,8 +2001,8 @@ knitr::include_graphics(
 #| fig-cap: "Spawning output (millions of eggs) across data removal sensitivities (indices)."
 #
 knitr::include_graphics(
-    "Document/report/Sensis/output/indicescompare2_spawnbio_uncertainty.png"
-)
+    here::here("Document/report/Sensis/output/indicescompare2_spawnbio_uncertainty.png"
+))
 ```
 
 
@@ -2014,8 +2014,8 @@ knitr::include_graphics(
 #| fig-cap: "Relative spawning output (fraction unfished) across data removal sensitivities (indices)."
 #
 knitr::include_graphics(
-    "Document/report/Sensis/output/indicescompare4_Bratio_uncertainty.png"
-)
+    here::here("Document/report/Sensis/output/indicescompare4_Bratio_uncertainty.png"
+))
 ```
 
 ```{r}
@@ -2026,8 +2026,8 @@ knitr::include_graphics(
 #| fig-cap: "Spawning output (millions of eggs) across data removal sensitivities (length compositions by fleet)."
 #
 knitr::include_graphics(
-    "Document/report/Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png"
-)
+    here::here("Document/report/Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png"
+))
 ```
 
 ```{r}
@@ -2038,8 +2038,8 @@ knitr::include_graphics(
 #| fig-cap: "Relative spawning output (fraction unfished) across data removal sensitivities (length compositions by fleet)."
 #
 knitr::include_graphics(
-    "Document/report/Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png"
-)
+    here::here("Document/report/Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png"
+))
 ```
 
 ```{r}
@@ -2050,8 +2050,8 @@ knitr::include_graphics(
 #| fig-cap: "Spawning output (millions of eggs) across data removal sensitivities (length compositions by source)."
 #
 knitr::include_graphics(
-    "Document/report/Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png"
-)
+    here::here("Document/report/Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png"
+))
 ```
 
 ```{r}
@@ -2062,8 +2062,8 @@ knitr::include_graphics(
 #| fig-cap: "Relative spawning output (fraction unfished) across data removal sensitivities (length compositions by source)."
 #
 knitr::include_graphics(
-    "Document/report/Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png"
-)
+    here::here("Document/report/Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png"
+))
 ```
 
 ```{r}
@@ -2074,8 +2074,8 @@ knitr::include_graphics(
 #| fig-cap: "Spawning output (millions of eggs) across data removal sensitivities (age compositions by fleet)."
 #
 knitr::include_graphics(
-    "Document/report/Sensis/output/age_compscompare2_spawnbio_uncertainty.png"
-)
+    here::here("Document/report/Sensis/output/age_compscompare2_spawnbio_uncertainty.png"
+))
 ```
 
 ```{r}
@@ -2086,8 +2086,8 @@ knitr::include_graphics(
 #| fig-cap: "Relative spawning output (fraction unfished) across data removal sensitivities (age compositions by fleet)."
 #
 knitr::include_graphics(
-    "Document/report/Sensis/output/age_compscompare4_Bratio_uncertainty.png"
-)
+    here::here("Document/report/Sensis/output/age_compscompare4_Bratio_uncertainty.png"
+))
 ```
 
 ```{r}
@@ -2098,8 +2098,8 @@ knitr::include_graphics(
 #| fig-cap: "Relative change in management quantities across models conducted as sensitivities (removal of data sources)."
 #
 knitr::include_graphics(
-    "Document/report/Sensis/output/sens_summary.png"
-)
+    here::here("Document/report/Sensis/output/sens_summary.png"
+))
 ```
 
 \newpage
