@@ -11,9 +11,10 @@ mutate(Species = factor(Species, levels=c("Cowcod","Yelloweye","Squarespot","REB
   )) %>%
   ggplot(aes(x=Species, y=lnR0)) +
   geom_segment( aes(xend=Species, yend=0)) +
-  geom_point(aes(col=point_col),size=4) +
+  geom_point(aes(col=Depth),size=4) +
   theme_bw() +
   coord_flip() +
-  xlab("")+
-  theme(legend.position="none")
+  xlab("")
+
+#  theme(legend.position="none")
 
