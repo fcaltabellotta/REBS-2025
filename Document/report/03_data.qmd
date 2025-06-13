@@ -110,7 +110,9 @@ Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is 
 The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
 ##### Commercial Discard Lengths
-Discard length composition data for both bottom trawl and non-trawl discard fleets were available from WCGOP. Discard length composition data were not sex-specific. Discard raw length observations were expanded to the haul level, to account for differences in catch among hauls (@fig-length_flt2 and @fig-length_flt4). 
+Discard length composition data for both bottom trawl and non-trawl discard fleets were available from WCGOP. The number of trips and fish sampled for lengths by year are summarized in @tbl-discard_sample_sizes, by discard fleet. 
+
+Discard length composition data were not sex-specific. Discard raw length observations were expanded to the haul level, to account for differences in catch among hauls (@fig-length_flt2 and @fig-length_flt4). 
 
 The initial input values for length compositions were calculated via the Stewart Method (see above). 
 
