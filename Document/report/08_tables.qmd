@@ -140,12 +140,11 @@ recent_management_table |>
 #| label: tbl-maturity_estimates
 #| warning: false
 #| echo: false
-#| tbl-cap: "Placeholder."
+#| tbl-cap: "Length and age at biological (L50_bio, A50_bio) and functional maturity (L50_fxn, A50_fxn) for the Rougheye and Blackspotted rockfish complex (RE/BS), and genetically confirmed Rougheye and Blackspotted separately. Only certain maturity determinations were used in this analysis."
 
 maturity_estimates <- read.csv(
   here::here("Document/report/tables_4_doc/maturity_estimates.csv"),
-  header = TRUE,
-  row.names = c("RE/BS all data", "RE/BS genetically confirmed", "Rougheye Rockfish", "Blackspotted Rockfish")
+  header = TRUE
 )
 
 maturity_estimates |>
