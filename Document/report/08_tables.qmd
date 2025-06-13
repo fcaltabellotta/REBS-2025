@@ -223,8 +223,50 @@ BT_lengths_sample_sizes |>
   as_latex()
 
 ```
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-NT_lengths_sample_sizes
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of fishery sampling effort (number of trips and fish sampled) by state used to create length frequency distributions of the non-trawl fleets."
 
+NT_lengths_sample_sizes <- read.csv(
+  here::here("Document/report/tables_4_doc/BT_lengths_sample_sizes.csv"),
+  header = TRUE
+)
 
+NT_lengths_sample_sizes |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-MDT_lengths_sample_sizes
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of fishery sampling effort (number of trips and fish sampled) by state used to create length frequency distributions of the mid-water trawl fleets."
+
+MDT_lengths_sample_sizes <- read.csv(
+  here::here("Document/report/tables_4_doc/BT_lengths_sample_sizes.csv"),
+  header = TRUE
+)
+
+MDT_lengths_sample_sizes |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
  {{< pagebreak >}} 
 
 
