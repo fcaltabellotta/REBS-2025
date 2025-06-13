@@ -137,6 +137,71 @@ recent_management_table |>
 
 
 ```{r}
+#| label: tbl-BT_landings
+#| warning: false
+#| echo: false
+#| tbl-cap: "Landings (metric tons) for botton trawl fleet by state and bycatch within POP historcial fishery."
+
+BT_landings <- read.csv(
+  here::here("Document/report/tables_4_doc/BT_landings_by_source.csv"),
+  header = TRUE
+)
+
+BT_landings |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+```{r}
+#| label: tbl-NT_landings
+#| warning: false
+#| echo: false
+#| tbl-cap: "Landings (metric tons) for non-trawl fleet by state."
+
+NT_landings <- read.csv(
+  here::here("Document/report/tables_4_doc/NT_landings_by_state.csv"),
+  header = TRUE
+)
+
+NT_landings |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+```{r}
+#| label: tbl-MDT_landings
+#| warning: false
+#| echo: false
+#| tbl-cap: "Landings (metric tons) for mid-water trawl fleet by state."
+
+MDT_landings <- read.csv(
+  here::here("Document/report/tables_4_doc/MDT_landings_by_state.csv"),
+  header = TRUE
+)
+
+MDT_landings |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+
+
+```{r}
 #| label: tbl-maturity_estimates
 #| warning: false
 #| echo: false
