@@ -715,6 +715,48 @@ knitr::include_graphics(
 \newpage
 
 
+```{r} 
+#| label: fig-maturity_bio_fxn
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Placeholder."
+#| fig-alt: "Placeholder."
+
+knitr::include_graphics(
+  file.path(plot_dir, "bio_fxn_maturity.png")
+)
+``` 
+
+
+```{r} 
+#| label: fig-maturity_length_both
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Placeholder."
+#| fig-alt: "Placeholder."
+
+knitr::include_graphics(
+  file.path(plot_dir, "l50_both_species.png")
+)
+``` 
+
+
+```{r} 
+#| label: fig-maturity_age_both
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Placeholder."
+#| fig-alt: "Placeholder."
+
+knitr::include_graphics(
+  file.path(plot_dir, "a50_both_species.png")
+)
+``` 
+
+
 <!-- Model bridging -->
 
 ```{r} 
@@ -765,30 +807,6 @@ knitr::include_graphics(
   file.path(plot_dir, "compare3_Bratio_discard_fleets.png")
 )
 ```
-```{r} 
-#| label: fig-sex_comp_RSS
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of relative spawning output between one sex and two sex models."
-#| fig-alt: "Comparing relative stock size between one sex and two sex models."
-
-knitr::include_graphics(
-  file.path(plot_dir, "1vs2sex_Bratio.png")
-)
-``` 
-```{r} 
-#| label: fig-sex_comp_SO
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Comparison of spawning output between one sex and two sex models."
-#| fig-alt: "Comparing spawning output between one sex and two sex models."
-
-knitr::include_graphics(
-  file.path(plot_dir, "1v2sex_spawnbio.png")
-)
-``` 
  
 ```{r} 
 #| label: fig-SO_Bridging

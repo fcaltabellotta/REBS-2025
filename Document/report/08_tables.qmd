@@ -7,7 +7,7 @@
 #| tbl-cap: "Major management actions since 2000 that have impacted the management of the Rougheye/Blackspotted complex."
 
 management_summary <- read.csv(
-  here::here("Document/report/rda_files/management-summary.csv"),
+  here::here("Document/report/tables_4_doc/management-summary.csv"),
   fileEncoding = "latin1"
 )
 
@@ -133,7 +133,36 @@ recent_management_table |>
 #```
 
 \pagebreak
+<!-- data-->
 
+
+```{r}
+#| label: tbl-maturity_estimates
+#| warning: false
+#| echo: false
+#| tbl-cap: "Length and age at biological (L50_bio, A50_bio) and functional maturity (L50_fxn, A50_fxn) for the Rougheye and Blackspotted rockfish complex (RE/BS), and genetically confirmed Rougheye and Blackspotted separately. Only certain maturity determinations were used in this analysis."
+
+maturity_estimates <- read.csv(
+  here::here("Document/report/tables_4_doc/maturity_estimates.csv"),
+  header = TRUE
+)
+
+maturity_estimates |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+
+
+
+
+
+<!-- model-->
 
 ```{r}
 #| label: tbl-model-config
@@ -172,8 +201,6 @@ parcount_table |>
 
  {{< pagebreak >}} 
  
-::: {.landscape}
-
 ```{r}
 #| label: tbl-param
 #| warning: false
@@ -181,6 +208,8 @@ parcount_table |>
 #| eval: !expr eval_tables 
 #| tbl-cap: !expr if(eval_tables) par_cap 
 #| tbl-pos: H
+
+cat("\\begin{landscape}\n")
 
 par_table |>
   flextable::flextable() |>
@@ -190,9 +219,9 @@ par_table |>
     width = c(2, 0.5, 0.5, 1.5, 0.5, 0.5, 2.5)
   ) 
 
-```
+cat("\n\\end{landscape}\n") 
 
-::: 
+```
 
  {{< pagebreak >}} 
  
@@ -394,7 +423,6 @@ cat("\n\\end{landscape}\n")
 
 \pagebreak
 
-#::: {.landscape}
 
 #```{r, results = "asis"}
 ##| label: tbl-projections
@@ -432,6 +460,5 @@ cat("\n\\end{landscape}\n")
 
 #```
 
-#:::
 
 #\pagebreak

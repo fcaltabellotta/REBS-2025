@@ -327,7 +327,6 @@ The largest uncertainty in this model is the inability to fit a marked increase 
 ## Harvest Projections and Decision Tables
 Projections of the overfishing limit, acceptable biological catch, and annual catch limit, all based on a P* of 0.45 and a log-space standard deviation of the overfishing limit of 0.5 are included in @tbl-es-projections. Assumed catches for 2025 and 2026 for this projection were provided by the Groundfish Management Team, and catches from 2027 onward assume full attainment of the acceptable biological catch.
 
-::: {.landscape}
 
 ```{r, tbl-es-projections, results = "asis"}
 #| label: tbl-es-projections
@@ -336,6 +335,8 @@ Projections of the overfishing limit, acceptable biological catch, and annual ca
 #| eval: !expr eval_tables 
 #| tbl-cap: !expr if(eval_tables) projections_cap 
 #| tbl-pos: H
+
+cat("\\begin{landscape}\n")
 
 projections_table |>
   gt::gt() |>
@@ -363,9 +364,9 @@ projections_table |>
   ) |>
   gt::as_latex()
 
-```
+cat("\n\\end{landscape}\n") 
 
-:::
+```
 
 ```{r, results = "asis"}
 ##| label: tbl-es-decision
