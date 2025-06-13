@@ -7,7 +7,7 @@
 #| tbl-cap: "Major management actions since 2000 that have impacted the management of the Rougheye/Blackspotted complex."
 
 management_summary <- read.csv(
-  here::here("Document/report/rda_files/management-summary.csv"),
+  here::here("Document/report/tables_4_doc/management-summary.csv"),
   fileEncoding = "latin1"
 )
 
@@ -133,7 +133,37 @@ recent_management_table |>
 #```
 
 \pagebreak
+<!-- data-->
 
+
+```{r}
+#| label: tbl-maturity_estimates
+#| warning: false
+#| echo: false
+#| tbl-cap: "Placeholder."
+
+maturity_estimates <- read.csv(
+  here::here("Document/report/tables_4_doc/maturity_estimates.csv"),
+  header = TRUE,
+  row.names = c("RE/BS all data", "RE/BS genetically confirmed", "Rougheye Rockfish", "Blackspotted Rockfish")
+)
+
+maturity_estimates |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+
+
+
+
+
+<!-- model-->
 
 ```{r}
 #| label: tbl-model-config
