@@ -202,6 +202,30 @@ MDT_landings |>
 
 ```
  {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-BT_lengths_sample_sizes
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of fishery sampling effort (number of trips and fish sampled) by state used to create length frequency distributions of the bottom trawl fleets."
+
+BT_lengths_sample_sizes <- read.csv(
+  here::here("Document/report/tables_4_doc/BT_lengths_sample_sizes.csv"),
+  header = TRUE
+)
+
+BT_lengths_sample_sizes |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+
+ {{< pagebreak >}} 
 
 
 ```{r}
