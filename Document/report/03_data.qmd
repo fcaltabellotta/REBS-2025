@@ -1,12 +1,7 @@
 # Data
-
 Data from a wide range of sources were evaluated within this assessment. Data sources included in the assessment model are summarized in @fig-data. Description of each data source used in the model is provided below.
 
-<!--- Provide temporal and spatial resolutions or sample size where appropriate for each of the subsections, below.--->
-
 ## Fishery-dependent data {#sec-fishery_data}
-
-<!-- Commercial fisheries landings by state, year, and gear (PacFIN is the standard source for recent domestic commercial landings), historical catch estimates, discards, recreational fisheries catches, foreign removals; sample size information for length- and age-composition data by state, year and gear, including both the number of trips and fish sampled. Description of methods to estimate abundance indices, sample size information by survey and year. Include complete tables and figures and date of data extraction. -->
 `r Spp` are not targeted by a specific fishery, but are desirable and marketable, thus are typically retained when caught. They are often captured in bottom trawl, mid-water trawl, and longline fisheries. They are also commonly bycaught within the at-sea hake fishery. Small numbers have been observed in pot and shrimp trawl. Recreational catch is inconsequential and not accounted for in this assessment. 
 
 `r Spp` fishery-dependent data in this assessment are divided among six fleets, which include:
@@ -31,8 +26,7 @@ Historical landings of `r Spp` were reconstructed by state.
 
 The Washington historical landings (1889–2000) of `r Spp` were provided by Washington Department of Fish and Wildlife (WDFW), who recently conducted historical catch reconstruction for rockfish species, including `r Spp` (pers. comm. T. Tsou, WDFW). The three main sources used in this reconstruction  included the US Fish Commission Report (UFSC), Washington Bound Volumes, and Washington Statistical Bulletin **(SpeciesSumOutput2_2017.csv- ADD TABLE)**. The historical species composition was based on the various historical reports and interviews of fishermen and dockside samplers. The landings between 1981 and 2000 were also provided by WDFW (rather than obtained from PacFIN), since WDFW developed and used a improved method for apportioning unidentified rockfish (URCK) category in fish tickets to the individual species landings. This improved approach relaxed the borrowing rules for missing data used in the WDFW species allocation algorithm that feeds into PacFIN (pers. comm. T. Tsou, WDFW). New Washington historical landings represent improvement to the assessment. 
 
-The Oregon historical landings (1896–1986) were obtained from Oregon historical catch reconstruction, conducted by Oregon Department of Fish and Wildlife (ODFW) in collaboration with NWFSC (@karnowski_historical_2014). 
-The Oregon landings for the period between 1987 and 1999 were also provided by the ODFW. For that period, Oregon PacFIN landings were supplemented with the additional estimates of `r Spp`landings reported within unspecified rockfish market categories (i.e., URCK and POP1; @ODFW_URCK_POP_recon). 
+The Oregon historical landings (1896–1986) were obtained from Oregon historical catch reconstruction, conducted by Oregon Department of Fish and Wildlife (ODFW) in collaboration with NWFSC (@karnowski_historical_2014). The Oregon landings for the period between 1987 and 1999 were also provided by the ODFW. For that period, Oregon PacFIN landings were supplemented with the additional estimates of `r Spp`landings reported within unspecified rockfish market categories (i.e., URCK and POP1; @ODFW_URCK_POP_recon). 
 
 The California historical landings were informed by several sources. Landings from the most recent “historical” period (between 1969 and 1980) were obtained from the California Cooperative Survey (CalCOM) database. Earlier landing records (between 1931 and 1968) were informed by the rockfish historical catch reconstruction conducted by the NOAA's Southwest Fisheries Science Center (@ralston_documentation_2010). 
 
@@ -167,8 +161,6 @@ The biomass estimates produced for this assessment using \gls{sdmtmb} are compar
 Length bins from 1o to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year **(Figure XX)**. **Table XX** shows the number of lengths taken by the survey. 
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in **Table XX**.
-
-
 
 Age distributions included bins from age 1 to age 100, with the last bin including all fish of greater age. **Table XX** shows the number of ages taken by the survey. Age distributions were included in the model as CAAL observations. The marginal age compositions were only used for comparing the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.
 
