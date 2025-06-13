@@ -156,7 +156,8 @@ BT_landings |>
   as_latex()
 
 ```
-
+ {{< pagebreak >}} 
+ 
 ```{r}
 #| label: tbl-NT_landings
 #| warning: false
@@ -177,7 +178,8 @@ NT_landings |>
   as_latex()
 
 ```
-
+ {{< pagebreak >}} 
+ 
 ```{r}
 #| label: tbl-MDT_landings
 #| warning: false
@@ -198,7 +200,7 @@ MDT_landings |>
   as_latex()
 
 ```
-
+ {{< pagebreak >}} 
 
 
 ```{r}
