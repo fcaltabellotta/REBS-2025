@@ -137,7 +137,7 @@ recent_management_table |>
 
 
 ```{r}
-<<<<<<< HEAD
+
 #| label: tbl-BT_landings
 #| warning: false
 #| echo: false
