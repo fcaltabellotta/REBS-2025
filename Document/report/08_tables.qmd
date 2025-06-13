@@ -205,8 +205,7 @@ MDT_landings |>
 
 
 ```{r}
-=======
->>>>>>> 580b4a50f3fd8ed6510a2f42f77ebf3335143a61
+
 #| label: tbl-maturity_estimates
 #| warning: false
 #| echo: false
