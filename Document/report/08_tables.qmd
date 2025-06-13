@@ -396,7 +396,7 @@ kableExtra::kable(
 \pagebreak
 
 
-<---- sensitivities --->
+<!-- sensitivities-->
 
 
 ```{r}
@@ -492,6 +492,7 @@ cat("\n\\end{landscape}\n")
 
 \pagebreak
 
+<!-- projections -->
 
 #```{r, results = "asis"}
 ##| label: tbl-projections
@@ -531,3 +532,52 @@ cat("\n\\end{landscape}\n")
 
 
 #\pagebreak
+
+<!-- management-->
+
+```{r, tbl-ref-points, results = "asis"}
+#| label: tbl-ref-points-es
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) reference_points_cap 
+#| tbl-pos: H
+
+reference_points_table |>
+  gt::gt() |>
+  gt::fmt_number(
+    columns = 2:4,
+    rows = c(2:4, 7, 10, 12, 15, 17, 20),
+    decimals = 0
+  ) |>
+  gt::fmt_number(
+    columns = 2:4,
+    rows = 1,
+    decimals = 1
+  ) |>
+  gt::fmt_number(
+    columns = 2:4,
+    rows = c(5, 8, 9, 13:14, 18:19),
+    decimals = 3
+  ) |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE 
+  ) |>  
+  gt::tab_style(
+    style = list(
+      gt::cell_text(style = "italic")
+    ),
+    locations = gt::cells_body(
+      columns = "Reference Point",
+      rows = dplyr::starts_with("Reference")
+    )
+  ) |>
+  gt::sub_missing(
+    columns = tidyselect::everything(),
+    missing_text = "---"
+  ) |>
+  gt::as_latex()
+
+```
+
