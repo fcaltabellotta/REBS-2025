@@ -289,6 +289,28 @@ discard_lengths_sample_sizes |>
   as_latex()
 
 ```
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-ashop_sample_sizes
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of fishery sampling effort (number of hauls and fish sampled) used to create length frequency distributions and CAAL of At-sea Hake fleet."
+
+ashop_lengths_sample_sizes <- read.csv(
+  here::here("Document/report/tables_4_doc/ashop_sample_sizes.csv"),
+  header = TRUE
+)
+
+ashop_lengths_sample_sizes |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
 
 
  {{< pagebreak >}} 

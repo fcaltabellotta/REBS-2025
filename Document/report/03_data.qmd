@@ -110,7 +110,7 @@ Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is 
 The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
 ##### Commercial Discard Lengths
-Discard length composition data for both bottom trawl and non-trawl discard fleets were available from WCGOP. The number of trips and fish sampled for lengths by year are summarized in @tbl-discard_sample_sizes, by discard fleet. 
+Discard length composition data for both bottom trawl and non-trawl discard fleets were available from WCGOP. The number of trips, hauls and fish sampled for lengths by year are summarized in @tbl-discard_sample_sizes, by discard fleet. 
 
 Discard length composition data were not sex-specific. Discard raw length observations were expanded to the haul level, to account for differences in catch among hauls (@fig-length_flt2 and @fig-length_flt4). 
 
@@ -119,9 +119,9 @@ The initial input values for length compositions were calculated via the Stewart
 No age data were available for discarded fish.
 
 ##### At-sea hake Fishery Length and Age Compositions
-The sex-specific length and age data for at-sea hake fleet were collected by the at-sea hake observer program (a-shop) and available through NORPAC database (@fig-length_flt2 and @fig-length_flt4). 
+The sex-specific length and age data for at-sea hake fleet were collected by the at-sea hake observer program (a-shop) and available through NORPAC database (@fig-length_flt2 and @fig-length_flt4). Age distributions were included in the model as CAAL observations, binned according to length, age, sex, and year (@fig-caal_flt6_1 through @fig-caal_flt6_2). 
 
-Age distributions were included in the model as CAAL observations, binned according to length, age, sex, and year (@fig-caal_flt6_1 through @fig-caal_flt6_2). 
+The number of hauls and fish sampled by year and used to create length frequency and CAAL distributions are summarized in @tbl-ashop_sample_sizes. 
 
 Input sample sizes for length compositions were based on the number of hauls sampled by year. The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
