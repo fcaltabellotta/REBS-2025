@@ -1863,6 +1863,20 @@ knitr::include_graphics(
 )
 ```
 
+```{r} 
+#| label: fig-lnR0
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Estimated unfished recruitment (lnR0) for several assessed shelf and slope rockfishes."
+#| fig-alt: "This lollipop plot goes from top to bottom the smallest to largest estimated log R0 from stock assessments."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(plot_dir, "lnR0.png")
+)
+```
+
 <!-- Model outputs -->
 
 ```{r} 
