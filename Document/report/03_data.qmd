@@ -76,7 +76,7 @@ Non-trawl discard amounts by year are provided in are provided in @tbl-landings 
 Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the catches in each year. The first length bin includes all observations less than 10 cm and the last bin includes all fish 80 cm and longer. Age distributions included bins from age 1 to age 100, with the first bin including all fish ages 0 and 1 and the last bin including all fish age 100 and above.
 
 #### Commercial Landings Length and Ages
-The fishery length and age data for bottom trawl, non-trawl and mid-water trawl fleets, based on samples collected by port samplers, were obtained from the PacFIN Biological Data System (BDS) database and extracted on April 24, 2025. The number of trips and fish sampled for lengths and ages by state and year are summarized in @tbl-BT_lengths_sample_sizes through @tbl-MDT_lengths_sample_sizes, by fishing fleet. 
+The fishery length and age data for bottom trawl, non-trawl and mid-water trawl fleets, based on samples collected by port samplers, were obtained from the PacFIN Biological Data System (BDS) database and extracted on April 24, 2025. The number of trips and fish sampled for lengths and ages by state and year are summarized in @tbl-BT_lengths_sample_sizes through @tbl-Fishery_age_sample_sizes, by fishing fleet. 
 
 Commercial length-frequency distributions were developed for each fleet and year, for which observations were available
 

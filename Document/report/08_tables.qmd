@@ -270,6 +270,28 @@ MDT_lengths_sample_sizes |>
  {{< pagebreak >}} 
  
 ```{r}
+#| label: tbl-Fishery_age_sample_sizes
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of fishery sampling effort (number of trips and fish sampled) by state used to create conditional ages-at-length compositions."
+
+Fishery_age_sample_sizes <- read.csv(
+  here::here("Document/report/tables_4_doc/Fishery_age_sample_sizes.csv"),
+  header = TRUE
+)
+
+Fishery_age_sample_sizes |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+ {{< pagebreak >}} 
+ 
+```{r}
 #| label: tbl-discard_sample_sizes
 #| warning: false
 #| echo: false
