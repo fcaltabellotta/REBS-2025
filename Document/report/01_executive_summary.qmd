@@ -80,9 +80,9 @@ The only previous stock assessment for `r spp` for the U.S. West Coast area was 
 This is a sex-specific model. Females and males have separate growth curves and sex-specific weight-at-length parameters. Growth is assumed to follow the von Bertalanffy growth model, and the assessment explicitly estimates all parameters describing somatic growth. The model assumes a natural mortality of 0.036 yr-1 for males, while natural mortality for females is estimated using a meta-analytical prior (@hamel_development_2022).  Externally estimated life history parameters, including those defining the length-weight relationship, female fecundity and maturity schedule were revised for this assessment to incorporate new information. Recruitment dynamics are assumed to follow the Beverton-Holt stock-recruit function, and recruitment deviations are estimated. Stock-recruitment steepness is fixed at the value generated from meta-analytical study. The base model estimates parameters for selectivity based on length data, and estimated selectivity curves are a mix of dome-shaped (for bottom trawl gears) and logistic (for mid-water gears).
 
 ### Stock Output and Dynamics
-The model estimates that the stock complex did not exhibit a sharp changes throughout the years, and the dynamics was relatively flat (@fig-es-sb, @fig-es-depl). Estimates for most recent years are shown in @tbl-es-sb. Approximate confidence intervals based on the asymptotic variance estimates show that the uncertainty in the estimated spawning biomass is high.
+The model estimates that the stock complex did not exhibit a sharp changes throughout the years (@fig-es-sb, @fig-es-depl) and currently is in a healthy state, well above management target. Approximate confidence intervals based on the asymptotic variance estimates show that the uncertainty in the estimated spawning output is high. Estimates of spawning biomass in most recent decade are shown in @tbl-es-sb. 
 
-Fraction unfished shows slight decline in the 1960s with subsequent increase through the early-1980s, following another decrease over the past firty five years. 
+Fraction unfished shows more resolution in stock dynamics, with slight decline in the 1960s, subsequent increase through the early-1980s, following another decrease over the past forty five years. 
 
 ```{r, tbl-es-sb, results = "asis"}
 #| label: tbl-es-sb
