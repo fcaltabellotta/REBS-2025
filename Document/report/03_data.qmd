@@ -25,7 +25,7 @@ Recent commercial landings of `r Spp` (2000-2024 for Washington, 1987–2024 for
 #### Historical Landings
 Historical landings of `r Spp` were reconstructed by state. 
 
-The Washington historical landings (1889–2000) of `r Spp` were provided by Washington Department of Fish and Wildlife (WDFW), who recently conducted historical catch reconstruction for rockfish species, including `r Spp` (pers. comm. T. Tsou, WDFW). The three main sources used in this reconstruction  included the US Fish Commission Report (UFSC), Washington Bound Volumes, and Washington Statistical Bulletin **(SpeciesSumOutput2_2017.csv- ADD TABLE)**. The historical species composition was based on the various historical reports and interviews of fishermen and dockside samplers. The landings between 1981 and 2000 were also provided by WDFW (rather than obtained from PacFIN), since WDFW developed and used a improved method for apportioning unidentified rockfish (URCK) category in fish tickets to the individual species landings. This improved approach relaxed the borrowing rules for missing data used in the WDFW species allocation algorithm that feeds into PacFIN (pers. comm. T. Tsou, WDFW). New Washington historical landings represent improvement to the assessment. 
+The Washington historical landings (1889–2000) of `r Spp` were provided by Washington Department of Fish and Wildlife (WDFW), who recently conducted historical catch reconstruction for rockfish species, including `r Spp` (pers. comm. T. Tsou, WDFW). The three main sources used in this reconstruction  included the US Fish Commission Report (UFSC), Washington Bound Volumes, and Washington Statistical Bulletin. The historical species composition was based on the various historical reports and interviews of fishermen and dockside samplers. The landings between 1981 and 2000 were also provided by WDFW (rather than obtained from PacFIN), since WDFW developed and used a improved method for apportioning unidentified rockfish (URCK) category in fish tickets to the individual species landings. This improved approach relaxed the borrowing rules for missing data used in the WDFW species allocation algorithm that feeds into PacFIN (pers. comm. T. Tsou, WDFW). New Washington historical landings represent improvement to the assessment. 
 
 The Oregon historical landings (1896–1986) were obtained from Oregon historical catch reconstruction, conducted by Oregon Department of Fish and Wildlife (ODFW) in collaboration with NWFSC (@karnowski_historical_2014). The Oregon landings for the period between 1987 and 1999 were also provided by the ODFW. For that period, Oregon PacFIN landings were supplemented with the additional estimates of `r Spp`landings reported within unspecified rockfish market categories (i.e., URCK and POP1; @ODFW_URCK_POP_recon). 
 
@@ -46,7 +46,7 @@ Between mid-1960s and mid-1970s, foreign trawl fleets from the former Soviet Uni
 
 Large-scale harvesting of Pacific hake in the United States began in late-1960s, when factory trawlers from the Soviet Union and other countries began targeting this stock. After the 200-mile U.S. Exclusive Economic Zone was declared in 1977, a Joint-Venture fishery was initiated between United States trawlers and Soviet factory trawlers acting as mother-ships (larger, slower ships for fish processing and storage while at sea). By 1989 the U.S. fleet capacity had grown to a level sufficient to harvest the entire quota, and no further foreign fishing was allowed. The Pacific hake fishery is currently 100% observed by the at-sea hake observer program (A-SHOP) and data on bycatch species, including `r Spp`, is being routinely collected. 
 
-Annual amounts of `r Spp` bycatch (retained and discarded) in the Pacific hake fishery were obtained from the North Pacific Database Program (NORPAC). That time series covers the period between 1977 and 2024 and include catches by foreign and domestic fisheries as well as removals during the time of Joint Ventures (JV). `r Spp` catches within the at-sea hake fishery were treated in the model as a separate fleet.
+Annual amounts of `r Spp` bycatch (retained and discarded) in the Pacific hake fishery were obtained from the North Pacific Database Program (NORPAC). That time series covers the period between 1977 and 2024 and include catches by foreign and domestic fisheries as well as removals during the time of Joint Ventures (JV). `r Spp` catches within the at-sea hake fishery were treated in the model as a separate fleet (@tbl-BT_landings).
 
 ### Discards
 
@@ -67,16 +67,16 @@ The discard amounts of `r Spp` for the period between 2002 and 2023 were obtaine
 Mid-water trawl discard was not present in non-catch share sector and was extremely minimal (virtually non-existing) in catch-share sector, with discard amounts averaging to 10kg per year. Therefore, in the model, no discard was assumed for mid-water trawl fleet. 
 
 ##### Bottom Trawl Discard
-Bottom trawl discard amounts by year are provided in **Table XX**. Prior to 2011, before the start of the catch share program, the discard of `r Spp` ranged between 1 metric ton and 60 metric tons, averaging at 23 metric tons a year. After 2011, the discard has been very low, not exceeding 0.5 metric ton a year. No discard data were available for 2024, and we used the average discard amount for 2019 - 2023 period to approximate 2024 discards for bottom trawl discard fleet.
+Bottom trawl discard amounts by year are provided in @tbl-landings and shown in @fig-landings. Prior to 2011, before the start of the catch share program, the discard of `r Spp` ranged between 1 metric ton and 60 metric tons, averaging at 23 metric tons a year. After 2011, the discard has been very low, not exceeding 0.5 metric ton a year. No discard data were available for 2024, and we used the average discard amount for 2019 - 2023 period to approximate 2024 discards for bottom trawl discard fleet.
 
 ##### Non-Trawl Discard
-Non-trawl discard amounts by year are provided in **Table XX**. Non-trawl discard of `r Spp` were made in both catch share and non-catch share sectors. Discard amounts in these sectors were combined by year to represent total discard within the fleet. The discards within this fleet ranged between 0.5 metric ton and 35 metric tons, with 10 metric tons as average per year. No discard data were available for 2024, and the 2023 discard amount was assumed for 2024 for non-trawl discard fleet.
+Non-trawl discard amounts by year are provided in are provided in @tbl-landings and shown in @fig-landings. Non-trawl discard of `r Spp` were made in both catch share and non-catch share sectors. Discard amounts in these sectors were combined by year to represent total discard within the fleet. The discards within this fleet ranged between 0.5 metric ton and 35 metric tons, with 10 metric tons as average per year. No discard data were available for 2024, and the 2023 discard amount was assumed for 2024 for non-trawl discard fleet.
 
 ### Fishery Length and Age Data
 Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the catches in each year. The first length bin includes all observations less than 10 cm and the last bin includes all fish 80 cm and longer. Age distributions included bins from age 1 to age 100, with the first bin including all fish ages 0 and 1 and the last bin including all fish age 100 and above.
 
 #### Commercial Landings Length and Ages
-The fishery length and age data for bottom trawl, non-trawl and midwater trawl fleets, based on samples collected by port samplers, were obtained from the PacFIN Biological Data System (BDS) database and extracted on April 24, 2025. The number of trips and fish sampled for lengths and ages by fleet and year are summarized in **Tables XX-XX**. 
+The fishery length and age data for bottom trawl, non-trawl and mid-water trawl fleets, based on samples collected by port samplers, were obtained from the PacFIN Biological Data System (BDS) database and extracted on April 24, 2025. The number of trips and fish sampled for lengths and ages by state and year are summarized in @tbl-BT_lengths_sample_sizes through @tbl-MDT_lengths_sample_sizes, by fishing fleet. 
 
 Commercial length-frequency distributions were developed for each fleet and year, for which observations were available
 
@@ -110,16 +110,18 @@ Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is 
 The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
 ##### Commercial Discard Lengths
-Discard length composition data for both bottom trawl and non-trawl discard fleets were available from WCGOP. Discard length composition data were not sex-specific. Discard raw length observations were expanded to the haul level, to account for differences in catch among hauls (@fig-length_flt2 and @fig-length_flt4). 
+Discard length composition data for both bottom trawl and non-trawl discard fleets were available from WCGOP. The number of trips, hauls and fish sampled for lengths by year are summarized in @tbl-discard_sample_sizes, by discard fleet. 
+
+Discard length composition data were not sex-specific. Discard raw length observations were expanded to the haul level, to account for differences in catch among hauls (@fig-length_flt2 and @fig-length_flt4). 
 
 The initial input values for length compositions were calculated via the Stewart Method (see above). 
 
 No age data were available for discarded fish.
 
 ##### At-sea hake Fishery Length and Age Compositions
-The sex-specific length and age data for at-sea hake fleet were collected by the at-sea hake observer program (a-shop) and available through NORPAC database (@fig-length_flt2 and @fig-length_flt4). 
+The sex-specific length and age data for at-sea hake fleet were collected by the at-sea hake observer program (a-shop) and available through NORPAC database (@fig-length_flt2 and @fig-length_flt4). Age distributions were included in the model as CAAL observations, binned according to length, age, sex, and year (@fig-caal_flt6_1 through @fig-caal_flt6_2). 
 
-Age distributions were included in the model as CAAL observations, binned according to length, age, sex, and year (@fig-caal_flt6_1 through @fig-caal_flt6_2). 
+The number of hauls and fish sampled by year and used to create length frequency and CAAL distributions are summarized in @tbl-ashop_sample_sizes. 
 
 Input sample sizes for length compositions were based on the number of hauls sampled by year. The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
