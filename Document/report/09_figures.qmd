@@ -1822,6 +1822,34 @@ knitr::include_graphics(
 ```
 
 ```{r} 
+#| label: fig-sel-tv-fisheries
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Selectivity curves for fisheries fleets with time blocks when time-varying selelctivity assumptions were used."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "selectivityPlot_fisheries.png")
+)
+```
+
+```{r} 
+#| label: fig-sel-tv-surveys
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Selectivity curves for fisheries fleets with time blocks when time-varying selelctivity assumptions were used."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "selectivityPlot_surveys.png")
+)
+```
+
+```{r} 
 #| label: fig-sel-all
 #| echo: false 
 #| warning: false 
@@ -1834,6 +1862,7 @@ knitr::include_graphics(
   file.path(model_dir, "plots", "sel01_multiple_fleets_length1.png")
 )
 ```
+
 
 ```{r} 
 #| label: fig-sel-tv-comp
@@ -1859,7 +1888,7 @@ knitr::include_graphics(
 #| fig-pos: H
 
 knitr::include_graphics(
-  file.path(model_dir, "plots", "sel01_multiple_fleets_length1.png")
+  file.path(model_dir, "plots", "sel02_multiple_fleets_age2.png")
 )
 ```
 
