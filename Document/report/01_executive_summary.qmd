@@ -1,11 +1,23 @@
 # Executive Summary
 
-## Stock Description
-This document presents the stock assessment for the Rougheye (*Sebastes aleutianus*) and Blackspotted (*Sebastes melanostictus*) Rockfishes, two species that form one management complex. Despite some identification advances and Rougheye and Blackspotted rockfishes are clearly genetically distinct species, data historically and contemporaneously remain available mostly for the Rougheye/Blackspotted Rockfish complex, not consistently at the species level.  While we treat these species as one assessed stock complex, we recognize and are mindful of the above species distinctions as we conduct our analyses. This report is for the year 2025 in state and federal waters from California to Washington State, excluding consideration of the Puget Sound and Salish Sea (@fig-map). It seeks to use available catch, biological compositions in the for of lengths and ages, and potential indices of abundance and is the first assessment since the 2013 stock assessment [@hicks_status_2013].
+## Stock
+This assessment reports the status of the Rougheye (*Sebastes aleutianus*) and Blackspotted (*Sebastes melanostictus*) Rockfishes that reside in the waters off California, Oregon, and Washington from the U.S.- Canadian border in the north to the U.S.-Mexico border in the south.
 
+These two species are difficult to consistently differentiate visually in the catch, thus they are commonly reported and treated as one management complex. Despite recent advances in species identification of`r Spp` as genetically distinct species, there is still little ability to reliably separate historical fishery data in order to differentiate these two species into two stocks. While we treat these species as one assessed stock complex, we recognize and are mindful of the above species distinctions as we conduct our analyses.
 
 ## Catches
-`r Spp` are mainly incidentally caught and retained, and caught mainly by trawl (both bottom and midwater) and non-trawl (largely hook and line gear) in commercial fisheries (@fig-es-landings). The non-trawl removals were dominate until the 1960s were trawl-caught `r spp` increased. The biggest removals were reported in the 1980s and came from the trawl fishery, but the most recent largest catches come from the at-sea-hake fishery (@tbl-es-catches). Discards are generally thought to be negligible to low for most fo the time series.
+`r Spp` are not targeted by a specific fishery, but are desirable and marketable, thus are typically retained when caught.
+
+The historical reconstruction of landings for `r Spp` suggests that non-trawl (largely hook and line gear) fisheries have caught `r Spp`  since the turn of the 20th century and landings in the trawl fishery are estimated to have increased into the 1940’s. Landings remained relatively constant throughout the 1950’s and into the 1960’s before the foreign trawl fleet targeting Pacific Ocean perch increased catches into the 1970’s. The declaration of the exclusive economic zone resulted in the buildup of a domestic fleet and landings increased rapidly into the late 1980’s and early 1990’s.  Subsequently, landings declined in the late 1990’s. `r Spp` has long been bycaught in the fishery for the coastal population of Pacific hake, which is almost exclusively conducted with mid-water trawls. In recent years, contribution of the mid-water trawl catches within shoreside trawl landings gradually grew and in most recent year and now they represent majority of the trawl removals. Time series of landings are shown @fig-es-landings, with recent landings detailed in @tbl-es-catches.
+
+`r Spp` are a desirable market species and discarding has been low, historically.  However, management restrictions (e.g., trip limits) have resulted in increased discarding since early 2000s.  Trawl rationalization was introduced in 2011, and since then very little discarding of `r Spp` has occurred.  
+
+
+
+
+
+
+.
 
 <!-- \clearpage -->
 
@@ -61,10 +73,16 @@ knitr::include_graphics(file.path(model_dir,"plots/catch2_landings_stacked.png")
 <!-- \clearpage -->
 
 ### Data and Assessments
-The only previous stock assessment for `r spp` for the west coast area was done in 2013. This assessment separates the discard catches from the retained fisheries, maintains the at-sea-hake fishery as its own fishery, and adds a midwater fishery that has emerged in the last 10 years. This stock assessment adds 10+ years of additional length data, and adds several more years of age data (included as conditioned on length data). The same four groundfish abundance surveys (Triennial, Alaska Slope, Northwest Fishery Science Center Slope, and the West Coast Groundfish Bottom Trawl Survey (WCGBTS)) as used in the last stock assessment are used here, with an extension to 2024 to the the WCGBTS. The index standardization of all survey data uses the newer approach of applying spatiotemporal generalized linear mixed models. 
+The only previous stock assessment for `r spp` for the U.S. West Coast area was done in 2013 [@hicks_status_2013]. This assessment uses Stock Synthesis statistical catch-at-age modelling framework [@MethotWetzel2013], version 3.30.23.1.The modeling period begins in 1892, and the stock prior to that is assumed to be in an unfished equilibrium condition.
+
+`r Spp` fishery-dependent data in this assessment are divided among six fleets, treating discard catches separately from the retained fisheries. Following 2013 assessment, it maintains the at-sea-hake fishery as its own fleet, and adds a mid-water fishery that has emerged in the last 10 years. This stock assessment adds 10+ years of additional length data, and adds several more years of age data (included as conditioned on length data). The same four surveys (the West Coast Groundfish Bottom Trawl Survey (WCGBTS), AFSC/NWFSC Triennial Shelf Survey, AFSC Slope Survey and NWFSC Slope Survey) as used in the last stock assessment are used here, with an extension to 2024 to the the WCGBTS. The index standardization of all survey data uses the newer approach of applying spatiotemporal generalized linear mixed models. 
+
+This is a sex-specific model. Females and males have separate growth curves and sex-specific weight-at-length parameters. Growth is assumed to follow the von Bertalanffy growth model, and the assessment explicitly estimates all parameters describing somatic growth. The model assumes a natural mortality of 0.036 yr-1 for males, while natural mortality for females is estimated using a meta-analytical prior (@hamel_development_2022).  Externally estimated life history parameters, including those defining the length-weight relationship, female fecundity and maturity schedule were revised for this assessment to incorporate new information. Recruitment dynamics are assumed to follow the Beverton-Holt stock-recruit function, and recruitment deviations are estimated. Stock-recruitment steepness is fixed at the value generated from meta-analytical study. The base model estimates parameters for selectivity based on length data, and estimated selectivity curves are a mix of dome-shaped (for bottom trawl gears) and logistic (for mid-water gears).
 
 ### Stock Output and Dynamics
-The model estimates that the population , but increased through the 2000s to mid 2010s (@fig-es-sb, @fig-es-depl). Since 2017 (coincident with the increase in catches), spawning output has been gradually declining, but is still well above the management target of 40% of unfished spawning depletion (@tbl-es-sb). 
+The model estimates that the stock complex did not exhibit a sharp changes throughout the years, and the dynamics was relatively flat (@fig-es-sb, @fig-es-depl). Estimates for most recent years are shown in @tbl-es-sb. Approximate confidence intervals based on the asymptotic variance estimates show that the uncertainty in the estimated spawning biomass is high.
+
+Fraction unfished shows slight decline in the 1960s with subsequent increase through the early-1980s, following another decrease over the past firty five years. 
 
 ```{r, tbl-es-sb, results = "asis"}
 #| label: tbl-es-sb
