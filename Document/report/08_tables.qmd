@@ -355,6 +355,50 @@ survey_strata |>
   as_latex()
 
 ```
+{{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-survey_length_samples
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of surveys' sampling effort (number of hauls and fish sampled) used to create length frequency distributions."
+
+survey_length_samples <- read.csv(
+  here::here("Document/report/tables_4_doc/Survey_lengths_sample_sizes.csv"),
+  header = TRUE
+)
+
+survey_length_samples |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+{{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-survey_age_samples
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of WCGBTS sampling effort (number of hauls and fish sampled) used to create conditional ages-at-length distributions."
+
+survey_age_samples <- read.csv(
+  here::here("Document/report/tables_4_doc/Survey_age_sample_sizes.csv"),
+  header = TRUE
+)
+
+survey_age_samples |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
 
  {{< pagebreak >}} 
 
