@@ -355,6 +355,30 @@ survey_strata |>
   as_latex()
 
 ```
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-survey_coverage
+#| warning: false
+#| echo: false
+#| tbl-cap: "Stratifications used for generate survey length compositions."
+
+survey_coverage <- read.csv(
+  here::here("Document/report/tables_4_doc/Survey_coverage.csv"),
+  header = TRUE
+)
+
+survey_coverage |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+
 {{< pagebreak >}} 
  
 ```{r}

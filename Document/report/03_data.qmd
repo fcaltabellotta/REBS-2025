@@ -135,7 +135,7 @@ Data from four fishery-independent surveys were used in this assessment:
 * Survey 3: Alaska Fishery Science Center (AFSC) Slope Survey (1997-2001)
 * Survey 4: Northwest Fisheries Science Center (NWFSC) Slope Survey (1999-2001)
 
-The surveys temporal and spatial coverage is summarized in **Table XX**. 
+The surveys temporal and spatial coverage is summarized in @tbl-survey_coverage. 
 
 Information produced by these surveys included indices of relative abundance (all four surveys), length-frequency distributions (WCGBTS and Triennial survey), and age-frequency distributions (WCGBTS). 
 
@@ -164,7 +164,7 @@ Spatial variation was approximated using 200 knots, where more knots led to non-
 The biomass estimates produced for this assessment using \gls{sdmtmb} are comparable to the biomass estimates produced in the previous benchmark assessment (@fig-WCGBTS_comparison). The index is relatively flat with high variation (@fig-WCGBTS_index).
 
 #### Length and Age compositions
-Length bins from 1o to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year **(Figure XX)**. @tbl-survey_length_samples shows the number of lengths taken by the survey. 
+Length bins from 1o to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. @tbl-survey_length_samples shows the number of lengths taken by the survey. 
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in @tbl-survey_strata.
 
@@ -181,7 +181,7 @@ The input sample size of CAAL data was set at the number of fish at each length 
 The Triennial Survey was first conducted by the AFSC in 1977 and continued until
 2004. The survey’s design and sampling methods are most recently described in **Weinberg et al. (2002)**. Its basic design was a series of equally-spaced transects from which searches for tows in a specific depth range were initiated. 
 
-The survey spatial coverage and timing has changed over the period of survey duration **(Table X)**. 
+The survey spatial coverage and timing has changed over the period of survey duration @tbl-survey_coverage. 
 
 Haul depths ranged from 91–457 m during the 1977 survey with no hauls shallower than 91 m. The surveys in 1980, 1983, and 1986 covered the West Coast south to 36.8°N latitude and a depth range of 55–366 meters. The surveys in 1989 and 1992 covered the same depth range but extended the southern range to 34.5°N (near Point Conception). From 1995 through 2004, the surveys covered the consistent depth range
 55–500 meters and surveyed south to 34.5°N. In the final year of the triennial series (2004), the NWFSC conducted the survey and followed very similar protocols as the AFSC, which conducted surveys in all previous years.
@@ -200,10 +200,10 @@ The chosen model used a delta model with a lognormal distribution for the catch-
 
 Spatial and spatiotemporal variation were included in the encounter probability but not the positive catch rate model. Spatial variation was approximated using 100 knots, where more knots led to non-estimable standard errors because the positive encounters are too sparse to support the dense spatiotemporal structure.
 
-The estimated index is shown in @fig-Triennial_index. The index exhibits an increase in biomass from 1995 forward, that corresponds to a change in Triennial Survey depth coverage, when the survey extended to the deeper area **(Table XX)**.
+The estimated index is shown in @fig-Triennial_index. The index exhibits an increase in biomass from 1995 forward, that corresponds to a change in Triennial Survey depth coverage, when the survey extended to the deeper area @tbl-survey_coverage.
 
 #### Length Compositions
-Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. **Table XX** shows the number of lengths taken by the survey. 
+Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. @tbl-survey_length_samples shows the number of lengths taken by the survey. 
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in Table XX. @fig-length_flt7 shows Triennial Survey length frequencies by year,
 
@@ -226,7 +226,7 @@ Spatial and spatiotemporal variation were not included in either the encounter p
 The AFSC Slope Survey index is shown in @fig-AFSC_Slope_index. The index is short, and does not exhibits significant change over the four year period. 
 
 #### Length Compositions
-Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. **Table XX** shows the number of lengths taken by the survey. 
+Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. @tbl-survey_length_samples shows the number of lengths taken by the survey. 
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in Table XX. @fig-length_flt8 shows AFSC Slope Survey length frequencies by year.
 
