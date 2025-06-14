@@ -151,7 +151,7 @@ Description of each survey is provided below; details on methods used to process
 ### NWFSC West Coast Groundfish Bottom Trawl Survey
 
 #### Survey Description
-The \gls{s-wcgbt} is conducted annually since 2003 **(Table XX)**. The survey’s design and sampling methods are most recently described in detail in @keller2017. The survey is based on a random-grid design, covering the coastal waters from a depth of 100 to 700 fm (183-1280 m). This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two 'passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
+The \gls{s-wcgbt} is conducted annually since 2003 @tbl-survey_coverage. The survey’s design and sampling methods are most recently described in detail in @keller2017. The survey is based on a random-grid design, covering the coastal waters from a depth of 100 to 700 fm (183-1280 m). This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two 'passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
 
 #### Abundance Index
 The data were truncated to depths less than 875 m prior to modeling given that there were zero positive encounters in depths deeper than 875 m. The prediction grid was also truncated to only include available survey locations in depths between 55--875 m to limit extrapolating beyond the data and edge effects. 
@@ -187,7 +187,7 @@ Haul depths ranged from 91–457 m during the 1977 survey with no hauls shallowe
 55–500 meters and surveyed south to 34.5°N. In the final year of the triennial series (2004), the NWFSC conducted the survey and followed very similar protocols as the AFSC, which conducted surveys in all previous years.
 
 All of the surveys were conducted in the mid-summer through early fall: the 1977
-survey was conducted from early July through late September; the surveys from 1980 through 1989 ran from mid-July to late September; the 1992 survey spanned from mid-July through early October; the 1995 survey was conducted from early June to late August; the 1998 survey ran from early June through early August; and the 2001 and 2004 surveys were conducted in May-July **(Figure X)**.
+survey was conducted from early July through late September; the surveys from 1980 through 1989 ran from mid-July to late September; the 1992 survey spanned from mid-July through early October; the 1995 survey was conducted from early June to late August; the 1998 survey ran from early June through early August; and the 2001 and 2004 surveys were conducted in May-July.
 
 Water hauls [@zimmermann2001] and tows located in Canadian waters were also excluded from the analysis of this survey. Given the different depths surveyed during 1977, the data from that year were not included in this assessment.  
 
