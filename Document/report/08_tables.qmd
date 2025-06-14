@@ -311,10 +311,7 @@ ashop_lengths_sample_sizes |>
   as_latex()
 
 ```
-
-
  {{< pagebreak >}} 
-
 
 ```{r}
 
@@ -337,11 +334,7 @@ maturity_estimates |>
   as_latex()
 
 ```
-
-
-
-
-
+ {{< pagebreak >}} 
 
 <!-- model-->
 
@@ -647,8 +640,8 @@ cat("\n\\end{landscape}\n")
 
 <!-- management-->
 
-```{r, tbl-ref-points, results = "asis"}
-#| label: tbl-ref-points-es
+```{r, tbl-man-ref-points, results = "asis"}
+#| label: tbl-man-ref-points
 #| warning: false
 #| echo: false
 #| eval: !expr eval_tables 
