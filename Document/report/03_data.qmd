@@ -76,7 +76,7 @@ Non-trawl discard amounts by year are provided in are provided in @tbl-landings 
 Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the catches in each year. The first length bin includes all observations less than 10 cm and the last bin includes all fish 80 cm and longer. Age distributions included bins from age 1 to age 100, with the first bin including all fish ages 0 and 1 and the last bin including all fish age 100 and above.
 
 #### Commercial Landings Length and Ages
-The fishery length and age data for bottom trawl, non-trawl and mid-water trawl fleets, based on samples collected by port samplers, were obtained from the PacFIN Biological Data System (BDS) database and extracted on April 24, 2025. The number of trips and fish sampled for lengths and ages by state and year are summarized in @tbl-BT_lengths_sample_sizes through @tbl-MDT_lengths_sample_sizes, by fishing fleet. 
+The fishery length and age data for bottom trawl, non-trawl and mid-water trawl fleets, based on samples collected by port samplers, were obtained from the PacFIN Biological Data System (BDS) database and extracted on April 24, 2025. The number of trips and fish sampled for lengths and ages by state and year are summarized in @tbl-BT_lengths_sample_sizes through @tbl-Fishery_age_sample_sizes, by fishing fleet. 
 
 Commercial length-frequency distributions were developed for each fleet and year, for which observations were available
 
@@ -135,7 +135,7 @@ Data from four fishery-independent surveys were used in this assessment:
 * Survey 3: Alaska Fishery Science Center (AFSC) Slope Survey (1997-2001)
 * Survey 4: Northwest Fisheries Science Center (NWFSC) Slope Survey (1999-2001)
 
-The surveys temporal and spatial coverage is summarized in **Table XX**. 
+The surveys temporal and spatial coverage is summarized in @tbl-survey_coverage. 
 
 Information produced by these surveys included indices of relative abundance (all four surveys), length-frequency distributions (WCGBTS and Triennial survey), and age-frequency distributions (WCGBTS). 
 
@@ -151,7 +151,7 @@ Description of each survey is provided below; details on methods used to process
 ### NWFSC West Coast Groundfish Bottom Trawl Survey
 
 #### Survey Description
-The \gls{s-wcgbt} is conducted annually since 2003 **(Table XX)**. The survey’s design and sampling methods are most recently described in detail in @keller2017. The survey is based on a random-grid design, covering the coastal waters from a depth of 100 to 700 fm (183-1280 m). This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two 'passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
+The \gls{s-wcgbt} is conducted annually since 2003 @tbl-survey_coverage. The survey’s design and sampling methods are most recently described in detail in @keller2017. The survey is based on a random-grid design, covering the coastal waters from a depth of 100 to 700 fm (183-1280 m). This design generally uses four industry-chartered vessels per year assigned to a roughly equal number of randomly selected grid cells and divided into two 'passes' of the coast. Two vessels fish from north to south during each pass between late May to early October. This design therefore incorporates both vessel-to-vessel differences in catchability, as well as variance associated with selecting a relatively small number (approximately 700) of possible cells from a very large set of possible cells spread from the Mexican to the Canadian borders.
 
 #### Abundance Index
 The data were truncated to depths less than 875 m prior to modeling given that there were zero positive encounters in depths deeper than 875 m. The prediction grid was also truncated to only include available survey locations in depths between 55--875 m to limit extrapolating beyond the data and edge effects. 
@@ -164,11 +164,11 @@ Spatial variation was approximated using 200 knots, where more knots led to non-
 The biomass estimates produced for this assessment using \gls{sdmtmb} are comparable to the biomass estimates produced in the previous benchmark assessment (@fig-WCGBTS_comparison). The index is relatively flat with high variation (@fig-WCGBTS_index).
 
 #### Length and Age compositions
-Length bins from 1o to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year **(Figure XX)**. **Table XX** shows the number of lengths taken by the survey. 
+Length bins from 1o to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. @tbl-survey_length_samples shows the number of lengths taken by the survey. 
 
-Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in **Table XX**.
+Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in @tbl-survey_strata.
 
-Age distributions included bins from age 1 to age 100, with the last bin including all fish of greater age. **Table XX** shows the number of ages taken by the survey. Age distributions were included in the model as CAAL observations. The marginal age compositions were only used for comparing the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.
+Age distributions included bins from age 1 to age 100, with the last bin including all fish of greater age. @tbl-survey_age_samples shows the number of ages taken by the survey. Age distributions were included in the model as CAAL observations. The marginal age compositions were only used for comparing the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.
 
 @fig-length_flt10 shows WCGBTS length frequencies by year, and @fig-caal_flt10_1 through @fig-caal_flt10_3 show the WCGBTS length and CAAL distributions by year. 
 
@@ -181,13 +181,13 @@ The input sample size of CAAL data was set at the number of fish at each length 
 The Triennial Survey was first conducted by the AFSC in 1977 and continued until
 2004. The survey’s design and sampling methods are most recently described in **Weinberg et al. (2002)**. Its basic design was a series of equally-spaced transects from which searches for tows in a specific depth range were initiated. 
 
-The survey spatial coverage and timing has changed over the period of survey duration **(Table X)**. 
+The survey spatial coverage and timing has changed over the period of survey duration @tbl-survey_coverage. 
 
 Haul depths ranged from 91–457 m during the 1977 survey with no hauls shallower than 91 m. The surveys in 1980, 1983, and 1986 covered the West Coast south to 36.8°N latitude and a depth range of 55–366 meters. The surveys in 1989 and 1992 covered the same depth range but extended the southern range to 34.5°N (near Point Conception). From 1995 through 2004, the surveys covered the consistent depth range
 55–500 meters and surveyed south to 34.5°N. In the final year of the triennial series (2004), the NWFSC conducted the survey and followed very similar protocols as the AFSC, which conducted surveys in all previous years.
 
 All of the surveys were conducted in the mid-summer through early fall: the 1977
-survey was conducted from early July through late September; the surveys from 1980 through 1989 ran from mid-July to late September; the 1992 survey spanned from mid-July through early October; the 1995 survey was conducted from early June to late August; the 1998 survey ran from early June through early August; and the 2001 and 2004 surveys were conducted in May-July **(Figure X)**.
+survey was conducted from early July through late September; the surveys from 1980 through 1989 ran from mid-July to late September; the 1992 survey spanned from mid-July through early October; the 1995 survey was conducted from early June to late August; the 1998 survey ran from early June through early August; and the 2001 and 2004 surveys were conducted in May-July.
 
 Water hauls [@zimmermann2001] and tows located in Canadian waters were also excluded from the analysis of this survey. Given the different depths surveyed during 1977, the data from that year were not included in this assessment.  
 
@@ -200,10 +200,10 @@ The chosen model used a delta model with a lognormal distribution for the catch-
 
 Spatial and spatiotemporal variation were included in the encounter probability but not the positive catch rate model. Spatial variation was approximated using 100 knots, where more knots led to non-estimable standard errors because the positive encounters are too sparse to support the dense spatiotemporal structure.
 
-The estimated index is shown in @fig-Triennial_index. The index exhibits an increase in biomass from 1995 forward, that corresponds to a change in Triennial Survey depth coverage, when the survey extended to the deeper area **(Table XX)**.
+The estimated index is shown in @fig-Triennial_index. The index exhibits an increase in biomass from 1995 forward, that corresponds to a change in Triennial Survey depth coverage, when the survey extended to the deeper area @tbl-survey_coverage.
 
 #### Length Compositions
-Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. **Table XX** shows the number of lengths taken by the survey. 
+Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. @tbl-survey_length_samples shows the number of lengths taken by the survey. 
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in Table XX. @fig-length_flt7 shows Triennial Survey length frequencies by year,
 
@@ -226,7 +226,7 @@ Spatial and spatiotemporal variation were not included in either the encounter p
 The AFSC Slope Survey index is shown in @fig-AFSC_Slope_index. The index is short, and does not exhibits significant change over the four year period. 
 
 #### Length Compositions
-Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. **Table XX** shows the number of lengths taken by the survey. 
+Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. @tbl-survey_length_samples shows the number of lengths taken by the survey. 
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in Table XX. @fig-length_flt8 shows AFSC Slope Survey length frequencies by year.
 
