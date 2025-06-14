@@ -333,7 +333,28 @@ ashop_lengths_sample_sizes |>
   as_latex()
 
 ```
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-survey_strata
+#| warning: false
+#| echo: false
+#| tbl-cap: "Stratifications used for generate survey length compositions."
 
+survey_strata <- read.csv(
+  here::here("Document/report/tables_4_doc/Strata_for_survey_length_expansion.csv"),
+  header = TRUE
+)
+
+survey_strata |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
 
  {{< pagebreak >}} 
 

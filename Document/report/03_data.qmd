@@ -166,7 +166,7 @@ The biomass estimates produced for this assessment using \gls{sdmtmb} are compar
 #### Length and Age compositions
 Length bins from 1o to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year **(Figure XX)**. **Table XX** shows the number of lengths taken by the survey. 
 
-Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in **Table XX**.
+Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in @tbl-survey_strata.
 
 Age distributions included bins from age 1 to age 100, with the last bin including all fish of greater age. **Table XX** shows the number of ages taken by the survey. Age distributions were included in the model as CAAL observations. The marginal age compositions were only used for comparing the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.
 
