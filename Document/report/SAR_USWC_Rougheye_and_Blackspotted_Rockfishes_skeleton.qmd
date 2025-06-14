@@ -304,7 +304,7 @@ cat(a, sep = '\n')
 
 ```{r, results='asis'}
 #| label: 'management'
-#| eval: false
+#| eval: true
 #| echo: false
 #| warning: false
 a <- knitr::knit_child('05_management.qmd', quiet = TRUE)

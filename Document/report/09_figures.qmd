@@ -2153,3 +2153,67 @@ knitr::include_graphics(
 <!-- Reference Points and Forecasts -->
 
 \newpage
+
+<!-- Management -->
+
+
+```{r} 
+#| label: fig-management-depletion
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Placeholder."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "ts9_Relative_spawning_output_intervals.png")
+)
+
+```
+
+
+```{r} 
+#| label: fig-one-minus-spr
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Placeholder."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "SPR3_ratiointerval.png")
+)
+
+```
+
+
+```{r} 
+#| label: fig-management-yield
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Placeholder."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "yield1_yield_curve.png")
+)
+
+```
+
+
+```{r} 
+#| label: fig-management-phase
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Placeholder."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "SPR4_phase.png")
+)
+
+```
+
+
