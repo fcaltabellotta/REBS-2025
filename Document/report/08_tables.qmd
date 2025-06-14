@@ -133,18 +133,20 @@ recent_management_table |>
 #```
 
 \pagebreak
+
 <!-- data-->
 
+```
+ {{< pagebreak >}} 
 
 ```{r}
-
 #| label: tbl-BT_landings
 #| warning: false
 #| echo: false
 #| tbl-cap: "Landings (metric tons) for botton trawl fleet by state and bycatch within POP historcial fishery."
 
 BT_landings <- read.csv(
-  here::here("Document/report/tables_4_doc/BT_landings_by_source.csv"),
+  here::here("Document/report/tables_4_doc/BT_landings_by_source2.csv"),
   header = TRUE
 )
 

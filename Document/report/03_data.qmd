@@ -16,8 +16,7 @@ Data from a wide range of sources were evaluated within this assessment. Data so
 For description and details on fleet structure, please refer to Section @sec-fleet. 
 
 ### Commercial Fishery Landings
-Recent and historical fisheries catches were compiled by state and then combined into the fishing fleets used in the assessment. Time series of catches by fleet are reported in @tbl-landings and shown in @fig-landings. The landings for each fleet by state are given in @tbl-BT_landings
-for bottom trawl, @tbl-NT_landings for non-trawl, and @tbl-MDT_landings for mid-water trawl fleet.
+Recent and historical fisheries catches were compiled by state and then combined into the fishing fleets used in the assessment. Time series of catches by fleet are reported in @tbl-landings and shown in @fig-landings. The landings for each fleet by state are given in @tbl-BT_landings for bottom trawl, @tbl-NT_landings for non-trawl, and @tbl-MDT_landings for mid-water trawl fleet.
 
 #### Recent landings
 Recent commercial landings of `r Spp` (2000-2024 for Washington, 1987–2024 for Oregon and 1981–2024 for California,) were obtained from [\gls{pacfin}](www.pacfin.psmfc.org), a regional fisheries database that manages fishery-dependent information in cooperation with West Coast state agencies and National Marine Fisheries Service (NMFS). Catch data were extracted from PacFIN on April 24, 2025. 
