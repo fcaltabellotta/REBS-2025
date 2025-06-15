@@ -59,17 +59,17 @@ management_performance <- type_convert(management_performance)  # automatically 
 management_performance <- management_performance %>%
   gt::gt(rowname_col = "Year") %>%
   gt::tab_spanner(label = "North of 40'10'", 
-              columns = vars(`North of 40'10'_OFL (mt)`, 
-              `North of 40'10'_ABC (mt)`, 
-              `North of 40'10'_ACL (mt)`)) %>%
+              columns = vars(`North of 40'10'_OFL`, 
+              `North of 40'10'_ABC`, 
+              `North of 40'10'_ACL`)) %>%
   gt::tab_spanner(label = "South of 40'10", 
-              columns = vars(`South of 40'10_OFL (mt)`,
-              `South of 40'10_ABC (mt)`,
-              `South of 40'10_ACL (mt)`)) %>%
+              columns = vars(`South of 40'10_OFL`,
+              `South of 40'10_ABC`,
+              `South of 40'10_ACL`)) %>%
   gt::tab_spanner(label = "Combined", 
-              columns = vars(`Combined_OFL (mt)`,
-              `Combined_ABC (mt)`,
-              `Combined_ACL (mt)`)) %>%
+              columns = vars(`Combined_OFL`,
+              `Combined_ABC`,
+              `Combined_ACL`)) %>%
   gt::tab_options(
     table.font.size = 12,
     latex.use_longtable = TRUE 
