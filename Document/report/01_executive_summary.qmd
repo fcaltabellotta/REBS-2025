@@ -330,10 +330,10 @@ GMT_filt<- read.csv(here::here("Document","report", "tables_4_doc", "management-
 
 recent_management_table <- recent_management_table |>
   full_join(GMT_filt, by = c("Year")) |>
-  select(Year, `OFL (mt).y`, `ABC (mt).y`, `ACL (mt).y`, `Catch (mt)`) |>
-  rename(`OFL (mt)` = `OFL (mt).y`,
-         `ABC (mt)` = `ABC (mt).y`,
-         `ACL (mt)` = `ACL (mt).y`)
+  select(Year, `OFL (mt).x`, `ABC (mt).x`, `ACL (mt).x`, `Total dead catch (mt)`) |>
+  rename(`OFL (mt)` = `OFL (mt).x`,
+         `ABC (mt)` = `ABC (mt).x`,
+         `ACL (mt)` = `ACL (mt).x`)
 
 recent_management_table |>
   rename(`Total dead catch (mt)` = `Catch (mt)`) |>
