@@ -329,11 +329,11 @@ Although catch increased substantially in 2017, it has still been well below the
 GMT_filt<- read.csv(here::here("Document","report", "tables_4_doc", "management-performance_es.csv"))
 
 recent_management_table <- recent_management_table |>
-  full_join(GMT_filt, by = c("Year")) |>
-  select(Year, `OFL (mt)`, `ABC (mt)`, `ACL (mt)`, `Catch (mt)`)
-  #rename(`OFL (mt)` = `OFL (mt).x`,
-  #       `ABC (mt)` = `ABC (mt).x`,
-  #       `ACL (mt)` = `ACL (mt).x`)
+  full_join(GMT_filt, by = "Year") |>
+  select(Year, `OFL..mt.`, `ABC..mt.`, `ACL..mt.`, `Catch (mt)`)
+  rename(`OFL (mt)` = `OFL..mt.`,
+         `ABC (mt)` = `ABC..mt.`,
+         `ACL (mt)` = `ACL..mt.`)
 
 recent_management_table |>
   #rename(`Total dead catch (mt)` = `Catch (mt)`) |>
