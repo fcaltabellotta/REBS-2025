@@ -326,15 +326,14 @@ recent_management_table <- recent_management_table |>
   select('Year', `OFL..mt.`, `ABC..mt.`, `ACL..mt.`, `Catch (mt)`) |>
   rename(`OFL (mt)` = `OFL..mt.`,
          `ABC (mt)` = `ABC..mt.`,
-         `ACL (mt)` = `ACL..mt.`)
-
-recent_management_table |>
-  #rename(`Total dead catch (mt)` = `Catch (mt)`) |>
+         `ACL (mt)` = `ACL..mt.`) |>
   gt::gt() |>
   gt::tab_options(
     table.font.size = 12,
     latex.use_longtable = TRUE 
   )
+
+  recent_management_table<- round(recent_management_table)
 
 ```
 
