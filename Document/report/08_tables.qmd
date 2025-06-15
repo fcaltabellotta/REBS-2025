@@ -42,34 +42,36 @@ management_summary |>
 #| echo: false
 #| tbl-cap: "Harvest specifications for REBS - testing."
 
-mang_perf <- read.csv(here::here("Document","report", "tables_4_doc", "management-performance.csv"), header = F)
-header_1 <- as.character(mang_perf[1, ])
-header_2 <- as.character(mang_perf[2, ])
-combined_headers <- ifelse(is.na(header_1) | header_1 == "", 
-                           header_2, 
-                           paste(header_1, header_2, sep = "_"))
-management_performance<- mang_perf[-c(1, 2), ]
+management_raw <- read.csv(here::here("Document", "report", "tables_4_doc", "management-performance.csv"),
+                           header = FALSE, stringsAsFactors = FALSE)
 
-header_1_filled <- tidyr::fill(tibble(h1 = header_1), h1)$h1
-combined_headers <- paste(header_1_filled, header_2, sep = "_")
-combined_headers[1] <- "Year"
+header_1 <- as.character(management_raw[1, ])
+header_2 <- as.character(management_raw[2, ])
 
-management_performance <- type_convert(management_performance)  # automatically convert character to numeric, etc.
+header_1_filled <- fill(tibble(h1 = header_1), h1)$h1
 
-management_performance <- management_performance %>%
+combined_headers <- paste0(header_1_filled, "_", header_2)
+combined_headers[1] <- "Year"  # fix "Year" column
+
+management <- management_raw[-c(1,2), ]
+colnames(management) <- combined_headers
+
+management <- type_convert(management)
+
+gt_table <- management %>%
   gt::gt(rowname_col = "Year") %>%
-  gt::tab_spanner(label = "North of 40'10'", 
-              columns = vars(`North of 40'10'_OFL`, 
-              `North of 40'10'_ABC`, 
-              `North of 40'10'_ACL`)) %>%
-  gt::tab_spanner(label = "South of 40'10", 
-              columns = vars(`South of 40'10_OFL`,
-              `South of 40'10_ABC`,
-              `South of 40'10_ACL`)) %>%
-  gt::tab_spanner(label = "Combined", 
-              columns = vars(`Combined_OFL`,
-              `Combined_ABC`,
-              `Combined_ACL`)) %>%
+  gt::tab_spanner(
+    label = "North of 40'10'",
+    columns = c(`North of 40.10._OFL`, `North of 40.10._ABC`, `North of 40.10._ACL`)
+  ) %>%
+  gt::tab_spanner(
+    label = "South of 40'10'",
+    columns = c(`South of 40.10_OFL`, `South of 40.10_ABC`, `South of 40.10_ACL`)
+  ) %>%
+  gt::tab_spanner(
+    label = "Combined",
+    columns = c(`Combined_OFL`, `Combined_ABC`, `Combined_ACL`)
+  ) %>%
   gt::tab_options(
     table.font.size = 12,
     latex.use_longtable = TRUE 
