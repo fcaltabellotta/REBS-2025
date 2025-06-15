@@ -333,10 +333,6 @@ recent_management_table <- recent_management_table |>
     latex.use_longtable = TRUE 
   )
 
- # Round numeric columns
-recent_management_table <- recent_management_table |>
-  mutate(across(where(is.numeric), ~ round(.x, 0)))
-
 ```
 
 

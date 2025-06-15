@@ -37,6 +37,40 @@ management_summary |>
 \pagebreak
 
 ```{r}
+#| label: tbl-management_performance
+#| warning: false
+#| echo: false
+#| tbl-cap: "Harvest specifications for REBS."
+
+library(gt)
+library(readr)
+library(dplyr)
+
+mang_perf <- read.csv(here::here("Document","report", "tables_4_doc", "management-performance.csv"),col_names = F)
+header_1 <- as.character(mang_perf[1, ])
+header_2 <- as.character(mang_perf[2, ])
+combined_headers <- ifelse(is.na(header_1) | header_1 == "", 
+                           header_2, 
+                           paste(header_1, header_2, sep = "_"))
+management_performance<- mang_perf[-c(1, 2), ]
+colnames(management_performance) <- combined_headers
+management_performance <- type_convert(management_performance)  # automatically convert character to numeric, etc.
+
+management_performance <- management_performance %>%
+  gt(rowname_col = "Year") %>%
+  tab_spanner(label = "North of 40'10'", 
+              columns = vars(`North of 40'10'_OFL (mt)`, `North of 40'10'_ABC (mt)`, `North of 40'10'_ACL (mt)`)) %>%
+  tab_spanner(label = "South of 40'10", 
+              columns = vars(`South of 40'10_OFL (mt)`, `South of 40'10_ABC (mt)`, `South of 40'10_ACL (mt)`)) %>%
+  tab_spanner(label = "Combined", 
+              columns = vars(`Combined_OFL (mt)`, `Combined_ABC (mt)`, `Combined_ACL (mt)`))
+
+```
+
+\pagebreak
+
+
+```{r}
 #| label: tbl-landings
 #| warning: false
 #| echo: false
