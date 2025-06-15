@@ -323,17 +323,25 @@ Although catch increased substantially in 2017, it has still been well below the
 #| tbl-cap: "Recent trend in the overfishing limits (OFL), the acceptable biological catches (ABCs), the annual catch limits (ACLs), and the total dead catch (landings + discards) all in metric tons (mt)."
 #| tbl-pos: H
 
+# had to use GMT015 table (because REBS is part of slope RF) and combined for the executive summary only
+# but bonus this way - catch should update if needed
+
+GMT_filt<- read.csv(here::here("Document","report", "tables_4_doc", "management-performance_es.csv"))
+
+recent_management_table <- recent_management_table |>
+  full_join(GMT_filt, by = c("Year")) |>
+  select(Year, `OFL (mt).y`, `ABC (mt).y`, `ACL (mt).y`, `Catch (mt)`) |>
+  rename(`OFL (mt)` = `OFL (mt).y`,
+         `ABC (mt)` = `ABC (mt).y`,
+         `ACL (mt)` = `ACL (mt).y`)
+
 recent_management_table |>
   rename(`Total dead catch (mt)` = `Catch (mt)`) |>
   gt::gt() |>
   gt::tab_options(
     table.font.size = 12,
     latex.use_longtable = TRUE 
-  ) |>
-#   gt::cols_align(
-#     align = "center"
-#   ) |>
-  gt::as_latex()
+  )
 
 ```
 
