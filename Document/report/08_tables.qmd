@@ -49,17 +49,27 @@ combined_headers <- ifelse(is.na(header_1) | header_1 == "",
                            header_2, 
                            paste(header_1, header_2, sep = "_"))
 management_performance<- mang_perf[-c(1, 2), ]
-colnames(management_performance) <- combined_headers
+
+header_1_filled <- tidyr::fill(tibble(h1 = header_1), h1)$h1
+combined_headers <- paste(header_1_filled, header_2, sep = "_")
+combined_headers[1] <- "Year"
+
 management_performance <- type_convert(management_performance)  # automatically convert character to numeric, etc.
 
 management_performance <- management_performance %>%
   gt::gt(rowname_col = "Year") %>%
   gt::tab_spanner(label = "North of 40'10'", 
-              columns = vars(`North of 40'10'_OFL (mt)`, `North of 40'10'_ABC (mt)`, `North of 40'10'_ACL (mt)`)) %>%
+              columns = vars(`North of 40'10'_OFL (mt)`, 
+              `North of 40'10'_ABC (mt)`, 
+              `North of 40'10'_ACL (mt)`)) %>%
   gt::tab_spanner(label = "South of 40'10", 
-              columns = vars(`South of 40'10_OFL (mt)`, `South of 40'10_ABC (mt)`, `South of 40'10_ACL (mt)`)) %>%
+              columns = vars(`South of 40'10_OFL (mt)`,
+              `South of 40'10_ABC (mt)`,
+              `South of 40'10_ACL (mt)`)) %>%
   gt::tab_spanner(label = "Combined", 
-              columns = vars(`Combined_OFL (mt)`, `Combined_ABC (mt)`, `Combined_ACL (mt)`)) %>%
+              columns = vars(`Combined_OFL (mt)`,
+              `Combined_ABC (mt)`,
+              `Combined_ACL (mt)`)) %>%
   gt::tab_options(
     table.font.size = 12,
     latex.use_longtable = TRUE 
