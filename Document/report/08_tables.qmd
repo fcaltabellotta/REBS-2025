@@ -40,11 +40,7 @@ management_summary |>
 #| label: tbl-management_performance
 #| warning: false
 #| echo: false
-#| tbl-cap: "Harvest specifications for REBS."
-
-library(gt)
-library(readr)
-library(dplyr)
+#| tbl-cap: "Harvest specifications for REBS - testing."
 
 mang_perf <- read.csv(here::here("Document","report", "tables_4_doc", "management-performance.csv"),col_names = F)
 header_1 <- as.character(mang_perf[1, ])
@@ -57,13 +53,17 @@ colnames(management_performance) <- combined_headers
 management_performance <- type_convert(management_performance)  # automatically convert character to numeric, etc.
 
 management_performance <- management_performance %>%
-  gt(rowname_col = "Year") %>%
-  tab_spanner(label = "North of 40'10'", 
+  gt::gt(rowname_col = "Year") %>%
+  gt::tab_spanner(label = "North of 40'10'", 
               columns = vars(`North of 40'10'_OFL (mt)`, `North of 40'10'_ABC (mt)`, `North of 40'10'_ACL (mt)`)) %>%
-  tab_spanner(label = "South of 40'10", 
+  gt::tab_spanner(label = "South of 40'10", 
               columns = vars(`South of 40'10_OFL (mt)`, `South of 40'10_ABC (mt)`, `South of 40'10_ACL (mt)`)) %>%
-  tab_spanner(label = "Combined", 
-              columns = vars(`Combined_OFL (mt)`, `Combined_ABC (mt)`, `Combined_ACL (mt)`))
+  gt::tab_spanner(label = "Combined", 
+              columns = vars(`Combined_OFL (mt)`, `Combined_ABC (mt)`, `Combined_ACL (mt)`)) %>%
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE 
+  )
 
 ```
 
