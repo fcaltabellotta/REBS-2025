@@ -42,7 +42,7 @@ management_summary |>
 #| echo: false
 #| tbl-cap: "Harvest specifications for REBS - testing."
 
-mang_perf <- read.csv(here::here("Document","report", "tables_4_doc", "management-performance.csv"),col_names = F)
+mang_perf <- read.csv(here::here("Document","report", "tables_4_doc", "management-performance.csv"), header = F)
 header_1 <- as.character(mang_perf[1, ])
 header_2 <- as.character(mang_perf[2, ])
 combined_headers <- ifelse(is.na(header_1) | header_1 == "", 
