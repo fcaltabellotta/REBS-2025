@@ -43,7 +43,7 @@ management_summary |>
 #| results: asis
 #| tbl-cap: "Harvest specifications for REBS - testing."
 
-management <- read_csv(here:here("Document", "report", "tables_4_doc", "management-performance.csv"))
+management <- read_csv(here::here("Document", "report", "tables_4_doc", "management-performance.csv"))
 
 management |> 
   gt() |>
