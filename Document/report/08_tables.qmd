@@ -42,13 +42,13 @@ management_summary |>
 #| echo: false
 #| tbl-cap: "Harvest specifications for REBS - testing."
 
-# Step 1: Read CSV starting from data rows (skip header rows)
+# Read data (skipping the two header rows)
 management <- read_csv(
   here("Document", "report", "tables_4_doc", "management-performance.csv"),
   skip = 2
 )
 
-# Step 2: Manually assign clean column names
+# Manually assign clean column names
 colnames(management) <- c(
   "Year",
   "north_of_40_ofl", "north_of_40_abc", "north_of_40_acl",
@@ -56,7 +56,7 @@ colnames(management) <- c(
   "combined_ofl", "combined_abc", "combined_acl"
 )
 
-# Step 3: Format with gt and add tab_spanners
+# Create the gt table
 gt_table <- management %>%
   gt(rowname_col = "Year") %>%
   tab_spanner(
