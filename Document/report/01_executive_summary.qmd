@@ -144,8 +144,6 @@ knitr::include_graphics(file.path(model_dir,"plots/ts9_Relative_spawning_output_
 ## Recruitment
 Recruitment dynamics (@tbl-es-recr, @fig-es-recruits) are assumed to follow Beverton-Holt stock-recruit function and the steepness parameter was fixed at the value of 0.72, which is the mean of steepness prior probability distribution, derived from meta-analysis of rockfish stocks. The level of virgin recruitment (R0) is estimated to inform the magnitude of the initial stock size. Annual recruitment is treated as stochastic. “Main” recruitment deviations were estimated for modeled years between 1892 and 2023. 
 
-The estimated largest recruitment event throughout the time series was in 2008, which supported an increase in the population leading up to 2017 (@tbl-es-recr, @fig-es-recruits). Recruitment is estimated to be relatively low in the later 2010s, but the model estimates that 2021 and 2023 may support large year classes in the future, with the estimates driven by the new recruitment index for both years.
-
 
 
 
