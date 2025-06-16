@@ -3,7 +3,7 @@
 ## Stock
 This assessment reports the status of the Rougheye (*Sebastes aleutianus*) and Blackspotted (*Sebastes melanostictus*) Rockfishes that reside in the waters off California, Oregon, and Washington from the U.S.- Canadian border in the north to the U.S.-Mexico border in the south.
 
-These two species are difficult to consistently differentiate visually in the catch, thus they are commonly reported and treated as one management complex. Despite recent advances in species identification of `r Spp` as genetically distinct species, there is still little ability to reliably separate historical fishery data in order to differentiate these two species into two stocks. While we treat these species as one assessed stock complex, we recognize and are mindful of the above species distinctions as we conduct our analyses.
+These two species are difficult to differentiate visually in the catch, thus they are commonly reported and treated as one management complex. Despite recent advances in species identification of `r Spp` as genetically distinct species, there is still little ability to reliably separate historical fishery data in order to differentiate these two species into two stocks. Therefore, this assessment maintains a species complex approach, though given absolute presence off the U.S. West Coast, this may be considered more of a Rougheye than Blackspotted Rockfish stock assessment. While we treat these species as one assessed stock complex, we recognize and are mindful of the above species distinctions as we conduct our analyses.
 
 ## Catches
 `r Spp` are not targeted by a specific fishery, but are desirable and marketable, thus are typically retained when caught.
@@ -64,7 +64,9 @@ knitr::include_graphics(file.path(model_dir,"plots/catch2_landings_stacked.png")
 ```
 
 ### Data and Assessments
-The only previous stock assessment for `r spp` for the U.S. West Coast area was done in 2013 [@hicks_status_2013]. This assessment uses Stock Synthesis statistical catch-at-age modelling framework [@MethotWetzel2013], version 3.30.23.1.The modeling period begins in 1892, and the stock prior to that is assumed to be in an unfished equilibrium condition.
+The only previous stock assessment for `r spp` for the U.S. West Coast area was done in 2013 [@hicks_status_2013]. It was conducted with Stock Synthesis statistical catch-at-age modelling framework [@MethotWetzel2013].
+
+This 2025 assessment also uses Stock Synthesis, version 3.30.23.1. The modeling period begins in 1892, and the stock prior to that is assumed to be in an unfished equilibrium condition.
 
 `r Spp` fishery-dependent data in this assessment are divided among six fleets, treating discard catches separately from the retained fisheries. Following 2013 assessment, it maintains the at-sea-hake fishery as its own fleet, and adds a mid-water fishery that has emerged in the last 10 years. This stock assessment adds 10+ years of additional length data, and adds several more years of age data (included as conditioned on length data). The same four surveys (the West Coast Groundfish Bottom Trawl Survey (WCGBTS), AFSC/NWFSC Triennial Shelf Survey, AFSC Slope Survey and NWFSC Slope Survey) as used in the last stock assessment are used here, with an extension to 2024 to the the WCGBTS. The index standardization of all survey data uses the newer approach of applying spatiotemporal generalized linear mixed models. 
 
