@@ -61,7 +61,7 @@ colnames(management_perf) <- c(
 
 merged_table <- management_perf |>
   left_join(
-    recent_management_table |> select(Year, "Catch (mt)"),
+    recent_management_table |> select(Year, `Catch (mt)`),
     by = "Year"
   )
 
