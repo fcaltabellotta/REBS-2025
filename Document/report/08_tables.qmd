@@ -80,8 +80,8 @@ management %>%
   tab_spanner(label = "Combined", columns = c(combined_ofl, combined_abc, combined_acl)) %>%
   tab_options(
     table.font.size = 12,
-    latex.u
-
+    latex.use_longtable = TRUE
+  )
 
 ```
 
