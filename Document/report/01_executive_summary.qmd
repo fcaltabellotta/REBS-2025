@@ -133,7 +133,7 @@ knitr::include_graphics(file.path(model_dir,"plots/ts9_Relative_spawning_output_
 ```
 
 ## Recruitment
-Recruitment dynamics (@tbl-es-recr, @fig-es-recruits) are assumed to follow Beverton-Holt stock-recruit function and the steepness parameter was fixed at the value of 0.72, which is the mean of steepness prior probability distribution, derived from meta-analysis of rockfish stocks. The level of virgin recruitment (R0) is estimated to inform the magnitude of the initial stock size. Annual recruitment is treated as stochastic. “Main” recruitment deviations were estimated for modeled years between 1892 and 2023, with forecast recruitment period starting in 2024.
+Recruitment dynamics (@tbl-es-recr, @fig-es-recruits) are assumed to follow Beverton-Holt stock-recruit function and the steepness parameter was fixed at the value of 0.72, which is the mean of steepness prior probability distribution, derived from meta-analysis of rockfish stocks. The level of virgin recruitment (R0) is estimated to inform the magnitude of the initial stock size. Annual recruitment is treated as stochastic. “Main” recruitment deviations were estimated for modeled years between 1892 and 2023, with forecast recruitment period starting in 2024 (@fig-es-recdevs).
 
 <!-- Trends and current levels relative to virgin or historic levels-include table for last 10 years and graph with long term estimates. -->
 
@@ -184,10 +184,65 @@ knitr::include_graphics(file.path(model_dir,"plots/ts11_Age-0_recruits_(1000s)_w
 
 ```
 
+```{r} 
+#| label: fig-es-recdevs
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Estimated time series of recruitment deviations for the base model."
+#| fig-alt: ""
+#| fig-pos: H
+
+knitr::include_graphics(file.path(model_dir,"plots/recdevs2_withbars.png"))
+
+```
+
+
 ## Exploitation Status
 Two measures of exploitation are fishing intensity and exploitation rate. Fishing intensity is defined here as 1 - SPR, where SPR (Spawning Potential Ratio) is the equilibrium spawning output at a given combination of F and selectivity relative to spawning output at unfished equilibrium. Using the units of 1-SPR means that more intense fishing is associated with a higher value. The value of 1-SPR in the absence of fishing is 0 and the maximum is 1.0 if all spawning fish are being killed before spawning. The Pacific Fishery Management Council (PFMC) has chosen an SPR target of 0.5 for `r spp` so harvest which leads to SPR below 0.5, or fishing intensity (1-SPR) greater than 0.5 would be overfishing. Exploitation rate is defined as the catch relative to age 26+ biomass. This metric is included because interpretation is simple, but it is not used as a basis for management.
 
-Exploitation rates were below the management target of a fishing intensity that leads to a SPR of 0.5 throughout the entire time series (**tbl-es-spr**, **fig-es-kobe**).
+Exploitation rates were below the management target of a fishing intensity that leads to a SPR of 0.5 throughout the entire time series (@tbl-es-spr, @fig-es-kobe).
+
+```{r, results = "asis"}
+#| label: tbl-es-spr
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) spr_es_cap 
+#| tbl-pos: H
+
+spr_es_table |>
+  gt::gt() |>
+  gt::fmt_number(
+    columns = 2:7,
+    decimals = 3
+  ) |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE 
+  ) |>
+  gt::cols_align(
+    align = "center"
+  ) |>
+  gt::cols_width(
+    tidyselect::everything() ~ px(80)
+  ) |>
+  gt::as_latex()
+
+```
+
+```{r} 
+#| label: fig-es-kobe
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Phase plot of fishing intensity versus fraction unfished."
+#| fig-alt: "See table @tbl-ts for the values of the fraction unfished and fishing intensity which are related in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(file.path(model_dir,"r4ss_plots/SPR4_phase.png"))
+
+```
 
 ## Ecosysystem Consideration
 Rockfishes are an important component of the California Current ecosystem along the U.S. West Coast, with its many dozens of species filling various niches in both soft and hard bottom habitats from the nearshore to the continental slope. `r spp` are one of the larger species of rockfishes and occupy shelf areas when they are young and move into deeper slope waters with age.  As they age, they tend to become more solitary, but may form aggregations during the spawning season.  Due to a paucity of life-history data for `r spp`, most ecosystem considerations are implied from the understanding of rockfishes in general.
