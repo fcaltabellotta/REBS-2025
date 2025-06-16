@@ -44,6 +44,8 @@ management_summary |>
 #| results: asis
 #| tbl-cap: "Recent trend in the overfishing limits (OFL), the acceptable biological catches (ABCs), the annual catch limits (ACLs), and the total dead catch (landings + discards) all in metric tons (mt) for the Rougheye/Blackspotted complex north and south of 40'10."
 
+cat("\\begin{landscape}")
+
 # Read in CSV, skipping the first 2 header rows
 management_perf <- readr::read_csv(
   here::here("Document", "report", "tables_4_doc", "management-performance.csv"),
@@ -95,6 +97,8 @@ merged_table |>
     table.font.size = 12,
     latex.use_longtable = TRUE
   )
+
+cat("\\end{landscape}")
 
 ```
 
