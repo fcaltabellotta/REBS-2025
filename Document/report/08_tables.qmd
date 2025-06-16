@@ -50,13 +50,21 @@ management_summary |>
 #| results: asis
 #| tbl-cap: "Harvest specifications for REBS."
 
-# Read the CSV and skip the two-layer header row
+```{r}
+#| label: tbl-management-performance
+#| echo: false
+#| warning: false
+#| message: false
+#| results: asis
+#| tbl-cap: "Harvest specifications for REBS."
+
+# Read in CSV, skipping the first 2 header rows
 management <- read_csv(
   here::here("Document", "report", "tables_4_doc", "management-performance.csv"),
   skip = 2
 )
 
-# Assign correct column names
+# Assign unique and clean column names manually
 colnames(management) <- c(
   "Year",
   "north_of_40_ofl", "north_of_40_abc", "north_of_40_acl",
@@ -64,18 +72,15 @@ colnames(management) <- c(
   "combined_ofl", "combined_abc", "combined_acl"
 )
 
-# Generate gt table and return it directly
+# Create and return the gt table (do not assign or call as_latex manually)
 management %>%
   gt(rowname_col = "Year") %>%
-  tab_spanner("North of 40'10'", c(north_of_40_ofl, north_of_40_abc, north_of_40_acl)) %>%
-  tab_spanner("South of 40'10'", c(south_of_40_ofl, south_of_40_abc, south_of_40_acl)) %>%
-  tab_spanner("Combined", c(combined_ofl, combined_abc, combined_acl)) %>%
+  tab_spanner(label = "North of 40'10'", columns = c(north_of_40_ofl, north_of_40_abc, north_of_40_acl)) %>%
+  tab_spanner(label = "South of 40'10'", columns = c(south_of_40_ofl, south_of_40_abc, south_of_40_acl)) %>%
+  tab_spanner(label = "Combined", columns = c(combined_ofl, combined_abc, combined_acl)) %>%
   tab_options(
     table.font.size = 12,
-    latex.use_longtable = TRUE
-  )
-
-```
+    latex.u
 
 
 ```
