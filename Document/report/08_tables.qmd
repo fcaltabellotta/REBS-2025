@@ -77,7 +77,7 @@ merged_table |>
     combined_ofl = "OFL (mt)",
     combined_abc = "ABC (mt)",
     combined_acl = "ACL (mt)",
-    Catch (mt) = "Catch (mt)"
+    `Catch (mt)` = "Catch (mt)"
   ) |>
   tab_spanner(
     label = "North of 40'10'",
