@@ -40,6 +40,7 @@ management_summary |>
 #| label: tbl-management_performance
 #| warning: false
 #| echo: false
+#| results: asis
 #| tbl-cap: "Harvest specifications for REBS - testing."
 
 # Read data (skipping the two header rows)
@@ -71,6 +72,8 @@ gt_table <- management %>%
     label = "Combined",
     columns = c(combined_ofl, combined_abc, combined_acl)
   )
+
+gt_table
 
 ```
 
