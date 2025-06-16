@@ -69,6 +69,10 @@ merged_table <- management_perf |>
 
 merged_table |>
   gt(rowname_col = "Year") |>
+  fmt_number(
+    columns = `Catch (mt)`,
+    decimals = 1
+  ) |>
     cols_label(
     north_of_40_ofl = "OFL (mt)",
     north_of_40_abc = "ABC (mt)",
