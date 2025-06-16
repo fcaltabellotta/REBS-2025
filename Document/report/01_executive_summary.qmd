@@ -3,7 +3,7 @@
 ## Stock
 This assessment reports the status of the Rougheye (*Sebastes aleutianus*) and Blackspotted (*Sebastes melanostictus*) Rockfishes that reside in the waters off California, Oregon, and Washington from the U.S.- Canadian border in the north to the U.S.-Mexico border in the south.
 
-These two species are difficult to consistently differentiate visually in the catch, thus they are commonly reported and treated as one management complex. Despite recent advances in species identification of`r Spp` as genetically distinct species, there is still little ability to reliably separate historical fishery data in order to differentiate these two species into two stocks. While we treat these species as one assessed stock complex, we recognize and are mindful of the above species distinctions as we conduct our analyses.
+These two species are difficult to consistently differentiate visually in the catch, thus they are commonly reported and treated as one management complex. Despite recent advances in species identification of `r Spp` as genetically distinct species, there is still little ability to reliably separate historical fishery data in order to differentiate these two species into two stocks. While we treat these species as one assessed stock complex, we recognize and are mindful of the above species distinctions as we conduct our analyses.
 
 ## Catches
 `r Spp` are not targeted by a specific fishery, but are desirable and marketable, thus are typically retained when caught.
@@ -12,9 +12,8 @@ The historical reconstruction of landings for `r Spp` suggests that non-trawl (l
 
 `r Spp` are a desirable market species and discarding has been low, historically.  However, management restrictions (e.g., trip limits) have resulted in increased discarding since early 2000s.  Trawl rationalization was introduced in 2011, and since then very little discarding of `r Spp` has occurred.  
 
-<!-- \clearpage -->
 
-```{r, tbl-es-catches, results = "asis"}
+```{r, results = "asis"}
 #| label: tbl-es-catches
 #| warning: false
 #| echo: false
@@ -52,7 +51,7 @@ catches_es_table |>
 
 ```
 
-```{r, fig-es-landings} 
+```{r} 
 #| label: fig-es-landings
 #| echo: false 
 #| warning: false 
@@ -63,7 +62,6 @@ catches_es_table |>
 knitr::include_graphics(file.path(model_dir,"plots/catch2_landings_stacked.png"))
 
 ```
-<!-- \clearpage -->
 
 ### Data and Assessments
 The only previous stock assessment for `r spp` for the U.S. West Coast area was done in 2013 [@hicks_status_2013]. This assessment uses Stock Synthesis statistical catch-at-age modelling framework [@MethotWetzel2013], version 3.30.23.1.The modeling period begins in 1892, and the stock prior to that is assumed to be in an unfished equilibrium condition.
@@ -77,7 +75,7 @@ The model estimates that the stock complex did not exhibit a sharp changes throu
 
 Fraction unfished shows more resolution in stock dynamics, with slight decline in the 1960s, subsequent increase through the early-1980s, following another decrease over the past forty five years. 
 
-```{r, tbl-es-sb, results = "asis"}
+```{r, results = "asis"}
 #| label: tbl-es-sb
 #| warning: false
 #| echo: false
@@ -137,15 +135,11 @@ knitr::include_graphics(file.path(model_dir,"plots/ts9_Relative_spawning_output_
 ## Recruitment
 Recruitment dynamics (@tbl-es-recr, @fig-es-recruits) are assumed to follow Beverton-Holt stock-recruit function and the steepness parameter was fixed at the value of 0.72, which is the mean of steepness prior probability distribution, derived from meta-analysis of rockfish stocks. The level of virgin recruitment (R0) is estimated to inform the magnitude of the initial stock size. Annual recruitment is treated as stochastic. “Main” recruitment deviations were estimated for modeled years between 1892 and 2023. 
 
-
-
-
-
 <!-- Trends and current levels relative to virgin or historic levels-include table for last 10 years and graph with long term estimates. -->
 
 \clearpage
 
-```{r, tbl-es-recr, results = "asis"}
+```{r, results = "asis"}
 #| label: tbl-es-recr
 #| warning: false
 #| echo: false
@@ -190,73 +184,10 @@ knitr::include_graphics(file.path(model_dir,"plots/ts11_Age-0_recruits_(1000s)_w
 
 ```
 
-<!-- 
-```{r} 
-#| label: fig-es-recdevs
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Estimated time series of recruitment deviations for the base model."
-#| fig-alt: ""
-#| fig-pos: H
-
-knitr::include_graphics(file.path(model_dir,"plots/recdevs2_withbars.png"))
-
-```
-
-## Exploitation Status
-Two measures of exploitation are fishing intensity and exploitation rate. Fishing intensity is defined here as 1 - SPR, where SPR is the equilibrium spawning output at a given combination of F and selectivity relative to spawning output at unfished equilibrium. Using the units of 1-SPR means that more intense fishing is associated with a higher value. The value of 1-SPR in the absence of fishing is 0 and the maximum is 1.0 if all spawning fish are being killed before spawning. The Pacific Fishery Management Council (PFMC) has chosen an SPR target of 0.5 for 'r Spp' so harvest which leads to SPR below 0.5, or fishing intensity (1-SPR) greater than 0.7 would be overfishing. Exploitation rate is defined as the catch relative to age 3+ biomass. This metric is included because interpretation is simple, but it is not used as a basis for management.
-
-
-```{r, tbl-es-spr, results = "asis"}
-#| label: tbl-es-spr
-#| warning: false
-#| echo: false
-#| eval: !expr eval_tables 
-#| tbl-cap: !expr if(eval_tables) spr_es_cap 
-#| tbl-pos: H
-
-spr_es_table |>
-  gt::gt() |>
-  gt::fmt_number(
-    columns = 2:7,
-    decimals = 3
-  ) |>
-  gt::tab_options(
-    table.font.size = 12,
-    latex.use_longtable = TRUE 
-  ) |>
-  gt::cols_align(
-    align = "center"
-  ) |>
-  gt::cols_width(
-    tidyselect::everything() ~ px(80)
-  ) |>
-  gt::as_latex()
-
-```
-
-```{r} 
-#| label: fig-es-kobe
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Phase plot of fishing intensity versus fraction unfished."
-#| fig-alt: "See table @tbl-ts for the values of the fraction unfished and fishing intensity which are related in this figure."
-#| fig-pos: H
-
-knitr::include_graphics(file.path(model_dir,"r4ss_plots/SPR4_phase.png"))
-
-```
-
-<!-- \clearpage -->
-
-
-
 ## Exploitation Status
 Two measures of exploitation are fishing intensity and exploitation rate. Fishing intensity is defined here as 1 - SPR, where SPR (Spawning Potential Ratio) is the equilibrium spawning output at a given combination of F and selectivity relative to spawning output at unfished equilibrium. Using the units of 1-SPR means that more intense fishing is associated with a higher value. The value of 1-SPR in the absence of fishing is 0 and the maximum is 1.0 if all spawning fish are being killed before spawning. The Pacific Fishery Management Council (PFMC) has chosen an SPR target of 0.5 for `r spp` so harvest which leads to SPR below 0.5, or fishing intensity (1-SPR) greater than 0.5 would be overfishing. Exploitation rate is defined as the catch relative to age 26+ biomass. This metric is included because interpretation is simple, but it is not used as a basis for management.
 
-Exploitation rates were below the management target of a fishing intensity that leads to a SPR of 0.5 throughout the entire time series (@tbl-es-spr, @fig-es-kobe).
+Exploitation rates were below the management target of a fishing intensity that leads to a SPR of 0.5 throughout the entire time series (**tbl-es-spr**, **fig-es-kobe**).
 
 ## Ecosysystem Consideration
 Rockfishes are an important component of the California Current ecosystem along the U.S. West Coast, with its many dozens of species filling various niches in both soft and hard bottom habitats from the nearshore to the continental slope. `r spp` are one of the larger species of rockfishes and occupy shelf areas when they are young and move into deeper slope waters with age.  As they age, they tend to become more solitary, but may form aggregations during the spawning season.  Due to a paucity of life-history data for `r spp`, most ecosystem considerations are implied from the understanding of rockfishes in general.
@@ -270,7 +201,7 @@ Unfished spawning stock output for `r spp` is estimated to be 5,647,660 eggs (95
 
 \clearpage
 
-```{r, tbl-ref-points-es, results = "asis"}
+```{r, results = "asis"}
 #| label: tbl-ref-points-es
 #| warning: false
 #| echo: false
@@ -320,7 +251,7 @@ reference_points_table |>
 ## Management Performance
 Although catch increased substantially in 2017, it has still been well below the overfishing limit, allowable biological catch, and annual catch limit (@tbl-es-management). Attainment of the OFL has averaged around 50\% since the increase in landings, and was even lower in prior years.
 
-```{r, tbl-es-management, results = "asis"}
+```{r, results = "asis"}
 #| label: tbl-es-management
 #| warning: false
 #| echo: false
@@ -365,7 +296,7 @@ Projections of the overfishing limit, acceptable biological catch, and annual ca
 
 No decision table needed in draft assessments undergoing review.
 
-```{r, tbl-es-projections, results = "asis"}
+```{r, results = "asis"}
 #| label: tbl-es-projections
 #| warning: false
 #| echo: false
@@ -405,24 +336,7 @@ cat("\n\\end{landscape}\n")
 
 ```
 
-```{r, results = "asis"}
-##| label: tbl-es-decision
-##| warning: false
-##| echo: false
-##| eval: !expr eval_tables 
-##| tbl-cap: !expr if(eval_tables) decision_table_cap 
-##| tbl-pos: H
-
-#table_decision(
-#  list(mod_low_A, mod_base_A, mod_high_A),
-#  list(mod_low_B, mod_base_B, mod_high_B),
-# list(mod_low_C, mod_base_C, mod_high_C)
-#
-#
-```
-
-
-#Scientific Uncertainty
+# Scientific Uncertainty
 The model estimated uncertainty around the 2025 spawning output for is 𝜎 = 0.6836465. The uncertainty around the OFL is 𝜎 = 0.6713586. These 𝜎 values underestimate the overall uncertainty as they do not incorporate the model structural uncertainty and do not account for any time-varying dynamics other than recruitment.The estimated uncertainty values are lower than the Category X default 𝜎=XX, so all projections will use the default 𝜎.
 
 ## Research and Data Needs

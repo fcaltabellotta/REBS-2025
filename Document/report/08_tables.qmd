@@ -62,7 +62,7 @@ colnames(management_perf) <- c(
 )
 
 merged_table <- management_perf |>
-  left_join(
+  dplyr::left_join(
     recent_management_table |> select(Year, `Catch (mt)`),
     by = "Year"
   )
@@ -152,7 +152,6 @@ kableExtra::kable(
 
 \pagebreak
 
-
 ```{r, results = "asis"}
 #| label: tbl-management
 #| warning: false
@@ -182,33 +181,8 @@ recent_management_table |>
 
 \pagebreak
 
-
-#```{r, results = "asis"}
-##| label: tbl-area-spex
-##| warning: false
-##| echo: false
-##| tbl-cap: "Adopted coastwide OFL (mt) and ABC (mt) values and the area-based ACL (mt) north and south of 36 N. latitude by year."
-##| tbl-pos: H
-
-#area_management_table |>
-#  gt::gt() |>
-#  gt::fmt_number(
-#    columns = c(2:5),
-#    decimals = 0
-#  ) |>
-#  gt::tab_options(
-#    table.font.size = 12,
-#    latex.use_longtable = TRUE 
-#  ) |>
-#  gt::as_latex()
-
-#```
-
-\pagebreak
-
 <!-- data-->
 
-```
  {{< pagebreak >}} 
 
 ```{r}
@@ -231,6 +205,7 @@ BT_landings |>
   as_latex()
 
 ```
+
  {{< pagebreak >}} 
  
 ```{r}
@@ -253,6 +228,7 @@ NT_landings |>
   as_latex()
 
 ```
+
  {{< pagebreak >}} 
  
 ```{r}
@@ -275,6 +251,7 @@ MDT_landings |>
   as_latex()
 
 ```
+
  {{< pagebreak >}} 
  
 ```{r}
@@ -297,6 +274,7 @@ BT_lengths_sample_sizes |>
   as_latex()
 
 ```
+
  {{< pagebreak >}} 
  
 ```{r}
@@ -319,6 +297,7 @@ NT_lengths_sample_sizes |>
   as_latex()
 
 ```
+
  {{< pagebreak >}} 
  
 ```{r}
@@ -341,6 +320,7 @@ MDT_lengths_sample_sizes |>
   as_latex()
 
 ```
+
  {{< pagebreak >}} 
  
 ```{r}
@@ -363,6 +343,7 @@ Fishery_age_sample_sizes |>
   as_latex()
 
 ```
+
  {{< pagebreak >}} 
  
 ```{r}
@@ -385,6 +366,7 @@ discard_lengths_sample_sizes |>
   as_latex()
 
 ```
+
  {{< pagebreak >}} 
  
 ```{r}
@@ -430,6 +412,7 @@ survey_strata |>
   as_latex()
 
 ```
+
  {{< pagebreak >}} 
  
 ```{r}
@@ -502,7 +485,6 @@ survey_age_samples |>
  {{< pagebreak >}} 
 
 ```{r}
-
 #| label: tbl-maturity_estimates
 #| warning: false
 #| echo: false
@@ -520,7 +502,6 @@ maturity_estimates |>
     latex.use_longtable = TRUE
   ) |>
   as_latex()
-
 ```
  
  {{< pagebreak >}} 
@@ -544,6 +525,7 @@ config_table |>
 
 ```
 
+ {{< pagebreak >}} 
 
 ```{r}
 #| label: tbl-n-param
@@ -588,7 +570,6 @@ cat("\n\\end{landscape}\n")
 
  {{< pagebreak >}} 
  
- 
 ```{r}
 #| label: tbl-likes
 #| warning: false
@@ -614,7 +595,6 @@ table |>
 ```
 
  {{< pagebreak >}} 
-
 
 ```{r, results = "asis"}
 #| label: tbl-ref-points
@@ -657,9 +637,7 @@ reference_points_table |>
 
 ```
 
-
-\pagebreak
-
+ {{< pagebreak >}} 
 
 ```{r, results = "asis"}
 #| label: tbl-ts
@@ -686,12 +664,9 @@ kableExtra::kable(
 
 ```
 
-
-\pagebreak
-
+ {{< pagebreak >}} 
 
 <!-- sensitivities-->
-
 
 ```{r}
 #| label: tbl-sensitivities-like-indices
@@ -713,7 +688,7 @@ table_sens(indices)
 cat("\n\\end{landscape}\n") 
 ```
 
-\pagebreak
+ {{< pagebreak >}} 
 
 ```{r}
 #| label: tbl-sensitivities-like-lens1
@@ -736,8 +711,7 @@ cat("\n\\end{landscape}\n")
 
 ```
 
-\pagebreak
-
+ {{< pagebreak >}} 
 
 ```{r}
 #| label: tbl-sensitivities-like-lens2
@@ -760,8 +734,7 @@ cat("\n\\end{landscape}\n")
 
 ```
 
-\pagebreak
-
+ {{< pagebreak >}} 
 
 ```{r}
 #| label: tbl-sensitivities-like-age
@@ -784,52 +757,13 @@ cat("\n\\end{landscape}\n")
 
 ```
 
-\pagebreak
+ {{< pagebreak >}} 
 
 <!-- projections -->
 
-#```{r, results = "asis"}
-##| label: tbl-projections
-##| warning: false
-##| echo: false
-##| eval: !expr eval_tables 
-##| tbl-cap: !expr if(eval_tables) projections_cap 
-##| tbl-pos: H
-
-#projections_table |>
-#  gt::gt() |>
-#  gt::fmt_number(
-#    columns = c(2:5, 7:9),
-#    decimals = 0
-#  ) |>
-#  gt::fmt_number(
-#    columns = c(6, 10),
-#    decimals = 3
-#  ) |>
-#  gt::tab_options(
-#    table.font.size = 12,
-#    latex.use_longtable = TRUE 
-#  ) |>
-#  gt::sub_missing(
-#    columns = tidyselect::everything(),
-#    missing_text = "---"
-#  ) |>
-#  gt::cols_align(
- #   align = "center"
- # ) |>
- # gt::cols_width(
- #   tidyselect::everything() ~ px(75)
- # ) |>
- # gt::as_latex()
-
-#```
-
-
-#\pagebreak
-
 <!-- management-->
 
-```{r, tbl-man-ref-points, results = "asis"}
+```{r, results = "asis"}
 #| label: tbl-man-ref-points
 #| warning: false
 #| echo: false
