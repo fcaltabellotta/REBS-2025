@@ -310,7 +310,7 @@ reference_points_table |>
 
 
 ## Management Performance
-`r Spp`  are managed as part of the minor slope rockfish complex, and there were species specific contributions to the OFL catch levels set for the complex. The last ten years total dead catches for `r Spp` against he overfishing limits (OFLs), the acceptable biological catches (ABCs), the annual catch limits (ACLs) are shown in @tbl-es-management. 
+In the last ten years total dead catches of `r Spp` have been below the annual catch limit. The last ten years total dead catches for `r Spp` against he overfishing limits (OFLs), the acceptable biological catches (ABCs), the annual catch limits (ACLs) are shown in @tbl-es-management. 
 
 ```{r, results = "asis"}
 #| label: tbl-es-management
