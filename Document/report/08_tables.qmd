@@ -37,12 +37,12 @@ management_summary |>
 \pagebreak
 
 #```{r}
-#| label: tbl-management-performance
-#| echo: false
-#| warning: false
-#| message: false
-#| results: asis
-#| tbl-cap: "Harvest specifications for REBS."
+##| label: tbl-management-performance
+##| echo: false
+##| warning: false
+##| message: false
+##| results: asis
+##| tbl-cap: "Harvest specifications for REBS."
 
 # Read in CSV, skipping the first 2 header rows
 #management_perf <- readr::read_csv(
