@@ -42,7 +42,7 @@ management_summary |>
 #| warning: false
 #| message: false
 #| results: asis
-#| tbl-cap: "Harvest specifications for REBS."
+#| tbl-cap: "Recent trend in the overfishing limits (OFL), the acceptable biological catches (ABCs), the annual catch limits (ACLs), and the total dead catch (landings + discards) all in metric tons (mt) for the Rougheye/Blackspotted complex north and south of 40'10."
 
 # Read in CSV, skipping the first 2 header rows
 management_perf <- readr::read_csv(
@@ -61,6 +61,17 @@ colnames(management_perf) <- c(
 
 management_perf |>
   gt(rowname_col = "Year") |>
+    cols_label(
+    north_of_40_ofl = "OFL (mt)",
+    north_of_40_abc = "ABC (mt)",
+    north_of_40_acl = "ACL (mt)",
+    south_of_40_ofl = "OFL (mt)",
+    south_of_40_abc = "ABC (mt)",
+    south_of_40_acl = "ACL (mt)",
+    combined_ofl = "OFL (mt)",
+    combined_abc = "ABC (mt)",
+    combined_acl = "ACL (mt)"
+  ) |>
   tab_spanner(
     label = "North of 40'10'",
     columns = c(north_of_40_ofl, north_of_40_abc, north_of_40_acl)
