@@ -72,9 +72,6 @@ gt_table <- management %>%
     columns = c(combined_ofl, combined_abc, combined_acl)
   )
 
-gt_table
-
-
 ```
 
 \pagebreak
