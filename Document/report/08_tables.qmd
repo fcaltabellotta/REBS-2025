@@ -59,7 +59,13 @@ colnames(management_perf) <- c(
   "combined_ofl", "combined_abc", "combined_acl"
 )
 
-management_perf |>
+merged_table <- management_perf |>
+  left_join(
+    recent_management_table |> select(Year, "Catch (mt)"),
+    by = "Year"
+  )
+
+merged_table |>
   gt(rowname_col = "Year") |>
     cols_label(
     north_of_40_ofl = "OFL (mt)",
@@ -70,7 +76,8 @@ management_perf |>
     south_of_40_acl = "ACL (mt)",
     combined_ofl = "OFL (mt)",
     combined_abc = "ABC (mt)",
-    combined_acl = "ACL (mt)"
+    combined_acl = "ACL (mt)",
+    Catch (mt) = "Catch (mt)"
   ) |>
   tab_spanner(
     label = "North of 40'10'",
