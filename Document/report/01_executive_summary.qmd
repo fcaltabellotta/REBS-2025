@@ -410,7 +410,3 @@ There are many areas of research that could be improved to benefit the understan
 *	Natural mortality: Uncertainty in natural mortality translates into uncertain estimates of status and sustainable fishing levels for `r Spp`. `r spp` are one of the longest lived species of rockfish (with maximum age as old as 205 years reported in the literature). Assessment model was able to estimate female natural mortality, consistent with maximum age based meta-analytical prior, but with male natural mortality fixed at the median of the prior. The collection of additional age data and further research of the life-history of `r Spp` may improve our understanding of `r Spp` natural mortality.
 
 * Historical landings and discards, including investigation of fisheries selectivity:  The substantial progress has been made in reconstructing historical landings of rockfishes on the U.S. West Coast, including those for `r Spp`. This assessment highlighted the importance of understanding of fishery selectivity assumptions associated with removals and how fishery selectivity changes throughout the years. Further understanding of this area would help reduce uncertainty in estimated scale of the stock.
-
-
-
-
