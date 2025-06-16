@@ -640,7 +640,8 @@ distribution, derived from meta-analysis of rockfish stocks. The level
 of virgin recruitment (R0) is estimated to inform the magnitude of the
 initial stock size. Annual recruitment is treated as stochastic.
 ``Main'' recruitment deviations were estimated for modeled years between
-1892 and 2023.
+1892 and 2023, with forecast recruitment period starting in 2024
+(Figure~\ref{fig-es-recdevs}).
 
 \clearpage
 
@@ -688,6 +689,19 @@ for the base model.}
 
 \end{figure}%
 
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/recdevs2_withbars.png}
+
+}
+
+\caption{\label{fig-es-recdevs}Estimated time series of recruitment
+deviations for the base model.}
+
+\end{figure}%
+
 \subsection{Exploitation Status}\label{exploitation-status}
 
 Two measures of exploitation are fishing intensity and exploitation
@@ -706,7 +720,51 @@ interpretation is simple, but it is not used as a basis for management.
 
 Exploitation rates were below the management target of a fishing
 intensity that leads to a SPR of 0.5 throughout the entire time series
-(\textbf{tbl-es-spr}, \textbf{fig-es-kobe}).
+(Table~\ref{tbl-es-spr}, Figure~\ref{fig-es-kobe}).
+
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{>{\centering\arraybackslash}p{\dimexpr 60.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 60.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 60.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 60.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 60.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 60.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 60.00pt -2\tabcolsep-1.5\arrayrulewidth}}
+
+\caption{\label{tbl-es-spr}Estimated recent trend in fishing intensity
+1-SPR, where SPR is the spawning potential ratio, and the exploitation
+rate, along with the 95 percent confidence intervals for both
+quantities.}
+
+\tabularnewline
+
+\toprule
+Year & 1-SPR & Lower Interval (SPR) & Upper Interval (SPR) & Exploitation Rate & Lower Interval (Rate) & Upper Interval (Rate) \\ 
+\midrule\addlinespace[2.5pt]
+2015 & 0.114 & -0.038 & 0.266 & 0.004 & -0.002 & 0.011 \\ 
+2016 & 0.127 & -0.041 & 0.296 & 0.005 & -0.002 & 0.013 \\ 
+2017 & 0.133 & -0.042 & 0.307 & 0.005 & -0.003 & 0.013 \\ 
+2018 & 0.188 & -0.047 & 0.423 & 0.008 & -0.004 & 0.021 \\ 
+2019 & 0.180 & -0.048 & 0.408 & 0.008 & -0.004 & 0.019 \\ 
+2020 & 0.090 & -0.034 & 0.213 & 0.004 & -0.002 & 0.009 \\ 
+2021 & 0.079 & -0.031 & 0.190 & 0.003 & -0.002 & 0.008 \\ 
+2022 & 0.098 & -0.036 & 0.233 & 0.004 & -0.002 & 0.010 \\ 
+2023 & 0.083 & -0.032 & 0.199 & 0.003 & -0.002 & 0.009 \\ 
+2024 & 0.098 & -0.036 & 0.233 & 0.004 & -0.002 & 0.011 \\ 
+\bottomrule
+
+\end{longtable}
+
+\endgroup
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{ref_model/plots/SPR4_phase.png}
+
+}
+
+\caption{\label{fig-es-kobe}Phase plot of fishing intensity versus
+fraction unfished.}
+
+\end{figure}%
 
 \subsection{Ecosysystem Consideration}\label{ecosysystem-consideration}
 
@@ -802,11 +860,12 @@ MSY (mt) & 592 & -127 & 1,311 \\
 
 \subsection{Management Performance}\label{management-performance}
 
-Although catch increased substantially in 2017, it has still been well
-below the overfishing limit, allowable biological catch, and annual
-catch limit (Table~\ref{tbl-es-management}). Attainment of the OFL has
-averaged around 50\% since the increase in landings, and was even lower
-in prior years.
+Rougheye/Blackspotted Rockfishes are managed as part of the minor slope
+rockfish complex, and there were species specific contributions to the
+OFL catch levels set for the complex. The last ten years total dead
+catches for Rougheye/Blackspotted Rockfishes against he overfishing
+limits (OFLs), the acceptable biological catches (ABCs), the annual
+catch limits (ACLs) are shown in Table~\ref{tbl-es-management}.
 
 \begingroup
 \fontsize{9.0pt}{10.8pt}\selectfont
@@ -1738,9 +1797,9 @@ and model quantiles, high precision, lack of extreme predictions that
 are incompatible with the life history, and low \gls{aic}. Estimates of
 biomass from this best model were predicted using a grid based on
 available survey locations. The \{indexwc\} R package
-(\citeproc{ref-johnson_indexwc_2025}{\textbf{johnson\_indexwc\_2025?}})
-was used to conduct the analysis and code to reproduce the analysis is
-available at https://pfmc-assessments.github.io/indexwc/.
+(\citeproc{ref-johnson_indexwc_2025}{Johnson et al. 2025}) was used to
+conduct the analysis and code to reproduce the analysis is available at
+https://pfmc-assessments.github.io/indexwc/.
 
 Standardized indices for all four surveys overlaid are shown in
 Figure~\ref{fig-All_indices}, where each index is rescaled to have mean
@@ -3704,6 +3763,12 @@ Rougheye Rockfish ({Sebastes} Aleutianus) and Blackspotted Rockfish
 ({S}. Melanostictus) as a Complex Along the {U}.{S}. {West} {Coast} in
 2013.''} Pacific Fishery Management Council, 7700 Ambassador Place NE,
 Suite 200, Portland, OR 97220.
+
+\bibitem[\citeproctext]{ref-johnson_indexwc_2025}
+Johnson, Kelli F., Sean C. Anderson, Chantel R. Wetzel, Eric J. Ward,
+and Ian G. Taylor. 2025. \emph{Indexwc: Run Indices for West Coast
+Groundfish Assessments}.
+\url{https://github.com/pfmc-assessments/indexwc}.
 
 \bibitem[\citeproctext]{ref-jones_oregon_1961}
 Jones, W. A., and G. Y. Harry Jr. 1961. {``The {Oregon} {Trawl}
