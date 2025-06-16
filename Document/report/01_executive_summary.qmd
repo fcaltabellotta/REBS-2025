@@ -75,7 +75,7 @@ This is a sex-specific model. Females and males have separate growth curves and 
 ### Stock Output and Dynamics
 The model estimates that the stock complex did not exhibit a sharp changes throughout the years (@fig-es-sb, @fig-es-depl) and currently is in a healthy state, well above management target. Approximate confidence intervals based on the asymptotic variance estimates show that the uncertainty in the estimated spawning output is high. Estimates of spawning biomass in most recent decade are shown in @tbl-es-sb. 
 
-Fraction unfished shows more resolution in stock dynamics, with slight decline in the 1960s, subsequent increase through the early-1980s, following another decrease over the past forty five years. 
+Fraction unfished shows more stock dynamics, with slight decline in the 1960s, subsequent increase through the early-1980s, following another decrease over the past forty five years. 
 
 ```{r, tbl-es-sb, results = "asis"}
 #| label: tbl-es-sb
@@ -135,11 +135,7 @@ knitr::include_graphics(file.path(model_dir,"plots/ts9_Relative_spawning_output_
 ```
 
 ## Recruitment
-Recruitment dynamics (@tbl-es-recr, @fig-es-recruits) are assumed to follow Beverton-Holt stock-recruit function and the steepness parameter was fixed at the value of 0.72, which is the mean of steepness prior probability distribution, derived from meta-analysis of rockfish stocks. The level of virgin recruitment (R0) is estimated to inform the magnitude of the initial stock size. Annual recruitment is treated as stochastic. “Main” recruitment deviations were estimated for modeled years between 1892 and 2023. 
-
-
-
-
+Recruitment dynamics (@tbl-es-recr, @fig-es-recruits) are assumed to follow Beverton-Holt stock-recruit function and the steepness parameter was fixed at the value of 0.72, which is the mean of steepness prior probability distribution, derived from meta-analysis of rockfish stocks. The level of virgin recruitment (R0) is estimated to inform the magnitude of the initial stock size. Annual recruitment is treated as stochastic. “Main” recruitment deviations were estimated for modeled years between 1892 and 2023, with forecast recruitment period starting in 2024.
 
 <!-- Trends and current levels relative to virgin or historic levels-include table for last 10 years and graph with long term estimates. -->
 
@@ -318,7 +314,7 @@ reference_points_table |>
 
 
 ## Management Performance
-Although catch increased substantially in 2017, it has still been well below the overfishing limit, allowable biological catch, and annual catch limit (@tbl-es-management). Attainment of the OFL has averaged around 50\% since the increase in landings, and was even lower in prior years.
+`r Spp`  are managed as part of the minor slope rockfish complex, and there were species specific contributions to the OFL catch levels set for the complex. The last ten years total dead catches for `r Spp` against he overfishing limits (OFLs), the acceptable biological catches (ABCs), the annual catch limits (ACLs) are shown in @tbl-es-management. 
 
 ```{r, tbl-es-management, results = "asis"}
 #| label: tbl-es-management
