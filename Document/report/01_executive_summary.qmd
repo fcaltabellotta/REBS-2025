@@ -333,6 +333,8 @@ recent_management_table_es <- recent_management_table |>
     latex.use_longtable = TRUE 
   )
 
+recent_management_table_es
+
 ```
 
 
