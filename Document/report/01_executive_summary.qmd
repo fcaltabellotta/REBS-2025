@@ -77,7 +77,7 @@ The only previous stock assessment for `r spp` for the U.S. West Coast area was 
 
 `r Spp` fishery-dependent data in this assessment are divided among six fleets, treating discard catches separately from the retained fisheries. Following 2013 assessment, it maintains the at-sea-hake fishery as its own fleet, and adds a mid-water fishery that has emerged in the last 10 years. This stock assessment adds 10+ years of additional length data, and adds several more years of age data (included as conditioned on length data). The same four surveys (the West Coast Groundfish Bottom Trawl Survey (WCGBTS), AFSC/NWFSC Triennial Shelf Survey, AFSC Slope Survey and NWFSC Slope Survey) as used in the last stock assessment are used here, with an extension to 2024 to the the WCGBTS. The index standardization of all survey data uses the newer approach of applying spatiotemporal generalized linear mixed models. 
 
-This is a sex-specific model. Females and males have separate growth curves and sex-specific weight-at-length parameters. Growth is assumed to follow the von Bertalanffy growth model, and the assessment explicitly estimates all parameters describing somatic growth. The model assumes a natural mortality of 0.036 yr-1 for males, while natural mortality for females is estimated using a meta-analytical prior (@hamel_development_2022).  Externally estimated life history parameters, including those defining the length-weight relationship, female fecundity and maturity schedule were revised for this assessment to incorporate new information. Recruitment dynamics are assumed to follow the Beverton-Holt stock-recruit function, and recruitment deviations are estimated. Stock-recruitment steepness is fixed at the value generated from meta-analytical study. The base model estimates parameters for selectivity based on length data, and estimated selectivity curves are a mix of dome-shaped (for bottom trawl gears) and logistic (for mid-water gears).
+This is a sex-specific model. Females and males have separate growth curves and sex-specific weight-at-length parameters. Growth is assumed to follow the von Bertalanffy growth model, and the assessment explicitly estimates all parameters describing somatic growth. The natural mortality for females is estimated in the assessment and natural mortality for males is fixed an the value generated from meta-analytical study.  Externally estimated life history parameters, including those defining the length-weight relationship, female fecundity and maturity schedule were revised for this assessment to incorporate new information. Recruitment dynamics are assumed to follow the Beverton-Holt stock-recruit function, and recruitment deviations are estimated. Stock-recruitment steepness is fixed at the value generated from meta-analytical study. The base model estimates parameters for selectivity based on length data, and estimated selectivity curves are a mix of dome-shaped (for bottom trawl gears) and logistic (for mid-water gears).
 
 ### Stock Output and Dynamics
 The model estimates that the stock complex did not exhibit a sharp changes throughout the years (@fig-es-sb, @fig-es-depl) and currently is in a healthy state, well above management target. Approximate confidence intervals based on the asymptotic variance estimates show that the uncertainty in the estimated spawning output is high. Estimates of spawning biomass in most recent decade are shown in @tbl-es-sb. 
@@ -142,7 +142,13 @@ knitr::include_graphics(file.path(model_dir,"plots/ts9_Relative_spawning_output_
 ```
 
 ## Recruitment
+Recruitment dynamics (@tbl-es-recr, @fig-es-recruits) are assumed to follow Beverton-Holt stock-recruit function and the steepness parameter was fixed at the value of 0.72, which is the mean of steepness prior probability distribution, derived from meta-analysis of rockfish stocks. The level of virgin recruitment (R0) is estimated to inform the magnitude of the initial stock size. Annual recruitment is treated as stochastic. “Main” recruitment deviations were estimated for modeled years between 1892 and 2023. 
+
 The estimated largest recruitment event throughout the time series was in 2008, which supported an increase in the population leading up to 2017 (@tbl-es-recr, @fig-es-recruits). Recruitment is estimated to be relatively low in the later 2010s, but the model estimates that 2021 and 2023 may support large year classes in the future, with the estimates driven by the new recruitment index for both years.
+
+
+
+
 
 <!-- Trends and current levels relative to virgin or historic levels-include table for last 10 years and graph with long term estimates. -->
 
@@ -208,6 +214,8 @@ knitr::include_graphics(file.path(model_dir,"plots/recdevs2_withbars.png"))
 ```
 
 ## Exploitation Status
+Two measures of exploitation are fishing intensity and exploitation rate. Fishing intensity is defined here as 1 - SPR, where SPR is the equilibrium spawning output at a given combination of F and selectivity relative to spawning output at unfished equilibrium. Using the units of 1-SPR means that more intense fishing is associated with a higher value. The value of 1-SPR in the absence of fishing is 0 and the maximum is 1.0 if all spawning fish are being killed before spawning. The Pacific Fishery Management Council (PFMC) has chosen an SPR target of 0.5 for 'r Spp' so harvest which leads to SPR below 0.5, or fishing intensity (1-SPR) greater than 0.7 would be overfishing. Exploitation rate is defined as the catch relative to age 3+ biomass. This metric is included because interpretation is simple, but it is not used as a basis for management.
+
 Exploitation rates were below the management target of a fishing intensity that leads to a spawning potential ratio of 0.5 throughout the entire time series. They decreased and were close to zero in the early 2000s due to restrictive trip limits. As with catches, exploitation rates increased substantially in 2017, have remained stable since then, and are still well below the management target (@tbl-es-spr, @fig-es-kobe).
 
 
@@ -254,6 +262,12 @@ knitr::include_graphics(file.path(model_dir,"r4ss_plots/SPR4_phase.png"))
 
 <!-- \clearpage -->
 
+
+
+## Exploitation Status
+Two measures of exploitation are fishing intensity and exploitation rate. Fishing intensity is defined here as 1 - SPR, where SPR (Spawning Potential Ratio) is the equilibrium spawning output at a given combination of F and selectivity relative to spawning output at unfished equilibrium. Using the units of 1-SPR means that more intense fishing is associated with a higher value. The value of 1-SPR in the absence of fishing is 0 and the maximum is 1.0 if all spawning fish are being killed before spawning. The Pacific Fishery Management Council (PFMC) has chosen an SPR target of 0.5 for `r spp` so harvest which leads to SPR below 0.5, or fishing intensity (1-SPR) greater than 0.5 would be overfishing. Exploitation rate is defined as the catch relative to age 26+ biomass. This metric is included because interpretation is simple, but it is not used as a basis for management.
+
+Exploitation rates were below the management target of a fishing intensity that leads to a SPR of 0.5 throughout the entire time series. They decreased and were close to zero in the early 2000s due to restrictive trip limits. As with catches, exploitation rates increased substantially in 2017, have remained stable since then, and are still well below the management target (@tbl-es-spr, @fig-es-kobe).
 
 ## Ecosysystem Consideration
 The assessment includes a sensitivity model with an oceanographic recruitment index. A number of ecosystem and environmental conditions were compiled by a team of ecosystem scientists at the NWFSC specific to the life history and distribution of northern yellowtail. These conditions included an evaluation of oceanographic conditions impacting recruitment, habitat change, prey availability, predator and competitor abundance, and climate vulnerability. 
