@@ -240,7 +240,7 @@ spr_es_table |>
 #| fig-alt: "See table @tbl-ts for the values of the fraction unfished and fishing intensity which are related in this figure."
 #| fig-pos: H
 
-knitr::include_graphics(file.path(model_dir,"r4ss_plots/SPR4_phase.png"))
+knitr::include_graphics(file.path(model_dir,"plots/SPR4_phase.png"))
 
 ```
 
