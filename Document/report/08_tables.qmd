@@ -90,7 +90,6 @@ kableExtra::kable(
 #| tbl-pos: H
 
 recent_management_table |>
-  gt::gt() |>
   gt::fmt_number(
     columns = 2:5,
     decimals = 0
