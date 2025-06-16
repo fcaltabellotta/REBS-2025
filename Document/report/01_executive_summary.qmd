@@ -73,7 +73,7 @@ This is a sex-specific model. Females and males have separate growth curves and 
 ### Stock Output and Dynamics
 The model estimates that the stock complex did not exhibit a sharp changes throughout the years (@fig-es-sb, @fig-es-depl) and currently is in a healthy state, well above management target. Approximate confidence intervals based on the asymptotic variance estimates show that the uncertainty in the estimated spawning output is high. Estimates of spawning biomass in most recent decade are shown in @tbl-es-sb. 
 
-Fraction unfished shows more stock dynamics, with slight decline in the 1960s, subsequent increase through the early-1980s, following another decrease over the past forty five years. 
+Fraction unfished shows more resolution in stock dynamics, with slight decline in the 1960s, subsequent increase through the early-1980s, following another decrease over the past forty five years. 
 
 ```{r, results = "asis"}
 #| label: tbl-es-sb
