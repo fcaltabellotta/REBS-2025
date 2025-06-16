@@ -328,6 +328,10 @@ recent_management_table_es <- recent_management_table |>
          `ABC (mt)` = `ABC..mt.`,
          `ACL (mt)` = `ACL..mt.`) |>
   gt::gt() |>
+  gt::fmt_number(
+    columns = `Catch (mt)`,
+    decimals = 1 
+  ) |>
   gt::tab_options(
     table.font.size = 12,
     latex.use_longtable = TRUE 
