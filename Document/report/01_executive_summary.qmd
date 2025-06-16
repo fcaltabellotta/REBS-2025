@@ -354,13 +354,16 @@ recent_management_table |>
 ```
 
 
-## Evaluation of Scientific Uncertainty
-The largest uncertainty in this model is the inability to fit a marked increase in the bottom trawl survey from 2014-2019. This coincides with an increase in catch-per-unit-effort from the midwater trawl fishery (which accounts for the majority of landings). The increase is likely due to the record 2008 year class, but the estimated size of the year class does not lead to a large enough increase to fit the survey index, and it is especially hard to fit the sudden decrease and then flattening of the index, given the estimated natural mortality rate and that catches were relatively stable from 2017-2024. The current assessment estimates that the stock is more depleted than it was in 2017, the time of the last assessment, which is likely the case. The magnitude of that difference is more uncertain.
+## Unresolved problems and major uncertainties
+`r spp` are one of the longest lived species of rockfish on the West Coast and therefore natural mortality is likely to be lower than for other rockfish species. This assessment attempts to capture that uncertainty by estimating natural mortality for females and integrating that uncertainty into the derived biomass estimates, but also balance it with using meta-analytical prior of maximum age-based natural mortality by fixing the male natural mortality .
+
+Shape of the selectivity curves in bottom trawl and non-trawl gears. 
 
 
 ## Harvest Projections and Decision Tables
-Projections of the overfishing limit, acceptable biological catch, and annual catch limit, all based on a P* of 0.45 and a log-space standard deviation of the overfishing limit of 0.5 are included in @tbl-es-projections. Assumed catches for 2025 and 2026 for this projection were provided by the Groundfish Management Team, and catches from 2027 onward assume full attainment of the acceptable biological catch.
+Projections of the overfishing limit, acceptable biological catch, and annual catch limit, all based on a P* of 0.45 and a log-space standard deviation of the overfishing limit of 0.5 are included in @tbl-es-projections. Assumed catches for 2025 and 2026 for this projection were provided by the PFMC Groundfish Management Team, and catches from 2027 onward assume full attainment of the acceptable biological catch.
 
+No decision table needed in draft assessments undergoing review.
 
 ```{r, tbl-es-projections, results = "asis"}
 #| label: tbl-es-projections
@@ -419,8 +422,8 @@ cat("\n\\end{landscape}\n")
 ```
 
 
-## Unresolved Problems and Major Uncertainties
-Test G
+#Scientific Uncertainty
+The model estimated uncertainty around the 2025 spawning output for is 𝜎 = XX. The uncertainty around the OFL is 𝜎 = XX. These 𝜎 values surely underestimate the overall uncertainty as they do not incorporate the model structural uncertainty and do not account for any time-varying dynamics other than recruitment.The estimated uncertainty values are lower than the Category 1 default 𝜎=0.5, so all projections will use the default 𝜎.
 
 ## Research and Data Needs
 Test H
