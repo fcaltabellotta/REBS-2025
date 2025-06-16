@@ -36,52 +36,6 @@ management_summary |>
 
 \pagebreak
 
-#```{r}
-##| label: tbl-management-performance
-##| echo: false
-##| warning: false
-##| message: false
-##| results: asis
-##| tbl-cap: "Harvest specifications for REBS."
-
-# Read in CSV, skipping the first 2 header rows
-#management_perf <- readr::read_csv(
-#  here::here("Document", "report", "tables_4_doc", "management-performance.csv"),
-#  skip = 2,
-#  col_names = FALSE
-#)
-
-# Assign unique and clean column names manually
-#colnames(management_perf) <- c(
-#  "Year",
-#  "north_of_40_ofl", "north_of_40_abc", "north_of_40_acl",
-#  "south_of_40_ofl", "south_of_40_abc", "south_of_40_acl",
-#  "combined_ofl", "combined_abc", "combined_acl"
-#)
-
-#management_perf |>
-#  gt(rowname_col = "Year") |>
-#  tab_spanner(
-#    label = "North of 40'10'",
-#    columns = c(north_of_40_ofl, north_of_40_abc, north_of_40_acl)
-#  ) |>
-#  tab_spanner(
-#    label = "South of 40'10'",
-#    columns = c(south_of_40_ofl, south_of_40_abc, south_of_40_acl)
-#  ) |>
-#  tab_spanner(
-#    label = "Combined",
-#    columns = c(combined_ofl, combined_abc, combined_acl)
-#  ) |>
-#  tab_options(
-#    table.font.size = 12,
-#    latex.use_longtable = TRUE
-#  )
-#
-#```
-
-#\pagebreak
-
 ```{r}
 #| label: tbl-landings
 #| warning: false
