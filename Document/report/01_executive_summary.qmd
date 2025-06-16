@@ -313,7 +313,7 @@ Although catch increased substantially in 2017, it has still been well below the
 #| warning: false
 #| echo: false
 #| eval: !expr eval_tables 
-#| tbl-cap: "Recent trend in the overfishing limits (OFL), the acceptable biological catches (ABCs), the annual catch limits (ACLs), and the total dead catch (landings + discards) all in metric tons (mt)."
+#| tbl-cap: "Recent trend in the overfishing limits (OFL), the acceptable biological catches (ABCs), the annual catch limits (ACLs), and the total dead catch (landings + discards) all in metric tons (mt). Specifications are combined across north and south of 40'10."
 #| tbl-pos: H
 
 # had to use GMT015 table (because REBS is part of slope RF) and used combined spex for the executive summary only
