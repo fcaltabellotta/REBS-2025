@@ -43,37 +43,15 @@ management_summary |>
 #| results: asis
 #| tbl-cap: "Harvest specifications for REBS - testing."
 
-# Read data (skipping the two header rows)
-management <- read_csv(
-  here("Document", "report", "tables_4_doc", "management-performance.csv"),
-  skip = 2
-)
+management <- read_csv(here:here("Document", "report", "tables_4_doc", "management-performance.csv"))
 
-# Manually assign clean column names
-colnames(management) <- c(
-  "Year",
-  "north_of_40_ofl", "north_of_40_abc", "north_of_40_acl",
-  "south_of_40_ofl", "south_of_40_abc", "south_of_40_acl",
-  "combined_ofl", "combined_abc", "combined_acl"
-)
-
-# Create the gt table
-gt_table <- management %>%
-  gt(rowname_col = "Year") %>%
-  tab_spanner(
-    label = "North of 40'10'",
-    columns = c(north_of_40_ofl, north_of_40_abc, north_of_40_acl)
-  ) %>%
-  tab_spanner(
-    label = "South of 40'10'",
-    columns = c(south_of_40_ofl, south_of_40_abc, south_of_40_acl)
-  ) %>%
-  tab_spanner(
-    label = "Combined",
-    columns = c(combined_ofl, combined_abc, combined_acl)
-  )
-
-gt_table
+management |> 
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
 
 ```
 
