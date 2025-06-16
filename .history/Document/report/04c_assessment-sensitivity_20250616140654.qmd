@@ -23,7 +23,7 @@ The following data weighting sensitivities were explored:
 - Dirichlet data-weighting
 - McAllister-Ianelli data weighting
 
-Likelihood values and estimates of key parameters and derived quantities from each data weighting sensitivity are available in . Comparison plots for the results relative to the reference model are in @fig-sensi-data-wt and @fig-sensi-RE-data-wt. Each data weighting scenario up-weighted the influence of the length data relative to the age data. This resulted in a large drop in the stock scale, but little change in the high stock status. These changes were within the uncertainty of the base model, though at the low end for the stock scale.
+Likelihood values and estimates of key parameters and derived quantities from each data source removal sensitivity are available in 
 
 
 ##### Ageing error
@@ -32,11 +32,12 @@ The following ageing error sensitivities were explored:
   - No Ageing error for all sources (unbiased and precise ages)
   - No ageing error for each source at a time
 
-Likelihood values and estimates of key parameters and derived quantities from each ageing error sensitivity are available in . Comparison plots for the results relative to the reference model are in @fig-sensi-ageing-error and @fig-sensi-RE-ageing-error. A drop in both stock scale and stock status is generally observed when the ageing error is removed. One notable observation is that the recruitment events become less resolved and variance increases in lengths at age when ages are assumed biased and precise. When the ages are taken as true, all variation between lengths and ages are interpreted in the lengths, while the recruitment must interpret the age composition precisely, thus assigning positive recruitment deviations to years adjacent to strong recruitment years seen in the reference model. Having more positive recruitment can compensate for a lower initial stock size, causing the initial stock size to decrease. All in stock scale and status changes were within the uncertainty of the base model.
+Likelihood values and estimates of key parameters and derived quantities from each data source removal sensitivity are available in 
 
+
+Likelihood values and estimates of key parameters and derived quantities from each sensitivity are available in Table . Derived quantities relative to the reference model are provided in Figure . Time series of spawning output and relative spawning output are shown in Figures  and .
 
 #### Model Specification Sensitivities {#senstivities}
-
 Model specifications looked at the estimation of individual and combinations of life history parameters, the estimation of recruitment, and the treatment of fecundity and selectivity. All scenarios match the reference model specifications in all other aspects unless otherwise stated.
 
 - Life history estimation
@@ -67,6 +68,10 @@ Likelihood values and estimates of key parameters and derived quantities from ea
  
 ### Likelihood Profiles
 
+
+### Retrospective Analysis
+
+A five-year retrospective analysis was conducted by running the model and sequentially removing one year of data up through minus 5 years. Retrospective spawning output (Figure ) and relatives stock status (Figure ) estimates show a generally consistent pattern in population scale and trend, within the error of the reference model. All models show the population increasing. This results in a stock status in the precautionary zone over the 5 year consideration. The Mohn's rho evaluation of the degree of retrospective pattern in given in Table  and shown in Figure . The relative error in the data peels are below significant levels. 
 
 
 ### Unresolved Problems and Major Uncertainties

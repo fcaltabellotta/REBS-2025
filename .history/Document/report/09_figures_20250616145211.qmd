@@ -2057,7 +2057,7 @@ knitr::include_graphics(
 #| fig-pos: H
 
 knitr::include_graphics(
-  file.path(retro_dir, "compare4_Bratio_uncertainty.png")
+  file.path(retro_dir, "compare2_spawnbio_uncertainty.png")
 )
 
 ```

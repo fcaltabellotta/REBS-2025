@@ -9,12 +9,9 @@ Model efficiency was explored by doing a short run Bayesian analysis using the R
 
 An extra effort was given to ensure the model did not rest on a local likelihood minimum. This was done by starting the minimization process from dispersed parameter values away from the maximum likelihood estimates to determine if the approach found a better model fit (i.e., minimum negative log-likelihood value). Starting parameters used a jitter shift value of 0.01 and 0.05. Both jitter scenarios were repeated 100 times with 78 out of 100 (jitter 0.01) and 49 out of 100 (jitter 0.05) runs returned to the reference model likelihood (@fig-jitter001 and @fig-jitter005). Out of the combined 200 jitter runs, a better fit, lower negative log-likelihood model was not found in any of the remaining runs. The reference model did not experience convergence issues when provided reasonable starting values. Through the jittering and likelihood profiles, the present reference model represents the best fit to the data given the assumptions. 
 
-### Retrospective Analysis
-
-A five-year retrospective analysis was conducted by running the model and sequentially removing one year of data up through minus 5 years. Retrospective spawning output (@fig-retro-so) and relatives stock status (@fig-retro-status) show a distinct sensitivity to the removal of the lastest data. Both the scale and status drop when missing the latest model. Once two years are removed, the model returns to something more similar to the reference model. After several additional model runs to explore why this sensitivity is occuring, it was clear that removal of the most recent age data in all fleets causes this pattern. Looking at each of the fisheries mean age data time series, all 4 sources of age data, which have different selectivities, but all of which to some degree include bigger and older individuals, show the consistent pattern of decreasing mean age from 2022 to 2023, and an increase in 2024. These changes, except for the large increase in scale for the -4 and -5 The Mohn's rho evaluation of the degree of retrospective pattern in given in Table  and shown in Figure . The relative error in the data peels are below significant levels. 
-
 
 ### Fits to the Data
+
 
 #### Lengths
 
@@ -80,3 +77,6 @@ Relative spawning output never declined below the management target ($SO_{40\%}$
 
 The time series of estimated annual recruitment deviations are shown in @fig-recdevs. The bias adjustment plot (@fig-biasramp) indicates that the most informed recruitment deviations occur after 1980. While post-1980 is the most informed, the recruitment deviations before that time period, while less assure, are important for the model to prepare the population structure for the upcoming increase in fishing while reconciling weak, but still present, signals in recruitment from the biological compositions that can contain information on recruitment for decades given the long-liveness of these species. Sensitvities to when recruitment estimation begins in the model is shown in the Sensitivity section. Numbers of age-0 individuals indicate those years of particularly strong recruitment (@fig-recruits). Noticeable recruitment years are seen in 1988, 1993, 1999, 2008, 2010, 2012, and 2017 (@fig-SR). This amounts to roughly two notable recruitments per decade. Given this assessment is tracking two species, it is hard to tell whether the species are synchronized or showing their own recruiment pulse in this signal.
 
+### Retrospective Analysis
+
+A five-year retrospective analysis was conducted by running the model and sequentially removing one year of data up through minus 5 years. Retrospective spawning output (Figure ) and relatives stock status (Figure ) estimates show a generally consistent pattern in population scale and trend, within the error of the reference model. All models show the population increasing. This results in a stock status in the precautionary zone over the 5 year consideration. The Mohn's rho evaluation of the degree of retrospective pattern in given in Table  and shown in Figure . The relative error in the data peels are below significant levels. 

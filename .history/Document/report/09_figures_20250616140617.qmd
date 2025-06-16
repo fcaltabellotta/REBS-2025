@@ -2032,36 +2032,6 @@ knitr::include_graphics(
 
 ```
 
-```{r} 
-#| label: fig-retro-so
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Change in the estimate of spawning output (millions of eggs) when the five most recent years of data area removed sequentially."
-#| fig-alt: "Values are provided in the Report.sso file."
-#| fig-pos: H
-
-knitr::include_graphics(
-  file.path(retro_dir, "compare2_spawnbio_uncertainty.png")
-)
-
-```
-
-```{r} 
-#| label: fig-retro-status
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Change in the estimate of relative stock status when the five most recent years of data area removed sequentially."
-#| fig-alt: "Values are provided in the Report.sso file."
-#| fig-pos: H
-
-knitr::include_graphics(
-  file.path(retro_dir, "compare4_Bratio_uncertainty.png")
-)
-
-```
-
 \newpage
 
 <!-- Sensitivity Analyses and Retrospectives -->
@@ -2180,46 +2150,10 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different data weighting scenarios. The reference model uses the Francis method."
+#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for model under different data weighting scenarios. "
 #
 knitr::include_graphics(
-    file.path(sens_dir, "output","data_sensitivities.png")
-)
-```
-
-```{r}
-#| label: fig-sensi-RE-data-wt
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Log relative change (log((Model\\_sensi-Model\\_ref)/Model\\_ref)) in data weighting treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model. See 'Sensitivity Analysis' section for more details on each scenario."
-#
-knitr::include_graphics(
-    file.path(sens_dir, "output","Sensi_logREplot_SB_Dep_F_Yield_DataWt.png")
-)
-```
-
-```{r}
-#| label: fig-sensi-ageing-error
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different ageing error scenarios. The reference model uses ageing error matrices for all age sources."
-#
-knitr::include_graphics(
-    file.path(sens_dir, "output","Ageing error_uncertainty.png")
-)
-```
-
-```{r}
-#| label: fig-sensi-RE-ageing-error
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Log relative change (log((Model\\_sensi-Model\\_ref)/Model\\_ref)) in ageing error scenarios for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model. See 'Sensitivity Analysis' section for more details on each scenario."
-#
-knitr::include_graphics(
-    file.path(sens_dir, "output","Sensi_logREplot_SB_Dep_F_Yield_AE.png")
+    file.path(sens_dir, "output","sens_summary.png")
 )
 ```
 

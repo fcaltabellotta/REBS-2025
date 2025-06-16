@@ -2032,36 +2032,6 @@ knitr::include_graphics(
 
 ```
 
-```{r} 
-#| label: fig-retro-so
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Change in the estimate of spawning output (millions of eggs) when the five most recent years of data area removed sequentially."
-#| fig-alt: "Values are provided in the Report.sso file."
-#| fig-pos: H
-
-knitr::include_graphics(
-  file.path(retro_dir, "compare2_spawnbio_uncertainty.png")
-)
-
-```
-
-```{r} 
-#| label: fig-retro-status
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Change in the estimate of relative stock status when the five most recent years of data area removed sequentially."
-#| fig-alt: "Values are provided in the Report.sso file."
-#| fig-pos: H
-
-knitr::include_graphics(
-  file.path(retro_dir, "compare4_Bratio_uncertainty.png")
-)
-
-```
-
 \newpage
 
 <!-- Sensitivity Analyses and Retrospectives -->
