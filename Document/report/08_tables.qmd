@@ -37,6 +37,78 @@ management_summary |>
 \pagebreak
 
 ```{r}
+#| label: tbl-management-performance
+#| echo: false
+#| warning: false
+#| message: false
+#| results: asis
+#| tbl-cap: "Recent trend in the overfishing limits (OFL), the acceptable biological catches (ABCs), the annual catch limits (ACLs), and the total dead catch (landings + discards) all in metric tons (mt) for the Rougheye/Blackspotted complex north and south of 40'10."
+
+cat("\\begin{landscape}")
+
+# Read in CSV, skipping the first 2 header rows
+management_perf <- readr::read_csv(
+  here::here("Document", "report", "tables_4_doc", "management-performance.csv"),
+  skip = 2,
+  col_names = FALSE
+)
+
+# Assign unique and clean column names manually
+colnames(management_perf) <- c(
+  "Year",
+  "north_of_40_ofl", "north_of_40_abc", "north_of_40_acl",
+  "south_of_40_ofl", "south_of_40_abc", "south_of_40_acl",
+  "combined_ofl", "combined_abc", "combined_acl"
+)
+
+merged_table <- management_perf |>
+  left_join(
+    recent_management_table |> select(Year, `Catch (mt)`),
+    by = "Year"
+  )
+
+merged_table |>
+  gt(rowname_col = "Year") |>
+  fmt_number(
+    columns = `Catch (mt)`,
+    decimals = 1
+  ) |>
+    cols_label(
+    north_of_40_ofl = "OFL (mt)",
+    north_of_40_abc = "ABC (mt)",
+    north_of_40_acl = "ACL (mt)",
+    south_of_40_ofl = "OFL (mt)",
+    south_of_40_abc = "ABC (mt)",
+    south_of_40_acl = "ACL (mt)",
+    combined_ofl = "OFL (mt)",
+    combined_abc = "ABC (mt)",
+    combined_acl = "ACL (mt)",
+    `Catch (mt)` = "Catch (mt)"
+  ) |>
+  tab_spanner(
+    label = "North of 40'10'",
+    columns = c(north_of_40_ofl, north_of_40_abc, north_of_40_acl)
+  ) |>
+  tab_spanner(
+    label = "South of 40'10'",
+    columns = c(south_of_40_ofl, south_of_40_abc, south_of_40_acl)
+  ) |>
+  tab_spanner(
+    label = "Combined",
+    columns = c(combined_ofl, combined_abc, combined_acl)
+  ) |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  )
+
+cat("\\end{landscape}")
+
+```
+
+\pagebreak
+
+```{r}
 #| label: tbl-landings
 #| warning: false
 #| echo: false
@@ -90,6 +162,7 @@ kableExtra::kable(
 #| tbl-pos: H
 
 recent_management_table |>
+  gt::gt() |>
   gt::fmt_number(
     columns = 2:5,
     decimals = 0
